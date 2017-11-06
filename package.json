@@ -1,0 +1,18 @@
+{
+  "name": "kwaliteitsaanpak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "markdown-include": "^0.4.3",
+    "markdown-to-html": "0.0.13",
+    "phantom-html-to-pdf": "^0.5.5",
+    "phantomjs": "^2.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eduardo.lucas@ictu.nl",
+  "license": "ISC"
+}

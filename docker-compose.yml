@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ka-full:
+    build: .
+    volumes:
+      - .:/ka
+    entrypoint: bash
+    command: ./create-docs.sh
+

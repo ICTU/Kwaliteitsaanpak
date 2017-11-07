@@ -9,4 +9,4 @@ before_install:
 - pwd
 - ls -l
 - docker pull ictu/sonar
-- docker run -v /:/ka ictu/sonar ./create-docs.sh
+- docker run -v .:/ka ictu/sonar ./create-docs.sh

@@ -5,4 +5,4 @@ services:
 
 before_install:
 - docker pull ictu/sonar
-- docker run -v %pwd%:/ka ka ./create-docs.sh
+- docker run -v %pwd%:/ka ictu/sonar ./create-docs.sh

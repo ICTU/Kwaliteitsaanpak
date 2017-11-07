@@ -8,6 +8,5 @@ services:
 before_install:
 - pwd
 - ls -l
-- docker pull ictu/sonar
-- docker run -v  $(pwd):/ka ictu/sonar ls
-- docker run -v  $(pwd):/ka ictu/sonar pwd
+- docker build -t ka .
+- docker run -v  $(pwd):/ka ka ls

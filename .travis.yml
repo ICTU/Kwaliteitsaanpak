@@ -10,3 +10,4 @@ before_install:
 - ls -l
 - docker pull ictu/sonar
 - docker run -v  $(pwd):/ka ictu/sonar ls
+- docker run -v  $(pwd):/ka ictu/sonar pwd

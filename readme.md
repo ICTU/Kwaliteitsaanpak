@@ -26,10 +26,7 @@ This repository contains the source information and automation scripts for gener
 ## Generating the documentation (html & pdf)
 
 - Clone this repository
-- Run
-
-    docker-compose up
-
+- Run "docker-compose up"
 - The results will be created at the root folder of the repository (ICTU-*.md/html/pdf)   
 
 

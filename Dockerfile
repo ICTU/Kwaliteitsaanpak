@@ -2,11 +2,15 @@ FROM node:latest
 
 RUN apt-get install -y libfreetype6 libfontconfig
 RUN apt-get install -y wget
-RUN wget -q https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
-RUN tar xjf phantomjs-1.9.7-linux-x86_64.tar.bz2
-RUN install -t /usr/local/bin phantomjs-1.9.7-linux-x86_64/bin/phantomjs
-RUN rm -rf phantomjs-1.9.7-linux-x86_64
-RUN rm phantomjs-1.9.7-linux-x86_64.tar.bz2
+
+ENV PHANTOM_JS="phantomjs-1.9.7-linux-x86_64"
+RUN wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2
+
+# RUN wget -q https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
+RUN tar xjf $PHANTOM_JS.tar.bz2
+RUN install -t /usr/local/bin $PHANTOM_JS/bin/phantomjs
+RUN rm -rf $PHANTOM_JS
+RUN rm $PHANTOM_JS.tar.bz2
 
 WORKDIR /ka
 COPY package.json /ka

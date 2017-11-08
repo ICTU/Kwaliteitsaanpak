@@ -1,6 +1,6 @@
 {
   "name": "kwaliteitsaanpak",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -15,5 +15,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "eduardo.lucas@ictu.nl",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/npm.git"
+  }
 }

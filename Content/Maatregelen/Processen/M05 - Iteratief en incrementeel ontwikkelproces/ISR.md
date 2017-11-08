@@ -5,3 +5,5 @@ ISR gebruikt hiervoor Scrum, een raamwerk voor productontwikkeling. ISR propagee
 - Definition of Done,
 - Definition of Ready,
 - Product backlog.
+
+Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn (M01 Op te leveren producten) en voldoen aan de door de projectenorganisatie vastgestelde kwaliteitsnormen (M02 Continu voldoen aan kwaliteitsnormen).

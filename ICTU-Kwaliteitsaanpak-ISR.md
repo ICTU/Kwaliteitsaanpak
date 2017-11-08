@@ -2,29 +2,65 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 # ISR maatregelen
-versie 1.0.9
+versie 1.1.6
 
 
 ## Producten
+
+
+### Maatregel M25 : Randvoorwaardelijke producten (M25)
+
+
 
 ### Maatregel 1: Op te leveren producten (M01)
 #### ISR
 
 ISR hanteert de volgende documenten, templates en documentstandaarden:
 
-- De beschrijving van niet-functionele eisen is gebaseerd op ISO-25010, BIR en SSD, en bevat een prioritering van de niet-functionele eisen. De beschrijving van niet-functionele eisen is gebaseerd op het ISR NFE-template. De beschrijving bevat in ieder geval eisen aan toegangsbeveiliging, aan beheerfuncties, aan logging en aan het gewenste gedrag van de software bij uitval van infrastructurele diensten zoals een log-server;
+- De beschrijving	van	niet-functionele	eisen is	gebaseerd	op	ISO-25010,	BIR	en	SSD, en	bevat	
+een	prioritering	van de	niet-functionele	eisen.	De	beschrijving	van	niet-functionele	eisen	is	
+gebaseerd	op	het	ISR	NFE-template. De	beschrijving	bevat	in	ieder	geval	eisen	aan
+toegangsbeveiliging,	aan beheerfuncties,	aan logging	en	aan het gewenste	gedrag van	de	
+software	bij uitval	van	infrastructurele	diensten	zoals	een	log-server;
 
-- De beschrijving van functionele eisen bestaat uit een geprioriteerde backlog met epics en/of user stories. De beschrijving bevat in ieder geval eisen voor (ondersteuning van) beheerfuncties die door de beoogd beheerder gesteld worden en voor logging, inclusief de (globale) inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen;
+- De	beschrijving	van	functionele	eisen bestaat	uit	een	geprioriteerde	backlog	met	epics	en/of	
+user	stories.	De	beschrijving	bevat	in	ieder	geval	eisen	voor	(ondersteuning	van)	
+beheerfuncties	die	door	de	beoogd	beheerder	gesteld	worden	en	voor	logging,	inclusief	de	
+(globale)	inhoud	van	te	loggen	business	events	(gebeurtenissen	op	procesniveau) en	de	
+daarvoor	geldende	bewaartermijnen;
 
-- De ontwerp- en architectuurdocumentatie bestaat uit een projectstartarchitectuur (PSA), een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) bijvoorbeeld in de vorm van use cases, en een prototype en/of interactieontwerp. De SAD, IA en GFO zijn gebaseerd op de ISR-templates. De architectuurdocumenten moeten expliciet inzichtelijk maken hoe aan de niet-functionele eisen wordt voldaan door uit te werken welke (beveiligings)mechanieken gekozen zijn, bijvoorbeeld voor identificatie, authenticatie, autorisatie, versleuteling of logging.;
+- De	ontwerp- en	architectuurdocumentatie bestaat	uit	een	projectstartarchitectuur	(PSA),	een	
+softwarearchitectuurdocument	(SAD),	een	infrastructuurarchitectuur	(IA),	een	globaal	
+functioneel	ontwerp	(GFO)	bijvoorbeeld	in	de	vorm	van	use	cases,	en	een	prototype	en/of	
+interactieontwerp.	De	SAD,	IA en	GFO	zijn	gebaseerd	op	de	ISR-templates.	De	
+architectuurdocumenten	moeten	expliciet	inzichtelijk	maken	hoe	aan	de	niet-functionele	
+eisen	wordt	voldaan	door	uit	te	werken	welke	(beveiligings)mechanieken	gekozen	zijn,	
+bijvoorbeeld	voor	identificatie,	authenticatie,	autorisatie,	versleuteling	of	logging.;
 
-- De testdocumentatie bestaat uit een master testplan, gemaakt op basis van een productrisicoanalyse (PRA). Beveiligingstesten zijn een integraal onderdeel van het mastertestplan en worden als zodanig afgestemd met de opdrachtgever;
+- De	testdocumentatie bestaat	uit	een	master	testplan,	gemaakt	op	basis	van	een	
+productrisicoanalyse	(PRA).	Beveiligingstesten	zijn	een	integraal	onderdeel	van	het	
+mastertestplan	en	worden	als	zodanig	afgestemd	met	de	opdrachtgever;
 
-- Het informatiebeveiligingsplan is gebaseerd op een dreigingen- en kwetsbaarhedenanalyse (TVA, threat and vulnerability assessment) en bevat een maatregelenselectie informatiebeveiliging. De TVA wordt tijdens de voorfase opgesteld op basis van de resultaten van de BIA, de eventuele PIA (zie maatregel M25 Randvoorwaardelijke producten) en inhoud van de ontwerp- en architectuurdocumentatie. Een TVA levert een deel van een traceerbare onderbouwing voor de te treffen beveiligingsmaatregelen.
+- Het informatiebeveiligingsplan is	gebaseerd	op	een	dreigingen- en	kwetsbaarhedenanalyse	
+(TVA,	threat	and	vulnerability	assessment)	en	bevat	een	maatregelenselectie	
+informatiebeveiliging.	De	TVA	wordt	tijdens	de	voorfase	opgesteld	op	basis	van	de	resultaten	
+van	de	BIA,	de	eventuele	PIA	(zie	maatregel	M25 Randvoorwaardelijke	producten)	en	inhoud	
+van	de	ontwerp- en	architectuurdocumentatie.	Een	TVA	levert	een	deel	van	een	traceerbare	onderbouwing	voor	de	te	treffen	beveiligingsmaatregelen.
 
-- Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen. Zie ook maatregel M26 Periodieke beoordeling informatiebeveiliging en M16 Verplichte tools. Indien er beveiligingsissues zijn, zijn deze voorzien van een beschreven voorziene impact.
+- Het	vrijgaveadvies bevat	ten	minste	alle	nog	openstaande	testbevindingen	en	
+geconstateerde	beveiligingsbevindingen.	Zie	ook	maatregel	M26 Periodieke	beoordeling	
+informatiebeveiliging en	M16	Verplichte	tools.	Indien	er	beveiligingsissues	zijn,	zijn	deze	
+voorzien	van	een	beschreven	voorziene	impact.
 
-- De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTP-header en request configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de 'Server'-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer.
+- De	deploymentdocumentatie bevat	informatie	over	de	eisen	die	een	applicatie	stelt	aan	een	
+omgeving	en	de	stappen	die	nodig	zijn	om	de	applicatie	in	die	omgeving	veilig	te	installeren	
+en	configureren.	De	documentatie	bevat	daartoe	onder	meer	aanwijzingen	voor	de	HTTPheader
+en	request	configuratie	van	de	webserver	en	voor	het	verwijderen	van	overbodige	
+header-informatie	zoals	de	'Server'-header.	Ook	zijn	er	aanwijzingen	voor	veilige	
+configuratie(s)	van	(externe)	toegang	tot	de	beheerinterface.	De	documentatie	bevat	
+daarnaast	in	ieder	geval	een	beschrijving	van	de	protocollen	en	services	die	de	applicatie	
+aanbiedt,	de	protocollen,	services	en	accounts	die	het	product	gebruikt	en	de	protocollen,	
+services	en	accounts	die	de	applicatie	gebruikt	voor	beheer.	
 
 Zie Bijlage documenten voor maatregel M1 voor een uitgebreider overzicht van de documenten en documentstandaarden die ISR hanteert.
 
@@ -49,6 +85,14 @@ Niet-functionele eisen zijn gekoppeld aan onder andere softwarearchitectuurdocum
 ISR hanteert een norm voor de dekking van regressietests.
 
 
+### Maatregel 26 : Periodieke beoordeling informatiebeveiliging (M25)
+
+#### ISR
+Software wordt minimaal bij iedere grote release of tenminste twee keer per jaar onderworpen aan een beveiligingstest door beveiligingsexperts die ISR daarvoor inhuurt. Op basis van documentatieen architectuurstudie, crystalbox security audits (broncodescan) en penetratieaudits beoordelen deze experts of de software voldoet aan de projectspecifieke niet-functionele eisen die met betrekking tot beveiliging aan de software zijn gesteld, of bekende kwetsbaarheden (OWASP) vermeden zijn en in hoeverre voldoende invulling gegeven is aan de normen vanuit die vanuit BIR en SSD gelden.
+
+Indien door de opdrachtgever gewenst kunnen securitytesten door een onafhankelijke derde partij worden uitgevoerd in een daarvoor door de opdrachtgever beschikbaar gestelde omgeving. Dit kan zowel incidenteel als structureel worden ingericht. Afspraken hierover worden bij voorkeur al in de voorbereidingsfase gemaakt.
+
+De beveiligingstesten vinden plaats in aanvulling op de door tools uitgevoerde continue beveiligingsanalyse van de gerealiseerde software, zie maatregel M16 Verplichte tools. Bevindingen uit zowel een beveiligingstest als de continue analyse worden in Jira als issue – gemarkeerd als beveiligingsbugreport – vastgelegd op de backlog van het project.
 
 ## Processen
 
@@ -62,7 +106,12 @@ ISR gebruikt hiervoor Scrum, een raamwerk voor productontwikkeling. ISR propagee
 - Definition of Ready,
 - Product backlog.
 
+Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn (M01 Op te leveren producten) en voldoen aan de door de projectenorganisatie vastgestelde kwaliteitsnormen (M02 Continu voldoen aan kwaliteitsnormen).
+
 ### Maatregel 6: Frequente meting (M06)
+
+#### ISR
+Bij een ISR-project is het voldoen aan de normen onderdeel van de 'Definition of Done' en wordt het voldoen aan kwaliteitsnormen meermaals per uur gemeten. Projecten nemen de kwaliteitsrapportage door tijdens de stand-up en tijdens het wekelijks projectoverleg.
 
 
 
@@ -90,6 +139,11 @@ Bij ISR speelt de software delivery manager de rol van projectverantwoordelijke 
 Bij periodiek projectoverleg zijn de software delivery manager, een vertegenwoordiger uit het kernteam en de scrum master vereist.
 
 
+
+### Maatregel M27 - Projecten expliciet afsluiten (M27)
+
+#### ISR
+De software delivery manager is verantwoordelijk voor het archiveren. De SDM geeft het projectteam opdracht de archivering voor te bereiden en geeft het technisch beheerteam de opdracht de archivering uit te voeren.
 
 ## Project Organisatie
 
@@ -121,7 +175,7 @@ De kwaliteitsnormen van ISR betreffen de productkwaliteitskenmerken:
 ### Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase (M014)
 
 #### ISR
-Bij ISR heet de voorbereidingsfase de 'voorfase'.
+Bij ISR heet de voorbereidingsfase de 'voorfase'. . In de realisatiefase wordt het Scrumteam aangestuurd door een product owner van de opdrachtgever. Bij aanvang van de voorfase is deze beoogde product owner bekend en hij/zij werkt ook mee in de voorfase.
 
 
 ### Maatregel 15: Open source tools (M015)
@@ -134,21 +188,24 @@ Tools die ISR ontwikkelt, worden bij voorkeur als open source beschikbaar gestel
 
 #### ISR
 ISR gebruikt hiervoor de volgende tools:
-a)	Jira – De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog, de iteraties als sprints.
-b)	Jenkins voor Javaprojecten en Team Foundation Server (TFS) voor DotNet-projecten.
-c)	SonarQube, inclusief ICTU-specifieke kwaliteitsprofielen die aansluiten bij de ICTU-kwaliteitsnormen.
-d)	Releasemanager.
-e)	Reporting (Birt).
-f)	Kwaliteitsrapportage (HQ).
+1. Jira – De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog, de iteraties als sprints.
+2. Jenkins voor Javaprojecten en Team Foundation Server (TFS) voor DotNet-projecten.
+3. SonarQube, inclusief ICTU-specifieke kwaliteitsprofielen die aansluiten bij de ICTU-kwaliteitsnormen.
+4. Releasemanager.
+5. Reporting (Birt).
+6. Kwaliteitsrapportage (HQ).
+7. OpenVAS en OWASP ZAP.
+8. OWASP Dependency Checker.
+9. Checkmarx.
 
 
 ### Maatregel 17: Snel beschikbare tools (M017)
 
 #### ISR
 ISR gebruikt hiervoor de volgende tools:
-a)	Docker dashboard
-b)	MediaWiki
-c)	Wekan
+1. Docker dashboard
+2. MediaWiki
+3. Wekan
 De tools zijn beschikbaar via een eigen cloud (vergelijkbaar met een 'app store'), binnen een werkdag na aanvraag.
 
 
@@ -173,4 +230,5 @@ Bij het inzetten van medewerkers zijn één of meer leden van het ISR-kernteam b
 
 
 ### Maatregel 23: Warme kennisoverdracht (M023)
+
 

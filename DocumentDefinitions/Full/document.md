@@ -9,6 +9,10 @@
 
 ## Producten
 
+#include "Content/Maatregelen/Producten/M25 - Randvoorwaardelijke producten/Titel.md"
+#include "Content/Maatregelen/Producten/M25 - Randvoorwaardelijke producten/Maatregel.md"
+#include "Content/Maatregelen/Producten/M25 - Randvoorwaardelijke producten/ISR.md"
+
 #include "Content/Maatregelen/Producten/M01 - Op te leveren producten/Titel.md"
 #include "Content/Maatregelen/Producten/M01 - Op te leveren producten/Maatregel.md"
 #include "Content/Maatregelen/Producten/M01 - Op te leveren producten/ISR.md"
@@ -25,6 +29,9 @@
 #include "Content/Maatregelen/Producten/M04 - Geautomatiseerde regressietests/Maatregel.md"
 #include "Content/Maatregelen/Producten/M04 - Geautomatiseerde regressietests/ISR.md"
 
+#include "Content/Maatregelen/Producten/M26 - Periodieke beoordeling informatiebeveiliging/Titel.md"
+#include "Content/Maatregelen/Producten/M26 - Periodieke beoordeling informatiebeveiliging/Maatregel.md"
+#include "Content/Maatregelen/Producten/M26 - Periodieke beoordeling informatiebeveiliging/ISR.md"
 
 ## Processen
 
@@ -51,6 +58,10 @@
 #include "Content/Maatregelen/Processen/M10 - Periodiek projectoverleg/Titel.md"
 #include "Content/Maatregelen/Processen/M10 - Periodiek projectoverleg/Maatregel.md"
 #include "Content/Maatregelen/Processen/M10 - Periodiek projectoverleg/ISR.md"
+
+#include "Content/Maatregelen/Processen/M27 - Projecten expliciet afsluiten/Titel.md"
+#include "Content/Maatregelen/Processen/M27 - Projecten expliciet afsluiten/Maatregel.md"
+#include "Content/Maatregelen/Processen/M27 - Projecten expliciet afsluiten/ISR.md"
 
 ## Project Organisatie
 

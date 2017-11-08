@@ -11,3 +11,6 @@ node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/ISR/document
 node_modules/markdown-to-html/bin/markdown ICTU-Kwaliteitsaanpak-ISR.md -s /ka/DocumentDefinitions/ISR/document.css > ICTU-Kwaliteitsaanpak-ISR.html
 node htmltopdf.js ICTU-Kwaliteitsaanpak-ISR.html
 
+node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/Generic/document.json
+node_modules/markdown-to-html/bin/markdown ICTU-Kwaliteitsaanpak-Generic.md -s /ka/DocumentDefinitions/Generic/document.css > ICTU-Kwaliteitsaanpak-Generic.html
+node htmltopdf.js ICTU-Kwaliteitsaanpak-Generic.html

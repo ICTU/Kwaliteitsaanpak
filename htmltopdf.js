@@ -8,7 +8,7 @@ var file = fs.readFile(inputfilename, 'utf8', function (err,data) {
       return console.log(err);
     }
 
-    data = data.replace('</head>','<base href="'+__dirname+'/" /></head>');
+    data = data.replace('</head>','<base href="'+__dirname+'/" /><meta http-equiv="content-type" content="text/html; charset=UTF-8"></head>');
 
     conversion({ 
         html: data,

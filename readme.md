@@ -27,7 +27,5 @@ This repository contains the source information and automation scripts for gener
 
 - Clone this repository
 - Run "docker-compose up"
-- The results will be created at the root folder of the repository (ICTU-*.md/html/pdf)   
-
-
-
+    - The document patch version is updated (on packages.json and Content/Versie.md)
+    - The md, html and pdf versions of the documents are created on the root folder

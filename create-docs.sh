@@ -1,5 +1,7 @@
 #!/bin/bash
 npm i
+npm version patch --force --no-git-tag-version
+echo "versie "$(./node_modules/.bin/extract-json package.json version) > ./Content/Versie.md
 
 node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/Full/document.json
 node_modules/markdown-to-html/bin/markdown ICTU-Kwaliteitsaanpak-Full.md -s /ka/DocumentDefinitions/Full/document.css > ICTU-Kwaliteitsaanpak-Full.html

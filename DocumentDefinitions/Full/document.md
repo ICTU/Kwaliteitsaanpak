@@ -3,7 +3,7 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie
-versie 1.0.2
+#include "Content/Versie.md"
 
 #include "Content/Inleiding.md"
 

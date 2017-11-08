@@ -71,3 +71,7 @@ img[title='word-cloud'] {
 #inleiding {
     page-break-before: always !important;
 }
+
+#isr {
+    display: none;
+}

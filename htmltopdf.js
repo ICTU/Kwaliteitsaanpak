@@ -39,5 +39,3 @@ var file = fs.readFile(inputfilename, 'utf8', function (err,data) {
         conversion.kill();
       });
   });
-
-

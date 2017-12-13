@@ -1,2 +1,2 @@
-#### ISR
-Tools die ISR ontwikkelt, worden bij voorkeur als open source beschikbaar gesteld.
+#### ICTU
+Tools die ICTU ontwikkelt ter ondersteuning van softwarerealisatieprojecten, worden bij voorkeur als open source beschikbaar gesteld.

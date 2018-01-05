@@ -3,7 +3,7 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie
-versie 1.1.10
+versie 1.1.14
 
 
 ## Inleiding
@@ -42,9 +42,9 @@ Dit document 'Kwaliteitsaanpak ICTU Software Realisatie' is bedoeld voor program
 
 3. Het derde deel van de kwaliteitsaanpak heeft betrekking op de overkoepelende ontwikkelorganisatie waarbinnen projecten worden uitgevoerd (bij ICTU is dat de afdeling ICTU Software Realisatie (ISR)); dit gaat over de samenhang tussen projecten en de faciliteiten die projecten ter beschikking moeten hebben.
 
-De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ISR heeft getroffen om de risico's die samenhangen met softwareontwikkeling te mitigeren. Bijlage 1 beschrijft de relatie tussen risico's en maatregelen.
+De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico's die samenhangen met softwareontwikkeling te mitigeren. Bijlage 1 beschrijft de relatie tussen risico's en maatregelen.
 
-De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort de maatregel tot de kwaliteitsaanpak? In gevallen waarbij een maatregel een specifieke invulling heeft bij ISR, is daarvoor een aparte paragraaf voor opgenomen.
+De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort de maatregel tot de kwaliteitsaanpak? In gevallen waarbij een maatregel een specifieke invulling heeft bij ICTU, is daarvoor een aparte paragraaf voor opgenomen.
 
 Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rollen' om aan te geven wie verantwoordelijkheid draagt voor het uitvoeren van de maatregelen:
 
@@ -57,6 +57,7 @@ Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rolle
 4. Projectverantwoordelijke (bij ICTU: software delivery manager en/of projectleider)
 
 5. Kwaliteitsmanager (bij ICTU: 'quality lead')
+
 
 ## Producten
 
@@ -107,16 +108,16 @@ Het uniformeren van op te leveren producten biedt voordelen voor planning (het i
 De voorgeschreven producten stellen de ontvanger in staat om de opgeleverde software uit te voeren, te beheren en te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.
 
 De genoemde producten uit de voorbereidingsfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.
-#### ISR
+#### ICTU
 
-ISR hanteert de volgende documenten, templates en documentstandaarden:
+ICTU hanteert de volgende documenten, templates en documentstandaarden voor softwarerealisatieprojecten:
 
-- De beschrijving van niet-functionele eisen is gebaseerd op ISO-25010, BIR en SSD, en bevat een prioritering van de niet-functionele eisen. De beschrijving van niet-functionele eisen is gebaseerd op het ISR NFE-template. De beschrijving bevat in ieder geval eisen aan toegangsbeveiliging, aan beheerfuncties, aan logging en aan het gewenste gedrag van de software bij uitval van infrastructurele diensten zoals een log-server;
+- De beschrijving van niet-functionele eisen is gebaseerd op ISO-25010, BIR en SSD, en bevat een prioritering van de niet-functionele eisen. De beschrijving van niet-functionele eisen is gebaseerd op het ICTU NFE-template. De beschrijving bevat in ieder geval eisen aan toegangsbeveiliging, aan beheerfuncties, aan logging en aan het gewenste gedrag van de software bij uitval van infrastructurele diensten zoals een log-server;
 
 - De beschrijving van functionele eisen bestaat uit een geprioriteerde backlog met epics en/of user stories. De beschrijving bevat in ieder geval eisen voor (ondersteuning van) beheerfuncties die door de beoogd beheerder gesteld worden en voor logging, inclusief de (globale) inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen;
 
 - De ontwerp- en architectuurdocumentatie bestaat uit een projectstartarchitectuur (PSA), een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) bijvoorbeeld in de vorm van use cases, en een prototype en/of interactieontwerp. De SAD, IA en GFO zijn gebaseerd op de ISR-templates. De architectuurdocumenten moeten expliciet inzichtelijk maken hoe aan de niet-functionele 
-eisen wordt voldaan door uit te werken welke (beveiligings)mechanieken gekozen zijn, bijvoorbeeld voor identificatie, authenticatie, autorisatie, versleuteling of logging.;
+eisen wordt voldaan door uit te werken welke (beveiligings)mechanieken gekozen zijn, bijvoorbeeld voor identificatie, authenticatie, autorisatie, versleuteling of logging;
 
 - De testdocumentatie bestaat uit een master testplan, gemaakt op basis van een productrisicoanalyse (PRA). Beveiligingstesten zijn een integraal onderdeel van het mastertestplan en worden als zodanig afgestemd met de opdrachtgever;
 
@@ -124,11 +125,12 @@ eisen wordt voldaan door uit te werken welke (beveiligings)mechanieken gekozen z
 
 - Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen. Zie ook maatregel M26 Periodieke beoordeling informatiebeveiliging en M16 Verplichte tools. Indien er beveiligingsissues zijn, zijn deze voorzien van een beschreven voorziene impact.
 
-- De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTPheaderen request configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de 'Server'-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer. 
+- De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTP-header en -request configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de 'Server'-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer. 
 
-Zie Bijlage documenten voor maatregel M1 voor een uitgebreider overzicht van de documenten en documentstandaarden die ISR hanteert.
+Zie Bijlage documenten voor maatregel M1 voor een uitgebreider overzicht van de documenten en documentstandaarden die ICTU hanteert voor softwarerealisatieprojecten.
 
-Het genoemde onderzoek voert ISR uit als onderdeel van een “due diligence”. Een due diligence wordt uitgevoerd in samenwerking met een potentiële opdrachtgever en biedt, naast het genoemde onderzoek, ook de opdrachtgever de kans zich een oordeel te vormen over de werkwijze van ISR en de verwachte samenwerking.
+Het genoemde onderzoek voert ICTU uit als onderdeel van een “due diligence”. Een due diligence wordt uitgevoerd in samenwerking met een potentiële opdrachtgever en biedt, naast het genoemde onderzoek, ook de opdrachtgever de kans zich een oordeel te vormen over de werkwijze van ICTU en de verwachte samenwerking.
+
 
 ### Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)
 
@@ -138,9 +140,10 @@ Producten voldoen vanaf de start van een project aan de door de projectenorganis
 
 Het direct en continu voldoen aan de kwaliteitsnormen beperkt toekomstige hersteltijd. Het dwingt tevens een structurele kwaliteitscontrole af.
 
-#### ISR
+#### ICTU
 
-Bij ISR wordt tijdens de voorfase het voldoen aan de kwaliteitsnormen met behulp van reviews gecontroleerd. Tijdens de realisatiefase van projecten wordt het voldoen aan de kwaliteitsnormen diverse malen per uur gemeten door het 'Kwaliteitssysteem'. Het project kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het project. De ICTU-specifieke invulling van de kwaliteitsnormen is te vinden in het helpmenu van de geautomatiseerde kwaliteitsrapportages van ICTU.
+Bij ICTU wordt tijdens de voorfase van softwarerealisatieprojecten het voldoen aan de kwaliteitsnormen met behulp van reviews gecontroleerd. Tijdens de realisatiefase van softwarerealisatieprojecten wordt het voldoen aan de kwaliteitsnormen diverse malen per uur gemeten door het 'Kwaliteitssysteem' (HQ). Het project kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het project. De ICTU-specifieke invulling van de kwaliteitsnormen is te vinden in het helpmenu van de geautomatiseerde kwaliteitsrapportages van ICTU.
+
 
 ### Maatregel 3: Traceerbaar voldoen aan eisen  (M03)
 Eisen zijn wederzijds traceerbaar naar bewijsmateriaal, zoals logische testgevallen, dat de eis gerealiseerd is; dat wil zeggen dat geadministreerd is bij welke eis bewijsmateriaal hoort en vice versa. Dit wordt waar mogelijk met tooling ondersteund.
@@ -148,8 +151,8 @@ Eisen zijn wederzijds traceerbaar naar bewijsmateriaal, zoals logische testgeval
 #### Rationale
 Door eisen en testgevallen te koppelen en traceerbaar te maken, is het mogelijk de dekking van tests ten opzichte van eisen te bepalen.
 
-#### ISR
-Functionele eisen in de vorm van user stories zijn gekoppeld aan logische testgevallen. Ontwerpdocumentatie in de vorm van use cases is gekoppeld aan logische testgevallen. ISR gebruikt hiervoor Jira. Logische testgevallen zijn gekoppeld aan fysieke testgevallen. De fysieke testgevallen worden geannoteerd met een identifier van de logische testgevallen. Het project is verantwoordelijk voor het traceerbaar voldoen aan de eisen.
+#### ICTU
+Functionele eisen in de vorm van user stories zijn gekoppeld aan logische testgevallen. Ontwerpdocumentatie in de vorm van use cases is gekoppeld aan logische testgevallen. ICTU gebruikt hiervoor Jira. Logische testgevallen zijn gekoppeld aan fysieke testgevallen. De fysieke testgevallen worden geannoteerd met een identifier van de logische testgevallen. Het project is verantwoordelijk voor het traceerbaar voldoen aan de eisen.
 
 Niet-functionele eisen zijn gekoppeld aan onder andere softwarearchitectuurdocument, mastertestplan en detailtestplannen. De traceerbaarheid hiervan is (nog) niet geadministreerd met behulp van tooling.
 
@@ -161,8 +164,8 @@ Regressietests - tests die verifiëren of eerder ontwikkelde software nog steeds
 #### Rationale
 Handmatig uitgevoerde regressietests zijn arbeidsintensief, foutgevoelig en afhankelijk van de aanwezigheid van specifieke medewerkers. Gelet op de vrijwel continue metingen op en leveringen van de programmatuur, zijn de nadelen van handmatige regressietests niet acceptabel. Door ze te automatiseren zijn ze herhaalbaar en kunnen ze onderdeel uitmaken van de 'continuous delivery pipeline' (zie M07 Continuous delivery pipeline).
 
-#### ISR
-ISR hanteert een norm voor de dekking van regressietests.
+#### ICTU
+ICTU hanteert een norm voor de dekking van regressietests.
 
 
 ### Maatregel 26 : Periodieke beoordeling informatiebeveiliging (M25)
@@ -171,12 +174,13 @@ Projecten laten periodiek een beveiligingstest uitvoeren. De code wordt zowel ge
 
 #### Rationale
 Door het inschakelen van actuele, specifieke expertise wordt de kans vergroot dat eventuele kwetsbaarheden in de gerealiseerde software tijdig herkend worden. Doordat de projectenorganisatie deze expertise beschikbaar stelt, wordt voorkomen dat individuele projecten dat ieder voor zich moeten doen én dat beveiligingstesten als gevolg van (tijds)druk binnen projecten overgeslagen worden.
-#### ISR
-Software wordt minimaal bij iedere grote release of tenminste twee keer per jaar onderworpen aan een beveiligingstest door beveiligingsexperts die ISR daarvoor inhuurt. Op basis van documentatieen architectuurstudie, crystalbox security audits (broncodescan) en penetratieaudits beoordelen deze experts of de software voldoet aan de projectspecifieke niet-functionele eisen die met betrekking tot beveiliging aan de software zijn gesteld, of bekende kwetsbaarheden (OWASP) vermeden zijn en in hoeverre voldoende invulling gegeven is aan de normen vanuit die vanuit BIR en SSD gelden.
+#### ICTU
+Software wordt minimaal bij iedere grote release of tenminste twee keer per jaar onderworpen aan een beveiligingstest door beveiligingsexperts die ICTU daarvoor inhuurt. Op basis van documentatieen architectuurstudie, crystalbox security audits (broncodescan) en penetratieaudits beoordelen deze experts of de software voldoet aan de projectspecifieke niet-functionele eisen die met betrekking tot beveiliging aan de software zijn gesteld, of bekende kwetsbaarheden (OWASP) vermeden zijn en in hoeverre voldoende invulling gegeven is aan de normen vanuit die vanuit BIR en SSD gelden.
 
 Indien door de opdrachtgever gewenst kunnen securitytesten door een onafhankelijke derde partij worden uitgevoerd in een daarvoor door de opdrachtgever beschikbaar gestelde omgeving. Dit kan zowel incidenteel als structureel worden ingericht. Afspraken hierover worden bij voorkeur al in de voorbereidingsfase gemaakt.
 
 De beveiligingstesten vinden plaats in aanvulling op de door tools uitgevoerde continue beveiligingsanalyse van de gerealiseerde software, zie maatregel M16 Verplichte tools. Bevindingen uit zowel een beveiligingstest als de continue analyse worden in Jira als issue – gemarkeerd als beveiligingsbugreport – vastgelegd op de backlog van het project.
+
 
 ## Processen
 
@@ -187,8 +191,8 @@ waarbij elke iteratie een werkende versie van de software wordt opgeleverd die e
 
 #### Rationale
 De incrementele oplevering levert (vrijwel) iedere iteratie toegevoegde waarde en stelt opdrachtgevers, gebruikers en anderen in staat om gaandeweg ervaring op te doen en bij te sturen. Verder dwingt het vroegtijdige tests en kwaliteitscontroles af, die daarmee verankerd worden in het ontwikkel- en onderhoudsproces. Door naast de software telkens ook alle andere producten bij te werken en op te leveren wordt bereikt dat het product als geheel consistent blijft en dat er geen achterstallig onderhoud ontstaat.
-#### ISR
-ISR gebruikt hiervoor Scrum, een raamwerk voor productontwikkeling. ISR propageert de kernwaarden van Scrum en vereist de volgende Scrum-aspecten:
+#### ICTU
+ICTU gebruikt hiervoor Scrum, een raamwerk voor productontwikkeling. ICTU propageert de kernwaarden van Scrum en vereist de volgende Scrum-aspecten:
 - Scrum team bestaand uit product owner, ontwikkelteam en Scrum master,
 - Proces: daily scrum, sprints, sprint planning, sprint review, sprint refinement,
 - Definition of Done,
@@ -197,6 +201,7 @@ ISR gebruikt hiervoor Scrum, een raamwerk voor productontwikkeling. ISR propagee
 
 Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn (M01 Op te leveren producten) en voldoen aan de door de projectenorganisatie vastgestelde kwaliteitsnormen (M02 Continu voldoen aan kwaliteitsnormen).
 
+
 ### Maatregel 6: Frequente meting (M06)
 
 Het voldoen aan de kwaliteitsnormen die geautomatiseerd gemeten kunnen worden, wordt frequent – minimaal één keer per dag – gemeten. De projectenorganisatie voorziet hierin (mensen en middelen).
@@ -204,8 +209,8 @@ Het voldoen aan de kwaliteitsnormen die geautomatiseerd gemeten kunnen worden, w
 #### Rationale
 Vaak meten maakt een vrijwel actueel inzicht op elk moment mogelijk. Projectleden kunnen snel reageren op afwijkingen, die in de regel ook pas recent zijn ontstaan en dus meestal gerelateerd zijn aan huidige activiteiten. Met name afwijkingen van de normen op het vlak van informatiebeveiliging komen zo snel aan het licht en kunnen dan ook snel worden beoordeeld en – indien nodig en mogelijk – opgelost.
 
-#### ISR
-Bij een ISR-project is het voldoen aan de normen onderdeel van de 'Definition of Done' en wordt het voldoen aan kwaliteitsnormen meermaals per uur gemeten. Projecten nemen de kwaliteitsrapportage door tijdens de stand-up en tijdens het wekelijks projectoverleg.
+#### ICTU
+Bij een ICTU-softwareproject is het voldoen aan de normen onderdeel van de 'Definition of Done' en wordt het voldoen aan kwaliteitsnormen meermaals per uur gemeten. Projecten nemen de kwaliteitsrapportage door tijdens de stand-up en tijdens het wekelijks projectoverleg.
 
 
 
@@ -227,8 +232,8 @@ De projectenorganisatie voorziet in mensen en hulpmiddelen, zodat projecten deze
 #### Rationale
 Software incrementeel opleveren (zie M05 Iteratief en incrementeel ontwikkelproces) vereist dat de software frequent gebouwd, getest en opgeleverd kan worden. Om dit efficiënt en foutvrij te doen, dient het proces van bouwen, testen en opleveren geautomatiseerd te zijn; een continuous delivery pipeline faciliteert dit.
 
-#### ISR
-ISR gebruikt Jenkins of Team Foundation Server (TFS) als tool voor de implementatie van de continuous delivery pipeline. De ISR release manager ondersteunt de laatste stap (oplevering van het totale product).
+#### ICTU
+ICTU gebruikt Jenkins of Team Foundation Server (TFS) als tool voor de implementatie van de continuous delivery pipeline. De ICTU release manager ondersteunt de laatste stap (oplevering van het totale product).
 
 
 ### Maatregel 8: Technische schuld (M08)
@@ -238,8 +243,8 @@ Technische schuld is inzichtelijk en wordt planmatig aangepakt. De kwaliteitsman
 #### Rationale
 De aanwezigheid van technische schuld heeft nadelige invloed op de kwaliteit van de eindproducten. Anderzijds is het ontstaan van technische schuld gedurende een project vaak onvermijdelijk. Het is daarnaast ook mogelijk dat een deel van de technische schuld bij aanvang van het project al bestond en mogelijk niet wordt opgelost. In alle gevallen is het verstandig om te weten welke technische schuld bestaat. Om te voorkomen dat technische schuld niet wordt opgelost en uitsluitend toeneemt, is het zaak om het verminderen van technische schuld planmatig aan te pakken.
 
-#### ISR
-ISR gebruikt het ISR-kwaliteitssysteem om bestaande technische schuld inzichtelijk te maken en de planning van het aflossen van de schuld vast te leggen, voor zover het technische schuld betreft van kwaliteitseigenschappen die het kwaliteitssysteem kan meten.
+#### ICTU
+ICTU gebruikt HQ (een door ICTU ontwikkeld, open source, geautomatiseerd kwaliteitssysteem) om bestaande technische schuld inzichtelijk te maken en de planning van het aflossen van de schuld vast te leggen, voor zover het technische schuld betreft van kwaliteitseigenschappen die HQ kan meten.
 
 
 ### Maatregel 9: Implementatie kwaliteitsaanpak (M09)
@@ -260,8 +265,8 @@ De implementatie van een nieuwe versie van de kwaliteitsaanpak kost tijd. De int
 Anderzijds is het voor de uniformiteit van kwaliteitsmeting en rapportage en de doorontwikkeling van de kwaliteitsaanpak van belang de implementatieperiode zo kort mogelijk en voorspelbaar te houden. Daarom stemt de projectenorganisatie met de projecten een implementatiemoment en implementatieperiode af.
 
 Omdat implementatie van maatregelen in een project tijd kost is de zelf-assessment gericht op het in kaart brengen van de belangrijkste verschillen tussen kwaliteitsaanpak en de in het project toegepaste werkwijze en niet op het uitputtend inventariseren van alle verschillen.
-#### ISR
-Bij ISR speelt de software delivery manager de rol van projectverantwoordelijke zoals in deze maatregel beschreven. De software delivery manager stemt periodiek de zelf-assessmentresultaten af met het afdelingshoofd ISR.
+#### ICTU
+Bij ICTU speelt de software delivery manager de rol van projectverantwoordelijke zoals in deze maatregel beschreven. De software delivery manager stemt periodiek de zelf-assessmentresultaten af met het afdelingshoofd ISR.
 
 
 ### Maatregel 10: Periodiek projectoverleg (M010)
@@ -281,7 +286,7 @@ De agenda voor dit overleg bestaat tenminste uit de volgende onderwerpen:
 #### Rationale
 Het doel van het periodiek projectoverleg is alle direct-betrokkenen, breder dan het realiserende team, op hetzelfde informatieniveau te brengen en te houden. Direct-betrokkenen zijn alle medewerkers die geen onderdeel uitmaken van het realiserende team, maar wel eindverantwoordelijk of uitvoerend verantwoordelijk zijn voor het projectsucces.
 
-#### ISR
+#### ICTU
 Bij periodiek projectoverleg zijn de software delivery manager, een vertegenwoordiger uit het kernteam en de scrum master vereist.
 
 
@@ -292,8 +297,9 @@ Na afronding van de realisatiefase worden projecten afgesloten. Alle documentati
 
 #### Rationale
 Archiveren faciliteert het eventueel herstarten of overdragen van het project op een later tijdstip. Verwijderen neemt een onnodig risico op inbreuk op vertrouwelijkheid weg en vrijwaart projectmedewerkers en de projectenorganisatie van verdenking en aansprakelijkheid wanneer een incident optreedt.
-#### ISR
+#### ICTU
 De software delivery manager is verantwoordelijk voor het archiveren. De SDM geeft het projectteam opdracht de archivering voor te bereiden en geeft het technisch beheerteam de opdracht de archivering uit te voeren.
+
 
 ## Project Organisatie
 
@@ -319,8 +325,8 @@ Expliciet beheer en onderhoud van de kwaliteitsaanpak is nodig om lessen geleerd
 Wijzigingsvoorstellen moeten een sponsor hebben zodat het duidelijk is dat iemand zich hard maakt voor het realiseren van de wijziging.
 
 Wijzigingsvoorstellen bevatten een advies ter besluitvorming aan de projectenorganisatie. NB: het advies kan ook zijn de wijziging niet door te voeren. 
-#### ISR
-Iedereen die werkzaam is bij de afdeling kan een wijzigingsvoorstel indienen bij het hoofd van de afdeling. Het ISR-kernteam behandelt de wijzigingsvoorstellen en faciliteert besluitvorming door het afdelingshoofd.
+#### ICTU
+Iedereen die betrokken is bij softwarerealisatieprojecten kan een wijzigingsvoorstel indienen bij het hoofd van de afdeling ICTU Software Realisatie (ISR). Het ISR-coordinatieteam behandelt de wijzigingsvoorstellen en faciliteert besluitvorming door het afdelingshoofd.
 
 
 ### Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen (M024)
@@ -347,9 +353,10 @@ De projectenorganisatie publiceert periodiek, op een vaste, bekende locatie, een
 
 #### Rationale
 Medewerkers moeten te allen tijde de actuele kwaliteitsaanpak en –normen kunnen raadplegen. Welke versie actueel is en wanneer een nieuwe versie actueel wordt, is essentiële informatie voor de planning van werkzaamheden binnen de projecten en binnen de afdeling als geheel.
-#### ISR
-De kwaliteitsaanpak is te vinden op de afdelingsbrede wiki. Publicatie van een nieuwe versie wordt aangekondigd via een afdelingsbrede e-mail en, indien relevant, 'de zeepkist'.
-Bij ISR zijn de kwaliteitsnormen (op dit moment) te vinden in elke kwaliteitsrapportage, in het 'helpmenu'.
+#### ICTU
+De kwaliteitsaanpak is te vinden op de afdelingsbrede wiki. Publicatie van een nieuwe versie wordt aangekondigd via een e-mail naar belanghebbenden en, indien relevant, 'de ICTU Software Realisatie-zeepkist'.
+Bij ICTU zijn de kwaliteitsnormen (op dit moment) te vinden in elke kwaliteitsrapportage, in het 'helpmenu'.
+
 
 ### Maatregel 13: Dekking ISO-25010 (M013)
 
@@ -357,8 +364,8 @@ De door de projectenorganisatie vastgestelde kwaliteitsnormen dekken een signifi
 
 #### Rationale
 De standaard ISO-25010 biedt een model voor kwaliteitseigenschappen die van toepassing kunnen zijn op een software-product. De standaard biedt weliswaar geen concrete maatregelen, maar beoogt wel het volledige spectrum van mogelijk relevante kwaliteitseigenschappen af te dekken. Het afzetten van de dekking van de kwaliteitsnormen tegen de standaard geeft zicht op de breedte van het toepassingsgebied van de kwaliteitsnormen.
-#### ISR
-De kwaliteitsnormen van ISR betreffen de productkwaliteitskenmerken:
+#### ICTU
+De kwaliteitsnormen van ICTU voor softwareproducten betreffen de productkwaliteitskenmerken:
 - prestatie-efficiëntie
 - beveiligbaarheid 
 - onderhoudbaarheid
@@ -373,8 +380,8 @@ Projecten hebben een voorbereidingsfase, voorafgaand aan de realisatiefase. Voor
 Het doel van de voorbereidingsfase is ten eerste om uitgangspunten, risico's en randvoorwaarden voor verdere projectuitvoering te bepalen en ten tweede om te zorgen dat aan de randvoorwaarden wordt voldaan en voor zoveel mogelijk project-specifieke risico's maatregelen genomen zijn. Het doel van de realisatiefase is het daadwerkelijk bouwen en onderhouden van de software. Een expliciete splitsing zorgt ervoor dat projecten doordacht van start gaan.
 
 Al tijdens de voorfase moeten keuzes gemaakt worden die invloed hebben op de beveiligingsmaatregelen. Aanwezigheid van een voldoende gemandateerde vertegenwoordiger van de opdrachtgever zorgt dat deze keuzes gemaakt en bekrachtigd kunnen worden. De keuzes komen onder meer tot uitdrukking in de ontwerp- en architectuurdocumentatie, zie M01 Op te leveren producten. De infrastructuur gerelateerde documentatie wordt opgesteld door de beoogd beheerder en dekt een deel van de totale beveiligingsmaatregelen af. Aanwezigheid van de beoogd beheerder in de voorfase zorgt dat dekking van dit deel van de beveiligingsmaatregelen geborgd blijft gedurende de realisatie en exploitatie.
-#### ISR
-Bij ISR heet de voorbereidingsfase de 'voorfase'. . In de realisatiefase wordt het Scrumteam aangestuurd door een product owner van de opdrachtgever. Bij aanvang van de voorfase is deze beoogde product owner bekend en hij/zij werkt ook mee in de voorfase.
+#### ICTU
+Bij ICTU heet de voorbereidingsfase van softwarerealisatieprojecten de 'voorfase'. In de realisatiefase wordt het Scrumteam aangestuurd door een product owner van de opdrachtgever. Bij aanvang van de voorfase is deze beoogde product owner bekend en hij/zij werkt ook mee in de voorfase.
 
 
 ### Maatregel 15: Open source tools (M015)
@@ -383,8 +390,8 @@ Bij de selectie van tools ter ondersteuning van de projectuitvoering  geeft de p
 
 #### Rationale
 Conform de NORA rationale voor het gebruik van open source tools zoals beschreven in NORA v3.0 drijfveer “beleid open standaarden” (http://www.noraonline.nl/wiki/Beleid_open_standaarden).
-#### ISR
-Tools die ISR ontwikkelt, worden bij voorkeur als open source beschikbaar gesteld.
+#### ICTU
+Tools die ICTU ontwikkelt ter ondersteuning van softwarerealisatieprojecten, worden bij voorkeur als open source beschikbaar gesteld.
 
 
 ### Maatregel 16: Verplichte tools (M016)
@@ -402,8 +409,8 @@ De projectenorganisatie stelt het gebruik van de volgende tools voor alle projec
 
 #### Rationale
 Projecten hebben een redelijke vrijheid bij het kiezen van tools, maar het gebruik van een aantal is verplicht gesteld. Deze tools zijn nodig voor een efficiënte uitvoering van deze kwaliteitsaanpak. Uniform gebruik van deze tools maakt het mogelijk koppeling tussen die tools voor alle projecten te standaardiseren. Daarnaast bevordert het de uitwisselbaarheid van medewerkers en neemt het risico op het gebruik van onvolwassen tools af. 
-#### ISR
-ISR gebruikt hiervoor de volgende tools:
+#### ICTU
+ICTU gebruikt hiervoor de volgende tools:
 1. Jira – De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog, de iteraties als sprints.
 2. Jenkins voor Javaprojecten en Team Foundation Server (TFS) voor DotNet-projecten.
 3. SonarQube, inclusief ICTU-specifieke kwaliteitsprofielen die aansluiten bij de ICTU-kwaliteitsnormen.
@@ -424,8 +431,8 @@ De projectenorganisatie zorgt dat bij start en uitvoering een aantal tools snel 
 
 #### Rationale
 Snelle beschikbaarheid van tools betekent dat projecten snel kunnen beginnen. De niet-verplichte tools geven daarnaast de voorkeur van de projectenorganisatie weer. 
-#### ISR
-ISR gebruikt hiervoor de volgende tools:
+#### ICTU
+ICTU gebruikt hiervoor de volgende tools:
 1. Docker dashboard
 2. MediaWiki
 3. Wekan
@@ -450,8 +457,8 @@ De projectenorganisatie geeft de projecten de beschikking over eigen, afgescherm
 
 #### Rationale
 Door het bieden van een afgeschermde digitale omgeving zijn de afhankelijkheden en invloeden tussen projecten minimaal en worden beveiligingsrisico's verkleind.
-#### ISR
-ISR ondersteunt dit met Docker en/of virtuele machines (VM) en een VLAN per project. Een nieuwe digitale werkomgeving is binnen een werkweek na aanvraag beschikbaar.
+#### ICTU
+ICTU ondersteunt dit met Docker en/of virtuele machines (VM) en een VLAN per project. Een nieuwe digitale werkomgeving is binnen een werkweek na aanvraag beschikbaar.
 
 
 ### Maatregel 21: Kwaliteit van medewerkers (M021)
@@ -470,7 +477,7 @@ De projectverantwoordelijke betrekt de projectenorganisatie bij het inzetten van
 #### Rationale
 Medewerkers moeten zowel een goede match hebben met het project en de projectspecifieke behoeften aan kennis en vaardigheden als een goede match met de projectenorganisatie als geheel. Van medewerkers wordt namelijk verwacht dat ze zowel bijdragen aan de projectdoelstellingen als aan de projectoverstijgende doelen van de kwaliteitsaanpak. 
 
-#### ISR
+#### ICTU
 Bij het inzetten van medewerkers zijn één of meer leden van het ISR-kernteam betrokken.
 
 

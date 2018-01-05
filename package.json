@@ -1,12 +1,13 @@
 {
   "name": "kwaliteitsaanpak",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "",
   "main": "index.js",
   "dependencies": {
     "extract-json": "^0.2.0",
     "markdown-include": "^0.4.3",
     "markdown-to-html": "0.0.13",
+    "marked": "^0.3.9",
     "phantom-html-to-pdf": "^0.5.5",
     "phantomjs": "^2.1.7"
   },

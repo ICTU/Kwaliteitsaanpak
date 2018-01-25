@@ -3,7 +3,7 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie - Generic
-versie 1.1.14
+versie 1.1.15
 
 
 ## Inleiding

@@ -3,7 +3,7 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie
-versie 1.1.15
+versie 1.1.16
 
 
 ## Inleiding
@@ -287,8 +287,7 @@ De agenda voor dit overleg bestaat tenminste uit de volgende onderwerpen:
 Het doel van het periodiek projectoverleg is alle direct-betrokkenen, breder dan het realiserende team, op hetzelfde informatieniveau te brengen en te houden. Direct-betrokkenen zijn alle medewerkers die geen onderdeel uitmaken van het realiserende team, maar wel eindverantwoordelijk of uitvoerend verantwoordelijk zijn voor het projectsucces.
 
 #### ICTU
-Bij periodiek projectoverleg zijn de software delivery manager, een vertegenwoordiger uit het kernteam en de scrum master vereist.
-
+Bij periodiek projectoverleg zijn de software delivery manager, de kwaliteitsmanager en de scrum master vereist.
 
 
 ### Maatregel M27 - Projecten expliciet afsluiten (M27)
@@ -478,7 +477,7 @@ De projectverantwoordelijke betrekt de projectenorganisatie bij het inzetten van
 Medewerkers moeten zowel een goede match hebben met het project en de projectspecifieke behoeften aan kennis en vaardigheden als een goede match met de projectenorganisatie als geheel. Van medewerkers wordt namelijk verwacht dat ze zowel bijdragen aan de projectdoelstellingen als aan de projectoverstijgende doelen van de kwaliteitsaanpak. 
 
 #### ICTU
-Bij het inzetten van medewerkers zijn één of meer leden van het ISR-kernteam betrokken.
+Bij het inzetten van medewerkers zijn één of meer ICTU-medewerkers betrokken die ruime ervaring hebben met de ICTU-werkwijze en -kwaliteitsaanpak.
 
 
 ### Maatregel 23: Warme kennisoverdracht (M023)

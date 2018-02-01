@@ -2,7 +2,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 # ISR maatregelen
-versie 1.1.15
+versie 1.1.16
 
 
 ## Producten
@@ -110,8 +110,7 @@ Bij ICTU speelt de software delivery manager de rol van projectverantwoordelijke
 ### Maatregel 10: Periodiek projectoverleg (M010)
 
 #### ICTU
-Bij periodiek projectoverleg zijn de software delivery manager, een vertegenwoordiger uit het kernteam en de scrum master vereist.
-
+Bij periodiek projectoverleg zijn de software delivery manager, de kwaliteitsmanager en de scrum master vereist.
 
 
 ### Maatregel M27 - Projecten expliciet afsluiten (M27)
@@ -203,7 +202,7 @@ ICTU ondersteunt dit met Docker en/of virtuele machines (VM) en een VLAN per pro
 ### Maatregel 22: Betrokkenheid bij inzet (M022)
 
 #### ICTU
-Bij het inzetten van medewerkers zijn één of meer leden van het ISR-kernteam betrokken.
+Bij het inzetten van medewerkers zijn één of meer ICTU-medewerkers betrokken die ruime ervaring hebben met de ICTU-werkwijze en -kwaliteitsaanpak.
 
 
 ### Maatregel 23: Warme kennisoverdracht (M023)

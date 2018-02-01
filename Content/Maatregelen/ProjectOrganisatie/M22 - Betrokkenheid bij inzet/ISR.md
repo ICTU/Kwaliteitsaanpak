@@ -1,2 +1,2 @@
 #### ICTU
-Bij het inzetten van medewerkers zijn één of meer leden van het ISR-kernteam betrokken.
+Bij het inzetten van medewerkers zijn één of meer ICTU-medewerkers betrokken die ruime ervaring hebben met de ICTU-werkwijze en -kwaliteitsaanpak.

@@ -3,11 +3,11 @@ De projectverantwoordelijke organiseert een periodiek projectoverleg. Dit overle
 Vereiste aanwezigen zijn de project-verantwoordelijke, een vertegenwoordiger uit het projectteam en een kwaliteits-manager. Andere aanwezigen kunnen zijn: opdrachtnemer, architecten en coaches.
 
 De agenda voor dit overleg bestaat tenminste uit de volgende onderwerpen: 
-- mededelingen – pro-actief informeren over voor het project relevante ontwikkelingen,
+- mededelingen - pro-actief informeren over voor het project relevante ontwikkelingen,
 - actie- en besluitenlijst,
-- personele zaken – bespreking van samenwerking binnen het team, in- en uitstroom, op- en afschalen,
-- planning en voortgang – bespreking van voortgang ten opzichte van voorspelling en daaraan gerelateerde afwijkingen en knelpunten, leidend tot acties,
-- kwaliteit en architectuur – bespreking van kwaliteit en architectuur (voor borging van inhoudelijke koers) en eventuele afwijkingen en benodigde acties,
+- personele zaken - bespreking van samenwerking binnen het team, in- en uitstroom, op- en afschalen,
+- planning en voortgang - bespreking van voortgang ten opzichte van voorspelling en daaraan gerelateerde afwijkingen en knelpunten, leidend tot acties,
+- kwaliteit en architectuur - bespreking van kwaliteit en architectuur (voor borging van inhoudelijke koers) en eventuele afwijkingen en benodigde acties,
 - risico's en aandachtspunten.
 
 #### Rationale

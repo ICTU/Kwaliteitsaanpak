@@ -3,8 +3,18 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie - Generic
-versie 1.1.16
+versie 1.1.20
 
+
+## Manifest
+
+ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. 
+In ons werk zijn we het volgende gaan waarderen:
+- Het belang van de burger staat voorop.
+- We delen wat we goed kunnen, en gebruiken wat anderen beter doen.
+- Op zoek naar de juiste oplossing is het experiment soms de kortste weg.
+- Wij geloven in agile werken bij de overheid.
+- Wij geven inzicht in de kwaliteit van ons werk.
 
 ## Inleiding
 
@@ -253,6 +263,7 @@ Wijzigingsvoorstellen moeten een sponsor hebben zodat het duidelijk is dat ieman
 
 Wijzigingsvoorstellen bevatten een advies ter besluitvorming aan de projectenorganisatie. NB: het advies kan ook zijn de wijziging niet door te voeren. 
 
+
 ### Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen (M024)
 Bij elke wijziging aan de kwaliteitsaanpak en/of -normen stelt de projectenorganisatie vast of de wijziging leidt tot een wijziging in de werkwijze van de projecten. Als dit het geval is wijst de projectenorganisatie een sponsor van de wijziging aan die een implementatieplan voor de wijziging maakt en uitvoert. Het implementatieplan bevat ten minste:
 - het doel van de wijziging,
@@ -277,6 +288,7 @@ De projectenorganisatie publiceert periodiek, op een vaste, bekende locatie, een
 #### Rationale
 Medewerkers moeten te allen tijde de actuele kwaliteitsaanpak en –normen kunnen raadplegen. Welke versie actueel is en wanneer een nieuwe versie actueel wordt, is essentiële informatie voor de planning van werkzaamheden binnen de projecten en binnen de afdeling als geheel.
 
+
 ### Maatregel 13: Dekking ISO-25010 (M013)
 
 De door de projectenorganisatie vastgestelde kwaliteitsnormen dekken een significant deel van de ISO-25010-kwaliteitskenmerken af.
@@ -292,6 +304,7 @@ Projecten hebben een voorbereidingsfase, voorafgaand aan de realisatiefase. Voor
 Het doel van de voorbereidingsfase is ten eerste om uitgangspunten, risico's en randvoorwaarden voor verdere projectuitvoering te bepalen en ten tweede om te zorgen dat aan de randvoorwaarden wordt voldaan en voor zoveel mogelijk project-specifieke risico's maatregelen genomen zijn. Het doel van de realisatiefase is het daadwerkelijk bouwen en onderhouden van de software. Een expliciete splitsing zorgt ervoor dat projecten doordacht van start gaan.
 
 Al tijdens de voorfase moeten keuzes gemaakt worden die invloed hebben op de beveiligingsmaatregelen. Aanwezigheid van een voldoende gemandateerde vertegenwoordiger van de opdrachtgever zorgt dat deze keuzes gemaakt en bekrachtigd kunnen worden. De keuzes komen onder meer tot uitdrukking in de ontwerp- en architectuurdocumentatie, zie M01 Op te leveren producten. De infrastructuur gerelateerde documentatie wordt opgesteld door de beoogd beheerder en dekt een deel van de totale beveiligingsmaatregelen af. Aanwezigheid van de beoogd beheerder in de voorfase zorgt dat dekking van dit deel van de beveiligingsmaatregelen geborgd blijft gedurende de realisatie en exploitatie.
+
 
 ### Maatregel 15: Open source tools (M015)
 

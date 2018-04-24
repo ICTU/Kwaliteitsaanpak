@@ -13,3 +13,4 @@ before_install:
 - docker run -v  $(pwd):/ka ka ./create-docs.sh
 - git add ICTU-Kwaliteitsaanpak-*
 - git commit -m "Commit after Travis build."
+- git push

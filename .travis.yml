@@ -10,4 +10,5 @@ before_install:
 - ls -l
 - docker build -t ka .
 - docker run -v  $(pwd):/ka ka ls
+- chmod +x ./create-docs.sh
 - docker run -v  $(pwd):/ka ka ./create-docs.sh

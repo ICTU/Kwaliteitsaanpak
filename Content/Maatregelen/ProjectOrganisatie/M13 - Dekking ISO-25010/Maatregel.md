@@ -1,3 +1,4 @@
+Specificatie van kwaliteitskenmerken is gebaseerd op ISO-25010.
 De door de projectenorganisatie vastgestelde kwaliteitsnormen dekken een significant deel van de ISO-25010-kwaliteitskenmerken af.
 
 #### Rationale

@@ -1,13 +1,12 @@
 sudo: required
 
-language:
+language: generic
 
 services:
   - docker
 
 before_install:
-- pwd
-- ls -l
 - docker build -t ka .
 - docker run -v  $(pwd):/ka ka ls
+- chmod +x ./create-docs.sh
 - docker run -v  $(pwd):/ka ka ./create-docs.sh

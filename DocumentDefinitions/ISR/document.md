@@ -2,6 +2,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 # ISR maatregelen
+#include "Content/Manifest.md"
 #include "Content/Versie.md"
 
 ## Producten

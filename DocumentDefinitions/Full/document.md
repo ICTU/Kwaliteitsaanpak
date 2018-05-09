@@ -5,6 +5,7 @@
 # Kwaliteitsaanpak ICTU Software Realisatie
 #include "Content/Versie.md"
 
+#include "Content/Manifest.md"
 #include "Content/Inleiding.md"
 
 ## Producten
@@ -116,4 +117,8 @@
 #include "Content/Maatregelen/ProjectOrganisatie/M23 - Warme kennisoverdracht/Titel.md"
 #include "Content/Maatregelen/ProjectOrganisatie/M23 - Warme kennisoverdracht/Maatregel.md"
 #include "Content/Maatregelen/ProjectOrganisatie/M23 - Warme kennisoverdracht/ISR.md"
+
+# Bijlagen
+
+#include "Content/Bijlagen/Manifest-Maatregelen.md"
 

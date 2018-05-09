@@ -3,8 +3,24 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie
-versie 1.1.16
+versie 1.1.23
 
+
+## Manifest
+
+ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:
+- **Het belang van de burger staat voorop.**
+  Omdat de burger de belangrijkste afnemer van ons werk is.
+- **We delen wat we goed kunnen, en gebruiken wat anderen beter doen.**
+  Omdat wij hiermee sneller tot goede oplossingen komen.
+- **Op zoek naar de juiste oplossing is het experiment soms de kortste weg.**
+  Omdat wij open staan voor bruikbare en effectieve oplossingen die kunnen afwijken van standaardmethodes.
+- **Wij geloven in agile werken bij de overheid.**
+  Omdat wij graag samen met de klant werken aan passende oplossingen.
+- **Wij geven inzicht in de kwaliteit van ons werk.**
+  Omdat wij geloven dat openheid leidt tot een goede samenwerking en een beter resultaat.
+
+Deze kwaliteitsaanpak ondersteunt het realiseren van deze waarden.
 
 ## Inleiding
 
@@ -324,6 +340,7 @@ Expliciet beheer en onderhoud van de kwaliteitsaanpak is nodig om lessen geleerd
 Wijzigingsvoorstellen moeten een sponsor hebben zodat het duidelijk is dat iemand zich hard maakt voor het realiseren van de wijziging.
 
 Wijzigingsvoorstellen bevatten een advies ter besluitvorming aan de projectenorganisatie. NB: het advies kan ook zijn de wijziging niet door te voeren. 
+
 #### ICTU
 Iedereen die betrokken is bij softwarerealisatieprojecten kan een wijzigingsvoorstel indienen bij het hoofd van de afdeling ICTU Software Realisatie (ISR). Het ISR-coordinatieteam behandelt de wijzigingsvoorstellen en faciliteert besluitvorming door het afdelingshoofd.
 
@@ -352,6 +369,7 @@ De projectenorganisatie publiceert periodiek, op een vaste, bekende locatie, een
 
 #### Rationale
 Medewerkers moeten te allen tijde de actuele kwaliteitsaanpak en –normen kunnen raadplegen. Welke versie actueel is en wanneer een nieuwe versie actueel wordt, is essentiële informatie voor de planning van werkzaamheden binnen de projecten en binnen de afdeling als geheel.
+
 #### ICTU
 De kwaliteitsaanpak is te vinden op de afdelingsbrede wiki. Publicatie van een nieuwe versie wordt aangekondigd via een e-mail naar belanghebbenden en, indien relevant, 'de ICTU Software Realisatie-zeepkist'.
 Bij ICTU zijn de kwaliteitsnormen (op dit moment) te vinden in elke kwaliteitsrapportage, in het 'helpmenu'.
@@ -379,6 +397,7 @@ Projecten hebben een voorbereidingsfase, voorafgaand aan de realisatiefase. Voor
 Het doel van de voorbereidingsfase is ten eerste om uitgangspunten, risico's en randvoorwaarden voor verdere projectuitvoering te bepalen en ten tweede om te zorgen dat aan de randvoorwaarden wordt voldaan en voor zoveel mogelijk project-specifieke risico's maatregelen genomen zijn. Het doel van de realisatiefase is het daadwerkelijk bouwen en onderhouden van de software. Een expliciete splitsing zorgt ervoor dat projecten doordacht van start gaan.
 
 Al tijdens de voorfase moeten keuzes gemaakt worden die invloed hebben op de beveiligingsmaatregelen. Aanwezigheid van een voldoende gemandateerde vertegenwoordiger van de opdrachtgever zorgt dat deze keuzes gemaakt en bekrachtigd kunnen worden. De keuzes komen onder meer tot uitdrukking in de ontwerp- en architectuurdocumentatie, zie M01 Op te leveren producten. De infrastructuur gerelateerde documentatie wordt opgesteld door de beoogd beheerder en dekt een deel van de totale beveiligingsmaatregelen af. Aanwezigheid van de beoogd beheerder in de voorfase zorgt dat dekking van dit deel van de beveiligingsmaatregelen geborgd blijft gedurende de realisatie en exploitatie.
+
 #### ICTU
 Bij ICTU heet de voorbereidingsfase van softwarerealisatieprojecten de 'voorfase'. In de realisatiefase wordt het Scrumteam aangestuurd door een product owner van de opdrachtgever. Bij aanvang van de voorfase is deze beoogde product owner bekend en hij/zij werkt ook mee in de voorfase.
 
@@ -487,6 +506,47 @@ De projectverantwoordelijke zorgt ervoor dat bij nieuwe projecten wordt gestart 
 #### Rationale
 Het inzetten van teamleden die bekend zijn met de kwaliteitsaanpak zorgt voor een soepeler start van een nieuw project omdat zij bekend zijn met de inhoud van de kwaliteitsaanpak, zoals kwaliteitsnormen en tools, en omdat zij al doende nieuwe teamleden bekend kunnen maken met de kwaliteitsaanpak.
 
+
+
+
+# Bijlagen
+
+## Hoe de kwaliteitsaanpak het manifest ondersteunt
+
+### Het belang van de burger staat voorop
+
+Deze kwaliteitsaanpak helpt opdrachtgevers van maatwerksoftware het belang van burgers voorop te zetten door:
+- voordat het project echt gaat bouwen goed na te denken over de mogelijke oplossingen en de kwaliteitseigenschappen die voor met name de burger van belang zijn. Denk aan gebruikskwaliteit, beveiliging, privacy, performance en toegankelijkheid (M14: Projecten splitsen in voorfase en realisatiefase).
+- door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan (M21: Kwaliteit van medewerkers).
+
+### We delen wat we goed kunnen, en gebruiken wat anderen beter doen
+
+We delen wat we goed kunnen door:
+- geleerde lessen te verwerken in deze kwaliteitsaanpak (M11: Beheer en onderhoud kwaliteitsaanpak en normen) en die te delen tussen projecten (M24: Implementatie van wijzigingen aan de kwaliteitsaanpak en normen) en te publiceren via http://www.ictu.nl/kwaliteitsaanpak (M12: Publicatie kwaliteits aanpak en normen).
+- de tools die we ontwikkelen ter ondersteuning van softwarerealisatieprojecten zoveel mogelijk als open source beschikbaar te stellen (M15: Open source tools).
+
+We gebruiken wat anderen beter doen door:
+- open source tools te gebruiken (M15 open source tools).
+- bewezen tools te kiezen (M16: Verplichte tools) en beschikbaar te stellen aan projecten (M17: Snel beschikbare tools) in een digitale werkomgeving (M19: Digitale werkomgeving) en het gebruik ervan te ondersteunen (M18: Ondersteuning verplichte tools).
+- ons werk periodiek op informatiebeveiliging te laten controleren (M26: periodieke beoordeling informatiebeveiliging).
+- door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan (M21: Kwaliteit van medewerkers).
+
+### Op zoek naar de juiste oplossing is het experiment soms de kortste weg
+
+De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om te leren. We delen de lessen geleerd in projecten via de kwaliteitsaanpak zelf (M11: Beheer en onderhoud kwaliteitsaanpak en normen)
+
+### Wij geloven in agile werken bij de overheid
+
+Door agile te werken (M05: Iteratief en incrementeel ontwikkelproces) kunnen wij:
+- duurzame kwaliteit leveren (M06: Frequente Meting en M02: Continue voldoen aan de kwaliteitsnormen)
+- frequent waarde leveren (M07: Continous delivery)
+- technische schuld beheersen (M08: Technische dchuld).
+
+### Wij geven inzicht in de kwaliteit van ons werk
+
+Deze kwaliteitsaanpak helpt organisaties die maatwerksoftware ontwikkelen inzicht te geven aan de opdrachtgevers in de kwaliteit van het werk door:
+- een vaste verzameling documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen (M01: Op te leveren producten);
+- continu de kwaliteit van het werk te meten en opdrachtgevers hier inzicht in te geven (M02: Continue voldoen aan de kwaliteitsnormen);
 
 
 

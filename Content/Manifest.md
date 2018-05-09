@@ -2,8 +2,8 @@
 
 ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:
 - **Het belang van de burger staat voorop.**
-  Omdat de burger de belangrijkste afnemer van ons werk is.
-- **We delen wat we goed kunnen, en gebruiken wat anderen beter doen.**
+  Omdat burgers en ambtenaren die diensten verlenen aan burgers, de belangrijkste afnemers van ons werk zijn.
+- **We delen wat we goed kunnen en gebruiken wat anderen beter doen.**
   Omdat wij hiermee sneller tot goede oplossingen komen.
 - **Op zoek naar de juiste oplossing is het experiment soms de kortste weg.**
   Omdat wij open staan voor bruikbare en effectieve oplossingen die kunnen afwijken van standaardmethodes.

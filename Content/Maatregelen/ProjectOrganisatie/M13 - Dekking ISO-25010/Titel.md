@@ -1,1 +1,1 @@
-### Maatregel 13: Dekking ISO-25010 (M013)
+### Maatregel 13: Gebruik van ISO-25010 (M013)

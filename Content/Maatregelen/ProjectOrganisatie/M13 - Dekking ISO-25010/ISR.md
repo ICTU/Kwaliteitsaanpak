@@ -1,6 +1,2 @@
 #### ICTU
-De kwaliteitsnormen van ICTU voor softwareproducten betreffen de productkwaliteitskenmerken:
-- prestatie-efficiëntie
-- beveiligbaarheid 
-- onderhoudbaarheid
-- functionele compleetheid (subkarakteristiek van functionele geschiktheid)
+ICTU gebruikt ISO-25010 voor documentatie en specificatie van productkwaliteit.

@@ -6,8 +6,8 @@
 
 ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:
 - **Het belang van de burger staat voorop.**
-  Omdat de burger de belangrijkste afnemer van ons werk is.
-- **We delen wat we goed kunnen, en gebruiken wat anderen beter doen.**
+  Omdat burgers en ambtenaren die diensten verlenen aan burgers, de belangrijkste afnemers van ons werk zijn.
+- **We delen wat we goed kunnen en gebruiken wat anderen beter doen.**
   Omdat wij hiermee sneller tot goede oplossingen komen.
 - **Op zoek naar de juiste oplossing is het experiment soms de kortste weg.**
   Omdat wij open staan voor bruikbare en effectieve oplossingen die kunnen afwijken van standaardmethodes.
@@ -18,7 +18,7 @@ ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-
 
 Deze kwaliteitsaanpak ondersteunt het realiseren van deze waarden.
 
-versie 1.1.23
+versie 1.1.24
 
 
 ## Producten
@@ -50,7 +50,7 @@ eisen wordt voldaan door uit te werken welke (beveiligings)mechanieken gekozen z
 
 Zie Bijlage documenten voor maatregel M1 voor een uitgebreider overzicht van de documenten en documentstandaarden die ICTU hanteert voor softwarerealisatieprojecten.
 
-Het genoemde onderzoek voert ICTU uit als onderdeel van een “due diligence”. Een due diligence wordt uitgevoerd in samenwerking met een potentiële opdrachtgever en biedt, naast het genoemde onderzoek, ook de opdrachtgever de kans zich een oordeel te vormen over de werkwijze van ICTU en de verwachte samenwerking.
+Het genoemde onderzoek voert ICTU uit als onderdeel van een "due diligence". Een due diligence wordt uitgevoerd in samenwerking met een potentiële opdrachtgever en biedt, naast het genoemde onderzoek, ook de opdrachtgever de kans zich een oordeel te vormen over de werkwijze van ICTU en de verwachte samenwerking.
 
 
 ### Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)
@@ -80,7 +80,7 @@ Software wordt minimaal bij iedere grote release of tenminste twee keer per jaar
 
 Indien door de opdrachtgever gewenst kunnen securitytesten door een onafhankelijke derde partij worden uitgevoerd in een daarvoor door de opdrachtgever beschikbaar gestelde omgeving. Dit kan zowel incidenteel als structureel worden ingericht. Afspraken hierover worden bij voorkeur al in de voorbereidingsfase gemaakt.
 
-De beveiligingstesten vinden plaats in aanvulling op de door tools uitgevoerde continue beveiligingsanalyse van de gerealiseerde software, zie maatregel M16 Verplichte tools. Bevindingen uit zowel een beveiligingstest als de continue analyse worden in Jira als issue – gemarkeerd als beveiligingsbugreport – vastgelegd op de backlog van het project.
+De beveiligingstesten vinden plaats in aanvulling op de door tools uitgevoerde continue beveiligingsanalyse van de gerealiseerde software, zie maatregel M16 Verplichte tools. Bevindingen uit zowel een beveiligingstest als de continue analyse worden in Jira als issue - gemarkeerd als beveiligingsbugreport - vastgelegd op de backlog van het project.
 
 
 ## Processen
@@ -153,14 +153,10 @@ De kwaliteitsaanpak is te vinden op de afdelingsbrede wiki. Publicatie van een n
 Bij ICTU zijn de kwaliteitsnormen (op dit moment) te vinden in elke kwaliteitsrapportage, in het 'helpmenu'.
 
 
-### Maatregel 13: Dekking ISO-25010 (M013)
+### Maatregel 13: Gebruik van ISO-25010 (M013)
 
 #### ICTU
-De kwaliteitsnormen van ICTU voor softwareproducten betreffen de productkwaliteitskenmerken:
-- prestatie-efficiëntie
-- beveiligbaarheid 
-- onderhoudbaarheid
-- functionele compleetheid (subkarakteristiek van functionele geschiktheid)
+ICTU gebruikt ISO-25010 voor documentatie en specificatie van productkwaliteit.
 
 
 ### Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase (M014)
@@ -179,7 +175,7 @@ Tools die ICTU ontwikkelt ter ondersteuning van softwarerealisatieprojecten, wor
 
 #### ICTU
 ICTU gebruikt hiervoor de volgende tools:
-1. Jira – De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog, de iteraties als sprints.
+1. Jira - De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog, de iteraties als sprints.
 2. Jenkins voor Javaprojecten en Team Foundation Server (TFS) voor DotNet-projecten.
 3. SonarQube, inclusief ICTU-specifieke kwaliteitsprofielen die aansluiten bij de ICTU-kwaliteitsnormen.
 4. Releasemanager.

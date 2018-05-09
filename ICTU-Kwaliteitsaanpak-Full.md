@@ -3,15 +3,15 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie
-versie 1.1.23
+versie 1.1.24
 
 
 ## Manifest
 
 ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:
 - **Het belang van de burger staat voorop.**
-  Omdat de burger de belangrijkste afnemer van ons werk is.
-- **We delen wat we goed kunnen, en gebruiken wat anderen beter doen.**
+  Omdat burgers en ambtenaren die diensten verlenen aan burgers, de belangrijkste afnemers van ons werk zijn.
+- **We delen wat we goed kunnen en gebruiken wat anderen beter doen.**
   Omdat wij hiermee sneller tot goede oplossingen komen.
 - **Op zoek naar de juiste oplossing is het experiment soms de kortste weg.**
   Omdat wij open staan voor bruikbare en effectieve oplossingen die kunnen afwijken van standaardmethodes.
@@ -30,7 +30,7 @@ Eén van de fundamentele problemen is dat de risico's die inherent zijn aan soft
 
 Terwijl de risico's bij de ontwikkeling van maatwerksoftware inmiddels algemeen bekend zijn en er ook voor veel risico's passende maatregelen beschikbaar zijn.
 
-ICTU werkt sinds 2010 met de agile softwareontwikkelaanpak Scrum en heeft deze aanpak aangevuld en uitgebreid om zoveel mogelijk de kans op die risico's te verminderen. Denk hierbij aan geautomatiseerde regressietesten om het risico op fouten bij nieuwe opleveringen van de software (die bij Scrum elke twee of drie weken plaatsvinden) te voorkomen. Een ander voorbeeld is het zeer frequent − meerdere keren per uur – geautomatiseerd rapporteren over de kwaliteit van de software om zogenaamde 'technische schuld' te voorkomen.
+ICTU werkt sinds 2010 met de agile softwareontwikkelaanpak Scrum en heeft deze aanpak aangevuld en uitgebreid om zoveel mogelijk de kans op die risico's te verminderen. Denk hierbij aan geautomatiseerde regressietesten om het risico op fouten bij nieuwe opleveringen van de software (die bij Scrum elke twee of drie weken plaatsvinden) te voorkomen. Een ander voorbeeld is het zeer frequent − meerdere keren per uur - geautomatiseerd rapporteren over de kwaliteit van de software om zogenaamde 'technische schuld' te voorkomen.
 
 Met behulp van deze kwaliteitsaanpak heeft ICTU samen met andere overheden inmiddels enige tientallen projecten succesvol uitgevoerd. ICTU wil deze aanpak graag aanvullen met de ervaringen en geleerde lessen van andere organisaties en deze overdraagbaar maken en breder uitdragen. Daarom stelt ICTU deze kwaliteitsaanpak ter beschikking aan andere partijen en overheden die zelf maatwerk software ontwikkelen of dit laten doen.
 
@@ -46,17 +46,17 @@ De kwaliteitsaanpak heeft 3 doelstellingen:
 
 De kwaliteitsaanpak zelf is geformuleerd in de vorm van maatregelen die elke software-ontwikkelende organisatie kan treffen om risico's van softwareontwikkeling te mitigeren en de kans op succesvolle softwareontwikkeling en -onderhoudsprojecten te vergroten. De maatregelen zijn beschreven in algemene termen. Waar van toepassing is ook de ICTU-specifieke invulling van de maatregel telkens separaat bijgevoegd.
 
-De beschrijving van de kwaliteitsaanpak in dit document is gebaseerd op de huidige aanpak van softwareontwikkeling en -onderhoud bij ICTU. Deze kwaliteitsaanpak is expliciet bedoeld als een evoluerende aanpak, die verbeterd wordt op basis van praktijkervaringen bij ICTU en - op termijn – bij andere organisaties.
+De beschrijving van de kwaliteitsaanpak in dit document is gebaseerd op de huidige aanpak van softwareontwikkeling en -onderhoud bij ICTU. Deze kwaliteitsaanpak is expliciet bedoeld als een evoluerende aanpak, die verbeterd wordt op basis van praktijkervaringen bij ICTU en - op termijn - bij andere organisaties.
 
 ## Leeswijzer
 
-Dit document 'Kwaliteitsaanpak ICTU Software Realisatie' is bedoeld voor programmatuur en gerelateerde producten, voor processen waarbinnen die producten worden gerealiseerd en voor de overkoepelende organisatie waarin op projectbasis wordt gewerkt. Dit betekent dat deze kwaliteitsaanpak betrekking heeft op de drie aspecten van softwareontwikkeling:
+Dit document 'Kwaliteitsaanpak ICTU Software Realisatie' is bedoeld voor programmatuur en gerelateerde producten, voor processen waarmee die producten worden gerealiseerd en voor de overkoepelende organisatie waarin op projectbasis wordt gewerkt. Dit betekent dat deze kwaliteitsaanpak betrekking heeft op de drie aspecten van softwareontwikkeling:
 
-1. Producten – Het eerste deel van de kwaliteitsaanpak betreft de eigenschappen van de ontwikkelde producten. De broncode valt hieronder, maar ook alle andere producten, zoals documenten en testscripts.
+1. Producten - Het eerste deel van de kwaliteitsaanpak betreft de eigenschappen van de ontwikkelde producten. De broncode valt hieronder, maar ook alle andere producten, zoals documenten en testscripts.
 
-2. Processen – Het tweede deel van de aanpak betreft het ontwikkelproces; dit gaat over werkwijze, gebruik van hulpmiddelen en projectaanpak.
+2. Processen - Het tweede deel van de aanpak betreft het ontwikkelproces; dit gaat over werkwijze, gebruik van hulpmiddelen en projectaanpak.
 
-3. Het derde deel van de kwaliteitsaanpak heeft betrekking op de overkoepelende ontwikkelorganisatie waarbinnen projecten worden uitgevoerd (bij ICTU is dat de afdeling ICTU Software Realisatie (ISR)); dit gaat over de samenhang tussen projecten en de faciliteiten die projecten ter beschikking moeten hebben.
+3. Organisatie - Het derde deel van de kwaliteitsaanpak heeft betrekking op de overkoepelende ontwikkelorganisatie waarbinnen projecten worden uitgevoerd (bij ICTU is dat de afdeling ICTU Software Realisatie (ISR)); dit gaat over de samenhang tussen projecten en de faciliteiten die projecten ter beschikking moeten hebben.
 
 De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico's die samenhangen met softwareontwikkeling te mitigeren. Bijlage 1 beschrijft de relatie tussen risico's en maatregelen.
 
@@ -72,7 +72,7 @@ Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rolle
 
 4. Projectverantwoordelijke (bij ICTU: software delivery manager en/of projectleider)
 
-5. Kwaliteitsmanager (bij ICTU: 'quality lead')
+5. Kwaliteitsmanager (bij ICTU: een door de software delivery manager en/of projectleider aangestelde kwaliteitsmanager of de software delivery manager zelf)
 
 
 ## Producten
@@ -86,15 +86,16 @@ Voor aanvang van de voorbereidingsfase van een project (zie M14 Projecten splits
 #### Rationale
 Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te selecteren beveiligingsmaatregelen.
 
-In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de ‘risk appetite’ van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
+In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
 
 In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces (of systeem) worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen
 
 
-### Maatregel 1: Op te leveren producten (M01)
-Projecten zijn gesplitst in een voor-bereidingsfase en een realisatiefase (zie M14 Projecten splitsen in een voorbereidingsfase en een realisatiefase). De onderstaande tabel (zie volgende pagina) benoemt de producten die een project in die fasen moet opleveren; alle fasen kennen specifieke producten.
 
-Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom realisatiefase) en wordt de kwaliteit van de bestaande software-producten getoetst (M02 Continu voldoen aan kwaliteitsnormen). Dit onderzoek is onderdeel van de voorbereidingsfase en wordt uitgevoerd door vertegenwoordigers van de projectenorganisatie en medewerkers van het desbetreffende project.
+### Maatregel 1: Op te leveren producten (M01)
+Projecten zijn gesplitst in een voorbereidingsfase en een realisatiefase (zie M14 Projecten splitsen in een voorbereidingsfase en een realisatiefase); alle fasen kennen specifieke producten. De onderstaande tabel benoemt de producten die een project in die fasen moet realiseren of waarover het project moet kunnen beschikken, indien er andere auteurs zijn (bijvoorbeeld de opdrachtgever). Het project zorgt voor een volledige oplevering van alle genoemde producten, waaronder de producten die niet door het project zelf zijn gemaakt.
+
+Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom 'Realisatiefase') en wordt de kwaliteit van de bestaande software-producten getoetst (M02 Continu voldoen aan kwaliteitsnormen). Dit onderzoek is onderdeel van de voorbereidingsfase en wordt uitgevoerd door vertegenwoordigers van de projectenorganisatie en medewerkers van het desbetreffende project.
 
 | Product | Voorbereidingsfase  | Voorbereidingsfase met onderzoek  | Realisatiefase | 
 |----------------------------------------------------------------------------------------|---|---|---| 
@@ -145,16 +146,18 @@ eisen wordt voldaan door uit te werken welke (beveiligings)mechanieken gekozen z
 
 Zie Bijlage documenten voor maatregel M1 voor een uitgebreider overzicht van de documenten en documentstandaarden die ICTU hanteert voor softwarerealisatieprojecten.
 
-Het genoemde onderzoek voert ICTU uit als onderdeel van een “due diligence”. Een due diligence wordt uitgevoerd in samenwerking met een potentiële opdrachtgever en biedt, naast het genoemde onderzoek, ook de opdrachtgever de kans zich een oordeel te vormen over de werkwijze van ICTU en de verwachte samenwerking.
+Het genoemde onderzoek voert ICTU uit als onderdeel van een "due diligence". Een due diligence wordt uitgevoerd in samenwerking met een potentiële opdrachtgever en biedt, naast het genoemde onderzoek, ook de opdrachtgever de kans zich een oordeel te vormen over de werkwijze van ICTU en de verwachte samenwerking.
 
 
 ### Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)
 
-Producten voldoen vanaf de start van een project aan de door de projectenorganisatie vastgestelde kwaliteitsnormen. Indien hieraan niet voldaan wordt, wordt herstel daarvan planmatig opgepakt (zie ook M08 Technische schuld). De kwaliteitsnormen zijn in deze versie van de kwaliteitsaanpak nog niet opgenomen.
+Producten voldoen zo snel mogelijk vanaf de start van een project aan de door het project en projectenorganisatie vastgestelde kwaliteitsnormen. De kwaliteit van producten die nog niet zijn afgerond of nog niet aan de normen voldoen, wordt door het project bewaakt. Herstel van de kwaliteit wordt planmatig opgepakt (zie ook M08 Technische schuld).
+
+De kwaliteitsnormen zijn in deze versie van de kwaliteitsaanpak nog niet opgenomen.
 
 #### Rationale
 
-Het direct en continu voldoen aan de kwaliteitsnormen beperkt toekomstige hersteltijd. Het dwingt tevens een structurele kwaliteitscontrole af.
+Het zo snel mogelijk en continu voldoen aan de kwaliteitsnormen beperkt toekomstige hersteltijd. Het dwingt tevens een structurele kwaliteitscontrole af.
 
 #### ICTU
 
@@ -195,7 +198,7 @@ Software wordt minimaal bij iedere grote release of tenminste twee keer per jaar
 
 Indien door de opdrachtgever gewenst kunnen securitytesten door een onafhankelijke derde partij worden uitgevoerd in een daarvoor door de opdrachtgever beschikbaar gestelde omgeving. Dit kan zowel incidenteel als structureel worden ingericht. Afspraken hierover worden bij voorkeur al in de voorbereidingsfase gemaakt.
 
-De beveiligingstesten vinden plaats in aanvulling op de door tools uitgevoerde continue beveiligingsanalyse van de gerealiseerde software, zie maatregel M16 Verplichte tools. Bevindingen uit zowel een beveiligingstest als de continue analyse worden in Jira als issue – gemarkeerd als beveiligingsbugreport – vastgelegd op de backlog van het project.
+De beveiligingstesten vinden plaats in aanvulling op de door tools uitgevoerde continue beveiligingsanalyse van de gerealiseerde software, zie maatregel M16 Verplichte tools. Bevindingen uit zowel een beveiligingstest als de continue analyse worden in Jira als issue - gemarkeerd als beveiligingsbugreport - vastgelegd op de backlog van het project.
 
 
 ## Processen
@@ -220,10 +223,10 @@ Vast onderdeel van de Definition of Done is dat producten actueel en onderling c
 
 ### Maatregel 6: Frequente meting (M06)
 
-Het voldoen aan de kwaliteitsnormen die geautomatiseerd gemeten kunnen worden, wordt frequent – minimaal één keer per dag – gemeten. De projectenorganisatie voorziet hierin (mensen en middelen).
+Het voldoen aan de kwaliteitsnormen die geautomatiseerd gemeten kunnen worden, wordt frequent - minimaal één keer per dag - gemeten. De projectenorganisatie voorziet hierin (mensen en middelen).
 
 #### Rationale
-Vaak meten maakt een vrijwel actueel inzicht op elk moment mogelijk. Projectleden kunnen snel reageren op afwijkingen, die in de regel ook pas recent zijn ontstaan en dus meestal gerelateerd zijn aan huidige activiteiten. Met name afwijkingen van de normen op het vlak van informatiebeveiliging komen zo snel aan het licht en kunnen dan ook snel worden beoordeeld en – indien nodig en mogelijk – opgelost.
+Vaak meten maakt een vrijwel actueel inzicht op elk moment mogelijk. Projectleden kunnen snel reageren op afwijkingen, die in de regel ook pas recent zijn ontstaan en dus meestal gerelateerd zijn aan huidige activiteiten. Met name afwijkingen van de normen op het vlak van informatiebeveiliging komen zo snel aan het licht en kunnen dan ook snel worden beoordeeld en - indien nodig en mogelijk - opgelost.
 
 #### ICTU
 Bij een ICTU-softwareproject is het voldoen aan de normen onderdeel van de 'Definition of Done' en wordt het voldoen aan kwaliteitsnormen meermaals per uur gemeten. Projecten nemen de kwaliteitsrapportage door tijdens de stand-up en tijdens het wekelijks projectoverleg.
@@ -292,11 +295,11 @@ De projectverantwoordelijke organiseert een periodiek projectoverleg. Dit overle
 Vereiste aanwezigen zijn de project-verantwoordelijke, een vertegenwoordiger uit het projectteam en een kwaliteits-manager. Andere aanwezigen kunnen zijn: opdrachtnemer, architecten en coaches.
 
 De agenda voor dit overleg bestaat tenminste uit de volgende onderwerpen: 
-- mededelingen – pro-actief informeren over voor het project relevante ontwikkelingen,
+- mededelingen - pro-actief informeren over voor het project relevante ontwikkelingen,
 - actie- en besluitenlijst,
-- personele zaken – bespreking van samenwerking binnen het team, in- en uitstroom, op- en afschalen,
-- planning en voortgang – bespreking van voortgang ten opzichte van voorspelling en daaraan gerelateerde afwijkingen en knelpunten, leidend tot acties,
-- kwaliteit en architectuur – bespreking van kwaliteit en architectuur (voor borging van inhoudelijke koers) en eventuele afwijkingen en benodigde acties,
+- personele zaken - bespreking van samenwerking binnen het team, in- en uitstroom, op- en afschalen,
+- planning en voortgang - bespreking van voortgang ten opzichte van voorspelling en daaraan gerelateerde afwijkingen en knelpunten, leidend tot acties,
+- kwaliteit en architectuur - bespreking van kwaliteit en architectuur (voor borging van inhoudelijke koers) en eventuele afwijkingen en benodigde acties,
 - risico's en aandachtspunten.
 
 #### Rationale
@@ -335,7 +338,7 @@ Wijzigingsvoorstellen bevatten tenminste:
 De projectenorganisatie behandelt de wijzigingsvoorstellen, beslist de te nemen actie bij elk wijzigingsvoorstel en legt de wijzigingsvoorstellen en besluiten vast.
 
 #### Rationale
-Expliciet beheer en onderhoud van de kwaliteitsaanpak is nodig om lessen geleerd in projecten te kunnen verwerken, om nieuwe inzichten uit bijvoorbeeld wetenschappelijke literatuur te kunnen verwerken en om nieuwe technische mogelijkheden voor meting en analyse te verwerken. De kwaliteitsaanpak wordt door de projectenorganisatie – en niet door een project – onderhouden, zodat deze bij meerdere projecten kan worden toegepast.
+Expliciet beheer en onderhoud van de kwaliteitsaanpak is nodig om lessen geleerd in projecten te kunnen verwerken, om nieuwe inzichten uit bijvoorbeeld wetenschappelijke literatuur te kunnen verwerken en om nieuwe technische mogelijkheden voor meting en analyse te verwerken. De kwaliteitsaanpak wordt door de projectenorganisatie - en niet door een project - onderhouden, zodat deze bij meerdere projecten kan worden toegepast.
 
 Wijzigingsvoorstellen moeten een sponsor hebben zodat het duidelijk is dat iemand zich hard maakt voor het realiseren van de wijziging.
 
@@ -368,30 +371,30 @@ Wijzigingen aan de kwaliteitsaanpak en -normen hebben tot doel de organisatie in
 De projectenorganisatie publiceert periodiek, op een vaste, bekende locatie, een nieuwe versie van de kwaliteitsaanpak en/of de kwaliteitsnormen.
 
 #### Rationale
-Medewerkers moeten te allen tijde de actuele kwaliteitsaanpak en –normen kunnen raadplegen. Welke versie actueel is en wanneer een nieuwe versie actueel wordt, is essentiële informatie voor de planning van werkzaamheden binnen de projecten en binnen de afdeling als geheel.
+
+Medewerkers moeten te allen tijde de actuele kwaliteitsaanpak en -normen kunnen raadplegen. Welke versie actueel is en wanneer een nieuwe versie actueel wordt, is essentiële informatie voor de planning van werkzaamheden binnen de projecten en binnen de afdeling als geheel.
+
 
 #### ICTU
 De kwaliteitsaanpak is te vinden op de afdelingsbrede wiki. Publicatie van een nieuwe versie wordt aangekondigd via een e-mail naar belanghebbenden en, indien relevant, 'de ICTU Software Realisatie-zeepkist'.
 Bij ICTU zijn de kwaliteitsnormen (op dit moment) te vinden in elke kwaliteitsrapportage, in het 'helpmenu'.
 
 
-### Maatregel 13: Dekking ISO-25010 (M013)
+### Maatregel 13: Gebruik van ISO-25010 (M013)
 
-De door de projectenorganisatie vastgestelde kwaliteitsnormen dekken een significant deel van de ISO-25010-kwaliteitskenmerken af.
+De standaard ISO/IEC 25010:2011, kortweg "ISO-25010", biedt een model voor het beschrijven van productkwaliteit. Kwaliteitseigenschappen zijn voorzien van een naam, definitie en classificatie. ISO-25010 dekt een breed spectrum van kwaliteitseigenschappen af.
+
+Voor specificatie en documentatie van vereiste en gewenste kwaliteitseigenschappen, de niet-functionele eisen, maken projecten gebruik van de terminologie uit ISO-25010. Projecten gebruiken ISO-25010 om te controleren of alle relevante kwaliteitseigenschappen van het op te leveren eindproduct worden meegenomen in de ontwikkeling en/of onderhoud van het product.
 
 #### Rationale
-De standaard ISO-25010 biedt een model voor kwaliteitseigenschappen die van toepassing kunnen zijn op een software-product. De standaard biedt weliswaar geen concrete maatregelen, maar beoogt wel het volledige spectrum van mogelijk relevante kwaliteitseigenschappen af te dekken. Het afzetten van de dekking van de kwaliteitsnormen tegen de standaard geeft zicht op de breedte van het toepassingsgebied van de kwaliteitsnormen.
+De standaard ISO-25010 biedt een model voor productkwaliteit. De standaard biedt geen concrete maatregelen, maar biedt wel een begrippenkader en dekt het volledige spectrum van mogelijk relevante kwaliteitseigenschappen af. Het gebruiken van een standaard voor specificatie van kwaliteit voorkomt miscommunicatie over kwaliteitseigenschappen en de breedte van de standaard zorgt ervoor dat alle relevante aspecten aan bod komen.
 #### ICTU
-De kwaliteitsnormen van ICTU voor softwareproducten betreffen de productkwaliteitskenmerken:
-- prestatie-efficiëntie
-- beveiligbaarheid 
-- onderhoudbaarheid
-- functionele compleetheid (subkarakteristiek van functionele geschiktheid)
+ICTU gebruikt ISO-25010 voor documentatie en specificatie van productkwaliteit.
 
 
 ### Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase (M014)
 
-Projecten hebben een voorbereidingsfase, voorafgaand aan de realisatiefase. Voor het uitvoeren van de voorbereidingsfase zijn vertegenwoordigers van de opdrachtgever en beoogde beheerpartij beschikbaar – dezelfde als betrokken zullen zijn in de realisatiefase – die meewerken aan het realiseren van een deel van de op te leveren producten (zie M01 Op te leveren producten). Tijdens de realisatiefase vindt de bouw en het onderhoud van de software plaats.
+Projecten hebben een voorbereidingsfase, voorafgaand aan de realisatiefase. Voor het uitvoeren van de voorbereidingsfase zijn vertegenwoordigers van de opdrachtgever en beoogde beheerpartij beschikbaar - dezelfde als betrokken zullen zijn in de realisatiefase - die meewerken aan het realiseren van een deel van de op te leveren producten (zie M01 Op te leveren producten). Tijdens de realisatiefase vindt de bouw en het onderhoud van de software plaats.
 
 #### Rationale
 Het doel van de voorbereidingsfase is ten eerste om uitgangspunten, risico's en randvoorwaarden voor verdere projectuitvoering te bepalen en ten tweede om te zorgen dat aan de randvoorwaarden wordt voldaan en voor zoveel mogelijk project-specifieke risico's maatregelen genomen zijn. Het doel van de realisatiefase is het daadwerkelijk bouwen en onderhouden van de software. Een expliciete splitsing zorgt ervoor dat projecten doordacht van start gaan.
@@ -429,7 +432,7 @@ De projectenorganisatie stelt het gebruik van de volgende tools voor alle projec
 Projecten hebben een redelijke vrijheid bij het kiezen van tools, maar het gebruik van een aantal is verplicht gesteld. Deze tools zijn nodig voor een efficiënte uitvoering van deze kwaliteitsaanpak. Uniform gebruik van deze tools maakt het mogelijk koppeling tussen die tools voor alle projecten te standaardiseren. Daarnaast bevordert het de uitwisselbaarheid van medewerkers en neemt het risico op het gebruik van onvolwassen tools af. 
 #### ICTU
 ICTU gebruikt hiervoor de volgende tools:
-1. Jira – De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog, de iteraties als sprints.
+1. Jira - De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog, de iteraties als sprints.
 2. Jenkins voor Javaprojecten en Team Foundation Server (TFS) voor DotNet-projecten.
 3. SonarQube, inclusief ICTU-specifieke kwaliteitsprofielen die aansluiten bij de ICTU-kwaliteitsnormen.
 4. Releasemanager.
@@ -515,21 +518,21 @@ Het inzetten van teamleden die bekend zijn met de kwaliteitsaanpak zorgt voor ee
 
 ### Het belang van de burger staat voorop
 
-Deze kwaliteitsaanpak helpt opdrachtgevers van maatwerksoftware het belang van burgers voorop te zetten door:
-- voordat het project echt gaat bouwen goed na te denken over de mogelijke oplossingen en de kwaliteitseigenschappen die voor met name de burger van belang zijn. Denk aan gebruikskwaliteit, beveiliging, privacy, performance en toegankelijkheid (M14: Projecten splitsen in voorfase en realisatiefase).
+Deze kwaliteitsaanpak helpt opdrachtgevers van maatwerksoftware het belang van burgers en ambtenaren, die diensten aan burgers verlenen, voorop te zetten door:
+- voordat het project echt gaat bouwen goed na te denken over de mogelijke oplossingen en de kwaliteitseigenschappen die voor met name de burger van belang zijn. Denk aan gebruikskwaliteit, beveiliging, privacy, performance en toegankelijkheid (M14: Projecten splitsen in voorfase en realisatiefase);
 - door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan (M21: Kwaliteit van medewerkers).
 
 ### We delen wat we goed kunnen, en gebruiken wat anderen beter doen
 
 We delen wat we goed kunnen door:
-- geleerde lessen te verwerken in deze kwaliteitsaanpak (M11: Beheer en onderhoud kwaliteitsaanpak en normen) en die te delen tussen projecten (M24: Implementatie van wijzigingen aan de kwaliteitsaanpak en normen) en te publiceren via http://www.ictu.nl/kwaliteitsaanpak (M12: Publicatie kwaliteits aanpak en normen).
+- geleerde lessen te verwerken in deze kwaliteitsaanpak (M11: Beheer en onderhoud kwaliteitsaanpak en normen) en die te delen tussen projecten (M24: Implementatie van wijzigingen aan de kwaliteitsaanpak en normen) en te publiceren via http://www.ictu.nl/kwaliteitsaanpak (M12: Publicatie kwaliteits aanpak en normen);
 - de tools die we ontwikkelen ter ondersteuning van softwarerealisatieprojecten zoveel mogelijk als open source beschikbaar te stellen (M15: Open source tools).
 
 We gebruiken wat anderen beter doen door:
-- open source tools te gebruiken (M15 open source tools).
-- bewezen tools te kiezen (M16: Verplichte tools) en beschikbaar te stellen aan projecten (M17: Snel beschikbare tools) in een digitale werkomgeving (M19: Digitale werkomgeving) en het gebruik ervan te ondersteunen (M18: Ondersteuning verplichte tools).
-- ons werk periodiek op informatiebeveiliging te laten controleren (M26: periodieke beoordeling informatiebeveiliging).
-- door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan (M21: Kwaliteit van medewerkers).
+- open source tools te gebruiken (M15 open source tools);
+- bewezen tools te kiezen (M16: Verplichte tools) en beschikbaar te stellen aan projecten (M17: Snel beschikbare tools) in een digitale werkomgeving (M19: Digitale werkomgeving) en het gebruik ervan te ondersteunen (M18: Ondersteuning verplichte tools);
+- ons werk periodiek op informatiebeveiliging te laten controleren (M26: periodieke beoordeling informatiebeveiliging);
+- door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd, te laten gaan (M21: Kwaliteit van medewerkers).
 
 ### Op zoek naar de juiste oplossing is het experiment soms de kortste weg
 
@@ -538,15 +541,15 @@ De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om
 ### Wij geloven in agile werken bij de overheid
 
 Door agile te werken (M05: Iteratief en incrementeel ontwikkelproces) kunnen wij:
-- duurzame kwaliteit leveren (M06: Frequente Meting en M02: Continue voldoen aan de kwaliteitsnormen)
-- frequent waarde leveren (M07: Continous delivery)
+- duurzame kwaliteit leveren (M06: Frequente Meting en M02: Continue voldoen aan de kwaliteitsnormen);
+- frequent waarde leveren (M07: Continous delivery);
 - technische schuld beheersen (M08: Technische dchuld).
 
 ### Wij geven inzicht in de kwaliteit van ons werk
 
 Deze kwaliteitsaanpak helpt organisaties die maatwerksoftware ontwikkelen inzicht te geven aan de opdrachtgevers in de kwaliteit van het werk door:
 - een vaste verzameling documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen (M01: Op te leveren producten);
-- continu de kwaliteit van het werk te meten en opdrachtgevers hier inzicht in te geven (M02: Continue voldoen aan de kwaliteitsnormen);
+- continu de kwaliteit van het werk te meten en opdrachtgevers hier inzicht in te geven (M02: Continu voldoen aan de kwaliteitsnormen).
 
 
 

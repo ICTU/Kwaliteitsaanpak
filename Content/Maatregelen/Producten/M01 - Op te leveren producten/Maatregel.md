@@ -4,11 +4,13 @@ Als tijdens een project bestaande software dient te worden afgebouwd, onderhoude
 
 | Product | Voorbereidingsfase  | Voorbereidingsfase met onderzoek  | Realisatiefase | 
 |----------------------------------------------------------------------------------------|---|---|---| 
+| business impact analysis (BIA)*                                                        | + | + | + |
+| privacy impact analysis (PIA)**                                                        | + | + | + |
 | beschrijving van functionele eisen                                                     | + | + | + | 
 | beschrijving van niet-functionele eisen                                                | + | + | + | 
 | ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)            | + | + | + | 
 | testdocumentatie: testplannen                                                          | + | + | + | 
-| testdocumentatie: testgevallen, rapportages                                            |   |   | + | 
+| testdocumentatie: testgevallen, rapportages                                            |   |   | + |
 | informatiebeveiligingsplan                                                             | + | + | + | 
 | projectplan                                                                            | + | + |   | 
 | kwaliteitsplan                                                                         | + | + |   | 
@@ -22,6 +24,8 @@ Als tijdens een project bestaande software dient te worden afgebouwd, onderhoude
 | transitieplan voor af te bouwen, te onderhouden en/of te herbouwen softwareproducten   |   | + |   | 
 | plan voor aflossen technische schuld, indien van toepassing                            |   | + |   ||
 
+*) De opdrachtgever stelt bij voorkeur een BIA en PIA voorafgaand aan een voorbereidende fase beschikbaar. Indien dat niet mogelijk is worden deze analyses gedurende de voorbereidende fase onder verantwoordelijkheid van de opdrachtgever uitgevoerd.
+**) Indien een PIA niet nodig is, is een verklaring daaromtrent vereist.
 
 #### Rationale
 
@@ -29,4 +33,10 @@ Het uniformeren van op te leveren producten biedt voordelen voor planning (het i
 
 De voorgeschreven producten stellen de ontvanger in staat om de opgeleverde software uit te voeren, te beheren en te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.
 
-De genoemde producten uit de voorbereidingsfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.
+De genoemde producten uit de voorbereidingsfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen, zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.
+
+Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te selecteren beveiligingsmaatregelen en zijn daarom, bij voorkeur, voorafgaand aan het project al beschikbaar.
+
+In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
+
+In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of systeem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen.

@@ -10,9 +10,6 @@
 
 ## Producten
 
-#include "Content/Maatregelen/Producten/M25 - Randvoorwaardelijke producten/Titel.md"
-#include "Content/Maatregelen/Producten/M25 - Randvoorwaardelijke producten/Maatregel.md"
-
 #include "Content/Maatregelen/Producten/M01 - Op te leveren producten/Titel.md"
 #include "Content/Maatregelen/Producten/M01 - Op te leveren producten/Maatregel.md"
 

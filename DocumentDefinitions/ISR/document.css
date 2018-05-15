@@ -1,75 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
-
-body
-{
-   zoom: 0.65;
-   font-size: 11pt !important;
-   color: #000 !important;
-   font-family: 'Muli', sans-serif;
-   width:700px;
-   margin-left: auto;
-   margin-right: auto;
-   /* padding-left:50px;
-   padding-right:50px;
-   border:solid 1px #eee; */
-   line-height: 150%;
-}
-
-h1 {
-    margin-top:40px;
-    color: #D55FF8;
-    font-size:32px;
-}
-
-h2 {
-    margin-top:30px;
-    color: black;
-    font-size:18pt;
-    font-weight:bold;
-}
+@import url("../Full/document.css");
 
 h3 {
-    margin-top:20px;
-    color: #D55FF8;
+    font-weight: normal;
     font-size:12pt;
 }
 
 h4 {
-    margin-top:10px;
-    color: black;
     font-size:10pt;
-    font-weight: bold;
-}
-
-th,td {
-    text-align: left;
-    vertical-align: top;
-    padding-bottom:5px;
-    background-color:#d0e1ec;
-    padding:5px;
-}
-
-td:not(:empty) {
-    background-color:#7dc4e5;
-    text-align: center;
-}
-
-td:nth-child(1) {
-    background-color:#d0e1ec !important;
-    text-align: left !important;
-}
-
-
-img[title='ictu-logo'] {
-    height:80px;
-}
-
-img[title='word-cloud'] {
-    padding-bottom:50px;
-}
-
-#inleiding {
-    page-break-before: always !important;
 }
 
 #isr {

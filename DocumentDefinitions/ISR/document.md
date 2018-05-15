@@ -1,9 +1,14 @@
 ![ICTU](./Content/Images/ICTU.png "ictu-logo")
 
 # Kwaliteitsaanpak ICTU Software Realisatie
-# ISR maatregelen
-#include "Content/Manifest.md"
+# ICTU maatregelen
+
 #include "Content/Versie.md"
+#include "Content/Manifest.md"
+
+#include "Content/Wijzigingsgeschiedenis/Titel.md"
+#include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
+#include "Content/Wijzigingsgeschiedenis/ICTU.md"
 
 ## Producten
 

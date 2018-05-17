@@ -10,6 +10,11 @@
 #include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
 #include "Content/Wijzigingsgeschiedenis/ICTU.md"
 
+## Inhoudsopgave
+#include "Generated/ISR/TOC.md"
+
+#include "Content/Manifest.md"
+
 ## Producten
 
 #include "Content/Maatregelen/Producten/M01 - Op te leveren producten/Titel.md"

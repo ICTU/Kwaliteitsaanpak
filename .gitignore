@@ -60,3 +60,5 @@ typings/
 # IDE config files
 .idea
 
+# Generated intermediate files
+Generated/

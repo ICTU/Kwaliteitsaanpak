@@ -5,7 +5,8 @@
 # Kwaliteitsaanpak ICTU Software Realisatie - Generic
 #include "Content/Versie.md"
 
-#include "Content/Manifest.md"
+#include "Content/Wijzigingsgeschiedenis/Titel.md"
+#include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
 #include "Content/Inleiding.md"
 
 ## Producten

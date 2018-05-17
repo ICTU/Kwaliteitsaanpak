@@ -69,6 +69,6 @@ img[title='word-cloud'] {
     padding-bottom:50px;
 }
 
-#inleiding {
+#inleiding,#wijzigingsgeschiedenis,#manifest,#bijlagen {
     page-break-before: always !important;
 }

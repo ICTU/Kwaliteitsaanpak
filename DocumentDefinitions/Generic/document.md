@@ -7,6 +7,11 @@
 
 #include "Content/Wijzigingsgeschiedenis/Titel.md"
 #include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
+
+## Inhoudsopgave
+#include "Generated/Generic/TOC.md"
+
+#include "Content/Manifest.md"
 #include "Content/Inleiding.md"
 
 ## Producten

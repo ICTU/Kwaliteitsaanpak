@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Muli');
-
 body
 {
    zoom: 0.65;
@@ -69,6 +67,6 @@ img[title='word-cloud'] {
     padding-bottom:50px;
 }
 
-#inleiding,#wijzigingsgeschiedenis,#manifest,#bijlagen {
+#inleiding,#wijzigingsgeschiedenis,#inhoudsopgave,#manifest,#bijlagen {
     page-break-before: always !important;
 }

@@ -2,6 +2,42 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 # ISR maatregelen
+versie 1.1.49
+
+
+## Inhoudsopgave
+undefined [ISR maatregelen](#isr-maatregelen)
+- [Manifest](#manifest)
+- [Producten](#producten)
+  * [Maatregel 1: Op te leveren producten (M01)](#maatregel-1-op-te-leveren-producten-m01)
+  * [Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen-m02)
+  * [Maatregel 3: Traceerbaar voldoen aan eisen (M03)](#maatregel-3-traceerbaar-voldoen-aan-eisen--m03)
+  * [Maatregel 4: Geautomatiseerde regressietests (M04)](#maatregel-4-geautomatiseerde-regressietests-m04)
+  * [Maatregel 26 : Periodieke beoordeling informatiebeveiliging (M25)](#maatregel-26--periodieke-beoordeling-informatiebeveiliging-m25)
+- [Processen](#processen)
+  * [Maatregel 5: Iteratief en incrementeel ontwikkelproces (M05)](#maatregel-5-iteratief-en-incrementeel-ontwikkelproces-m05)
+  * [Maatregel 6: Frequente meting (M06)](#maatregel-6-frequente-meting-m06)
+  * [Maatregel 7: Continuous delivery pipeline (M07)](#maatregel-7-continuous-delivery-pipeline-m07)
+  * [Maatregel 8: Technische schuld (M08)](#maatregel-8-technische-schuld-m08)
+  * [Maatregel 9: Implementatie kwaliteitsaanpak (M09)](#maatregel-9-implementatie-kwaliteitsaanpak-m09)
+  * [Maatregel 10: Periodiek projectoverleg (M010)](#maatregel-10-periodiek-projectoverleg-m010)
+  * [Maatregel M27 - Projecten expliciet afsluiten (M27)](#maatregel-m27---projecten-expliciet-afsluiten-m27)
+- [Project Organisatie](#project-organisatie)
+  * [Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen (M011)](#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en--normen-m011)
+  * [Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen (M024)](#maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en--normen-m024)
+  * [Maatregel 12: Publicatie kwaliteitsaanpak en -normen (M012)](#maatregel-12-publicatie-kwaliteitsaanpak-en--normen-m012)
+  * [Maatregel 13: Gebruik van ISO-25010 (M013)](#maatregel-13-gebruik-van-iso-25010-m013)
+  * [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase (M014)](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m014)
+  * [Maatregel 15: Open source tools (M015)](#maatregel-15-open-source-tools-m015)
+  * [Maatregel 16: Verplichte tools (M016)](#maatregel-16-verplichte-tools-m016)
+  * [Maatregel 17: Snel beschikbare tools (M017)](#maatregel-17-snel-beschikbare-tools-m017)
+  * [Maatregel 18: Ondersteuning verplichte tools (M018)](#maatregel-18-ondersteuning-verplichte-tools-m018)
+  * [Maatregel 19: Digitale werkomgeving (M019)](#maatregel-19-digitale-werkomgeving-m019)
+  * [Maatregel 21: Kwaliteit van medewerkers (M021)](#maatregel-21-kwaliteit-van-medewerkers-m021)
+  * [Maatregel 22: Betrokkenheid bij inzet (M022)](#maatregel-22-betrokkenheid-bij-inzet-m022)
+  * [Maatregel 23: Warme kennisoverdracht (M023)](#maatregel-23-warme-kennisoverdracht-m023)
+
+
 ## Manifest
 
 ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:
@@ -18,15 +54,8 @@ ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-
 
 Deze kwaliteitsaanpak ondersteunt het realiseren van deze waarden.
 
-versie 1.1.24
-
 
 ## Producten
-
-
-### Maatregel M25 : Randvoorwaardelijke producten (M25)
-
-
 
 ### Maatregel 1: Op te leveren producten (M01)
 #### ICTU
@@ -42,7 +71,7 @@ eisen wordt voldaan door uit te werken welke (beveiligings)mechanieken gekozen z
 
 - De testdocumentatie bestaat uit een master testplan, gemaakt op basis van een productrisicoanalyse (PRA). Beveiligingstesten zijn een integraal onderdeel van het mastertestplan en worden als zodanig afgestemd met de opdrachtgever;
 
-- Het informatiebeveiligingsplan is gebaseerd op een dreigingen- en kwetsbaarhedenanalyse (TVA, threat and vulnerability assessment) en bevat een maatregelenselectie informatiebeveiliging. De TVA wordt tijdens de voorfase opgesteld op basis van de resultaten van de BIA, de eventuele PIA (zie maatregel M25 Randvoorwaardelijke producten) en inhoud van de ontwerp- en architectuurdocumentatie. Een TVA levert een deel van een traceerbare onderbouwing voor de te treffen beveiligingsmaatregelen.
+- Het informatiebeveiligingsplan is gebaseerd op een dreigingen- en kwetsbaarhedenanalyse (TVA, threat and vulnerability assessment) en bevat een maatregelenselectie informatiebeveiliging. De TVA wordt tijdens de voorfase opgesteld op basis van de resultaten van de BIA, de eventuele PIA en inhoud van de ontwerp- en architectuurdocumentatie. Een TVA levert een deel van een traceerbare onderbouwing voor de te treffen beveiligingsmaatregelen.
 
 - Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen. Zie ook maatregel M26 Periodieke beoordeling informatiebeveiliging en M16 Verplichte tools. Indien er beveiligingsissues zijn, zijn deze voorzien van een beschreven voorziene impact.
 

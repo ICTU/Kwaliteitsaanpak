@@ -8,7 +8,48 @@
 <p><img src="./Content/Images/ICTU.png" alt="ICTU" title="ictu-logo"></p>
 <p><img src="./Content/Images/word-cloud.png" alt="wordcloud" title="word-cloud"></p>
 <h1 id="kwaliteitsaanpak-ictu-software-realisatie-generic">Kwaliteitsaanpak ICTU Software Realisatie - Generic</h1>
-<p>versie 1.1.24</p>
+<p>versie 1.1.49</p>
+<h2 id="inhoudsopgave">Inhoudsopgave</h2>
+<ul>
+<li><a href="#manifest">Manifest</a></li>
+<li><a href="#inleiding">Inleiding</a></li>
+<li><a href="#doelstellingen-van-de-kwaliteitsaanpak">Doelstellingen van de kwaliteitsaanpak</a></li>
+<li><a href="#leeswijzer">Leeswijzer</a></li>
+<li><a href="#producten">Producten</a><ul>
+<li><a href="#maatregel-1-op-te-leveren-producten-m01">Maatregel 1: Op te leveren producten (M01)</a></li>
+<li><a href="#maatregel-2-continu-voldoen-aan-kwaliteitsnormen-m02">Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)</a></li>
+<li><a href="#maatregel-3-traceerbaar-voldoen-aan-eisen--m03">Maatregel 3: Traceerbaar voldoen aan eisen (M03)</a></li>
+<li><a href="#maatregel-4-geautomatiseerde-regressietests-m04">Maatregel 4: Geautomatiseerde regressietests (M04)</a></li>
+<li><a href="#maatregel-26--periodieke-beoordeling-informatiebeveiliging-m25">Maatregel 26 : Periodieke beoordeling informatiebeveiliging (M25)</a></li>
+</ul>
+</li>
+<li><a href="#processen">Processen</a><ul>
+<li><a href="#maatregel-5-iteratief-en-incrementeel-ontwikkelproces-m05">Maatregel 5: Iteratief en incrementeel ontwikkelproces (M05)</a></li>
+<li><a href="#maatregel-6-frequente-meting-m06">Maatregel 6: Frequente meting (M06)</a></li>
+<li><a href="#maatregel-7-continuous-delivery-pipeline-m07">Maatregel 7: Continuous delivery pipeline (M07)</a></li>
+<li><a href="#maatregel-8-technische-schuld-m08">Maatregel 8: Technische schuld (M08)</a></li>
+<li><a href="#maatregel-9-implementatie-kwaliteitsaanpak-m09">Maatregel 9: Implementatie kwaliteitsaanpak (M09)</a></li>
+<li><a href="#maatregel-10-periodiek-projectoverleg-m010">Maatregel 10: Periodiek projectoverleg (M010)</a></li>
+<li><a href="#maatregel-m27---projecten-expliciet-afsluiten-m27">Maatregel M27 - Projecten expliciet afsluiten (M27)</a></li>
+</ul>
+</li>
+<li><a href="#project-organisatie">Project Organisatie</a><ul>
+<li><a href="#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en--normen-m011">Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen (M011)</a></li>
+<li><a href="#maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en--normen-m024">Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen (M024)</a></li>
+<li><a href="#maatregel-12-publicatie-kwaliteitsaanpak-en--normen-m012">Maatregel 12: Publicatie kwaliteitsaanpak en -normen (M012)</a></li>
+<li><a href="#maatregel-13-gebruik-van-iso-25010-m013">Maatregel 13: Gebruik van ISO-25010 (M013)</a></li>
+<li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m014">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase (M014)</a></li>
+<li><a href="#maatregel-15-open-source-tools-m015">Maatregel 15: Open source tools (M015)</a></li>
+<li><a href="#maatregel-16-verplichte-tools-m016">Maatregel 16: Verplichte tools (M016)</a></li>
+<li><a href="#maatregel-17-snel-beschikbare-tools-m017">Maatregel 17: Snel beschikbare tools (M017)</a></li>
+<li><a href="#maatregel-18-ondersteuning-verplichte-tools-m018">Maatregel 18: Ondersteuning verplichte tools (M018)</a></li>
+<li><a href="#maatregel-19-digitale-werkomgeving-m019">Maatregel 19: Digitale werkomgeving (M019)</a></li>
+<li><a href="#maatregel-21-kwaliteit-van-medewerkers-m021">Maatregel 21: Kwaliteit van medewerkers (M021)</a></li>
+<li><a href="#maatregel-22-betrokkenheid-bij-inzet-m022">Maatregel 22: Betrokkenheid bij inzet (M022)</a></li>
+<li><a href="#maatregel-23-warme-kennisoverdracht-m023">Maatregel 23: Warme kennisoverdracht (M023)</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="manifest">Manifest</h2>
 <p>ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:</p>
 <ul>
@@ -25,7 +66,7 @@
 <p>Terwijl de risico&#39;s bij de ontwikkeling van maatwerksoftware inmiddels algemeen bekend zijn en er ook voor veel risico&#39;s passende maatregelen beschikbaar zijn.</p>
 <p>ICTU werkt sinds 2010 met de agile softwareontwikkelaanpak Scrum en heeft deze aanpak aangevuld en uitgebreid om zoveel mogelijk de kans op die risico&#39;s te verminderen. Denk hierbij aan geautomatiseerde regressietesten om het risico op fouten bij nieuwe opleveringen van de software (die bij Scrum elke twee of drie weken plaatsvinden) te voorkomen. Een ander voorbeeld is het zeer frequent − meerdere keren per uur - geautomatiseerd rapporteren over de kwaliteit van de software om zogenaamde &#39;technische schuld&#39; te voorkomen.</p>
 <p>Met behulp van deze kwaliteitsaanpak heeft ICTU samen met andere overheden inmiddels enige tientallen projecten succesvol uitgevoerd. ICTU wil deze aanpak graag aanvullen met de ervaringen en geleerde lessen van andere organisaties en deze overdraagbaar maken en breder uitdragen. Daarom stelt ICTU deze kwaliteitsaanpak ter beschikking aan andere partijen en overheden die zelf maatwerk software ontwikkelen of dit laten doen.</p>
-<h2 id="kwaliteitsaanpak-ictu-software-realisatie">Kwaliteitsaanpak ICTU Software Realisatie</h2>
+<h2 id="doelstellingen-van-de-kwaliteitsaanpak">Doelstellingen van de kwaliteitsaanpak</h2>
 <p>De kwaliteitsaanpak heeft 3 doelstellingen:</p>
 <ol>
 <li><p>Opdrachtgevers helpen bekende risico&#39;s bij softwareontwikkeling, zoals technische schuld, vertraging en defecten, zo veel mogelijk te voorkomen.</p>
@@ -63,16 +104,6 @@
 </li>
 </ol>
 <h2 id="producten">Producten</h2>
-<h3 id="maatregel-m25-randvoorwaardelijke-producten-m25-">Maatregel M25 : Randvoorwaardelijke producten (M25)</h3>
-<p>Voor aanvang van de voorbereidingsfase van een project (zie M14 Projecten splitsen in een voorbereidingsfase en een realisatiefase) stelt de opdrachtgever de volgende producten beschikbaar:</p>
-<ul>
-<li>een recente business impact analyse (BIA) voor het te ondersteunen proces,</li>
-<li>een recente privacy impact analyse (PIA) voor het te ondersteunen proces of een verklaring dat een PIA niet nodig is.</li>
-</ul>
-<h4 id="rationale">Rationale</h4>
-<p>Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te selecteren beveiligingsmaatregelen.</p>
-<p>In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de &#39;risk appetite&#39; van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.</p>
-<p>In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces (of systeem) worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen</p>
 <h3 id="maatregel-1-op-te-leveren-producten-m01-">Maatregel 1: Op te leveren producten (M01)</h3>
 <p>Projecten zijn gesplitst in een voorbereidingsfase en een realisatiefase (zie M14 Projecten splitsen in een voorbereidingsfase en een realisatiefase); alle fasen kennen specifieke producten. De onderstaande tabel benoemt de producten die een project in die fasen moet realiseren of waarover het project moet kunnen beschikken, indien er andere auteurs zijn (bijvoorbeeld de opdrachtgever). Het project zorgt voor een volledige oplevering van alle genoemde producten, waaronder de producten die niet door het project zelf zijn gemaakt.</p>
 <p>Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom &#39;Realisatiefase&#39;) en wordt de kwaliteit van de bestaande software-producten getoetst (M02 Continu voldoen aan kwaliteitsnormen). Dit onderzoek is onderdeel van de voorbereidingsfase en wordt uitgevoerd door vertegenwoordigers van de projectenorganisatie en medewerkers van het desbetreffende project.</p>
@@ -86,6 +117,18 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>business impact analysis (BIA)*</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+</tr>
+<tr>
+<td>privacy impact analysis (PIA)**</td>
+<td>+</td>
+<td>+</td>
+<td>+</td>
+</tr>
 <tr>
 <td>beschrijving van functionele eisen</td>
 <td>+</td>
@@ -190,10 +233,14 @@
 </tr>
 </tbody>
 </table>
+<p><em>) De opdrachtgever stelt bij voorkeur een BIA en PIA voorafgaand aan een voorbereidende fase beschikbaar. Indien dat niet mogelijk is worden deze analyses gedurende de voorbereidende fase onder verantwoordelijkheid van de opdrachtgever uitgevoerd.<br>*</em>) Indien een PIA niet nodig is, is een verklaring daaromtrent vereist.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Het uniformeren van op te leveren producten biedt voordelen voor planning (het is bekend welke producten gemaakt moeten worden), voor bemensing (het is bekend welke expertise nodig is) en voor het uitwisselen van medewerkers.</p>
 <p>De voorgeschreven producten stellen de ontvanger in staat om de opgeleverde software uit te voeren, te beheren en te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.</p>
-<p>De genoemde producten uit de voorbereidingsfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.</p>
+<p>De genoemde producten uit de voorbereidingsfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen, zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.</p>
+<p>Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te selecteren beveiligingsmaatregelen en zijn daarom, bij voorkeur, voorafgaand aan het project al beschikbaar.</p>
+<p>In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de &#39;risk appetite&#39; van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.</p>
+<p>In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of systeem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen.</p>
 <h3 id="maatregel-2-continu-voldoen-aan-kwaliteitsnormen-m02-">Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)</h3>
 <p>Producten voldoen zo snel mogelijk vanaf de start van een project aan de door het project en projectenorganisatie vastgestelde kwaliteitsnormen. De kwaliteit van producten die nog niet zijn afgerond of nog niet aan de normen voldoen, wordt door het project bewaakt. Herstel van de kwaliteit wordt planmatig opgepakt (zie ook M08 Technische schuld).</p>
 <p>De kwaliteitsnormen zijn in deze versie van de kwaliteitsaanpak nog niet opgenomen.</p>

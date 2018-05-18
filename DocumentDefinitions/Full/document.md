@@ -9,6 +9,10 @@
 #include "Content/Wijzigingsgeschiedenis/Titel.md"
 #include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
 #include "Content/Wijzigingsgeschiedenis/ICTU.md"
+
+## Inhoudsopgave
+#include "Generated/Full/TOC.md"
+
 #include "Content/Manifest.md"
 #include "Content/Inleiding.md"
 
@@ -118,7 +122,7 @@
 #include "Content/Maatregelen/ProjectOrganisatie/M23 - Warme kennisoverdracht/Maatregel.md"
 #include "Content/Maatregelen/ProjectOrganisatie/M23 - Warme kennisoverdracht/ISR.md"
 
-# Bijlagen
+## Bijlagen
 
 #include "Content/Bijlagen/Manifest-Maatregelen.md"
 

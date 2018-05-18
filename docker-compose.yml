@@ -6,4 +6,3 @@ services:
       - .:/ka
     entrypoint: bash
     command: ./create-docs.sh
-

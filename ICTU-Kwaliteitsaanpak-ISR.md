@@ -1,13 +1,52 @@
 ![ICTU](./Content/Images/ICTU.png "ictu-logo")
 
 # Kwaliteitsaanpak ICTU Software Realisatie
-# ISR maatregelen
-versie 1.1.49
+# ICTU maatregelen
+
+Versie 1.1.50
+
+## Manifest
+
+ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:
+- **Het belang van de burger staat voorop.**
+  Omdat burgers en ambtenaren die diensten verlenen aan burgers, de belangrijkste afnemers van ons werk zijn.
+- **We delen wat we goed kunnen en gebruiken wat anderen beter doen.**
+  Omdat wij hiermee sneller tot goede oplossingen komen.
+- **Op zoek naar de juiste oplossing is het experiment soms de kortste weg.**
+  Omdat wij open staan voor bruikbare en effectieve oplossingen die kunnen afwijken van standaardmethodes.
+- **Wij geloven in agile werken bij de overheid.**
+  Omdat wij graag samen met de klant werken aan passende oplossingen.
+- **Wij geven inzicht in de kwaliteit van ons werk.**
+  Omdat wij geloven dat openheid leidt tot een goede samenwerking en een beter resultaat.
+
+Deze kwaliteitsaanpak ondersteunt het realiseren van deze waarden.
+
+
+## Wijzigingsgeschiedenis
+
+### Algemeen
+
+- Versie 1.2, onder handen
+    - M01: Niet alle producten hoeven door het project te worden gemaakt.
+    - M02: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
+    - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat.
+    - M25: De inhoud is verplaatst naar M01, M25 zelf is vervallen.
+- Versie 1.1, 7 november 2017
+    - BIR-maatregelen toegevoegd.
+- Versie 1.0.2, 9 mei 2017
+    - Eerste publicatie
+
+### ICTU-specifiek
+
+- Versie 1.2, onder handen
+    - Manifest toegevoegd
+    - ICTU-specifieke invulling van maatregelen aangepast aan nieuwe organisatiestructuur en rollen zoals die in 2018 gelden.
 
 
 ## Inhoudsopgave
-undefined [ISR maatregelen](#isr-maatregelen)
+undefined [ICTU maatregelen](#ictu-maatregelen)
 - [Manifest](#manifest)
+- [Manifest](#manifest-1)
 - [Producten](#producten)
   * [Maatregel 1: Op te leveren producten (M01)](#maatregel-1-op-te-leveren-producten-m01)
   * [Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen-m02)

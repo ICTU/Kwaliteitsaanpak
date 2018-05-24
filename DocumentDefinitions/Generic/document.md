@@ -3,15 +3,16 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie - Generic
+
 #include "Content/Versie.md"
 
 #include "Content/Wijzigingsgeschiedenis/Titel.md"
 #include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
 
 ## Inhoudsopgave
+
 #include "Generated/Generic/TOC.md"
 
-#include "Content/Manifest.md"
 #include "Content/Inleiding.md"
 
 ## Producten
@@ -94,4 +95,3 @@
 
 #include "Content/Maatregelen/ProjectOrganisatie/M23 - Warme kennisoverdracht/Titel.md"
 #include "Content/Maatregelen/ProjectOrganisatie/M23 - Warme kennisoverdracht/Maatregel.md"
-

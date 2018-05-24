@@ -1,6 +1,7 @@
 ## Manifest
 
 ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:
+
 - **Het belang van de burger staat voorop.**
   Omdat burgers en ambtenaren die diensten verlenen aan burgers, de belangrijkste afnemers van ons werk zijn.
 - **We delen wat we goed kunnen en gebruiken wat anderen beter doen.**

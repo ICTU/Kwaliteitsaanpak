@@ -4,7 +4,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 
-Versie 1.1.50
+Versie 1.1.52
 
 
 ## Wijzigingsgeschiedenis
@@ -12,23 +12,24 @@ Versie 1.1.50
 ### Algemeen
 
 - Versie 1.2, onder handen
-    - M01: Niet alle producten hoeven door het project te worden gemaakt.
-    - M02: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
-    - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat.
-    - M25: De inhoud is verplaatst naar M01, M25 zelf is vervallen.
+  - M01: Niet alle producten hoeven door het project te worden gemaakt.
+  - M02: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
+  - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat.
+  - M25: De inhoud is verplaatst naar M01, M25 zelf is vervallen.
 - Versie 1.1, 7 november 2017
-    - BIR-maatregelen toegevoegd.
+  - BIR-maatregelen toegevoegd.
 - Versie 1.0.2, 9 mei 2017
-    - Eerste publicatie
+  - Eerste publicatie
 
 ### ICTU-specifiek
 
 - Versie 1.2, onder handen
-    - Manifest toegevoegd
-    - ICTU-specifieke invulling van maatregelen aangepast aan nieuwe organisatiestructuur en rollen zoals die in 2018 gelden.
+  - Manifest toegevoegd
+  - ICTU-specifieke invulling van maatregelen aangepast aan nieuwe organisatiestructuur en rollen zoals die in 2018 gelden.
 
 
 ## Inhoudsopgave
+
 - [Manifest](#manifest)
 - [Inleiding](#inleiding)
 - [Doelstellingen van de kwaliteitsaanpak](#doelstellingen-van-de-kwaliteitsaanpak)
@@ -68,6 +69,7 @@ Versie 1.1.50
 ## Manifest
 
 ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:
+
 - **Het belang van de burger staat voorop.**
   Omdat burgers en ambtenaren die diensten verlenen aan burgers, de belangrijkste afnemers van ons werk zijn.
 - **We delen wat we goed kunnen en gebruiken wat anderen beter doen.**
@@ -604,5 +606,4 @@ Door agile te werken (M05: Iteratief en incrementeel ontwikkelproces) kunnen wij
 Deze kwaliteitsaanpak helpt organisaties die maatwerksoftware ontwikkelen inzicht te geven aan de opdrachtgevers in de kwaliteit van het werk door:
 - een vaste verzameling documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen (M01: Op te leveren producten);
 - continu de kwaliteit van het werk te meten en opdrachtgevers hier inzicht in te geven (M02: Continu voldoen aan de kwaliteitsnormen).
-
 

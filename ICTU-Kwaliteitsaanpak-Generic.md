@@ -3,7 +3,8 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie - Generic
-Versie 1.1.50
+
+Versie 1.1.52
 
 
 ## Wijzigingsgeschiedenis
@@ -11,18 +12,18 @@ Versie 1.1.50
 ### Algemeen
 
 - Versie 1.2, onder handen
-    - M01: Niet alle producten hoeven door het project te worden gemaakt.
-    - M02: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
-    - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat.
-    - M25: De inhoud is verplaatst naar M01, M25 zelf is vervallen.
+  - M01: Niet alle producten hoeven door het project te worden gemaakt.
+  - M02: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
+  - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat.
+  - M25: De inhoud is verplaatst naar M01, M25 zelf is vervallen.
 - Versie 1.1, 7 november 2017
-    - BIR-maatregelen toegevoegd.
+  - BIR-maatregelen toegevoegd.
 - Versie 1.0.2, 9 mei 2017
-    - Eerste publicatie
+  - Eerste publicatie
 
 
 ## Inhoudsopgave
-- [Manifest](#manifest)
+
 - [Inleiding](#inleiding)
 - [Doelstellingen van de kwaliteitsaanpak](#doelstellingen-van-de-kwaliteitsaanpak)
 - [Leeswijzer](#leeswijzer)
@@ -55,22 +56,6 @@ Versie 1.1.50
   * [Maatregel 22: Betrokkenheid bij inzet (M022)](#maatregel-22-betrokkenheid-bij-inzet-m022)
   * [Maatregel 23: Warme kennisoverdracht (M023)](#maatregel-23-warme-kennisoverdracht-m023)
 
-
-## Manifest
-
-ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan brengen. In ons werk zijn we het volgende gaan waarderen:
-- **Het belang van de burger staat voorop.**
-  Omdat burgers en ambtenaren die diensten verlenen aan burgers, de belangrijkste afnemers van ons werk zijn.
-- **We delen wat we goed kunnen en gebruiken wat anderen beter doen.**
-  Omdat wij hiermee sneller tot goede oplossingen komen.
-- **Op zoek naar de juiste oplossing is het experiment soms de kortste weg.**
-  Omdat wij open staan voor bruikbare en effectieve oplossingen die kunnen afwijken van standaardmethodes.
-- **Wij geloven in agile werken bij de overheid.**
-  Omdat wij graag samen met de klant werken aan passende oplossingen.
-- **Wij geven inzicht in de kwaliteit van ons werk.**
-  Omdat wij geloven dat openheid leidt tot een goede samenwerking en een beter resultaat.
-
-Deze kwaliteitsaanpak ondersteunt het realiseren van deze waarden.
 
 ## Inleiding
 
@@ -437,6 +422,5 @@ De projectverantwoordelijke zorgt ervoor dat bij nieuwe projecten wordt gestart 
 
 #### Rationale
 Het inzetten van teamleden die bekend zijn met de kwaliteitsaanpak zorgt voor een soepeler start van een nieuw project omdat zij bekend zijn met de inhoud van de kwaliteitsaanpak, zoals kwaliteitsnormen en tools, en omdat zij al doende nieuwe teamleden bekend kunnen maken met de kwaliteitsaanpak.
-
 
 

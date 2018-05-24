@@ -11,6 +11,7 @@
 #include "Content/Wijzigingsgeschiedenis/ICTU.md"
 
 ## Inhoudsopgave
+
 #include "Generated/Full/TOC.md"
 
 #include "Content/Manifest.md"
@@ -125,4 +126,3 @@
 ## Bijlagen
 
 #include "Content/Bijlagen/Manifest-Maatregelen.md"
-

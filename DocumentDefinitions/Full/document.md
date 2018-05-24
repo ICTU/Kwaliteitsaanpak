@@ -126,3 +126,5 @@
 ## Bijlagen
 
 #include "Content/Bijlagen/Manifest-Maatregelen.md"
+#include "Content/Bijlagen/Risico.md"
+

@@ -95,3 +95,8 @@
 
 #include "Content/Maatregelen/ProjectOrganisatie/M23 - Warme kennisoverdracht/Titel.md"
 #include "Content/Maatregelen/ProjectOrganisatie/M23 - Warme kennisoverdracht/Maatregel.md"
+
+## Bijlagen
+
+#include "Content/Bijlagen/Risico.md"
+

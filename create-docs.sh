@@ -4,6 +4,7 @@ npm version patch --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version) > ./Content/Versie.md
 
 mkdir -p Generated/Full
+echo "## To be replace by actual TOC" > Generated/Full/TOC.md
 node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/Full/document.json
 node node_modules/.bin/markdown-toc --maxdepth=2 --no-firsth1 ICTU-Kwaliteitsaanpak-Full.md | grep -v -e "#inhoudsopgave" -e "#wijzigingsgeschiedenis" -e "#algemeen" -e "#ictu-specifiek" > ./Generated/Full/TOC.md
 node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/Full/document.json
@@ -11,6 +12,7 @@ node_modules/markdown-to-html/bin/markdown ICTU-Kwaliteitsaanpak-Full.md -s /ka/
 node htmltopdf.js ICTU-Kwaliteitsaanpak-Full.html
 
 mkdir -p Generated/Generic
+echo "## To be replace by actual TOC" > Generated/Generic/TOC.md
 node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/Generic/document.json
 node node_modules/.bin/markdown-toc --maxdepth=2 --no-firsth1 ICTU-Kwaliteitsaanpak-Generic.md | grep -v -e "#inhoudsopgave" -e "#wijzigingsgeschiedenis" -e "#algemeen" -e "#ictu-specifiek" > ./Generated/Generic/TOC.md
 node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/Generic/document.json

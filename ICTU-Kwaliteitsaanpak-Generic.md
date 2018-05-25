@@ -4,7 +4,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie - Generic
 
-Versie 1.1.54
+Versie 1.1.55
 
 
 ## Wijzigingsgeschiedenis

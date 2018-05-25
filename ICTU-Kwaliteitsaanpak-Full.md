@@ -4,7 +4,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 
-Versie 1.1.53
+Versie 1.1.54
 
 
 ## Wijzigingsgeschiedenis

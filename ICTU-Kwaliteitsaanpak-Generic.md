@@ -3,12 +3,8 @@
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 # Kwaliteitsaanpak ICTU Software Realisatie - Generic
-<<<<<<< HEAD
 
-Versie 1.1.52
-=======
 Versie 1.1.53
->>>>>>> Add risk appendix.
 
 
 ## Wijzigingsgeschiedenis
@@ -430,8 +426,6 @@ De projectverantwoordelijke zorgt ervoor dat bij nieuwe projecten wordt gestart 
 Het inzetten van teamleden die bekend zijn met de kwaliteitsaanpak zorgt voor een soepeler start van een nieuw project omdat zij bekend zijn met de inhoud van de kwaliteitsaanpak, zoals kwaliteitsnormen en tools, en omdat zij al doende nieuwe teamleden bekend kunnen maken met de kwaliteitsaanpak.
 
 
-<<<<<<< HEAD
-=======
 
 ## Bijlagen
 
@@ -697,4 +691,4 @@ Classificatie:
 
 - Productontwikkeling ➞ Specialiteiten ➞ Onderhoudbaarheid
 
->>>>>>> Add risk appendix.
+

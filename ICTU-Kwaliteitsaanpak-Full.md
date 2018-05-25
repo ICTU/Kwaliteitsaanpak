@@ -4,11 +4,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 
-<<<<<<< HEAD
-Versie 1.1.52
-=======
 Versie 1.1.53
->>>>>>> Add risk appendix.
 
 
 ## Wijzigingsgeschiedenis
@@ -617,8 +613,6 @@ Deze kwaliteitsaanpak helpt organisaties die maatwerksoftware ontwikkelen inzich
 - een vaste verzameling documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen (M01: Op te leveren producten);
 - continu de kwaliteit van het werk te meten en opdrachtgevers hier inzicht in te geven (M02: Continu voldoen aan de kwaliteitsnormen).
 
-<<<<<<< HEAD
-=======
 ### Risico's van softwareontwikkeling
 
 Softwareontwikkeling brengt risico's met zich mee. De ICTU Softwarerealisatie Kwaliteitsaanpak beoogt een deel van die risico's te mitigeren. Als raamwerk en startpunt voor het classificeren van risico's maakt de kwaliteitsaanpak gebruik van *Taxonomy-Based Risk Identification* van het Software Engineering Institute (CMU/SEI-93-TR-6), een taxonomie van risico's.
@@ -881,4 +875,4 @@ Classificatie:
 
 - Productontwikkeling ➞ Specialiteiten ➞ Onderhoudbaarheid
 
->>>>>>> Add risk appendix.
+

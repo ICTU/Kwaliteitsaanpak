@@ -20,6 +20,9 @@
 #include "Content/Maatregelen/Producten/M01 - Op te leveren producten/Titel.md"
 #include "Content/Maatregelen/Producten/M01 - Op te leveren producten/Maatregel.md"
 
+#include "Content/Maatregelen/Producten/M13 - Dekking ISO-25010/Titel.md"
+#include "Content/Maatregelen/Producten/M13 - Dekking ISO-25010/Maatregel.md"
+
 #include "Content/Maatregelen/Producten/M02 - Continu voldoen aan kwaliteitsnormen/Titel.md"
 #include "Content/Maatregelen/Producten/M02 - Continu voldoen aan kwaliteitsnormen/Maatregel.md"
 
@@ -65,9 +68,6 @@
 
 #include "Content/Maatregelen/ProjectOrganisatie/M12 - Publicatie kwaliteitsaanpak en normen/Titel.md"
 #include "Content/Maatregelen/ProjectOrganisatie/M12 - Publicatie kwaliteitsaanpak en normen/Maatregel.md"
-
-#include "Content/Maatregelen/ProjectOrganisatie/M13 - Dekking ISO-25010/Titel.md"
-#include "Content/Maatregelen/ProjectOrganisatie/M13 - Dekking ISO-25010/Maatregel.md"
 
 #include "Content/Maatregelen/ProjectOrganisatie/M14 - Projecten splitsen in een voorbereidingsfase en een realisatiefase/Titel.md"
 #include "Content/Maatregelen/ProjectOrganisatie/M14 - Projecten splitsen in een voorbereidingsfase en een realisatiefase/Maatregel.md"

@@ -4,7 +4,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie - Generiek
 
-Versie 1.1.68
+Versie 1.1.70
 
 
 ## Wijzigingsgeschiedenis
@@ -14,7 +14,7 @@ Versie 1.1.68
 - Versie 1.2, onder handen
   - M01: Niet alle producten hoeven door het project te worden gemaakt.
   - M02: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
-  - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat.
+  - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat en verplaatsen naar hoofdstuk Producten.
   - M25: De inhoud is verplaatst naar M01, M25 zelf is vervallen.
   - M28: Maatregel met betrekking tot self-assessment toegevoegd.
 - Versie 1.1, 7 november 2017
@@ -30,6 +30,7 @@ Versie 1.1.68
 - [Leeswijzer](#leeswijzer)
 - [Producten](#producten)
   * [Maatregel 1: Op te leveren producten](#maatregel-1-op-te-leveren-producten)
+  * [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
   * [Maatregel 2: Continu voldoen aan kwaliteitsnormen](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen)
   * [Maatregel 3: Traceerbaar voldoen aan eisen](#maatregel-3-traceerbaar-voldoen-aan-eisen)
   * [Maatregel 4: Geautomatiseerde regressietests](#maatregel-4-geautomatiseerde-regressietests)
@@ -46,7 +47,6 @@ Versie 1.1.68
   * [Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen](#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en-normen)
   * [Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen](#maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en-normen)
   * [Maatregel 12: Publicatie kwaliteitsaanpak en -normen](#maatregel-12-publicatie-kwaliteitsaanpak-en-normen)
-  * [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
   * [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase)
   * [Maatregel 15: Open source tools](#maatregel-15-open-source-tools)
   * [Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)
@@ -158,6 +158,16 @@ Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te
 In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
 
 In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of systeem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen.
+
+### Maatregel 13: Gebruik van ISO-25010
+
+De standaard ISO/IEC 25010:2011, kortweg "ISO-25010", biedt een model voor het beschrijven van productkwaliteit. Kwaliteitseigenschappen zijn voorzien van een naam, definitie en classificatie. ISO-25010 dekt een breed spectrum van kwaliteitseigenschappen af.
+
+Voor specificatie en documentatie van vereiste en gewenste kwaliteitseigenschappen, de niet-functionele eisen, maken projecten gebruik van de terminologie uit ISO-25010. Projecten gebruiken ISO-25010 om te controleren of alle relevante kwaliteitseigenschappen van het op te leveren eindproduct worden meegenomen in de ontwikkeling en/of onderhoud van het product.
+
+#### Rationale
+
+De standaard ISO-25010 biedt een model voor productkwaliteit. De standaard biedt geen concrete maatregelen, maar biedt wel een begrippenkader en dekt het volledige spectrum van mogelijk relevante kwaliteitseigenschappen af. Het gebruiken van een standaard voor specificatie van kwaliteit voorkomt miscommunicatie over kwaliteitseigenschappen en de breedte van de standaard zorgt ervoor dat alle relevante aspecten aan bod komen.
 
 ### Maatregel 2: Continu voldoen aan kwaliteitsnormen
 
@@ -350,16 +360,6 @@ De projectenorganisatie publiceert periodiek, op een vaste, bekende locatie, een
 
 Medewerkers moeten te allen tijde de actuele kwaliteitsaanpak en -normen kunnen raadplegen. Welke versie actueel is en wanneer een nieuwe versie actueel wordt, is essentiële informatie voor de planning van werkzaamheden binnen de projecten en binnen de afdeling als geheel.
 
-
-### Maatregel 13: Gebruik van ISO-25010
-
-De standaard ISO/IEC 25010:2011, kortweg "ISO-25010", biedt een model voor het beschrijven van productkwaliteit. Kwaliteitseigenschappen zijn voorzien van een naam, definitie en classificatie. ISO-25010 dekt een breed spectrum van kwaliteitseigenschappen af.
-
-Voor specificatie en documentatie van vereiste en gewenste kwaliteitseigenschappen, de niet-functionele eisen, maken projecten gebruik van de terminologie uit ISO-25010. Projecten gebruiken ISO-25010 om te controleren of alle relevante kwaliteitseigenschappen van het op te leveren eindproduct worden meegenomen in de ontwikkeling en/of onderhoud van het product.
-
-#### Rationale
-
-De standaard ISO-25010 biedt een model voor productkwaliteit. De standaard biedt geen concrete maatregelen, maar biedt wel een begrippenkader en dekt het volledige spectrum van mogelijk relevante kwaliteitseigenschappen af. Het gebruiken van een standaard voor specificatie van kwaliteit voorkomt miscommunicatie over kwaliteitseigenschappen en de breedte van de standaard zorgt ervoor dat alle relevante aspecten aan bod komen.
 
 ### Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase
 

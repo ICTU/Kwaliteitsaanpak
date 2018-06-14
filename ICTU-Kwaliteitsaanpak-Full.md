@@ -4,7 +4,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 
-Versie 1.1.70
+Versie 1.1.71
 
 
 ## Wijzigingsgeschiedenis
@@ -17,6 +17,7 @@ Versie 1.1.70
   - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat en verplaatsen naar hoofdstuk Producten.
   - M25: De inhoud is verplaatst naar M01, M25 zelf is vervallen.
   - M28: Maatregel met betrekking tot self-assessment toegevoegd.
+  - Tekstuele verbeteringen.
 - Versie 1.1, 7 november 2017
   - BIR-maatregelen toegevoegd.
 - Versie 1.0.2, 9 mei 2017
@@ -450,7 +451,7 @@ Iedereen die betrokken is bij softwarerealisatieprojecten kan een wijzigingsvoor
 
 
 ### Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen
-Bij elke wijziging aan de kwaliteitsaanpak en/of -normen stelt de projectenorganisatie vast of de wijziging leidt tot een wijziging in de werkwijze van de projecten. Als dit het geval is wijst de projectenorganisatie een sponsor van de wijziging aan die een implementatieplan voor de wijziging maakt en uitvoert. Het implementatieplan bevat ten minste:
+Bij elke wijziging aan de kwaliteitsaanpak en/of -normen stelt de projectenorganisatie vast of de wijziging leidt tot een wijziging in de werkwijze van de projecten. Als dit het geval is, wijst de projectenorganisatie een sponsor van de wijziging aan die een implementatieplan voor de wijziging maakt en uitvoert. Het implementatieplan bevat ten minste:
 
 - het doel van de wijziging,
 - een beschrijving van de wijziging,
@@ -465,7 +466,7 @@ Bij elke wijziging aan de kwaliteitsaanpak en/of -normen stelt de projectenorgan
 
 #### Rationale
 
-Wijzigingen aan de kwaliteitsaanpak en -normen hebben tot doel de organisatie in staat te stellen betere kwaliteit te leveren en/of op een efficiëntere manier te werken. Door wijzigingen te implementeren aan de hand van een implementatieplan met genoemde onderdelen dwingt de organisatie zich de implementatie doordacht uit te voeren én om de implementatie te verifiëren en te valideren.
+Wijzigingen aan de kwaliteitsaanpak en -normen hebben tot doel de organisatie in staat te stellen betere kwaliteit te leveren en/of op een efficiënte manier te werken. Door wijzigingen te implementeren aan de hand van een implementatieplan met genoemde onderdelen dwingt de organisatie zich de implementatie doordacht uit te voeren én om de implementatie te verifiëren en te valideren.
 
 
 
@@ -505,7 +506,7 @@ Bij de selectie van tools ter ondersteuning van de projectuitvoering  geeft de p
 
 #### Rationale
 
-Conform de NORA rationale voor het gebruik van open source tools zoals beschreven in NORA v3.0 drijfveer “beleid open standaarden” ([http://www.noraonline.nl/wiki/Beleid_open_standaarden](http://www.noraonline.nl/wiki/Beleid_open_standaarden)).
+Conform de rationale uit NORA voor het gebruik van open source tools, zoals beschreven in NORA v3.0 drijfveer “beleid open standaarden” ([http://www.noraonline.nl/wiki/Beleid_open_standaarden](http://www.noraonline.nl/wiki/Beleid_open_standaarden)).
 
 #### ICTU
 
@@ -522,7 +523,7 @@ De projectenorganisatie stelt het gebruik van de volgende tools voor alle projec
 4. Een tool dat het releasen van software ondersteunt.
 5. Een tool dat het maken van testrapportages ondersteunt.
 6. Een tool dat het maken van kwaliteitsrapportages ondersteunt.
-7. Een tool dat de configuratie van de applicatie en de omgeving waarbinnen die applicatie draait controleert op bekende en veelvoorkomende kwetsbaarheden.
+7. Een tool dat de configuratie van de applicatie en de omgeving, waarbinnen die applicatie draait, controleert op bekende en veelvoorkomende kwetsbaarheden.
 8. Een tool dat de door de applicatie gebruikte versies van externe bibliotheken, raamwerken of andersoortige bouwblokken scant op bekende kwetsbaarheden.
 9. Een tool dat de broncode geautomatiseerd beoordeelt op het voorkomen van bekende kwetsbare constructies.
 
@@ -576,7 +577,9 @@ De keuze om het gebruik van een aantal tools verplicht te stellen ([Maatregel 16
 
 De verplicht gestelde tools zijn beperkt in aantal, bewezen en gangbaar; veel medewerkers zullen deze tools al kennen.
 
+#### ICTU
 
+ICTU zorgt voor ondersteuning van de bij [Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools) verplicht gestelde tools. Een team van specialisten met kennis, ervaring en capaciteit is beschikbaar voor ondersteuning aan projecten.
 
 ### Maatregel 19: Digitale werkomgeving
 
@@ -596,7 +599,7 @@ Bij de inzet van medewerkers gaat kwaliteit boven andere aspecten, zoals beschik
 
 #### Rationale
 
-Goede kwaliteit van producten ontstaat primair door het werk van mensen; standaardisatie, kwaliteitsnormen en monitoring zijn hulpmiddelen. De kans dat kwalitatief goede medewerkers ook goede producten maken is groter dan bij minder goede medewerkers.
+Goede kwaliteit van producten ontstaat primair door het werk van mensen; standaardisatie, kwaliteitsnormen en monitoring zijn hulpmiddelen. De kans dat kwalitatief goede medewerkers ook goede producten maken, is groter dan bij minder goede medewerkers.
 
 
 

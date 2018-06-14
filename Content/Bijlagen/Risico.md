@@ -152,6 +152,7 @@ Maatregelen:
 - M17 Snel beschikbare tools
 - M18 Ondersteuning verplichte tools
 - M21 Kwaliteit van medewerkers
+- M28 Self-assessment
 
 Classificatie:
 
@@ -173,6 +174,7 @@ Maatregelen:
 - M06 Frequente meting
 - M08 Technische schuld
 - M14 Projecten splitsen in een voorbereidingsfase
+- M28 Self-assessment
 
 Classificatie:
 
@@ -189,6 +191,7 @@ Maatregelen:
 
 - M10 Periodiek projectoverleg
 - M13 Dekking ISO-25010
+- M28 Self-assessment
 
 Classificatie:
 
@@ -206,6 +209,7 @@ Maatregelen:
 - M08 Technische schuld
 - M13 Dekking ISO-25010
 - M14 Projecten splitsen in een voorbereidingsfase - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
+- M28 Self-assessment
 
 Classificatie:
 
@@ -225,6 +229,7 @@ Maatregelen:
 - M07 Continuous delivery pipeline
 - M13 Dekking ISO-25010
 - M21 Kwaliteit van medewerkers
+- M28 Self-assessment
 
 Classificatie:
 
@@ -255,6 +260,7 @@ Classificatie:
 Maatregelen:
 
 - M01 Op te leveren producten
+- M28 Self-assessment
 
 Classificatie:
 

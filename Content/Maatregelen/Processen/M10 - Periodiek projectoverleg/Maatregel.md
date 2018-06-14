@@ -7,7 +7,7 @@ De agenda voor dit overleg bestaat tenminste uit de volgende onderwerpen:
 - actie- en besluitenlijst,
 - personele zaken - bespreking van samenwerking binnen het team, in- en uitstroom, op- en afschalen,
 - planning en voortgang - bespreking van voortgang ten opzichte van voorspelling en daaraan gerelateerde afwijkingen en knelpunten, leidend tot acties,
-- kwaliteit en architectuur - bespreking van kwaliteit en architectuur (voor borging van inhoudelijke koers) en eventuele afwijkingen en benodigde acties,
+- kwaliteit en architectuur - bespreking van kwaliteit (bijvoorbeeld naar aanleiding van de self-assessment), architectuur (voor borging van inhoudelijke koers), eventuele afwijkingen en benodigde acties,
 - risico's en aandachtspunten.
 
 #### Rationale

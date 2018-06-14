@@ -8,7 +8,7 @@
 <p><img src="./Content/Images/ICTU.png" alt="ICTU" title="ictu-logo"></p>
 <p><img src="./Content/Images/word-cloud.png" alt="wordcloud" title="word-cloud"></p>
 <h1 id="kwaliteitsaanpak-ictu-software-realisatie">Kwaliteitsaanpak ICTU Software Realisatie</h1>
-<p>Versie 1.1.66</p>
+<p>Versie 1.1.68</p>
 <h2 id="wijzigingsgeschiedenis">Wijzigingsgeschiedenis</h2>
 <h3 id="algemeen">Algemeen</h3>
 <ul>
@@ -80,6 +80,7 @@
 <li><a href="#bijlagen">Bijlagen</a><ul>
 <li><a href="#hoe-de-kwaliteitsaanpak-het-manifest-ondersteunt">Hoe de kwaliteitsaanpak het manifest ondersteunt</a></li>
 <li><a href="#risico-s-van-softwareontwikkeling">Risico&#39;s van softwareontwikkeling</a></li>
+<li><a href="#documenten-voor-maatregel-1-op-te-leveren-producten">Documenten voor Maatregel 1: Op te leveren producten</a></li>
 </ul>
 </li>
 </ul>
@@ -292,7 +293,7 @@
 <li><p>De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTP-header en -request-configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de &#39;Server&#39;-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer;</p>
 </li>
 </ul>
-<p>Zie Bijlage documenten voor maatregel M1 voor een uitgebreider overzicht van de documenten en documentstandaarden die ICTU hanteert voor softwarerealisatieprojecten.</p>
+<p>Zie de bijlage <a href="#documenten-voor-maatregel-1-op-te-leveren-producten">Documenten voor Maatregel 1: Op te leveren producten</a> voor een uitgebreider overzicht van de documenten en documentstandaarden die ICTU hanteert voor softwarerealisatieprojecten.</p>
 <p>Het genoemde onderzoek voert ICTU uit als onderdeel van een &quot;due diligence&quot;. Een due diligence wordt uitgevoerd in samenwerking met een potentiële opdrachtgever en biedt, naast het genoemde onderzoek, ook de opdrachtgever de kans zich een oordeel te vormen over de werkwijze van ICTU en de verwachte samenwerking.</p>
 <h3 id="maatregel-2-continu-voldoen-aan-kwaliteitsnormen">Maatregel 2: Continu voldoen aan kwaliteitsnormen</h3>
 <p>Producten voldoen zo snel mogelijk vanaf de start van een project aan de door het project en projectenorganisatie vastgestelde kwaliteitsnormen. De kwaliteit van producten die nog niet zijn afgerond of nog niet aan de normen voldoen, wordt door het project bewaakt. Herstel van de kwaliteit wordt planmatig opgepakt (zie ook <a href="#maatregel-8-technische-schuld">Maatregel 8: Technische schuld</a>).</p>
@@ -851,5 +852,56 @@
 <ul>
 <li>Productontwikkeling ➞ Specialiteiten ➞ Onderhoudbaarheid</li>
 </ul>
+<h3 id="documenten-voor-maatregel-1-op-te-leveren-producten">Documenten voor Maatregel 1: Op te leveren producten</h3>
+<p>ICTU hanteert de onderstaande documenten en documentstandaarden in de voorbereidingsfase.</p>
+<h4 id="beschrijving-van-functionele-eisen">Beschrijving van functionele eisen</h4>
+<h5 id="geprioriteerde-backlog">Geprioriteerde backlog</h5>
+<p>De product backlog is een overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:</p>
+<ul>
+<li>WAT er gemaakt moet worden</li>
+<li>WAAROM</li>
+<li>en voor WIE.</li>
+</ul>
+<p>Iedereen kan er dingen aan toevoegen, maar de product owner is en blijft verantwoordelijk. Er staan ook ruwe schattingen bij van de waarde voor de organisatie en van de ontwikkelkosten. De product owner bepaalt de volgorde (en dus prioritering) van de items op de backlog.</p>
+<p>Zie <a href="http://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog">http://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog</a>.</p>
+<p>De beschrijving van functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties en aan logging. Functionele eisen op deze vlakken kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door ook deze eisen expliciet in de voorfase te benoemen wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.</p>
+<h5 id="beschrijving-van-niet-functionele-eisen">Beschrijving van niet-functionele eisen</h5>
+<p>Niet-functionele eisen (requirements) specificeren criteria om het functioneren van het systeem te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Deze niet-functionele requirements kunnen verder onderverdeeld worden in requirements betreffende performance, onderhoud, veiligheid, betrouwbaarheid, of menig ander aspect.</p>
+<p>ICTU gebruikt in ieder geval ISO 25010, het normenkader van de Baseline Informatiebeveiliging Rijksdienst (BIR:2012) en Secure Software Development van Centrum voor Informatiebeveiliging en Privacybescherming om de niet-functionele requirements te structureren en inventariseren. De niet-functionele eisen zijn geprioriteerd.</p>
+<p>De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties, aan logging en aan het gewenste gedrag van de te realiseren software bij uitval van infrastructurele diensten zoals een log server. Niet-functionele eisen op deze vlakken kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door deze eisen expliciet in de voorfase te benoemen wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.</p>
+<h5 id="ontwerp-en-architectuurdocumentatie-software-interactie-infrastructuur-">Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)</h5>
+<p>De ontwerp- en architectuurdocumentatie bestaat uit een projectstartarchitectuur (PSA), een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) en een prototype en/of interactieontwerp.</p>
+<h6 id="projectstartarchitectuur-psa-op-basis-van-nora">Projectstartarchitectuur (PSA) op basis van NORA</h6>
+<p>Een PSA (Project Start Architectuur) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening.</p>
+<p>Een PSA bevat in ieder geval:</p>
+<ul>
+<li>Een beschrijving van de doelen en ambities waaraan het project bijdraagt en invulling geeft. Dus niet de projectdoelen en -ambitie!</li>
+<li>Een afbakening van het project en de context van de voorziening/oplossing die het project gaat realiseren gezien als een &#39;black box&#39;. Denk o.a. ook aan relaties met andere projecten en generieke en specifieke diensten (services).</li>
+<li>De belangrijkste functies van de door het project te realiseren voorziening, informatiestromen en koppelvlakken.</li>
+<li>Een beschrijving van de belangrijkste betrokken stakeholders en/of ketenpartijen. een concretisering van van toepassing zijnde kaders en randvoorwaarden.</li>
+<li>Beleidsuitgangspunten (drijfveren en doelen), zowel voor het specifieke project als algemeen voor de organisatie en visie (oplossingsrichting).</li>
+<li>Standaarden en normen (open standaarden van het Forum Standaardisatie en domeinspecifieke standaarden).</li>
+</ul>
+<p>Zie <a href="http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur">http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)</a>).</p>
+<h6 id="software-architectuur-document-sad-">Software architectuur document (SAD)</h6>
+<p>Het Software Architectuur Document verschaft een compleet overzicht van en rationale voor de architectuur van het te bouwen systeem, waarbij diverse relevante views (zoals use-case, logisch, implementatie, deployment) diverse aspecten van het systeem belichten.</p>
+<p>Zie bijvoorbeeld: <a href="http://www.win.tue.nl/~wstomv/edu/2ip30/refer ences/Kruchten-4+1-view.pdf">http://www.win.tue.nl/~wstomv/edu/2ip30/refer ences/Kruchten-4+1-view.pdf</a>.</p>
+<h6 id="infrastructuurarchitectuur">Infrastructuurarchitectuur</h6>
+<p>De infrastructuurarchitectuur beschrijft de topologie van de implementatie-omgeving waaronder protocollen, beveiligingsniveaus en services. Deze architectuur biedt een logische afbeelding van eisen naar implementatie-omgeving en geeft onderbouwing voor gemaakte keuzes.</p>
+<h6 id="globaal-functioneel-ontwerp-gfo-">Globaal functioneel ontwerp (GFO)</h6>
+<p>Het globaal functioneel ontwerp heeft als belangrijkste onderdeel een use case model. Een use case model is een overkoepelend overzicht van de onderkende actoren en use cases, hun samenhang, gewicht en classificatie. Per onderkende use case is er een nauwkeurig geformuleerde maar beknopte beschrijving. Use cases worden gedurende het project nader gedetailleerd.</p>
+<p>Zie bijvoorbeeld: <a href="[https://www.ivarjacobson.com/sites/default/files/field_iji_file/article/use-case_2_0_jan11.pdf">https://www.ivarjacobson.com/sites/default/files/field_iji_file/article/use-case_2_0_jan11.pdf</a>.</p>
+<h6 id="prototype">Prototype</h6>
+<p>Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illustreert waar men uiteindelijk met de toepassing naar toe wil. Het maakt ideëen tastbaar en creëert een eerste indruk van structuur, design en functionaliteit.</p>
+<h5 id="testdocumentatie-testplannen">Testdocumentatie: testplannen</h5>
+<p>De testplannen bestaan uit een master testplan, gemaakt op basis van een productrisicoanalyse (PRA), en detailtestplannen. Het doel van een mastertestplan (MTP) is om betrokkenen bij het testproces te informeren over de aanpak, de activiteiten, inclusief de onderlinge relaties en afhankelijkheden, en de op te leveren (eind)producten met betrekking tot het testtraject. Het mastertestplan beschrijft deze aanpak, activiteiten en (eind)producten welke in de verschillende andere (detail)testplannen verder dienen te worden gedetailleerd. Deze (detail)testplannen dienen te worden afgeleid van dit mastertestplan. ICTU gebruikt een generiek mastertestplan als basis voor projectspecifieke mastertestplannen.</p>
+<h5 id="testdocumentatie-testgevallen-rapportages">Testdocumentatie: testgevallen, rapportages</h5>
+<p>Logische testgevallen worden vastgelegd in Jira en gekoppeld met use cases en user stories. Fysieke testgevallen worden vastgelegd in het formaat van de gebruikte tooling (bijvoorbeeld TestX) en gekoppeld met de logische testgevallen. Op basis hiervan worden testrapportages gegenereerd die laten zien dat alle use cases en user stories zijn getest en dat die tests zijn geslaagd.</p>
+<h6 id="informatiebeveiligingsplan">Informatiebeveiligingsplan</h6>
+<p>Het IB-plan vormt een handzaam document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en hoe die bescherming vorm krijgt. Naast BIA, eventuele PIA en TVA krijgen ook de geselecteerde IB-maatregelen een plaats in dit document.</p>
+<p>Het Voorschrift Informatiebeveiliging Rijksdienst (VIR) bevat een methode om te komen tot een systematische aanpak van informatiebeveiliging. Eén van de vereisten van het VIR is dat voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een afhankelijkheids- en kwetsbaarheidsanalyse (A&amp;K-analyse) wordt uitgevoerd. Bij ICTU wordt daarvoor een TVA (threat and vulnerability assessment) gebruikt. De betrouwbaarheidseisen, die aan de bedrijfsprocessen en dientengevolge aan het informatiesysteem of verantwoordelijkheidsgebied worden gesteld, worden tijdens een afhankelijkheidsanalyse geïnventariseerd. Vervolgens worden de bedreigingen geïdentificeerd en geanalyseerd.</p>
+<p>Op basis van de resultaten van de TVA wordt voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een informatiebeveiligingsplan opgesteld.</p>
+<h5 id="kwaliteitsplan">Kwaliteitsplan</h5>
+<p>Het kwaliteitsplan beschrijft welke maatregelen de projectenorganisatie treft om de niet-functionele eisen te realiseren. ICTU gebruikt een generiek kwaliteitsplan als basis voor projectspecifieke kwaliteitsplannen.</p>
 </body>
 </html>

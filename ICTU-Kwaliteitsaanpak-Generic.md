@@ -4,7 +4,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie - Generiek
 
-Versie 1.1.66
+Versie 1.1.68
 
 
 ## Wijzigingsgeschiedenis

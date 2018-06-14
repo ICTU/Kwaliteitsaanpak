@@ -11,7 +11,7 @@ Deze kwaliteitsaanpak helpt opdrachtgevers van maatwerksoftware het belang van b
 
 We delen wat we goed kunnen door:
 
-- geleerde lessen te verwerken in deze kwaliteitsaanpak ([Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen](#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en--normen)) en die te delen tussen projecten ([Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen](#maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en--normen)) en te publiceren via [http://www.ictu.nl/kwaliteitsaanpak](http://www.ictu.nl/kwaliteitsaanpak) ([Maatregel 12: Publicatie kwaliteitsaanpak en -normen](#maatregel-12-publicatie-kwaliteitsaanpak-en--normen));
+- geleerde lessen te verwerken in deze kwaliteitsaanpak ([Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen](#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en-normen)) en die te delen tussen projecten ([Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen](#maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en-normen)) en te publiceren via [http://www.ictu.nl/kwaliteitsaanpak](http://www.ictu.nl/kwaliteitsaanpak) ([Maatregel 12: Publicatie kwaliteitsaanpak en -normen](#maatregel-12-publicatie-kwaliteitsaanpak-en-normen));
 - de tools die we ontwikkelen ter ondersteuning van softwarerealisatieprojecten zoveel mogelijk als open source beschikbaar te stellen ([Maatregel 15: Open source tools](#maatregel-15-open-source-tools)).
 
 We gebruiken wat anderen beter doen door:
@@ -23,7 +23,7 @@ We gebruiken wat anderen beter doen door:
 
 #### Op zoek naar de juiste oplossing is het experiment soms de kortste weg
 
-De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om te leren. We delen de lessen geleerd in projecten via de kwaliteitsaanpak zelf ([Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen](#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en--normen))
+De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om te leren. We delen de lessen geleerd in projecten via de kwaliteitsaanpak zelf ([Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen](#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en-normen))
 
 #### Wij geloven in agile werken bij de overheid
 

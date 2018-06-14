@@ -29,7 +29,7 @@ De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om
 
 Door agile te werken ([Maatregel 5: Iteratief en incrementeel ontwikkelproces](#maatregel-5-iteratief-en-incrementeel-ontwikkelproces)) kunnen wij:
 
-- duurzame kwaliteit leveren ([Maatregel 6: Frequente meting](#maatregel-6-frequente-meting) en [Maatregel 2: Continu voldoen aan kwaliteitsnormen](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen) en M28: Self-assessment);
+- duurzame kwaliteit leveren ([Maatregel 6: Frequente meting](#maatregel-6-frequente-meting) en [Maatregel 2: Continu voldoen aan kwaliteitsnormen](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen) en [Maatregel 28: Self-assessment](#maatregel-28-self-assessment));
 - frequent waarde leveren ([Maatregel 7: Continuous delivery pipeline](#maatregel-7-continuous-delivery-pipeline));
 - technische schuld beheersen ([Maatregel 8: Technische schuld](#maatregel-8-technische-schuld)).
 

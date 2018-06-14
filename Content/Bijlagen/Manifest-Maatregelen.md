@@ -29,7 +29,7 @@ De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om
 
 Door agile te werken (M05: Iteratief en incrementeel ontwikkelproces) kunnen wij:
 
-- duurzame kwaliteit leveren (M06: Frequente Meting en M02: Continue voldoen aan de kwaliteitsnormen);
+- duurzame kwaliteit leveren (M06: Frequent geautomatiseerd meten, M02: Continue voldoen aan de kwaliteitsnormen en M28: Self-assessment);
 - frequent waarde leveren (M07: Continous delivery);
 - technische schuld beheersen (M08: Technische dchuld).
 

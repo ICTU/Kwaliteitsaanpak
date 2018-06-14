@@ -12,7 +12,7 @@ Met behulp van deze kwaliteitsaanpak heeft ICTU samen met andere overheden inmid
 
 ## Doelstellingen van de kwaliteitsaanpak
 
-De kwaliteitsaanpak heeft 3 doelstellingen:
+De kwaliteitsaanpak heeft drie doelstellingen:
 
 1. Opdrachtgevers helpen bekende risico's bij softwareontwikkeling, zoals technische schuld, vertraging en defecten, zo veel mogelijk te voorkomen.
 

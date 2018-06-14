@@ -130,7 +130,7 @@ Maatregelen:
 - [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase)
 - [Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)
 - [Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools)
-- [Maatregel 19: Digitale werkomgeving](#maatregel-19-digitale-werkomgeving) - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
+- [Maatregel 19: Afgeschermde digitale omgeving](#maatregel-19-afgeschermde-digitale-omgeving) - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
 
 Classificatie:
 

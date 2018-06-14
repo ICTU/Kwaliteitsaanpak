@@ -17,7 +17,7 @@ We delen wat we goed kunnen door:
 We gebruiken wat anderen beter doen door:
 
 - open source tools te gebruiken ([Maatregel 15: Open source tools](#maatregel-15-open-source-tools));
-- bewezen tools te kiezen ([Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)) en beschikbaar te stellen aan projecten ([Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)) in een digitale werkomgeving ([Maatregel 19: Digitale werkomgeving](#maatregel-19-digitale-werkomgeving)) en het gebruik ervan te ondersteunen ([Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools));
+- bewezen tools te kiezen ([Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)) en beschikbaar te stellen aan projecten ([Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)) in een digitale werkomgeving ([Maatregel 19: Afgeschermde digitale omgeving](#maatregel-19-afgeschermde-digitale-omgeving)) en het gebruik ervan te ondersteunen ([Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools));
 - ons werk periodiek op informatiebeveiliging te laten controleren ([Maatregel 26: Periodieke beoordeling informatiebeveiliging](#maatregel-26-periodieke-beoordeling-informatiebeveiliging));
 - door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd, te laten gaan ([Maatregel 21: Kwaliteit van medewerkers](#maatregel-21-kwaliteit-van-medewerkers)).
 

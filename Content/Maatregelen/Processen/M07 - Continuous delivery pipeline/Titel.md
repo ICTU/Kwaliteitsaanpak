@@ -1,1 +1,1 @@
-### Maatregel 7: Continuous delivery pipeline (M07)
+### Maatregel 7: Continuous delivery pipeline

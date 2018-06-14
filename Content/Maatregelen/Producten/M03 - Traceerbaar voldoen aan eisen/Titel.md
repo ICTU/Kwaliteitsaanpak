@@ -1,1 +1,1 @@
-### Maatregel 3: Traceerbaar voldoen aan eisen  (M03)
+### Maatregel 3: Traceerbaar voldoen aan eisen

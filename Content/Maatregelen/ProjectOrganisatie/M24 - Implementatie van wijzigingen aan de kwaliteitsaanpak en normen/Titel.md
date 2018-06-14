@@ -1,1 +1,1 @@
-### Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen (M024)
+### Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen

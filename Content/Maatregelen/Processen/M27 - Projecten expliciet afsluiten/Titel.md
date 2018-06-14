@@ -1,1 +1,1 @@
-### Maatregel M27 - Projecten expliciet afsluiten (M27)
+### Maatregel 27: Projecten expliciet afsluiten

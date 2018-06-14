@@ -2,7 +2,7 @@
 
 ![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
-# Kwaliteitsaanpak ICTU Software Realisatie - Generic
+# Kwaliteitsaanpak ICTU Software Realisatie - Generiek
 
 #include "Content/Versie.md"
 
@@ -55,7 +55,7 @@
 #include "Content/Maatregelen/Processen/M27 - Projecten expliciet afsluiten/Titel.md"
 #include "Content/Maatregelen/Processen/M27 - Projecten expliciet afsluiten/Maatregel.md"
 
-## Project Organisatie
+## Projectorganisatie
 
 #include "Content/Maatregelen/ProjectOrganisatie/M11 - Beheer en onderhoud kwaliteitsaanpak en normen/Titel.md"
 #include "Content/Maatregelen/ProjectOrganisatie/M11 - Beheer en onderhoud kwaliteitsaanpak en normen/Maatregel.md"
@@ -99,4 +99,3 @@
 ## Bijlagen
 
 #include "Content/Bijlagen/Risico.md"
-

@@ -1,1 +1,1 @@
-### Maatregel 26 : Periodieke beoordeling informatiebeveiliging (M25)
+### Maatregel 26: Periodieke beoordeling informatiebeveiliging

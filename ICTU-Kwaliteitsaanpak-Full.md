@@ -4,7 +4,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 
-Versie 1.1.74
+Versie 1.1.76
 
 
 ## Wijzigingsgeschiedenis
@@ -15,6 +15,7 @@ Versie 1.1.74
   - M01: Niet alle producten hoeven door het project te worden gemaakt.
   - M02: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
   - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat en verplaatsen naar hoofdstuk Producten.
+  - M19: De titel van de maatregel verduidelijkt naar "afgeschermde digitale omgeving".
   - M25: De inhoud is verplaatst naar M01, M25 zelf is vervallen.
   - M28: Maatregel met betrekking tot self-assessment toegevoegd.
   - Tekstuele verbeteringen.
@@ -28,7 +29,7 @@ Versie 1.1.74
 - Versie 1.2, onder handen
   - Manifest toegevoegd.
   - ICTU-specifieke invulling van maatregelen aangepast aan nieuwe organisatiestructuur en rollen zoals die in 2018 gelden.
-
+  - In maatregel M16 de verwijzing naar ICTU-specifieke SonarQube kwaliteitsprofielen verwijderd omdat ICTU de standaard Sonar Way kwaliteitsprofielen gebruikt.
 
 
 ## Inhoudsopgave
@@ -62,7 +63,7 @@ Versie 1.1.74
   * [Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)
   * [Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)
   * [Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools)
-  * [Maatregel 19: Digitale werkomgeving](#maatregel-19-digitale-werkomgeving)
+  * [Maatregel 19: Afgeschermde digitale omgeving](#maatregel-19-afgeschermde-digitale-omgeving)
   * [Maatregel 21: Kwaliteit van medewerkers](#maatregel-21-kwaliteit-van-medewerkers)
   * [Maatregel 22: Betrokkenheid bij inzet](#maatregel-22-betrokkenheid-bij-inzet)
   * [Maatregel 23: Warme kennisoverdracht](#maatregel-23-warme-kennisoverdracht)
@@ -268,7 +269,7 @@ ICTU hanteert een norm voor de dekking van regressietests.
 
 ### Maatregel 26: Periodieke beoordeling informatiebeveiliging
 
-Projecten laten periodiek een beveiligingstest uitvoeren. De code wordt zowel geautomatiseerd, als handmatig onderzocht op veelvoorkomende kwetsbaarheden door een beveiligingsexpert van buiten het project. De projectorganisatie zorgt ervoor dat deze expertise op afroep beschikbaar gesteld wordt aan projecten. Bevindingen uit de beveiligingstest worden vastgelegd als onderdeel van de werkvoorraad voor het ontwikkelproces (zie maatregel [Maatregel 5: Iteratief en incrementeel ontwikkelproces](#maatregel-5-iteratief-en-incrementeel-ontwikkelproces)).
+Projecten laten periodiek een beveiligingstest uitvoeren. De code wordt zowel geautomatiseerd, als handmatig onderzocht op veelvoorkomende kwetsbaarheden door een beveiligingsexpert van buiten het project. De projectorganisatie zorgt ervoor dat deze expertise op afroep beschikbaar gesteld wordt aan projecten. Bevindingen uit de beveiligingstest worden vastgelegd als onderdeel van de werkvoorraad voor het ontwikkelproces (zie [Maatregel 5: Iteratief en incrementeel ontwikkelproces](#maatregel-5-iteratief-en-incrementeel-ontwikkelproces)).
 
 #### Rationale
 
@@ -287,7 +288,7 @@ De beveiligingstesten vinden plaats in aanvulling op de door tools uitgevoerde c
 
 ### Maatregel 5: Iteratief en incrementeel ontwikkelproces
 
-Projecten werken iteratief en incrementeel; dit betekent dat een project in korte iteraties werkt, waarbij elke iteratie een werkende versie van de software wordt opgeleverd die extra waarde oplevert voor de opdrachtgever. Behalve de software levert het project iedere iteratie telkens ook alle andere producten (Zie maatregel Zie maatregel [Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)) bijgewerkt op. Elke iteratie worden verwachtingen en werkelijke resultaten vergeleken en de werkwijze aangescherpt op basis van inzichten en bevindingen. Dit leidt tot een zich continu verbeterend proces.
+Projecten werken iteratief en incrementeel; dit betekent dat een project in korte iteraties werkt, waarbij elke iteratie een werkende versie van de software wordt opgeleverd die extra waarde oplevert voor de opdrachtgever. Behalve de software levert het project iedere iteratie telkens ook alle andere producten (Zie [Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)) bijgewerkt op. Elke iteratie worden verwachtingen en werkelijke resultaten vergeleken en de werkwijze aangescherpt op basis van inzichten en bevindingen. Dit leidt tot een zich continu verbeterend proces.
 
 #### Rationale
 
@@ -548,7 +549,7 @@ ICTU gebruikt hiervoor de volgende tools:
 
 1. Jira - De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog, de iteraties als sprints.
 2. Jenkins voor Javaprojecten en Team Foundation Server (TFS) voor DotNet-projecten.
-3. SonarQube, inclusief ICTU-specifieke kwaliteitsprofielen die aansluiten bij de ICTU-kwaliteitsnormen.
+3. SonarQube.
 4. Releasemanager.
 5. Reporting (Birt).
 6. Kwaliteitsrapportage (HQ).
@@ -592,16 +593,16 @@ De verplicht gestelde tools zijn beperkt in aantal, bewezen en gangbaar; veel me
 
 ICTU zorgt voor ondersteuning van de bij [Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools) verplicht gestelde tools. Een team van specialisten met kennis, ervaring en capaciteit is beschikbaar voor ondersteuning aan projecten.
 
-### Maatregel 19: Digitale werkomgeving
+### Maatregel 19: Afgeschermde digitale omgeving
 
-De projectenorganisatie geeft de projecten de beschikking over eigen, afgeschermde digitale werkomgevingen, waarbinnen ze de door het project ontwikkelde software en tools kunnen installeren.
+De projectenorganisatie geeft de projecten de beschikking over eigen, afgeschermde digitale omgevingen, waarbinnen ze de door het project ontwikkelde software en tools kunnen installeren.
 
 #### Rationale
 
 Door het bieden van een afgeschermde digitale omgeving zijn de afhankelijkheden en invloeden tussen projecten minimaal en worden beveiligingsrisico's verkleind.
 #### ICTU
 
-ICTU ondersteunt dit met Docker en/of virtuele machines (VM) en een VLAN per project. Een nieuwe digitale werkomgeving is binnen een werkweek na aanvraag beschikbaar.
+ICTU ondersteunt dit met Docker en/of virtuele machines (VM) en een VLAN per project. Een nieuwe afgeschermde digitale omgeving is binnen een werkweek na aanvraag beschikbaar.
 
 
 ### Maatregel 21: Kwaliteit van medewerkers
@@ -658,7 +659,7 @@ We delen wat we goed kunnen door:
 We gebruiken wat anderen beter doen door:
 
 - open source tools te gebruiken ([Maatregel 15: Open source tools](#maatregel-15-open-source-tools));
-- bewezen tools te kiezen ([Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)) en beschikbaar te stellen aan projecten ([Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)) in een digitale werkomgeving ([Maatregel 19: Digitale werkomgeving](#maatregel-19-digitale-werkomgeving)) en het gebruik ervan te ondersteunen ([Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools));
+- bewezen tools te kiezen ([Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)) en beschikbaar te stellen aan projecten ([Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)) in een digitale werkomgeving ([Maatregel 19: Afgeschermde digitale omgeving](#maatregel-19-afgeschermde-digitale-omgeving)) en het gebruik ervan te ondersteunen ([Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools));
 - ons werk periodiek op informatiebeveiliging te laten controleren ([Maatregel 26: Periodieke beoordeling informatiebeveiliging](#maatregel-26-periodieke-beoordeling-informatiebeveiliging));
 - door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd, te laten gaan ([Maatregel 21: Kwaliteit van medewerkers](#maatregel-21-kwaliteit-van-medewerkers)).
 
@@ -813,7 +814,7 @@ Maatregelen:
 - [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase)
 - [Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)
 - [Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools)
-- [Maatregel 19: Digitale werkomgeving](#maatregel-19-digitale-werkomgeving) - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
+- [Maatregel 19: Afgeschermde digitale omgeving](#maatregel-19-afgeschermde-digitale-omgeving) - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
 
 Classificatie:
 

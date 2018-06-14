@@ -1,1 +1,1 @@
-### Maatregel 19: Digitale werkomgeving
+### Maatregel 19: Afgeschermde digitale omgeving

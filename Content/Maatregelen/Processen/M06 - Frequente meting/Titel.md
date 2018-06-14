@@ -1,1 +1,1 @@
-### Maatregel 6: Frequente meting (M06)
+### Maatregel 6: Frequent geautomatiseerd meten (M06)

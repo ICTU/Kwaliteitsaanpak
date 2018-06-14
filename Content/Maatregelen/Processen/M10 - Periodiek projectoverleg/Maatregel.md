@@ -2,7 +2,7 @@ De projectverantwoordelijke organiseert een periodiek projectoverleg. Dit overle
 
 Vereiste aanwezigen zijn de project-verantwoordelijke, een vertegenwoordiger uit het projectteam en een kwaliteits-manager. Andere aanwezigen kunnen zijn: opdrachtnemer, architecten en coaches.
 
-De agenda voor dit overleg bestaat tenminste uit de volgende onderwerpen: 
+De agenda voor dit overleg bestaat ten minste uit de volgende onderwerpen: 
 - mededelingen - pro-actief informeren over voor het project relevante ontwikkelingen,
 - actie- en besluitenlijst,
 - personele zaken - bespreking van samenwerking binnen het team, in- en uitstroom, op- en afschalen,
@@ -11,4 +11,4 @@ De agenda voor dit overleg bestaat tenminste uit de volgende onderwerpen:
 - risico's en aandachtspunten.
 
 #### Rationale
-Het doel van het periodiek projectoverleg is alle direct-betrokkenen, breder dan het realiserende team, op hetzelfde informatieniveau te brengen en te houden. Direct-betrokkenen zijn alle medewerkers die geen onderdeel uitmaken van het realiserende team, maar wel eindverantwoordelijk of uitvoerend verantwoordelijk zijn voor het projectsucces.
+Het doel van het periodiek projectoverleg is alle directe betrokkenen, breder dan het realiserende team, op hetzelfde informatieniveau te brengen en te houden. Directe betrokkenen zijn alle medewerkers die geen onderdeel uitmaken van het realiserende team, maar wel eindverantwoordelijk of uitvoerend verantwoordelijk zijn voor het projectsucces.

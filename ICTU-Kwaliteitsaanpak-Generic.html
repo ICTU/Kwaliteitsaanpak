@@ -8,7 +8,7 @@
 <p><img src="./Content/Images/ICTU.png" alt="ICTU" title="ictu-logo"></p>
 <p><img src="./Content/Images/word-cloud.png" alt="wordcloud" title="word-cloud"></p>
 <h1 id="kwaliteitsaanpak-ictu-software-realisatie-generiek">Kwaliteitsaanpak ICTU Software Realisatie - Generiek</h1>
-<p>Versie 1.1.71</p>
+<p>Versie 1.1.76</p>
 <h2 id="wijzigingsgeschiedenis">Wijzigingsgeschiedenis</h2>
 <h3 id="algemeen">Algemeen</h3>
 <ul>
@@ -52,6 +52,7 @@
 <li><a href="#maatregel-9-implementatie-kwaliteitsaanpak">Maatregel 9: Implementatie kwaliteitsaanpak</a></li>
 <li><a href="#maatregel-10-periodiek-projectoverleg">Maatregel 10: Periodiek projectoverleg</a></li>
 <li><a href="#maatregel-27-projecten-expliciet-afsluiten">Maatregel 27: Projecten expliciet afsluiten</a></li>
+<li><a href="#maatregel-28-self-assessment">Maatregel 28: Self-assessment</a></li>
 </ul>
 </li>
 <li><a href="#projectorganisatie">Projectorganisatie</a><ul>
@@ -102,7 +103,7 @@
 <li><p>Organisatie - Het derde deel van de kwaliteitsaanpak heeft betrekking op de overkoepelende ontwikkelorganisatie waarbinnen projecten worden uitgevoerd (bij ICTU is dat de afdeling ICTU Software Realisatie (ISR)); dit gaat over de samenhang tussen projecten en de faciliteiten die projecten ter beschikking moeten hebben.</p>
 </li>
 </ol>
-<p>De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico&#39;s die samenhangen met softwareontwikkeling te mitigeren. De bijlage <a href="#risicos-van-softwareontwikkeling">Risico&#39;s van softwareontwikkeling</a> beschrijft de relatie tussen risico&#39;s en maatregelen.</p>
+<p>De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico&#39;s die samenhangen met softwareontwikkeling te mitigeren. De bijlage <a href="#risico-s-van-softwareontwikkeling">Risico&#39;s van softwareontwikkeling</a> beschrijft de relatie tussen risico&#39;s en maatregelen.</p>
 <p>De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort de maatregel tot de kwaliteitsaanpak? In gevallen waarbij een maatregel een specifieke invulling heeft bij ICTU, is daarvoor een aparte paragraaf voor opgenomen.</p>
 <p>Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende &#39;rollen&#39; om aan te geven wie verantwoordelijkheid draagt voor het uitvoeren van de maatregelen:</p>
 <ol>
@@ -119,7 +120,7 @@
 </ol>
 <h2 id="producten">Producten</h2>
 <h3 id="maatregel-1-op-te-leveren-producten">Maatregel 1: Op te leveren producten</h3>
-<p>Projecten zijn gesplitst in een voorbereidingsfase en een realisatiefase (zie M14 Projecten splitsen in een voorbereidingsfase en een realisatiefase); alle fasen kennen specifieke producten. De onderstaande tabel benoemt de producten die een project in die fasen moet realiseren of waarover het project moet kunnen beschikken, indien er andere auteurs zijn (bijvoorbeeld de opdrachtgever). Het project zorgt voor een volledige oplevering van alle genoemde producten, waaronder de producten die niet door het project zelf zijn gemaakt.</p>
+<p>Projecten zijn gesplitst in een voorbereidingsfase en een realisatiefase (zie <a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</a>); alle fasen kennen specifieke producten. De onderstaande tabel benoemt de producten die een project in die fasen moet realiseren of waarover het project moet kunnen beschikken, indien er andere auteurs zijn (bijvoorbeeld de opdrachtgever). Het project zorgt voor een volledige oplevering van alle genoemde producten, waaronder de producten die niet door het project zelf zijn gemaakt.</p>
 <p>Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom &#39;Realisatiefase&#39;) en wordt de kwaliteit van de bestaande software-producten getoetst (<a href="#maatregel-2-continu-voldoen-aan-kwaliteitsnormen">Maatregel 2: Continu voldoen aan kwaliteitsnormen</a>). Dit onderzoek is onderdeel van de voorbereidingsfase en wordt uitgevoerd door vertegenwoordigers van de projectenorganisatie en medewerkers van het desbetreffende project.</p>
 <table>
 <thead>
@@ -300,14 +301,14 @@
 </ul>
 <p>De projectenorganisatie voorziet in mensen en hulpmiddelen, zodat projecten deze pipeline kunnen toepassen. Projecten zijn verantwoordelijk voor de correcte werking van de pipeline.</p>
 <h4 id="rationale">Rationale</h4>
-<p>Software incrementeel opleveren (zie M05 Iteratief en incrementeel ontwikkelproces) vereist dat de software frequent gebouwd, getest en opgeleverd kan worden. Om dit efficiënt en foutvrij te doen, dient het proces van bouwen, testen en opleveren geautomatiseerd te zijn; een continuous delivery pipeline faciliteert dit.</p>
+<p>Software incrementeel opleveren (zie <a href="#maatregel-5-iteratief-en-incrementeel-ontwikkelproces">Maatregel 5: Iteratief en incrementeel ontwikkelproces</a>) vereist dat de software frequent gebouwd, getest en opgeleverd kan worden. Om dit efficiënt en foutvrij te doen, dient het proces van bouwen, testen en opleveren geautomatiseerd te zijn; een continuous delivery pipeline faciliteert dit.</p>
 <h3 id="maatregel-8-technische-schuld">Maatregel 8: Technische schuld</h3>
 <p>Technische schuld is inzichtelijk en wordt planmatig aangepakt. De kwaliteitsmanager is verantwoordelijk voor het inzichtelijk maken van de technische schuld. De projectverantwoordelijke is verantwoordelijk voor het planmatig aanpakken van de technische schuld.</p>
 <h4 id="rationale">Rationale</h4>
 <p>De aanwezigheid van technische schuld heeft nadelige invloed op de kwaliteit van de eindproducten. Anderzijds is het ontstaan van technische schuld gedurende een project vaak onvermijdelijk. Het is daarnaast ook mogelijk dat een deel van de technische schuld bij aanvang van het project al bestond en mogelijk niet wordt opgelost. In alle gevallen is het verstandig om te weten welke technische schuld bestaat. Om te voorkomen dat technische schuld niet wordt opgelost en uitsluitend toeneemt, is het zaak om het verminderen van technische schuld planmatig aan te pakken.</p>
 <h3 id="maatregel-9-implementatie-kwaliteitsaanpak">Maatregel 9: Implementatie kwaliteitsaanpak</h3>
-<p>Projecten implementeren nieuwe versies van kwaliteitsaanpak en kwaliteitsnormen binnen de door de projectenorganisatie gestelde termijn (zie M12 Publicatie kwaliteitsaanpak en -normen voor het tot stand komen van de gestelde termijnen). De projectverantwoordelijke is verantwoordelijk voor de implementatie.</p>
-<p>De projectverantwoordelijke organiseert periodiek een self-assessment van het project tegen de kwaliteitsaanpak (M28 Self-assessment), identificeert de belangrijkste verschillen tussen kwaliteitsaanpak en werkwijze in het project en rapporteert hierover aan de projectenorganisatie. In overleg tussen projectverantwoordelijke en projectenorganisatie wordt besloten of het verschil tijdelijk of permanent wordt geaccepteerd. In het geval van tijdelijke acceptatie stelt de projectverantwoordelijke een verbeteractie op. Merk op dat de verbeteractie ook kan bestaan uit het opstellen van een verbetervoorstel voor de kwaliteitsaanpak.</p>
+<p>Projecten implementeren nieuwe versies van kwaliteitsaanpak en kwaliteitsnormen binnen de door de projectenorganisatie gestelde termijn (zie <a href="#maatregel-12-publicatie-kwaliteitsaanpak-en-normen">Maatregel 12: Publicatie kwaliteitsaanpak en -normen</a> voor het tot stand komen van de gestelde termijnen). De projectverantwoordelijke is verantwoordelijk voor de implementatie.</p>
+<p>De projectverantwoordelijke organiseert periodiek een self-assessment van het project tegen de kwaliteitsaanpak (<a href="#maatregel-28-self-assessment">Maatregel 28: Self-assessment</a>), identificeert de belangrijkste verschillen tussen kwaliteitsaanpak en werkwijze in het project en rapporteert hierover aan de projectenorganisatie. In overleg tussen projectverantwoordelijke en projectenorganisatie wordt besloten of het verschil tijdelijk of permanent wordt geaccepteerd. In het geval van tijdelijke acceptatie stelt de projectverantwoordelijke een verbeteractie op. Merk op dat de verbeteractie ook kan bestaan uit het opstellen van een verbetervoorstel voor de kwaliteitsaanpak.</p>
 <p>Voor de belangrijkste verschillen beschrijft de projectverantwoordelijke:</p>
 <ul>
 <li>Het geconstateerde verschil,</li>
@@ -318,7 +319,7 @@
 <h4 id="rationale">Rationale</h4>
 <p>De implementatie van een nieuwe versie van de kwaliteitsaanpak kost tijd. De introductie en aanpassing van normen en tools, kunnen verschillende consequenties hebben: bestaande broncode blijkt niet meer volledig te voldoen aan de normen, een nieuwe tool moet in de ontwikkelstraat worden toegevoegd, enzovoort.</p>
 <p>Anderzijds is het voor de uniformiteit van kwaliteitsmeting en rapportage en de doorontwikkeling van de kwaliteitsaanpak van belang de implementatieperiode zo kort mogelijk en voorspelbaar te houden. Daarom stemt de projectenorganisatie met de projecten een implementatiemoment en implementatieperiode af.</p>
-<p>Omdat implementatie van maatregelen in een project tijd kost is de self-assessment (M28 Self-assessment) gericht op het in kaart brengen van de belangrijkste verschillen tussen kwaliteitsaanpak en de in het project toegepaste werkwijze en niet op het uitputtend inventariseren van alle verschillen.</p>
+<p>Omdat implementatie van maatregelen in een project tijd kost is de self-assessment (<a href="#maatregel-28-self-assessment">Maatregel 28: Self-assessment</a>) gericht op het in kaart brengen van de belangrijkste verschillen tussen kwaliteitsaanpak en de in het project toegepaste werkwijze en niet op het uitputtend inventariseren van alle verschillen.</p>
 <h3 id="maatregel-10-periodiek-projectoverleg">Maatregel 10: Periodiek projectoverleg</h3>
 <p>De projectverantwoordelijke organiseert een periodiek projectoverleg. Dit overleg vindt wekelijks plaats en duurt niet langer dan een uur.</p>
 <p>Vereiste aanwezigen zijn de project-verantwoordelijke, een vertegenwoordiger uit het projectteam en een kwaliteitsmanager. Andere aanwezigen kunnen zijn: opdrachtnemer, architecten en coaches.</p>
@@ -337,6 +338,10 @@
 <p>Na afronding van de realisatiefase worden projecten afgesloten. Alle documentatie, broncode, referentiedata en credentials die in de realisatiefase nodig waren of zijn opgeleverd, worden gearchiveerd en van werkstations van projectmedewerkers verwijderd.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Archiveren faciliteert het eventueel herstarten of overdragen van het project op een later tijdstip. Verwijderen neemt een onnodig risico op inbreuk op vertrouwelijkheid weg en vrijwaart projectmedewerkers en de projectenorganisatie van verdenking en aansprakelijkheid wanneer een incident optreedt.</p>
+<h3 id="maatregel-28-self-assessment">Maatregel 28: Self-assessment</h3>
+<p>De projectverantwoordelijke doet een periodieke self-assessment ten aanzien van de Kwaliteitsaanpak. Deze assessment geeft inzicht in de huidige status van het project en kan aanleiding geven tot het nemen van maatregelen binnen het project.</p>
+<h4 id="rationale">Rationale</h4>
+<p>Net als bij technische producten is het periodiek meten van de kwaliteit van belang om in controle te blijven. Aangezien veel maatregelen uit de Kwaliteitsaanpak zich niet geautomatiseerd laten meten, is menselijke inbreng nodig.</p>
 <h2 id="projectorganisatie">Projectorganisatie</h2>
 <h3 id="maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en-normen">Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen</h3>
 <p>De projectenorganisatie onderhoudt en beheert de kwaliteitsaanpak en de kwaliteitsnormen. Aanpassingen volgen uit praktijkervaring, nieuwe inzichten en nieuwe mogelijkheden voor meting en analyse. Iedereen kan wijzigingsvoorstellen indienen bij de projectenorganisatie.</p>
@@ -606,7 +611,7 @@
 <li><a href="#maatregel-17-snel-beschikbare-tools">Maatregel 17: Snel beschikbare tools</a></li>
 <li><a href="#maatregel-18-ondersteuning-verplichte-tools">Maatregel 18: Ondersteuning verplichte tools</a></li>
 <li><a href="#maatregel-21-kwaliteit-van-medewerkers">Maatregel 21: Kwaliteit van medewerkers</a></li>
-<li>M28 Self-assessment</li>
+<li><a href="#maatregel-28-self-assessment">Maatregel 28: Self-assessment</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -626,7 +631,7 @@
 <li><a href="#maatregel-6-frequente-meting">Maatregel 6: Frequente meting</a></li>
 <li><a href="#maatregel-8-technische-schuld">Maatregel 8: Technische schuld</a></li>
 <li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</a></li>
-<li>M28 Self-assessment</li>
+<li><a href="#maatregel-28-self-assessment">Maatregel 28: Self-assessment</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -641,7 +646,7 @@
 <ul>
 <li><a href="#maatregel-10-periodiek-projectoverleg">Maatregel 10: Periodiek projectoverleg</a></li>
 <li><a href="#maatregel-13-gebruik-van-iso-25010">Maatregel 13: Gebruik van ISO-25010</a></li>
-<li>M28 Self-assessment</li>
+<li><a href="#maatregel-28-self-assessment">Maatregel 28: Self-assessment</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -657,7 +662,7 @@
 <li><a href="#maatregel-8-technische-schuld">Maatregel 8: Technische schuld</a></li>
 <li><a href="#maatregel-13-gebruik-van-iso-25010">Maatregel 13: Gebruik van ISO-25010</a></li>
 <li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</a> - De voorbereidingsfase heeft minder last van de &quot;dagelijkse druk&quot; die later tijdens het traject vaak ontstaat.</li>
-<li>M28 Self-assessment</li>
+<li><a href="#maatregel-28-self-assessment">Maatregel 28: Self-assessment</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -675,7 +680,7 @@
 <li><a href="#maatregel-7-continuous-delivery-pipeline">Maatregel 7: Continuous delivery pipeline</a></li>
 <li><a href="#maatregel-13-gebruik-van-iso-25010">Maatregel 13: Gebruik van ISO-25010</a></li>
 <li><a href="#maatregel-21-kwaliteit-van-medewerkers">Maatregel 21: Kwaliteit van medewerkers</a></li>
-<li>M28 Self-assessment</li>
+<li><a href="#maatregel-28-self-assessment">Maatregel 28: Self-assessment</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -702,7 +707,7 @@
 <p>Maatregelen:</p>
 <ul>
 <li><a href="#maatregel-1-op-te-leveren-producten">Maatregel 1: Op te leveren producten</a></li>
-<li>M28 Self-assessment</li>
+<li><a href="#maatregel-28-self-assessment">Maatregel 28: Self-assessment</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>

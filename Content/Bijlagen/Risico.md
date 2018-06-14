@@ -152,7 +152,7 @@ Maatregelen:
 - [Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)
 - [Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools)
 - [Maatregel 21: Kwaliteit van medewerkers](#maatregel-21-kwaliteit-van-medewerkers)
-- M28 Self-assessment
+- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
 
 Classificatie:
 
@@ -174,7 +174,7 @@ Maatregelen:
 - [Maatregel 6: Frequente meting](#maatregel-6-frequente-meting)
 - [Maatregel 8: Technische schuld](#maatregel-8-technische-schuld)
 - [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase)
-- M28 Self-assessment
+- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
 
 Classificatie:
 
@@ -191,7 +191,7 @@ Maatregelen:
 
 - [Maatregel 10: Periodiek projectoverleg](#maatregel-10-periodiek-projectoverleg)
 - [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
-- M28 Self-assessment
+- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
 
 Classificatie:
 
@@ -209,7 +209,7 @@ Maatregelen:
 - [Maatregel 8: Technische schuld](#maatregel-8-technische-schuld)
 - [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
 - [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase) - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
-- M28 Self-assessment
+- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
 
 Classificatie:
 
@@ -229,7 +229,7 @@ Maatregelen:
 - [Maatregel 7: Continuous delivery pipeline](#maatregel-7-continuous-delivery-pipeline)
 - [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
 - [Maatregel 21: Kwaliteit van medewerkers](#maatregel-21-kwaliteit-van-medewerkers)
-- M28 Self-assessment
+- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
 
 Classificatie:
 
@@ -260,7 +260,7 @@ Classificatie:
 Maatregelen:
 
 - [Maatregel 1: Op te leveren producten](#maatregel-1-op-te-leveren-producten)
-- M28 Self-assessment
+- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
 
 Classificatie:
 

@@ -73,6 +73,10 @@
 #include "Content/Maatregelen/Processen/M27 - Projecten expliciet afsluiten/Maatregel.md"
 #include "Content/Maatregelen/Processen/M27 - Projecten expliciet afsluiten/ISR.md"
 
+#include "Content/Maatregelen/Processen/M28 - Self-assessment/Titel.md"
+#include "Content/Maatregelen/Processen/M28 - Self-assessment/Maatregel.md"
+#include "Content/Maatregelen/Processen/M28 - Self-assessment/ISR.md"
+
 ## Projectorganisatie
 
 #include "Content/Maatregelen/ProjectOrganisatie/M11 - Beheer en onderhoud kwaliteitsaanpak en normen/Titel.md"

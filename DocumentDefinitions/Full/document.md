@@ -69,7 +69,7 @@
 #include "Content/Maatregelen/Processen/M27 - Projecten expliciet afsluiten/Maatregel.md"
 #include "Content/Maatregelen/Processen/M27 - Projecten expliciet afsluiten/ISR.md"
 
-## Project Organisatie
+## Projectorganisatie
 
 #include "Content/Maatregelen/ProjectOrganisatie/M11 - Beheer en onderhoud kwaliteitsaanpak en normen/Titel.md"
 #include "Content/Maatregelen/ProjectOrganisatie/M11 - Beheer en onderhoud kwaliteitsaanpak en normen/Maatregel.md"
@@ -127,4 +127,3 @@
 
 #include "Content/Bijlagen/Manifest-Maatregelen.md"
 #include "Content/Bijlagen/Risico.md"
-

@@ -13,4 +13,4 @@ ICTU werkt aan een betere digitale overheid. Wij willen het niveau van software-
 - **Wij geven inzicht in de kwaliteit van ons werk.**
   Omdat wij geloven dat openheid leidt tot een goede samenwerking en een beter resultaat.
 
-Deze kwaliteitsaanpak ondersteunt het realiseren van deze waarden.
+Deze kwaliteitsaanpak ondersteunt het realiseren van deze waarden. Zie ook de bijlage [Hoe de kwaliteitsaanpak het manifest ondersteunt](#hoe-de-kwaliteitsaanpak-het-manifest-ondersteunt).

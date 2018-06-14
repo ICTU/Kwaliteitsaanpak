@@ -1,1 +1,1 @@
-### Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)
+### Maatregel 2: Continu voldoen aan kwaliteitsnormen

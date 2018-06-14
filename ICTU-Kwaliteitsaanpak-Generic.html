@@ -7,8 +7,8 @@
 <body>
 <p><img src="./Content/Images/ICTU.png" alt="ICTU" title="ictu-logo"></p>
 <p><img src="./Content/Images/word-cloud.png" alt="wordcloud" title="word-cloud"></p>
-<h1 id="kwaliteitsaanpak-ictu-software-realisatie-generic">Kwaliteitsaanpak ICTU Software Realisatie - Generic</h1>
-<p>Versie 1.1.55</p>
+<h1 id="kwaliteitsaanpak-ictu-software-realisatie-generiek">Kwaliteitsaanpak ICTU Software Realisatie - Generiek</h1>
+<p>Versie 1.1.65</p>
 <h2 id="wijzigingsgeschiedenis">Wijzigingsgeschiedenis</h2>
 <h3 id="algemeen">Algemeen</h3>
 <ul>
@@ -34,41 +34,41 @@
 <li><a href="#doelstellingen-van-de-kwaliteitsaanpak">Doelstellingen van de kwaliteitsaanpak</a></li>
 <li><a href="#leeswijzer">Leeswijzer</a></li>
 <li><a href="#producten">Producten</a><ul>
-<li><a href="#maatregel-1-op-te-leveren-producten-m01">Maatregel 1: Op te leveren producten (M01)</a></li>
-<li><a href="#maatregel-2-continu-voldoen-aan-kwaliteitsnormen-m02">Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)</a></li>
-<li><a href="#maatregel-3-traceerbaar-voldoen-aan-eisen--m03">Maatregel 3: Traceerbaar voldoen aan eisen (M03)</a></li>
-<li><a href="#maatregel-4-geautomatiseerde-regressietests-m04">Maatregel 4: Geautomatiseerde regressietests (M04)</a></li>
-<li><a href="#maatregel-26--periodieke-beoordeling-informatiebeveiliging-m25">Maatregel 26 : Periodieke beoordeling informatiebeveiliging (M25)</a></li>
+<li><a href="#maatregel-1-op-te-leveren-producten">Maatregel 1: Op te leveren producten</a></li>
+<li><a href="#maatregel-2-continu-voldoen-aan-kwaliteitsnormen">Maatregel 2: Continu voldoen aan kwaliteitsnormen</a></li>
+<li><a href="#maatregel-3-traceerbaar-voldoen-aan-eisen">Maatregel 3: Traceerbaar voldoen aan eisen</a></li>
+<li><a href="#maatregel-4-geautomatiseerde-regressietests">Maatregel 4: Geautomatiseerde regressietests</a></li>
+<li><a href="#maatregel-26-periodieke-beoordeling-informatiebeveiliging">Maatregel 26: Periodieke beoordeling informatiebeveiliging</a></li>
 </ul>
 </li>
 <li><a href="#processen">Processen</a><ul>
-<li><a href="#maatregel-5-iteratief-en-incrementeel-ontwikkelproces-m05">Maatregel 5: Iteratief en incrementeel ontwikkelproces (M05)</a></li>
-<li><a href="#maatregel-6-frequente-meting-m06">Maatregel 6: Frequente meting (M06)</a></li>
-<li><a href="#maatregel-7-continuous-delivery-pipeline-m07">Maatregel 7: Continuous delivery pipeline (M07)</a></li>
-<li><a href="#maatregel-8-technische-schuld-m08">Maatregel 8: Technische schuld (M08)</a></li>
-<li><a href="#maatregel-9-implementatie-kwaliteitsaanpak-m09">Maatregel 9: Implementatie kwaliteitsaanpak (M09)</a></li>
-<li><a href="#maatregel-10-periodiek-projectoverleg-m010">Maatregel 10: Periodiek projectoverleg (M010)</a></li>
-<li><a href="#maatregel-m27---projecten-expliciet-afsluiten-m27">Maatregel M27 - Projecten expliciet afsluiten (M27)</a></li>
+<li><a href="#maatregel-5-iteratief-en-incrementeel-ontwikkelproces">Maatregel 5: Iteratief en incrementeel ontwikkelproces</a></li>
+<li><a href="#maatregel-6-frequente-meting">Maatregel 6: Frequente meting</a></li>
+<li><a href="#maatregel-7-continuous-delivery-pipeline">Maatregel 7: Continuous delivery pipeline</a></li>
+<li><a href="#maatregel-8-technische-schuld">Maatregel 8: Technische schuld</a></li>
+<li><a href="#maatregel-9-implementatie-kwaliteitsaanpak">Maatregel 9: Implementatie kwaliteitsaanpak</a></li>
+<li><a href="#maatregel-10-periodiek-projectoverleg">Maatregel 10: Periodiek projectoverleg</a></li>
+<li><a href="#maatregel-27-projecten-expliciet-afsluiten">Maatregel 27: Projecten expliciet afsluiten</a></li>
 </ul>
 </li>
-<li><a href="#project-organisatie">Project Organisatie</a><ul>
-<li><a href="#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en--normen-m011">Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen (M011)</a></li>
-<li><a href="#maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en--normen-m024">Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen (M024)</a></li>
-<li><a href="#maatregel-12-publicatie-kwaliteitsaanpak-en--normen-m012">Maatregel 12: Publicatie kwaliteitsaanpak en -normen (M012)</a></li>
-<li><a href="#maatregel-13-gebruik-van-iso-25010-m013">Maatregel 13: Gebruik van ISO-25010 (M013)</a></li>
-<li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m014">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase (M014)</a></li>
-<li><a href="#maatregel-15-open-source-tools-m015">Maatregel 15: Open source tools (M015)</a></li>
-<li><a href="#maatregel-16-verplichte-tools-m016">Maatregel 16: Verplichte tools (M016)</a></li>
-<li><a href="#maatregel-17-snel-beschikbare-tools-m017">Maatregel 17: Snel beschikbare tools (M017)</a></li>
-<li><a href="#maatregel-18-ondersteuning-verplichte-tools-m018">Maatregel 18: Ondersteuning verplichte tools (M018)</a></li>
-<li><a href="#maatregel-19-digitale-werkomgeving-m019">Maatregel 19: Digitale werkomgeving (M019)</a></li>
-<li><a href="#maatregel-21-kwaliteit-van-medewerkers-m021">Maatregel 21: Kwaliteit van medewerkers (M021)</a></li>
-<li><a href="#maatregel-22-betrokkenheid-bij-inzet-m022">Maatregel 22: Betrokkenheid bij inzet (M022)</a></li>
-<li><a href="#maatregel-23-warme-kennisoverdracht-m023">Maatregel 23: Warme kennisoverdracht (M023)</a></li>
+<li><a href="#projectorganisatie">Projectorganisatie</a><ul>
+<li><a href="#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en-normen">Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen</a></li>
+<li><a href="#maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en-normen">Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen</a></li>
+<li><a href="#maatregel-12-publicatie-kwaliteitsaanpak-en-normen">Maatregel 12: Publicatie kwaliteitsaanpak en -normen</a></li>
+<li><a href="#maatregel-13-gebruik-van-iso-25010">Maatregel 13: Gebruik van ISO-25010</a></li>
+<li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</a></li>
+<li><a href="#maatregel-15-open-source-tools">Maatregel 15: Open source tools</a></li>
+<li><a href="#maatregel-16-verplichte-tools">Maatregel 16: Verplichte tools</a></li>
+<li><a href="#maatregel-17-snel-beschikbare-tools">Maatregel 17: Snel beschikbare tools</a></li>
+<li><a href="#maatregel-18-ondersteuning-verplichte-tools">Maatregel 18: Ondersteuning verplichte tools</a></li>
+<li><a href="#maatregel-19-digitale-werkomgeving">Maatregel 19: Digitale werkomgeving</a></li>
+<li><a href="#maatregel-21-kwaliteit-van-medewerkers">Maatregel 21: Kwaliteit van medewerkers</a></li>
+<li><a href="#maatregel-22-betrokkenheid-bij-inzet">Maatregel 22: Betrokkenheid bij inzet</a></li>
+<li><a href="#maatregel-23-warme-kennisoverdracht">Maatregel 23: Warme kennisoverdracht</a></li>
 </ul>
 </li>
 <li><a href="#bijlagen">Bijlagen</a><ul>
-<li><a href="#risicos-van-softwareontwikkeling">Risico&#39;s van softwareontwikkeling</a></li>
+<li><a href="#risico-s-van-softwareontwikkeling">Risico&#39;s van softwareontwikkeling</a></li>
 </ul>
 </li>
 </ul>
@@ -79,7 +79,7 @@
 <p>ICTU werkt sinds 2010 met de agile softwareontwikkelaanpak Scrum en heeft deze aanpak aangevuld en uitgebreid om zoveel mogelijk de kans op die risico&#39;s te verminderen. Denk hierbij aan geautomatiseerde regressietesten om het risico op fouten bij nieuwe opleveringen van de software (die bij Scrum elke twee of drie weken plaatsvinden) te voorkomen. Een ander voorbeeld is het zeer frequent − meerdere keren per uur - geautomatiseerd rapporteren over de kwaliteit van de software om zogenaamde &#39;technische schuld&#39; te voorkomen.</p>
 <p>Met behulp van deze kwaliteitsaanpak heeft ICTU samen met andere overheden inmiddels enige tientallen projecten succesvol uitgevoerd. ICTU wil deze aanpak graag aanvullen met de ervaringen en geleerde lessen van andere organisaties en deze overdraagbaar maken en breder uitdragen. Daarom stelt ICTU deze kwaliteitsaanpak ter beschikking aan andere partijen en overheden die zelf maatwerk software ontwikkelen of dit laten doen.</p>
 <h2 id="doelstellingen-van-de-kwaliteitsaanpak">Doelstellingen van de kwaliteitsaanpak</h2>
-<p>De kwaliteitsaanpak heeft 3 doelstellingen:</p>
+<p>De kwaliteitsaanpak heeft drie doelstellingen:</p>
 <ol>
 <li><p>Opdrachtgevers helpen bekende risico&#39;s bij softwareontwikkeling, zoals technische schuld, vertraging en defecten, zo veel mogelijk te voorkomen.</p>
 </li>
@@ -100,7 +100,7 @@
 <li><p>Organisatie - Het derde deel van de kwaliteitsaanpak heeft betrekking op de overkoepelende ontwikkelorganisatie waarbinnen projecten worden uitgevoerd (bij ICTU is dat de afdeling ICTU Software Realisatie (ISR)); dit gaat over de samenhang tussen projecten en de faciliteiten die projecten ter beschikking moeten hebben.</p>
 </li>
 </ol>
-<p>De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico&#39;s die samenhangen met softwareontwikkeling te mitigeren. Bijlage 1 beschrijft de relatie tussen risico&#39;s en maatregelen.</p>
+<p>De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico&#39;s die samenhangen met softwareontwikkeling te mitigeren. De bijlage <a href="#risicos-van-softwareontwikkeling">Risico&#39;s van softwareontwikkeling</a> beschrijft de relatie tussen risico&#39;s en maatregelen.</p>
 <p>De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort de maatregel tot de kwaliteitsaanpak? In gevallen waarbij een maatregel een specifieke invulling heeft bij ICTU, is daarvoor een aparte paragraaf voor opgenomen.</p>
 <p>Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende &#39;rollen&#39; om aan te geven wie verantwoordelijkheid draagt voor het uitvoeren van de maatregelen:</p>
 <ol>
@@ -116,9 +116,9 @@
 </li>
 </ol>
 <h2 id="producten">Producten</h2>
-<h3 id="maatregel-1-op-te-leveren-producten-m01-">Maatregel 1: Op te leveren producten (M01)</h3>
+<h3 id="maatregel-1-op-te-leveren-producten">Maatregel 1: Op te leveren producten</h3>
 <p>Projecten zijn gesplitst in een voorbereidingsfase en een realisatiefase (zie M14 Projecten splitsen in een voorbereidingsfase en een realisatiefase); alle fasen kennen specifieke producten. De onderstaande tabel benoemt de producten die een project in die fasen moet realiseren of waarover het project moet kunnen beschikken, indien er andere auteurs zijn (bijvoorbeeld de opdrachtgever). Het project zorgt voor een volledige oplevering van alle genoemde producten, waaronder de producten die niet door het project zelf zijn gemaakt.</p>
-<p>Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom &#39;Realisatiefase&#39;) en wordt de kwaliteit van de bestaande software-producten getoetst (M02 Continu voldoen aan kwaliteitsnormen). Dit onderzoek is onderdeel van de voorbereidingsfase en wordt uitgevoerd door vertegenwoordigers van de projectenorganisatie en medewerkers van het desbetreffende project.</p>
+<p>Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom &#39;Realisatiefase&#39;) en wordt de kwaliteit van de bestaande software-producten getoetst (<a href="#maatregel-2-continu-voldoen-aan-kwaliteitsnormen">Maatregel 2: Continu voldoen aan kwaliteitsnormen</a>). Dit onderzoek is onderdeel van de voorbereidingsfase en wordt uitgevoerd door vertegenwoordigers van de projectenorganisatie en medewerkers van het desbetreffende project.</p>
 <table>
 <thead>
 <tr>
@@ -253,33 +253,33 @@
 <p>Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te selecteren beveiligingsmaatregelen en zijn daarom, bij voorkeur, voorafgaand aan het project al beschikbaar.</p>
 <p>In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de &#39;risk appetite&#39; van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.</p>
 <p>In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of systeem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen.</p>
-<h3 id="maatregel-2-continu-voldoen-aan-kwaliteitsnormen-m02-">Maatregel 2: Continu voldoen aan kwaliteitsnormen (M02)</h3>
-<p>Producten voldoen zo snel mogelijk vanaf de start van een project aan de door het project en projectenorganisatie vastgestelde kwaliteitsnormen. De kwaliteit van producten die nog niet zijn afgerond of nog niet aan de normen voldoen, wordt door het project bewaakt. Herstel van de kwaliteit wordt planmatig opgepakt (zie ook M08 Technische schuld).</p>
+<h3 id="maatregel-2-continu-voldoen-aan-kwaliteitsnormen">Maatregel 2: Continu voldoen aan kwaliteitsnormen</h3>
+<p>Producten voldoen zo snel mogelijk vanaf de start van een project aan de door het project en projectenorganisatie vastgestelde kwaliteitsnormen. De kwaliteit van producten die nog niet zijn afgerond of nog niet aan de normen voldoen, wordt door het project bewaakt. Herstel van de kwaliteit wordt planmatig opgepakt (zie ook <a href="#maatregel-8-technische-schuld">Maatregel 8: Technische schuld</a>).</p>
 <p>De kwaliteitsnormen zijn in deze versie van de kwaliteitsaanpak nog niet opgenomen.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Het zo snel mogelijk en continu voldoen aan de kwaliteitsnormen beperkt toekomstige hersteltijd. Het dwingt tevens een structurele kwaliteitscontrole af.</p>
-<h3 id="maatregel-3-traceerbaar-voldoen-aan-eisen-m03-">Maatregel 3: Traceerbaar voldoen aan eisen  (M03)</h3>
+<h3 id="maatregel-3-traceerbaar-voldoen-aan-eisen">Maatregel 3: Traceerbaar voldoen aan eisen</h3>
 <p>Eisen zijn wederzijds traceerbaar naar bewijsmateriaal, zoals logische testgevallen, dat de eis gerealiseerd is; dat wil zeggen dat geadministreerd is bij welke eis bewijsmateriaal hoort en vice versa. Dit wordt waar mogelijk met tooling ondersteund.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Door eisen en testgevallen te koppelen en traceerbaar te maken, is het mogelijk de dekking van tests ten opzichte van eisen te bepalen.</p>
-<h3 id="maatregel-4-geautomatiseerde-regressietests-m04-">Maatregel 4: Geautomatiseerde regressietests (M04)</h3>
+<h3 id="maatregel-4-geautomatiseerde-regressietests">Maatregel 4: Geautomatiseerde regressietests</h3>
 <p>Regressietests - tests die verifiëren of eerder ontwikkelde software nog steeds correct werkt na wijzigingen in de software of aansluiting op andere externe koppelvlakken - zijn geautomatiseerd.</p>
 <h4 id="rationale">Rationale</h4>
-<p>Handmatig uitgevoerde regressietests zijn arbeidsintensief, foutgevoelig en afhankelijk van de aanwezigheid van specifieke medewerkers. Gelet op de vrijwel continue metingen op en leveringen van de programmatuur, zijn de nadelen van handmatige regressietests niet acceptabel. Door ze te automatiseren zijn ze herhaalbaar en kunnen ze onderdeel uitmaken van de &#39;continuous delivery pipeline&#39; (zie M07 Continuous delivery pipeline).</p>
-<h3 id="maatregel-26-periodieke-beoordeling-informatiebeveiliging-m25-">Maatregel 26 : Periodieke beoordeling informatiebeveiliging (M25)</h3>
-<p>Projecten laten periodiek een beveiligingstest uitvoeren. De code wordt zowel geautomatiseerd als handmatig onderzocht op veelvoorkomende kwetsbaarheden door een beveiligingsexpert van buiten het project. De projectorganisatie zorgt ervoor dat deze expertise op afroep beschikbaar gesteld wordt aan projecten. Bevindingen uit de beveiligingstest worden vastgelegd als onderdeel van de werkvoorraad voor het ontwikkelproces (zie maatregel M05 Iteratief en incrementeel ontwikkelproces).</p>
+<p>Handmatig uitgevoerde regressietests zijn arbeidsintensief, foutgevoelig en afhankelijk van de aanwezigheid van specifieke medewerkers. Gelet op de vrijwel continue metingen op en leveringen van de programmatuur, zijn de nadelen van handmatige regressietests niet acceptabel. Door ze te automatiseren zijn ze herhaalbaar en kunnen ze onderdeel uitmaken van de &#39;continuous delivery pipeline&#39; (zie <a href="#maatregel-7-continuous-delivery-pipeline">Maatregel 7: Continuous delivery pipeline</a>).</p>
+<h3 id="maatregel-26-periodieke-beoordeling-informatiebeveiliging">Maatregel 26: Periodieke beoordeling informatiebeveiliging</h3>
+<p>Projecten laten periodiek een beveiligingstest uitvoeren. De code wordt zowel geautomatiseerd als handmatig onderzocht op veelvoorkomende kwetsbaarheden door een beveiligingsexpert van buiten het project. De projectorganisatie zorgt ervoor dat deze expertise op afroep beschikbaar gesteld wordt aan projecten. Bevindingen uit de beveiligingstest worden vastgelegd als onderdeel van de werkvoorraad voor het ontwikkelproces (zie maatregel <a href="#maatregel-5-iteratief-en-incrementeel-ontwikkelproces">Maatregel 5: Iteratief en incrementeel ontwikkelproces</a>).</p>
 <h4 id="rationale">Rationale</h4>
 <p>Door het inschakelen van actuele, specifieke expertise wordt de kans vergroot dat eventuele kwetsbaarheden in de gerealiseerde software tijdig herkend worden. Doordat de projectenorganisatie deze expertise beschikbaar stelt, wordt voorkomen dat individuele projecten dat ieder voor zich moeten doen én dat beveiligingstesten als gevolg van (tijds)druk binnen projecten overgeslagen worden.</p>
 <h2 id="processen">Processen</h2>
-<h3 id="maatregel-5-iteratief-en-incrementeel-ontwikkelproces-m05-">Maatregel 5: Iteratief en incrementeel ontwikkelproces (M05)</h3>
-<p>Projecten werken iteratief en incrementeel; dit betekent dat een project in korte iteraties werkt,<br>waarbij elke iteratie een werkende versie van de software wordt opgeleverd die extra waarde oplevert voor de opdrachtgever. Behalve de software worden iedere iteratie telkens ook alle andere producten (Zie maatregel M01 Op te leveren producten) bijgewerkt en opgeleverd. Elke iteratie worden verwachtingen en werkelijke resultaten vergeleken en de werkwijze aangescherpt op basis van inzichten en bevindingen. Dit leidt tot een zich continu verbeterend proces.</p>
+<h3 id="maatregel-5-iteratief-en-incrementeel-ontwikkelproces">Maatregel 5: Iteratief en incrementeel ontwikkelproces</h3>
+<p>Projecten werken iteratief en incrementeel; dit betekent dat een project in korte iteraties werkt,<br>waarbij elke iteratie een werkende versie van de software wordt opgeleverd die extra waarde oplevert voor de opdrachtgever. Behalve de software worden iedere iteratie telkens ook alle andere producten (Zie maatregel <a href="#maatregel-16-verplichte-tools">Maatregel 16: Verplichte tools</a>) bijgewerkt en opgeleverd. Elke iteratie worden verwachtingen en werkelijke resultaten vergeleken en de werkwijze aangescherpt op basis van inzichten en bevindingen. Dit leidt tot een zich continu verbeterend proces.</p>
 <h4 id="rationale">Rationale</h4>
 <p>De incrementele oplevering levert (vrijwel) iedere iteratie toegevoegde waarde en stelt opdrachtgevers, gebruikers en anderen in staat om gaandeweg ervaring op te doen en bij te sturen. Verder dwingt het vroegtijdige tests en kwaliteitscontroles af, die daarmee verankerd worden in het ontwikkel- en onderhoudsproces. Door naast de software telkens ook alle andere producten bij te werken en op te leveren wordt bereikt dat het product als geheel consistent blijft en dat er geen achterstallig onderhoud ontstaat.</p>
-<h3 id="maatregel-6-frequente-meting-m06-">Maatregel 6: Frequente meting (M06)</h3>
+<h3 id="maatregel-6-frequente-meting">Maatregel 6: Frequente meting</h3>
 <p>Het voldoen aan de kwaliteitsnormen die geautomatiseerd gemeten kunnen worden, wordt frequent - minimaal één keer per dag - gemeten. De projectenorganisatie voorziet hierin (mensen en middelen).</p>
 <h4 id="rationale">Rationale</h4>
 <p>Vaak meten maakt een vrijwel actueel inzicht op elk moment mogelijk. Projectleden kunnen snel reageren op afwijkingen, die in de regel ook pas recent zijn ontstaan en dus meestal gerelateerd zijn aan huidige activiteiten. Met name afwijkingen van de normen op het vlak van informatiebeveiliging komen zo snel aan het licht en kunnen dan ook snel worden beoordeeld en - indien nodig en mogelijk - opgelost.</p>
-<h3 id="maatregel-7-continuous-delivery-pipeline-m07-">Maatregel 7: Continuous delivery pipeline (M07)</h3>
+<h3 id="maatregel-7-continuous-delivery-pipeline">Maatregel 7: Continuous delivery pipeline</h3>
 <p>Er is een geautomatiseerde continuous delivery pipeline die aantoonbaar correct werkt en ten minste de volgende activiteiten uitvoert:</p>
 <ul>
 <li>bouw van de software,</li>
@@ -294,13 +294,13 @@
 <p>De projectenorganisatie voorziet in mensen en hulpmiddelen, zodat projecten deze pipeline kunnen toepassen. Projecten zijn verantwoordelijk voor de correcte werking van de pipeline.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Software incrementeel opleveren (zie M05 Iteratief en incrementeel ontwikkelproces) vereist dat de software frequent gebouwd, getest en opgeleverd kan worden. Om dit efficiënt en foutvrij te doen, dient het proces van bouwen, testen en opleveren geautomatiseerd te zijn; een continuous delivery pipeline faciliteert dit.</p>
-<h3 id="maatregel-8-technische-schuld-m08-">Maatregel 8: Technische schuld (M08)</h3>
+<h3 id="maatregel-8-technische-schuld">Maatregel 8: Technische schuld</h3>
 <p>Technische schuld is inzichtelijk en wordt planmatig aangepakt. De kwaliteitsmanager is verantwoordelijk voor het inzichtelijk maken van de technische schuld. De projectverantwoordelijke is verantwoordelijk voor het planmatig aanpakken van de technische schuld.</p>
 <h4 id="rationale">Rationale</h4>
 <p>De aanwezigheid van technische schuld heeft nadelige invloed op de kwaliteit van de eindproducten. Anderzijds is het ontstaan van technische schuld gedurende een project vaak onvermijdelijk. Het is daarnaast ook mogelijk dat een deel van de technische schuld bij aanvang van het project al bestond en mogelijk niet wordt opgelost. In alle gevallen is het verstandig om te weten welke technische schuld bestaat. Om te voorkomen dat technische schuld niet wordt opgelost en uitsluitend toeneemt, is het zaak om het verminderen van technische schuld planmatig aan te pakken.</p>
-<h3 id="maatregel-9-implementatie-kwaliteitsaanpak-m09-">Maatregel 9: Implementatie kwaliteitsaanpak (M09)</h3>
-<p>Projecten implementeren nieuwe versies van kwaliteitsaanpak en kwaliteitsnormen binnen de door de projectenorganisatie gestelde termijn (zie M12 Publicatie kwaliteitsaanpak en -normen voor het tot stand komen van de gestelde termijnen). De projectverantwoordelijke is verantwoordelijk voor de implementatie. </p>
-<p>De projectverantwoordelijke organiseert periodiek een zelf-assessment van het project tegen de kwaliteitsaanpak, identificeert de belangrijkste verschillen tussen kwaliteitsaanpak en werkwijze in het project en rapporteert hierover aan de projectenorganisatie. In overleg tussen projectverantwoordelijke en projectenorganisatie wordt besloten of het verschil tijdelijk of permanent wordt geaccepteerd. In het geval van tijdelijke acceptatie stelt de projectverantwoordelijke een verbeteractie op. Merk op dat de verbeteractie ook kan bestaan uit het opstellen van een verbetervoorstel voor de kwaliteitsaanpak. </p>
+<h3 id="maatregel-9-implementatie-kwaliteitsaanpak">Maatregel 9: Implementatie kwaliteitsaanpak</h3>
+<p>Projecten implementeren nieuwe versies van kwaliteitsaanpak en kwaliteitsnormen binnen de door de projectenorganisatie gestelde termijn (zie M12 Publicatie kwaliteitsaanpak en -normen voor het tot stand komen van de gestelde termijnen). De projectverantwoordelijke is verantwoordelijk voor de implementatie.</p>
+<p>De projectverantwoordelijke organiseert periodiek een zelf-assessment van het project tegen de kwaliteitsaanpak, identificeert de belangrijkste verschillen tussen kwaliteitsaanpak en werkwijze in het project en rapporteert hierover aan de projectenorganisatie. In overleg tussen projectverantwoordelijke en projectenorganisatie wordt besloten of het verschil tijdelijk of permanent wordt geaccepteerd. In het geval van tijdelijke acceptatie stelt de projectverantwoordelijke een verbeteractie op. Merk op dat de verbeteractie ook kan bestaan uit het opstellen van een verbetervoorstel voor de kwaliteitsaanpak.</p>
 <p>Voor de belangrijkste verschillen beschrijft de projectverantwoordelijke:</p>
 <ul>
 <li>Geconstateerde verschil</li>
@@ -312,10 +312,10 @@
 <p>De implementatie van een nieuwe versie van de kwaliteitsaanpak kost tijd. De introductie en aanpassing van normen en tools, kunnen verschillende consequenties hebben. Bestaande broncode blijkt niet meer volledig te voldoen aan de normen, een nieuwe tool moet in de ontwikkelstraat worden toegevoegd, enzovoort.</p>
 <p>Anderzijds is het voor de uniformiteit van kwaliteitsmeting en rapportage en de doorontwikkeling van de kwaliteitsaanpak van belang de implementatieperiode zo kort mogelijk en voorspelbaar te houden. Daarom stemt de projectenorganisatie met de projecten een implementatiemoment en implementatieperiode af.</p>
 <p>Omdat implementatie van maatregelen in een project tijd kost is de zelf-assessment gericht op het in kaart brengen van de belangrijkste verschillen tussen kwaliteitsaanpak en de in het project toegepaste werkwijze en niet op het uitputtend inventariseren van alle verschillen.</p>
-<h3 id="maatregel-10-periodiek-projectoverleg-m010-">Maatregel 10: Periodiek projectoverleg (M010)</h3>
+<h3 id="maatregel-10-periodiek-projectoverleg">Maatregel 10: Periodiek projectoverleg</h3>
 <p>De projectverantwoordelijke organiseert een periodiek projectoverleg. Dit overleg vindt wekelijks plaats en duurt niet langer dan een uur.</p>
-<p>Vereiste aanwezigen zijn de project-verantwoordelijke, een vertegenwoordiger uit het projectteam en een kwaliteits-manager. Andere aanwezigen kunnen zijn: opdrachtnemer, architecten en coaches.</p>
-<p>De agenda voor dit overleg bestaat tenminste uit de volgende onderwerpen: </p>
+<p>Vereiste aanwezigen zijn de project-verantwoordelijke, een vertegenwoordiger uit het projectteam en een kwaliteitsmanager. Andere aanwezigen kunnen zijn: opdrachtnemer, architecten en coaches.</p>
+<p>De agenda voor dit overleg bestaat tenminste uit de volgende onderwerpen:</p>
 <ul>
 <li>mededelingen - pro-actief informeren over voor het project relevante ontwikkelingen,</li>
 <li>actie- en besluitenlijst,</li>
@@ -326,12 +326,12 @@
 </ul>
 <h4 id="rationale">Rationale</h4>
 <p>Het doel van het periodiek projectoverleg is alle direct-betrokkenen, breder dan het realiserende team, op hetzelfde informatieniveau te brengen en te houden. Direct-betrokkenen zijn alle medewerkers die geen onderdeel uitmaken van het realiserende team, maar wel eindverantwoordelijk of uitvoerend verantwoordelijk zijn voor het projectsucces.</p>
-<h3 id="maatregel-m27-projecten-expliciet-afsluiten-m27-">Maatregel M27 - Projecten expliciet afsluiten (M27)</h3>
-<p>Na afronding van de realisatiefase worden projecten afgesloten. Alle documentatie, broncode, referentiedata en credentials die in de realisatiefase nodig waren of zijn opgeleverd, worden gearchiveerd en van werkstations van projectmedewerkers verwijderd. </p>
+<h3 id="maatregel-27-projecten-expliciet-afsluiten">Maatregel 27: Projecten expliciet afsluiten</h3>
+<p>Na afronding van de realisatiefase worden projecten afgesloten. Alle documentatie, broncode, referentiedata en credentials die in de realisatiefase nodig waren of zijn opgeleverd, worden gearchiveerd en van werkstations van projectmedewerkers verwijderd.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Archiveren faciliteert het eventueel herstarten of overdragen van het project op een later tijdstip. Verwijderen neemt een onnodig risico op inbreuk op vertrouwelijkheid weg en vrijwaart projectmedewerkers en de projectenorganisatie van verdenking en aansprakelijkheid wanneer een incident optreedt.</p>
-<h2 id="project-organisatie">Project Organisatie</h2>
-<h3 id="maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en-normen-m011-">Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen (M011)</h3>
+<h2 id="projectorganisatie">Projectorganisatie</h2>
+<h3 id="maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en-normen">Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen</h3>
 <p>De projectenorganisatie onderhoudt en beheert de kwaliteitsaanpak en de kwaliteitsnormen. Aanpassingen volgen uit praktijkervaring, nieuwe inzichten en nieuwe mogelijkheden voor meting en analyse. Iedereen kan wijzigingsvoorstellen indienen bij de projectenorganisatie.</p>
 <p>Wijzigingsvoorstellen bevatten tenminste:</p>
 <ul>
@@ -348,8 +348,8 @@
 <h4 id="rationale">Rationale</h4>
 <p>Expliciet beheer en onderhoud van de kwaliteitsaanpak is nodig om lessen geleerd in projecten te kunnen verwerken, om nieuwe inzichten uit bijvoorbeeld wetenschappelijke literatuur te kunnen verwerken en om nieuwe technische mogelijkheden voor meting en analyse te verwerken. De kwaliteitsaanpak wordt door de projectenorganisatie - en niet door een project - onderhouden, zodat deze bij meerdere projecten kan worden toegepast.</p>
 <p>Wijzigingsvoorstellen moeten een sponsor hebben zodat het duidelijk is dat iemand zich hard maakt voor het realiseren van de wijziging.</p>
-<p>Wijzigingsvoorstellen bevatten een advies ter besluitvorming aan de projectenorganisatie. NB: het advies kan ook zijn de wijziging niet door te voeren. </p>
-<h3 id="maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en-normen-m024-">Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen (M024)</h3>
+<p>Wijzigingsvoorstellen bevatten een advies ter besluitvorming aan de projectenorganisatie. NB: het advies kan ook zijn de wijziging niet door te voeren.</p>
+<h3 id="maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en-normen">Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen</h3>
 <p>Bij elke wijziging aan de kwaliteitsaanpak en/of -normen stelt de projectenorganisatie vast of de wijziging leidt tot een wijziging in de werkwijze van de projecten. Als dit het geval is wijst de projectenorganisatie een sponsor van de wijziging aan die een implementatieplan voor de wijziging maakt en uitvoert. Het implementatieplan bevat ten minste:</p>
 <ul>
 <li>het doel van de wijziging,</li>
@@ -364,26 +364,26 @@
 <li>de manier waarop bepaald zal worden of het doel van de wijziging is gerealiseerd (validatie van de wijziging).</li>
 </ul>
 <h4 id="rationale">Rationale</h4>
-<p>Wijzigingen aan de kwaliteitsaanpak en -normen hebben tot doel de organisatie in staat te stellen betere kwaliteit te leveren en/of op een efficiëntere manier te werken. Door wijzigingen te implementeren aan de hand van een implementatieplan met genoemde onderdelen dwingt de organisatie zich de implementatie doordacht uit te voeren én om de implementatie te verifiëren en te valideren. </p>
-<h3 id="maatregel-12-publicatie-kwaliteitsaanpak-en-normen-m012-">Maatregel 12: Publicatie kwaliteitsaanpak en -normen (M012)</h3>
+<p>Wijzigingen aan de kwaliteitsaanpak en -normen hebben tot doel de organisatie in staat te stellen betere kwaliteit te leveren en/of op een efficiëntere manier te werken. Door wijzigingen te implementeren aan de hand van een implementatieplan met genoemde onderdelen dwingt de organisatie zich de implementatie doordacht uit te voeren én om de implementatie te verifiëren en te valideren.</p>
+<h3 id="maatregel-12-publicatie-kwaliteitsaanpak-en-normen">Maatregel 12: Publicatie kwaliteitsaanpak en -normen</h3>
 <p>De projectenorganisatie publiceert periodiek, op een vaste, bekende locatie, een nieuwe versie van de kwaliteitsaanpak en/of de kwaliteitsnormen.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Medewerkers moeten te allen tijde de actuele kwaliteitsaanpak en -normen kunnen raadplegen. Welke versie actueel is en wanneer een nieuwe versie actueel wordt, is essentiële informatie voor de planning van werkzaamheden binnen de projecten en binnen de afdeling als geheel.</p>
-<h3 id="maatregel-13-gebruik-van-iso-25010-m013-">Maatregel 13: Gebruik van ISO-25010 (M013)</h3>
+<h3 id="maatregel-13-gebruik-van-iso-25010">Maatregel 13: Gebruik van ISO-25010</h3>
 <p>De standaard ISO/IEC 25010:2011, kortweg &quot;ISO-25010&quot;, biedt een model voor het beschrijven van productkwaliteit. Kwaliteitseigenschappen zijn voorzien van een naam, definitie en classificatie. ISO-25010 dekt een breed spectrum van kwaliteitseigenschappen af.</p>
 <p>Voor specificatie en documentatie van vereiste en gewenste kwaliteitseigenschappen, de niet-functionele eisen, maken projecten gebruik van de terminologie uit ISO-25010. Projecten gebruiken ISO-25010 om te controleren of alle relevante kwaliteitseigenschappen van het op te leveren eindproduct worden meegenomen in de ontwikkeling en/of onderhoud van het product.</p>
 <h4 id="rationale">Rationale</h4>
 <p>De standaard ISO-25010 biedt een model voor productkwaliteit. De standaard biedt geen concrete maatregelen, maar biedt wel een begrippenkader en dekt het volledige spectrum van mogelijk relevante kwaliteitseigenschappen af. Het gebruiken van een standaard voor specificatie van kwaliteit voorkomt miscommunicatie over kwaliteitseigenschappen en de breedte van de standaard zorgt ervoor dat alle relevante aspecten aan bod komen.</p>
-<h3 id="maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m014-">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase (M014)</h3>
-<p>Projecten hebben een voorbereidingsfase, voorafgaand aan de realisatiefase. Voor het uitvoeren van de voorbereidingsfase zijn vertegenwoordigers van de opdrachtgever en beoogde beheerpartij beschikbaar - dezelfde als betrokken zullen zijn in de realisatiefase - die meewerken aan het realiseren van een deel van de op te leveren producten (zie M01 Op te leveren producten). Tijdens de realisatiefase vindt de bouw en het onderhoud van de software plaats.</p>
+<h3 id="maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</h3>
+<p>Projecten hebben een voorbereidingsfase, voorafgaand aan de realisatiefase. Voor het uitvoeren van de voorbereidingsfase zijn vertegenwoordigers van de opdrachtgever en beoogde beheerpartij beschikbaar - dezelfde als betrokken zullen zijn in de realisatiefase - die meewerken aan het realiseren van een deel van de op te leveren producten (zie <a href="#maatregel-1-op-te-leveren-producten">Maatregel 1: Op te leveren producten</a>). Tijdens de realisatiefase vindt de bouw en het onderhoud van de software plaats.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Het doel van de voorbereidingsfase is ten eerste om uitgangspunten, risico&#39;s en randvoorwaarden voor verdere projectuitvoering te bepalen en ten tweede om te zorgen dat aan de randvoorwaarden wordt voldaan en voor zoveel mogelijk project-specifieke risico&#39;s maatregelen genomen zijn. Het doel van de realisatiefase is het daadwerkelijk bouwen en onderhouden van de software. Een expliciete splitsing zorgt ervoor dat projecten doordacht van start gaan.</p>
-<p>Al tijdens de voorfase moeten keuzes gemaakt worden die invloed hebben op de beveiligingsmaatregelen. Aanwezigheid van een voldoende gemandateerde vertegenwoordiger van de opdrachtgever zorgt dat deze keuzes gemaakt en bekrachtigd kunnen worden. De keuzes komen onder meer tot uitdrukking in de ontwerp- en architectuurdocumentatie, zie M01 Op te leveren producten. De infrastructuur gerelateerde documentatie wordt opgesteld door de beoogd beheerder en dekt een deel van de totale beveiligingsmaatregelen af. Aanwezigheid van de beoogd beheerder in de voorfase zorgt dat dekking van dit deel van de beveiligingsmaatregelen geborgd blijft gedurende de realisatie en exploitatie.</p>
-<h3 id="maatregel-15-open-source-tools-m015-">Maatregel 15: Open source tools (M015)</h3>
+<p>Al tijdens de voorfase moeten keuzes gemaakt worden die invloed hebben op de beveiligingsmaatregelen. Aanwezigheid van een voldoende gemandateerde vertegenwoordiger van de opdrachtgever zorgt dat deze keuzes gemaakt en bekrachtigd kunnen worden. De keuzes komen onder meer tot uitdrukking in de ontwerp- en architectuurdocumentatie, zie <a href="#maatregel-1-op-te-leveren-producten">Maatregel 1: Op te leveren producten</a>. De infrastructuur gerelateerde documentatie wordt opgesteld door de beoogd beheerder en dekt een deel van de totale beveiligingsmaatregelen af. Aanwezigheid van de beoogd beheerder in de voorfase zorgt dat dekking van dit deel van de beveiligingsmaatregelen geborgd blijft gedurende de realisatie en exploitatie.</p>
+<h3 id="maatregel-15-open-source-tools">Maatregel 15: Open source tools</h3>
 <p>Bij de selectie van tools ter ondersteuning van de projectuitvoering  geeft de projectenorganisatie voorkeur aan open source tools.</p>
 <h4 id="rationale">Rationale</h4>
-<p>Conform de NORA rationale voor het gebruik van open source tools zoals beschreven in NORA v3.0 drijfveer “beleid open standaarden” (<a href="http://www.noraonline.nl/wiki/Beleid_open_standaarden)">http://www.noraonline.nl/wiki/Beleid_open_standaarden)</a>.</p>
-<h3 id="maatregel-16-verplichte-tools-m016-">Maatregel 16: Verplichte tools (M016)</h3>
+<p>Conform de NORA rationale voor het gebruik van open source tools zoals beschreven in NORA v3.0 drijfveer “beleid open standaarden” (<a href="http://www.noraonline.nl/wiki/Beleid_open_standaarden">http://www.noraonline.nl/wiki/Beleid_open_standaarden</a>).</p>
+<h3 id="maatregel-16-verplichte-tools">Maatregel 16: Verplichte tools</h3>
 <p>De projectenorganisatie stelt het gebruik van de volgende tools voor alle projecten verplicht:</p>
 <ol>
 <li>Een tool dat agile werken ondersteunt. Een dergelijk tool voorziet in het opvoeren van eisen, het opvoeren van logische testgevallen en het koppelen van logische testgevallen aan eisen, het bijhouden van een werkvoorraad, het plannen van iteraties en het toewijzen van eisen aan iteraties.</li>
@@ -397,8 +397,8 @@
 <li>Een tool dat de broncode geautomatiseerd beoordeelt op het voorkomen van bekende kwetsbare constructies.</li>
 </ol>
 <h4 id="rationale">Rationale</h4>
-<p>Projecten hebben een redelijke vrijheid bij het kiezen van tools, maar het gebruik van een aantal is verplicht gesteld. Deze tools zijn nodig voor een efficiënte uitvoering van deze kwaliteitsaanpak. Uniform gebruik van deze tools maakt het mogelijk koppeling tussen die tools voor alle projecten te standaardiseren. Daarnaast bevordert het de uitwisselbaarheid van medewerkers en neemt het risico op het gebruik van onvolwassen tools af. </p>
-<h3 id="maatregel-17-snel-beschikbare-tools-m017-">Maatregel 17: Snel beschikbare tools (M017)</h3>
+<p>Projecten hebben een redelijke vrijheid bij het kiezen van tools, maar het gebruik van een aantal is verplicht gesteld. Deze tools zijn nodig voor een efficiënte uitvoering van deze kwaliteitsaanpak. Uniform gebruik van deze tools maakt het mogelijk koppeling tussen die tools voor alle projecten te standaardiseren. Daarnaast bevordert het de uitwisselbaarheid van medewerkers en neemt het risico op het gebruik van onvolwassen tools af.</p>
+<h3 id="maatregel-17-snel-beschikbare-tools">Maatregel 17: Snel beschikbare tools</h3>
 <p>De projectenorganisatie zorgt dat bij start en uitvoering een aantal tools snel beschikbaar is. Hieronder vallen alle verplichte tools, aangevuld met de volgende tools:</p>
 <ol>
 <li>Een tool voor het snel beschikbaar stellen en installeren van tools.</li>
@@ -406,25 +406,25 @@
 <li>Een tool voor ondersteuning van actie- en besluitenlijsten en risicologs.</li>
 </ol>
 <h4 id="rationale">Rationale</h4>
-<p>Snelle beschikbaarheid van tools betekent dat projecten snel kunnen beginnen. De niet-verplichte tools geven daarnaast de voorkeur van de projectenorganisatie weer. </p>
-<h3 id="maatregel-18-ondersteuning-verplichte-tools-m018-">Maatregel 18: Ondersteuning verplichte tools (M018)</h3>
+<p>Snelle beschikbaarheid van tools betekent dat projecten snel kunnen beginnen. De niet-verplichte tools geven daarnaast de voorkeur van de projectenorganisatie weer.</p>
+<h3 id="maatregel-18-ondersteuning-verplichte-tools">Maatregel 18: Ondersteuning verplichte tools</h3>
 <p>De projectenorganisatie zorgt voor technische en functionele ondersteuning aan projecten bij het gebruik van alle verplichte tools.</p>
 <h4 id="rationale">Rationale</h4>
-<p>De keuze om het gebruik van een aantal tools verplicht te stellen (M16 Verplichte tools) volgt uit de belangrijke rol die die tools spelen in de ontwikkelstraat en in het kwaliteitssysteem. Met de verplichting komt ook een verantwoordelijkheid: om projecten in staat te stellen snel en effectief met deze tools te werken, moeten die projecten ondersteund worden. Uiteraard staat het de projectenorganisatie vrij ook niet-verplichte tools te ondersteunen.</p>
+<p>De keuze om het gebruik van een aantal tools verplicht te stellen (<a href="#maatregel-16-verplichte-tools">Maatregel 16: Verplichte tools</a>) volgt uit de belangrijke rol die die tools spelen in de ontwikkelstraat en in het kwaliteitssysteem. Met de verplichting komt ook een verantwoordelijkheid: om projecten in staat te stellen snel en effectief met deze tools te werken, moeten die projecten ondersteund worden. Uiteraard staat het de projectenorganisatie vrij ook niet-verplichte tools te ondersteunen.</p>
 <p>De verplicht gestelde tools zijn beperkt in aantal, bewezen en gangbaar; veel medewerkers zullen deze tools al kennen.</p>
-<h3 id="maatregel-19-digitale-werkomgeving-m019-">Maatregel 19: Digitale werkomgeving (M019)</h3>
-<p>De projectenorganisatie geeft de projecten de beschikking over eigen, afgeschermde digitale werkomgevingen, waarbinnen ze de door het project ontwikkelde software en tools kunnen installeren. </p>
+<h3 id="maatregel-19-digitale-werkomgeving">Maatregel 19: Digitale werkomgeving</h3>
+<p>De projectenorganisatie geeft de projecten de beschikking over eigen, afgeschermde digitale werkomgevingen, waarbinnen ze de door het project ontwikkelde software en tools kunnen installeren.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Door het bieden van een afgeschermde digitale omgeving zijn de afhankelijkheden en invloeden tussen projecten minimaal en worden beveiligingsrisico&#39;s verkleind.</p>
-<h3 id="maatregel-21-kwaliteit-van-medewerkers-m021-">Maatregel 21: Kwaliteit van medewerkers (M021)</h3>
+<h3 id="maatregel-21-kwaliteit-van-medewerkers">Maatregel 21: Kwaliteit van medewerkers</h3>
 <p>Bij de inzet van medewerkers gaat kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd. Dit is een organisatiebrede verantwoordelijkheid.</p>
 <h4 id="rationale">Rationale</h4>
-<p>Goede kwaliteit van producten ontstaat primair door het werk van mensen; standaardisatie, kwaliteitsnormen en monitoring zijn hulpmiddelen. De kans dat kwalitatief goede medewerkers ook goede producten maken is groter dan bij minder goede medewerkers. </p>
-<h3 id="maatregel-22-betrokkenheid-bij-inzet-m022-">Maatregel 22: Betrokkenheid bij inzet (M022)</h3>
+<p>Goede kwaliteit van producten ontstaat primair door het werk van mensen; standaardisatie, kwaliteitsnormen en monitoring zijn hulpmiddelen. De kans dat kwalitatief goede medewerkers ook goede producten maken is groter dan bij minder goede medewerkers.</p>
+<h3 id="maatregel-22-betrokkenheid-bij-inzet">Maatregel 22: Betrokkenheid bij inzet</h3>
 <p>De projectverantwoordelijke betrekt de projectenorganisatie bij het inzetten van nieuwe medewerkers op de projecten.</p>
 <h4 id="rationale">Rationale</h4>
-<p>Medewerkers moeten zowel een goede match hebben met het project en de projectspecifieke behoeften aan kennis en vaardigheden als een goede match met de projectenorganisatie als geheel. Van medewerkers wordt namelijk verwacht dat ze zowel bijdragen aan de projectdoelstellingen als aan de projectoverstijgende doelen van de kwaliteitsaanpak. </p>
-<h3 id="maatregel-23-warme-kennisoverdracht-m023-">Maatregel 23: Warme kennisoverdracht (M023)</h3>
+<p>Medewerkers moeten zowel een goede match hebben met het project en de projectspecifieke behoeften aan kennis en vaardigheden als een goede match met de projectenorganisatie als geheel. Van medewerkers wordt namelijk verwacht dat ze zowel bijdragen aan de projectdoelstellingen als aan de projectoverstijgende doelen van de kwaliteitsaanpak.</p>
+<h3 id="maatregel-23-warme-kennisoverdracht">Maatregel 23: Warme kennisoverdracht</h3>
 <p>De projectverantwoordelijke zorgt ervoor dat bij nieuwe projecten wordt gestart met ten minste twee projectleden die bekend zijn met de kwaliteitsaanpak.</p>
 <h4 id="rationale">Rationale</h4>
 <p>Het inzetten van teamleden die bekend zijn met de kwaliteitsaanpak zorgt voor een soepeler start van een nieuw project omdat zij bekend zijn met de inhoud van de kwaliteitsaanpak, zoals kwaliteitsnormen en tools, en omdat zij al doende nieuwe teamleden bekend kunnen maken met de kwaliteitsaanpak.</p>
@@ -558,16 +558,16 @@
 </li>
 </ol>
 <h4 id="risico-s-en-maatregelen">Risico&#39;s en maatregelen</h4>
-<p>De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico&#39;s bij softwareontwikkel- projecten. Elk beschreven risico is geclassificeerd volgens de risicotaxonomie en is voorzien van de bijbehorende maatregelen uit de kwaliteitsaanpak.</p>
+<p>De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico&#39;s bij softwareontwikkelprojecten. Elk beschreven risico is geclassificeerd volgens de risicotaxonomie en is voorzien van de bijbehorende maatregelen uit de kwaliteitsaanpak.</p>
 <hr>
 <p><strong>Risico: De software is niet gebruiksgereed, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools).</strong></p>
 <p>Maatregelen:</p>
 <ul>
-<li>M05 Iteratief en incrementeel ontwikkelproces</li>
-<li>M07 Continuous delivery pipeline</li>
-<li>M10 Periodiek projectoverleg</li>
-<li>M14 Projecten splitsen in een voorbereidingsfase</li>
-<li>M15 Open source tools</li>
+<li><a href="#maatregel-5-iteratief-en-incrementeel-ontwikkelproces">Maatregel 5: Iteratief en incrementeel ontwikkelproces</a></li>
+<li><a href="#maatregel-7-continuous-delivery-pipeline">Maatregel 7: Continuous delivery pipeline</a></li>
+<li><a href="#maatregel-10-periodiek-projectoverleg">Maatregel 10: Periodiek projectoverleg</a></li>
+<li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</a></li>
+<li><a href="#maatregel-15-open-source-tools">Maatregel 15: Open source tools</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -577,14 +577,14 @@
 <p><strong>Risico: De software heeft niet alle gewenste functionaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools).</strong></p>
 <p>Maatregelen:</p>
 <ul>
-<li>M05 Iteratief en incrementeel ontwikkelproces - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.</li>
-<li>M04 Geautomatiseerde regressietests</li>
-<li>M07 Continuous delivery pipeline</li>
-<li>M10 Periodiek projectoverleg</li>
-<li>M14 Projecten splitsen in een voorbereidingsfase</li>
-<li>M17 Snel beschikbare tools</li>
-<li>M18 Ondersteuning verplichte tools</li>
-<li>M19 Digitale werkomgeving - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.</li>
+<li><a href="#maatregel-5-iteratief-en-incrementeel-ontwikkelproces">Maatregel 5: Iteratief en incrementeel ontwikkelproces</a> - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.</li>
+<li><a href="#maatregel-4-geautomatiseerde-regressietests">Maatregel 4: Geautomatiseerde regressietests</a></li>
+<li><a href="#maatregel-7-continuous-delivery-pipeline">Maatregel 7: Continuous delivery pipeline</a></li>
+<li><a href="#maatregel-10-periodiek-projectoverleg">Maatregel 10: Periodiek projectoverleg</a></li>
+<li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</a></li>
+<li><a href="#maatregel-17-snel-beschikbare-tools">Maatregel 17: Snel beschikbare tools</a></li>
+<li><a href="#maatregel-18-ondersteuning-verplichte-tools">Maatregel 18: Ondersteuning verplichte tools</a></li>
+<li><a href="#maatregel-19-digitale-werkomgeving">Maatregel 19: Digitale werkomgeving</a> - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.</li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -595,15 +595,15 @@
 <p><strong>Risico: De software heeft niet de gewenste kwaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools).</strong></p>
 <p>Maatregelen:</p>
 <ul>
-<li>M02 Continu voldoen aan kwaliteitsnormen</li>
-<li>M06 Frequente meting</li>
-<li>M07 Continuous delivery pipeline</li>
-<li>M08 Technische schuld</li>
-<li>M14 Projecten splitsen in een voorbereidingsfase</li>
-<li>M15 Open source tools</li>
-<li>M17 Snel beschikbare tools</li>
-<li>M18 Ondersteuning verplichte tools</li>
-<li>M21 Kwaliteit van medewerkers</li>
+<li><a href="#maatregel-2-continu-voldoen-aan-kwaliteitsnormen">Maatregel 2: Continu voldoen aan kwaliteitsnormen</a></li>
+<li><a href="#maatregel-6-frequente-meting">Maatregel 6: Frequente meting</a></li>
+<li><a href="#maatregel-7-continuous-delivery-pipeline">Maatregel 7: Continuous delivery pipeline</a></li>
+<li><a href="#maatregel-8-technische-schuld">Maatregel 8: Technische schuld</a></li>
+<li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</a></li>
+<li><a href="#maatregel-15-open-source-tools">Maatregel 15: Open source tools</a></li>
+<li><a href="#maatregel-17-snel-beschikbare-tools">Maatregel 17: Snel beschikbare tools</a></li>
+<li><a href="#maatregel-18-ondersteuning-verplichte-tools">Maatregel 18: Ondersteuning verplichte tools</a></li>
+<li><a href="#maatregel-21-kwaliteit-van-medewerkers">Maatregel 21: Kwaliteit van medewerkers</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -617,12 +617,12 @@
 <p><strong>Risico: De software voldoet niet aan de eisen en wensen van de opdrachtgever.</strong></p>
 <p>Maatregelen:</p>
 <ul>
-<li>M01 Op te leveren producten</li>
-<li>M03 Traceerbaar voldoen aan eisen</li>
-<li>M05 Iteratief en incrementeel ontwikkelproces</li>
-<li>M06 Frequente meting</li>
-<li>M08 Technische schuld</li>
-<li>M14 Projecten splitsen in een voorbereidingsfase</li>
+<li><a href="#maatregel-1-op-te-leveren-producten">Maatregel 1: Op te leveren producten</a></li>
+<li><a href="#maatregel-3-traceerbaar-voldoen-aan-eisen">Maatregel 3: Traceerbaar voldoen aan eisen</a></li>
+<li><a href="#maatregel-5-iteratief-en-incrementeel-ontwikkelproces">Maatregel 5: Iteratief en incrementeel ontwikkelproces</a></li>
+<li><a href="#maatregel-6-frequente-meting">Maatregel 6: Frequente meting</a></li>
+<li><a href="#maatregel-8-technische-schuld">Maatregel 8: Technische schuld</a></li>
+<li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -635,8 +635,8 @@
 <p><strong>Risico: Na oplevering blijkt de software niet te voldoen aan niet eerder expliciet gemaakte eisen en wensen.</strong></p>
 <p>Maatregelen:</p>
 <ul>
-<li>M10 Periodiek projectoverleg</li>
-<li>M13 Dekking ISO-25010</li>
+<li><a href="#maatregel-10-periodiek-projectoverleg">Maatregel 10: Periodiek projectoverleg</a></li>
+<li><a href="#maatregel-13-gebruik-van-iso-25010">Maatregel 13: Gebruik van ISO-25010</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -647,11 +647,11 @@
 <p><strong>Risico: De opdrachtgever of het project leggen te veel nadruk op de te realiseren functionaliteit, ten koste van niet-functionele eigenschappen van de software.</strong></p>
 <p>Maatregelen:</p>
 <ul>
-<li>M02 Continu voldoen aan kwaliteitsnormen</li>
-<li>M06 Frequente meting</li>
-<li>M08 Technische schuld</li>
-<li>M13 Dekking ISO-25010</li>
-<li>M14 Projecten splitsen in een voorbereidingsfase - De voorbereidingsfase heeft minder last van de &quot;dagelijkse druk&quot; die later tijdens het traject vaak ontstaat.</li>
+<li><a href="#maatregel-2-continu-voldoen-aan-kwaliteitsnormen">Maatregel 2: Continu voldoen aan kwaliteitsnormen</a></li>
+<li><a href="#maatregel-6-frequente-meting">Maatregel 6: Frequente meting</a></li>
+<li><a href="#maatregel-8-technische-schuld">Maatregel 8: Technische schuld</a></li>
+<li><a href="#maatregel-13-gebruik-van-iso-25010">Maatregel 13: Gebruik van ISO-25010</a></li>
+<li><a href="#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase">Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase</a> - De voorbereidingsfase heeft minder last van de &quot;dagelijkse druk&quot; die later tijdens het traject vaak ontstaat.</li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -662,13 +662,13 @@
 <p><strong>Risico: Opgeleverde software blijkt defecten te bevatten.</strong></p>
 <p>Maatregelen:</p>
 <ul>
-<li>M02 Continu voldoen aan kwaliteitsnormen</li>
-<li>M03 Traceerbaar voldoen aan eisen</li>
-<li>M04 Geautomatiseerde regressietests</li>
-<li>M06 Frequente meting</li>
-<li>M07 Continuous delivery pipeline</li>
-<li>M13 Dekking ISO-25010</li>
-<li>M21 Kwaliteit van medewerkers</li>
+<li><a href="#maatregel-2-continu-voldoen-aan-kwaliteitsnormen">Maatregel 2: Continu voldoen aan kwaliteitsnormen</a></li>
+<li><a href="#maatregel-3-traceerbaar-voldoen-aan-eisen">Maatregel 3: Traceerbaar voldoen aan eisen</a></li>
+<li><a href="#maatregel-4-geautomatiseerde-regressietests">Maatregel 4: Geautomatiseerde regressietests</a></li>
+<li><a href="#maatregel-6-frequente-meting">Maatregel 6: Frequente meting</a></li>
+<li><a href="#maatregel-7-continuous-delivery-pipeline">Maatregel 7: Continuous delivery pipeline</a></li>
+<li><a href="#maatregel-13-gebruik-van-iso-25010">Maatregel 13: Gebruik van ISO-25010</a></li>
+<li><a href="#maatregel-21-kwaliteit-van-medewerkers">Maatregel 21: Kwaliteit van medewerkers</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -681,8 +681,8 @@
 <p><strong>Risico: Er treden fouten op bij installatie van de software in de doelomgeving.</strong></p>
 <p>Maatregelen:</p>
 <ul>
-<li>M01 Op te leveren producten</li>
-<li>M07 Continuous delivery pipeline</li>
+<li><a href="#maatregel-1-op-te-leveren-producten">Maatregel 1: Op te leveren producten</a></li>
+<li><a href="#maatregel-7-continuous-delivery-pipeline">Maatregel 7: Continuous delivery pipeline</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>
@@ -694,7 +694,7 @@
 <p><strong>Risico: Bij overdracht naar een derde partij is niet alle relevante en benodigde documentatie beschikbaar.</strong></p>
 <p>Maatregelen:</p>
 <ul>
-<li>M01 Op te leveren producten</li>
+<li><a href="#maatregel-1-op-te-leveren-producten">Maatregel 1: Op te leveren producten</a></li>
 </ul>
 <p>Classificatie:</p>
 <ul>

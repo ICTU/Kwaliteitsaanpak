@@ -4,7 +4,7 @@
 
 # Kwaliteitsaanpak ICTU Software Realisatie
 
-Versie 1.1.68
+Versie 1.1.70
 
 
 ## Wijzigingsgeschiedenis
@@ -14,7 +14,7 @@ Versie 1.1.68
 - Versie 1.2, onder handen
   - M01: Niet alle producten hoeven door het project te worden gemaakt.
   - M02: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
-  - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat.
+  - M13: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat en verplaatsen naar hoofdstuk Producten.
   - M25: De inhoud is verplaatst naar M01, M25 zelf is vervallen.
   - M28: Maatregel met betrekking tot self-assessment toegevoegd.
 - Versie 1.1, 7 november 2017
@@ -38,6 +38,7 @@ Versie 1.1.68
 - [Leeswijzer](#leeswijzer)
 - [Producten](#producten)
   * [Maatregel 1: Op te leveren producten](#maatregel-1-op-te-leveren-producten)
+  * [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
   * [Maatregel 2: Continu voldoen aan kwaliteitsnormen](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen)
   * [Maatregel 3: Traceerbaar voldoen aan eisen](#maatregel-3-traceerbaar-voldoen-aan-eisen)
   * [Maatregel 4: Geautomatiseerde regressietests](#maatregel-4-geautomatiseerde-regressietests)
@@ -54,7 +55,6 @@ Versie 1.1.68
   * [Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen](#maatregel-11-beheer-en-onderhoud-kwaliteitsaanpak-en-normen)
   * [Maatregel 24: Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen](#maatregel-24-implementatie-van-wijzigingen-aan-de-kwaliteitsaanpak-en-normen)
   * [Maatregel 12: Publicatie kwaliteitsaanpak en -normen](#maatregel-12-publicatie-kwaliteitsaanpak-en-normen)
-  * [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
   * [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase)
   * [Maatregel 15: Open source tools](#maatregel-15-open-source-tools)
   * [Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)
@@ -206,6 +206,20 @@ ICTU hanteert de volgende documenten, templates en documentstandaarden voor soft
 Zie de bijlage [Documenten voor Maatregel 1: Op te leveren producten](#documenten-voor-maatregel-1-op-te-leveren-producten) voor een uitgebreider overzicht van de documenten en documentstandaarden die ICTU hanteert voor softwarerealisatieprojecten.
 
 Het genoemde onderzoek voert ICTU uit als onderdeel van een "due diligence". Een due diligence wordt uitgevoerd in samenwerking met een potentiële opdrachtgever en biedt, naast het genoemde onderzoek, ook de opdrachtgever de kans zich een oordeel te vormen over de werkwijze van ICTU en de verwachte samenwerking.
+
+
+### Maatregel 13: Gebruik van ISO-25010
+
+De standaard ISO/IEC 25010:2011, kortweg "ISO-25010", biedt een model voor het beschrijven van productkwaliteit. Kwaliteitseigenschappen zijn voorzien van een naam, definitie en classificatie. ISO-25010 dekt een breed spectrum van kwaliteitseigenschappen af.
+
+Voor specificatie en documentatie van vereiste en gewenste kwaliteitseigenschappen, de niet-functionele eisen, maken projecten gebruik van de terminologie uit ISO-25010. Projecten gebruiken ISO-25010 om te controleren of alle relevante kwaliteitseigenschappen van het op te leveren eindproduct worden meegenomen in de ontwikkeling en/of onderhoud van het product.
+
+#### Rationale
+
+De standaard ISO-25010 biedt een model voor productkwaliteit. De standaard biedt geen concrete maatregelen, maar biedt wel een begrippenkader en dekt het volledige spectrum van mogelijk relevante kwaliteitseigenschappen af. Het gebruiken van een standaard voor specificatie van kwaliteit voorkomt miscommunicatie over kwaliteitseigenschappen en de breedte van de standaard zorgt ervoor dat alle relevante aspecten aan bod komen.
+#### ICTU
+
+ICTU gebruikt ISO-25010 voor documentatie en specificatie van productkwaliteit.
 
 
 ### Maatregel 2: Continu voldoen aan kwaliteitsnormen
@@ -468,20 +482,6 @@ Medewerkers moeten te allen tijde de actuele kwaliteitsaanpak en -normen kunnen 
 De kwaliteitsaanpak is te vinden op de afdelingsbrede wiki. Publicatie van een nieuwe versie wordt aangekondigd via een e-mail naar belanghebbenden en, indien relevant, 'de ICTU Software Realisatie-zeepkist'.
 
 Bij ICTU zijn de kwaliteitsnormen (op dit moment) te vinden in elke kwaliteitsrapportage, in het 'helpmenu'.
-
-
-### Maatregel 13: Gebruik van ISO-25010
-
-De standaard ISO/IEC 25010:2011, kortweg "ISO-25010", biedt een model voor het beschrijven van productkwaliteit. Kwaliteitseigenschappen zijn voorzien van een naam, definitie en classificatie. ISO-25010 dekt een breed spectrum van kwaliteitseigenschappen af.
-
-Voor specificatie en documentatie van vereiste en gewenste kwaliteitseigenschappen, de niet-functionele eisen, maken projecten gebruik van de terminologie uit ISO-25010. Projecten gebruiken ISO-25010 om te controleren of alle relevante kwaliteitseigenschappen van het op te leveren eindproduct worden meegenomen in de ontwikkeling en/of onderhoud van het product.
-
-#### Rationale
-
-De standaard ISO-25010 biedt een model voor productkwaliteit. De standaard biedt geen concrete maatregelen, maar biedt wel een begrippenkader en dekt het volledige spectrum van mogelijk relevante kwaliteitseigenschappen af. Het gebruiken van een standaard voor specificatie van kwaliteit voorkomt miscommunicatie over kwaliteitseigenschappen en de breedte van de standaard zorgt ervoor dat alle relevante aspecten aan bod komen.
-#### ICTU
-
-ICTU gebruikt ISO-25010 voor documentatie en specificatie van productkwaliteit.
 
 
 ### Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase
@@ -959,7 +959,7 @@ De beschrijving van functionele eisen moet expliciet aandacht besteden aan de do
 
 Niet-functionele eisen (requirements) specificeren criteria om het functioneren van het systeem te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Deze niet-functionele requirements kunnen verder onderverdeeld worden in requirements betreffende performance, onderhoud, veiligheid, betrouwbaarheid, of menig ander aspect.
 
-ICTU gebruikt in ieder geval ISO 25010, het normenkader van de Baseline Informatiebeveiliging Rijksdienst (BIR:2012) en Secure Software Development van Centrum voor Informatiebeveiliging en Privacybescherming om de niet-functionele requirements te structureren en inventariseren. De niet-functionele eisen zijn geprioriteerd.
+ICTU gebruikt in ieder geval ISO 25010, het normenkader van de Baseline Informatiebeveiliging Rijksdienst (BIR:2017) en Secure Software Development van Centrum voor Informatiebeveiliging en Privacybescherming om de niet-functionele requirements te structureren en inventariseren. De niet-functionele eisen zijn geprioriteerd.
 
 De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties, aan logging en aan het gewenste gedrag van de te realiseren software bij uitval van infrastructurele diensten zoals een log server. Niet-functionele eisen op deze vlakken kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door deze eisen expliciet in de voorfase te benoemen wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.
 

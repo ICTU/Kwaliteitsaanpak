@@ -1,7 +1,7 @@
 #!/bin/bash
 npm i
 npm version patch --force --no-git-tag-version
-echo "Versie "$(./node_modules/.bin/extract-json package.json version) > ./Content/Versie.md
+echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
 function generate {
     mkdir -p Generated/$1

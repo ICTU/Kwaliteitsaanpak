@@ -1,11 +1,11 @@
 ![ICTU](./Content/Images/ICTU.png "ictu-logo")
 
-![wordcloud](./Content/Images/word-cloud.png "word-cloud")
-
 # Kwaliteitsaanpak ICTU Software Realisatie
 
-Versie 1.1.115
+Versie 1.1.125, 15-06-2018
 
+
+![wordcloud](./Content/Images/word-cloud.png "word-cloud")
 
 ## Wijzigingsgeschiedenis
 

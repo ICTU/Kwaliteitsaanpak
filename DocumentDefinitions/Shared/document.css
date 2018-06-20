@@ -36,6 +36,11 @@ h4 {
     font-weight: bold;
 }
 
+h5 {
+    font-size:12pt;
+    color: #B500C7;
+}
+
 tr {
     page-break-inside: avoid;
 }

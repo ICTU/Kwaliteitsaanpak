@@ -101,9 +101,7 @@ De taxonomie benoemt zelf geen risico's, maar is een middel om risico's te orden
 
 De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico's bij softwareontwikkelprojecten. Elk beschreven risico is geclassificeerd volgens de risicotaxonomie en is voorzien van de bijbehorende maatregelen uit de kwaliteitsaanpak.
 
----
-
-**Risico: De software is niet gebruiksgereed, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools).**
+##### Risico: De software is niet gebruiksgereed, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 
 Maatregelen:
 
@@ -117,9 +115,7 @@ Classificatie:
 
 - Projectvoorwaarden ➞ Middelen
 
----
-
-**Risico: De software heeft niet alle gewenste functionaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools).**
+##### Risico: De software heeft niet alle gewenste functionaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 
 Maatregelen:
 
@@ -137,9 +133,7 @@ Classificatie:
 - Productontwikkeling ➞ Requirements
 - Projectvoorwaarden ➞ Middelen
 
----
-
-**Risico: De software heeft niet de gewenste kwaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools).**
+##### Risico: De software heeft niet de gewenste kwaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 
 Maatregelen:
 
@@ -162,9 +156,7 @@ Classificatie:
 - Productontwikkeling ➞ Specialiteiten ➞ Betrouwbaarheid
 - Productontwikkeling ➞ Specialiteiten ➞ Beveiliging
 
----
-
-**Risico: De software voldoet niet aan de eisen en wensen van de opdrachtgever.**
+##### Risico: De software voldoet niet aan de eisen en wensen van de opdrachtgever
 
 Maatregelen:
 
@@ -183,9 +175,7 @@ Classificatie:
 - Productontwikkeling ➞ Requirements ➞ Validiteit
 - Productontwikkeling ➞ Requirements ➞ Haalbaarheid
 
----
-
-**Risico: Na oplevering blijkt de software niet te voldoen aan niet eerder expliciet gemaakte eisen en wensen.**
+##### Risico: Na oplevering blijkt de software niet te voldoen aan niet eerder expliciet gemaakte eisen en wensen
 
 Maatregelen:
 
@@ -198,9 +188,7 @@ Classificatie:
 - Productontwikkeling ➞ Requirements ➞ Volledigheid
 - Productontwikkeling ➞ Requirements ➞ Validiteit
 
----
-
-**Risico: De opdrachtgever of het project leggen te veel nadruk op de te realiseren functionaliteit, ten koste van niet-functionele eigenschappen van de software.**
+##### Risico: De opdrachtgever of het project leggen te veel nadruk op de te realiseren functionaliteit, ten koste van niet-functionele eigenschappen van de software
 
 Maatregelen:
 
@@ -216,9 +204,7 @@ Classificatie:
 - Ontwikkelomgeving ➞ Managementmethode ➞ Kwaliteitsborging
 - Ontwikkelomgeving ➞ Werkomgeving ➞ Attitude
 
----
-
-**Risico: Opgeleverde software blijkt defecten te bevatten.**
+##### Risico: Opgeleverde software blijkt defecten te bevatten
 
 Maatregelen:
 
@@ -238,9 +224,7 @@ Classificatie:
 - Productontwikkeling ➞ Engineering Specialiteiten ➞ Betrouwbaarheid
 - Ontwikkelomgeving ➞ Ontwikkelproces ➞ Productbeheersing
 
----
-
-**Risico: Er treden fouten op bij installatie van de software in de doelomgeving.**
+##### Risico: Er treden fouten op bij installatie van de software in de doelomgeving
 
 Maatregelen:
 
@@ -253,9 +237,7 @@ Classificatie:
 - Productontwikkeling ➞ Integratie en Test ➞ Productintegratie
 - Productontwikkeling ➞ Integratie en Test ➞ Systeemintegratie
 
----
-
-**Risico: Bij overdracht naar een derde partij is niet alle relevante en benodigde documentatie beschikbaar.**
+##### Risico: Bij overdracht naar een derde partij is niet alle relevante en benodigde documentatie beschikbaar
 
 Maatregelen:
 

@@ -2,9 +2,7 @@
 
 ICTU hanteert de onderstaande documenten en documentstandaarden in de voorbereidingsfase.
 
-#### Beschrijving van functionele eisen
-
-##### Geprioriteerde backlog
+#### Geprioriteerde backlog
 
 De product backlog is een overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:
 
@@ -16,9 +14,11 @@ Iedereen kan er dingen aan toevoegen, maar de product owner is en blijft verantw
 
 Zie [http://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog](http://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog).
 
+#### Beschrijving van functionele eisen
+
 De beschrijving van functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties en aan logging. Functionele eisen op deze vlakken kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door ook deze eisen expliciet in de voorfase te benoemen wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.
 
-##### Beschrijving van niet-functionele eisen
+#### Beschrijving van niet-functionele eisen
 
 Niet-functionele eisen (requirements) specificeren criteria om het functioneren van het systeem te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Deze niet-functionele requirements kunnen verder onderverdeeld worden in requirements betreffende performance, onderhoud, veiligheid, betrouwbaarheid, of menig ander aspect.
 
@@ -26,11 +26,11 @@ ICTU gebruikt in ieder geval ISO 25010, het normenkader van de Baseline Informat
 
 De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties, aan logging en aan het gewenste gedrag van de te realiseren software bij uitval van infrastructurele diensten zoals een log server. Niet-functionele eisen op deze vlakken kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door deze eisen expliciet in de voorfase te benoemen wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.
 
-##### Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)
+#### Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)
 
 De ontwerp- en architectuurdocumentatie bestaat uit een projectstartarchitectuur (PSA), een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) en een prototype en/of interactieontwerp.
 
-###### Projectstartarchitectuur (PSA) op basis van NORA
+##### Projectstartarchitectuur (PSA) op basis van NORA
 
 Een PSA (Project Start Architectuur) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening.
 
@@ -45,35 +45,35 @@ Een PSA bevat in ieder geval:
 
 Zie [http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)](http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)).
 
-###### Software architectuur document (SAD)
+##### Software architectuur document (SAD)
 
 Het Software Architectuur Document verschaft een compleet overzicht van en rationale voor de architectuur van het te bouwen systeem, waarbij diverse relevante views (zoals use-case, logisch, implementatie, deployment) diverse aspecten van het systeem belichten.
 
 Zie bijvoorbeeld: [http://www.win.tue.nl/~wstomv/edu/2ip30/refer ences/Kruchten-4+1-view.pdf](http://www.win.tue.nl/~wstomv/edu/2ip30/refer ences/Kruchten-4+1-view.pdf).
 
-###### Infrastructuurarchitectuur
+##### Infrastructuurarchitectuur
 
 De infrastructuurarchitectuur beschrijft de topologie van de implementatie-omgeving waaronder protocollen, beveiligingsniveaus en services. Deze architectuur biedt een logische afbeelding van eisen naar implementatie-omgeving en geeft onderbouwing voor gemaakte keuzes.
 
-###### Globaal functioneel ontwerp (GFO)
+##### Globaal functioneel ontwerp (GFO)
 
 Het globaal functioneel ontwerp heeft als belangrijkste onderdeel een use case model. Een use case model is een overkoepelend overzicht van de onderkende actoren en use cases, hun samenhang, gewicht en classificatie. Per onderkende use case is er een nauwkeurig geformuleerde maar beknopte beschrijving. Use cases worden gedurende het project nader gedetailleerd.
 
 Zie bijvoorbeeld: [https://www.ivarjacobson.com/sites/default/files/field_iji_file/article/use-case_2_0_jan11.pdf]( [https://www.ivarjacobson.com/sites/default/files/field_iji_file/article/use-case_2_0_jan11.pdf).
 
-###### Prototype
+##### Prototype
 
 Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illustreert waar men uiteindelijk met de toepassing naar toe wil. Het maakt ideëen tastbaar en creëert een eerste indruk van structuur, design en functionaliteit.
 
-##### Testdocumentatie: testplannen
+#### Testdocumentatie: testplannen
 
 De testplannen bestaan uit een master testplan, gemaakt op basis van een productrisicoanalyse (PRA), en detailtestplannen. Het doel van een mastertestplan (MTP) is om betrokkenen bij het testproces te informeren over de aanpak, de activiteiten, inclusief de onderlinge relaties en afhankelijkheden, en de op te leveren (eind)producten met betrekking tot het testtraject. Het mastertestplan beschrijft deze aanpak, activiteiten en (eind)producten welke in de verschillende andere (detail)testplannen verder dienen te worden gedetailleerd. Deze (detail)testplannen dienen te worden afgeleid van dit mastertestplan. ICTU gebruikt een generiek mastertestplan als basis voor projectspecifieke mastertestplannen.
 
-##### Testdocumentatie: testgevallen, rapportages
+#### Testdocumentatie: testgevallen, rapportages
 
 Logische testgevallen worden vastgelegd in Jira en gekoppeld met use cases en user stories. Fysieke testgevallen worden vastgelegd in het formaat van de gebruikte tooling (bijvoorbeeld TestX) en gekoppeld met de logische testgevallen. Op basis hiervan worden testrapportages gegenereerd die laten zien dat alle use cases en user stories zijn getest en dat die tests zijn geslaagd.
 
-###### Informatiebeveiligingsplan
+#### Informatiebeveiligingsplan
 
 Het IB-plan vormt een handzaam document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en hoe die bescherming vorm krijgt. Naast BIA, eventuele PIA en TVA krijgen ook de geselecteerde IB-maatregelen een plaats in dit document.
 
@@ -81,6 +81,6 @@ Het Voorschrift Informatiebeveiliging Rijksdienst (VIR) bevat een methode om te 
 
 Op basis van de resultaten van de TVA wordt voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een informatiebeveiligingsplan opgesteld.
 
-##### Kwaliteitsplan
+#### Kwaliteitsplan
 
 Het kwaliteitsplan beschrijft welke maatregelen de projectenorganisatie treft om de niet-functionele eisen te realiseren. ICTU gebruikt een generiek kwaliteitsplan als basis voor projectspecifieke kwaliteitsplannen.

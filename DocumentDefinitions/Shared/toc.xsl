@@ -26,7 +26,7 @@
         </style>
       </head>
       <body>
-        <h1>Inhoudsopgave</h1>
+        <h2>Inhoudsopgave</h2>
         <ul><xsl:apply-templates select="outline:item/outline:item"/></ul>
       </body>
     </html>

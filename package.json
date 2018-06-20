@@ -1,6 +1,6 @@
 {
   "name": "kwaliteitsaanpak",
-  "version": "1.1.125",
+  "version": "1.1.214",
   "description": "",
   "main": "index.js",
   "dependencies": {},
@@ -8,7 +8,6 @@
     "extract-json": "^0.2.0",
     "markdown-include": "^0.4.3",
     "markdown-to-html": "0.0.13",
-    "markdown-toc": "^1.2.0",
     "marked": "^0.3.9"
   },
   "scripts": {

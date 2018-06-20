@@ -1,4 +1,4 @@
 {
-	"build" : "ICTU-Kwaliteitsaanpak-Generic.md",
+	"build" : "Generated/Generic/document.md",
   "files" : ["DocumentDefinitions/Generic/document.md"]
 }

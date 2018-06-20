@@ -7,7 +7,7 @@ This repository contains the source information and automation scripts for gener
 ## Authoring guidelines
 
 - For each guideline
-  - create a folder under ./Content/Maatregelen/(Processen | Producten | ProjectOrganisatie)
+  - create a folder under ./Content/Maatregelen
   - Add 3 files to the folder
     - Titel.md - guideline title
     - Maatregel.md - guideline description and rationale

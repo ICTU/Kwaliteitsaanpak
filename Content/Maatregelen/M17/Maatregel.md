@@ -1,4 +1,4 @@
-### Maatregel 17: Snel beschikbare tools
+### Snel beschikbare tools (M17)
 
 De projectenorganisatie zorgt dat bij start en uitvoering een aantal tools snel beschikbaar is. Hieronder vallen alle verplichte tools, aangevuld met de volgende tools:
 

@@ -1,4 +1,4 @@
-### Maatregel 6: Frequent geautomatiseerd meten
+### Frequent geautomatiseerd meten (M06)
 
 Het voldoen aan de kwaliteitsnormen die geautomatiseerd gemeten kunnen worden, wordt frequent - minimaal één keer per dag - gemeten. De projectenorganisatie voorziet hierin (mensen en middelen).
 

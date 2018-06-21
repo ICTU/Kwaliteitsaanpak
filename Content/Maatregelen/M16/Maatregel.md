@@ -1,4 +1,4 @@
-### Maatregel 16: Verplichte tools
+### Verplichte tools (M16)
 
 De projectenorganisatie stelt het gebruik van de volgende tools voor alle projecten verplicht:
 

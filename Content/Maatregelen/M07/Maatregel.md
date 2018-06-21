@@ -1,4 +1,4 @@
-### Maatregel 7: Continuous delivery pipeline
+### Continuous delivery pipeline (M07)
 
 Er is een geautomatiseerde continuous delivery pipeline die aantoonbaar correct werkt en ten minste de volgende activiteiten uitvoert:
 
@@ -15,4 +15,4 @@ De projectenorganisatie voorziet in mensen en hulpmiddelen, zodat projecten deze
 
 #### Rationale
 
-Software incrementeel opleveren (zie [Maatregel 5: Iteratief en incrementeel ontwikkelproces](#maatregel-5-iteratief-en-incrementeel-ontwikkelproces)) vereist dat de software frequent gebouwd, getest en opgeleverd kan worden. Om dit efficiënt en foutvrij te doen, dient het proces van bouwen, testen en opleveren geautomatiseerd te zijn; een continuous delivery pipeline faciliteert dit.
+Software incrementeel opleveren (zie [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-)) vereist dat de software frequent gebouwd, getest en opgeleverd kan worden. Om dit efficiënt en foutvrij te doen, dient het proces van bouwen, testen en opleveren geautomatiseerd te zijn; een continuous delivery pipeline faciliteert dit.

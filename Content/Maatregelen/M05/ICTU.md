@@ -8,4 +8,4 @@ ICTU gebruikt hiervoor Scrum, een raamwerk voor productontwikkeling. ICTU propag
 - Definition of Ready,
 - Product backlog.
 
-Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn ([Maatregel 1: Op te leveren producten](#maatregel-1-op-te-leveren-producten)) en voldoen aan de door de projectenorganisatie vastgestelde kwaliteitsnormen ([Maatregel 2: Continu voldoen aan kwaliteitsnormen](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen)).
+Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn ([M01: Op te leveren producten](#op-te-leveren-producten-m01-)) en voldoen aan de door de projectenorganisatie vastgestelde kwaliteitsnormen ([M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)).

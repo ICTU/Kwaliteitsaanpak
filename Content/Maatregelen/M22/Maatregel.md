@@ -1,4 +1,4 @@
-### Maatregel 22: Betrokkenheid bij inzet
+### Betrokkenheid bij inzet (M22)
 
 De projectverantwoordelijke betrekt de projectenorganisatie bij het inzetten van nieuwe medewerkers op de projecten.
 

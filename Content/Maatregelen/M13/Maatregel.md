@@ -1,4 +1,4 @@
-### Maatregel 13: Gebruik van ISO-25010
+### Gebruik van ISO-25010 (M13)
 
 De standaard ISO/IEC 25010:2011, kortweg "ISO-25010", biedt een model voor het beschrijven van productkwaliteit. Kwaliteitseigenschappen zijn voorzien van een naam, definitie en classificatie. ISO-25010 dekt een breed spectrum van kwaliteitseigenschappen af.
 

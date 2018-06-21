@@ -1,6 +1,6 @@
-### Maatregel 5: Iteratief en incrementeel ontwikkelproces
+### Iteratief en incrementeel ontwikkelproces (M05)
 
-Projecten werken iteratief en incrementeel; dit betekent dat een project in korte iteraties werkt, waarbij elke iteratie een werkende versie van de software wordt opgeleverd die extra waarde oplevert voor de opdrachtgever. Behalve de software levert het project iedere iteratie telkens ook alle andere producten (Zie [Maatregel 16: Verplichte tools](#maatregel-16-verplichte-tools)) bijgewerkt op. Elke iteratie worden verwachtingen en werkelijke resultaten vergeleken en de werkwijze aangescherpt op basis van inzichten en bevindingen. Dit leidt tot een zich continu verbeterend proces.
+Projecten werken iteratief en incrementeel; dit betekent dat een project in korte iteraties werkt, waarbij elke iteratie een werkende versie van de software wordt opgeleverd die extra waarde oplevert voor de opdrachtgever. Behalve de software levert het project iedere iteratie telkens ook alle andere producten (Zie [M16: Verplichte tools](#verplichte-tools-m16-)) bijgewerkt op. Elke iteratie worden verwachtingen en werkelijke resultaten vergeleken en de werkwijze aangescherpt op basis van inzichten en bevindingen. Dit leidt tot een zich continu verbeterend proces.
 
 #### Rationale
 

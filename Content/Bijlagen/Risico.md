@@ -105,11 +105,11 @@ De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico's bij so
 
 Maatregelen:
 
-- [Maatregel 5: Iteratief en incrementeel ontwikkelproces](#maatregel-5-iteratief-en-incrementeel-ontwikkelproces)
-- [Maatregel 7: Continuous delivery pipeline](#maatregel-7-continuous-delivery-pipeline)
-- [Maatregel 10: Periodiek projectoverleg](#maatregel-10-periodiek-projectoverleg)
-- [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase)
-- [Maatregel 15: Open source tools](#maatregel-15-open-source-tools)
+- [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-)
+- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
+- [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
+- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-)
+- [M15: Open source tools](#open-source-tools-m15-)
 
 Classificatie:
 
@@ -119,14 +119,14 @@ Classificatie:
 
 Maatregelen:
 
-- [Maatregel 5: Iteratief en incrementeel ontwikkelproces](#maatregel-5-iteratief-en-incrementeel-ontwikkelproces) - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.
-- [Maatregel 4: Geautomatiseerde regressietests](#maatregel-4-geautomatiseerde-regressietests)
-- [Maatregel 7: Continuous delivery pipeline](#maatregel-7-continuous-delivery-pipeline)
-- [Maatregel 10: Periodiek projectoverleg](#maatregel-10-periodiek-projectoverleg)
-- [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase)
-- [Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)
-- [Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools)
-- [Maatregel 19: Afgeschermde digitale omgeving](#maatregel-19-afgeschermde-digitale-omgeving) - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
+- [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-) - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.
+- [M04: Geautomatiseerde regressietests](#geautomatiseerde-regressietests-m04-)
+- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
+- [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
+- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-)
+- [M17: Snel beschikbare tools](#snel-beschikbare-tools-m17-)
+- [M18: Ondersteuning verplichte tools](#ondersteuning-verplichte-tools-m18-)
+- [M19: Afgeschermde digitale omgeving](#afgeschermde-digitale-omgeving-m19-) - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
 
 Classificatie:
 
@@ -137,16 +137,16 @@ Classificatie:
 
 Maatregelen:
 
-- [Maatregel 2: Continu voldoen aan kwaliteitsnormen](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen)
-- [Maatregel 6: Frequente meting](#maatregel-6-frequente-meting)
-- [Maatregel 7: Continuous delivery pipeline](#maatregel-7-continuous-delivery-pipeline)
-- [Maatregel 8: Technische schuld](#maatregel-8-technische-schuld)
-- [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase)
-- [Maatregel 15: Open source tools](#maatregel-15-open-source-tools)
-- [Maatregel 17: Snel beschikbare tools](#maatregel-17-snel-beschikbare-tools)
-- [Maatregel 18: Ondersteuning verplichte tools](#maatregel-18-ondersteuning-verplichte-tools)
-- [Maatregel 21: Kwaliteit van medewerkers](#maatregel-21-kwaliteit-van-medewerkers)
-- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
+- [M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)
+- [M06: Frequente meting](#frequente-meting-m06-)
+- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
+- [M08: Technische schuld](#technische-schuld-m08-)
+- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-)
+- [M15: Open source tools](#open-source-tools-m15-)
+- [M17: Snel beschikbare tools](#snel-beschikbare-tools-m17-)
+- [M18: Ondersteuning verplichte tools](#ondersteuning-verplichte-tools-m18-)
+- [M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)
+- [M28: Self-assessment](#self-assessment-m28-)
 
 Classificatie:
 
@@ -160,13 +160,13 @@ Classificatie:
 
 Maatregelen:
 
-- [Maatregel 1: Op te leveren producten](#maatregel-1-op-te-leveren-producten)
-- [Maatregel 3: Traceerbaar voldoen aan eisen](#maatregel-3-traceerbaar-voldoen-aan-eisen)
-- [Maatregel 5: Iteratief en incrementeel ontwikkelproces](#maatregel-5-iteratief-en-incrementeel-ontwikkelproces)
-- [Maatregel 6: Frequente meting](#maatregel-6-frequente-meting)
-- [Maatregel 8: Technische schuld](#maatregel-8-technische-schuld)
-- [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase)
-- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
+- [M01: Op te leveren producten](#op-te-leveren-producten-m01-)
+- [M03: Traceerbaar voldoen aan eisen](#traceerbaar-voldoen-aan-eisen-m03-)
+- [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-)
+- [M06: Frequente meting](#frequente-meting-m06-)
+- [M08: Technische schuld](#technische-schuld-m08-)
+- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-)
+- [M28: Self-assessment](#self-assessment-m28-)
 
 Classificatie:
 
@@ -179,9 +179,9 @@ Classificatie:
 
 Maatregelen:
 
-- [Maatregel 10: Periodiek projectoverleg](#maatregel-10-periodiek-projectoverleg)
-- [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
-- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
+- [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
+- [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
+- [M28: Self-assessment](#self-assessment-m28-)
 
 Classificatie:
 
@@ -192,12 +192,12 @@ Classificatie:
 
 Maatregelen:
 
-- [Maatregel 2: Continu voldoen aan kwaliteitsnormen](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen)
-- [Maatregel 6: Frequente meting](#maatregel-6-frequente-meting)
-- [Maatregel 8: Technische schuld](#maatregel-8-technische-schuld)
-- [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
-- [Maatregel 14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#maatregel-14-projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase) - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
-- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
+- [M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)
+- [M06: Frequente meting](#frequente-meting-m06-)
+- [M08: Technische schuld](#technische-schuld-m08-)
+- [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
+- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-) - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
+- [M28: Self-assessment](#self-assessment-m28-)
 
 Classificatie:
 
@@ -208,14 +208,14 @@ Classificatie:
 
 Maatregelen:
 
-- [Maatregel 2: Continu voldoen aan kwaliteitsnormen](#maatregel-2-continu-voldoen-aan-kwaliteitsnormen)
-- [Maatregel 3: Traceerbaar voldoen aan eisen](#maatregel-3-traceerbaar-voldoen-aan-eisen)
-- [Maatregel 4: Geautomatiseerde regressietests](#maatregel-4-geautomatiseerde-regressietests)
-- [Maatregel 6: Frequente meting](#maatregel-6-frequente-meting)
-- [Maatregel 7: Continuous delivery pipeline](#maatregel-7-continuous-delivery-pipeline)
-- [Maatregel 13: Gebruik van ISO-25010](#maatregel-13-gebruik-van-iso-25010)
-- [Maatregel 21: Kwaliteit van medewerkers](#maatregel-21-kwaliteit-van-medewerkers)
-- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
+- [M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)
+- [M03: Traceerbaar voldoen aan eisen](#traceerbaar-voldoen-aan-eisen-m03-)
+- [M04: Geautomatiseerde regressietests](#geautomatiseerde-regressietests-m04-)
+- [M06: Frequente meting](#frequente-meting-m06-)
+- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
+- [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
+- [M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)
+- [M28: Self-assessment](#self-assessment-m28-)
 
 Classificatie:
 
@@ -228,8 +228,8 @@ Classificatie:
 
 Maatregelen:
 
-- [Maatregel 1: Op te leveren producten](#maatregel-1-op-te-leveren-producten)
-- [Maatregel 7: Continuous delivery pipeline](#maatregel-7-continuous-delivery-pipeline)
+- [M01: Op te leveren producten](#op-te-leveren-producten-m01-)
+- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
 
 Classificatie:
 
@@ -241,8 +241,8 @@ Classificatie:
 
 Maatregelen:
 
-- [Maatregel 1: Op te leveren producten](#maatregel-1-op-te-leveren-producten)
-- [Maatregel 28: Self-assessment](#maatregel-28-self-assessment)
+- [M01: Op te leveren producten](#op-te-leveren-producten-m01-)
+- [M28: Self-assessment](#self-assessment-m28-)
 
 Classificatie:
 

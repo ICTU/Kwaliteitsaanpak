@@ -1,4 +1,4 @@
-### Maatregel 8: Technische schuld
+### Technische schuld (M08)
 
 Technische schuld is inzichtelijk en wordt planmatig aangepakt. De kwaliteitsmanager is verantwoordelijk voor het inzichtelijk maken van de technische schuld. De projectverantwoordelijke is verantwoordelijk voor het planmatig aanpakken van de technische schuld.
 

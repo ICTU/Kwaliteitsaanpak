@@ -1,4 +1,4 @@
-### Maatregel 10: Periodiek projectoverleg
+### Periodiek projectoverleg (M10)
 
 De projectverantwoordelijke organiseert een periodiek projectoverleg. Dit overleg vindt wekelijks plaats en duurt niet langer dan een uur.
 

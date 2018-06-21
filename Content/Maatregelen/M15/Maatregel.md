@@ -1,4 +1,4 @@
-### Maatregel 15: Open source tools
+### Open source tools (M15)
 
 Bij de selectie van tools ter ondersteuning van de projectuitvoering  geeft de projectenorganisatie voorkeur aan open source tools.
 

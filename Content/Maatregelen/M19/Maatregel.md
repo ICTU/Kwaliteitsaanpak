@@ -1,4 +1,4 @@
-### Maatregel 19: Afgeschermde digitale omgeving
+### Afgeschermde digitale omgeving (M19)
 
 De projectenorganisatie geeft de projecten de beschikking over eigen, afgeschermde digitale omgevingen, waarbinnen ze de door het project ontwikkelde software en tools kunnen installeren.
 

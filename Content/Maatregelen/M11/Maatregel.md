@@ -1,4 +1,4 @@
-### Maatregel 11: Beheer en onderhoud kwaliteitsaanpak en -normen
+### Beheer en onderhoud kwaliteitsaanpak en -normen (M11)
 
 De projectenorganisatie onderhoudt en beheert de kwaliteitsaanpak en de kwaliteitsnormen. Aanpassingen volgen uit praktijkervaring, nieuwe inzichten en nieuwe mogelijkheden voor meting en analyse. Iedereen kan wijzigingsvoorstellen indienen bij de projectenorganisatie.
 

@@ -1,4 +1,4 @@
-### Maatregel 27: Projecten expliciet afsluiten
+### Projecten expliciet afsluiten (M27)
 
 Na afronding van de realisatiefase worden projecten afgesloten. Alle documentatie, broncode, referentiedata en credentials die in de realisatiefase nodig waren of zijn opgeleverd, worden gearchiveerd en van werkstations van projectmedewerkers verwijderd.
 

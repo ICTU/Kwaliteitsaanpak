@@ -1,4 +1,4 @@
-### Maatregel 12: Publicatie kwaliteitsaanpak en -normen
+### Publicatie kwaliteitsaanpak en -normen (M12)
 
 De projectenorganisatie publiceert periodiek, op een vaste, bekende locatie, een nieuwe versie van de kwaliteitsaanpak en/of de kwaliteitsnormen.
 

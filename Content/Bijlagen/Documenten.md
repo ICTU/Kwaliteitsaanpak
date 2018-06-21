@@ -49,7 +49,7 @@ Zie [http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)](http://www.n
 
 Het Software Architectuur Document verschaft een compleet overzicht van en rationale voor de architectuur van het te bouwen systeem, waarbij diverse relevante views (zoals use-case, logisch, implementatie, deployment) diverse aspecten van het systeem belichten.
 
-Zie bijvoorbeeld: [http://www.win.tue.nl/~wstomv/edu/2ip30/refer ences/Kruchten-4+1-view.pdf](http://www.win.tue.nl/~wstomv/edu/2ip30/refer ences/Kruchten-4+1-view.pdf).
+Zie bijvoorbeeld: [http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf](http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf).
 
 ##### Infrastructuurarchitectuur
 

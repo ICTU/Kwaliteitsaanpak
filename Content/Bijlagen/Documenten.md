@@ -1,4 +1,4 @@
-### Documenten voor Maatregel 1: Op te leveren producten
+### Documenten voor M01: Op te leveren producten
 
 ICTU hanteert de onderstaande documenten en documentstandaarden in de voorbereidingsfase.
 

@@ -6,7 +6,6 @@ body {
    margin-left: auto;
    margin-right: auto;
    line-height: 150%;
-   counter-reset: section;
 }
 
 h1 {
@@ -15,23 +14,12 @@ h1 {
     font-size:32px;
 }
 
-h2::before {
-    counter-increment: section;
-    content: counter(section) ". ";
-}
-
 h2 {
     margin-top:30px;
     color: black;
     font-size:18pt;
     font-weight:bold;
     page-break-before: always;
-    counter-reset: subsection;
-}
-
-h3::before {
-    counter-increment: subsection;
-    content: counter(section) "." counter(subsection) " ";
 }
 
 h3 {
@@ -83,5 +71,3 @@ img[title='word-cloud'] {
     width:95%;
     padding-top:100px;
 }
-
-

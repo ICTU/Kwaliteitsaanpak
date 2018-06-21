@@ -1,7 +1,3 @@
-#include "Content/Wijzigingsgeschiedenis/Titel.md"
-#include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
-#include "Content/Inleiding.md"
-
 ## Producten
 
 #include "Content/Maatregelen/M01 - Op te leveren producten/Titel.md"

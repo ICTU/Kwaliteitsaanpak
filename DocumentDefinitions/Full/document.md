@@ -1,6 +1,3 @@
-#include "Content/Wijzigingsgeschiedenis/Titel.md"
-#include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
-#include "Content/Wijzigingsgeschiedenis/ICTU.md"
 #include "Content/Manifest.md"
 #include "Content/Inleiding.md"
 

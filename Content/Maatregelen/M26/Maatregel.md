@@ -1,0 +1,7 @@
+### Maatregel 26: Periodieke beoordeling informatiebeveiliging
+
+Projecten laten periodiek een beveiligingstest uitvoeren. De code wordt zowel geautomatiseerd, als handmatig onderzocht op veelvoorkomende kwetsbaarheden door een beveiligingsexpert van buiten het project. De projectorganisatie zorgt ervoor dat deze expertise op afroep beschikbaar gesteld wordt aan projecten. Bevindingen uit de beveiligingstest worden vastgelegd als onderdeel van de werkvoorraad voor het ontwikkelproces (zie [Maatregel 5: Iteratief en incrementeel ontwikkelproces](#maatregel-5-iteratief-en-incrementeel-ontwikkelproces)).
+
+#### Rationale
+
+Door het inschakelen van actuele, specifieke expertise wordt de kans vergroot dat eventuele kwetsbaarheden in de gerealiseerde software tijdig herkend worden. Doordat de projectenorganisatie deze expertise beschikbaar stelt, kunnen projecten daar snel en efficiënt gebruik van maken.

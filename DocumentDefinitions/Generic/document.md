@@ -1,86 +1,60 @@
 ## Producten
 
-#include "Content/Maatregelen/M01 - Op te leveren producten/Titel.md"
-#include "Content/Maatregelen/M01 - Op te leveren producten/Maatregel.md"
+#include "Content/Maatregelen/M01/Maatregel.md"
 
-#include "Content/Maatregelen/M13 - Dekking ISO-25010/Titel.md"
-#include "Content/Maatregelen/M13 - Dekking ISO-25010/Maatregel.md"
+#include "Content/Maatregelen/M13/Maatregel.md"
 
-#include "Content/Maatregelen/M02 - Continu voldoen aan kwaliteitsnormen/Titel.md"
-#include "Content/Maatregelen/M02 - Continu voldoen aan kwaliteitsnormen/Maatregel.md"
+#include "Content/Maatregelen/M02/Maatregel.md"
 
-#include "Content/Maatregelen/M03 - Traceerbaar voldoen aan eisen/Titel.md"
-#include "Content/Maatregelen/M03 - Traceerbaar voldoen aan eisen/Maatregel.md"
+#include "Content/Maatregelen/M03/Maatregel.md"
 
-#include "Content/Maatregelen/M04 - Geautomatiseerde regressietests/Titel.md"
-#include "Content/Maatregelen/M04 - Geautomatiseerde regressietests/Maatregel.md"
+#include "Content/Maatregelen/M04/Maatregel.md"
 
-#include "Content/Maatregelen/M26 - Periodieke beoordeling informatiebeveiliging/Titel.md"
-#include "Content/Maatregelen/M26 - Periodieke beoordeling informatiebeveiliging/Maatregel.md"
+#include "Content/Maatregelen/M26/Maatregel.md"
 
 ## Processen
 
-#include "Content/Maatregelen/M05 - Iteratief en incrementeel ontwikkelproces/Titel.md"
-#include "Content/Maatregelen/M05 - Iteratief en incrementeel ontwikkelproces/Maatregel.md"
+#include "Content/Maatregelen/M05/Maatregel.md"
 
-#include "Content/Maatregelen/M06 - Frequente meting/Titel.md"
-#include "Content/Maatregelen/M06 - Frequente meting/Maatregel.md"
+#include "Content/Maatregelen/M06/Maatregel.md"
 
-#include "Content/Maatregelen/M07 - Continuous delivery pipeline/Titel.md"
-#include "Content/Maatregelen/M07 - Continuous delivery pipeline/Maatregel.md"
+#include "Content/Maatregelen/M07/Maatregel.md"
 
-#include "Content/Maatregelen/M08 - Technische schuld/Titel.md"
-#include "Content/Maatregelen/M08 - Technische schuld/Maatregel.md"
+#include "Content/Maatregelen/M08/Maatregel.md"
 
-#include "Content/Maatregelen/M09 - Implementatie kwaliteitsaanpak/Titel.md"
-#include "Content/Maatregelen/M09 - Implementatie kwaliteitsaanpak/Maatregel.md"
+#include "Content/Maatregelen/M09/Maatregel.md"
 
-#include "Content/Maatregelen/M10 - Periodiek projectoverleg/Titel.md"
-#include "Content/Maatregelen/M10 - Periodiek projectoverleg/Maatregel.md"
+#include "Content/Maatregelen/M10/Maatregel.md"
 
-#include "Content/Maatregelen/M27 - Projecten expliciet afsluiten/Titel.md"
-#include "Content/Maatregelen/M27 - Projecten expliciet afsluiten/Maatregel.md"
+#include "Content/Maatregelen/M27/Maatregel.md"
 
-#include "Content/Maatregelen/M28 - Self-assessment/Titel.md"
-#include "Content/Maatregelen/M28 - Self-assessment/Maatregel.md"
+#include "Content/Maatregelen/M28/Maatregel.md"
 
 ## Projectorganisatie
 
-#include "Content/Maatregelen/M11 - Beheer en onderhoud kwaliteitsaanpak en normen/Titel.md"
-#include "Content/Maatregelen/M11 - Beheer en onderhoud kwaliteitsaanpak en normen/Maatregel.md"
+#include "Content/Maatregelen/M11/Maatregel.md"
 
-#include "Content/Maatregelen/M24 - Implementatie van wijzigingen aan de kwaliteitsaanpak en normen/Titel.md"
-#include "Content/Maatregelen/M24 - Implementatie van wijzigingen aan de kwaliteitsaanpak en normen/Maatregel.md"
+#include "Content/Maatregelen/M24/Maatregel.md"
 
-#include "Content/Maatregelen/M12 - Publicatie kwaliteitsaanpak en normen/Titel.md"
-#include "Content/Maatregelen/M12 - Publicatie kwaliteitsaanpak en normen/Maatregel.md"
+#include "Content/Maatregelen/M12/Maatregel.md"
 
-#include "Content/Maatregelen/M14 - Projecten splitsen in een voorbereidingsfase en een realisatiefase/Titel.md"
-#include "Content/Maatregelen/M14 - Projecten splitsen in een voorbereidingsfase en een realisatiefase/Maatregel.md"
+#include "Content/Maatregelen/M14/Maatregel.md"
 
-#include "Content/Maatregelen/M15 - Open source tools/Titel.md"
-#include "Content/Maatregelen/M15 - Open source tools/Maatregel.md"
+#include "Content/Maatregelen/M15/Maatregel.md"
 
-#include "Content/Maatregelen/M16 - Verplichte tools/Titel.md"
-#include "Content/Maatregelen/M16 - Verplichte tools/Maatregel.md"
+#include "Content/Maatregelen/M16/Maatregel.md"
 
-#include "Content/Maatregelen/M17 - Snel beschikbare tools/Titel.md"
-#include "Content/Maatregelen/M17 - Snel beschikbare tools/Maatregel.md"
+#include "Content/Maatregelen/M17/Maatregel.md"
 
-#include "Content/Maatregelen/M18 - Ondersteuning verplichte tools/Titel.md"
-#include "Content/Maatregelen/M18 - Ondersteuning verplichte tools/Maatregel.md"
+#include "Content/Maatregelen/M18/Maatregel.md"
 
-#include "Content/Maatregelen/M19 - Digitale werkomgeving/Titel.md"
-#include "Content/Maatregelen/M19 - Digitale werkomgeving/Maatregel.md"
+#include "Content/Maatregelen/M19/Maatregel.md"
 
-#include "Content/Maatregelen/M21 - Kwaliteit van medewerkers/Titel.md"
-#include "Content/Maatregelen/M21 - Kwaliteit van medewerkers/Maatregel.md"
+#include "Content/Maatregelen/M21/Maatregel.md"
 
-#include "Content/Maatregelen/M22 - Betrokkenheid bij inzet/Titel.md"
-#include "Content/Maatregelen/M22 - Betrokkenheid bij inzet/Maatregel.md"
+#include "Content/Maatregelen/M22/Maatregel.md"
 
-#include "Content/Maatregelen/M23 - Warme kennisoverdracht/Titel.md"
-#include "Content/Maatregelen/M23 - Warme kennisoverdracht/Maatregel.md"
+#include "Content/Maatregelen/M23/Maatregel.md"
 
 ## Bijlagen
 

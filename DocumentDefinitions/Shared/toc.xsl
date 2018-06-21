@@ -12,17 +12,14 @@
         <title>Inhoudsopgave</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <style>
-          @import url("/ka/DocumentDefinitions/Shared/document.css");
-          div {border-bottom: 1px dashed rgb(200,200,200);}
-          span {float: right;}
-          li {list-style: none;}
-          ul {font-size: 14pt;}
-          ul ul {font-size: 80%; }
-          ul {padding-left: 0em;}
-          ul ul {padding-left: 1em;}
-          ul ul ul {display: none;}
-          a {text-decoration:none; color: black;}
-          [title="Inhoudsopgave"] {display: none;}
+          @import url("/ka/DocumentDefinitions/Shared/cover.css");
+          div {border-bottom: 1px dashed rgb(200,200,200);}  /* dashed line to connect titles and page numbers */
+          span {float: right;}  /* right align page number */
+          li {list-style: none;}  /* no bullets */
+          ul {font-size: 14pt; padding-left: 0em;}
+          ul ul {font-size: 80%; padding-left: 1em;}  /* indent subsections and use smaller font */
+          ul ul ul {display: none;}  /* don't display subsubsections, works recursively */
+          a {text-decoration:none; color: inherit;}  /* don't render links blue/underlined */
         </style>
       </head>
       <body>
@@ -42,7 +39,13 @@
             <xsl:if test="@backLink">
               <xsl:attribute name="name"><xsl:value-of select="@backLink"/></xsl:attribute>
             </xsl:if>
-            <xsl:value-of select="@title" />
+            <xsl:variable name="depth" select="count(ancestor::*)"/>
+            <xsl:if test="$depth = 2">
+              <xsl:value-of select="concat(position()-1, '. ', @title)"/>
+            </xsl:if>
+            <xsl:if test="$depth > 2">
+              <xsl:value-of select="concat(position(), '. ', @title)"/>
+            </xsl:if>
           </a>
           <span> <xsl:value-of select="@page" /> </span>
         </div>

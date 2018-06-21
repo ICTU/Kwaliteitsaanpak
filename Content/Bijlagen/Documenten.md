@@ -59,7 +59,7 @@ De infrastructuurarchitectuur beschrijft de topologie van de implementatie-omgev
 
 Het globaal functioneel ontwerp heeft als belangrijkste onderdeel een use case model. Een use case model is een overkoepelend overzicht van de onderkende actoren en use cases, hun samenhang, gewicht en classificatie. Per onderkende use case is er een nauwkeurig geformuleerde maar beknopte beschrijving. Use cases worden gedurende het project nader gedetailleerd.
 
-Zie bijvoorbeeld: [https://www.ivarjacobson.com/sites/default/files/field_iji_file/article/use-case_2_0_jan11.pdf]( [https://www.ivarjacobson.com/sites/default/files/field_iji_file/article/use-case_2_0_jan11.pdf).
+Zie bijvoorbeeld: [https://www.ivarjacobson.com/sites/default/files/field_iji_file/article/use-case_2_0_jan11.pdf](https://www.ivarjacobson.com/sites/default/files/field_iji_file/article/use-case_2_0_jan11.pdf).
 
 ##### Prototype
 

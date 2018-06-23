@@ -23,7 +23,7 @@ def process_m01(worksheet, row, contents, maatregel_format, status_format, toeli
 
 def process_m07(worksheet, row, contents, maatregel_format, status_format, toelichting_format):
     """ Read the list of parts from the markdown list. """
-    parts = [line[2:].strip(",") for line in contents if line.startswith("- ")]
+    parts = [line[2:].strip().strip(",") for line in contents if line.startswith("- ")]
     return process_submaatregel(worksheet, row, parts, maatregel_format, status_format, toelichting_format)
 
 
@@ -32,7 +32,7 @@ def process_m16_m17(worksheet, row, contents, maatregel_format, status_format, t
     tools = [line for line in contents if re.match(r"^\d+\. ", line)]
     generic_tools = tools[:len(tools)//2]
     ictu_tools = tools[len(tools)//2:]
-    tools = ["{0} Bij ICTU: {1}".format(generic_tool.strip(), ictu_tool.strip().split(". ")[1])
+    tools = ["{0} Bij ICTU: {1}".format(generic_tool.strip().split(". ")[1], ictu_tool.strip().split(". ")[1])
              for generic_tool, ictu_tool in zip(generic_tools, ictu_tools)]
     return process_submaatregel(worksheet, row, tools, maatregel_format, status_format, toelichting_format)
 

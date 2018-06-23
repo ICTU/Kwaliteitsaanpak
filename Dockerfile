@@ -1,6 +1,9 @@
 FROM node:latest
 
-RUN apt-get update && apt-get install -y libfreetype6 libfontconfig xfonts-75dpi xfonts-base
+RUN apt-get update && apt-get install -y libfreetype6 libfontconfig xfonts-75dpi xfonts-base python3 python3-pip
+
+ADD ./requirements.txt /tmp/requirements.txt
+RUN pip3 install -r /tmp/requirements.txt
 
 # wkhtmltopdf version 0.12.5 (https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.jessie_amd64.deb)
 # has a bug which causes it to generate an empty table of contents. Hence we use an older version.

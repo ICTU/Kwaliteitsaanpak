@@ -63,3 +63,6 @@ typings/
 
 # Generated intermediate files
 Generated/
+
+# Python virtual environment
+.venv

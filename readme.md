@@ -26,9 +26,10 @@ This repository contains the source information and automation scripts for gener
   - cover.json - document configuration
 - The script instructions for building a new Document Definition have to be added to ./create-docs.sh
 
-## Generating the documentation (pdf)
+## Generating the documentation (pdf and xlsx)
 
 - Clone this repository
 - Run "docker-compose up"
-  - The document patch version is updated (on packages.json and Content/Versie.md)
-  - The pdf version of the documents are created in the root folder
+  - The document patch version is updated (in packages.json and Content/Versie.md)
+  - The pdf versions of the documents are created in the root folder
+  - An Excel spreadsheet with a self-assessment checklist is created in the root folder

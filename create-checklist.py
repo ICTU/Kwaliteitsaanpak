@@ -4,28 +4,27 @@ import re
 import xlsxwriter
 
 
-def process_m01(worksheet, row, contents, maatregel_format, status_format, toelichting_format):
-    """ Read the list of products from the markdown table. """
-    products = [line[1:].split("|")[0].strip() for line in contents if line.startswith("|")][2:]
-    for index, product in enumerate(products):
+def process_submaatregel(worksheet, row, submaatregelen, maatregel_format, status_format, toelichting_format):
+    """ Write the submaatregelen. """
+    for index, submaatregel in enumerate(submaatregelen):
         worksheet.write(row, 0, "", maatregel_format)
-        worksheet.write(row, 1, "{0}. {1}".format(index + 1, product), maatregel_format)
+        worksheet.write(row, 1, "{0}. {1}".format(index + 1, submaatregel), maatregel_format)
         worksheet.write(row, 2, "", status_format)
         worksheet.write(row, 3, "", toelichting_format)
         row += 1
     return row
+
+
+def process_m01(worksheet, row, contents, maatregel_format, status_format, toelichting_format):
+    """ Read the list of products from the markdown table. """
+    products = [line[1:].split("|")[0].strip() for line in contents if line.startswith("|")][2:]
+    return process_submaatregel(worksheet, row, products, maatregel_format, status_format, toelichting_format)
 
 
 def process_m07(worksheet, row, contents, maatregel_format, status_format, toelichting_format):
     """ Read the list of parts from the markdown list. """
     parts = [line[2:].strip(",") for line in contents if line.startswith("- ")]
-    for index, part in enumerate(parts):
-        worksheet.write(row, 0, "", maatregel_format)
-        worksheet.write(row, 1, "{0}. {1}".format(index + 1, part.strip().strip(".,")), maatregel_format)
-        worksheet.write(row, 2, "", status_format)
-        worksheet.write(row, 3, "", toelichting_format)
-        row += 1
-    return row
+    return process_submaatregel(worksheet, row, parts, maatregel_format, status_format, toelichting_format)
 
 
 def process_m16_m17(worksheet, row, contents, maatregel_format, status_format, toelichting_format):
@@ -33,14 +32,9 @@ def process_m16_m17(worksheet, row, contents, maatregel_format, status_format, t
     tools = [line for line in contents if re.match(r"^\d+\. ", line)]
     generic_tools = tools[:len(tools)//2]
     ictu_tools = tools[len(tools)//2:]
-    for generic_tool, ictu_tool in zip(generic_tools, ictu_tools):
-        worksheet.write(row, 0, "", maatregel_format)
-        worksheet.write(row, 1, "{0} Bij ICTU: {1}".format(generic_tool.strip(), ictu_tool.strip().split(". ")[1]),
-                        maatregel_format)
-        worksheet.write(row, 2, "", status_format)
-        worksheet.write(row, 3, "", toelichting_format)
-        row += 1
-    return row
+    tools = ["{0} Bij ICTU: {1}".format(generic_tool.strip(), ictu_tool.strip().split(". ")[1])
+             for generic_tool, ictu_tool in zip(generic_tools, ictu_tools)]
+    return process_submaatregel(worksheet, row, tools, maatregel_format, status_format, toelichting_format)
 
 
 def process_maatregel(workbook, worksheet, maatregel_folder, row):
@@ -77,6 +71,23 @@ def process_maatregel(workbook, worksheet, maatregel_folder, row):
     return row
 
 
+def write_assessment_choices(workbook, worksheet, start_row, end_row, column):
+    """ Write the assessment choices, colors and data validation in the status column. """
+    green = workbook.add_format(dict(fg_color="#0B5101", bg_color="#BBEDC3"))
+    yellow = workbook.add_format(dict(fg_color="#894503", bg_color="#FEE88A"))
+    red = workbook.add_format(dict(fg_color="#880009", bg_color="#FEB8C3"))
+    grey = workbook.add_format(dict(fg_color="#6D6D6D", bg_color="#EFEFEF"))
+    assessment_choices = [("voldoet", green), ("voldoet deels", yellow), ("voldoet niet", red),
+                          ("niet van toepassing", grey)]
+    for choice, color in assessment_choices:
+        worksheet.conditional_format(
+            start_row, column, end_row + start_row - 1, column,
+            {"type": "cell", "criteria": "==", "value": '"{0}"'.format(choice), "format": color})
+    worksheet.data_validation(
+        start_row, column, end_row + start_row - 1, column,
+        dict(validate="list", source=[choice[0] for choice in assessment_choices]))
+
+
 def create_checklist():
     """ Create the spreadsheet with the checklist. """
     workbook = xlsxwriter.Workbook('ICTU-Kwaliteitsaanpak-Checklist.xlsx')
@@ -102,26 +113,9 @@ def create_checklist():
     for maatregel_folder in sorted(maatregelen.glob("*")):
         row = process_maatregel(workbook, worksheet, maatregel_folder, row)
 
-    green = workbook.add_format(dict(fg_color="#0B5101", bg_color="#BBEDC3"))
-    worksheet.conditional_format(
-        maatregel_start_row, 2, row + maatregel_start_row - 1, 2,
-        {"type": "cell", "criteria": "==", "value": '"voldoet"', "format": green})
-    yellow = workbook.add_format(dict(fg_color="#894503", bg_color="#FEE88A"))
-    worksheet.conditional_format(
-        maatregel_start_row, 2, row + maatregel_start_row - 1, 2,
-        {"type": "cell", "criteria": "==", "value": '"voldoet deels"', "format": yellow})
-    red = workbook.add_format(dict(fg_color="#880009", bg_color="#FEB8C3"))
-    worksheet.conditional_format(
-        maatregel_start_row, 2, row + maatregel_start_row - 1, 2,
-        {"type": "cell", "criteria": "==", "value": '"voldoet niet"', "format": red})
-    grey = workbook.add_format(dict(fg_color="#6D6D6D", bg_color="#EFEFEF"))
-    worksheet.conditional_format(
-        maatregel_start_row, 2, row + maatregel_start_row - 1, 2,
-        {"type": "cell", "criteria": "==", "value": '"niet van toepassing"', "format": grey})
-
-    worksheet.data_validation(
-        maatregel_start_row, 2, row + maatregel_start_row - 1, 2,
-        dict(validate="list", source=["voldoet", "voldoet deels", "voldoet niet", "niet van toepassing"]))
+    status_column = 2
+    write_assessment_choices(workbook, worksheet, maatregel_start_row, row, status_column)
+    worksheet.freeze_panes(maatregel_start_row, status_column)
     workbook.close()
 
 

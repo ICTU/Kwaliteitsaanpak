@@ -53,7 +53,8 @@ def process_maatregel(workbook, worksheet, maatregel_folder, row):
     worksheet.write(row, 0, maatregel_id, maatregel_format)
     title = contents[0].strip("#").split("(")[0].strip()
     worksheet.write(row, 1, title, maatregel_format)
-    worksheet.write_comment(row, 1, "".join([line.strip("#").strip(" ") for line in contents]), dict(x_scale=5, y_scale=7))
+    worksheet.write_comment(row, 1, "".join([line.strip("#").strip(" ") for line in contents]),
+                            dict(x_scale=5, y_scale=7))
     status_format_options = dict(bg_color="#FED32D", text_wrap=True)
     status_format = workbook.add_format(status_format_options)
     worksheet.write(row, 2, "", status_format)
@@ -96,16 +97,24 @@ def create_checklist():
         version = version_file.read().strip()
 
     header_format = workbook.add_format(dict(text_wrap=True, font_size=14, bold=True, bg_color="#B3D6C9"))
+    header_row = 1
     worksheet.merge_range(
         "A1:D1",
         "Onderstaande checklist kan gebruikt worden voor het uitvoeren van een assessment tegen de "
         "Kwaliteitsaanpak ICTU Software Realisatie {0}.".format(version.lower()), header_format)
     worksheet.set_row(0, 30)
-    worksheet.set_row(1, 30)
+    worksheet.set_row(header_row, 30)
     for column, (header, width) in enumerate([("Maatregel", 12), ("Omschrijving", 70),
                                               ("Status", 20), ("Toelichting", 70)]):
-        worksheet.write(1, column, header, header_format)
+        worksheet.write(header_row, column, header, header_format)
         worksheet.set_column('{0}:{0}'.format("ABCD"[column]), width)
+    worksheet.write_comment(
+        header_row, 2,
+        "Bij maatregelen die primair door een project moeten worden toegepast geeft Status aan in "
+        "hoevere het project dat doet. Bij maatregelen die primair door de projectorganisatie "
+        "(bij ICTU: ISR) moeten worden toegepast geeft de status aan in hoeverre de projectorganisatie dat "
+        "doet, gezien vanuit het perspectief van het project.",
+        dict(x_scale=3, y_scale=3))
 
     maatregel_start_row = row = 2
 

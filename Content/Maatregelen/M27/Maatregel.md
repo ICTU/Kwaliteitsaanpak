@@ -1,6 +1,6 @@
-### Projecten expliciet afsluiten (M27)
+### Projecten en projectfasen expliciet afsluiten (M27)
 
-Na afronding van de realisatiefase worden projecten afgesloten. Alle documentatie, broncode, referentiedata en credentials die in de realisatiefase nodig waren of zijn opgeleverd, worden gearchiveerd en van werkstations van projectmedewerkers verwijderd.
+Afsluiting van een projectfase gebeurt expliciet en gecontroleerd: alle producten, zoals documentatie, broncode, referentiedata en credentials, die in de af te sluiten fase nodig waren of zijn opgeleverd, worden gearchiveerd. Indien er geen volgende fase is voorzien of die nog een lange of onbekende tijd op zich zal laten wachten, dienen alle producten van de werkstations van de projectmedewerkers verwijderd te worden.
 
 #### Rationale
 

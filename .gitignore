@@ -66,3 +66,7 @@ Generated/
 
 # Python virtual environment
 .venv
+
+# Temp Excel files
+~$*.xlsx
+

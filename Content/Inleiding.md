@@ -42,7 +42,7 @@ Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rolle
 
 2. Hoofd projectenorganisatie (bij ICTU: afdelingshoofd ISR),
 
-3. Project (bij ICTU: project inclusief Scrumteam(s)),
+3. Project (bij ICTU: project inclusief Scrum team(s)),
 
 4. Projectverantwoordelijke (bij ICTU: software delivery manager en/of projectleider),
 

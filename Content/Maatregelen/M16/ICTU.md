@@ -7,7 +7,7 @@ ICTU gebruikt hiervoor de volgende tools:
 3. SonarQube,
 4. Release Manager,
 5. Reporting (Birt),
-6. Kwaliteitsrapportage (HQ),
+6. Kwaliteitssysteem (HQ),
 7. OpenVAS en OWASP ZAP,
 8. OWASP Dependency Checker,
 9. Checkmarx.

@@ -6,9 +6,9 @@ ICTU hanteert de onderstaande documenten en documentstandaarden in de voorbereid
 
 De product backlog is een overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:
 
-- WAT er gemaakt moet worden
-- WAAROM
-- en voor WIE.
+- *Wat* er gemaakt moet worden
+- *Waarom*
+- en voor *wie*.
 
 Iedereen kan er dingen aan toevoegen, maar de product owner is en blijft verantwoordelijk. Er staan ook ruwe schattingen bij van de waarde voor de organisatie en van de ontwikkelkosten. De product owner bepaalt de volgorde (en dus prioritering) van de items op de backlog.
 

@@ -89,6 +89,28 @@ def write_assessment_choices(workbook, worksheet, start_row, end_row, column):
         dict(validate="list", source=[choice[0] for choice in assessment_choices]))
 
 
+class DocumentStructure:
+    """ Class representing the document structure of the kwaliteitsaanpak. """
+    def __init__(self):
+        with pathlib.Path("DocumentDefinitions/Full/document.md").open() as document_structure:
+            self.lines = document_structure.readlines()
+
+    def maatregelen_sections(self):
+        """ Return a list of sections in the document. """
+        for line in self.lines:
+            if line.startswith("##") and not "Bijlagen" in line:
+                yield line.strip().strip("## ")
+
+    def maatregelen_folders(self, section):
+        """ Return a list of maatregelen folders in the right order. """
+        in_section = False
+        for line in self.lines:
+            if line.startswith("## "):
+                in_section = section in line
+            if in_section and '/Maatregel.md"' in line:
+                yield pathlib.Path(line.strip().strip('# include "').strip('/Maatregel.md"'))
+
+
 def create_checklist():
     """ Create the spreadsheet with the checklist. """
     workbook = xlsxwriter.Workbook('ICTU-Kwaliteitsaanpak-Checklist.xlsx')
@@ -118,9 +140,12 @@ def create_checklist():
 
     maatregel_start_row = row = 2
 
-    maatregelen = pathlib.Path("Content/Maatregelen")
-    for maatregel_folder in sorted(maatregelen.glob("*")):
-        row = process_maatregel(workbook, worksheet, maatregel_folder, row)
+    document = DocumentStructure()
+    for section in document.maatregelen_sections():
+        row += 1
+        worksheet.merge_range("A{row}:D{row}".format(row=row), section, header_format)
+        for folder in document.maatregelen_folders(section):
+            row = process_maatregel(workbook, worksheet, folder, row)
 
     status_column = 2
     write_assessment_choices(workbook, worksheet, maatregel_start_row, row, status_column)

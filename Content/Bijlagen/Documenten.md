@@ -63,11 +63,11 @@ Zie bijvoorbeeld: [https://www.ivarjacobson.com/sites/default/files/field_iji_fi
 
 ##### Prototype
 
-Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illustreert waar men uiteindelijk met de toepassing naar toe wil. Het maakt ideëen tastbaar en creëert een eerste indruk van structuur, design en functionaliteit.
+Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illustreert waar men uiteindelijk met de toepassing naar toe wil. Het maakt ideeën tastbaar en creëert een eerste indruk van structuur, ontwerp en functionaliteit.
 
 #### Testdocumentatie: testplannen
 
-De testplannen bestaan uit een master testplan, gemaakt op basis van een productrisicoanalyse (PRA), en detailtestplannen. Het doel van een mastertestplan (MTP) is om betrokkenen bij het testproces te informeren over de aanpak, de activiteiten, inclusief de onderlinge relaties en afhankelijkheden, en de op te leveren (eind)producten met betrekking tot het testtraject. Het mastertestplan beschrijft deze aanpak, activiteiten en (eind)producten welke in de verschillende andere (detail)testplannen verder dienen te worden gedetailleerd. Deze (detail)testplannen dienen te worden afgeleid van dit mastertestplan. ICTU gebruikt een generiek mastertestplan als basis voor projectspecifieke mastertestplannen.
+De testplannen bestaan uit een mastertestplan, gemaakt op basis van een productrisicoanalyse (PRA), en detailtestplannen. Het doel van een mastertestplan (MTP) is om betrokkenen bij het testproces te informeren over de aanpak, de activiteiten, inclusief de onderlinge relaties en afhankelijkheden, en de op te leveren (eind)producten met betrekking tot het testtraject. Het mastertestplan beschrijft deze aanpak, activiteiten en (eind)producten welke in de verschillende andere (detail)testplannen verder dienen te worden gedetailleerd. Deze (detail)testplannen dienen te worden afgeleid van dit mastertestplan. ICTU gebruikt een generiek mastertestplan als basis voor projectspecifieke mastertestplannen.
 
 #### Testdocumentatie: testgevallen, rapportages
 
@@ -75,9 +75,9 @@ Logische testgevallen worden vastgelegd in Jira en gekoppeld met use cases en us
 
 #### Informatiebeveiligingsplan
 
-Het IB-plan vormt een handzaam document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en hoe die bescherming vorm krijgt. Naast BIA, eventuele PIA en TVA krijgen ook de geselecteerde IB-maatregelen een plaats in dit document.
+Het informatiebeveiligingsplan vormt een handzaam document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en hoe die bescherming vorm krijgt. Mogelijke bronnen voor het informatiebeveiligingsplan zijn de Business Impact Analysis (BIA), Privacy Impact Analysis (PIA) en de Threat Vulnerability Assessment (TVA).
 
-Het Voorschrift Informatiebeveiliging Rijksdienst (VIR) bevat een methode om te komen tot een systematische aanpak van informatiebeveiliging. Eén van de vereisten van het VIR is dat voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een afhankelijkheids- en kwetsbaarheidsanalyse (A&K-analyse) wordt uitgevoerd. Bij ICTU wordt daarvoor een TVA (threat and vulnerability assessment) gebruikt. De betrouwbaarheidseisen, die aan de bedrijfsprocessen en dientengevolge aan het informatiesysteem of verantwoordelijkheidsgebied worden gesteld, worden tijdens een afhankelijkheidsanalyse geïnventariseerd. Vervolgens worden de bedreigingen geïdentificeerd en geanalyseerd.
+Het Voorschrift Informatiebeveiliging Rijksdienst (VIR) bevat een methode om te komen tot een systematische aanpak van informatiebeveiliging. Eén van de vereisten van het VIR is dat voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een afhankelijkheids- en kwetsbaarheidsanalyse (A&K-analyse) wordt uitgevoerd. Bij ICTU wordt daarvoor een TVA gebruikt. De betrouwbaarheidseisen, die aan de bedrijfsprocessen en dientengevolge aan het informatiesysteem of verantwoordelijkheidsgebied worden gesteld, worden tijdens een afhankelijkheidsanalyse geïnventariseerd. Vervolgens worden de bedreigingen geïdentificeerd en geanalyseerd.
 
 Op basis van de resultaten van de TVA wordt voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een informatiebeveiligingsplan opgesteld.
 

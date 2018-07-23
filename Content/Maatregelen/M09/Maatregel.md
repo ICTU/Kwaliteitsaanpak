@@ -6,10 +6,10 @@ De projectverantwoordelijke organiseert periodiek een self-assessment van het pr
 
 Voor de belangrijkste verschillen beschrijft de projectverantwoordelijke:
 
-- Het geconstateerde verschil,
-- Reden voor het verschil,
-- In geval van acceptatie: waarom het verschil geaccepteerd wordt,
-- In geval van verbeteractie: planning om het verschil weg te werken.
+- het geconstateerde verschil,
+- reden voor het verschil,
+- in geval van acceptatie: waarom het verschil geaccepteerd wordt,
+- in geval van verbeteractie: planning om het verschil weg te werken.
 
 #### Rationale
 

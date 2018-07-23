@@ -15,4 +15,4 @@ De agenda voor dit overleg bestaat ten minste uit de volgende onderwerpen:
 
 #### Rationale
 
-Het doel van het periodiek projectoverleg is alle directe betrokkenen, breder dan het realiserende team, op hetzelfde informatieniveau te brengen en te houden. Directe betrokkenen zijn alle medewerkers die geen onderdeel uitmaken van het realiserende team, maar wel eindverantwoordelijk of uitvoerend verantwoordelijk zijn voor het projectsucces.
+Het doel van het periodiek projectoverleg is alle directe betrokkenen, breder dan het realiserende team, op hetzelfde informatieniveau te brengen en te houden. Directe betrokkenen zijn alle medewerkers die geen onderdeel uitmaken van het realiserende team, maar wel verantwoordelijkheid dragen voor het projectsucces.

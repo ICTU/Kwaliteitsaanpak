@@ -143,7 +143,7 @@ def create_checklist():
     document = DocumentStructure()
     for section in document.maatregelen_sections():
         row += 1
-        worksheet.merge_range(f"A{row}:D{row}", section, header_format)
+        worksheet.merge_range("A{row}:D{row}".format(row=row), section, header_format)
         for folder in document.maatregelen_folders(section):
             row = process_maatregel(workbook, worksheet, folder, row)
 

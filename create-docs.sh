@@ -16,7 +16,7 @@ function generate {
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html  --footer-font-size 10 --footer-font-name muli \
         --footer-spacing 10 --header-line --header-left "Kwaliteitsaanpak ICTU Softwarerealisatie" \
         --header-right "[page]/[toPage]" --header-font-name muli --header-font-size 10 --header-spacing 10 \
-        --margin-bottom 30 --margin-left 20 --margin-right 20 --margin-top 30 \
+        --margin-bottom 30 --margin-left 30 --margin-right 30 --margin-top 30 \
         cover Generated/$1/cover.html toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
         Generated/$1/document.html ICTU-Kwaliteitsaanpak-$1.pdf
 }

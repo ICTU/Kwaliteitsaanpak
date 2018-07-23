@@ -5,7 +5,7 @@
 Deze kwaliteitsaanpak helpt opdrachtgevers van maatwerksoftware het belang van burgers en ambtenaren, die diensten aan burgers verlenen, voorop te zetten door:
 
 - voordat het project echt gaat bouwen goed na te denken over de mogelijke oplossingen en de kwaliteitseigenschappen die voor met name de burger van belang zijn. Denk aan gebruikskwaliteit, beveiliging, privacy, performance en toegankelijkheid ([M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-));
-- door bij de inzet van medewerkerskwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan ([M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)).
+- door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan ([M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)).
 
 #### We delen wat we goed kunnen, en gebruiken wat anderen beter doen
 
@@ -19,7 +19,7 @@ We gebruiken wat anderen beter doen door:
 - open source tools te gebruiken ([M15: Open source tools](#open-source-tools-m15-));
 - bewezen tools te kiezen ([M16: Verplichte tools](#verplichte-tools-m16-)) en beschikbaar te stellen aan projecten ([M17: Snel beschikbare tools](#snel-beschikbare-tools-m17-)) in een digitale werkomgeving ([M19: Afgeschermde digitale omgeving](#afgeschermde-digitale-omgeving-m19-)) en het gebruik ervan te ondersteunen ([M18: Ondersteuning verplichte tools](#ondersteuning-verplichte-tools-m18-));
 - ons werk periodiek op informatiebeveiliging te laten controleren ([M26: Periodieke beoordeling informatiebeveiliging](#periodieke-beoordeling-informatiebeveiliging-m26-));
-- door bij de inzet van medewerkerskwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd, te laten gaan ([M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)).
+- door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd, te laten gaan ([M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)).
 
 #### Op zoek naar de juiste oplossing is het experiment soms de kortste weg
 

@@ -89,6 +89,14 @@ def write_assessment_choices(workbook, worksheet, start_row, end_row, column):
         dict(validate="list", source=[choice[0] for choice in assessment_choices]))
 
 
+def maatregelen_folders():
+    """ Return a list of maatregelen folders in the right order. """
+    with pathlib.Path("DocumentDefinitions/Full/document.md").open() as document_structure:
+        for line in document_structure.readlines():
+            if '/Maatregel.md"' in line:
+                yield pathlib.Path(line.strip().strip('# include "').strip('/Maatregel.md"'))
+
+
 def create_checklist():
     """ Create the spreadsheet with the checklist. """
     workbook = xlsxwriter.Workbook('ICTU-Kwaliteitsaanpak-Checklist.xlsx')
@@ -118,8 +126,7 @@ def create_checklist():
 
     maatregel_start_row = row = 2
 
-    maatregelen = pathlib.Path("Content/Maatregelen")
-    for maatregel_folder in sorted(maatregelen.glob("*")):
+    for maatregel_folder in maatregelen_folders():
         row = process_maatregel(workbook, worksheet, maatregel_folder, row)
 
     status_column = 2

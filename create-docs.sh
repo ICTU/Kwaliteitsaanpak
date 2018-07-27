@@ -13,9 +13,8 @@ function generate {
     node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/document.json
     node_modules/markdown-to-html/bin/markdown Generated/$1/document.md -s /ka/DocumentDefinitions/$1/document.css | \
         sed 's/^<head>$/<head><meta charset="UTF-8">/' > Generated/$1/document.html
-    wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html  --footer-font-size 10 --footer-font-name muli \
-        --footer-spacing 10 --header-line --header-left "Kwaliteitsaanpak ICTU Softwarerealisatie" \
-        --header-right "[page]/[toPage]" --header-font-name muli --header-font-size 10 --header-spacing 10 \
+    wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
+        --header-html DocumentDefinitions/Shared/header.html --header-spacing 10 \
         --margin-bottom 30 --margin-left 30 --margin-right 30 --margin-top 30 \
         cover Generated/$1/cover.html toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
         Generated/$1/document.html ICTU-Kwaliteitsaanpak-$1.pdf

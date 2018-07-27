@@ -17,13 +17,15 @@ h1 {
 
 h2::before {
     counter-increment: section;
-    content: counter(section) ". ";
+    content: counter(section) " ";
+    color: #2C64AD;
 }
 
 h2 {
     margin-top:30px;
-    color: black;
-    font-size:18pt;
+    margin-bottom:1.4em;
+    color: #2C64AD;
+    font-size:42pt;
     font-weight:bold;
     page-break-before: always;
     counter-reset: subsection;

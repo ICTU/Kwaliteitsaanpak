@@ -8,7 +8,7 @@ ICTU werkt sinds 2010 met de agile softwareontwikkelaanpak Scrum en heeft deze a
 
 Met behulp van deze kwaliteitsaanpak heeft ICTU samen met andere overheden inmiddels enige tientallen projecten succesvol uitgevoerd. ICTU wil deze aanpak graag aanvullen met de ervaringen en geleerde lessen van andere organisaties en deze overdraagbaar maken en breder uitdragen. Daarom stelt ICTU deze kwaliteitsaanpak ter beschikking aan andere partijen en overheden die zelf maatwerksoftware ontwikkelen of dit laten doen.
 
-## Doelstellingen van de kwaliteitsaanpak
+## Doelstellingen
 
 De kwaliteitsaanpak heeft drie doelstellingen:
 

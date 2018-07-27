@@ -6,25 +6,25 @@ Als tijdens een project bestaande software dient te worden afgebouwd, onderhoude
 
 | Product                 | Voorbereidingsfase  | Voorbereidingsfase met onderzoek  | Realisatiefase |
 |----------------------------------------------------------------------------------------|---|---|---|
-| business impact analysis (BIA)*                                                        | ✔ | ✔ | ✔ |
-| privacy impact analysis (PIA)**                                                        | ✔ | ✔ | ✔ |
-| beschrijving van functionele eisen                                                     | ✔ | ✔ | ✔ |
-| beschrijving van niet-functionele eisen                                                | ✔ | ✔ | ✔ |
-| ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)            | ✔ | ✔ | ✔ |
-| testdocumentatie: testplannen                                                          | ✔ | ✔ | ✔ |
-| testdocumentatie: testgevallen, rapportages                                            |   |   | ✔ |
-| informatiebeveiligingsplan                                                             | ✔ | ✔ | ✔ |
-| projectplan                                                                            | ✔ | ✔ |   |
-| kwaliteitsplan                                                                         | ✔ | ✔ |   |
-| deploybare versie van de software                                                      |   |   | ✔ |
-| broncode, inclusief de benodigdheden voor het bouwen van de software                   |   |   | ✔ |
-| regressietests, inclusief de benodigdheden voor het uitvoeren van de regressietesten   |   |   | ✔ |
-| vrijgaveadvies                                                                         |   |   | ✔ |
-| release notes                                                                          |   |   | ✔ |
-| deploymentdocumentatie                                                                 |   |   | ✔ |
-| uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                  |   | ✔ |   |
-| transitieplan voor af te bouwen, te onderhouden en/of te herbouwen softwareproducten   |   | ✔ |   |
-| plan voor aflossen technische schuld, indien van toepassing                            |   | ✔ |   ||
+| Business impact analysis (BIA)*                                                        | ✔ | ✔ | ✔ |
+| Privacy impact analysis (PIA)**                                                        | ✔ | ✔ | ✔ |
+| Beschrijving van functionele eisen                                                     | ✔ | ✔ | ✔ |
+| Beschrijving van niet-functionele eisen                                                | ✔ | ✔ | ✔ |
+| Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)            | ✔ | ✔ | ✔ |
+| Testdocumentatie: testplannen                                                          | ✔ | ✔ | ✔ |
+| Testdocumentatie: testgevallen, rapportages                                            |   |   | ✔ |
+| Informatiebeveiligingsplan                                                             | ✔ | ✔ | ✔ |
+| Projectplan                                                                            | ✔ | ✔ |   |
+| Kwaliteitsplan                                                                         | ✔ | ✔ |   |
+| Deploybare versie van de software                                                      |   |   | ✔ |
+| Broncode, inclusief de benodigdheden voor het bouwen van de software                   |   |   | ✔ |
+| Regressietests, inclusief de benodigdheden voor het uitvoeren van de regressietesten   |   |   | ✔ |
+| Vrijgaveadvies                                                                         |   |   | ✔ |
+| Release notes                                                                          |   |   | ✔ |
+| Deploymentdocumentatie                                                                 |   |   | ✔ |
+| Uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                  |   | ✔ |   |
+| Transitieplan voor af te bouwen, te onderhouden en/of te herbouwen softwareproducten   |   | ✔ |   |
+| Plan voor aflossen technische schuld, indien van toepassing                            |   | ✔ |   ||
 
 *) De opdrachtgever stelt bij voorkeur een BIA en PIA voorafgaand aan een voorbereidende fase beschikbaar. Indien dat niet mogelijk is worden deze analyses gedurende de voorbereidende fase onder verantwoordelijkheid van de opdrachtgever uitgevoerd.
 **) Indien een PIA niet nodig is, is een verklaring daaromtrent vereist.

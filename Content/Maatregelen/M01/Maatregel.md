@@ -4,7 +4,7 @@ Projecten zijn gesplitst in een voorbereidingsfase en een realisatiefase (zie [M
 
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom 'Realisatiefase') en wordt de kwaliteit van de bestaande software-producten getoetst ([M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)). Dit onderzoek is onderdeel van de voorbereidingsfase en wordt uitgevoerd door vertegenwoordigers van de projectenorganisatie en medewerkers van het desbetreffende project.
 
-| Product                 | Voorbereidingsfase  | Voorbereidingsfase met onderzoek  | Realisatiefase |
+| Product                 | Voorbereidings᠆fase  | Voorbereidings᠆fase met onderzoek  | Realisatie᠆fase |
 |----------------------------------------------------------------------------------------|---|---|---|
 | Business impact analysis (BIA)*                                                        | ✔ | ✔ | ✔ |
 | Privacy impact analysis (PIA)**                                                        | ✔ | ✔ | ✔ |

@@ -41,10 +41,10 @@
             </xsl:if>
             <xsl:variable name="depth" select="count(ancestor::*)"/>
             <xsl:if test="$depth = 2">
-              <xsl:value-of select="concat(position()-1, '. ', @title)"/>
+              <xsl:value-of select="concat(position()-1, ' ', @title)"/>
             </xsl:if>
             <xsl:if test="$depth > 2">
-              <xsl:value-of select="concat(position(), '. ', @title)"/>
+              <xsl:value-of select="concat(position(), ' ', @title)"/>
             </xsl:if>
           </a>
           <span> <xsl:value-of select="@page" /> </span>

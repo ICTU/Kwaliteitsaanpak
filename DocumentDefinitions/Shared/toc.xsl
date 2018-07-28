@@ -47,7 +47,7 @@
               <xsl:value-of select="concat(position(), ' ', @title)"/>
             </xsl:if>
           </a>
-          <span> <xsl:value-of select="@page" /> </span>
+          <span> <xsl:value-of select="@page+1" /> </span>
         </div>
       </xsl:if>
       <ul>

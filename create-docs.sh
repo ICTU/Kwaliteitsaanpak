@@ -24,4 +24,3 @@ function generate {
 generate Full
 generate Generic
 python3 create-checklist.py
-

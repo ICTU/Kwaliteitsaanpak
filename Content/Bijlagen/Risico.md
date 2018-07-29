@@ -16,6 +16,8 @@ De taxonomie benoemt zelf geen risico's, maar is een middel om risico's te orden
 
 #### Risicotaxonomie
 
+De risicotaxonomie bestaat uit de volgende risicogebieden:
+
 1. Productontwikkeling
     1. Requirements
         1. Stabiliteit: de mate waarin requirements veranderen en de mate waarin veranderende requirements invloed hebben op de kwaliteit, de functionaliteit, de planning, het ontwerp, de integratie en het testen van het product.

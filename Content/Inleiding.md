@@ -8,7 +8,7 @@ ICTU werkt sinds 2010 met de agile softwareontwikkelaanpak Scrum en heeft deze a
 
 Met behulp van deze kwaliteitsaanpak heeft ICTU samen met andere overheden inmiddels enige tientallen projecten succesvol uitgevoerd. ICTU wil deze aanpak graag aanvullen met de ervaringen en geleerde lessen van andere organisaties en deze overdraagbaar maken en breder uitdragen. Daarom stelt ICTU deze kwaliteitsaanpak ter beschikking aan andere partijen en overheden die zelf maatwerksoftware ontwikkelen of dit laten doen.
 
-## Doelstellingen van de kwaliteitsaanpak
+## Doelstellingen
 
 De kwaliteitsaanpak heeft drie doelstellingen:
 
@@ -38,12 +38,8 @@ De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort
 
 Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rollen' om aan te geven wie verantwoordelijkheid draagt voor het uitvoeren van de maatregelen:
 
-1. Projectenorganisatie (bij ICTU: de afdeling ICTU Software Realisatie (ISR)),
-
-2. Hoofd projectenorganisatie (bij ICTU: afdelingshoofd ISR),
-
-3. Project (bij ICTU: project inclusief Scrum team(s)),
-
-4. Projectverantwoordelijke (bij ICTU: software delivery manager en/of projectleider),
-
-5. Kwaliteitsmanager (bij ICTU: een door de software delivery manager en/of projectleider aangestelde kwaliteitsmanager of de software delivery manager zelf).
+- Projectenorganisatie (bij ICTU: de afdeling ICTU Software Realisatie (ISR)),
+- Hoofd projectenorganisatie (bij ICTU: afdelingshoofd ISR),
+- Project (bij ICTU: project inclusief Scrum team(s)),
+- Projectverantwoordelijke (bij ICTU: software delivery manager en/of projectleider),
+- Kwaliteitsmanager (bij ICTU: een door de software delivery manager en/of projectleider aangestelde kwaliteitsmanager of de software delivery manager zelf).

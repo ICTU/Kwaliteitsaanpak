@@ -1,29 +1,20 @@
-body {
-   font-size: 11pt !important;
-   color: #000 !important;
-   font-family: 'Muli', sans-serif;
-   width:700px;
-   margin-left: auto;
-   margin-right: auto;
-   line-height: 150%;
-   counter-reset: section;
-}
+@import url("shared.css");
+@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 
-h1 {
-    margin-top:40px;
-    color: #D55FF8;
-    font-size:32px;
+body {
+    counter-reset: section;
 }
 
 h2::before {
     counter-increment: section;
-    content: counter(section) ". ";
+    content: counter(section) " ";
+    color: #2C64AD;
 }
 
 h2 {
-    margin-top:30px;
-    color: black;
-    font-size:18pt;
+    line-height: 150%;
+    color: #2C64AD;
+    font-size:42pt;
     font-weight:bold;
     page-break-before: always;
     counter-reset: subsection;
@@ -36,7 +27,7 @@ h3::before {
 
 h3 {
     margin-top:20px;
-    color: #D55FF8;
+    color: #DB1778;
     font-size:18pt;
     font-weight: bold;
 }
@@ -60,28 +51,43 @@ tr {
 th,td {
     text-align: left;
     vertical-align: top;
-    padding-bottom:5px;
-    background-color:#d0e1ec;
-    padding:5px;
+    background-color:#E6F6FD;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10pt;
 }
 
 td:not(:empty) {
-    background-color:#7dc4e5;
+    background-color:#83D0F5;
     text-align: center;
 }
 
 td:nth-child(1) {
-    background-color:#d0e1ec !important;
+    background-color:#E6F6FD !important;
     text-align: left !important;
+    font-weight: normal !important;
 }
 
-img[title='ictu-logo'] {
-    height:80px;
+ol {
+    list-style-type: none;
+    counter-reset: ol-item;
+    margin: 0;
+    padding: 0;
 }
 
-img[title='word-cloud'] {
-    width:95%;
-    padding-top:100px;
+ol > li {
+    display: table;
+    counter-increment: ol-item;
+    page-break-inside: avoid;
 }
 
+ol > li:before {
+    content: counters(ol-item, ".") " ";
+    display: table-cell;
+    padding-right: 1.8em;
+}
 
+.keep-together {
+    page-break-inside: avoid;
+}

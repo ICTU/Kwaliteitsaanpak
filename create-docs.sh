@@ -8,12 +8,11 @@ function generate {
     # Cover
     node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/cover.json
     node_modules/markdown-to-html/bin/markdown Generated/$1/cover.md -s /ka/DocumentDefinitions/$1/cover.css | \
-        sed 's/^<head>$/<head><meta charset="UTF-8">/' > Generated/$1/cover.html
+        PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/$1/cover.html
     # Body
     node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/document.json
     node_modules/markdown-to-html/bin/markdown Generated/$1/document.md -s /ka/DocumentDefinitions/$1/document.css | \
-        sed 's/^<head>$/<head><meta charset="UTF-8"><link rel="stylesheet" href="https:\/\/use.fontawesome.com\/releases\/v5.2.0\/css\/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK\/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">/' | \
-        sed 's/✔/<i class="fas fa-check"><\/i>/' | sed 's/᠆/-/' | PYTHONIOENCODING="UTF-8" python3 keep-together.py > Generated/$1/document.html
+        PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/$1/document.html
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html DocumentDefinitions/Shared/header.html --header-spacing 10 \
         --margin-bottom 30 --margin-left 30 --margin-right 30 --margin-top 30 \

@@ -14,10 +14,11 @@
         <style>
           @import url("/ka/DocumentDefinitions/Shared/cover.css");
           div {border-bottom: 1px dashed rgb(200,200,200);}  /* dashed line to connect titles and page numbers */
-          span {float: right;}  /* right align page number */
+          span.section-number {padding-right: 0.6em;}
+          span.page-number {float: right;}  /* right align page number */
           li {list-style: none;}  /* no bullets */
           ul {font-size: 14pt; padding-left: 0em;}
-          ul ul {font-size: 80%; padding-left: 1em;}  /* indent subsections and use smaller font */
+          ul ul {font-size: 80%; padding-left: 1.9em;}  /* indent subsections and use smaller font */
           ul ul ul {display: none;}  /* don't display subsubsections, works recursively */
           a {text-decoration:none; color: inherit;}  /* don't render links blue/underlined */
         </style>
@@ -32,6 +33,15 @@
     <li>
       <xsl:if test="(@title!='') and (@title!='Inhoudsopgave')">
         <div>
+          <xsl:variable name="depth" select="count(ancestor::*)"/>
+          <span class="section-number">
+            <xsl:if test="$depth = 2">
+              <xsl:value-of select="concat(position()-1, ' ')"/>
+            </xsl:if>
+            <xsl:if test="$depth > 2">
+              <xsl:value-of select="concat(position(), ' ')"/>
+            </xsl:if>
+          </span>
           <a>
             <xsl:if test="@link">
               <xsl:attribute name="href"><xsl:value-of select="@link"/></xsl:attribute>
@@ -39,15 +49,9 @@
             <xsl:if test="@backLink">
               <xsl:attribute name="name"><xsl:value-of select="@backLink"/></xsl:attribute>
             </xsl:if>
-            <xsl:variable name="depth" select="count(ancestor::*)"/>
-            <xsl:if test="$depth = 2">
-              <xsl:value-of select="concat(position()-1, ' ', @title)"/>
-            </xsl:if>
-            <xsl:if test="$depth > 2">
-              <xsl:value-of select="concat(position(), ' ', @title)"/>
-            </xsl:if>
+            <xsl:value-of select="@title"/>
           </a>
-          <span> <xsl:value-of select="@page+1" /> </span>
+          <span class="page-number"> <xsl:value-of select="@page+1" /> </span>
         </div>
       </xsl:if>
       <ul>

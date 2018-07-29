@@ -70,30 +70,21 @@ td:nth-child(1) {
 
 ol {
     list-style-type: none;
-    counter-reset: item;
+    counter-reset: ol-item;
     margin: 0;
     padding: 0;
 }
 
 ol > li {
     display: table;
-    counter-increment: item;
+    counter-increment: ol-item;
     page-break-inside: avoid;
 }
 
 ol > li:before {
-    content: counters(item, ".") " ";
+    content: counters(ol-item, ".") " ";
     display: table-cell;
     padding-right: 1.8em;
-}
-
-li ol > li {
-    page-break-inside: avoid;
-    margin: 0;
-}
-
-li ol > li:before {
-    content: counters(item, ".") " ";
 }
 
 .keep-together {

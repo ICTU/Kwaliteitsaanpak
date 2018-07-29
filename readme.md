@@ -8,10 +8,9 @@ This repository contains the source information and automation scripts for gener
 
 - For each guideline:
   - Create a folder under ./Content/Maatregelen
-  - Add 3 files to the folder
-    - Titel.md - guideline title
-    - Maatregel.md - guideline description and rationale
-    - ISR - guideline implementation at ICTU-ISR
+  - Add 2 files to the folder
+    - Maatregel.md - guideline title, description, and rationale
+    - ICTU.md - guideline implementation at ICTU-ISR
 - Add the maatregel to one or more document definitions
 
 ## Document definitions
@@ -24,12 +23,13 @@ This repository contains the source information and automation scripts for gener
   - cover.md - cover material (front page, change history)
   - cover.css - styling
   - cover.json - document configuration
+- Shared material such as headers, footers, and stylesheets are in the ./DocumentDefinitions/Shared folder
 - The script instructions for building a new Document Definition have to be added to ./create-docs.sh
 
 ## Generating the documentation (pdf and xlsx)
 
 - Clone this repository
 - Run "docker-compose up"
-  - The document patch version is updated (in packages.json and Content/Versie.md)
+  - The document patch version is updated (in package.json and Content/Versie.md)
   - The pdf versions of the documents are created in the root folder
   - An Excel spreadsheet with a self-assessment checklist is created in the root folder

@@ -95,3 +95,7 @@ li ol > li {
 li ol > li:before {
     content: counters(item, ".") " ";
 }
+
+.keep-together {
+    page-break-inside: avoid;
+}

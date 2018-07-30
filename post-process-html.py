@@ -9,19 +9,29 @@ class StateMachine:
 
     def __init__(self):
         self.__state = self.default
+        self.__in_bijlagen = False
 
     def default(self, line):
         """ While in the default state, look for headings we need to keep together with the first paragraph
             following it. """
+        if line.startswith('<h2 id="bijlagen">'):
+            self.__in_bijlagen = True
         if line.startswith(self.headings):
             self.__state = self.keep_together
             yield '<div class="keep-together">'
+            line = self.bijlagen(line)
         elif line == "<head>":
             self.__state = self.head
         yield line
 
+    def bijlagen(self, line):
+        if self.__in_bijlagen and line.startswith("<h3"):
+            line = line.replace("<h3", '<h3 class="bijlage"')
+        return line
+
     def keep_together(self, line):
         """ While in the keep-together state, look for the end of the paragraph. """
+        line = self.bijlagen(line)
         yield line
         if line.endswith("</p>"):
             self.__state = self.default

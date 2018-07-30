@@ -20,6 +20,15 @@ h2 {
     counter-reset: subsection;
 }
 
+#bijlagen::before {
+    content: "";  /* The Bijlagen section has no counter */
+}
+
+.bijlage::before {
+    counter-increment: subsection;
+    content: counter(subsection, upper-latin) " ";
+}
+
 h3::before {
     counter-increment: subsection;
     content: counter(section) "." counter(subsection) " ";

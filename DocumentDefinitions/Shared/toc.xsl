@@ -59,14 +59,20 @@
       <xsl:if test="(@title!='') and (@title!='Inhoudsopgave')">
         <div>
           <xsl:variable name="depth" select="count(ancestor::*)"/>
-            <xsl:if test="$depth = 2">
+            <xsl:if test="($depth = 2) and (@title!='Bijlagen')">
               <span class="chapter-number">
                 <xsl:value-of select="concat(position()-1, ' ')"/>
               </span>
             </xsl:if>
             <xsl:if test="$depth > 2">
               <span class="section-number">
-                <xsl:value-of select="concat(count(parent::*/preceding-sibling::*) + 1, '.', position(), ' ')"/>
+                <xsl:if test="../@title!='Bijlagen'">
+                  <xsl:value-of select="concat(count(parent::*/preceding-sibling::*) + 1, '.', position(), ' ')"/>
+                </xsl:if>
+                <xsl:if test="../@title='Bijlagen'">
+                  <xsl:variable name="alphapos" select="substring('ABCDEFGHIJKLMNOPQRSTUVWXYZ', position(), 1)"/>
+                  <xsl:value-of select="concat($alphapos, ' ')"/>
+                </xsl:if>
               </span>
             </xsl:if>
           <a>

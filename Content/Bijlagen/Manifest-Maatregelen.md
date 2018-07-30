@@ -5,7 +5,7 @@
 Deze kwaliteitsaanpak helpt opdrachtgevers van maatwerksoftware het belang van burgers en ambtenaren, die diensten aan burgers verlenen, voorop te zetten door:
 
 - voordat het project echt gaat bouwen goed na te denken over de mogelijke oplossingen en de kwaliteitseigenschappen die voor met name de burger van belang zijn. Denk aan gebruikskwaliteit, beveiliging, privacy, performance en toegankelijkheid ([M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-));
-- door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan ([M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)).
+- bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan ([M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)).
 
 #### We delen wat we goed kunnen, en gebruiken wat anderen beter doen
 
@@ -23,7 +23,7 @@ We gebruiken wat anderen beter doen door:
 
 #### Op zoek naar de juiste oplossing is het experiment soms de kortste weg
 
-De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om te leren. We delen de lessen geleerd in projecten via de kwaliteitsaanpak zelf ([M11: Beheer en onderhoud kwaliteitsaanpak en -normen](#beheer-en-onderhoud-kwaliteitsaanpak-en-normen-m11-))
+De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om uit te proberen en te leren. We delen de lessen geleerd in projecten via de kwaliteitsaanpak zelf ([M11: Beheer en onderhoud kwaliteitsaanpak en -normen](#beheer-en-onderhoud-kwaliteitsaanpak-en-normen-m11-))
 
 #### Wij geloven in agile werken bij de overheid
 
@@ -35,7 +35,7 @@ Door agile te werken ([M05: Iteratief en incrementeel ontwikkelproces](#iteratie
 
 #### Wij geven inzicht in de kwaliteit van ons werk
 
-Deze kwaliteitsaanpak helpt organisaties die maatwerksoftware ontwikkelen inzicht te geven aan de opdrachtgevers in de kwaliteit van het werk door:
+Deze kwaliteitsaanpak helpt organisaties die maatwerksoftware ontwikkelen inzicht te geven aan opdrachtgevers in de kwaliteit van het werk door:
 
-- een vaste verzameling documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen ([M01: Op te leveren producten](#op-te-leveren-producten-m01-));
+- documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen ([M01: Op te leveren producten](#op-te-leveren-producten-m01-));
 - continu de kwaliteit van het werk te meten en opdrachtgevers hier inzicht in te geven ([M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)).

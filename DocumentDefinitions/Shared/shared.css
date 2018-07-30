@@ -2,12 +2,11 @@ body {
     font-size: 11pt !important;
     color: #000 !important;
     font-family: 'Muli', sans-serif;
-    width:700px;
+    width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
 img[title='ictu-logo'] {
-    height:80px;
+    height: 80px;
 }
-

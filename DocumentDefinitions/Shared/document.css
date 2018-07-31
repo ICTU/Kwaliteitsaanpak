@@ -55,6 +55,12 @@ h5 {
     margin-bottom: -15px;  /* Remove vertical space between header and next element */
 }
 
+h5.risk {
+    background-color: #4C76BA;
+    color: white;
+    padding: 1em;
+}
+
 tr {
     page-break-inside: avoid;
 }

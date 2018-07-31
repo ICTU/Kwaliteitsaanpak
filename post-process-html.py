@@ -31,6 +31,8 @@ class StateMachine:
                 line = line.replace("<h3", '<h3 class="bijlage"')
             if line.startswith("<ol>"):
                 line = line.replace("<ol>", '<ol class="bijlage">')
+            if line.startswith("<h5") and "Risico: " in line:
+                line = line.replace("<h5", '<h5 class="risk"')
         return line
 
     def keep_together(self, line):

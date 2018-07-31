@@ -84,17 +84,17 @@ ol {
     list-style-type: none;
     counter-reset: ol-item;
     margin: 0;
+    margin-left: 3em;
     padding: 0;
 }
 
 ol > li:before {
     content: counters(ol-item, ".") " ";
-    display: table-cell;
-    width: 3em;
+    margin-left: -3em;
+    position: absolute;
 }
 
 ol > li {
-    display: table;
     counter-increment: ol-item;
     margin: 0;
     margin-top: 0.1em;
@@ -103,7 +103,7 @@ ol > li {
 li > ol {
     color: black;
     font-weight: normal;
-    margin-left: -3em;
+    margin-left: 0em;
 }
 
 ol.bijlage {
@@ -118,7 +118,7 @@ ul {
 ul > li {
     /* Since we can't easily give the bullet a different color than the text, we use a SVG. */
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="#4C76BA" cx="5" cy="5" r="3"/></svg>');
-    padding-left: 1.4em;
+    padding-left: 1.7em;
 }
 
 .keep-together {

@@ -1,45 +1,66 @@
 """ Script to ensure that headers are kept together with the next paragraph by inserting them into a div
 with the keep-together class. This class should have the page-breakinside: avoid CSS property. """
 
+import re
 import sys
 
 
 class StateMachine:
     headings = tuple("<h{nr}".format(nr=nr) for nr in range(3, 7))
 
-    def __process_line(self, *lines):
-        """ Process one ore more lines. Replace some specific unicode characters and add the UTF-8 charset
-            to the head. """
-        for line in lines:
-            line = line.replace("✔", '<i class="fas fa-check"></i>')  # Font Awesome Solid Checkmark
-            line = line.replace("᠆", "-")  # Replace soft hyphen with hard hyphen because soft hyphens are ignored
-            print(line)
+    def __init__(self):
+        self.__state = self.default
+        self.__in_bijlagen = False
 
     def default(self, line):
         """ While in the default state, look for headings we need to keep together with the first paragraph
             following it. """
+        if line.startswith('<h2 id="bijlagen">'):
+            self.__in_bijlagen = True
         if line.startswith(self.headings):
-            self.__process_line('<div class="keep-together">', line)
-            return self.keep_together
-        self.__process_line(line)
-        return self.head if line == "<head>" else self.default
+            self.__state = self.keep_together
+            yield '<div class="keep-together">'
+        elif line == "<head>":
+            self.__state = self.head
+        line = self.bijlagen(line)
+        yield line
+
+    def bijlagen(self, line):
+        if self.__in_bijlagen:
+            if line.startswith("<h3"):
+                line = line.replace("<h3", '<h3 class="bijlage"')
+            if line.startswith("<ol>"):
+                line = line.replace("<ol>", '<ol class="bijlage">')
+        return line
 
     def keep_together(self, line):
         """ While in the keep-together state, look for the end of the paragraph. """
+        line = self.bijlagen(line)
+        yield line
         if line.endswith("</p>"):
-            self.__process_line(line, "</div>")
-            return self.default
-        else:
-            self.__process_line(line)
-            return self.keep_together
+            self.__state = self.default
+            yield "</div>"
 
     def head(self, line):
         """ Add extra content to the head. """
-        self.__process_line('<meta charset="UTF-8">', line)
-        return self.default
+        self.__state = self.default
+        yield '<meta charset="UTF-8">'
+        yield line
+
+    def process_line(self, line):
+        """ Call the appropriate processor, depending on our current state. """
+        for line in self.__state(line):
+            yield line
+
+
+def replace_chars(line):
+    """ Replace some unicode characters with HTML. """
+    line = line.replace("✔", '<i class="fas fa-check"></i>')  # Font Awesome Solid Checkmark
+    line = line.replace("᠆", "-")  # Replace soft hyphen with hard hyphen because soft hyphens are ignored
+    return re.sub("<li>([^\(]{,30}):", r'<li><span class="label">\1</span>:', line)
 
 
 sm = StateMachine()
-process_line = sm.default
 for line in sys.stdin.readlines():
-    process_line = process_line(line.strip())
+    for processed_line in sm.process_line(line.strip()):
+        print(replace_chars(processed_line))

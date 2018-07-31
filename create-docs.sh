@@ -15,11 +15,11 @@ function generate {
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/$1/document.html
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html DocumentDefinitions/Shared/header.html --header-spacing 10 \
-        --margin-bottom 30 --margin-left 30 --margin-right 30 --margin-top 30 \
+        --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
         cover Generated/$1/cover.html toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
         Generated/$1/document.html ICTU-Kwaliteitsaanpak-$1.pdf
 }
 
 generate Full
-generate Generic
-python3 create-checklist.py
+#generate Generic
+#python3 create-checklist.py

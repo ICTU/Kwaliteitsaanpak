@@ -13,14 +13,39 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <style>
           @import url("/ka/DocumentDefinitions/Shared/cover.css");
-          div {border-bottom: 1px dashed rgb(200,200,200);}  /* dashed line to connect titles and page numbers */
-          span.section-number {padding-right: 0.6em;}
-          span.page-number {float: right;}  /* right align page number */
-          li {list-style: none;}  /* no bullets */
-          ul {font-size: 14pt; padding-left: 0em;}
-          ul ul {font-size: 80%; padding-left: 1.9em;}  /* indent subsections and use smaller font */
-          ul ul ul {display: none;}  /* don't display subsubsections, works recursively */
-          a {text-decoration:none; color: inherit;}  /* don't render links blue/underlined */
+          div {
+            border-bottom: 1px solid #AFAFAF;
+          }
+          span.chapter-number {
+            padding-right: 0.6em;
+            color: #4C76BA;  /* Blue */
+          }
+          span.section-number {
+            padding-right: 0.6em;
+            color: #6F6F6F;  /* Grey */
+          }
+          span.chapter-page-number {
+            float: right;  /* Right align page number */
+            color: #4C76BA;  /* Blue */
+          }
+          span.section-page-number {
+            float: right;  /* Right align page number */
+            color: #6F6F6F;  /* Grey */
+          }
+          ul {
+            font-size: 12pt;
+            font-weight: bold;
+            padding-left: 0em;
+            line-height: 200%;
+          }
+          ul ul {
+            padding-left: 1.6em;  /* Indent subsections */
+            font-weight: normal;
+            line-height: 175%;
+          }
+          ul ul ul {display: none;}  /* Don't display subsubsections, works recursively */
+          li {list-style: none;}  /* No bullets */
+          a {text-decoration:none; color: inherit;}  /* Don't render links blue/underlined */
         </style>
       </head>
       <body>
@@ -34,14 +59,22 @@
       <xsl:if test="(@title!='') and (@title!='Inhoudsopgave')">
         <div>
           <xsl:variable name="depth" select="count(ancestor::*)"/>
-          <span class="section-number">
-            <xsl:if test="$depth = 2">
-              <xsl:value-of select="concat(position()-1, ' ')"/>
+            <xsl:if test="($depth = 2) and (@title!='Bijlagen')">
+              <span class="chapter-number">
+                <xsl:value-of select="concat(position()-1, ' ')"/>
+              </span>
             </xsl:if>
             <xsl:if test="$depth > 2">
-              <xsl:value-of select="concat(position(), ' ')"/>
+              <span class="section-number">
+                <xsl:if test="../@title!='Bijlagen'">
+                  <xsl:value-of select="concat(count(parent::*/preceding-sibling::*) + 1, '.', position(), ' ')"/>
+                </xsl:if>
+                <xsl:if test="../@title='Bijlagen'">
+                  <xsl:variable name="alphapos" select="substring('ABCDEFGHIJKLMNOPQRSTUVWXYZ', position(), 1)"/>
+                  <xsl:value-of select="concat($alphapos, ' ')"/>
+                </xsl:if>
+              </span>
             </xsl:if>
-          </span>
           <a>
             <xsl:if test="@link">
               <xsl:attribute name="href"><xsl:value-of select="@link"/></xsl:attribute>
@@ -51,7 +84,12 @@
             </xsl:if>
             <xsl:value-of select="@title"/>
           </a>
-          <span class="page-number"> <xsl:value-of select="@page+1" /> </span>
+          <xsl:if test="$depth = 2">
+            <span class="chapter-page-number"> <xsl:value-of select="@page+1" /> </span>
+          </xsl:if>
+          <xsl:if test="$depth > 2">
+            <span class="section-page-number"> <xsl:value-of select="@page+1" /> </span>
+          </xsl:if>
         </div>
       </xsl:if>
       <ul>

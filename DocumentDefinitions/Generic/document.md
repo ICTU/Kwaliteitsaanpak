@@ -1,4 +1,6 @@
 #include "Content/Inleiding.md"
+#include "Content/Doelstellingen.md"
+#include "Content/Leeswijzer.md"
 
 ## Producten
 

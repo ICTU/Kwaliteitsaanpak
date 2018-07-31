@@ -9,9 +9,7 @@ Deze bijlage geeft eerst een overzicht van de taxonomie van risico's en vervolge
 De taxonomie benoemt zelf geen risico's, maar is een middel om risico's te ordenen. Naast het kunnen classificeren van risico's biedt het gebruik van de taxonomie de volgende voordelen:
 
 - Eenduidige terminologie: de taxonomie bestaat uit een lijst van begrippen met een vaste betekenis, die het mogelijk maakt om risico's te vergelijken en te classificeren.
-
 - Controle op volledigheid: voor elk element uit de taxonomie kan de vraag gesteld worden “bevat de kwaliteitsaanpak maatregelen voor risico's bij dit element?”
-
 - Betere rationale: door aan te geven op welke in de taxonomie genoemde risicogebieden een maatregel betrekking heeft is duidelijker wat de maatregel beoogt te bereiken.
 
 #### Risicotaxonomie

@@ -124,3 +124,7 @@ ul > li {
 .keep-together {
     page-break-inside: avoid;
 }
+
+span.label {
+    color: #2C64AD;
+}

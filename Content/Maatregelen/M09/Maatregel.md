@@ -8,8 +8,8 @@ Voor de belangrijkste verschillen beschrijft de projectverantwoordelijke:
 
 - het geconstateerde verschil,
 - reden voor het verschil,
-- in geval van acceptatie: waarom het verschil geaccepteerd wordt,
-- in geval van verbeteractie: planning om het verschil weg te werken.
+- in geval van acceptatie; waarom het verschil geaccepteerd wordt,
+- in geval van verbeteractie; planning om het verschil weg te werken.
 
 #### Rationale
 

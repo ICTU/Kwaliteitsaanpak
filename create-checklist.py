@@ -21,9 +21,9 @@ def process_m01(worksheet, row, contents, maatregel_format, status_format, toeli
     return process_submaatregel(worksheet, row, products, maatregel_format, status_format, toelichting_format)
 
 
-def process_m07(worksheet, row, contents, maatregel_format, status_format, toelichting_format):
+def process_m05_m07(worksheet, row, contents, maatregel_format, status_format, toelichting_format):
     """ Read the list of parts from the markdown list. """
-    parts = [line[2:].strip().strip(",") for line in contents if line.startswith("- ")]
+    parts = [line[2:].strip().strip(",.") for line in contents if line.startswith("- ")]
     return process_submaatregel(worksheet, row, parts, maatregel_format, status_format, toelichting_format)
 
 
@@ -65,8 +65,8 @@ def process_maatregel(workbook, worksheet, maatregel_folder, row):
     sub_status_format = workbook.add_format(dict(indent=1, **status_format_options))
     if maatregel_id == "M01":
         row = process_m01(worksheet, row, contents, sub_maatregel_format, sub_status_format, toelichting_format)
-    elif maatregel_id == "M07":
-        row = process_m07(worksheet, row, contents, sub_maatregel_format, sub_status_format, toelichting_format)
+    elif maatregel_id in ("M05", "M07"):
+        row = process_m05_m07(worksheet, row, contents, sub_maatregel_format, sub_status_format, toelichting_format)
     elif maatregel_id in ("M16", "M17"):
         row = process_m16_m17(worksheet, row, contents, sub_maatregel_format, sub_status_format, toelichting_format)
     return row

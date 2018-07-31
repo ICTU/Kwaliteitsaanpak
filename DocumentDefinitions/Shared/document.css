@@ -24,7 +24,7 @@ h2 {
     content: "";  /* The Bijlagen section has no counter */
 }
 
-.bijlage::before {
+h3.bijlage::before {
     counter-increment: subsection;
     content: counter(subsection, upper-latin) " ";
 }
@@ -46,14 +46,12 @@ h4 {
     color: black;
     font-size: 14pt;
     font-weight: bold;
+    margin-bottom: -15px;  /* Remove vertical space between header and next element */
 }
 
 h5 {
     font-size: 12pt;
     color: #B500C7;
-}
-
-h4, h5 {
     margin-bottom: -15px;  /* Remove vertical space between header and next element */
 }
 
@@ -89,16 +87,28 @@ ol {
     padding: 0;
 }
 
-ol > li {
-    display: table;
-    counter-increment: ol-item;
-    page-break-inside: avoid;
-}
-
 ol > li:before {
     content: counters(ol-item, ".") " ";
     display: table-cell;
-    padding-right: 1.8em;
+    width: 3em;
+}
+
+ol > li {
+    display: table;
+    counter-increment: ol-item;
+    margin: 0;
+    margin-top: 0.1em;
+}
+
+li > ol {
+    color: black;
+    font-weight: normal;
+    margin-left: -3em;
+}
+
+ol.bijlage {
+    font-weight: bold;
+    margin-top: 0.1em;
 }
 
 ul {

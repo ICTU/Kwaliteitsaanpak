@@ -19,14 +19,17 @@ class StateMachine:
         if line.startswith(self.headings):
             self.__state = self.keep_together
             yield '<div class="keep-together">'
-            line = self.bijlagen(line)
         elif line == "<head>":
             self.__state = self.head
+        line = self.bijlagen(line)
         yield line
 
     def bijlagen(self, line):
-        if self.__in_bijlagen and line.startswith("<h3"):
-            line = line.replace("<h3", '<h3 class="bijlage"')
+        if self.__in_bijlagen:
+            if line.startswith("<h3"):
+                line = line.replace("<h3", '<h3 class="bijlage"')
+            if line.startswith("<ol>"):
+                line = line.replace("<ol>", '<ol class="bijlage">')
         return line
 
     def keep_together(self, line):

@@ -22,8 +22,15 @@ h2 {
 h3 {
     margin-top:20px;
     color: #DB1778;
-    font-size: 18;
+    font-size: 18pt;
     font-weight: bold;
+}
+
+h4 {
+    margin-top: 10px;
+    color: black;
+    font-size: 12pt;
+    margin-bottom: -15px;  /* Remove vertical space between header and next element */
 }
 
 img[title='word-cloud'] {

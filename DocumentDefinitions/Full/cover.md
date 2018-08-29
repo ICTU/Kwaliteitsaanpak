@@ -6,5 +6,12 @@
 
 ![wordcloud](../../Content/Images/word-cloud.png "word-cloud")
 
+## Wijzigingsgeschiedenis
+
+### Algemeen
+
 #include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
+
+### ICTU-specifiek
+
 #include "Content/Wijzigingsgeschiedenis/ICTU.md"

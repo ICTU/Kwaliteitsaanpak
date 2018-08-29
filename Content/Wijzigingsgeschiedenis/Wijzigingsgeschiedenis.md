@@ -1,10 +1,6 @@
-## Wijzigingsgeschiedenis
-
-### Algemeen
-
 #### Versie 1.2.1, 29 augustus 2018
 
-- Geen wijzigingen.
+- Overbodig kopje in de wijzigingsgeschiedenis van de generieke versie verwijderd.
 
 #### Versie 1.2, 1 augustus 2018
 

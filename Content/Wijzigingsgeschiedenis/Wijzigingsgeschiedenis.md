@@ -2,6 +2,10 @@
 
 ### Algemeen
 
+#### Versie 1.2.1, 29 augustus 2018
+
+- Geen wijzigingen.
+
 #### Versie 1.2, 1 augustus 2018
 
 - M01: Op te leveren producten: Niet alle producten hoeven door het project te worden gemaakt.

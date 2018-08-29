@@ -1,5 +1,9 @@
 ### ICTU-specifiek
 
+#### Versie 1.2.1, 29 augustus 2018
+
+- M05: Sprint retrospective en sprint backlog toegevoegd.
+
 #### Versie 1.2, 1 augustus 2018
 
 - Manifest toegevoegd.

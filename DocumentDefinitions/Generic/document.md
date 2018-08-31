@@ -62,4 +62,5 @@
 
 ## Bijlagen
 
+#include "Generated/Generic/abbreviations.md"
 #include "Content/Bijlagen/Risico.md"

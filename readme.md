@@ -12,6 +12,7 @@ This repository contains the source information and automation scripts for gener
     - Maatregel.md - guideline title, description, and rationale
     - ICTU.md - guideline implementation at ICTU-ISR
 - Add the maatregel to one or more document definitions
+- Abbrevations in the form of "ABBR (Abbrevation)" are automatically added to the appendix "Afkortingen"
 
 ## Document definitions
 

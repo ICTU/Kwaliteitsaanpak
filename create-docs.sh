@@ -10,7 +10,9 @@ function generate {
     node_modules/markdown-to-html/bin/markdown Generated/$1/cover.md -s /ka/DocumentDefinitions/$1/cover.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/$1/cover.html
     # Body
-    node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/document.json
+    node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/document.json  # pass 1: generated input for abbreviations
+    cat Generated/$1/document.md | python3 create-abbreviations-appendix.py > Generated/$1/abbreviations.md   
+    node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/document.json  # pass 2: include up-to-date list of abbreviations
     node_modules/markdown-to-html/bin/markdown Generated/$1/document.md -s /ka/DocumentDefinitions/$1/document.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/$1/document.html
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \

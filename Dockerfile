@@ -1,6 +1,8 @@
-FROM node:latest
+FROM python:3.6-jessie
 
-RUN apt-get update && apt-get install -y libfreetype6 libfontconfig xfonts-75dpi xfonts-base python3 python3-pip
+RUN apt-get update && apt-get install -y libfreetype6 libfontconfig xfonts-75dpi xfonts-base 
+
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs
 
 ADD ./requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt

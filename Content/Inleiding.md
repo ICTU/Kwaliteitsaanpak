@@ -1,6 +1,6 @@
 ## Inleiding
 
-Met de verregaande automatisering en digitalisering wordt software meer en meer belangrijk, ook binnen de overheid. Naast het op orde hebben van zaken als licenties van standaardsoftware, ligt er een uitdaging als het gaat om de ontwikkeling van maatwerksoftware. Projecten waarin software wordt ontwikkeld of onderhouden kampen nog vaak met vertraging, budgetoverschrijding of een eindresultaat met te lage kwaliteit. Zo concludeerde de commissie-Elias bijvoorbeeld in haar eindrapport: 'De Rijksoverheid heeft haar ICT-projecten niet onder controle'.
+Met de verregaande automatisering en digitalisering wordt software meer en meer belangrijk, ook binnen de overheid. Naast het op orde hebben van zaken als licenties van standaardsoftware, ligt er een uitdaging als het gaat om de ontwikkeling van maatwerksoftware. Projecten waarin software wordt ontwikkeld of onderhouden kampen nog vaak met vertraging, budgetoverschrijding of een eindresultaat met te lage kwaliteit. Zo concludeerde de commissie-Elias bijvoorbeeld in haar eindrapport: 'De Rijksoverheid heeft haar ICT (Informatie- en communicatietechnologie)-projecten niet onder controle'.
 
 Eén van de fundamentele problemen is dat de risico's die inherent zijn aan softwareontwikkeling door organisaties nog onvoldoende worden erkend en gemitigeerd. Dit terwijl de risico's bij de ontwikkeling van maatwerksoftware, binnen het ICT-domein, inmiddels algemeen bekend zijn en er ook voor veel risico's passende maatregelen bestaan.
 

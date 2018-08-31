@@ -1,6 +1,7 @@
-#### Versie 1.2.1, 29 augustus 2018
+#### Versie 1.2.1, 31 augustus 2018
 
 - Overbodig kopje in de wijzigingsgeschiedenis van de generieke versie verwijderd.
+- Bijlage met afkortingen toegevoegd.
 
 #### Versie 1.2, 1 augustus 2018
 

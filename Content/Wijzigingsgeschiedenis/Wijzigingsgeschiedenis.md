@@ -1,7 +1,8 @@
-#### Versie 1.2.1, 31 augustus 2018
+#### Versie 1.3, [NOG NIET GERELEASED]
 
 - Overbodig kopje in de wijzigingsgeschiedenis van de generieke versie verwijderd.
 - Bijlage met afkortingen toegevoegd.
+- M10: Aanwezigen bij periodiek projectoverleg aangepast.
 
 #### Versie 1.2, 1 augustus 2018
 

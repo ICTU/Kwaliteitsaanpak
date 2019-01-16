@@ -25,6 +25,9 @@
 
 ## Processen
 
+#include "Content/Maatregelen/M29/Maatregel.md"
+#include "Content/Maatregelen/M29/ICTU.md"
+
 #include "Content/Maatregelen/M05/Maatregel.md"
 #include "Content/Maatregelen/M05/ICTU.md"
 

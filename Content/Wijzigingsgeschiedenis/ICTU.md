@@ -1,5 +1,6 @@
-#### Versie 1.2.1, 29 augustus 2018
+#### Versie 1.3, [NOG NIET GERELEASED]
 
+- M01: Wbni als mogelijke bron voor niet-functionele eisen toegevoegd.
 - M05: Iteratief en incrementeel ontwikkelproces: Sprint retrospective en sprint backlog toegevoegd.
 
 #### Versie 1.2, 1 augustus 2018

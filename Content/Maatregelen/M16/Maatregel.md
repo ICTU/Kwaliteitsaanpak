@@ -11,6 +11,7 @@ De projectenorganisatie stelt het gebruik van de volgende tools voor alle projec
 7. Een tool dat de configuratie van de applicatie en de omgeving, waarbinnen die applicatie draait, controleert op bekende en veelvoorkomende kwetsbaarheden.
 8. Een tool dat de door de applicatie gebruikte versies van externe bibliotheken, raamwerken of andersoortige bouwblokken scant op bekende kwetsbaarheden.
 9. Een tool dat de broncode geautomatiseerd beoordeelt op het voorkomen van bekende kwetsbare constructies.
+10. Een tool dat het testen van toegankelijkheid ondersteunt.
 
 #### Rationale
 

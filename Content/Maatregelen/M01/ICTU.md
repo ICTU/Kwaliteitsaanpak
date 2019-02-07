@@ -2,7 +2,9 @@
 
 ICTU hanteert de volgende documenten, templates en documentstandaarden voor softwarerealisatieprojecten:
 
-- De beschrijving van niet-functionele eisen is gebaseerd op ISO (International Organization for Standardization)-25010, de Wbni (Wet beveiliging netwerk- en informatiesystemen), de BIR (Baseline Informatiebeveiliging Rijksdienst) en de methode Grip op SSD (Secure software development) van het CIP (Centrum Informatiebeveiliging en Privacybescherming), en bevat een prioritering van de niet-functionele eisen. De beschrijving van niet-functionele eisen is gebaseerd op het ICTU NFE (Niet-functionele eisen)-template. De beschrijving bevat in ieder geval eisen aan toegangsbeveiliging, aan beheerfuncties, aan logging en aan het gewenste gedrag van de software bij uitval van infrastructurele diensten, zoals een log-server;
+- De beschrijving van niet-functionele eisen is gebaseerd op ISO (International Organization for Standardization)-25010, de Wbni (Wet beveiliging netwerk- en informatiesystemen), de BIR (Baseline Informatiebeveiliging Rijksdienst), de methode Grip op SSD (Secure software development) van het CIP (Centrum Informatiebeveiliging en Privacybescherming), en de WCAG 2.0, niveau A en AA. De beschrijving bevat een prioritering van de niet-functionele eisen. De beschrijving van niet-functionele eisen is gebaseerd op het ICTU NFE (Niet-functionele eisen)-template. De beschrijving bevat in ieder geval eisen aan toegangsbeveiliging, aan beheerfuncties, aan logging en aan het gewenste gedrag van de software bij uitval van infrastructurele diensten, zoals een log-server;
+
+- Overheidsorganisaties moeten een toegankelijkheidsverklaring op hun websites plaatsen. Indien gewenst ondersteunt ICTU bij het opstellen van de toegankelijkheidsverklaring;
 
 - De beschrijving van functionele eisen bestaat uit een geprioriteerde backlog met epics en/of user stories. De beschrijving bevat in ieder geval eisen voor (ondersteuning van) beheerfuncties die door de beoogd beheerder gesteld worden en voor logging, inclusief de (globale) inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen;
 

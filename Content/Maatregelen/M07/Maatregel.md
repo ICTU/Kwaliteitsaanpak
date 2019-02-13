@@ -8,13 +8,13 @@ Er is een geautomatiseerde continuous delivery pipeline die aantoonbaar correct 
 - kwaliteitscontroles,
 - performancetests (*),
 - beveiligingstests (*),
-- toegankelijkheidstests (**),
+- toegankelijkheidstests,
 - installatie van de software,
 - oplevering van het totale product, dus inclusief alle deliverables, in de vorm zoals bruikbaar voor en afgesproken met de opdrachtgever.
 
 (*) Idealerwijs voert de geautomatiseerde continuous delivery pipeline ook performance tests en beveiligingstests uit. Vanwege de doorlooptijden van tests (met name van duurtesten) en licenties van testtools is dat niet altijd haalbaar. In dat geval vinden de performance tests en beveiligingstests periodiek en zo vaak mogelijk plaats, bij voorkeur dagelijks.
 
-(**) Voor het deel van de toegankelijkheidseisen dat geautomatiseerd getest kan worden.
+Niet alle testen en controles kunnen altijd geautomatiseerd worden uitgevoerd. Denk aan kwaliteitscontroles op architectuurbeslissingen of het testen van toegankelijkheidseisen. Waar mogelijk wordt wel een groot mogelijk deel van de testen en controles geautomatiseerd en als onderdeel van de pipeline uitgevoerd.
 
 De projectenorganisatie voorziet in mensen en hulpmiddelen, zodat projecten deze pipeline kunnen toepassen. Projecten zijn verantwoordelijk voor de correcte werking van de pipeline.
 

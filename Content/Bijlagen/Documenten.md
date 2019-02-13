@@ -22,7 +22,7 @@ De beschrijving van functionele eisen moet expliciet aandacht besteden aan de do
 
 Niet-functionele eisen (requirements) specificeren criteria om het functioneren van het systeem te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Deze niet-functionele requirements kunnen verder onderverdeeld worden in requirements betreffende performance, onderhoud, veiligheid, betrouwbaarheid, of menig ander aspect.
 
-ICTU gebruikt in ieder geval ISO-25010, het normenkader van de Baseline Informatiebeveiliging Rijksdienst (BIR:2017) en de methode Grip op SSD (Secure software development) van het CIP (Centrum Informatiebeveiliging en Privacybescherming) om de niet-functionele requirements te structureren en inventariseren. De niet-functionele eisen zijn geprioriteerd.
+ICTU gebruikt in ieder geval ISO-25010, het normenkader van de Baseline Informatiebeveiliging Rijksdienst (BIR:2017), de methode Grip op SSD (Secure software development) van het CIP (Centrum Informatiebeveiliging en Privacybescherming) en de Web Content Accessibility Guidelines (WCAG) versie 2.1 van het W3C om de niet-functionele requirements te structureren en inventariseren. De niet-functionele eisen zijn geprioriteerd.
 
 De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties, aan logging en aan het gewenste gedrag van de te realiseren software bij uitval van infrastructurele diensten zoals een log server. Niet-functionele eisen op deze vlakken kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door deze eisen expliciet in de voorfase te benoemen wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.
 

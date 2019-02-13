@@ -2,7 +2,9 @@
 
 - Overbodig kopje in de wijzigingsgeschiedenis van de generieke versie verwijderd.
 - Bijlage met afkortingen toegevoegd.
+- M07: Toegankelijkheidstests toegevoegd.
 - M10: Aanwezigen bij periodiek projectoverleg aangepast.
+- M16: Een tool voor het testen van toegankelijkheid toegevoegd.
 
 #### Versie 1.2, 1 augustus 2018
 

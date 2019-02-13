@@ -10,4 +10,5 @@ ICTU gebruikt hiervoor de volgende tools:
 6. Kwaliteitssysteem (HQ),
 7. OpenVAS (Vulnerability Assessment System) en OWASP (Open Web Application Security Project) ZAP (Zed Attack Proxy),
 8. OWASP Dependency Checker,
-9. Checkmarx.
+9. Checkmarx,
+10. Axe.

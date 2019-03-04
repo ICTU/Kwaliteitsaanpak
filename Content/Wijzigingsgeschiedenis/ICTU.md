@@ -1,6 +1,6 @@
 #### Versie 1.3, [NOG NIET GERELEASED]
 
-- M01: Wbni en WCAG 2.1 als bron voor niet-functionele eisen toegevoegd. Toegankelijkheidsverklaring als mogelijke deliverable genoemd.
+- M01: Wbni, EN 301 549 en WCAG 2.1 als bron voor niet-functionele eisen toegevoegd. Toegankelijkheidsverklaring als mogelijke deliverable genoemd.
 - M05: Iteratief en incrementeel ontwikkelproces: Sprint retrospective en sprint backlog toegevoegd.
 - M16: Axe toegevoegd.
 - WCAG 2.1 toegevoegd aan bijlage C: Documenten voor M01.

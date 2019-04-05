@@ -1,4 +1,4 @@
-#### Versie 1.3, [NOG NIET GERELEASED]
+#### Versie 1.3, 5 april 2019
 
 - Overbodig kopje in de wijzigingsgeschiedenis van de generieke versie verwijderd.
 - Bijlage met afkortingen toegevoegd.

@@ -119,7 +119,7 @@ Maatregelen:
 - [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-)
 - [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
 - [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
-- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-)
+- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
 - [M15: Open source tools](#open-source-tools-m15-)
 
 Classificatie:
@@ -134,7 +134,7 @@ Maatregelen:
 - [M04: Geautomatiseerde regressietests](#geautomatiseerde-regressietests-m04-)
 - [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
 - [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
-- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-)
+- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
 - [M17: Snel beschikbare tools](#snel-beschikbare-tools-m17-)
 - [M18: Ondersteuning verplichte tools](#ondersteuning-verplichte-tools-m18-)
 - [M19: Afgeschermde digitale omgeving](#afgeschermde-digitale-omgeving-m19-) - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
@@ -152,7 +152,7 @@ Maatregelen:
 - [M06: Frequente meting](#frequente-meting-m06-)
 - [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
 - [M08: Technische schuld](#technische-schuld-m08-)
-- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-)
+- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
 - [M15: Open source tools](#open-source-tools-m15-)
 - [M17: Snel beschikbare tools](#snel-beschikbare-tools-m17-)
 - [M18: Ondersteuning verplichte tools](#ondersteuning-verplichte-tools-m18-)
@@ -176,7 +176,7 @@ Maatregelen:
 - [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-)
 - [M06: Frequente meting](#frequente-meting-m06-)
 - [M08: Technische schuld](#technische-schuld-m08-)
-- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-)
+- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
 - [M28: Self-assessment](#self-assessment-m28-)
 
 Classificatie:
@@ -207,7 +207,7 @@ Maatregelen:
 - [M06: Frequente meting](#frequente-meting-m06-)
 - [M08: Technische schuld](#technische-schuld-m08-)
 - [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
-- [M14: Projecten splitsen in een voorbereidingsfase en een realisatiefase](#projecten-splitsen-in-een-voorbereidingsfase-en-een-realisatiefase-m14-) - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
+- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-) - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
 - [M28: Self-assessment](#self-assessment-m28-)
 
 Classificatie:

@@ -111,10 +111,9 @@ class DocumentStructure:
                 yield pathlib.Path(line.strip().strip('# include "').strip('/Maatregel.md"'))
 
 
-def create_checklist():
-    """ Create the spreadsheet with the checklist. """
-    workbook = xlsxwriter.Workbook('ICTU-Kwaliteitsaanpak-Checklist.xlsx')
-    worksheet = workbook.add_worksheet()
+def create_checklist(workbook):
+    """ Create the worksheet  with the self-assessment checklist. """
+    worksheet = workbook.add_worksheet('Self-assessment checklist')
     with open("Content/Versie.md") as version_file:
         version = version_file.read().strip()
 
@@ -150,8 +149,31 @@ def create_checklist():
     status_column = 2
     write_assessment_choices(workbook, worksheet, maatregel_start_row, row, status_column)
     worksheet.freeze_panes(maatregel_start_row, status_column)
+
+
+def create_action_list(workbook):
+    """ Create a worksheet with room for actions from the self-assessment. """
+    worksheet = workbook.add_worksheet('Self-assessment verbeteracties')
+    header_format = workbook.add_format(dict(text_wrap=True, font_size=14, bold=True, bg_color="#B3D6C9"))
+    worksheet.merge_range(
+        "A1:D1",
+        "Onderstaande actielijst kan gebruikt worden om acties n.a.v. de self-assessment bij te houden.", 
+        header_format)
+    worksheet.set_row(0, 30)
+    worksheet.set_row(1, 30)
+    for column, (header, width) in enumerate([("Datum", 12), ("Actie", 70),
+                                              ("Status", 20), ("Toelichting", 70)]):
+        worksheet.write(1, column, header, header_format)
+        worksheet.set_column('{0}:{0}'.format("ABCD"[column]), width)
+
+
+def create_workbook():
+    """ Create the workbook with the different worksheets. """
+    workbook = xlsxwriter.Workbook('ICTU-Kwaliteitsaanpak-Checklist.xlsx')
+    create_checklist(workbook)
+    create_action_list(workbook)
     workbook.close()
 
 
 if __name__ == "__main__":
-    create_checklist()
+    create_workbook()

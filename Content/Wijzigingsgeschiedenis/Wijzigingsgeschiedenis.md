@@ -1,6 +1,6 @@
-#### Versie 1.3.1, 1 mei 2019
+#### Versie 2.0, 14 augustus 2019
 
-- M14: Maqatregeltitel ingekort zodat paginanummers in de inhoudsopgave niet overlappen.
+- M14: Maatregeltitel ingekort zodat paginanummers in de inhoudsopgave niet overlappen.
 
 #### Versie 1.3, 5 april 2019
 

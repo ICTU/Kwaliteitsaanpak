@@ -1,6 +1,6 @@
 #### Versie 2.0, 14 augustus 2019
 
-- Todo
+- Actielijst toegevoegd aan self-assessment spreadsheet.
 
 #### Versie 1.3.1, 1 mei 2019
 

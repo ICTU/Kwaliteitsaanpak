@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    parallelism: 1
+    steps:
+      - checkout
+      - run:
+          docker-compose up
+      - store_artifacts:
+          path: /home/circleci/project/ICTU-Kwaliteitsaanpak-*
+

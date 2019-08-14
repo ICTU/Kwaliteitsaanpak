@@ -8,7 +8,7 @@ ICTU ondersteunt hiervoor de volgende tools:
 4. GitLab en TFS,
 5. Release Manager,
 6. Reporting (ontwikkeld met behulp van Business Intelligence Reporting Tool, BIRT),
-7. HQ en Quality Time,
+7. HQ en Quality-time,
 8. OpenVAS (Vulnerability Assessment System) en OWASP (Open Web Application Security Project) ZAP (Zed Attack Proxy),
 9. OWASP Dependency Checker,
 10. Checkmarx,

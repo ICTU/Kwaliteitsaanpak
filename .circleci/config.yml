@@ -9,4 +9,8 @@ jobs:
           docker-compose up
       - store_artifacts:
           path: ICTU-Kwaliteitsaanpak-Full.pdf
+      - store_artifacts:
+          path: ICTU-Kwaliteitsaanpak-Generic.pdf
+      - store_artifacts:
+          path: ICTU-Kwaliteitsaanpak-Checklist.xlsx
 

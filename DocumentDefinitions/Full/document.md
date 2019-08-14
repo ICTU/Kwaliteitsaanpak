@@ -60,6 +60,9 @@
 #include "Content/Maatregelen/M12/Maatregel.md"
 #include "Content/Maatregelen/M12/ICTU.md"
 
+#include "Content/Maatregelen/M29/Maatregel.md"
+#include "Content/Maatregelen/M29/ICTU.md"
+
 #include "Content/Maatregelen/M14/Maatregel.md"
 #include "Content/Maatregelen/M14/ICTU.md"
 

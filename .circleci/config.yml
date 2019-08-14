@@ -7,7 +7,6 @@ jobs:
       - checkout
       - run:
           docker-compose up
-          ls
       - store_artifacts:
           path: ICTU-Kwaliteitsaanpak-Full.pdf
 

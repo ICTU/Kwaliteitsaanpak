@@ -3,6 +3,7 @@ npm i
 npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
+# generate <document definition folder> <name of document output without extension>
 function generate {
     mkdir -p Generated/$1
     # Cover
@@ -25,4 +26,5 @@ function generate {
 generate Full ICTU-Kwaliteitsaanpak-Full
 generate Generic ICTU-Kwaliteitsaanpak-Generic
 generate Templates/Kwaliteitsplan Template-Kwaliteitsplan
+
 python3 create-checklist.py

@@ -1,6 +1,7 @@
 #include "Content/Templates/Historie.md"
 #include "Content/Templates/Kwaliteitsplan/Inleiding.md"
 #include "Content/Templates/Kwaliteitsplan/Leeswijzer.md"
+#include "Content/Templates/Terminologie.md"
 
 ## Bijlagen
 

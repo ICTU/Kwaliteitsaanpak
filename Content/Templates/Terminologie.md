@@ -1,5 +1,7 @@
-## Terminologie en afkortingen
+### Terminologie en afkortingen
 
+| Term/afkorting | Toelichting |
+|----------------|-------------|
 | DoD | Definition of Done |
 | DoR | Definition of Ready |
 | GFO | globaal functioneel ontwerp |

@@ -1,3 +1,3 @@
 ### Manifest
 
-Test test test #include "Content/Manifest-tekst.md"
+#include "Content/Manifest-tekst.md"

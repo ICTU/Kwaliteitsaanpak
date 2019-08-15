@@ -1,6 +1,6 @@
 ![ICTU](../../../Content/Images/ICTU.png "ictu-logo")
 
-#include "Content/Templates/Kwaliteitsplan/Documentnaam.md"
+#Kwaliteitsplan
 **{Projectnaam}**
 Versie {versienummer}
 

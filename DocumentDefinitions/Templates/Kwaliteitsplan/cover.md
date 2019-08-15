@@ -1,6 +1,6 @@
 ![ICTU](../../../Content/Images/ICTU.png "ictu-logo")
 
-#Kwaliteitsplan
+# Kwaliteitsplan
 **{Projectnaam}**
 Versie {versienummer}
 

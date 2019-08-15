@@ -61,7 +61,7 @@ def replace_chars(line):
     """ Replace some unicode characters with HTML. """
     line = line.replace("✔", '<i class="fas fa-check"></i>')  # Font Awesome Solid Checkmark
     line = line.replace("᠆", "-")  # Replace soft hyphen with hard hyphen because soft hyphens are ignored
-    return re.sub("<li>([^\(]{,30}):", r'<li><span class="label">\1</span>:', line)
+    return re.sub("<li>([^\(]{,30}):", '<li><span class="label">\1</span>:', line)
 
 
 sm = StateMachine()

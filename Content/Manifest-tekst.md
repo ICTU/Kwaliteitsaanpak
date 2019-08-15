@@ -1,4 +1,4 @@
-ICTU werkt aan een betere digitale overheid. Met deze kwaliteitsaanpak willen we er aan bijdragen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan te brengen. In ons werk zijn we de volgende uitgangspunten gaan waarderen:
+ICTU werkt aan een betere digitale overheid. Met onze Kwaliteitsaanpak ICTU Software Realisatie willen we eraan bijdragen het niveau van software-ontwikkeling bij de Nederlandse overheid naar een hoger plan te brengen. In ons werk zijn we de volgende uitgangspunten gaan waarderen:
 
 - **Het belang van de burger staat voorop.**
   Omdat burgers en ambtenaren die diensten verlenen aan burgers, de belangrijkste afnemers van ons werk zijn.

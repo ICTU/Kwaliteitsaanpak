@@ -1,5 +1,7 @@
-## Historie
+Historie
+--------
 
 (Documenthistorie)
 
-Template versie: #include "Content/Versie.md"
+*Template versie*
+#include "Content/Versie.md"

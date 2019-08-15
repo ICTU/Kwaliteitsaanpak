@@ -1,6 +1,6 @@
 ### Continu voldoen aan kwaliteitsnormen (M02)
 
-Producten voldoen zo snel mogelijk vanaf de start van een project aan de door het project en projectenorganisatie vastgestelde kwaliteitsnormen. De kwaliteit van producten die nog niet zijn afgerond of nog niet aan de normen voldoen, wordt door het project bewaakt. Herstel van de kwaliteit wordt planmatig opgepakt (zie ook [M08: Technische schuld](#technische-schuld-m08-)).
+@Maatregel@Producten voldoen zo snel mogelijk vanaf de start van een project aan de door het project en projectenorganisatie vastgestelde kwaliteitsnormen. De kwaliteit van producten die nog niet zijn afgerond of nog niet aan de normen voldoen, wordt door het project bewaakt. Herstel van de kwaliteit wordt planmatig opgepakt (zie ook [M08: Technische schuld](#technische-schuld-m08-)).
 
 De kwaliteitsnormen zijn in deze versie van de kwaliteitsaanpak nog niet opgenomen.
 

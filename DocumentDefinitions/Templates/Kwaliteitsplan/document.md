@@ -4,5 +4,5 @@
 
 ## Bijlagen
 
-#include "Content/Templates/Bijlage-Manifest.md"
-#include "Content/Templates/Bijlage-Kwaliteitsaanpak.md"
+#include "Content/Templates/Bijlagen/Manifest.md"
+#include "Content/Templates/Bijlagen/Kwaliteitsaanpak.md"

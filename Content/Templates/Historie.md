@@ -1,5 +1,4 @@
-Historie
---------
+**Historie**
 
 (Documenthistorie)
 

@@ -1,5 +1,7 @@
 ### Terminologie en afkortingen
 
+De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in ICTU-documentatie.
+
 | Term/afkorting | Toelichting |
 |:---------------|:------------|
 | DoD | Definition of Done |

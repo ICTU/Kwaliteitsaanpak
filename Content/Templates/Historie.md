@@ -5,7 +5,6 @@
 | {versie} | {naam} | {datum} | {concept/definitief} | {opmerkingen} |
 |          |                  |        |        |                                  |
 
-
 **Vereiste goedkeuringen**
 
 | Functie/rol                 | Naam                          | Handtekening                 | Datum          | Versie   |

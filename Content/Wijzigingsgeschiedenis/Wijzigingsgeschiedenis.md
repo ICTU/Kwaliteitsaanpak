@@ -1,6 +1,7 @@
 #### Versie 2.0, 14 augustus 2019
 
 - M02, M08 en M16: Naast HQ ook Quality-time vermeld.
+- M08: Toegevoegd dat projecten regelmatig en voldoende tijd besteden aan het voorkomen en oplossen van technische schuld.
 - M16: Versiebeheer toegevoegd.
 - M29: Nieuwe maatregel voor het verantwoord starten van projecten.
 - Actielijst toegevoegd aan self-assessment spreadsheet.

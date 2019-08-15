@@ -19,9 +19,10 @@ function generate {
         --header-html DocumentDefinitions/Shared/header.html --header-spacing 10 \
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
         cover Generated/$1/cover.html toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-        Generated/$1/document.html ICTU-Kwaliteitsaanpak-$1.pdf
+        Generated/$1/document.html $2.pdf
 }
 
-generate Full
-generate Generic
+generate Full ICTU-Kwaliteitsaanpak-Full
+generate Generic ICTU-Kwaliteitsaanpak-Generic
+generate Templates/Kwaliteitsplan Template-Kwaliteitsplan
 python3 create-checklist.py

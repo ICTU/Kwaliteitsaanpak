@@ -4,4 +4,4 @@
 
 ## Bijlagen
 
-#include "Content/Templates/Standaard-Bijlagen.md"
+#include "Content/Templates/Bijlagen/Standaard-Bijlagen.md"

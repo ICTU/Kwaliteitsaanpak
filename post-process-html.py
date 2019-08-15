@@ -17,6 +17,8 @@ class StateMachine:
             following it. """
         if line.startswith('<h2 id="bijlagen">'):
             self.__in_bijlagen = True
+        if "@Maatregel@" in line:
+            line = '<div class="maatregel">' + line + '</div>'
         if line.startswith(self.headings):
             self.__state = self.keep_together
             yield '<div class="keep-together">'

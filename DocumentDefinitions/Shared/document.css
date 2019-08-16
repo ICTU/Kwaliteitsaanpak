@@ -136,6 +136,12 @@ span.label {
 }
 
 .maatregel {
-    background-color: rgb(230, 176, 214);
+    background-color: rgb(231, 209, 225);
+    padding: 1em;
+}
+
+.risk {
+    background-color: #4C76BA;
+    color: white;
     padding: 1em;
 }

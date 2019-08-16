@@ -15,12 +15,10 @@ class StateMachine:
     def default(self, line):
         """ While in the default state, look for headings we need to keep together with the first paragraph
             following it. """
+        line = line.replace("@{", '<div class="maatregel">')
+        line = line.replace("}@", '</div>')
         if line.startswith('<h2 id="bijlagen">'):
             self.__in_bijlagen = True
-        if "@{" in line:
-            line = line.replace("@{", '<div class="maatregel">')
-        if "}@" in line:
-            line = line.replace("}@", '</div>')
         if line.startswith(self.headings):
             self.__state = self.keep_together
             yield '<div class="keep-together">'

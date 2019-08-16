@@ -26,5 +26,6 @@ function generate {
 generate Full ICTU-Kwaliteitsaanpak-Full
 generate Generic ICTU-Kwaliteitsaanpak-Generic
 generate Templates/Kwaliteitsplan Template-Kwaliteitsplan
+generate Templates/NFE Template-Niet-Functionele-Eisen
 
 python3 create-checklist.py

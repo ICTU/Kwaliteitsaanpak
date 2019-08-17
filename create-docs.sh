@@ -3,6 +3,7 @@ npm i
 npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
+# Genereer het document genaamd $2.pdf in folder $1
 # generate <document definition folder> <name of document output without extension>
 function generate {
     mkdir -p Generated/$1
@@ -16,6 +17,7 @@ function generate {
     node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/document.json  # pass 2: include up-to-date list of abbreviations
     node_modules/markdown-to-html/bin/markdown Generated/$1/document.md -s /ka/DocumentDefinitions/$1/document.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/$1/document.html
+    # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html DocumentDefinitions/Shared/header.html --header-spacing 10 \
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \

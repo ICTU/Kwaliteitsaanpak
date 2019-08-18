@@ -1,6 +1,6 @@
 ### Open source tools (M15)
 
-Bij de selectie van tools ter ondersteuning van de projectuitvoering  geeft de projectenorganisatie voorkeur aan open source tools.
+#include "Content/Maatregelen/M15/Beschrijving.md"
 
 #### Rationale
 

@@ -26,8 +26,8 @@ class StateMachine:
         yield line
 
     def styling(self, line):
-        line = line.replace("@{", '<div class="maatregel">')
-        line = line.replace("}@", '</div>')
+        line = line.replace("<p>@{", '<p class="maatregel">')
+        line = line.replace("}@", '')
         line = self.bijlagen(line)
         return line
 

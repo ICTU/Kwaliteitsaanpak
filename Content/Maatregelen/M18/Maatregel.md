@@ -1,6 +1,6 @@
 ### Ondersteuning verplichte tools (M18)
 
-De projectenorganisatie zorgt voor technische en functionele ondersteuning aan projecten bij het gebruik van alle verplichte tools.
+#include "Content/Maatregelen/M18/Beschrijving.md"
 
 #### Rationale
 

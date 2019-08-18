@@ -12,9 +12,11 @@ jobs:
       - store_artifacts:
           path: ICTU-Kwaliteitsaanpak-Generic.pdf
       - store_artifacts:
+          path: ICTU-Kwaliteitsaanpak-Checklist.xlsx
+      - store_artifacts:
+          path: Generated/Full/document.html
+      - store_artifacts:
           path: Template-Kwaliteitsplan.pdf
       - store_artifacts:
           path: Template-Niet-Functionele-Eisen.pdf
-      - store_artifacts:
-          path: ICTU-Kwaliteitsaanpak-Checklist.xlsx
 

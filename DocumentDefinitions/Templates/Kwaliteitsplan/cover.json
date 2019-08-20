@@ -1,4 +1,4 @@
 {
 	"build" : "Generated/Templates/Kwaliteitsplan/cover.md",
-  "files" : ["DocumentDefinitions/Templates/Kwaliteitsplan/cover.md"]
+  "files" : ["Generated/Templates/Kwaliteitsplan/cover-without-includes.md"]
 }

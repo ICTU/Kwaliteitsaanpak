@@ -1,3 +1,5 @@
 ### Kwaliteitsaanpak ICTU Software Realisatie
 
-Kwaliteitsaanpak ICTU is blabla.
+#include "Content/Inleiding-tekst.md"
+
+#include "Content/Doelstellingen-tekst.md"

@@ -20,4 +20,4 @@ jobs:
       - store_artifacts:
           path: Template-Niet-Functionele-Eisen.pdf
       - store_artifacts:
-          path: Generiek-Template.pdf
+          path: Template-Generiek.pdf

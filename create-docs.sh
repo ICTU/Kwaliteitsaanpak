@@ -32,14 +32,17 @@ function generate {
 # generate-template <document definition folder> <name of document output without extension> <title>
 function generate-template {
     mkdir -p Generated/Templates/$1
+    # Initialize md files
+    echo "{	\"build\" : \"Generated/Templates/$1/cover.md\", \"files\" : [\"Generated/Templates/$1/cover-without-includes.md\"] }" > Generated/Templates/$1/cover.json
+    echo "{	\"build\" : \"Generated/Templates/$1/document.md\", \"files\" : [\"DocumentDefinitions/Templates/$1/document.md\"] }" > Generated/Templates/$1/document.json
     # Cover
     sed s/{{TITLE}}/"$3"/g DocumentDefinitions/Templates/Shared/cover.md > Generated/Templates/$1/cover-without-includes.md
-    node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/Templates/$1/cover.json
+    node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/cover.json
     node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/cover.md \
         -s /ka/DocumentDefinitions/Shared/cover.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/cover.html
     # Body
-    node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/Templates/$1/document.json
+    node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/document.json
     node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/document.md \
         -s /ka/DocumentDefinitions/Shared/document.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/document.html

@@ -44,7 +44,7 @@ function generate-template {
         -s /ka/DocumentDefinitions/Shared/document.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/document.html
     # Create header
-    sed s/{{TITLE}}/$3/g DocumentDefinitions/Shared/header.html > Generated/Templates/$1/header.html
+    sed s/{{TITLE}}/"$3"/g DocumentDefinitions/Shared/header.html > Generated/Templates/$1/header.html
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html Generated/Templates/$1/header.html --header-spacing 10 \
@@ -58,6 +58,6 @@ generate Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisa
 generate Generic ICTU-Kwaliteitsaanpak-Generic "Kwaliteitsaanpak Software Realisatie"
 generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
-generate-template Template Generiek-Template "Generiek Template"
+generate-template Template Template-Generiek "Generiek Template"
 
 python3 create-checklist.py

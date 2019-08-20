@@ -3,7 +3,7 @@ npm i
 npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
-# Generate the document $2.pdf in folder $1
+# Generate into folder $1 the document $2.pdf titled $3
 # generate <document definition folder> <name of document output without extension>
 function generate {
     mkdir -p Generated/$1
@@ -18,7 +18,7 @@ function generate {
     node_modules/markdown-to-html/bin/markdown Generated/$1/document.md -s /ka/DocumentDefinitions/$1/document.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/$1/document.html
     # Create header
-    sed s/{{TITLE}}/$2/g DocumentDefinitions/Shared/header.html > Generated/$1/header.html
+    sed s/{{TITLE}}/$3/g DocumentDefinitions/Shared/header.html > Generated/$1/header.html
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html Generated/$1/header.html --header-spacing 10 \
@@ -27,9 +27,9 @@ function generate {
         Generated/$1/document.html $2.pdf
 }
 
-generate Full ICTU-Kwaliteitsaanpak-Full
-generate Generic ICTU-Kwaliteitsaanpak-Generic
-generate Templates/Kwaliteitsplan Template-Kwaliteitsplan
-generate Templates/NFE Template-Niet-Functionele-Eisen
+generate Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"
+generate Generic ICTU-Kwaliteitsaanpak-Generic "Kwaliteitsaanpak Software Realisatie"
+generate Templates/Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
+generate Templates/NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
 
 python3 create-checklist.py

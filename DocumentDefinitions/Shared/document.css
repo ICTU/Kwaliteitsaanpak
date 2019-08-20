@@ -81,7 +81,7 @@ td:not(:empty) {
 }
 
 td:nth-child(1) {
-    background-color: #E6F6FD !important;
+    background-color: #83D0F5 !important;
     text-align: left !important;
     font-weight: normal !important;
 }

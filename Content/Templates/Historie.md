@@ -3,7 +3,6 @@
 | Versie   | Auteur           | Datum  | Status | Opmerkingen                      |
 |:---------|:-----------------|:-------|:-------|:---------------------------------|
 | {versie} | {naam} | {datum} | {concept/definitief} | {opmerkingen} |
-|          |                  |        |        |                                  |
 
 **Vereiste goedkeuringen**
 

@@ -21,7 +21,7 @@
                     }
                 }
                 // Set the header and the page number so that the page number is on the outside
-                const title = "[[TITLE]]";
+                const title = "{{TITLE}}";
                 const page = vars["page"];
                 document.getElementById("left").textContent = page % 2 == 0 ? page : title;
                 document.getElementById("right").textContent = page % 2 == 0 ? title : page;

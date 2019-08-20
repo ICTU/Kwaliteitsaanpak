@@ -136,7 +136,8 @@ span.label {
 }
 
 .maatregel {
-    background-color: rgb(238, 238, 248);
+    background-color: rgb(229, 229, 247);
+    border: 1px;
     padding: 1em;
 }
 

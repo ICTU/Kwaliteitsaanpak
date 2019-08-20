@@ -7,13 +7,13 @@
 
 **Vereiste goedkeuringen**
 
-| Functie/rol                 | Naam                          | Handtekening                 | Datum          | Versie   |
-|:----------------------------|:------------------------------|:-----------------------------|:---------------|:--------:| 
-| Projectleider ICTU | {naam} |       | {datum} | {versie} |
-| Projectleider opdrachtgever | {naam} |       | {datum} | {versie} |
-| Product owner | {naam} |       | {datum} | {versie} |
+| Functie/rol                 | Naam                          |  Datum          | Versie   |
+|:----------------------------|:------------------------------|:---------------|:--------:| 
+| Projectleider ICTU | {naam} | {datum} | {versie} |
+| Projectleider opdrachtgever | {naam} | {datum} | {versie} |
+| Product owner | {naam} | {datum} | {versie} |
 
-**Verzendlijst**
+**Verzendlijst huidige versie**
 
 | Naam                          | Organisatie                   | Functie/rol                   |
 |:------------------------------|:------------------------------|:------------------------------|

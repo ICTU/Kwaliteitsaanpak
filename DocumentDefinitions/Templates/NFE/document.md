@@ -2,9 +2,8 @@
 
 ## Inleiding
 
-#include "Content/Templates/NFE/Inleiding.md"
+#include "Content/Templates/NFE/Over-dit-document.md"
 #include "Content/Templates/NFE/Leeswijzer.md"
-#include "Content/Templates/Terminologie.md"
 
 #include "Content/Templates/NFE/Template-Inhoud.md"
 

@@ -33,7 +33,7 @@ function generate {
 function generate-template {
     mkdir -p Generated/Templates/$1
     # Cover
-    sed s/{{TITLE}}/$3/g DocumentDefinitions/Templates/Shared/cover.md > Generated/Templates/$1/cover-without-includes.md
+    sed s/{{TITLE}}/"$3"/g DocumentDefinitions/Templates/Shared/cover.md > Generated/Templates/$1/cover-without-includes.md
     node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/Templates/$1/cover.json
     node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/cover.md \
         -s /ka/DocumentDefinitions/Shared/cover.css | \

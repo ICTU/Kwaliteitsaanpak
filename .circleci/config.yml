@@ -19,4 +19,5 @@ jobs:
           path: Template-Kwaliteitsplan.pdf
       - store_artifacts:
           path: Template-Niet-Functionele-Eisen.pdf
-
+      - store_artifacts:
+          path: Generiek-Template.pdf

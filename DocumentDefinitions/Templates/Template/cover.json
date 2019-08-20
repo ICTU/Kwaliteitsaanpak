@@ -1,0 +1,4 @@
+{
+	"build" : "Generated/Templates/Template/cover.md",
+  "files" : ["Generated/Templates/Template/cover-without-includes.md"]
+}

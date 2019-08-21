@@ -4,9 +4,9 @@ npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
 # Map symbolic references, like title and Maatregelen, to their actual content
-# map-refs <source> <output>
+# map-refs <source> <document title> <output>
 function map-refs {
-    sed s/{{TITLE}}/"$3"/g $1 > $2
+    sed s/{{TITLE}}/"$2"/g $1 > $3
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.
@@ -43,20 +43,20 @@ function generate-template {
     echo "{	\"build\" : \"Generated/Templates/$1/document-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/$1/document.md\"] }" > Generated/Templates/$1/document.json
     # Cover
     node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/cover.json
-    map-refs Generated/Templates/$1/cover-expanded.md Generated/Templates/$1/cover-post.md
+    map-refs Generated/Templates/$1/cover-expanded.md "$3" Generated/Templates/$1/cover-post.md
     #sed s/{{TITLE}}/"$3"/g Generated/Templates/$1/cover-expanded.md > Generated/Templates/$1/cover-post.md
     node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/cover-post.md \
         -s /ka/DocumentDefinitions/Shared/cover.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/cover.html
     # Body
     node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/document.json
-    map-refs Generated/Templates/$1/document-expanded.md Generated/Templates/$1/document-post.md
+    map-refs Generated/Templates/$1/document-expanded.md "$3" Generated/Templates/$1/document-post.md
     #sed s/{{TITLE}}/"$3"/g Generated/Templates/$1/document-expanded.md > Generated/Templates/$1/document-post.md
     node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/document-post.md \
         -s /ka/DocumentDefinitions/Shared/document.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/document.html
     # Create header
-    map-refs DocumentDefinitions/Shared/header.html Generated/Templates/$1/header.html
+    map-refs DocumentDefinitions/Shared/header.html "$3" Generated/Templates/$1/header.html
     #sed s/{{TITLE}}/"$3"/g DocumentDefinitions/Shared/header.html > Generated/Templates/$1/header.html
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \

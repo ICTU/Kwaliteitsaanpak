@@ -6,9 +6,8 @@ echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date
 # Map symbolic references, like title and Maatregelen, to their actual content
 # map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>
 function map-refs {
-    cat $1 > $2
-    sed -i s/{{TITLE}}/"$3"/g $2
-    sed -i s/{{HEADER}}/"$4"/g $2
+    sed s/{{TITLE}}/"$3"/g $1 | \
+    sed s/{{HEADER}}/"$4"/g > $2
 }
 
 # Create html document from MD source.
@@ -23,7 +22,7 @@ function create-html
     echo "{	\"build\" : \"$EXPANDED\", \"files\" : [\"$2\"] }" > $JSON
     node node_modules/markdown-include/bin/cli.js $JSON
     map-refs $EXPANDED $POST "$5" "$6"
-    node_modules/markdown-to-html/bin/markdown $POST -s $3 | \
+    node_modules/markdown-to-html/bin/markdown $POST --stylesheet "$3" --title "$5" | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
 }
 

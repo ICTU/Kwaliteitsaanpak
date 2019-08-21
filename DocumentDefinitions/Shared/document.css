@@ -75,6 +75,11 @@ th,td {
     font-size: 10pt;
 }
 
+th {
+    background-color: #83D0F5;
+}
+
+/*
 td:not(:empty) {
     background-color: #83D0F5;
     text-align: center;
@@ -85,6 +90,7 @@ td:nth-child(1) {
     text-align: left !important;
     font-weight: normal !important;
 }
+*/
 
 ol {
     list-style-type: none;

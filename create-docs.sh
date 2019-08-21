@@ -34,30 +34,47 @@ function generate {
         Generated/$1/document.html $2.pdf
 }
 
+# create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<document title>
+function create-html
+{
+    EXPANDED="$1/$4-expanded.md"
+    JSON="$1/$4.json"
+    POST="$1/$4-post.md"
+    HTML="$1/$4.html"
+
+    echo "{	\"build\" : \"$EXPANDED\", \"files\" : [\"$2\"] }" > $JSON
+    node node_modules/markdown-include/bin/cli.js $JSON
+    map-refs $EXPANDED "$5" $POST
+    node_modules/markdown-to-html/bin/markdown $POST -s $3 | \
+        PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
+}
+
 # Generate into folder Templates/$1 the template document $2.pdf, titled $3.
 # generate-template <document definition folder> <name of document output without extension> <title>
 function generate-template {
     mkdir -p Generated/Templates/$1
-    # Initialize md files
-    echo "{	\"build\" : \"Generated/Templates/$1/cover-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/Shared/cover.md\"] }" > Generated/Templates/$1/cover.json
-    echo "{	\"build\" : \"Generated/Templates/$1/document-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/$1/document.md\"] }" > Generated/Templates/$1/document.json
+   
     # Cover
-    node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/cover.json
-    map-refs Generated/Templates/$1/cover-expanded.md "$3" Generated/Templates/$1/cover-post.md
-    #sed s/{{TITLE}}/"$3"/g Generated/Templates/$1/cover-expanded.md > Generated/Templates/$1/cover-post.md
-    node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/cover-post.md \
-        -s /ka/DocumentDefinitions/Shared/cover.css | \
-        PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/cover.html
+    create-html Generated/Templates/$1 DocumentDefinitions/Templates/Shared/cover.md /ka/DocumentDefinitions/Shared/cover.css "cover" "$3"
+
+    #echo "{	\"build\" : \"Generated/Templates/$1/cover-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/Shared/cover.md\"] }" > Generated/Templates/$1/cover.json
+    #node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/cover.json
+    #map-refs Generated/Templates/$1/cover-expanded.md "$3" Generated/Templates/$1/cover-post.md
+    #node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/cover-post.md \
+    #    -s /ka/DocumentDefinitions/Shared/cover.css | \
+    #    PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/cover.html
+   
     # Body
+    echo "{	\"build\" : \"Generated/Templates/$1/document-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/$1/document.md\"] }" > Generated/Templates/$1/document.json
     node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/document.json
     map-refs Generated/Templates/$1/document-expanded.md "$3" Generated/Templates/$1/document-post.md
-    #sed s/{{TITLE}}/"$3"/g Generated/Templates/$1/document-expanded.md > Generated/Templates/$1/document-post.md
     node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/document-post.md \
         -s /ka/DocumentDefinitions/Shared/document.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/document.html
+    
     # Create header
     map-refs DocumentDefinitions/Shared/header.html "$3" Generated/Templates/$1/header.html
-    #sed s/{{TITLE}}/"$3"/g DocumentDefinitions/Shared/header.html > Generated/Templates/$1/header.html
+ 
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html Generated/Templates/$1/header.html --header-spacing 10 \

@@ -52,10 +52,11 @@ function create-html
 # Generate into folder Templates/$1 the template document $2.pdf, titled $3.
 # generate-template <document definition folder> <name of document output without extension> <title>
 function generate-template {
-    mkdir -p Generated/Templates/$1
+    OUTPUT_PATH="Generated/Templates/$1"
+    mkdir -p $OUTPUT_PATH
    
     # Cover
-    create-html Generated/Templates/$1 DocumentDefinitions/Templates/Shared/cover.md /ka/DocumentDefinitions/Shared/cover.css "cover" "$3"
+    create-html $OUTPUT_PATH DocumentDefinitions/Templates/Shared/cover.md /ka/DocumentDefinitions/Shared/cover.css "cover" "$3"
 
     #echo "{	\"build\" : \"Generated/Templates/$1/cover-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/Shared/cover.md\"] }" > Generated/Templates/$1/cover.json
     #node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/cover.json
@@ -65,23 +66,25 @@ function generate-template {
     #    PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/cover.html
    
     # Body
-    echo "{	\"build\" : \"Generated/Templates/$1/document-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/$1/document.md\"] }" > Generated/Templates/$1/document.json
-    node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/document.json
-    map-refs Generated/Templates/$1/document-expanded.md "$3" Generated/Templates/$1/document-post.md
-    node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/document-post.md \
-        -s /ka/DocumentDefinitions/Shared/document.css | \
-        PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/document.html
+    create-html $OUTPUT_PATH DocumentDefinitions/Templates/$1/document.md /ka/DocumentDefinitions/Shared/document.css "document" "$3"
+
+    #echo "{	\"build\" : \"Generated/Templates/$1/document-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/$1/document.md\"] }" > Generated/Templates/$1/document.json
+    #node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/document.json
+    #map-refs Generated/Templates/$1/document-expanded.md "$3" Generated/Templates/$1/document-post.md
+    #node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/document-post.md \
+    #    -s /ka/DocumentDefinitions/Shared/document.css | \
+    #    PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/document.html
     
     # Create header
-    map-refs DocumentDefinitions/Shared/header.html "$3" Generated/Templates/$1/header.html
+    map-refs DocumentDefinitions/Shared/header.html "$3" $OUTPUT_PATH/header.html
  
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
-        --header-html Generated/Templates/$1/header.html --header-spacing 10 \
+        --header-html $OUTPUT_PATH/header.html --header-spacing 10 \
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
-        cover Generated/Templates/$1/cover.html \
+        cover $OUTPUT_PATH/cover.html \
         toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-        Generated/Templates/$1/document.html $2.pdf
+        $OUTPUT_PATH/document.html $2.pdf
 }
 
 generate Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"

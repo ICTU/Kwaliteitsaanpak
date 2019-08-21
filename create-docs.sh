@@ -17,7 +17,9 @@ function map-refs {
 # Map symbolic references, like title and Maatregelen, to their mapped content from a dictionary file
 # map-refs 1:<source file> 2:<output file> 3:<dictionary file>
 function map-refsd {
-    sed -f <(sed 's!\(.*\):\(.*\)!s/\1/\2/!' $3) $1 > $2
+    awk -F: 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
+
+    #sed -f <(sed 's!\(.*\):\(.*\)!s/\1/\2/!' $3) $1 > $2
 }
 
 # Create html document from MD source.
@@ -33,7 +35,7 @@ function create-html
     echo "{	\"build\" : \"$EXPANDED\", \"files\" : [\"$2\"] }" > $JSON
     node node_modules/markdown-include/bin/cli.js $JSON
 
-    echo "{{TITLE}}:$5\n{{HEADER}}:$6" > $DICTIONARY
+    echo "{{TITLE}}:$5\n{{HEADER}}:$6\n" > $DICTIONARY
     map-refsd $EXPANDED $POST $DICTIONARY
 
     #map-refs $EXPANDED $POST "$5" "$6"

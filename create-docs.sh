@@ -56,26 +56,6 @@ function generate-kwaliteitsaanpak {
 # generate-template 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
 function generate-template {
     generate Templates/$1 $2 "$3" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
-
-    #OUTPUT_PATH="Generated/Templates/$1"
-    #mkdir -p $OUTPUT_PATH
-   
-    # Cover
-    #create-html $OUTPUT_PATH DocumentDefinitions/Templates/Shared/cover.md \
-    #    /ka/DocumentDefinitions/Shared/cover.css "cover" "$3"   
-    # Body
-    #create-html $OUTPUT_PATH DocumentDefinitions/Templates/$1/document.md \
-    #    /ka/DocumentDefinitions/Shared/document.css "document" "$3"
-    # Header
-    #map-refs DocumentDefinitions/Shared/header.html "$3" $OUTPUT_PATH/header.html
- 
-    # Create pdf
-    #wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
-    #    --header-html $OUTPUT_PATH/header.html --header-spacing 10 \
-    #    --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
-    #    cover $OUTPUT_PATH/cover.html \
-    #    toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-    #    $OUTPUT_PATH/document.html $2.pdf
 }
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"

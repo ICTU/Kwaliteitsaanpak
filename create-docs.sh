@@ -7,7 +7,7 @@ echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date
 # map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>
 function map-refs {
     sed s/{{TITLE}}/"$3"/g $1 | \
-    sed  s/{{HEADER}}/"$4"/g > $2
+    sed s/{{HEADER}}/"$4"/g > $2
 
     #cat $1 > $2
     #sed -i s/{{TITLE}}/"$3"/g $2
@@ -26,7 +26,7 @@ function create-html
     echo "{	\"build\" : \"$EXPANDED\", \"files\" : [\"$2\"] }" > $JSON
     node node_modules/markdown-include/bin/cli.js $JSON
     map-refs $EXPANDED $POST "$5" "$6"
-    node_modules/markdown-to-html/bin/markdown $POST --stylesheet "$3" --title "$5" | \
+    node_modules/markdown-to-html/bin/markdown $POST -s $3 | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
 }
 

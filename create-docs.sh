@@ -8,18 +8,12 @@ echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date
 function map-refs {
     sed s/{{TITLE}}/"$3"/g $1 | \
     sed s/{{HEADER}}/"$4"/g > $2
-
-    #cat $1 > $2
-    #sed -i s/{{TITLE}}/"$3"/g $2
-    #sed -i s/{{HEADER}}/"$4"/g $2
 }
 
 # Map symbolic references, like title and Maatregelen, to their mapped content from a dictionary file
 # map-refs 1:<source file> 2:<output file> 3:<dictionary file>
 function map-refsd {
     awk -F: 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
-
-    #sed -f <(sed 's!\(.*\):\(.*\)!s/\1/\2/!' $3) $1 > $2
 }
 
 # Create html document from MD source.
@@ -45,7 +39,7 @@ function create-html
 #          3:<document title> 4:<document header> 5:<cover md> 6:<document md>
 function generate {
     OUTPUT_PATH="Generated/$1"
-    DICTIONARY="$OUTPUT_PATH/$4.dict"
+    DICTIONARY="$OUTPUT_PATH/dict.txt"
 
     mkdir -p $OUTPUT_PATH
     echo -e "{{TITLE}}:$3\n{{HEADER}}:$4\n" > $DICTIONARY

@@ -35,7 +35,7 @@ function create-html
     echo "{	\"build\" : \"$EXPANDED\", \"files\" : [\"$2\"] }" > $JSON
     node node_modules/markdown-include/bin/cli.js $JSON
 
-    echo "{{TITLE}}:$5\n{{HEADER}}:$6\n" > $DICTIONARY
+    echo -e "{{TITLE}}:$5\n{{HEADER}}:$6\n" > $DICTIONARY
     map-refsd $EXPANDED $POST $DICTIONARY
 
     #map-refs $EXPANDED $POST "$5" "$6"

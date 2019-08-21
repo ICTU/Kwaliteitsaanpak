@@ -38,9 +38,9 @@ function generate {
     mkdir -p $OUTPUT_PATH
 
     # Cover
-    create-html $OUTPUT_PATH $5 DocumentDefinitions/Shared/cover.css "cover" "$3" "$4"   
+    create-html $OUTPUT_PATH $5 /ka/DocumentDefinitions/Shared/cover.css "cover" "$3" "$4"   
     # Body
-    create-html $OUTPUT_PATH $6 DocumentDefinitions/Shared/document.css "document" "$3" "$4"
+    create-html $OUTPUT_PATH $6 /ka/DocumentDefinitions/Shared/document.css "document" "$3" "$4"
     # Header
     map-refs DocumentDefinitions/Shared/header.html $OUTPUT_PATH/header.html "$3" "$4"
     # Create pdf

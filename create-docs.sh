@@ -3,6 +3,12 @@ npm i
 npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
+# Map symbolic references, like title and Maatregelen, to their actual content
+# map-refs <source> <output>
+function map-refs {
+    sed s/{{TITLE}}/"$3"/g $1 > $2
+}
+
 # Generate into folder $1 the document $2.pdf, titled $3.
 # generate <document definition folder> <name of document output without extension> <title>
 function generate {
@@ -33,21 +39,25 @@ function generate {
 function generate-template {
     mkdir -p Generated/Templates/$1
     # Initialize md files
-    echo "{	\"build\" : \"Generated/Templates/$1/cover.md\", \"files\" : [\"Generated/Templates/$1/cover-without-includes.md\"] }" > Generated/Templates/$1/cover.json
-    echo "{	\"build\" : \"Generated/Templates/$1/document.md\", \"files\" : [\"DocumentDefinitions/Templates/$1/document.md\"] }" > Generated/Templates/$1/document.json
+    echo "{	\"build\" : \"Generated/Templates/$1/cover-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/Shared/cover.md\"] }" > Generated/Templates/$1/cover.json
+    echo "{	\"build\" : \"Generated/Templates/$1/document-expanded.md\", \"files\" : [\"DocumentDefinitions/Templates/$1/document.md\"] }" > Generated/Templates/$1/document.json
     # Cover
-    sed s/{{TITLE}}/"$3"/g DocumentDefinitions/Templates/Shared/cover.md > Generated/Templates/$1/cover-without-includes.md
     node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/cover.json
-    node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/cover.md \
+    map-refs Generated/Templates/$1/cover-expanded.md Generated/Templates/$1/cover-post.md
+    #sed s/{{TITLE}}/"$3"/g Generated/Templates/$1/cover-expanded.md > Generated/Templates/$1/cover-post.md
+    node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/cover-post.md \
         -s /ka/DocumentDefinitions/Shared/cover.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/cover.html
     # Body
     node node_modules/markdown-include/bin/cli.js Generated/Templates/$1/document.json
-    node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/document.md \
+    map-refs Generated/Templates/$1/document-expanded.md Generated/Templates/$1/document-post.md
+    #sed s/{{TITLE}}/"$3"/g Generated/Templates/$1/document-expanded.md > Generated/Templates/$1/document-post.md
+    node_modules/markdown-to-html/bin/markdown Generated/Templates/$1/document-post.md \
         -s /ka/DocumentDefinitions/Shared/document.css | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/Templates/$1/document.html
     # Create header
-    sed s/{{TITLE}}/"$3"/g DocumentDefinitions/Shared/header.html > Generated/Templates/$1/header.html
+    map-refs DocumentDefinitions/Shared/header.html Generated/Templates/$1/header.html
+    #sed s/{{TITLE}}/"$3"/g DocumentDefinitions/Shared/header.html > Generated/Templates/$1/header.html
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html Generated/Templates/$1/header.html --header-spacing 10 \

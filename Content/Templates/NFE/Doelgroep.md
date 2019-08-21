@@ -7,3 +7,5 @@ Dit document is relevant voor de volgende partijen:
 * de hostingpartij(en).
 
 TEST: {{TITLE}}
+
+TEST2: {{TITLE}}

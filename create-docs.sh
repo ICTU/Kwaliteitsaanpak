@@ -14,6 +14,12 @@ function map-refs {
     #sed -i s/{{HEADER}}/"$4"/g $2
 }
 
+# Map symbolic references, like title and Maatregelen, to their mapped content from a dictionary file
+# map-refs 1:<source file> 2:<output file> 3:<dictionary file>
+function map-refsd {
+    sed -f <(sed 's!\(.*\):\(.*\)!s/\1/\2/!' $3) $1 > $2
+}
+
 # Create html document from MD source.
 # create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<doc title> 6:<doc header>
 function create-html
@@ -22,10 +28,15 @@ function create-html
     JSON="$1/$4.json"
     POST="$1/$4-post.md"
     HTML="$1/$4.html"
+    DICTIONARY="$1/$4.dict"
 
     echo "{	\"build\" : \"$EXPANDED\", \"files\" : [\"$2\"] }" > $JSON
     node node_modules/markdown-include/bin/cli.js $JSON
-    map-refs $EXPANDED $POST "$5" "$6"
+
+    echo "{{TITLE}}:$5\n{{HEADER}}:$6" > $DICTIONARY
+    map-refsd $EXPANDED $POST $DICTIONARY
+
+    #map-refs $EXPANDED $POST "$5" "$6"
     node_modules/markdown-to-html/bin/markdown $POST -s $3 | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
 }

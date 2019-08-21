@@ -93,6 +93,5 @@
 ## Bijlagen
 
 #include "Content/Bijlagen/Manifest-Maatregelen.md"
-#include "Generated/Full/abbreviations.md"
 #include "Content/Bijlagen/Risico.md"
 #include "Content/Bijlagen/Documenten.md"

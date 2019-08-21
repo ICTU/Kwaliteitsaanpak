@@ -9,6 +9,7 @@ function map-refs {
     sed s/{{TITLE}}/"$2"/g $1 > $3
 }
 
+# Create html document from MD source.
 # create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<document title>
 function create-html
 {
@@ -31,11 +32,9 @@ function generate {
     mkdir -p $OUTPUT_PATH
 
     # Cover
-    create-html $OUTPUT_PATH $4 \
-        /ka/DocumentDefinitions/Shared/cover.css "cover" "$3"   
+    create-html $OUTPUT_PATH $4 /ka/DocumentDefinitions/Shared/cover.css "cover" "$3"   
     # Body
-    create-html $OUTPUT_PATH $5 \
-        /ka/DocumentDefinitions/Shared/document.css "document" "$3"
+    create-html $OUTPUT_PATH $5 /ka/DocumentDefinitions/Shared/document.css "document" "$3"
     # Header
     map-refs DocumentDefinitions/Shared/header.html "$3" $OUTPUT_PATH/header.html
     # Create pdf
@@ -81,8 +80,8 @@ function generate-template {
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"
 generate-kwaliteitsaanpak Generic ICTU-Kwaliteitsaanpak-Generic "Kwaliteitsaanpak Software Realisatie"
+generate-template Template Template-Generiek "Generiek Template"
 generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
-generate-template Template Template-Generiek "Generiek Template"
 
 python3 create-checklist.py

@@ -55,19 +55,13 @@ function generate {
 # Generate into folder $1 the document $2.pdf, titled $3.
 # generate-kwaliteitsaanpak 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
 function generate-kwaliteitsaanpak {
-    generate $1 $2 \
-        "$3" \                              #title
-        "$3" \                              #header
-        DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md
+    generate $1 $2 "$3" "$3" DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md
 }
 
 # Generate into folder Templates/$1 the template document $2.pdf, titled $3.
 # generate-template 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
 function generate-template {
-    generate Templates/$1 $2 \
-        "$3" \                              #title
-        "$3 {projectnaam} {versie}" \       #header
-        DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
+    generate Templates/$1 $2 "$3" "$3 {projectnaam} {versie}" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
 }
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"

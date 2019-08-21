@@ -4,13 +4,15 @@ npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
 # Map symbolic references, like title and Maatregelen, to their actual content
-# map-refs 1:<source file> 2:<document title> 3:<output file>
+# map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>
 function map-refs {
-    sed s/{{TITLE}}/"$2"/g $1 > $3
+    cat $1 > $2
+    sed -i s/{{TITLE}}/"$3"/g $2
+    sed -i s/{{HEADER}}/"$4"/g $2
 }
 
 # Create html document from MD source.
-# create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<document title>
+# create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<doc title> 6:<doc header>
 function create-html
 {
     EXPANDED="$1/$4-expanded.md"
@@ -20,13 +22,14 @@ function create-html
 
     echo "{	\"build\" : \"$EXPANDED\", \"files\" : [\"$2\"] }" > $JSON
     node node_modules/markdown-include/bin/cli.js $JSON
-    map-refs $EXPANDED "$5" $POST
+    map-refs $EXPANDED $POST "$5" "$6"
     node_modules/markdown-to-html/bin/markdown $POST -s $3 | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
 }
 
-# Generate into folder $1 the document $2.pdf, titled $3, using MD cover file $4 and MD document file $5.
-# generate 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
+# Generate into folder $1 the document $2.pdf, with title $3 and header $4, using MD cover file $5 and MD document file $6.
+# generate 1:<output folder> 2:<name of document output without PDF extension>
+#          3:<document title> 4:<document header> 5:<cover md> 6:<document md>
 function generate {
     OUTPUT_PATH="Generated/$1"
     mkdir -p $OUTPUT_PATH
@@ -36,7 +39,7 @@ function generate {
     # Body
     create-html $OUTPUT_PATH $5 /ka/DocumentDefinitions/Shared/document.css "document" "$3"
     # Header
-    map-refs DocumentDefinitions/Shared/header.html "$3" $OUTPUT_PATH/header.html
+    map-refs DocumentDefinitions/Shared/header.html $OUTPUT_PATH/header.html "$3" "$4"
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html $OUTPUT_PATH/header.html --header-spacing 10 \
@@ -49,13 +52,13 @@ function generate {
 # Generate into folder $1 the document $2.pdf, titled $3.
 # generate-kwaliteitsaanpak 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
 function generate-kwaliteitsaanpak {
-    generate $1 $2 "$3" DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md
+    generate $1 $2 "$3" "$3" DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md
 }
 
 # Generate into folder Templates/$1 the template document $2.pdf, titled $3.
 # generate-template 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
 function generate-template {
-    generate Templates/$1 $2 "$3" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
+    generate Templates/$1 $2 "$3" "$3 {projectnaam} {versie}" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
 }
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"

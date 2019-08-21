@@ -57,7 +57,7 @@ function generate {
 function generate-kwaliteitsaanpak {
     TITLE="$3"
     HEADER="$TITLE"
-    generate $1 $2 $TITLE $HEADER DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md
+    generate $1 $2 "$TITLE" "$HEADER" DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md
 }
 
 # Generate into folder Templates/$1 the template document $2.pdf, titled $3.
@@ -65,7 +65,7 @@ function generate-kwaliteitsaanpak {
 function generate-template {
     TITLE="$3"
     HEADER="$TITLE {projectnaam} {versie}"
-    generate Templates/$1 $2 $TITLE $HEADER DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
+    generate Templates/$1 $2 "$TITLE" "$HEADER" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
 }
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"

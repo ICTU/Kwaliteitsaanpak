@@ -23,22 +23,19 @@ function map-refsd {
 }
 
 # Create html document from MD source.
-# create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<doc title> 6:<doc header>
+# create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<dictionary file>
 function create-html
 {
     EXPANDED="$1/$4-expanded.md"
     JSON="$1/$4.json"
     POST="$1/$4-post.md"
     HTML="$1/$4.html"
-    DICTIONARY="$1/$4.dict"
 
     echo "{	\"build\" : \"$EXPANDED\", \"files\" : [\"$2\"] }" > $JSON
     node node_modules/markdown-include/bin/cli.js $JSON
 
-    echo -e "{{TITLE}}:$5\n{{HEADER}}:$6\n" > $DICTIONARY
-    map-refsd $EXPANDED $POST $DICTIONARY
+    map-refsd $EXPANDED $POST $5
 
-    #map-refs $EXPANDED $POST "$5" "$6"
     node_modules/markdown-to-html/bin/markdown $POST -s $3 | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
 }
@@ -48,14 +45,17 @@ function create-html
 #          3:<document title> 4:<document header> 5:<cover md> 6:<document md>
 function generate {
     OUTPUT_PATH="Generated/$1"
+    DICTIONARY="$OUTPUT_PATH/$4.dict"
+
     mkdir -p $OUTPUT_PATH
+    echo -e "{{TITLE}}:$3\n{{HEADER}}:$4\n" > $DICTIONARY
 
     # Cover
-    create-html $OUTPUT_PATH $5 /ka/DocumentDefinitions/Shared/cover.css "cover" "$3" "$4"   
+    create-html $OUTPUT_PATH $5 /ka/DocumentDefinitions/Shared/cover.css "cover" $DICTIONARY   
     # Body
-    create-html $OUTPUT_PATH $6 /ka/DocumentDefinitions/Shared/document.css "document" "$3" "$4"
+    create-html $OUTPUT_PATH $6 /ka/DocumentDefinitions/Shared/document.css "document" $DICTIONARY
     # Header
-    map-refs DocumentDefinitions/Shared/header.html $OUTPUT_PATH/header.html "$3" "$4"
+    map-refsd DocumentDefinitions/Shared/header.html $OUTPUT_PATH/header.html $DICTIONARY
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html $OUTPUT_PATH/header.html --header-spacing 10 \

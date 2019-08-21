@@ -24,56 +24,20 @@ function create-html
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
 }
 
-# Generate into folder $1 the document $2.pdf, titled $3.
-# generate <document definition folder> <name of document output without extension> <title>
+# Generate into folder $1 the document $2.pdf, titled $3, using MD cover file $4 and MD document file $5.
+# generate 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
 function generate {
     OUTPUT_PATH="Generated/$1"
     mkdir -p $OUTPUT_PATH
 
     # Cover
-    create-html $OUTPUT_PATH DocumentDefinitions/$1/cover.md \
-        /ka/DocumentDefinitions/$1/cover.css "cover" "$3"   
-
-    #node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/cover.json
-    #node_modules/markdown-to-html/bin/markdown Generated/$1/cover.md -s /ka/DocumentDefinitions/$1/cover.css | \
-    #    PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/$1/cover.html
-
-    # Body
-    create-html $OUTPUT_PATH DocumentDefinitions/$1/document.md \
-        /ka/DocumentDefinitions/$1/document.css "document" "$3"
-
-    #node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/document.json  # pass 1: generated input for abbreviations
-    #cat Generated/$1/document.md | python3 create-abbreviations-appendix.py > Generated/$1/abbreviations.md   
-    #node node_modules/markdown-include/bin/cli.js ./DocumentDefinitions/$1/document.json  # pass 2: include up-to-date list of abbreviations
-    #node_modules/markdown-to-html/bin/markdown Generated/$1/document.md -s /ka/DocumentDefinitions/$1/document.css | \
-    #    PYTHONIOENCODING="UTF-8" python3 post-process-html.py > Generated/$1/document.html
-
-    # Header
-    map-refs DocumentDefinitions/Shared/header.html "$3" $OUTPUT_PATH/header.html
-    # Create pdf
-    wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
-        --header-html $OUTPUT_PATH/header.html --header-spacing 10 \
-        --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
-        cover $OUTPUT_PATH/cover.html \
-        toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-        $OUTPUT_PATH/document.html $2.pdf
-}
-
-# Generate into folder Templates/$1 the template document $2.pdf, titled $3.
-# generate-template <document definition folder> <name of document output without extension> <title>
-function generate-template {
-    OUTPUT_PATH="Generated/Templates/$1"
-    mkdir -p $OUTPUT_PATH
-   
-    # Cover
-    create-html $OUTPUT_PATH DocumentDefinitions/Templates/Shared/cover.md \
+    create-html $OUTPUT_PATH $4 \
         /ka/DocumentDefinitions/Shared/cover.css "cover" "$3"   
     # Body
-    create-html $OUTPUT_PATH DocumentDefinitions/Templates/$1/document.md \
+    create-html $OUTPUT_PATH $5 \
         /ka/DocumentDefinitions/Shared/document.css "document" "$3"
     # Header
     map-refs DocumentDefinitions/Shared/header.html "$3" $OUTPUT_PATH/header.html
- 
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html $OUTPUT_PATH/header.html --header-spacing 10 \
@@ -83,8 +47,40 @@ function generate-template {
         $OUTPUT_PATH/document.html $2.pdf
 }
 
-generate Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"
-generate Generic ICTU-Kwaliteitsaanpak-Generic "Kwaliteitsaanpak Software Realisatie"
+# Generate into folder $1 the document $2.pdf, titled $3.
+# generate-kwaliteitsaanpak 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
+function generate-kwaliteitsaanpak {
+    generate $1 $2 "$3" DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md
+}
+
+# Generate into folder Templates/$1 the template document $2.pdf, titled $3.
+# generate-template 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
+function generate-template {
+    generate Templates/$1 $2 "$3" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
+
+    #OUTPUT_PATH="Generated/Templates/$1"
+    #mkdir -p $OUTPUT_PATH
+   
+    # Cover
+    #create-html $OUTPUT_PATH DocumentDefinitions/Templates/Shared/cover.md \
+    #    /ka/DocumentDefinitions/Shared/cover.css "cover" "$3"   
+    # Body
+    #create-html $OUTPUT_PATH DocumentDefinitions/Templates/$1/document.md \
+    #    /ka/DocumentDefinitions/Shared/document.css "document" "$3"
+    # Header
+    #map-refs DocumentDefinitions/Shared/header.html "$3" $OUTPUT_PATH/header.html
+ 
+    # Create pdf
+    #wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
+    #    --header-html $OUTPUT_PATH/header.html --header-spacing 10 \
+    #    --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
+    #    cover $OUTPUT_PATH/cover.html \
+    #    toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
+    #    $OUTPUT_PATH/document.html $2.pdf
+}
+
+generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"
+generate-kwaliteitsaanpak Generic ICTU-Kwaliteitsaanpak-Generic "Kwaliteitsaanpak Software Realisatie"
 generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
 generate-template Template Template-Generiek "Generiek Template"

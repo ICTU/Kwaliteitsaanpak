@@ -116,12 +116,11 @@ De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico's bij so
 
 Maatregelen:
 
-- [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-)
 - {{M05-link}}
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
-- [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
-- [M15: Open source tools](#open-source-tools-m15-)
+- {{M07-link}}
+- {{M10-link}}
+- {{M14-link}}
+- {{M15-link}}
 
 Classificatie:
 

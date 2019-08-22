@@ -8,6 +8,7 @@ def create_link(name):
     link=link.replace("(", "-")
     link=link.replace(")", "-")
     link=link.replace(",", "-")
+    link=link.replace("--", "-")
     return link
 
 def read_maatregel(path):

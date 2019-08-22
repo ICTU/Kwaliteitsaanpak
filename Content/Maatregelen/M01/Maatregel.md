@@ -1,4 +1,4 @@
-### Op te leveren producten (M01)
+### M01: Op te leveren producten
 
 Projecten zijn gesplitst in een voorbereidingsfase en een realisatiefase (zie [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)); alle fasen kennen specifieke producten. De onderstaande tabel benoemt de producten die een project in die fasen moet realiseren of waarover het project moet kunnen beschikken, indien er andere auteurs zijn (bijvoorbeeld de opdrachtgever). Het project zorgt voor een volledige oplevering van alle genoemde producten, waaronder de producten die niet door het project zelf zijn gemaakt.
 

@@ -1,4 +1,4 @@
-### Gebruik van ISO-25010 (M13)
+### M13: Gebruik van ISO-25010
 
 #include "Content/Maatregelen/M13/Beschrijving.md"
 

@@ -1,4 +1,4 @@
-### Continu voldoen aan kwaliteitsnormen (M02)
+### M02: Continu voldoen aan kwaliteitsnormen
 
 #include "Content/Maatregelen/M02/Beschrijving.md"
 

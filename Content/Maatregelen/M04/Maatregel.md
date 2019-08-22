@@ -1,4 +1,4 @@
-### Geautomatiseerde regressietests (M04)
+### M04: Geautomatiseerde regressietests
 
 #include "Content/Maatregelen/M04/Beschrijving.md"
 

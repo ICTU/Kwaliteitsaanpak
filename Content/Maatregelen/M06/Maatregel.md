@@ -1,4 +1,4 @@
-### Frequent geautomatiseerd meten (M06)
+### M06: Frequent geautomatiseerd meten
 
 #include "Content/Maatregelen/M06/Beschrijving.md"
 

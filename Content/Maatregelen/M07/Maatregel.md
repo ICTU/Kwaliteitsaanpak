@@ -1,4 +1,4 @@
-### Continuous delivery pipeline (M07)
+### M07: Continuous delivery pipeline
 
 Er is een geautomatiseerde continuous delivery pipeline die aantoonbaar correct werkt en ten minste de volgende activiteiten uitvoert:
 

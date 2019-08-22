@@ -1,4 +1,4 @@
-### Technische schuld (M08)
+### M08: Technische schuld
 
 #include "Content/Maatregelen/M08/Beschrijving.md"
 

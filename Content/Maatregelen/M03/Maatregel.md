@@ -1,4 +1,4 @@
-### Traceerbaar voldoen aan eisen (M03)
+### M03: Traceerbaar voldoen aan eisen
 
 #include "Content/Maatregelen/M03/Beschrijving.md"
 

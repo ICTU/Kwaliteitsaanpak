@@ -1,4 +1,4 @@
-### Publicatie kwaliteitsaanpak en -normen (M12)
+### M12: Publicatie kwaliteitsaanpak en -normen
 
 #include "Content/Maatregelen/M12/Beschrijving.md"
 

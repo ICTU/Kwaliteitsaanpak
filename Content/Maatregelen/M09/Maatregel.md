@@ -1,4 +1,4 @@
-### Implementatie kwaliteitsaanpak (M09)
+### M09: Implementatie kwaliteitsaanpak
 
 Projecten implementeren nieuwe versies van kwaliteitsaanpak en kwaliteitsnormen binnen de door de projectenorganisatie gestelde termijn (zie [M12: Publicatie kwaliteitsaanpak en -normen](#publicatie-kwaliteitsaanpak-en-normen-m12-) voor het tot stand komen van de gestelde termijnen). De projectverantwoordelijke is verantwoordelijk voor de implementatie.
 

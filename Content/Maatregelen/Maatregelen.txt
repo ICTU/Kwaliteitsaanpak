@@ -1,0 +1,27 @@
+{{M01}}:{{M01: Op te leveren producten}}
+{{M13}}:{{Gebruik van ISO-25010 (M13)}}
+{{M02}}:{{Continu voldoen aan kwaliteitsnormen (M02)}}
+{{M03}}:{{Traceerbaar voldoen aan eisen (M03)}}
+{{M04}}:{{Geautomatiseerde regressietests (M04)}}
+{{M26}}:{{Periodieke beoordeling informatiebeveiliging (M26)}}
+{{M05}}:{{Iteratief en incrementeel ontwikkelproces (M05)}}
+{{M06}}:{{Frequent geautomatiseerd meten (M06)}}
+{{M07}}:{{Continuous delivery pipeline (M07)}}
+{{M08}}:{{Technische schuld (M08)}}
+{{M09}}:{{Implementatie kwaliteitsaanpak (M09)}}
+{{M10}}:{{Periodiek projectoverleg (M10)}}
+{{M27}}:{{Projecten en projectfasen expliciet afsluiten (M27)}}
+{{M28}}:{{Self-assessment (M28)}}
+{{M11}}:{{Beheer en onderhoud kwaliteitsaanpak en -normen (M11)}}
+{{M24}}:{{Implementatie van wijzigingen aan de kwaliteitsaanpak en kwaliteitsnormen (M24)}}
+{{M12}}:{{Publicatie kwaliteitsaanpak en -normen (M12)}}
+{{M29}}:{{Project verantwoord starten (M29)}}
+{{M14}}:{{Projecten splitsen in een voorbereidings- en realisatiefase (M14)}}
+{{M15}}:{{Open source tools (M15)}}
+{{M16}}:{{Verplichte tools (M16)}}
+{{M17}}:{{Snel beschikbare tools (M17)}}
+{{M18}}:{{Ondersteuning verplichte tools (M18)}}
+{{M19}}:{{Afgeschermde digitale omgeving (M19)}}
+{{M21}}:{{Kwaliteit van medewerkers (M21)}}
+{{M22}}:{{Betrokkenheid bij inzet (M22)}}
+{{M23}}:{{Warme kennisoverdracht (M23)}}

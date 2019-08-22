@@ -75,6 +75,8 @@ function generate-template {
     generate Templates/$1 $2 "$TITLE" "$HEADER" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
 }
 
+python3 create-dictionary > maatregel-dictionary.txt
+
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"
 generate-kwaliteitsaanpak Generic ICTU-Kwaliteitsaanpak-Generic "Kwaliteitsaanpak Software Realisatie"
 generate-template Template Template-Generiek "Generiek Template"

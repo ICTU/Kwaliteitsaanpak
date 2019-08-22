@@ -21,3 +21,5 @@ jobs:
           path: Template-Niet-Functionele-Eisen.pdf
       - store_artifacts:
           path: Template-Generiek.pdf
+      - store_artifacts:
+          path: maatregel-dictionary.txt

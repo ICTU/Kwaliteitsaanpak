@@ -15,7 +15,7 @@ function map-refs {
 # Map symbolic references, like title and Maatregelen, to their mapped content from a dictionary file
 # map-refs 1:<source file> 2:<output file> 3:<dictionary file>
 function map-refsd {
-    awk -F: 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
+    awk -F= 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
 }
 
 # Create html document from MD source.
@@ -47,7 +47,7 @@ function generate {
 
     # Create dictionary
     cat $MAATREGEL_DICTIONARY > $DICTIONARY
-    echo -e "{{TITLE}}:$3\n{{HEADER}}:$4\n" >> $DICTIONARY
+    echo -e "{{TITLE}}=$3\n{{HEADER}}=$4\n" >> $DICTIONARY
 
     # Cover
     create-html $OUTPUT_PATH $5 /ka/DocumentDefinitions/Shared/cover.css "cover" $DICTIONARY   

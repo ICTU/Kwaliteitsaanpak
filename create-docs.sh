@@ -3,6 +3,8 @@ npm i
 npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
+MAATREGEL_DICTIONARY="maatregel-dictionary.txt"
+
 # Map symbolic references, like title and Maatregelen, to their actual content
 # map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>
 function map-refs {
@@ -42,7 +44,10 @@ function generate {
     DICTIONARY="$OUTPUT_PATH/dict.txt"
 
     mkdir -p $OUTPUT_PATH
-    echo -e "{{TITLE}}:$3\n{{HEADER}}:$4\n" > $DICTIONARY
+
+    # Create dictionary
+    cat $MAATREGEL_DICTIONARY > $DICTIONARY
+    echo -e "{{TITLE}}:$3\n{{HEADER}}:$4\n" >> $DICTIONARY
 
     # Cover
     create-html $OUTPUT_PATH $5 /ka/DocumentDefinitions/Shared/cover.css "cover" $DICTIONARY   
@@ -75,7 +80,7 @@ function generate-template {
     generate Templates/$1 $2 "$TITLE" "$HEADER" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
 }
 
-python3 create-dictionary.py > maatregel-dictionary.txt
+python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"
 generate-kwaliteitsaanpak Generic ICTU-Kwaliteitsaanpak-Generic "Kwaliteitsaanpak Software Realisatie"

@@ -9,3 +9,7 @@ Dit document is relevant voor de volgende partijen:
 TEST: {{TITLE}}
 
 TEST2: {{TITLE}}
+
+{{M01}}
+
+{{M12}}

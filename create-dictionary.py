@@ -13,7 +13,7 @@ def create_dictionary():
         version = version_file.read().strip()
         print("{{VERSIE}}:{{" + version + "}}")
     path = pathlib.Path('Content/Maatregelen')
-    for mdir in path.glob('M*'):
+    for mdir in sorted(path.glob('M*')):
         if mdir.is_dir():
             read_maatregel(mdir)
 

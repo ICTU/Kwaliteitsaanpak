@@ -1,12 +1,22 @@
 import pathlib
 import re
 
+def create_link(name):
+    link=name.lower()
+    link=link.replace(" ", "-")
+    link=link.replace(":", "-")
+    link=link.replace("(", "-")
+    link=link.replace(")", "-")
+    link=link.replace(",", "-")
+    return link
+
 def read_maatregel(path):
     maatregel_path = path / "Maatregel.md"
     with open(maatregel_path, mode='r', encoding='utf8') as maatregel_file:
         headers = [line.strip("###").strip(path.name+":").strip() for line in maatregel_file if line.startswith('### ')]
     for header in headers:
         print("{{" + path.name + "}}=**" + header + "**")
+        print("{{" + path.name + "-link}}=[**" + header + "**](#" + create_link(header) + ")")
 
 def create_dictionary():
     with open("Content/Versie.md") as version_file:

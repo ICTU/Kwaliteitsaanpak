@@ -7,7 +7,7 @@ def create_dictionary():
         print("{{VERSIE}}:{{" + version + "}}")
     path = pathlib.Path('Content/Maatregelen')
     for mdir in path.glob('*'):
-        print("{{" + mdir.name + "}}")
+        print("{{" + mdir.name + "}}:")
 
 if __name__ == "__main__":
     create_dictionary()

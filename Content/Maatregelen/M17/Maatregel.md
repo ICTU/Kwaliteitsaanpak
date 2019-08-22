@@ -1,4 +1,4 @@
-### Snel beschikbare tools (M17)
+### M17: Snel beschikbare tools
 
 #include "Content/Maatregelen/M17/Beschrijving.md"
 

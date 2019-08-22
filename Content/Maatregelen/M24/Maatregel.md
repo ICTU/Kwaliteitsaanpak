@@ -1,4 +1,4 @@
-### Implementatie van wijzigingen aan de kwaliteitsaanpak en kwaliteitsnormen (M24)
+### M24: Implementatie van wijzigingen aan de kwaliteitsaanpak en kwaliteitsnormen
 
 Bij elke wijziging aan de kwaliteitsaanpak en/of kwaliteitsnormen stelt de projectenorganisatie vast of de wijziging leidt tot een wijziging in de werkwijze van de projecten. Als dit het geval is, wijst de projectenorganisatie een verantwoordelijke aan voor de implementatie van de wijziging; de verantwoordelijke stelt een implementatieplan op dat ten minste de volgende onderwerpen beschrijft:
 

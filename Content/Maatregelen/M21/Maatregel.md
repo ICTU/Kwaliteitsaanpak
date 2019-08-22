@@ -1,4 +1,4 @@
-### Kwaliteit van medewerkers (M21)
+### M21: Kwaliteit van medewerkers
 
 #include "Content/Maatregelen/M21/Beschrijving.md"
 

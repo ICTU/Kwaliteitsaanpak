@@ -1,4 +1,4 @@
-### Warme kennisoverdracht (M23)
+### M23: Warme kennisoverdracht
 
 #include "Content/Maatregelen/M23/Beschrijving.md"
 

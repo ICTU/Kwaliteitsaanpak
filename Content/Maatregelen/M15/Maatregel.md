@@ -1,4 +1,4 @@
-### Open source tools (M15)
+### M15: Open source tools
 
 #include "Content/Maatregelen/M15/Beschrijving.md"
 

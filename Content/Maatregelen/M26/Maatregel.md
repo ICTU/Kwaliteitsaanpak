@@ -1,4 +1,4 @@
-### Periodieke beoordeling informatiebeveiliging (M26)
+### M26: Periodieke beoordeling informatiebeveiliging
 
 #include "Content/Maatregelen/M26/Beschrijving.md"
 

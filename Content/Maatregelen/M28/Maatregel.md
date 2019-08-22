@@ -1,4 +1,4 @@
-### Self-assessment (M28)
+### M28: Self-assessment
 
 #include "Content/Maatregelen/M28/Beschrijving.md"
 

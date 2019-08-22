@@ -1,4 +1,4 @@
-### Ondersteuning verplichte tools (M18)
+### M18: Ondersteuning verplichte tools
 
 #include "Content/Maatregelen/M18/Beschrijving.md"
 

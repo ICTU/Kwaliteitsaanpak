@@ -1,4 +1,4 @@
-### Afgeschermde digitale omgeving (M19)
+### M19: Afgeschermde digitale omgeving
 
 #include "Content/Maatregelen/M19/Beschrijving.md"
 

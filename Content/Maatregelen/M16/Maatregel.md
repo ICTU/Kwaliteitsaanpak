@@ -1,4 +1,4 @@
-### Verplichte tools (M16)
+### M16: Verplichte tools
 
 #include "Content/Maatregelen/M16/Beschrijving.md"
 

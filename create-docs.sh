@@ -4,6 +4,7 @@ npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
 MAATREGEL_DICTIONARY="maatregel-dictionary.txt"
+MAATREGEL_DICTIONARY_LINKS="maatregel-dictionary-linked.txt"
 
 # Map symbolic references, like title and Maatregelen, to their actual content
 # map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>
@@ -38,7 +39,7 @@ function create-html
 
 # Generate into folder $1 the document $2.pdf, with title $3 and header $4, using MD cover file $5 and MD document file $6.
 # generate 1:<output folder> 2:<name of document output without PDF extension>
-#          3:<document title> 4:<document header> 5:<cover md> 6:<document md>
+#          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
 function generate {
     OUTPUT_PATH="Generated/$1"
     DICTIONARY="$OUTPUT_PATH/dict.txt"
@@ -46,7 +47,7 @@ function generate {
     mkdir -p $OUTPUT_PATH
 
     # Create dictionary
-    cat $MAATREGEL_DICTIONARY > $DICTIONARY
+    cat $7 > $DICTIONARY
     echo -e "{{TITLE}}=$3\n{{HEADER}}=$4\n" >> $DICTIONARY
 
     # Cover
@@ -69,7 +70,7 @@ function generate {
 function generate-kwaliteitsaanpak {
     TITLE="$3"
     HEADER="$TITLE"
-    generate $1 $2 "$TITLE" "$HEADER" DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md
+    generate $1 $2 "$TITLE" "$HEADER" DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md $MAATREGEL_DICTIONARY_LINKS
 }
 
 # Generate into folder Templates/$1 the template document $2.pdf, titled $3.
@@ -77,10 +78,11 @@ function generate-kwaliteitsaanpak {
 function generate-template {
     TITLE="$3"
     HEADER="$TITLE {projectnaam} {versie}"
-    generate Templates/$1 $2 "$TITLE" "$HEADER" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md
+    generate Templates/$1 $2 "$TITLE" "$HEADER" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md $MAATREGEL_DICTIONARY
 }
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
+python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"
 generate-kwaliteitsaanpak Generic ICTU-Kwaliteitsaanpak-Generic "Kwaliteitsaanpak Software Realisatie"

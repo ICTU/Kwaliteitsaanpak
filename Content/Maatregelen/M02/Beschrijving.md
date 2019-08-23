@@ -1,2 +1,2 @@
-@{{{M02}}
+@{{{M02-no-link}}
 Producten voldoen zo snel mogelijk vanaf de start van een project aan de door het project en projectorganisatie vastgestelde kwaliteitsnormen. De kwaliteit van producten die nog niet zijn afgerond of nog niet aan de normen voldoen, wordt door het project bewaakt. Herstel van de kwaliteit wordt planmatig opgepakt.}@

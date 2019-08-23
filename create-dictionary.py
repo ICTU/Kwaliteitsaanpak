@@ -19,9 +19,9 @@ def read_maatregel(path, do_create_link):
     for header in headers:
         if do_create_link:
             print("{{" + path.name + "}}=[**" + header + "**](#" + create_link(header) + ")")
-            print("{{" + path.name + "-no-link}}=**" + header + "**")
         else:
             print("{{" + path.name + "}}=**" + header + "**")
+        print("{{" + path.name + "-no-link}}=**" + header + "**")
 
 def create_dictionary(do_create_links):
     with open("Content/Versie.md") as version_file:

@@ -116,11 +116,11 @@ De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico's bij so
 
 Maatregelen:
 
-- {{M05-link}}
-- {{M07-link}}
-- {{M10-link}}
-- {{M14-link}}
-- {{M15-link}}
+- {{M05}}
+- {{M07}}
+- {{M10}}
+- {{M14}}
+- {{M15}}
 
 Classificatie:
 

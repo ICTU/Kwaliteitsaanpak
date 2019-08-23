@@ -31,6 +31,7 @@ def create_dictionary(do_create_links):
     for mdir in sorted(path.glob('M*')):
         if mdir.is_dir():
             read_maatregel(mdir, do_create_links)
+    print("{{DUMMY}}=DUMMY")
 
 if __name__ == "__main__":
     arguments = sys.argv[1:]

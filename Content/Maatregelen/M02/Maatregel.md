@@ -4,7 +4,7 @@
 
 De kwaliteitsnormen zijn in deze versie van de kwaliteitsaanpak nog niet opgenomen.
 
-Zie ook [M08: Technische schuld](#technische-schuld-m08-).
+Zie ook {{M08}}.
 
 #### Rationale
 

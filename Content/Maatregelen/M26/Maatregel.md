@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M26/Beschrijving.md"
 
-Zie ook [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-).
+Zie ook {{M05}}.
 
 #### Rationale
 

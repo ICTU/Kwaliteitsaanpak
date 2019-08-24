@@ -130,14 +130,14 @@ Classificatie:
 
 Maatregelen:
 
-- [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-) - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.
-- [M04: Geautomatiseerde regressietests](#geautomatiseerde-regressietests-m04-)
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
-- [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
-- [M17: Snel beschikbare tools](#snel-beschikbare-tools-m17-)
-- [M18: Ondersteuning verplichte tools](#ondersteuning-verplichte-tools-m18-)
-- [M19: Afgeschermde digitale omgeving](#afgeschermde-digitale-omgeving-m19-) - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
+- {{M05}} - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.
+- {{M04}}
+- {{M07}}
+- {{M10}}
+- {{M14}}
+- {{M17}}
+- {{M18}}
+- {{M19}} - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
 
 Classificatie:
 
@@ -148,16 +148,16 @@ Classificatie:
 
 Maatregelen:
 
-- [M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)
-- [M06: Frequente meting](#frequente-meting-m06-)
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
-- [M08: Technische schuld](#technische-schuld-m08-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
-- [M15: Open source tools](#open-source-tools-m15-)
-- [M17: Snel beschikbare tools](#snel-beschikbare-tools-m17-)
-- [M18: Ondersteuning verplichte tools](#ondersteuning-verplichte-tools-m18-)
-- [M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M02}}
+- {{M06}}
+- {{M07}}
+- {{M08}}
+- {{M14}}
+- {{M15}}
+- {{M17}}
+- {{M18}}
+- {{M21}}
+- {{M28}}
 
 Classificatie:
 
@@ -171,13 +171,13 @@ Classificatie:
 
 Maatregelen:
 
-- [M01: Op te leveren producten](#op-te-leveren-producten-m01-)
-- [M03: Traceerbaar voldoen aan eisen](#traceerbaar-voldoen-aan-eisen-m03-)
-- [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-)
-- [M06: Frequente meting](#frequente-meting-m06-)
-- [M08: Technische schuld](#technische-schuld-m08-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M01}}
+- {{M03}}
+- {{M05}}
+- {{M06}}
+- {{M08}}
+- {{M14}}
+- {{M28}}
 
 Classificatie:
 
@@ -190,9 +190,9 @@ Classificatie:
 
 Maatregelen:
 
-- [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
-- [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M10}}
+- {{M13}}
+- {{M28}}
 
 Classificatie:
 
@@ -203,12 +203,12 @@ Classificatie:
 
 Maatregelen:
 
-- [M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)
-- [M06: Frequente meting](#frequente-meting-m06-)
-- [M08: Technische schuld](#technische-schuld-m08-)
-- [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-) - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M02}}
+- {{M06}}
+- {{M08}}
+- {{M13}}
+- {{M14}} - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
+- {{M28}}
 
 Classificatie:
 
@@ -219,14 +219,14 @@ Classificatie:
 
 Maatregelen:
 
-- [M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)
-- [M03: Traceerbaar voldoen aan eisen](#traceerbaar-voldoen-aan-eisen-m03-)
-- [M04: Geautomatiseerde regressietests](#geautomatiseerde-regressietests-m04-)
-- [M06: Frequente meting](#frequente-meting-m06-)
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
-- [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
-- [M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M02}}
+- {{M03}}
+- {{M04}}
+- {{M06}}
+- {{M07}}
+- {{M13}}
+- {{M21}}
+- {{M28}}
 
 Classificatie:
 
@@ -239,8 +239,8 @@ Classificatie:
 
 Maatregelen:
 
-- [M01: Op te leveren producten](#op-te-leveren-producten-m01-)
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
+- {{M01}}
+- {{M07}}
 
 Classificatie:
 
@@ -252,8 +252,8 @@ Classificatie:
 
 Maatregelen:
 
-- [M01: Op te leveren producten](#op-te-leveren-producten-m01-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M01}}
+- {{M28}}
 
 Classificatie:
 

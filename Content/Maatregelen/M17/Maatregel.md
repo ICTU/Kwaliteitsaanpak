@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M17/Beschrijving.md"
 
-Zie ook [M16: Verplichte tools](#verplichte-tools-m16-).
+Zie ook {{M16}}.
 
 #### Rationale
 

@@ -1,6 +1,8 @@
 ### M14: Projecten splitsen in een voorbereidings- en realisatiefase
 
-Projecten hebben een voorbereidingsfase, voorafgaand aan de realisatiefase. Voor het uitvoeren van de voorbereidingsfase zijn vertegenwoordigers van de opdrachtgever en beoogde beheerpartij beschikbaar - bij voorkeur dezelfde als betrokken zullen zijn in de realisatiefase - die meewerken aan het realiseren van een deel van de op te leveren producten (zie {{M01}}). Tijdens de realisatiefase vindt de bouw en het onderhoud van de software en het finaliseren van documentatie plaats.
+#include "Content/Maatregelen/M14/Beschrijving.md"
+
+Zie ook {{M01}}.
 
 #### Rationale
 

@@ -57,6 +57,7 @@ Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable p
 ### {Epic 1}
 
 | Epic | {epic naam} |
+|:----|:----|
 | Doel | {doel van de epic} |
 | {user story ID} | {titel van de user story} |
 | {user story ID} | {titel van de user story} |
@@ -64,6 +65,7 @@ Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable p
 ### {Epic 2}
 
 | Epic | {epic naam} |
+|:----|:----|
 | Doel | {doel van de epic} |
 | {user story ID} | {titel van de user story} |
 | {user story ID} | {titel van de user story} |

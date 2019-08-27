@@ -35,7 +35,7 @@ User stories worden opgesteld volgens een vast formaat. De onderstaande tabel to
 | User story ID | Een unieke identificatie van de user story. | 
 |:----|:----|
 | User story titel | Korte aanduiding van de user story. |
-| Beschrijving | Standaard beschrijving waarmee duidelijk wordt wat ‘de bedoeling’ is: als *ROL* wil ik *ACTIE* zodat *REDEN*. De reden is de rationale die duidelijk maakt wat de businesswaarde is. |
+| Beschrijving | Standaard beschrijving waarmee duidelijk wordt wat het doel is: als *ROL* wil ik *ACTIE* zodat *REDEN*. De reden is de rationale die duidelijk maakt wat de businesswaarde is. |
 | Screenshot prototype | Opnemen of verwijzen naar een screenshot of schets of een beschikbaar prototype. |
 | Acceptatiecriteria | Criteria waarmee de eisen die specifiek zijn voor de betreffende story worden beschreven (niet benoemd in de NFE's). | 
 | Afhankelijkheden* | Hier worden afhankelijkheden bedoeld die niet evident zijn, zoals bijvoorbeeld een koppeling ‘e-herkenning’. |

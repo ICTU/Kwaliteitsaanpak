@@ -8,4 +8,4 @@ De kwaliteitsaanpak heeft drie doelstellingen:
 
 De kwaliteitsaanpak zelf is geformuleerd in de vorm van maatregelen die elke software-ontwikkelende organisatie kan treffen om risico's van softwareontwikkeling te mitigeren en de kans op succesvolle softwareontwikkeling en -onderhoudsprojecten te vergroten. De maatregelen zijn beschreven in algemene termen; waar van toepassing is ook de ICTU-specifieke invulling van de maatregel telkens separaat bijgevoegd.
 
-De beschrijving van de kwaliteitsaanpak is gebaseerd op de huidige aanpak van softwareontwikkeling en -onderhoud bij ICTU. De kwaliteitsaanpak evolueert op basis van praktijkervaringen bij ICTU en - op termijn - bij andere organisaties.
+De beschrijving van de kwaliteitsaanpak is gebaseerd op de huidige aanpak van softwareontwikkeling en -onderhoud bij ICTU. De kwaliteitsaanpak evolueert op basis van praktijkervaringen bij ICTU en bij andere organisaties.

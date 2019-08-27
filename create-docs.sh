@@ -90,6 +90,6 @@ generate-template Template Template-Generiek "Generiek Template"
 generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
 generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
-generate-template HLD Template-High-Level-Design "High Level Design"
+generate-template HLD Template-High-Level-Design "High-Level Design"
 
 python3 create-checklist.py

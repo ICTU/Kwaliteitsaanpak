@@ -46,6 +46,7 @@ De technische eisen die ten grondslag liggen aan dit document zijn en niet besch
 De volgende servers zijn aanwezig:
 
 | Server | Beschrijving softwarecomponent | Ontwikkel | Test | Acceptatie | Productie |
+|:----|:----|:----|:----|:----|:----|
 | Databases |
 | {server} | {beschrijving} |   |   |   |   |		
 | Applicatieservers |

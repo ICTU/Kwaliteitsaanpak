@@ -4,5 +4,5 @@ De volgende kaders zijn van toepassing op het projectresultaat:
 
 | Volgnummer  | Kader |
 |:-----|:----|
-#include "Content/Template/Standaard-Kaders.md"
+#include "Content/Templates/Standaard-Kaders.md"
 | {volgnummer} | {kader} |

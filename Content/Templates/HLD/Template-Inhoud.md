@@ -7,9 +7,9 @@ De technische eisen die ten grondslag liggen aan dit document zijn en niet besch
 | TR01 | {eis} |
 | TR02 | {eis} |
 
-## Ontwerp 
+## Ontwerp
 
-### Netwerkomgeving 
+### Netwerkomgeving
 
 {Beschrijving van de netwerkomgeving}
 

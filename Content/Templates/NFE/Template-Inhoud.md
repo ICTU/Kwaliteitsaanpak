@@ -1,10 +1,10 @@
-## Functionele geschiktheid 
+## Functionele geschiktheid
 
-De mate waarin een softwareproduct of computersysteem functies levert die voldoen aan de uitgesproken en veronderstelde behoeften, bij gebruik onder gespecificeerde condities. 
+De mate waarin een softwareproduct of computersysteem functies levert die voldoen aan de uitgesproken en veronderstelde behoeften, bij gebruik onder gespecificeerde condities.
 
-Opmerking: functionele geschiktheid gaat alleen over of, en in welke mate, expliciete en impliciete behoeften worden afgedekt en betreft niet de functionele eisen zelf. 
+Opmerking: functionele geschiktheid gaat alleen over of, en in welke mate, expliciete en impliciete behoeften worden afgedekt en betreft niet de functionele eisen zelf.
 
-### Functionele compleetheid 
+### Functionele compleetheid
 
 De mate waarin de set van functies alle gespecificeerde taken en gebruikersdoelen ondersteunen.
 
@@ -12,7 +12,7 @@ De mate waarin de set van functies alle gespecificeerde taken en gebruikersdoele
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Functionele correctheid 
+### Functionele correctheid
 
 De mate waarin het systeem de juiste resultaten met de benodigde nauwkeurigheid beschikbaar stelt.
 
@@ -20,7 +20,7 @@ De mate waarin het systeem de juiste resultaten met de benodigde nauwkeurigheid 
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Functionele toepasbaarheid 
+### Functionele toepasbaarheid
 
 De mate waarin de functies bijdragen aan het behalen van specifieke taken en doelen.
 
@@ -28,19 +28,19 @@ De mate waarin de functies bijdragen aan het behalen van specifieke taken en doe
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-## Prestatie-efficiëntie 
+## Prestatie-efficiëntie
 
 Prestatie van het systeem in verhouding tot het aantal resources, onder bepaalde condities.
 
-### Snelheid 
+### Snelheid
 
-De mate waarin antwoord- en verwerkingstijden en doorvoersnelheid van een product of systeem, tijdens de uitvoer van zijn functies, voldoet aan de wensen. 
+De mate waarin antwoord- en verwerkingstijden en doorvoersnelheid van een product of systeem, tijdens de uitvoer van zijn functies, voldoet aan de wensen.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Middelenbeslag 
+### Middelenbeslag
 
 De mate waarin de hoeveelheid en type middelen die gebruikt worden door een product of systeem, tijdens de uitvoer van zijn functies, voldoet aan de wensen.
 
@@ -62,59 +62,59 @@ De mate waarin een product, systeem of component informatie uit kan wisselen met
 
 ### Beïnvloedbaarheid
 
-De mate waarin een product zijn vereiste functies kan vervullen terwijl het een omgeving en resources deelt met andere producten, zonder negatieve impact op enig product. 
+De mate waarin een product zijn vereiste functies kan vervullen terwijl het een omgeving en resources deelt met andere producten, zonder negatieve impact op enig product.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Koppelbaarheid 
+### Koppelbaarheid
 
-De mate waarin twee of meer systemen, producten of componenten informatie kunnen uitwisselen en deze uitgewisselde informatie kunnen gebruiken. 
-
-| Nr.  | Eis | Prio | Bewijs |
-|:-----|:----|:----|:----|:----|
-| {nr} | {eis} | {prio} | {bewijs} |
-
-## Bruikbaarheid 
-
-De mate waarin een product of systeem gebruikt kan worden door gespecificeerde gebruikers om effectief, efficiënt en naar tevredenheid gespecificeerde doelen te bereiken in een gespecificeerde gebruikscontext. 
-
-### Herkenbaarheid van geschiktheid 
-
-De mate waarin gebruikers kunnen herkennen of het product of systeem geschikt is voor hun behoeften. 
+De mate waarin twee of meer systemen, producten of componenten informatie kunnen uitwisselen en deze uitgewisselde informatie kunnen gebruiken.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Leerbaarheid 
+## Bruikbaarheid
 
-De mate waarin het systeem gebruikt kan worden door gespecificeerde gebruikers om gespecificeerde (leer)doelen te bereiken met betrekking tot het gebruik van het systeem met effectiviteit, efficiëntie, vrijheid van risico en voldoening, in een gespecificeerde gebruikscontext. 
+De mate waarin een product of systeem gebruikt kan worden door gespecificeerde gebruikers om effectief, efficiënt en naar tevredenheid gespecificeerde doelen te bereiken in een gespecificeerde gebruikscontext.
 
-| Nr.  | Eis | Prio | Bewijs |
-|:-----|:----|:----|:----|:----|
-| {nr} | {eis} | {prio} | {bewijs} |
+### Herkenbaarheid van geschiktheid
 
-### Bedienbaarheid 
-
-De mate waarin het systeem kenmerken heeft die het makkelijk maken om het te bedienen en beheersen. 
+De mate waarin gebruikers kunnen herkennen of het product of systeem geschikt is voor hun behoeften.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Voorkomen gebruikersfouten 
+### Leerbaarheid
 
-De mate waarin het systeem gebruikers beschermt tegen het maken van fouten. 
+De mate waarin het systeem gebruikt kan worden door gespecificeerde gebruikers om gespecificeerde (leer)doelen te bereiken met betrekking tot het gebruik van het systeem met effectiviteit, efficiëntie, vrijheid van risico en voldoening, in een gespecificeerde gebruikscontext.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Volmaaktheid gebruikersinterface 
+### Bedienbaarheid
 
-De mate waarin een gebruikersinterface het de gebruiker mogelijk maakt om een plezierige en voldoening gevende interactie te hebben. 
+De mate waarin het systeem kenmerken heeft die het makkelijk maken om het te bedienen en beheersen.
+
+| Nr.  | Eis | Prio | Bewijs |
+|:-----|:----|:----|:----|:----|
+| {nr} | {eis} | {prio} | {bewijs} |
+
+### Voorkomen gebruikersfouten
+
+De mate waarin het systeem gebruikers beschermt tegen het maken van fouten.
+
+| Nr.  | Eis | Prio | Bewijs |
+|:-----|:----|:----|:----|:----|
+| {nr} | {eis} | {prio} | {bewijs} |
+
+### Volmaaktheid gebruikersinterface
+
+De mate waarin een gebruikersinterface het de gebruiker mogelijk maakt om een plezierige en voldoening gevende interactie te hebben.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
@@ -131,49 +131,49 @@ Als standaard voor toegankelijkheid hanteert de Nederlandse overheid, en dus ICT
 | 1 | Waar van toepassing voldoet de applicatie aan de richtlijnen uit WCAG2.1, Level A en AA | {prio} | {bewijs} |
 | {nr} | {eis} | {prio} | {bewijs} |
 
-## Betrouwbaarheid 
+## Betrouwbaarheid
 
 De mate waarin een systeem, product of component gespecificeerde functies uitvoert onder gespecificeerde condities gedurende een gespecificeerde hoeveelheid tijd.
 
 ### Volwassenheid
 
-De mate waarin het systeem onder normale condities de betrouwbaarheidsnormen haalt. 
+De mate waarin het systeem onder normale condities de betrouwbaarheidsnormen haalt.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Beschikbaarheid 
+### Beschikbaarheid
 
-De mate waarin het systeem operationeel en toegankelijk is wanneer men het wil gebruiken. 
-
-| Nr.  | Eis | Prio | Bewijs |
-|:-----|:----|:----|:----|:----|
-| {nr} | {eis} | {prio} | {bewijs} |
-
-### Foutbestendigheid 
-
-De mate waarin het systeem werkt zoals bedoeld ondanks de aanwezigheid van hard- of software-fouten. 
+De mate waarin het systeem operationeel en toegankelijk is wanneer men het wil gebruiken.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Herstelbaarheid 
+### Foutbestendigheid
 
-De mate waarin het systeem, in geval van een onderbreking of bij een fout, de direct betrokken gegevens kan herstellen en het systeem in de gewenste staat kan terug brengen. 
+De mate waarin het systeem werkt zoals bedoeld ondanks de aanwezigheid van hard- of software-fouten.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-## Beveiligbaarheid 
+### Herstelbaarheid
 
-De mate waarin een product of systeem informatie en gegevens beschermt zodat personen, andere producten of systemen de juiste mate van gegevenstoegang hebben passend bij hun soort en niveau van autorisatie. 
+De mate waarin het systeem, in geval van een onderbreking of bij een fout, de direct betrokken gegevens kan herstellen en het systeem in de gewenste staat kan terug brengen.
 
-### BIR- en SSD-eisen 
+| Nr.  | Eis | Prio | Bewijs |
+|:-----|:----|:----|:----|:----|
+| {nr} | {eis} | {prio} | {bewijs} |
 
-De Rijksoverheid is gebonden aan kaderstelling op het gebied van informatiebeveiliging, zoals de Baseline Informatiebeveiliging Rijksdienst (BIR). Handvatten zoals Secure Software Development (SSD) van het Centrum informatiebeveiliging en privacybescherming dienen als leidraad voor het veilig ontwikkelen van software die het voldoen aan de BIR ondersteunt. De BIR is een toepassing van de (ISO 27001:2005) op het domein van de Rijksoverheid. In die toepassing zijn het Voorschrift Informatiebeveiliging Rijksdienst (VIR) en het Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie (VIRBI) verwerkt. 
+## Beveiligbaarheid
+
+De mate waarin een product of systeem informatie en gegevens beschermt zodat personen, andere producten of systemen de juiste mate van gegevenstoegang hebben passend bij hun soort en niveau van autorisatie.
+
+### BIR- en SSD-eisen
+
+De Rijksoverheid is gebonden aan kaderstelling op het gebied van informatiebeveiliging, zoals de Baseline Informatiebeveiliging Rijksdienst (BIR). Handvatten zoals Secure Software Development (SSD) van het Centrum informatiebeveiliging en privacybescherming dienen als leidraad voor het veilig ontwikkelen van software die het voldoen aan de BIR ondersteunt. De BIR is een toepassing van de (ISO 27001:2005) op het domein van de Rijksoverheid. In die toepassing zijn het Voorschrift Informatiebeveiliging Rijksdienst (VIR) en het Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie (VIRBI) verwerkt.
 
 BIR en SSD bevatten ook een aantal maatregelen ten aanzien van software en/of de infrastructurele componenten waar deze software gebruik van maakt. Deze maatregelen zijn hieronder als eisen opgenomen.
 
@@ -212,111 +212,111 @@ BIR en SSD bevatten ook een aantal maatregelen ten aanzien van software en/of de
 | 24 | In de (web)applicatieomgeving zijn signaleringsfuncties (registratie en detectie) actief en efficiënt, effectief en beveiligd ingericht. | {prio} | {bewijs} |
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Vertrouwelijkheid 
+### Vertrouwelijkheid
 
-De mate waarin een product of systeem ervoor zorgt dat gegevens alleen toegankelijk zijn voor diegenen die geautoriseerd zijn. 
-
-| Nr.  | Eis | Prio | Bewijs |
-|:-----|:----|:----|:----|:----|
-| {nr} | {eis} | {prio} | {bewijs} |
-
-### Integriteit 
-
-De mate waarin een systeem, product of component ongeautoriseerde toegang tot of aanpassing van computerprogramma’s of gegevens verhindert. 
+De mate waarin een product of systeem ervoor zorgt dat gegevens alleen toegankelijk zijn voor diegenen die geautoriseerd zijn.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Onweerlegbaarheid 
+### Integriteit
 
-De mate waarin kan worden bewezen dat acties of gebeurtenissen plaats hebben gevonden, zodat later deze acties of gebeurtenissen niet ontkend kunnen worden. 
-
-| Nr.  | Eis | Prio | Bewijs |
-|:-----|:----|:----|:----|:----|
-| {nr} | {eis} | {prio} | {bewijs} |
-
-### Verantwoording 
-
-De mate waarin acties van een entiteit getraceerd kunnen worden naar die specifieke entiteit. 
+De mate waarin een systeem, product of component ongeautoriseerde toegang tot of aanpassing van computerprogramma’s of gegevens verhindert.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Authenticiteit 
+### Onweerlegbaarheid
 
-De mate waarin bewezen kan worden dat de identiteit van een onderwerp of bron is zoals wordt beweerd. 
-
-| Nr.  | Eis | Prio | Bewijs |
-|:-----|:----|:----|:----|:----|
-| {nr} | {eis} | {prio} | {bewijs} |
-
-## Onderhoudbaarheid 
-
-De mate waarin een product of systeem effectief en efficiënt gewijzigd kan worden door de aangewezen beheerders 
-
-### Modulariteit 
-
-De mate waarin het systeem opgebouwd is uit losstaande componenten zodat wijzigingen van een component minimale impact heeft op andere componenten. 
+De mate waarin kan worden bewezen dat acties of gebeurtenissen plaats hebben gevonden, zodat later deze acties of gebeurtenissen niet ontkend kunnen worden.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Herbruikbaarheid 
+### Verantwoording
 
-De mate waarin een bestaand onderdeel gebruikt kan worden in meer dan één systeem of bij het bouwen van een nieuw onderdeel. 
-
-| Nr.  | Eis | Prio | Bewijs |
-|:-----|:----|:----|:----|:----|
-| {nr} | {eis} | {prio} | {bewijs} |
-
-### Analyseerbaarheid 
-
-De mate waarin het mogelijk is om effectief en efficiënt de impact, van een geplande verandering van één of meer onderdelen, op een product of systeem te beoordelen, om afwijkingen en/of foutoorzaken van een product vast te stellen of om onderdelen te identificeren die gewijzigd moeten worden. 
- 
-| Nr.  | Eis | Prio | Bewijs |
-|:-----|:----|:----|:----|:----|
-| {nr} | {eis} | {prio} | {bewijs} |
-
-### Wijzigbaarheid 
-
-De mate waarin een product of systeem effectief en efficiënt gewijzigd kan worden zonder fouten of kwaliteitsvermindering tot gevolg. 
+De mate waarin acties van een entiteit getraceerd kunnen worden naar die specifieke entiteit.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Testbaarheid 
+### Authenticiteit
 
-De mate waarin effectief en efficiënt testcriteria vastgesteld kunnen worden voor een systeem, product of component en waarin tests uitgevoerd kunnen worden om vast te stellen of aan die criteria is voldaan. 
-
-| Nr.  | Eis | Prio | Bewijs |
-|:-----|:----|:----|:----|:----|
-| {nr} | {eis} | {prio} | {bewijs} |
-
-## Overdraagbaarheid 
-
-De mate waarin een systeem, product of component effectief en efficiënt overgezet kan worden van één hardware, software of andere operationele of gebruiksomgeving naar een andere. 
-
-### Aanpasbaarheid 
-
-De mate waarin een product of systeem effectief en efficiënt aangepast kan worden voor andere of zich ontwikkelende hardware, software of andere operationele of gebruiksomgevingen. 
+De mate waarin bewezen kan worden dat de identiteit van een onderwerp of bron is zoals wordt beweerd.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Installeerbaarheid 
+## Onderhoudbaarheid
 
-De mate waarin het product of het systeem effectief en efficiënt geïnstalleerd of verwijderd kan worden in een gespecificeerde omgeving. 
+De mate waarin een product of systeem effectief en efficiënt gewijzigd kan worden door de aangewezen beheerders
+
+### Modulariteit
+
+De mate waarin het systeem opgebouwd is uit losstaande componenten zodat wijzigingen van een component minimale impact heeft op andere componenten.
 
 | Nr.  | Eis | Prio | Bewijs |
 |:-----|:----|:----|:----|:----|
 | {nr} | {eis} | {prio} | {bewijs} |
 
-### Vervangbaarheid 
+### Herbruikbaarheid
+
+De mate waarin een bestaand onderdeel gebruikt kan worden in meer dan één systeem of bij het bouwen van een nieuw onderdeel.
+
+| Nr.  | Eis | Prio | Bewijs |
+|:-----|:----|:----|:----|:----|
+| {nr} | {eis} | {prio} | {bewijs} |
+
+### Analyseerbaarheid
+
+De mate waarin het mogelijk is om effectief en efficiënt de impact, van een geplande verandering van één of meer onderdelen, op een product of systeem te beoordelen, om afwijkingen en/of foutoorzaken van een product vast te stellen of om onderdelen te identificeren die gewijzigd moeten worden.
+
+| Nr.  | Eis | Prio | Bewijs |
+|:-----|:----|:----|:----|:----|
+| {nr} | {eis} | {prio} | {bewijs} |
+
+### Wijzigbaarheid
+
+De mate waarin een product of systeem effectief en efficiënt gewijzigd kan worden zonder fouten of kwaliteitsvermindering tot gevolg.
+
+| Nr.  | Eis | Prio | Bewijs |
+|:-----|:----|:----|:----|:----|
+| {nr} | {eis} | {prio} | {bewijs} |
+
+### Testbaarheid
+
+De mate waarin effectief en efficiënt testcriteria vastgesteld kunnen worden voor een systeem, product of component en waarin tests uitgevoerd kunnen worden om vast te stellen of aan die criteria is voldaan.
+
+| Nr.  | Eis | Prio | Bewijs |
+|:-----|:----|:----|:----|:----|
+| {nr} | {eis} | {prio} | {bewijs} |
+
+## Overdraagbaarheid
+
+De mate waarin een systeem, product of component effectief en efficiënt overgezet kan worden van één hardware, software of andere operationele of gebruiksomgeving naar een andere.
+
+### Aanpasbaarheid
+
+De mate waarin een product of systeem effectief en efficiënt aangepast kan worden voor andere of zich ontwikkelende hardware, software of andere operationele of gebruiksomgevingen.
+
+| Nr.  | Eis | Prio | Bewijs |
+|:-----|:----|:----|:----|:----|
+| {nr} | {eis} | {prio} | {bewijs} |
+
+### Installeerbaarheid
+
+De mate waarin het product of het systeem effectief en efficiënt geïnstalleerd of verwijderd kan worden in een gespecificeerde omgeving.
+
+| Nr.  | Eis | Prio | Bewijs |
+|:-----|:----|:----|:----|:----|
+| {nr} | {eis} | {prio} | {bewijs} |
+
+### Vervangbaarheid
 
 De mate waarin een product een ander specifiek softwareproduct, met hetzelfde doel in de zelfde omgeving, kan vervangen.
 

@@ -3,5 +3,6 @@
 # {{TITLE}}
 ### {Projectnaam}
 Versie {versienummer}
+Datum {datum}
 
 ![wordcloud](../../../Content/Images/word-cloud.png "word-cloud")

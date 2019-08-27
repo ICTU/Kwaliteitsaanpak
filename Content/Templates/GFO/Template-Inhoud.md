@@ -23,6 +23,7 @@ Deze paragraaf geeft een overzicht van alle epics die voorzien zijn in het syste
 Epics zijn volgens een vast formaat beschreven. De onderstaande tabel toont de gegevens die over een epic worden opgenomen. 
 
 | Epic | *epic naam* |
+|:----|:----|
 | Doel | *doel van de epic* |
 | *user story ID* | *titel van de user story* |
 | *user story ID* | *titel van de user story* |
@@ -32,6 +33,7 @@ De user stories beschrijven alle beoogde functionaliteit van het systeem. De lij
 User stories worden opgesteld volgens een vast formaat. De onderstaande tabel toont de gegevens die over een user stories worden opgenomen.
 
 | User story ID | Een unieke identificatie van de user story. | 
+|:----|:----|
 | User story titel | Korte aanduiding van de user story. |
 | Beschrijving | Standaard beschrijving waarmee duidelijk wordt wat ‘de bedoeling’ is: als *ROL* wil ik *ACTIE* zodat *REDEN*. De reden is de rationale die duidelijk maakt wat de businesswaarde is. |
 | Screenshot prototype | Opnemen of verwijzen naar een screenshot of schets of een beschikbaar prototype. |
@@ -65,3 +67,7 @@ Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable p
 | Doel | {doel van de epic} |
 | {user story ID} | {titel van de user story} |
 | {user story ID} | {titel van de user story} |
+
+## Invulling van eisen
+
+{???}

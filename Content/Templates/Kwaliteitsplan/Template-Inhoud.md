@@ -5,5 +5,3 @@ Blablabla.
 ## Kwaliteitsmaatregelen voor processen
 
 Blablabla.
-
-

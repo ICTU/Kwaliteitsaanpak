@@ -61,6 +61,12 @@ h4.risk {
     padding: 1em;
 }
 
+h5 {
+    color: black;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
 tr {
     page-break-inside: avoid;
 }

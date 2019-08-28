@@ -1,10 +1,11 @@
-**Revisiehistorie**
+# 
+##### Revisiehistorie
 
 | Versie   | Auteur           | Datum  | Status | Opmerkingen                      |
 |:---------|:-----------------|:-------|:-------|:---------------------------------|
 | {versie} | {naam} | {datum} | {concept/definitief} | {opmerkingen} |
 
-**Vereiste goedkeuringen**
+##### Vereiste goedkeuringen
 
 | Functie/rol                 | Naam                          |  Datum          | Versie   |
 |:----------------------------|:------------------------------|:---------------|:--------:|
@@ -12,7 +13,7 @@
 | Projectleider opdrachtgever | {naam} | {datum} | {versie} |
 | Product owner | {naam} | {datum} | {versie} |
 
-**Verzendlijst huidige versie**
+##### Verzendlijst huidige versie
 
 | Naam                          | Organisatie                   | Functie/rol                   |
 |:------------------------------|:------------------------------|:------------------------------|
@@ -21,5 +22,5 @@
 | {naam} | ICTU | Projectleider |
 | {naam} | ICTU | Software delivery manager |
 
-**Template versie**
+##### Template versie
 #include "Content/Versie.md"

@@ -1,8 +1,8 @@
-### M09: Implementatie kwaliteitsaanpak
+## M09: Implementatie kwaliteitsaanpak
 
 #include "Content/Maatregelen/M09/Beschrijving.md"
 
-#### Rationale
+### Rationale
 
 De implementatie van een nieuwe versie van de kwaliteitsaanpak kost tijd. De introductie en aanpassing van normen en tools, kunnen verschillende consequenties hebben: bestaande broncode blijkt niet meer volledig te voldoen aan de normen, een nieuwe tool moet in de ontwikkelstraat worden toegevoegd, enzovoort.
 

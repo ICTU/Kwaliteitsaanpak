@@ -1,7 +1,7 @@
 ![ICTU](../../../Content/Images/ICTU.png "ictu-logo")
 
-# {{TITLE}}
-### {Projectnaam}
+{{TITLE}}
+**{Projectnaam}**
 Versie {versienummer}
 Datum {datum}
 

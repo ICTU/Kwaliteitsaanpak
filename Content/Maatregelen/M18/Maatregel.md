@@ -1,8 +1,8 @@
-### M18: Ondersteuning verplichte tools
+## M18: Ondersteuning verplichte tools
 
 #include "Content/Maatregelen/M18/Beschrijving.md"
 
-#### Rationale
+### Rationale
 
 De keuze om het gebruik van een aantal tools verplicht te stellen ({{M16}}) volgt uit de belangrijke rol die die tools spelen in de ontwikkelstraat en in het kwaliteitssysteem. Met de verplichting komt ook een verantwoordelijkheid: om projecten in staat te stellen snel en effectief met deze tools te werken, moeten die projecten ondersteund worden. Uiteraard staat het de projectenorganisatie vrij ook niet-verplichte tools te ondersteunen.
 

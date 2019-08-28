@@ -1,13 +1,13 @@
-### Hoe de kwaliteitsaanpak het manifest ondersteunt
+## Hoe de kwaliteitsaanpak het manifest ondersteunt
 
-#### Het belang van de burger staat voorop
+### Het belang van de burger staat voorop
 
 Deze kwaliteitsaanpak helpt opdrachtgevers van maatwerksoftware het belang van burgers en ambtenaren, die diensten aan burgers verlenen, voorop te zetten door:
 
 - voordat het project echt gaat bouwen goed na te denken over de mogelijke oplossingen en de kwaliteitseigenschappen die voor met name de burger van belang zijn. Denk aan gebruikskwaliteit, beveiliging, privacy, performance en toegankelijkheid ({{M14}});
 - bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan ({{M21}}).
 
-#### We delen wat we goed kunnen, en gebruiken wat anderen beter doen
+### We delen wat we goed kunnen, en gebruiken wat anderen beter doen
 
 We delen wat we goed kunnen door:
 
@@ -21,11 +21,11 @@ We gebruiken wat anderen beter doen door:
 - ons werk periodiek op informatiebeveiliging te laten controleren ({{M26}});
 - door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd, te laten gaan ({{M21}}).
 
-#### Op zoek naar de juiste oplossing is het experiment soms de kortste weg
+### Op zoek naar de juiste oplossing is het experiment soms de kortste weg
 
 De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om uit te proberen en te leren. We delen de lessen geleerd in projecten via de kwaliteitsaanpak zelf ({{M11}})
 
-#### Wij geloven in agile werken bij de overheid
+### Wij geloven in agile werken bij de overheid
 
 Door agile te werken ({{M05}}) kunnen wij:
 
@@ -33,7 +33,7 @@ Door agile te werken ({{M05}}) kunnen wij:
 - frequent waarde leveren ({{M07}});
 - technische schuld beheersen ({{M08}}).
 
-#### Wij geven inzicht in de kwaliteit van ons werk
+### Wij geven inzicht in de kwaliteit van ons werk
 
 Deze kwaliteitsaanpak helpt organisaties die maatwerksoftware ontwikkelen inzicht te geven aan opdrachtgevers in de kwaliteit van het werk door:
 

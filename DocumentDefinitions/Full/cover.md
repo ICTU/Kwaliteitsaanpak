@@ -1,17 +1,17 @@
 ![ICTU](../../Content/Images/ICTU.png "ictu-logo")
 
-# Kwaliteitsaanpak ICTU Software Realisatie
+Kwaliteitsaanpak ICTU Software Realisatie
 
 #include "Content/Versie.md"
 
 ![wordcloud](../../Content/Images/word-cloud.png "word-cloud")
 
-## Wijzigingsgeschiedenis
+# Wijzigingsgeschiedenis
 
-### Algemeen
+## Algemeen
 
 #include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
 
-### ICTU-specifiek
+## ICTU-specifiek
 
 #include "Content/Wijzigingsgeschiedenis/ICTU.md"

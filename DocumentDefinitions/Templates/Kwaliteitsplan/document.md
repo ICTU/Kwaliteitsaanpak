@@ -1,6 +1,6 @@
 #include "Content/Templates/Historie.md"
 
-## Inleiding
+# Inleiding
 
 #include "Content/Templates/Kwaliteitsplan/Over-dit-document.md"
 #include "Content/Templates/Kwaliteitsplan/Doelgroep.md"
@@ -11,6 +11,6 @@
 
 #include "Content/Templates/Kwaliteitsplan/Template-Inhoud.md"
 
-## Bijlagen
+# Bijlagen
 
 #include "Content/Templates/Bijlagen/Standaard-Bijlagen.md"

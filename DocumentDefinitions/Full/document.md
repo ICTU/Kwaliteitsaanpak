@@ -3,7 +3,7 @@
 #include "Content/Doelstellingen.md"
 #include "Content/Leeswijzer.md"
 
-## Producten
+# Producten
 
 #include "Content/Maatregelen/M01/Maatregel.md"
 #include "Content/Maatregelen/M01/ICTU.md"
@@ -23,7 +23,7 @@
 #include "Content/Maatregelen/M26/Maatregel.md"
 #include "Content/Maatregelen/M26/ICTU.md"
 
-## Processen
+# Processen
 
 #include "Content/Maatregelen/M05/Maatregel.md"
 #include "Content/Maatregelen/M05/ICTU.md"
@@ -49,7 +49,7 @@
 #include "Content/Maatregelen/M28/Maatregel.md"
 #include "Content/Maatregelen/M28/ICTU.md"
 
-## Projectorganisatie
+# Projectorganisatie
 
 #include "Content/Maatregelen/M11/Maatregel.md"
 #include "Content/Maatregelen/M11/ICTU.md"
@@ -90,7 +90,7 @@
 #include "Content/Maatregelen/M23/Maatregel.md"
 #include "Content/Maatregelen/M23/ICTU.md"
 
-## Bijlagen
+# Bijlagen
 
 #include "Content/Bijlagen/Manifest-Maatregelen.md"
 #include "Content/Bijlagen/Risico.md"

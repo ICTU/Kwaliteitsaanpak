@@ -1,8 +1,8 @@
-### M01: Op te leveren producten
+## M01: Op te leveren producten
 
 #include "Content/Maatregelen/M01/Beschrijving.md"
 
-#### Rationale
+### Rationale
 
 Het uniformeren van op te leveren producten biedt voordelen voor planning (het is bekend welke producten gemaakt moeten worden), voor bemensing (het is bekend welke expertise nodig is) en voor het uitwisselen van medewerkers.
 

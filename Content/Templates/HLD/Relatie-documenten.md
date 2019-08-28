@@ -1,4 +1,4 @@
-### Relatie met andere documenten
+## Relatie met andere documenten
 
 In verschillende documenten zijn eisen en wensen opgenomen die ten grondslag liggen aan dit High Level Design. Deze zijn opgenomen in de volgende documenten:
 

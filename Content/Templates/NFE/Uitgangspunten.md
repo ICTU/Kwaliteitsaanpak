@@ -1,4 +1,4 @@
-### Uitgangspunten
+## Uitgangspunten
 
 De volgende uitgangspunten zijn van toepassing op dit document:
 

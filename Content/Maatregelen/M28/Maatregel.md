@@ -1,4 +1,4 @@
-### M28: Self-assessment
+## M28: Self-assessment
 
 #include "Content/Maatregelen/M28/Beschrijving.md"
 
@@ -13,6 +13,6 @@ Voor de belangrijkste verschillen beschrijft de projectverantwoordelijke:
 - in geval van acceptatie; waarom het verschil geaccepteerd wordt,
 - in geval van verbeteractie; planning om het verschil weg te werken.
 
-#### Rationale
+### Rationale
 
 Net als bij technische producten is het periodiek meten van de kwaliteit van belang om in controle te blijven. Aangezien veel maatregelen uit de kwaliteitsaanpak zich niet geautomatiseerd laten meten, is menselijke inbreng nodig.

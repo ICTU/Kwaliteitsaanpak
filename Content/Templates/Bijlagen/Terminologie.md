@@ -1,4 +1,4 @@
-### Terminologie en afkortingen
+## Terminologie en afkortingen
 
 De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in ICTU-documentatie.
 

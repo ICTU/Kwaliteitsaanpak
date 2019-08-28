@@ -1,4 +1,4 @@
-### Relatie met andere documenten
+## Relatie met andere documenten
 
 Dit document beschrijft de functionele user stories. De architectuur, die ten grondslag ligt aan de oplossing, staat beschreven in de projectstartarchitectuur (PSA). De beschrijving van de architectuur van de oplossing staat in het software-architectuurdocument (SAD).
 

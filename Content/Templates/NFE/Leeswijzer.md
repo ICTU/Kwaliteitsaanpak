@@ -1,4 +1,4 @@
-### Leeswijzer
+## Leeswijzer
 
 Hoofdstukken 2 tot en met 9 bevatten hebben elk betrekking op een hoofdeigenschap. De hoofdstukken zijn verder onderverdeeld conform de in de tabel genoemde eigenschappen.
 

@@ -1,8 +1,8 @@
-## Functionele specificaties
+# Functionele specificaties
 
 De functionele specificaties zijn in de vorm van epics en user stories beschreven. Een user story is een korte beschrijving (story) van wat een gebruiker (user) wil. Een epic is een sprint-overstijgend, samenhangend geheel van user stories, dat als geheel waarde oplevert.
 
-### Actoren
+## Actoren
 
 Een actor is een 'gebruiker' van het systeem; dit kunnen menselijke gebruikers zijn, maar ook andere systemen. Hierbij bestaat een onderscheid tussen interne en externe actoren.
 
@@ -10,7 +10,7 @@ Een actor is een 'gebruiker' van het systeem; dit kunnen menselijke gebruikers z
 |:----|:----|:----|
 | {actor} | {verantwoordelijkheid} | {intern/extern} |
 
-### Overzicht van epics
+## Overzicht van epics
 
 Deze paragraaf geeft een overzicht van alle epics die voorzien zijn in het systeem. De epics zijn geclassificeerd als wel of niet onderdeel van het minimum viable product (MVP).
 
@@ -18,7 +18,7 @@ Deze paragraaf geeft een overzicht van alle epics die voorzien zijn in het syste
 |:----|:----|:----|
 | {epic ID} | {naam} | {ja/nee} |
 
-### Gegevens binnen epics en user stories
+## Gegevens binnen epics en user stories
 
 Epics zijn volgens een vast formaat beschreven. De onderstaande tabel toont de gegevens die over een epic worden opgenomen.
 
@@ -43,7 +43,7 @@ User stories worden opgesteld volgens een vast formaat. De onderstaande tabel to
 | Beveiligingsrisico’s* | Wanneer sprake is van specifieke potentiele beveiligingsproblemen. |
 * Indien van toepassing
 
-## Epics
+# Epics
 
 Dit hoofstuk beschrijft alle epics en de bijbehorende user stories. De user stories zijn geclassificeerd volgens MosCoW-prioritering, deze is als volgt:
 
@@ -54,7 +54,7 @@ Dit hoofstuk beschrijft alle epics en de bijbehorende user stories. De user stor
 
 Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable product.
 
-### {Epic 1}
+## {Epic 1}
 
 | Epic | {epic naam} |
 |:----|:----|
@@ -62,7 +62,7 @@ Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable p
 | {user story ID} | {titel van de user story} |
 | {user story ID} | {titel van de user story} |
 
-### {Epic 2}
+## {Epic 2}
 
 | Epic | {epic naam} |
 |:----|:----|
@@ -70,6 +70,6 @@ Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable p
 | {user story ID} | {titel van de user story} |
 | {user story ID} | {titel van de user story} |
 
-## Invulling van eisen
+# Invulling van eisen
 
 {???}

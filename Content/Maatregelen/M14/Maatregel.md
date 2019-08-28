@@ -1,10 +1,10 @@
-### M14: Projecten splitsen in een voorbereidings- en realisatiefase
+## M14: Projecten splitsen in een voorbereidings- en realisatiefase
 
 #include "Content/Maatregelen/M14/Beschrijving.md"
 
 Zie ook {{M01}}.
 
-#### Rationale
+### Rationale
 
 Het doel van de voorbereidingsfase is ten eerste om uitgangspunten, risico's en randvoorwaarden voor verdere projectuitvoering te bepalen en ten tweede om te zorgen dat aan de randvoorwaarden wordt voldaan en voor zoveel mogelijk projectspecifieke risico's maatregelen genomen zijn. Het doel van de realisatiefase is het daadwerkelijk bouwen en onderhouden van de software. Een expliciete splitsing zorgt ervoor dat projecten doordacht van start gaan.
 

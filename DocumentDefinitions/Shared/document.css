@@ -5,13 +5,13 @@ body {
     counter-reset: section;
 }
 
-h2::before {
+h1::before {
     counter-increment: section;
     content: counter(section) " ";
     color: #2C64AD;
 }
 
-h2 {
+h1 {
     line-height: 150%;
     color: #2C64AD;
     font-size: 42pt;
@@ -24,24 +24,24 @@ h2 {
     content: "";  /* The Bijlagen section has no counter */
 }
 
-h3.bijlage::before {
+h2.bijlage::before {
     counter-increment: subsection;
     content: counter(subsection, upper-latin) " ";
 }
 
-h3::before {
+h2::before {
     counter-increment: subsection;
     content: counter(section) "." counter(subsection) " ";
 }
 
-h3 {
+h2 {
     margin-top: 20px;
     color: #DB1778;
     font-size: 18pt;
     font-weight: bold;
 }
 
-h4 {
+h3 {
     margin-top: 10px;
     color: black;
     font-size: 14pt;
@@ -49,13 +49,13 @@ h4 {
     margin-bottom: -15px;  /* Remove vertical space between header and next element */
 }
 
-h5 {
+h4 {
     font-size: 12pt;
     color: #B500C7;
     margin-bottom: -15px;  /* Remove vertical space between header and next element */
 }
 
-h5.risk {
+h4.risk {
     background-color: #4C76BA;
     color: white;
     padding: 1em;

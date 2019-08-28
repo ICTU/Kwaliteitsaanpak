@@ -1,4 +1,4 @@
-### Kaders
+## Kaders
 
 De volgende kaders zijn van toepassing op het projectresultaat:
 

@@ -1,4 +1,4 @@
-### Kwaliteitsaanpak ICTU Software Realisatie
+## Kwaliteitsaanpak ICTU Software Realisatie
 
 #include "Content/Inleiding-tekst.md"
 

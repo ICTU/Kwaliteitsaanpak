@@ -1,8 +1,8 @@
-### M11: Beheer en onderhoud kwaliteitsaanpak en -normen
+## M11: Beheer en onderhoud kwaliteitsaanpak en -normen
 
 #include "Content/Maatregelen/M11/Beschrijving.md"
 
-#### Rationale
+### Rationale
 
 Expliciet beheer en onderhoud van de kwaliteitsaanpak is nodig om lessen geleerd in projecten, nieuwe inzichten uit bijvoorbeeld wetenschappelijke literatuur en nieuwe technische mogelijkheden voor meting en analyse te verwerken in de kwaliteitsaanpak. De kwaliteitsaanpak wordt door de projectenorganisatie - en niet door een project - onderhouden, zodat deze bij meerdere projecten kan worden toegepast.
 

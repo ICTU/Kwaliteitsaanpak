@@ -1,4 +1,4 @@
-### Doelgroep
+## Doelgroep
 
 Dit document is relevant voor de volgende partijen:
 * de eigenaar/eigenaren van het systeem,

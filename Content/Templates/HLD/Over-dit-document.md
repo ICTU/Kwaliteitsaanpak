@@ -1,4 +1,4 @@
-### Over dit document
+## Over dit document
 
 Het High Level Design (HLD) heeft als doel om een high-level overzicht te geven van de technische infrastructuur van {systeem}. Hierbij is er vanuit gegaan dat de oplossing ten minste {aantal} jaar conform specificaties kan functioneren. In de praktijk is een kortere of langere periode mogelijk.
 

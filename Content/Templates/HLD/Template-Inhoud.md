@@ -1,4 +1,4 @@
-## Technische infrastructuureisen
+# Technische infrastructuureisen
 
 De technische eisen die ten grondslag liggen aan dit document zijn en niet beschreven staan in andere documenten uit de voorfase:
 
@@ -7,9 +7,9 @@ De technische eisen die ten grondslag liggen aan dit document zijn en niet besch
 | TR01 | {eis} |
 | TR02 | {eis} |
 
-## Ontwerp
+# Ontwerp
 
-### Netwerkomgeving
+## Netwerkomgeving
 
 {Beschrijving van de netwerkomgeving}
 
@@ -17,7 +17,7 @@ De technische eisen die ten grondslag liggen aan dit document zijn en niet besch
 
 {beschrijving OTAP-omgevingen}
 
-### {Component 1}
+## {Component 1}
 
 {Beschrijving component}
 
@@ -29,7 +29,7 @@ De technische eisen die ten grondslag liggen aan dit document zijn en niet besch
 
 {Beschrijving van subcomponenten en een gedetailleerde infrastructuurplaat opnemen, indien dit toegevoegde waarde heeft.}
 
-### {Component 2}
+## {Component 2}
 
 {Beschrijving component}
 
@@ -41,7 +41,7 @@ De technische eisen die ten grondslag liggen aan dit document zijn en niet besch
 
 {Beschrijving van subcomponenten en een gedetailleerde infrastructuurplaat opnemen, indien dit toegevoegde waarde heeft.}
 
-### Servers {optioneel}
+## Servers {optioneel}
 
 De volgende servers zijn aanwezig:
 
@@ -56,21 +56,21 @@ De volgende servers zijn aanwezig:
 
 {WAT STAAT IN DE OTAP-KOLOMMEN?}
 
-### Gebruikte URL’s {optioneel}
+## Gebruikte URL’s {optioneel}
 
-#### Interne URL’s
+### Interne URL’s
 
 {Opsomming gebruikte interne URL's.}
 
-#### Monitor-URL’s
+### Monitor-URL’s
 
 {Opsomming gebruikte monitor-URL's.}
 
-#### Externe URL’s
+### Externe URL’s
 
 {Opsomming gebruikte externe URL's.}
 
-### Benodigde certificaten {optioneel}
+## Benodigde certificaten {optioneel}
 
 De volgende certificaten zijn nodig:
 

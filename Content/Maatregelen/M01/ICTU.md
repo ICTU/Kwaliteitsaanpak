@@ -1,4 +1,4 @@
-#### ICTU
+### ICTU
 
 ICTU hanteert de volgende documenten, templates en documentstandaarden voor softwarerealisatieprojecten:
 

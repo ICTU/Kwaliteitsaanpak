@@ -1,6 +1,6 @@
 #include "Content/Templates/Historie.md"
 
-## Inleiding
+# Inleiding
 
 #include "Content/Templates/GFO/Over-dit-document.md"
 #include "Content/Templates/GFO/Doelgroep.md"
@@ -11,6 +11,6 @@
 
 #include "Content/Templates/GFO/Template-Inhoud.md"
 
-## Bijlagen
+# Bijlagen
 
 #include "Content/Templates/Bijlagen/Standaard-Bijlagen.md"

@@ -1,4 +1,4 @@
-### Over dit document
+## Over dit document
 
 Dit globaal functioneel ontwerp (GFO) beschrijft de functionele specificaties van {applicatie}, die de eisen van de stakeholders vertegenwoordigen.
 

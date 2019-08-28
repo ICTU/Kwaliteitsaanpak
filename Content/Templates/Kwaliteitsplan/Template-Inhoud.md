@@ -1,7 +1,7 @@
-## Kwaliteitsmaatregelen voor producten
+# Kwaliteitsmaatregelen voor producten
 
 Blablabla.
 
-## Kwaliteitsmaatregelen voor processen
+# Kwaliteitsmaatregelen voor processen
 
 Blablabla.

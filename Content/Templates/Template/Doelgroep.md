@@ -1,3 +1,3 @@
-### Doelgroep
+## Doelgroep
 
 {Doelgroep van dit document}

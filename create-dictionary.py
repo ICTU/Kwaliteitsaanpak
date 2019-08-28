@@ -15,7 +15,7 @@ def create_link(name):
 def read_maatregel(path, do_create_link):
     maatregel_path = path / "Maatregel.md"
     with open(maatregel_path, mode='r', encoding='utf8') as maatregel_file:
-        headers = [line.strip("###").strip(path.name+":").strip() for line in maatregel_file if line.startswith('### ')]
+        headers = [line.strip("##").strip(path.name+":").strip() for line in maatregel_file if line.startswith('### ')]
     for header in headers:
         if do_create_link:
             print("{{" + path.name + "}}=[**" + header + "**](#" + create_link(header) + ")")

@@ -15,7 +15,7 @@ class StateMachine:
     def default(self, line):
         """ While in the default state, look for headings we need to keep together with the first paragraph
             following it. """       
-        if line.startswith('<h2 id="bijlagen">'):
+        if line.startswith('<h1 id="bijlagen">'):
             self.__in_bijlagen = True
         if line.startswith(self.headings):
             self.__state = self.keep_together
@@ -33,12 +33,12 @@ class StateMachine:
 
     def bijlagen(self, line):
         if self.__in_bijlagen:
-            if line.startswith("<h3"):
-                line = line.replace("<h3", '<h3 class="bijlage"')
+            if line.startswith("<h2"):
+                line = line.replace("<h2", '<h3 class="bijlage"')
             if line.startswith("<ol>"):
                 line = line.replace("<ol>", '<ol class="bijlage">')
-            if line.startswith("<h5") and "Risico: " in line:
-                line = line.replace("<h5", '<h5 class="risk"')
+            if line.startswith("<h4") and "Risico: " in line:
+                line = line.replace("<h4", '<h5 class="risk"')
         return line
 
     def keep_together(self, line):

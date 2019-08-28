@@ -16,6 +16,8 @@ jobs:
 #      - store_artifacts:
 #          path: Generated/Full/document.html
       - store_artifacts:
+          path: Generated/Templates/Template/document-post.md
+      - store_artifacts:
           path: Template-Kwaliteitsplan.pdf
       - store_artifacts:
           path: Template-Niet-Functionele-Eisen.pdf

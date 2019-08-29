@@ -3,8 +3,10 @@ npm i
 npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
-MAATREGEL_DICTIONARY="maatregel-dictionary.txt"
-MAATREGEL_DICTIONARY_LINKS="maatregel-dictionary-linked.txt"
+mkdir -p build
+
+MAATREGEL_DICTIONARY="build/maatregel-dictionary.txt"
+MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
 
 # Map symbolic references, like title and Maatregelen, to their actual content
 # map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>
@@ -41,10 +43,12 @@ function create-html
 # generate 1:<output folder> 2:<name of document output without PDF extension>
 #          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
 function generate {
-    OUTPUT_PATH="Generated/$1"
+    OUTPUT_PATH="build/$1"
+    FINAL_DOCUMENTS_PATH="dist"  # Folder to write the final documents to
     DICTIONARY="$OUTPUT_PATH/dict.txt"
 
     mkdir -p $OUTPUT_PATH
+    mkdir -p $FINAL_DOCUMENTS_PATH
 
     # Create dictionary
     cat $7 > $DICTIONARY
@@ -62,7 +66,7 @@ function generate {
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
         cover $OUTPUT_PATH/cover.html \
         toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-        $OUTPUT_PATH/document.html $2.pdf
+        $OUTPUT_PATH/document.html $FINAL_DOCUMENTS_PATH/$2.pdf
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.

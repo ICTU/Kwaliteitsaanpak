@@ -169,7 +169,7 @@ def create_action_list(workbook):
 
 def create_workbook():
     """ Create the workbook with the different worksheets. """
-    workbook = xlsxwriter.Workbook('ICTU-Kwaliteitsaanpak-Checklist.xlsx')
+    workbook = xlsxwriter.Workbook('dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx')
     create_checklist(workbook)
     create_action_list(workbook)
     workbook.close()

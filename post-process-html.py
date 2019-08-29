@@ -34,7 +34,7 @@ class StateMachine:
     def bijlagen(self, line):
         if self.__in_bijlagen:
             if line.startswith("<h2"):
-                line = line.replace("<h2", '<h3 class="bijlage"')
+                line = line.replace("<h2", '<h2 class="bijlage"')
             if line.startswith("<ol>"):
                 line = line.replace("<ol>", '<ol class="bijlage">')
             if line.startswith("<h4") and "Risico: " in line:

@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M02/Beschrijving.md"
 
-De kwaliteitsnormen zijn in deze versie van de kwaliteitsaanpak nog niet opgenomen.
+De kwaliteitsnormen voor producten zijn in deze versie van de kwaliteitsaanpak niet opgenomen.
 
 Zie ook {{M08}}.
 

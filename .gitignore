@@ -65,7 +65,7 @@ typings/
 .vscode
 
 # Generated intermediate files
-Generated/
+build
 
 # Python virtual environment
 .venv

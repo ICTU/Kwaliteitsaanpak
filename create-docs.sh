@@ -3,8 +3,10 @@ npm i
 npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
-MAATREGEL_DICTIONARY="Generated/maatregel-dictionary.txt"
-MAATREGEL_DICTIONARY_LINKS="Generated/maatregel-dictionary-linked.txt"
+mkdir -p build
+
+MAATREGEL_DICTIONARY="build/maatregel-dictionary.txt"
+MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
 
 # Map symbolic references, like title and Maatregelen, to their actual content
 # map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>
@@ -41,7 +43,7 @@ function create-html
 # generate 1:<output folder> 2:<name of document output without PDF extension>
 #          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
 function generate {
-    OUTPUT_PATH="Generated/$1"
+    OUTPUT_PATH="build/$1"
     FINAL_DOCUMENTS_PATH="dist"  # Folder to write the final documents to
     DICTIONARY="$OUTPUT_PATH/dict.txt"
 

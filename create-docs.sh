@@ -3,8 +3,8 @@ npm i
 npm version prerelease --force --no-git-tag-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
-MAATREGEL_DICTIONARY="maatregel-dictionary.txt"
-MAATREGEL_DICTIONARY_LINKS="maatregel-dictionary-linked.txt"
+MAATREGEL_DICTIONARY="Generated/maatregel-dictionary.txt"
+MAATREGEL_DICTIONARY_LINKS="Generated/maatregel-dictionary-linked.txt"
 
 # Map symbolic references, like title and Maatregelen, to their actual content
 # map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>

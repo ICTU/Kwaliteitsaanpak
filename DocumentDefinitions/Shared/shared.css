@@ -15,3 +15,7 @@ ul > li {
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="#4C76BA" cx="5" cy="5" r="3"/></svg>');
     padding-left: 1.7em;
 }
+
+span.label {
+    color: #2C64AD;
+}

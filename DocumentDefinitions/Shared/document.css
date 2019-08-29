@@ -143,10 +143,6 @@ ul > li {
     page-break-inside: avoid;
 }
 
-span.label {
-    color: #2C64AD;
-}
-
 .maatregel {
     background-color: #E6F6FD;
     border-style: solid;

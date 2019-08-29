@@ -61,6 +61,9 @@ typings/
 # IDE config files
 .idea
 
+# VSCode config files
+.vscode
+
 # Generated intermediate files
 Generated/
 

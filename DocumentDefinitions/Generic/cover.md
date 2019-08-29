@@ -1,11 +1,11 @@
 ![ICTU](../../Content/Images/ICTU.png "ictu-logo")
 
-# Kwaliteitsaanpak ICTU Software Realisatie - Generiek
+Kwaliteitsaanpak ICTU Software Realisatie - Generiek
 
 #include "Content/Versie.md"
 
 ![wordcloud](../../Content/Images/word-cloud.png "word-cloud")
 
-## Wijzigingsgeschiedenis
+# Wijzigingsgeschiedenis
 
 #include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"

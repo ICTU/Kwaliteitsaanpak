@@ -1,4 +1,4 @@
-#### ICTU
+### ICTU
 
 ICTU hanteert de volgende documenten, templates en documentstandaarden voor softwarerealisatieprojecten:
 
@@ -14,7 +14,7 @@ ICTU hanteert de volgende documenten, templates en documentstandaarden voor soft
 
 - Het informatiebeveiligingsplan is gebaseerd op een dreigingen- en kwetsbaarhedenanalyse (TVA (Threat and vulnerability assessment)) en bevat een maatregelenselectie informatiebeveiliging. De TVA wordt tijdens de voorfase opgesteld op basis van de resultaten van de BIA, de eventuele PIA en inhoud van de ontwerp- en architectuurdocumentatie. Een TVA levert een deel van een traceerbare onderbouwing voor de te treffen beveiligingsmaatregelen;
 
-- Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen. Zie ook [M26: Periodieke beoordeling informatiebeveiliging](#periodieke-beoordeling-informatiebeveiliging-m26-) en [M16: Verplichte tools](#verplichte-tools-m16-). Indien er beveiligingsissues zijn, zijn deze voorzien van een beschreven voorziene impact.
+- Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen. Zie ook {{M26}} en {{M16}}. Indien er beveiligingsissues zijn, zijn deze voorzien van een beschreven voorziene impact.
 
 - De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTP-header en -request-configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de 'Server'-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer;
 

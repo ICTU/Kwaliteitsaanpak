@@ -1,7 +1,7 @@
-### Traceerbaar voldoen aan eisen (M03)
+## M03: Traceerbaar voldoen aan eisen
 
-Eisen zijn wederzijds traceerbaar naar bewijsmateriaal, zoals logische testgevallen, dat de eis gerealiseerd is; dat wil zeggen dat geadministreerd is bij welke eis bewijsmateriaal hoort en vice versa. Dit wordt waar mogelijk met tooling ondersteund.
+#include "Content/Maatregelen/M03/Beschrijving.md"
 
-#### Rationale
+### Rationale
 
 Door eisen en testgevallen te koppelen en traceerbaar te maken, is het mogelijk de dekking van tests ten opzichte van eisen te bepalen.

@@ -1,7 +1,7 @@
-### Afgeschermde digitale omgeving (M19)
+## M19: Afgeschermde digitale omgeving
 
-De projectenorganisatie geeft de projecten de beschikking over eigen, afgeschermde digitale omgevingen, waarbinnen ze de door het project ontwikkelde software en tools kunnen installeren.
+#include "Content/Maatregelen/M19/Beschrijving.md"
 
-#### Rationale
+### Rationale
 
 Door het bieden van een afgeschermde digitale omgeving zijn de afhankelijkheden en invloeden tussen projecten minimaal en worden beveiligingsrisico's verkleind.

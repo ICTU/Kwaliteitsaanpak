@@ -1,10 +1,10 @@
-### Risico's van softwareontwikkeling
+## Risico's van softwareontwikkeling
 
 Softwareontwikkeling brengt risico's met zich mee. De ICTU Softwarerealisatie Kwaliteitsaanpak beoogt een deel van die risico's te mitigeren. Als raamwerk en startpunt voor het classificeren van risico's maakt de kwaliteitsaanpak gebruik van *Taxonomy-Based Risk Identification* van het Software Engineering Institute (CMU/SEI-93-TR-6), een taxonomie van risico's.
 
 Deze bijlage geeft eerst een overzicht van de taxonomie van risico's en vervolgens een lijst van veelvoorkomende risico's. Voor elk van die risico's is aangegeven door welke maatregel(en) uit de kwaliteitsaanpak ze worden verminderd en geclassificeerd bij welke onderdelen van de risicotaxonomie ze horen. Hoe en waarom de maatregelen de risico's precies verminderen moet nog worden uitgewerkt.
 
-#### Gebruik van de risicotaxonomie
+### Gebruik van de risicotaxonomie
 
 De taxonomie benoemt zelf geen risico's, maar is een middel om risico's te ordenen. Naast het kunnen classificeren van risico's biedt het gebruik van de taxonomie de volgende voordelen:
 
@@ -12,11 +12,11 @@ De taxonomie benoemt zelf geen risico's, maar is een middel om risico's te orden
 - Controle op volledigheid: voor elk element uit de taxonomie kan de vraag gesteld worden “bevat de kwaliteitsaanpak maatregelen voor risico's bij dit element?”
 - Betere rationale: door aan te geven op welke in de taxonomie genoemde risicogebieden een maatregel betrekking heeft is duidelijker wat de maatregel beoogt te bereiken.
 
-#### Risicotaxonomie
+### Risicotaxonomie
 
 De risicotaxonomie bestaat uit de volgende risicogebieden:
 
-##### Productontwikkeling
+#### Productontwikkeling
 
 Deze risicogebieden hebben betrekking op het product zelf.
 
@@ -52,7 +52,7 @@ Deze risicogebieden hebben betrekking op het product zelf.
     5. Menselijke Factoren: kennis van de operationele omgeving van het eindproduct en de mate waarin verwachtingen van opdrachtgever en gebruikers zijn opgenomen in de requirements en zijn afgestemd.
     6. Specificaties: de specificaties van het systeem, de hardware, de software, de koppelvlakken, de mate waarin die stabiel, compleet, duidelijk en controleerbaar zijn.
 
-##### Ontwikkelomgeving
+#### Ontwikkelomgeving
 
 Deze risicogebieden hebben betrekking op de wijze waarop en de omgeving waarbinnen het product wordt ontwikkeld.
 
@@ -86,7 +86,7 @@ Deze risicogebieden hebben betrekking op de wijze waarop en de omgeving waarbinn
     3. Communicatie: de communicatie over de projectdoelstelling, de requirements en het projectbelang.
     4. Moraal: het enthousiasme van het team en de invloed daarvan op prestatie, productiviteit en creativiteit.
 
-##### Projectvoorwaarden
+#### Projectvoorwaarden
 
 Deze groep heeft betrekking op externe factoren voor het project; deze factoren liggen buiten de controle van het project, maar kunnen grote invloed hebben op het projectsucces.
 
@@ -108,56 +108,56 @@ Deze groep heeft betrekking op externe factoren voor het project; deze factoren 
     6. Leveranciers: de afhankelijkheden van externe leveranciers.
     7. Politiek: de politieke invloeden van relaties met de eigen organisatie, de organisatie van de opdrachtgever en andere contractpartijen.
 
-#### Risico's en maatregelen
+### Risico's en maatregelen
 
 De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico's bij softwareontwikkelprojecten. Elk beschreven risico is geclassificeerd volgens de risicotaxonomie en is voorzien van de bijbehorende maatregelen uit de kwaliteitsaanpak.
 
-##### Risico: De software is niet gebruiksgereed, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
+#### Risico: De software is niet gebruiksgereed, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 
 Maatregelen:
 
-- [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-)
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
-- [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
-- [M15: Open source tools](#open-source-tools-m15-)
+- {{M05}}
+- {{M07}}
+- {{M10}}
+- {{M14}}
+- {{M15}}
 
 Classificatie:
 
 - Projectvoorwaarden ➞ Middelen
 
-##### Risico: De software heeft niet alle gewenste functionaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
+#### Risico: De software heeft niet alle gewenste functionaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 
 Maatregelen:
 
-- [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-) - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.
-- [M04: Geautomatiseerde regressietests](#geautomatiseerde-regressietests-m04-)
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
-- [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
-- [M17: Snel beschikbare tools](#snel-beschikbare-tools-m17-)
-- [M18: Ondersteuning verplichte tools](#ondersteuning-verplichte-tools-m18-)
-- [M19: Afgeschermde digitale omgeving](#afgeschermde-digitale-omgeving-m19-) - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
+- {{M05}} - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.
+- {{M04}}
+- {{M07}}
+- {{M10}}
+- {{M14}}
+- {{M17}}
+- {{M18}}
+- {{M19}} - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
 
 Classificatie:
 
 - Productontwikkeling ➞ Requirements
 - Projectvoorwaarden ➞ Middelen
 
-##### Risico: De software heeft niet de gewenste kwaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
+#### Risico: De software heeft niet de gewenste kwaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 
 Maatregelen:
 
-- [M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)
-- [M06: Frequente meting](#frequente-meting-m06-)
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
-- [M08: Technische schuld](#technische-schuld-m08-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
-- [M15: Open source tools](#open-source-tools-m15-)
-- [M17: Snel beschikbare tools](#snel-beschikbare-tools-m17-)
-- [M18: Ondersteuning verplichte tools](#ondersteuning-verplichte-tools-m18-)
-- [M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M02}}
+- {{M06}}
+- {{M07}}
+- {{M08}}
+- {{M14}}
+- {{M15}}
+- {{M17}}
+- {{M18}}
+- {{M21}}
+- {{M28}}
 
 Classificatie:
 
@@ -167,17 +167,17 @@ Classificatie:
 - Productontwikkeling ➞ Specialiteiten ➞ Betrouwbaarheid
 - Productontwikkeling ➞ Specialiteiten ➞ Beveiliging
 
-##### Risico: De software voldoet niet aan de eisen en wensen van de opdrachtgever
+#### Risico: De software voldoet niet aan de eisen en wensen van de opdrachtgever
 
 Maatregelen:
 
-- [M01: Op te leveren producten](#op-te-leveren-producten-m01-)
-- [M03: Traceerbaar voldoen aan eisen](#traceerbaar-voldoen-aan-eisen-m03-)
-- [M05: Iteratief en incrementeel ontwikkelproces](#iteratief-en-incrementeel-ontwikkelproces-m05-)
-- [M06: Frequente meting](#frequente-meting-m06-)
-- [M08: Technische schuld](#technische-schuld-m08-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M01}}
+- {{M03}}
+- {{M05}}
+- {{M06}}
+- {{M08}}
+- {{M14}}
+- {{M28}}
 
 Classificatie:
 
@@ -186,47 +186,47 @@ Classificatie:
 - Productontwikkeling ➞ Requirements ➞ Validiteit
 - Productontwikkeling ➞ Requirements ➞ Haalbaarheid
 
-##### Risico: Na oplevering blijkt de software niet te voldoen aan niet eerder expliciet gemaakte eisen en wensen
+#### Risico: Na oplevering blijkt de software niet te voldoen aan niet eerder expliciet gemaakte eisen en wensen
 
 Maatregelen:
 
-- [M10: Periodiek projectoverleg](#periodiek-projectoverleg-m10-)
-- [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M10}}
+- {{M13}}
+- {{M28}}
 
 Classificatie:
 
 - Productontwikkeling ➞ Requirements ➞ Volledigheid
 - Productontwikkeling ➞ Requirements ➞ Validiteit
 
-##### Risico: De opdrachtgever of het project leggen te veel nadruk op de te realiseren functionaliteit, ten koste van niet-functionele eigenschappen van de software
+#### Risico: De opdrachtgever of het project leggen te veel nadruk op de te realiseren functionaliteit, ten koste van niet-functionele eigenschappen van de software
 
 Maatregelen:
 
-- [M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)
-- [M06: Frequente meting](#frequente-meting-m06-)
-- [M08: Technische schuld](#technische-schuld-m08-)
-- [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
-- [M14: Projecten splitsen in een voorbereidings- en realisatiefase](#projecten-splitsen-in-een-voorbereidings-en-realisatiefase-m14-) - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M02}}
+- {{M06}}
+- {{M08}}
+- {{M13}}
+- {{M14}} - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
+- {{M28}}
 
 Classificatie:
 
 - Ontwikkelomgeving ➞ Managementmethode ➞ Kwaliteitsborging
 - Ontwikkelomgeving ➞ Werkomgeving ➞ Attitude
 
-##### Risico: Opgeleverde software blijkt defecten te bevatten
+#### Risico: Opgeleverde software blijkt defecten te bevatten
 
 Maatregelen:
 
-- [M02: Continu voldoen aan kwaliteitsnormen](#continu-voldoen-aan-kwaliteitsnormen-m02-)
-- [M03: Traceerbaar voldoen aan eisen](#traceerbaar-voldoen-aan-eisen-m03-)
-- [M04: Geautomatiseerde regressietests](#geautomatiseerde-regressietests-m04-)
-- [M06: Frequente meting](#frequente-meting-m06-)
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
-- [M13: Gebruik van ISO-25010](#gebruik-van-iso-25010-m13-)
-- [M21: Kwaliteit van medewerkers](#kwaliteit-van-medewerkers-m21-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M02}}
+- {{M03}}
+- {{M04}}
+- {{M06}}
+- {{M07}}
+- {{M13}}
+- {{M21}}
+- {{M28}}
 
 Classificatie:
 
@@ -235,12 +235,12 @@ Classificatie:
 - Productontwikkeling ➞ Engineering Specialiteiten ➞ Betrouwbaarheid
 - Ontwikkelomgeving ➞ Ontwikkelproces ➞ Productbeheersing
 
-##### Risico: Er treden fouten op bij installatie van de software in de doelomgeving
+#### Risico: Er treden fouten op bij installatie van de software in de doelomgeving
 
 Maatregelen:
 
-- [M01: Op te leveren producten](#op-te-leveren-producten-m01-)
-- [M07: Continuous delivery pipeline](#continuous-delivery-pipeline-m07-)
+- {{M01}}
+- {{M07}}
 
 Classificatie:
 
@@ -248,12 +248,12 @@ Classificatie:
 - Productontwikkeling ➞ Integratie en Test ➞ Productintegratie
 - Productontwikkeling ➞ Integratie en Test ➞ Systeemintegratie
 
-##### Risico: Bij overdracht naar een derde partij is niet alle relevante en benodigde documentatie beschikbaar
+#### Risico: Bij overdracht naar een derde partij is niet alle relevante en benodigde documentatie beschikbaar
 
 Maatregelen:
 
-- [M01: Op te leveren producten](#op-te-leveren-producten-m01-)
-- [M28: Self-assessment](#self-assessment-m28-)
+- {{M01}}
+- {{M28}}
 
 Classificatie:
 

@@ -42,9 +42,11 @@ function create-html
 #          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
 function generate {
     OUTPUT_PATH="Generated/$1"
+    FINAL_DOCUMENTS_PATH="dist"  # Folder to write the final documents to
     DICTIONARY="$OUTPUT_PATH/dict.txt"
 
     mkdir -p $OUTPUT_PATH
+    mkdir -p $FINAL_DOCUMENTS_PATH
 
     # Create dictionary
     cat $7 > $DICTIONARY
@@ -62,7 +64,7 @@ function generate {
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
         cover $OUTPUT_PATH/cover.html \
         toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-        $OUTPUT_PATH/document.html $2.pdf
+        $OUTPUT_PATH/document.html $FINAL_DOCUMENTS_PATH/$2.pdf
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.

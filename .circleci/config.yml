@@ -8,26 +8,26 @@ jobs:
       - run:
           docker-compose up
       - store_artifacts:
-          path: ICTU-Kwaliteitsaanpak-Full.pdf
+          path: dist/ICTU-Kwaliteitsaanpak-Full.pdf
       - store_artifacts:
-          path: ICTU-Kwaliteitsaanpak-Generic.pdf
+          path: dist/ICTU-Kwaliteitsaanpak-Generic.pdf
       - store_artifacts:
-          path: ICTU-Kwaliteitsaanpak-Checklist.xlsx
+          path: dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx
 #      - store_artifacts:
 #          path: Generated/Full/document.html
       - store_artifacts:
-          path: Template-Kwaliteitsplan.pdf
+          path: dist/Template-Kwaliteitsplan.pdf
       - store_artifacts:
-          path: Generated/Templates/Kwaliteitsplan/document-post.md
+          path: build/Templates/Kwaliteitsplan/document-post.md
       - store_artifacts:
-          path: Template-Niet-Functionele-Eisen.pdf
+          path: dist/Template-Niet-Functionele-Eisen.pdf
       - store_artifacts:
-          path: Generated/Templates/NFE/document-post.md
+          path: build/Templates/NFE/document-post.md
       - store_artifacts:
-          path: Template-Globaal-Functioneel-Ontwerp.pdf
+          path: dist/Template-Globaal-Functioneel-Ontwerp.pdf
       - store_artifacts:
-          path: Template-High-Level-Design.pdf
+          path: dist/Template-High-Level-Design.pdf
       - store_artifacts:
-          path: Template-Generiek.pdf
+          path: dist/Template-Generiek.pdf
       - store_artifacts:
-          path: Generated/Templates/Template/document-post.md
+          path: build/Templates/Template/document-post.md

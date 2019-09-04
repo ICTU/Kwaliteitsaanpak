@@ -16,22 +16,18 @@ jobs:
 #      - store_artifacts:
 #          path: Generated/Full/document.html
       - store_artifacts:
-          path: Generated/Templates/Template/document-post.md
-      - store_artifacts:
-          path: Generated/Templates/Template/document.html
-      - store_artifacts:
-          path: Generated/Templates/Template/header.html
-      - store_artifacts:
-          path: Generated/Templates/Template/cover.html
-      - store_artifacts:
           path: Template-Kwaliteitsplan.pdf
       - store_artifacts:
+          path: Generated/Templates/Kwaliteitsplan/document-post.md
+      - store_artifacts:
           path: Template-Niet-Functionele-Eisen.pdf
+      - store_artifacts:
+          path: Generated/Templates/NFE/document-post.md
       - store_artifacts:
           path: Template-Globaal-Functioneel-Ontwerp.pdf
       - store_artifacts:
           path: Template-High-Level-Design.pdf
       - store_artifacts:
           path: Template-Generiek.pdf
-#      - store_artifacts:
-#          path: maatregel-dictionary.txt
+      - store_artifacts:
+          path: Generated/Templates/Template/document-post.md

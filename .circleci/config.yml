@@ -14,23 +14,13 @@ jobs:
       - store_artifacts:
           path: dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx
       - store_artifacts:
-          path: dist/Template-Kwaliteitsplan.pdf
-      - store_artifacts:
           path: dist/Template-Kwaliteitsplan.docx
-      - store_artifacts:
-          path: dist/Template-Niet-Functionele-Eisen.pdf
       - store_artifacts:
           path: dist/Template-Niet-Functionele-Eisen.docx
       - store_artifacts:
-          path: dist/Template-Globaal-Functioneel-Ontwerp.pdf
-      - store_artifacts:
           path: dist/Template-Globaal-Functioneel-Ontwerp.docx
       - store_artifacts:
-          path: dist/Template-High-Level-Design.pdf
-      - store_artifacts:
           path: dist/Template-High-Level-Design.docx
-      - store_artifacts:
-          path: dist/Template-Generiek.pdf
       - store_artifacts:
           path: dist/Template-Generiek.docx
       - store_artifacts:

@@ -8,13 +8,6 @@ mkdir -p build
 MAATREGEL_DICTIONARY="build/maatregel-dictionary.txt"
 MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
 
-# Map symbolic references, like title and Maatregelen, to their actual content
-# map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>
-#function map-refs {
-#    sed s/{{TITLE}}/"$3"/g $1 | \
-#    sed s/{{HEADER}}/"$4"/g > $2
-#}
-
 # Map symbolic references, like title and Maatregelen, to their mapped content from a dictionary file
 # map-refs 1:<source file> 2:<output file> 3:<dictionary file>
 function map-refsd 
@@ -32,6 +25,7 @@ function expand-md
     JSON="$2.json"
     TMP="$2.tmp"
 
+    echo "---- creating temporary build config {$JSON}"
     echo "{	\"build\" : \"$TMP\", \"files\" : [\"$1\"] }" > $JSON
     node node_modules/markdown-include/bin/cli.js $JSON
 

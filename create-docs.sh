@@ -27,6 +27,8 @@ function map-refsd
 # expand-md 1:<source md file> 2:<output file> 3:<dictionary file>
 function expand-md
 {
+    echo "expand-md {$1} {$2} {$3}"
+
     JSON="$2.json"
     TMP="$2.tmp"
 
@@ -40,12 +42,13 @@ function expand-md
 # create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<dictionary file>
 function create-html
 {
-    EXPANDED="$1/$4-expanded.md"
+    echo "create-html {$1} {$2} {$3} {$4} {$5}"
+    #EXPANDED="$1/$4-expanded.md"
     HTML="$1/$4.html"
 
-    expand-md $2 $EXPANDED $5
+    #expand-md $2 $EXPANDED $5
 
-    node_modules/markdown-to-html/bin/markdown $EXPANDED -s $3 | \
+    node_modules/markdown-to-html/bin/markdown "$2" -s "$3" | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
 }
 
@@ -53,12 +56,14 @@ function create-html
 # create-word 1:<output folder> 2:<source md> 3:<style ref document> 4:<output name without extension> 5:<dictionary file> 6:<document title>
 function create-word
 {
-    EXPANDED="$1/$4-expanded.md"
+    echo "create-word {$1} {$2} {$3} {$4} {$5} {$6}"
+
+    #EXPANDED="$1/$4-expanded.md"
     DOCX="$1/$4.docx"
 
-    expand-md $2 $EXPANDED $5
+    #expand-md $2 $EXPANDED $5
 
-    python3 md-to-docx.py $EXPANDED $DOCX $6 $3
+    python3 md-to-docx.py "$2" "$DOCX" "$6" "$3"
 }
 
 # Generate into folder $1 the document $2.pdf, with title $3 and header $4, using MD cover file $5 and MD document file $6.
@@ -69,6 +74,8 @@ function generate
     OUTPUT_PATH="build/$1"
     FINAL_DOCUMENTS_PATH="dist"  # Folder to write the final documents to
     DICTIONARY="$OUTPUT_PATH/dict.txt"
+    EXPANDED="$1/$2-expanded.md"
+    EXPANDED_COVER="$1/$2-cover-expanded.md"
 
     mkdir -p $OUTPUT_PATH
     mkdir -p $FINAL_DOCUMENTS_PATH
@@ -77,11 +84,15 @@ function generate
     cat $7 > $DICTIONARY
     echo -e "{{TITLE}}=$3\n{{HEADER}}=$4\n" >> $DICTIONARY
 
+    # Expand MD file
+    expand-md $6 "$EXPANDED" "$7"
+    expand-md $5 "$EXPANDED_COVER" "$7"
+
     # PDF generation
     # Cover
-    create-html $OUTPUT_PATH $5 /ka/DocumentDefinitions/Shared/cover.css "cover" $DICTIONARY   
+    create-html $OUTPUT_PATH "$EXPANDED_COVER" /ka/DocumentDefinitions/Shared/cover.css "cover" $DICTIONARY   
     # Body
-    create-html $OUTPUT_PATH $6 /ka/DocumentDefinitions/Shared/document.css "document" $DICTIONARY
+    create-html $OUTPUT_PATH "$EXPANDED" /ka/DocumentDefinitions/Shared/document.css "document" $DICTIONARY
     # Header
     map-refsd DocumentDefinitions/Shared/header.html $OUTPUT_PATH/header.html $DICTIONARY
     # Create pdf

@@ -40,25 +40,30 @@ function expand-md
 # create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<dictionary file>
 function create-html
 {
-    #EXPANDED="$1/$4-expanded.md"
-    #JSON="$1/$4.json"
-    POST="$1/$4-post.md"
+    EXPANDED="$1/$4-expanded.md"
     HTML="$1/$4.html"
 
-    expand-md $2 $POST $5
+    expand-md $2 $EXPANDED $5
 
-    #echo "{	\"build\" : \"$EXPANDED\", \"files\" : [\"$2\"] }" > $JSON
-    #node node_modules/markdown-include/bin/cli.js $JSON
-
-    #map-refsd $EXPANDED $POST $5
-
-    node_modules/markdown-to-html/bin/markdown $POST -s $3 | \
+    node_modules/markdown-to-html/bin/markdown $EXPANDED -s $3 | \
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
 }
 
+# Create word document from MD source
+# create-word 1:<output folder> 2:<source md> 3:<style ref document> 4:<output name without extension> 5:<dictionary file> 6:<document title>
+function create-word
+{
+    EXPANDED="$1/$4-expanded.md"
+    DOCX="$1/$4.docx"
+
+    expand-md $2 $EXPANDED $5
+
+    python3 md-to-docx.py $EXPANDED $DOCX $6 $3
+}
+
 # Generate into folder $1 the document $2.pdf, with title $3 and header $4, using MD cover file $5 and MD document file $6.
-# generate 1:<output folder> 2:<name of document output without PDF extension>
-#          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
+# generate 1:<output folder> 2:<name of document output without extension>
+#          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file> 8:<docx reference file>
 function generate 
 {
     OUTPUT_PATH="build/$1"
@@ -72,6 +77,7 @@ function generate
     cat $7 > $DICTIONARY
     echo -e "{{TITLE}}=$3\n{{HEADER}}=$4\n" >> $DICTIONARY
 
+    # PDF generation
     # Cover
     create-html $OUTPUT_PATH $5 /ka/DocumentDefinitions/Shared/cover.css "cover" $DICTIONARY   
     # Body
@@ -85,6 +91,9 @@ function generate
         cover $OUTPUT_PATH/cover.html \
         toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
         $OUTPUT_PATH/document.html $FINAL_DOCUMENTS_PATH/$2.pdf
+
+    # DOCX generation
+    create-word $OUTPUT_PATH $6 $8 "$FINAL_DOCUMENTS_PATH/$2" $DICTIONARY "$3"
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.
@@ -93,7 +102,10 @@ function generate-kwaliteitsaanpak
 {
     TITLE="$3"
     HEADER="$TITLE"
-    generate $1 $2 "$TITLE" "$HEADER" DocumentDefinitions/$1/cover.md DocumentDefinitions/$1/document.md $MAATREGEL_DICTIONARY_LINKS
+    COVER_MD="DocumentDefinitions/$1/cover.md"
+    DOC_MD="DocumentDefinitions/$1/document.md"
+    DOCX_REF="DocumentDefinitions/reference.docx"
+    generate $1 $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY_LINKS $DOCX_REF
 }
 
 # Generate into folder Templates/$1 the template document $2.pdf, titled $3.
@@ -102,7 +114,10 @@ function generate-template
 {
     TITLE="$3"
     HEADER="$TITLE {projectnaam} {versie}"
-    generate Templates/$1 $2 "$TITLE" "$HEADER" DocumentDefinitions/Templates/Shared/cover.md DocumentDefinitions/Templates/$1/document.md $MAATREGEL_DICTIONARY
+    COVER_MD="DocumentDefinitions/Templates/Shared/cover.md"
+    DOC_MD="DocumentDefinitions/Templates/$1/document.md"
+    DOCX_REF="DocumentDefinitions/reference.docx"
+    generate Templates/$1 $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY

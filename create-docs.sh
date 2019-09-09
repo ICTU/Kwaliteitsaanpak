@@ -10,16 +10,16 @@ MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
 
 # Map symbolic references, like title and Maatregelen, to their actual content
 # map-refs 1:<source file> 2:<output file> 3:<document title> 4:<document header>
-function map-refs 
-{
-    sed s/{{TITLE}}/"$3"/g $1 | \
-    sed s/{{HEADER}}/"$4"/g > $2
-}
+#function map-refs {
+#    sed s/{{TITLE}}/"$3"/g $1 | \
+#    sed s/{{HEADER}}/"$4"/g > $2
+#}
 
 # Map symbolic references, like title and Maatregelen, to their mapped content from a dictionary file
 # map-refs 1:<source file> 2:<output file> 3:<dictionary file>
 function map-refsd 
 {
+    echo "--- map references in {$1} using {$3} to create {$2}"
     awk -F= 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
 }
 
@@ -27,7 +27,7 @@ function map-refsd
 # expand-md 1:<source md file> 2:<output file> 3:<dictionary file>
 function expand-md
 {
-    echo "expand-md {$1} {$2} {$3}"
+    echo "--- expand {$1} into {$2} using dictionary {$3}"
 
     JSON="$2.json"
     TMP="$2.tmp"
@@ -39,31 +39,20 @@ function expand-md
 }
 
 # Create html document from MD source.
-# create-html 1:<output folder> 2:<source md> 3:<css> 4:<output name without extension> 5:<dictionary file>
+# create-html 1:<source md> 2:<output file> 3:<css>
 function create-html
 {
-    echo "create-html {$1} {$2} {$3} {$4} {$5}"
-    #EXPANDED="$1/$4-expanded.md"
-    HTML="$1/$4.html"
-
-    #expand-md $2 $EXPANDED $5
-
-    node_modules/markdown-to-html/bin/markdown "$2" -s "$3" | \
-        PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $HTML
+    echo "--- create-html {$2} from {$1} using style {$3}"
+    node_modules/markdown-to-html/bin/markdown "$1" -s "$3" | \
+        PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $2
 }
 
 # Create word document from MD source
-# create-word 1:<output folder> 2:<source md> 3:<style ref document> 4:<output name without extension> 5:<dictionary file> 6:<document title>
+# create-word 1:<source md> 2:<output file> 3:<style ref document> 4:<document title>
 function create-word
 {
-    echo "create-word {$1} {$2} {$3} {$4} {$5} {$6}"
-
-    #EXPANDED="$1/$4-expanded.md"
-    DOCX="$1/$4.docx"
-
-    #expand-md $2 $EXPANDED $5
-
-    python3 md-to-docx.py "$2" "$DOCX" "$6" "$3"
+    echo "--- create-word {$2} from {$1} using style {$3} and title {$4}"
+    python3 md-to-docx.py "$1" "$2" "$4" "$3"
 }
 
 # Generate into folder $1 the document $2.pdf, with title $3 and header $4, using MD cover file $5 and MD document file $6.
@@ -71,40 +60,55 @@ function create-word
 #          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file> 8:<docx reference file>
 function generate 
 {
-    OUTPUT_PATH="build/$1"
-    FINAL_DOCUMENTS_PATH="dist"  # Folder to write the final documents to
-    DICTIONARY="$OUTPUT_PATH/dict.txt"
-    EXPANDED="$OUTPUT_PATH/$2-expanded.md"
-    EXPANDED_COVER="$OUTPUT_PATH/$2-cover-expanded.md"
+    BUILD_PATH="build/$1"
+    OUTPUT_PATH="dist"  # Folder to write the final documents to
+    DICTIONARY="$BUILD_PATH/dict.txt"
+    EXPANDED="$BUILD_PATH/$2-expanded.md"
+    EXPANDED_COVER="$BUILD_PATH/$2-cover-expanded.md"
+    COVER_MD="$5"
+    DOCUMENT_MD="$6"
+    TITLE="$3"
+    HEADER="$4"
+    HTML_BUILD="$BUILD_PATH/document.html"
+    COVER_HTML_BUILD="$BUILD_PATH/cover.html"
+    HEADER_HTML_BUILD="$BUILD_PATH/header.html"
+    PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
+    DOCX_OUTPUT="$OUTPUT_PATH/$2.docx"
 
+    echo "-- generate: $2"
+
+    # Create directories
+    echo "--- build path: $BUILD_PATH"
+    mkdir -p $BUILD_PATH
+    echo "--- output path: $OUTPUT_PATH"
     mkdir -p $OUTPUT_PATH
-    mkdir -p $FINAL_DOCUMENTS_PATH
 
     # Create dictionary
     cat $7 > $DICTIONARY
-    echo -e "{{TITLE}}=$3\n{{HEADER}}=$4\n" >> $DICTIONARY
+    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n" >> $DICTIONARY
+    echo "--- dictionary created: $DICTIONARY"
 
     # Expand MD file
-    expand-md $6 "$EXPANDED" "$7"
-    expand-md $5 "$EXPANDED_COVER" "$7"
+    expand-md $DOCUMENT_MD "$EXPANDED" "$DICTIONARY"
+    expand-md $COVER_MD "$EXPANDED_COVER" "$DICTIONARY"
 
     # PDF generation
     # Cover
-    create-html $OUTPUT_PATH "$EXPANDED_COVER" /ka/DocumentDefinitions/Shared/cover.css "cover" $DICTIONARY   
+    create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /ka/DocumentDefinitions/Shared/cover.css 
     # Body
-    create-html $OUTPUT_PATH "$EXPANDED" /ka/DocumentDefinitions/Shared/document.css "document" $DICTIONARY
+    create-html "$EXPANDED" "$HTML_BUILD" /ka/DocumentDefinitions/Shared/document.css
     # Header
-    map-refsd DocumentDefinitions/Shared/header.html $OUTPUT_PATH/header.html $DICTIONARY
+    map-refsd DocumentDefinitions/Shared/header.html "$HEADER_HTML_BUILD" $DICTIONARY
     # Create pdf
     wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
-        --header-html $OUTPUT_PATH/header.html --header-spacing 10 \
+        --header-html "$HEADER_HTML_BUILD" --header-spacing 10 \
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
-        cover $OUTPUT_PATH/cover.html \
+        cover "$COVER_HTML_BUILD" \
         toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-        $OUTPUT_PATH/document.html $FINAL_DOCUMENTS_PATH/$2.pdf
+        "$HTML_BUILD" "$PDF_OUTPUT"
 
     # DOCX generation
-    create-word $OUTPUT_PATH $6 $8 "$FINAL_DOCUMENTS_PATH/$2" $DICTIONARY "$3"
+    create-word $EXPANDED $DOCX_OUTPUT $8 "$TITLE"
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.

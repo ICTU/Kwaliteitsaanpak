@@ -74,8 +74,8 @@ function generate
     OUTPUT_PATH="build/$1"
     FINAL_DOCUMENTS_PATH="dist"  # Folder to write the final documents to
     DICTIONARY="$OUTPUT_PATH/dict.txt"
-    EXPANDED="$1/$2-expanded.md"
-    EXPANDED_COVER="$1/$2-cover-expanded.md"
+    EXPANDED="$OUTPUT_PATH/$2-expanded.md"
+    EXPANDED_COVER="$OUTPUT_PATH/$2-cover-expanded.md"
 
     mkdir -p $OUTPUT_PATH
     mkdir -p $FINAL_DOCUMENTS_PATH

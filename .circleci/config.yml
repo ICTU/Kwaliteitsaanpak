@@ -10,6 +10,8 @@ jobs:
       - store_artifacts:
           path: dist/ICTU-Kwaliteitsaanpak-Full.pdf
       - store_artifacts:
+          path: dist/ICTU-Kwaliteitsaanpak-Full.docx
+      - store_artifacts:
           path: dist/ICTU-Kwaliteitsaanpak-Generic.pdf
       - store_artifacts:
           path: dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx

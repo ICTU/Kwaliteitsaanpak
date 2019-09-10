@@ -14,18 +14,18 @@ Binnen het project worden door ICTU de volgende testsoorten onderscheiden en toe
 * Unit testen: De unit testen (op code) worden uitgevoerd door de ontwikkelaars.
 
 * Functionele testen:
-  + Smoke test: Dit is een snelle geautomatiseerde test met weinig diepgang. Deze test wordt uitgevoerd om een build te valideren. Fouten tijdens deze test worden aangemerkt als bouwfouten.
-  + Geautomatiseerde regressietest (ART): Dit is een uitputtende geautomatiseerde test die aantoont dat de bestaande, niet aangepaste functionaliteit nog steeds juist werkt. 
-  + Handmatig testen van nieuwe functionaliteit: Het handmatig uitvoeren van fysieke testgevallen om de werking van de nieuwgebouwde functionaliteit te testen.
-  + Handmatig regressietesten: Het handmatig uitvoeren van fysieke testgevallen om de werking van de bestaande functionaliteit te controleren. Deze testgevallen zijn veelal te complex om te automatiseren.
+    + Smoke test: Dit is een snelle geautomatiseerde test met weinig diepgang. Deze test wordt uitgevoerd om een build te valideren. Fouten tijdens deze test worden aangemerkt als bouwfouten.
+    + Geautomatiseerde regressietest (ART): Dit is een uitputtende geautomatiseerde test die aantoont dat de bestaande, niet aangepaste functionaliteit nog steeds juist werkt. 
+    + Handmatig testen van nieuwe functionaliteit: Het handmatig uitvoeren van fysieke testgevallen om de werking van de nieuwgebouwde functionaliteit te testen.
+    + Handmatig regressietesten: Het handmatig uitvoeren van fysieke testgevallen om de werking van de bestaande functionaliteit te controleren. Deze testgevallen zijn veelal te complex om te automatiseren.
 
 * Niet-functionele testen:
-  + Performancetesten: Het testen van de snelheid van afhandeling van bepaalde functies van het systeem onder een vooraf gedefinieerde belasting. Performancetesten vinden bij voorkeur plaats in een productie-like omgeving, maar kunnen ook in een niet-productie-like omgeving plaatsvinden ten behoeve van het volgen van de relatieve performance van verschillende versies van de software. Er vinden zowel een loadtest (normale en piekbelasting), als een duurtest (normale belasting voor langere tijd), als een stresstest (verhogen van de belasting totdat het systeem het begeeft) plaats.
-  + Securitytesten: Security- en penetratietesten uitgevoerd door een externe partij. Normaliter worden deze minimaal twee maal per jaar of met elke grote release uitgevoerd en niet elke sprint. Securitytesten vinden bij voorkeur plaats in een productie-like omgeving, maar kunnen ook in een niet-productie-like omgeving plaatsvinden ten behoeve van het testen van de beveiliging van de software zelf. De securitytest is inclusief een code review. Tijdens de realisatie draaien standaard al de volgende securitytesttools mee in de geautomatiseerde pijplijn:
-    - Checkmarx,
-    - OWASP dependency checker,
-    - OWASP ZAP,
-    - OpenVAS.
+    + Performancetesten: Het testen van de snelheid van afhandeling van bepaalde functies van het systeem onder een vooraf gedefinieerde belasting. Performancetesten vinden bij voorkeur plaats in een productie-like omgeving, maar kunnen ook in een niet-productie-like omgeving plaatsvinden ten behoeve van het volgen van de relatieve performance van verschillende versies van de software. Er vinden zowel een loadtest (normale en piekbelasting), als een duurtest (normale belasting voor langere tijd), als een stresstest (verhogen van de belasting totdat het systeem het begeeft) plaats.
+    + Securitytesten: Security- en penetratietesten uitgevoerd door een externe partij. Normaliter worden deze minimaal twee maal per jaar of met elke grote release uitgevoerd en niet elke sprint. Securitytesten vinden bij voorkeur plaats in een productie-like omgeving, maar kunnen ook in een niet-productie-like omgeving plaatsvinden ten behoeve van het testen van de beveiliging van de software zelf. De securitytest is inclusief een code review. Tijdens de realisatie draaien standaard al de volgende securitytesttools mee in de geautomatiseerde pijplijn:
+        - Checkmarx,
+        - OWASP dependency checker,
+        - OWASP ZAP,
+        - OpenVAS.
   De bevindingen die hieruit komen worden meteen tijdens de realisatie van het systeem opgepakt. 
 
 * Integratietesten: Tijdens deze test wordt de onderlinge verwerkingswijze tussen de verschillende applicaties getest. Denk hierbij aan gewijzigde applicaties die samen werken met ongewijzigde applicaties. Indien van toepassing zullen hier ook externe systemen bij betrokken worden, in de vorm van stubs. Integratietesten zijn normaal gesproken geautomatiseerde tests. Als onderdeel van de integratietesten wordt getest of de software kan omgaan met fouten in andere applicaties en na een herstart goed blijft functioneren.
@@ -48,18 +48,18 @@ Het team zal volgens de agile Scrummethode werken. Dat betekent dat de expertise
 
 Deze paragraaf beschrijft de testactiviteiten die plaatsvinden binnen de grenzen van een sprint. De testengineers nemen actief deel aan de sprint planning. De stappen voor het testen van een user story zijn als volgt:
 
-1.	Ontwikkelen testgevallen in Jira, gebaseerd op user story
-    a.	Logische testgevallen laten reviewen door teamgenoot;
-    b.	Reviewcommentaar verwerken.
-2.	Logische testgevallen uitwerken in fysieke testgevallen
-    a.	Handmatig uitvoeren op de testomgeving;
-    b.	Alle voorkomende issues direct oplossen.
-3.	ART uitvoeren
-    a.	Alle voorkomende regressie direct oplossen.
-4.	Na uitvoer fysieke testgevallen en oplossen issues de testgevallen opnemen in de ART.
-5.	Vaststellen van ART
-    a.	De laatste nieuwe versie van de ART uitvoeren op de regressie- en de integratietestomgeving;
-    b.	Eventuele bevindingen en issues dienen direct te worden opgelost en te worden gevolgd door het opnieuw uitvoeren van de ART.
+1. Ontwikkelen testgevallen in Jira, gebaseerd op user story
+    a. Logische testgevallen laten reviewen door teamgenoot;
+    b. Reviewcommentaar verwerken.
+2. Logische testgevallen uitwerken in fysieke testgevallen
+    a. Handmatig uitvoeren op de testomgeving;
+    b. Alle voorkomende issues direct oplossen.
+3. ART uitvoeren
+    a. Alle voorkomende regressie direct oplossen.
+4. Na uitvoer fysieke testgevallen en oplossen issues de testgevallen opnemen in de ART.
+5. Vaststellen van ART
+    a. De laatste nieuwe versie van de ART uitvoeren op de regressie- en de integratietestomgeving;
+    b. Eventuele bevindingen en issues dienen direct te worden opgelost en te worden gevolgd door het opnieuw uitvoeren van de ART.
 
 ## Entry- en exitcriteria
 
@@ -128,7 +128,7 @@ De resultaten van de testuitvoer worden gedeeld met de projectleider. De testres
 * ART-resultaten: Zichtbaar in Jenkins als resultaat van de Jenkins job. BIRT-resultaten worden automatisch gegenereerd, hierin is een gedetailleerd overzicht van de testruns, logische testgevallen, testklassen en testmethodes zichtbaar.
 * Performancetestrapport: Op wekelijkse basis, met hierin een overzicht van de testresultaten van de performancetest, de performancetrend, een analyse en eventueel advies.
 * Securitytestrapport: De securitytesten worden uitgevoerd door een gespecialiseerde organisatie. Deze organisatie stelt ook het securityeindrapport op. Hierin staat een overzicht van de kwetsbaarheden die zijn ontdekt tijdens het testen, en een advies hoe deze te aan te pakken.
-* Toegankelijkheidstestrapport: In dit rapport is vastgelegd in welke mate de software aan de toegankelijkheidseisen, waaronder de wettelijk verplichte Web Content Accessibility Guidelines, voldoet.
+* Toegankelijkheidstestrapport: In dit rapport is vastgelegd in welke mate de software aan de toegankelijkheidseisen voldoet, waaronder de wettelijk verplichte Web Content Accessibility Guidelines.
 
 ## Externe testrapportages
 
@@ -136,8 +136,8 @@ De resultaten van de testuitvoer worden gedeeld met de projectleider. De testres
 
 Onderdeel van het opleveren van een release, is het opleveren van de volgende testrapporten:
 
-* Functioneel eindrapport:
-  + Opsomming van de user story’s per product,
+* Eindrapport functionele testen:
+  + Opsomming van de user stories per product,
   + Gerelateerde logische testgevallen,
   + Reviewstatus van de logische testgevallen,
   + Of de testgevallen zijn geautomatiseerd,
@@ -148,7 +148,7 @@ Onderdeel van het opleveren van een release, is het opleveren van de volgende te
 
 ## Bevindingenprocedure
 
-{Beschrijf de bevindingenprocedure zoals die voor het project geldt.}
+{Beschrijf de bevindingenprocedure, zoals die voor het project geldt.}
 
 ## Testartifacten
 
@@ -164,17 +164,16 @@ De volgende testartifacten worden bij een release opgeleverd:
 * Kwaliteitsrapport,
 * Vrijgaveadvies.
 
-
 {En het onderstaande hoort in het projectplan - en dus niet hier:}
 
 Go/No-go-beslissing 
 {Geef hier de onderwerpen weer die voor het project van toepassing zijn}
 De Go/No-go-beslissing wordt ondersteund door een managementsamenvatting die de beslissing om wel of niet in productie te nemen onderbouwt. Het bestaat uit de volgende onderwerpen:
-•	ART uitgevoerd, aantal testcases,
-•	Handmatig uitgevoerde tests,
-•	Integratietesten,
-•	Performancetesten met bijbehorende resultaten,
-•	Securitytesten met bijbehorende resultaten en aanbevelingen,
-•	Wat is er niet getest (veelal 3rd party),
-•	Known issues,
-•	Kwaliteitsgerelateerde issues.
+* ART uitgevoerd, aantal testcases,
+* Handmatig uitgevoerde tests,
+* Integratietesten,
+* Performancetesten met bijbehorende resultaten,
+* Securitytesten met bijbehorende resultaten en aanbevelingen,
+* Wat is er niet getest (veelal 3rd party),
+* Known issues,
+* Kwaliteitsgerelateerde issues.

@@ -48,11 +48,11 @@ De volgende servers zijn aanwezig:
 | Server | Beschrijving softwarecomponent | Ontwikkel | Test | Acceptatie | Productie |
 |:----|:----|:----|:----|:----|:----|
 | Databases |
-| {server} | {beschrijving} |   |   |   |   |		
+| {server} | {beschrijving} |   |   |   |   |
 | Applicatieservers |
-| {server} | {beschrijving} |   |   |   |   |				
+| {server} | {beschrijving} |   |   |   |   |
 | Overige |
-| {server} | {beschrijving} |   |   |   |   |				
+| {server} | {beschrijving} |   |   |   |   |
 
 {WAT STAAT IN DE OTAP-KOLOMMEN?}
 

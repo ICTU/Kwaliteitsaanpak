@@ -49,6 +49,14 @@ function create-word
     python3 md-to-docx.py "$1" "$2" "$4" "$3"
 }
 
+# Create main document for a template
+# create-template 1:<template document> 2:<template folder name> 3:<output file>
+function create-template
+{
+    echo "--- creating template {$3} from {$1} refering to {$2}"
+    sed s/{{TEMPLATE-FOLDER}}/"$2" $1 > $3
+}
+
 # Generate into folder $1 the document $2.pdf, with title $3 and header $4, using MD cover file $5 and MD document file $6.
 # generate 1:<output folder> 2:<name of document output without extension>
 #          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file> 8:<docx reference file>
@@ -123,10 +131,15 @@ function generate-template
 {
     TITLE="$3"
     HEADER="$TITLE {projectnaam} {versie}"
+    TEMPLATE_TEMPLATE="DocumentDefinitions/Templates/document-template.md"
+    TEMPLATE_PATH="Templates/$1"
     COVER_MD="DocumentDefinitions/Templates/Shared/cover.md"
-    DOC_MD="DocumentDefinitions/Templates/$1/document.md"
+    DOC_MD="build/$TEMPLATE_PATH/document.md"
     DOCX_REF="DocumentDefinitions/reference.docx"
-    generate Templates/$1 $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
+
+    create-template "$TEMPLATE_TEMPLATE" $1 $DOC_MD
+
+    generate $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY

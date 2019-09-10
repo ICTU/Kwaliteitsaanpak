@@ -27,6 +27,7 @@ function expand-md
 
     echo "---- creating temporary build config {$JSON}"
     echo "{	\"build\" : \"$TMP\", \"files\" : [\"$1\"] }" > $JSON
+    echo "---- importing MD files in {$1} creating {$TMP}"
     node node_modules/markdown-include/bin/cli.js $JSON
 
     map-refsd $TMP $2 $3

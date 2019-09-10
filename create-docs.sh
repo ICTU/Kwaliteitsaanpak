@@ -54,7 +54,7 @@ function create-word
 function create-template
 {
     echo "--- creating template {$3} from {$1} refering to {$2}"
-    sed s/{{TEMPLATE-FOLDER}}/"$2" $1 > $3
+    sed s/{{TEMPLATE-FOLDER}}/"$2"/g $1 > $3
 }
 
 # Generate into folder $1 the document $2.pdf, with title $3 and header $4, using MD cover file $5 and MD document file $6.

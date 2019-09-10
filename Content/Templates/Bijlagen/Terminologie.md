@@ -5,6 +5,7 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | Term/afkorting | Toelichting |
 |:---------------|:------------|
 | actor | Persoon die of extern systeem dat een handeling verricht op het systeem. |
+| ART | automatische regressietest |
 | authenticatie | Vaststellen van de identiteit van een actor. |
 | autorisatie | Aan een actor toegekende rechten. |
 | BIO | Baseline Informatiebeveiliging Overheid |
@@ -12,12 +13,13 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | DoR | Definition of Ready |
 | GFO | globaal functioneel ontwerp |
 | IPO | intern projectoverleg |
-| ISR | ICTU Softwarerealisatie |
+| ISR | ICTU Softwarerealisatie, afdeling van ICTU die maatwerksoftwareprojecten ondersteunt |
 | Jira | Tool om use cases, user stories, logische testgevallen en issues vast te leggen. |
 | KPI | key performance indicator |
 | Minimum Viable Product | De eerste versie van een product of dienst, die zo vroeg mogelijk wordt uitgerold naar de opdrachtgever. Het bevat net voldoende functionaliteit om het gestelde doel te behalen, en niet meer dan dat. |
 | MVP | Minimum Viable Product |
-| OTAP | Ontwikkel, Test, Acceptatie, Productie |
+| NFE | niet-functionele eis(en) |
+| OTAP | Ontwikkel, Test, Acceptatie, Productie; gebruikt om verschillende soorten omgevingen aan te duiden. |
 | PID | projectinitiatiedocument |
 | PSA | projectstartarchitectuur |
 | PvE | programma van eisen |

@@ -24,7 +24,7 @@ jobs:
       - store_artifacts:
           path: dist/Template-High-Level-Design.docx
       - store_artifacts:
-          path: dist/Template-Testplan.docx
+          path: dist/Template-Detailtestplan.docx
       - store_artifacts:
           path: dist/Template-Generiek.docx
       - store_artifacts:

@@ -134,9 +134,12 @@ function generate-template
     TEMPLATE_TEMPLATE="DocumentDefinitions/Templates/document-template.md"
     TEMPLATE_PATH="Templates/$1"
     COVER_MD="DocumentDefinitions/Templates/Shared/cover.md"
-    DOC_MD="build/$TEMPLATE_PATH/document.md"
+    BUILD_PATH="build/$TEMPLATE_PATH"
+    DOC_MD="$BUILD_PATH/document.md"
     DOCX_REF="DocumentDefinitions/reference.docx"
 
+    echo "--- template build path: $BUILD_PATH"
+    mkdir -p $BUILD_PATH
     create-template "$TEMPLATE_TEMPLATE" $1 $DOC_MD
 
     generate $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF

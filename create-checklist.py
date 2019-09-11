@@ -42,11 +42,6 @@ def process_maatregel(workbook, worksheet, maatregel_folder, row):
     maatregel_md = maatregel_folder / "Maatregel.md"
     with maatregel_md.open(encoding="utf-8") as maatregel:
         contents = maatregel.readlines()
-    ictu_md = maatregel_folder / "ICTU.md"
-    if ictu_md.exists():
-        with ictu_md.open(encoding="utf-8") as ictu:
-            contents.append("\n")
-            contents.extend(ictu.readlines())
     maatregel_id = contents[0].strip().split("(")[1].strip(")")
     maatregel_format_options = dict(bg_color="#BCD2EE", text_wrap=True)
     maatregel_format = workbook.add_format(maatregel_format_options)

@@ -8,10 +8,4 @@ Kwaliteitsaanpak ICTU Software Realisatie
 
 # Wijzigingsgeschiedenis
 
-## Algemeen
-
 #include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
-
-## ICTU-specifiek
-
-#include "Content/Wijzigingsgeschiedenis/ICTU.md"

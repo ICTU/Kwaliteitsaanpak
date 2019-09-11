@@ -2,6 +2,8 @@
 
 #include "Content/Maatregelen/M09/Beschrijving.md"
 
+Bij ICTU is de software delivery manager verantwoordelijk voor de implementatie van de kwaliteitsaanpak. De software delivery manager stemt periodiek de self-assessmentresultaten af met de projectleider en het afdelingshoofd ISR.
+
 ### Rationale
 
 De implementatie van een nieuwe versie van de kwaliteitsaanpak kost tijd. De introductie en aanpassing van normen en tools, kunnen verschillende consequenties hebben: bestaande broncode blijkt niet meer volledig te voldoen aan de normen, een nieuwe tool moet in de ontwikkelstraat worden toegevoegd, enzovoort.

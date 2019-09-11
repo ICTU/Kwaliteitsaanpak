@@ -7,6 +7,7 @@
 - De term 'projectverantwoordelijke' vervangen door 'projectleider'.
 - De term 'projectenorganisatie' vervangen door 'projectorganisatie'.
 - Actielijst toegevoegd aan self-assessment spreadsheet.
+- M16: GitLab en TFS toegevoegd.
 
 ### Versie 1.3.1, 1 mei 2019
 
@@ -19,6 +20,10 @@
 - M07: Toegankelijkheidstests toegevoegd.
 - M10: Aanwezigen bij periodiek projectoverleg aangepast.
 - M16: Een tool voor het testen van toegankelijkheid toegevoegd.
+- M01: Wbni, EN 301 549 en WCAG 2.1 als bron voor niet-functionele eisen toegevoegd. Toegankelijkheidsverklaring als mogelijke deliverable genoemd.
+- M05: Iteratief en incrementeel ontwikkelproces: Sprint retrospective en sprint backlog toegevoegd.
+- M16: Axe toegevoegd.
+- WCAG 2.1 toegevoegd aan bijlage C: Documenten voor M01.
 
 ### Versie 1.2, 1 augustus 2018
 
@@ -29,6 +34,9 @@
 - M25: De inhoud is verplaatst naar M01: Op te leveren producten, M25 zelf is vervallen.
 - M28: Self-assessment: Maatregel met betrekking tot self-assessment toegevoegd.
 - Tekstuele en stilistische verbeteringen.
+- Manifest toegevoegd.
+- ICTU-specifieke invulling van maatregelen aangepast aan nieuwe organisatiestructuur en rollen zoals die in 2018 gelden.
+- In M16: Verplichte tools, de verwijzing naar ICTU-specifieke SonarQube kwaliteitsprofielen verwijderd omdat ICTU de standaard Sonar Way kwaliteitsprofielen gebruikt.
 
 ### Versie 1.1, 7 november 2017
 

@@ -13,6 +13,8 @@ Voor de belangrijkste verschillen beschrijft de projectleider:
 - in geval van acceptatie; waarom het verschil geaccepteerd wordt,
 - in geval van verbeteractie; planning om het verschil weg te werken.
 
+De projectleider is verantwoordelijk voor het doen van de self-assessment, die in de regel door de software delivery manager wordt uitgevoerd. De self-assessment is een intern product, maar kan gedeeld worden met opdrachtgevers en andere betrokkenen. Voor het doen van de self-assessment stelt ICTU een ondersteunend formulier beschikbaar.
+
 ### Rationale
 
 Net als bij technische producten is het periodiek meten van de kwaliteit van belang om in controle te blijven. Aangezien veel maatregelen uit de kwaliteitsaanpak zich niet geautomatiseerd laten meten, is menselijke inbreng nodig.

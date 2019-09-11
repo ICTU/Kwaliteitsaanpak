@@ -1,4 +1,4 @@
-## M19: Afgeschermde digitale omgeving
+## M19: De projectorganisatie biedt projecten een afgeschermde digitale omgeving
 
 #include "Content/Maatregelen/M19/Beschrijving.md"
 

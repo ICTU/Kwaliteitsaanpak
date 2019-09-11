@@ -1,4 +1,4 @@
-## M09: Implementatie kwaliteitsaanpak
+## M09: Het project implementeert nieuwe versies van de Kwaliteitsaanpak binnen de gestelde termijn
 
 #include "Content/Maatregelen/M09/Beschrijving.md"
 

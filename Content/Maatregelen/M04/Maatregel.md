@@ -1,4 +1,4 @@
-## M04: Geautomatiseerde regressietests
+## M04: Het project gebruikt geautomatiseerde regressietests
 
 #include "Content/Maatregelen/M04/Beschrijving.md"
 

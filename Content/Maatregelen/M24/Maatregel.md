@@ -1,4 +1,4 @@
-## M24: Implementatie van wijzigingen aan de kwaliteitsaanpak en kwaliteitsnormen
+## M24: De projectorganisatie implementeert wijzigingen van de Kwaliteitsaanpak en kwaliteitsnormen op gestructureerde wijze
 
 #include "Content/Maatregelen/M24/Beschrijving.md"
 

@@ -1,4 +1,4 @@
-## M10: Periodiek projectoverleg
+## M10: Het project kent een periodiek projectoverleg
 
 #include "Content/Maatregelen/M10/Beschrijving.md"
 

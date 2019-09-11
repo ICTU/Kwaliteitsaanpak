@@ -1,4 +1,4 @@
-## M06: Frequent geautomatiseerd meten
+## M06: Het project meet kwaliteitsnormen geautomatiseerd en frequent
 
 #include "Content/Maatregelen/M06/Beschrijving.md"
 

@@ -1,8 +1,8 @@
-## M22: Betrokkenheid bij inzet
+## M22: Het project betrekt de projectorganisatie om kennis over de Kwaliteitsaanpak te incorporeren
 
 #include "Content/Maatregelen/M22/Beschrijving.md"
 
-Bij het inzetten van medewerkers zijn één of meer ICTU-medewerkers betrokken die ruime ervaring hebben met de ICTU-werkwijze en -kwaliteitsaanpak.
+Bij het inzetten van medewerkers zijn één of meer ICTU-medewerkers betrokken die ervaring hebben met de Kwaliteitsaanpak.
 
 ### Rationale
 

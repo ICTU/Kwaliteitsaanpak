@@ -1,4 +1,4 @@
-## M01: Op te leveren producten
+## M01: Het project levert in elke fase vastgestelde producten op
 
 #include "Content/Maatregelen/M01/Beschrijving.md"
 

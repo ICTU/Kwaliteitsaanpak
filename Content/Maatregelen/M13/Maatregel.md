@@ -1,4 +1,4 @@
-## M13: Gebruik van ISO-25010
+## M13: Het project gebruikt ISO-25010 voor de specificatie van kwaliteitseisen
 
 #include "Content/Maatregelen/M13/Beschrijving.md"
 

@@ -14,8 +14,8 @@ De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort
 
 Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rollen' om aan te geven wie verantwoordelijkheid draagt voor het uitvoeren van de maatregelen:
 
-- Projectenorganisatie (bij ICTU: de afdeling ISR (ICTU Software Realisatie)),
-- Hoofd projectenorganisatie (bij ICTU: afdelingshoofd ISR),
+- Projectorganisatie (bij ICTU: de afdeling ISR (ICTU Software Realisatie)),
+- Hoofd projectorganisatie (bij ICTU: afdelingshoofd ISR),
 - Project (bij ICTU: project inclusief Scrum team(s)),
 - Projectleider (bij ICTU: software delivery manager en/of projectleider),
 - Kwaliteitsmanager (bij ICTU: een door de software delivery manager en/of projectleider aangestelde kwaliteitsmanager of de software delivery manager zelf).

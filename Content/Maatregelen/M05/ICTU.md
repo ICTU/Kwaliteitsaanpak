@@ -7,4 +7,4 @@ ICTU gebruikt hiervoor Scrum, een raamwerk voor agile productontwikkeling. ICTU 
 - Definition of Ready en Definition of Done,
 - Product backlog en sprint backlog.
 
-Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn ({{M01}}) en voldoen aan de door de projectenorganisatie vastgestelde kwaliteitsnormen ({{M02}}).
+Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn ({{M01}}) en voldoen aan de door de projectorganisatie vastgestelde kwaliteitsnormen ({{M02}}).

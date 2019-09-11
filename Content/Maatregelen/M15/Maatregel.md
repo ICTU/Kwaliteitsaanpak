@@ -1,4 +1,4 @@
-## M15: De projectorganisatie geeft voorkeur aan open source tools
+## M15: De projectorganisatie geeft de voorkeur aan open source tools
 
 #include "Content/Maatregelen/M15/Beschrijving.md"
 

@@ -8,7 +8,7 @@ De volgende documenten vormen de basis voor dit detailtestplan:
 * Projectplan
 * Softwarearchitectuurdocument (SAD)
 * Kwaliteitsplan
-* Informatiebeveiligingsplan  
+* Informatiebeveiligingsplan
 
 De testbasis wordt gevormd door de volgende documenten:
 

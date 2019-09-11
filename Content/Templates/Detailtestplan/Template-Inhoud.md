@@ -73,14 +73,14 @@ Aan het eind van de sprint zal er alleen functionaliteit overgedragen worden die
 
 De onderstaande testomgevingen zijn inzetbaar voor het project:
 
-* Ontwikkelomgeving: Op deze omgeving wordt de smoketest uitgevoerd;
-* Testomgeving: Handmatig testen van nieuwe functionaliteit en het automatiseren van handmatig uitgevoerde testen om op te nemen in de ART;
-* Regressietestomgeving: ART uitvoeren op omgeving met functionaliteit, zoals meest recent vrijgegeven;
-* Integratietestomgeving: Alle laatste versies zijn hier uitgerold op een omgeving waar gebruik wordt gemaakt van productie-like data;
-* Performancetestomgeving: Omgeving gebruikt voor performancetesten;
-* Securitytestomgeving: Gebruikt voor security- en penetratietesten;
-* Middleware-omgevingen: Deze testomgevingen worden gebruikt om besturingssystemen, databases, patches en andere 3rd party componenten te testen voor uitrol naar productie;
-* GAT-omgeving: Op deze omgeving worden de gebruikersacceptatietesten uitgevoerd, inclusief usabilitytestsen.
+* **Ontwikkelomgeving:** Op deze omgeving wordt de smoketest uitgevoerd;
+* **Testomgeving:** Handmatig testen van nieuwe functionaliteit en het automatiseren van handmatig uitgevoerde testen om op te nemen in de ART;
+* **Regressietestomgeving:** ART uitvoeren op omgeving met functionaliteit, zoals meest recent vrijgegeven;
+* **Integratietestomgeving:** Alle laatste versies zijn hier uitgerold op een omgeving waar gebruik wordt gemaakt van productie-like data;
+* **Performancetestomgeving:** Omgeving gebruikt voor performancetesten;
+* **Securitytestomgeving:** Gebruikt voor security- en penetratietesten;
+* **Middleware-omgevingen:** Deze testomgevingen worden gebruikt om besturingssystemen, databases, patches en andere 3rd party componenten te testen voor uitrol naar productie;
+* **GAT-omgeving:** Op deze omgeving worden de gebruikersacceptatietesten uitgevoerd, inclusief usabilitytestsen.
 
 ICTU beschikt over een private cloud waarin deze omgevingen allemaal kunnen worden ingericht. In welke mate dit productie-like kan, is afhankelijk van de karakteristieken van de productie-omgeving en het beschikbare budget.
 
@@ -89,10 +89,10 @@ ICTU beschikt over een private cloud waarin deze omgevingen allemaal kunnen word
 {Geef alleen de tools weer die voor het project van toepassing zijn en vul aan waar nodig.}
 
 Tijdens het testen worden de onderstaande tools gebruikt:
-* Axe: Axe is een testtool voor de Web Content Accessibility Guidelines.
-* Selenium: Web UI driver library, wordt gebruikt om de browser aan te sturen vanuit de ART.
-* Jenkins: Jenkins is een Continuous Integration (CI) server die wordt gebruikt om de ART uit te voeren.
-* BIRT: Een rapportagetool waarmee kwaliteits- en managementrapportages gegenereerd worden.
+* **Axe:** Axe is een testtool voor de Web Content Accessibility Guidelines.
+* **Selenium:** Web UI driver library, wordt gebruikt om de browser aan te sturen vanuit de ART.
+* **Jenkins:** Jenkins is een Continuous Integration (CI) server die wordt gebruikt om de ART uit te voeren.
+* **BIRT:** Een rapportagetool waarmee kwaliteits- en managementrapportages gegenereerd worden.
 * {Andere tools}
 
 ## Testdata
@@ -101,9 +101,11 @@ In de ontwikkel-, test- en regressietestomgevingen wordt nagemaakte testdata geb
 
 Er worden drie soorten data onderscheiden:
 
-* Statische data: Dit is data die noodzakelijk is voor het correct functioneren van de applicatie. Denk hierbij aan systeemlocaties, certificaten, etc.;
-* Dynamische data: Dit is data die voortkomtuit de interactie tussen gebruiker en systemen (applicaties);
-* Testgegevens: Deze data wordt gebruikt om de test correct uit te kunnen voeren en wordt gecreëerd aan het begin van een testscript. Na het uitvoeren van de test wordt deze data weer verwijderd.
+* **Statische data:** Dit is data die noodzakelijk is voor het correct functioneren van de applicatie. Denk hierbij aan systeemlocaties, certificaten, etc.;
+* **Dynamische data:** Dit is data die voortkomt uit de interactie tussen gebruiker en systemen (applicaties);
+* **Testgegevens:** Deze data wordt gebruikt om de test correct uit te kunnen voeren en wordt gecreëerd aan het begin van een testscript. Na het uitvoeren van de test wordt deze data weer verwijderd.
+
+{Neem hier eventuele bijzonderheden op over testdata in het project.}
 
 # Rapportages en testartifacten
 
@@ -154,7 +156,7 @@ De volgende testartifacten worden bij een release opgeleverd:
 * Kwaliteitsrapport,
 * Vrijgaveadvies.
 
-{En het onderstaande hoort in het projectplan - en dus niet hier:}
+{@@En het onderstaande hoort in het projectplan - en dus niet hier:}
 
 Go/No-go-beslissing 
 {Geef hier de onderwerpen weer die voor het project van toepassing zijn}

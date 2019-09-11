@@ -10,6 +10,8 @@ De volgende documenten vormen de basis voor dit detailtestplan:
 * Kwaliteitsplan
 * Informatiebeveiligingsplan
 
+{@@WAT IS DIE RELATIE?}
+
 De testbasis wordt gevormd door de volgende documenten:
 
 * Globaal functioneel ontwerp (GFO)

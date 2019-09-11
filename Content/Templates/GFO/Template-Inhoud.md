@@ -1,6 +1,6 @@
 # Functionele specificaties
 
-De functionele specificaties zijn in de vorm van epics en user stories beschreven. Een user story is een korte beschrijving (story) van wat een gebruiker (user) wil. Een epic is een sprint-overstijgend, samenhangend geheel van user stories, dat als geheel waarde oplevert.
+De functionele specificaties zijn in de vorm van epics en user stories beschreven. Een user story is een korte beschrijving ("story") van wat een gebruiker ("user") wil. Een epic is een sprint-overstijgend, samenhangend geheel van user stories, dat als geheel waarde oplevert.
 
 ## Actoren
 
@@ -28,29 +28,32 @@ Epics zijn volgens een vast formaat beschreven. De onderstaande tabel toont de g
 | *user story ID* | *titel van de user story* |
 | *user story ID* | *titel van de user story* |
 
-De user stories beschrijven alle beoogde functionaliteit van het systeem. De lijst met user stories in bevat nu alleen nog maar een identificatienummer en een titel.
+De user stories beschrijven alle beoogde functionaliteit van het systeem. De lijst met user stories in bevat vooralsnog alleen een identificatienummer en een titel.
 
 User stories worden opgesteld volgens een vast formaat. De onderstaande tabel toont de gegevens die over een user stories worden opgenomen.
 
-| User story ID | Een unieke identificatie van de user story. |
+| User story ID | *Een unieke identificatie van de user story* |
 |:----|:----|
-| User story titel | Korte aanduiding van de user story. |
-| Beschrijving | Standaard beschrijving waarmee duidelijk wordt wat het doel is: als *ROL* wil ik *ACTIE* zodat *REDEN*. De reden is de rationale die duidelijk maakt wat de businesswaarde is. |
-| Screenshot prototype | Opnemen of verwijzen naar een screenshot of schets of een beschikbaar prototype. |
-| Acceptatiecriteria | Criteria waarmee de eisen die specifiek zijn voor de betreffende story worden beschreven (niet benoemd in de NFE's). |
-| Afhankelijkheden* | Hier worden afhankelijkheden bedoeld die niet evident zijn, zoals bijvoorbeeld een koppeling ‘e-herkenning’. |
-| Performance risico’s* | Bijvoorbeeld wanneer sprake is van ‘veel’ gebruikers of transacties of andere bijzondere situaties |
-| Beveiligingsrisico’s* | Wanneer sprake is van specifieke potentiele beveiligingsproblemen. |
-* Indien van toepassing
+| User story titel | *Korte aanduiding van de user story* |
+| Beschrijving | *Beschrijving van het doel in vast formaat: als __ROL__ wil ik __ACTIE__ zodat __REDEN__. De reden is de rationale die duidelijk maakt wat de businesswaarde is* |
+| Screenshot prototype | *Opnemen of verwijzen naar een screenshot of schets of een beschikbaar prototype* |
+| Acceptatiecriteria | *Acceptatiecriteria voor de betreffende user story, die niet al onderdeel zijn van de NFE* |
+| Afhankelijkheden¹ | *Hier worden afhankelijkheden bedoeld die niet evident zijn, zoals bijvoorbeeld een koppeling 'e-herkenning'* |
+| Performancerisico’s¹ | *Wanneer sprake is van omstandigheden die de performance nadelig kunnen beïnvloeden, zoals grote aantallen gebruikers of transacties* |
+| Beveiligingsrisico’s¹ | *Wanneer sprake is van specifieke potentiële beveiligingsproblemen* |
+
+¹) Indien van toepassing
 
 # Epics
 
 Dit hoofstuk beschrijft alle epics en de bijbehorende user stories. De user stories zijn geclassificeerd volgens MosCoW-prioritering, deze is als volgt:
 
-* M - must have: deze user stories moeten in het eindresultaat terugkomen, zonder deze user stories is het product niet bruikbaar;
-* S - should have: deze user stories zijn zeer gewenst, maar zonder is het product wel bruikbaar;
-* C - could have: deze user stories zullen alleen aan bod komen als er tijd genoeg is;
-* W - would have: deze user stories zullen waarschijnlijk in dit project niet aan bod komen maar kunnen in de toekomst, bij een vervolgproject, interessant zijn. Ze worden daarom ook wel eens aangeduid als "won't have".
+* **Must have (M):** deze user stories moeten in het eindresultaat terugkomen, zonder deze user stories is het product niet bruikbaar;
+* **Should have (S):** deze user stories zijn zeer gewenst, maar zonder is het product wel bruikbaar;
+* **Could have (C):** deze user stories zullen alleen aan bod komen als er tijd genoeg is;
+* **Would have (W):** deze user stories zullen waarschijnlijk in dit project niet aan bod komen maar kunnen in de toekomst, bij een vervolgproject, interessant zijn. Ze worden daarom ook wel eens aangeduid als "won't have".
+
+{@@WAAR KOMT DEZE CLASSIFICATIE TERUG? IS NU GEEN ONDERDEEL VAN TABELLEN.}
 
 Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable product.
 
@@ -72,4 +75,4 @@ Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable p
 
 # Invulling van eisen
 
-{???}
+{@@???}

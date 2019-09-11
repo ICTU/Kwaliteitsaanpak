@@ -17,5 +17,5 @@ Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rolle
 - Projectenorganisatie (bij ICTU: de afdeling ISR (ICTU Software Realisatie)),
 - Hoofd projectenorganisatie (bij ICTU: afdelingshoofd ISR),
 - Project (bij ICTU: project inclusief Scrum team(s)),
-- Projectverantwoordelijke (bij ICTU: software delivery manager en/of projectleider),
+- Projectleider (bij ICTU: software delivery manager en/of projectleider),
 - Kwaliteitsmanager (bij ICTU: een door de software delivery manager en/of projectleider aangestelde kwaliteitsmanager of de software delivery manager zelf).

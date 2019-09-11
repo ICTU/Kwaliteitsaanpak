@@ -28,9 +28,9 @@ Epics zijn volgens een vast formaat beschreven. De onderstaande tabel toont de g
 | *user story ID* | *titel van de user story* |
 | *user story ID* | *titel van de user story* |
 
-De user stories beschrijven alle beoogde functionaliteit van het systeem. De lijst met user stories in bevat vooralsnog alleen een identificatienummer en een titel.
+De user stories beschrijven alle beoogde functionaliteit van het systeem. De lijst met user stories bevat vooralsnog alleen een identificatienummer en een titel.
 
-User stories worden opgesteld volgens een vast formaat. De onderstaande tabel toont de gegevens die over een user stories worden opgenomen.
+User stories worden opgesteld volgens een vast formaat. De onderstaande tabel toont de gegevens die over een user story worden opgenomen.
 
 | User story ID | *Een unieke identificatie van de user story* |
 |:----|:----|

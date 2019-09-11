@@ -1,6 +1,6 @@
 # Testaanpak
 
-Dit hoofdstuk beschrijft hoe de testen conform de teststrategie, beschreven in het Mastertestplan, concreet worden aanpakt.
+Dit hoofdstuk beschrijft hoe de testen conform de teststrategie, beschreven in het Mastertestplan, concreet worden aangepakt.
 
 {De Kwaliteitsaanpak schrijft voor dat er in de voorfase een Mastertestplan (door de opdrachtgever) is opgesteld. Mocht deze niet zijn opgesteld, dan zal dit detailtestplan minimaal aan de door ICTU gestelde kwaliteitseisen moeten voldoen.}
 

@@ -150,7 +150,6 @@ python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"
-generate-kwaliteitsaanpak Generic ICTU-Kwaliteitsaanpak-Generic "Kwaliteitsaanpak Software Realisatie"
 generate-template Template Template-Generiek "Generiek Template"
 generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"

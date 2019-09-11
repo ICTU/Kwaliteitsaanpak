@@ -1,4 +1,4 @@
-## M27: Projecten en projectfasen expliciet afsluiten
+## M27: Het project sluit projectfasen en zichzelf expliciet af
 
 #include "Content/Maatregelen/M27/Beschrijving.md"
 

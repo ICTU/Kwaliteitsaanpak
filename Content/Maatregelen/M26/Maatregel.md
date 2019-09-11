@@ -1,4 +1,4 @@
-## M26: Periodieke beoordeling informatiebeveiliging
+## M26: Het project laat periodiek de beveiliging van de ontwikkelde software beoordelen
 
 #include "Content/Maatregelen/M26/Beschrijving.md"
 

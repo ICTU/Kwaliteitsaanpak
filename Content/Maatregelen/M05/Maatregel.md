@@ -1,4 +1,4 @@
-## M05: Iteratief en incrementeel ontwikkelproces
+## M05: Het project hanteert een iteratief en incrementeel ontwikkelproces
 
 #include "Content/Maatregelen/M05/Beschrijving.md"
 

@@ -1,4 +1,4 @@
-## M12: Publicatie kwaliteitsaanpak en -normen
+## M12: De projectorganisatie publiceert nieuwe versies van de Kwaliteitsaanpak en normen periodiek en op een vaste locatie
 
 #include "Content/Maatregelen/M12/Beschrijving.md"
 

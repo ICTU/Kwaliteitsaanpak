@@ -1,4 +1,4 @@
-## M11: Beheer en onderhoud kwaliteitsaanpak en -normen
+## M11: De projectorganisatie beheer en onderhoudt de Kwaliteitsaanpak en kwaliteitsnormen
 
 #include "Content/Maatregelen/M11/Beschrijving.md"
 

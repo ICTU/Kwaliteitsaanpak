@@ -1,4 +1,4 @@
-## M16: Verplichte tools
+## M16: Het project gebruikt tools voor vastgestelde taken
 
 #include "Content/Maatregelen/M16/Beschrijving.md"
 

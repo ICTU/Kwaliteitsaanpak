@@ -1,4 +1,4 @@
-## M29: Project verantwoord starten
+## M29: Het project start verantwoord
 
 #include "Content/Maatregelen/M29/Beschrijving.md"
 

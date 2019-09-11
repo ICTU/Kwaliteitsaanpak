@@ -1,4 +1,4 @@
-## M08: Technische schuld
+## M08: Het project maakt technische schuld inzichtelijk en lost het planmatig op
 
 #include "Content/Maatregelen/M08/Beschrijving.md"
 

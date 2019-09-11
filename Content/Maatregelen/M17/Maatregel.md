@@ -1,4 +1,4 @@
-## M17: Snel beschikbare tools
+## M17: De projectorganisatie zorgt dat een aantal vastgestelde tools snel beschikbaar is voor een project
 
 #include "Content/Maatregelen/M17/Beschrijving.md"
 

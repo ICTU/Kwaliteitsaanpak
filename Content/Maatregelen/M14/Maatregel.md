@@ -1,4 +1,4 @@
-## M14: Projecten splitsen in een voorbereidings- en realisatiefase
+## M14: Het projecten is gesplitst in een voorbereidingsfase en een realisatiefase
 
 #include "Content/Maatregelen/M14/Beschrijving.md"
 

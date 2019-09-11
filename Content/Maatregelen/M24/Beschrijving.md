@@ -1,5 +1,5 @@
 @{{{M24-no-link}}
-Bij elke wijziging aan de kwaliteitsaanpak en/of kwaliteitsnormen stelt de projectenorganisatie vast of de wijziging leidt tot een wijziging in de werkwijze van de projecten. Als dit het geval is, wijst de projectenorganisatie een verantwoordelijke aan voor de implementatie van de wijziging; de verantwoordelijke stelt een implementatieplan op dat ten minste de volgende onderwerpen beschrijft:
+Bij elke wijziging aan de kwaliteitsaanpak en/of kwaliteitsnormen stelt de projectorganisatie vast of de wijziging leidt tot een wijziging in de werkwijze van de projecten. Als dit het geval is, wijst de projectorganisatie een verantwoordelijke aan voor de implementatie van de wijziging; de verantwoordelijke stelt een implementatieplan op dat ten minste de volgende onderwerpen beschrijft:
 
 - het doel van de wijziging,
 - een beschrijving van de wijziging,

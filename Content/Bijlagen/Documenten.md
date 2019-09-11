@@ -83,4 +83,4 @@ Op basis van de resultaten van de TVA wordt voor elk informatiesysteem en voor e
 
 ### Kwaliteitsplan
 
-Het kwaliteitsplan beschrijft welke maatregelen de projectenorganisatie treft om de niet-functionele eisen te realiseren. ICTU gebruikt een generiek kwaliteitsplan als basis voor projectspecifieke kwaliteitsplannen.
+Het kwaliteitsplan beschrijft welke maatregelen de projectorganisatie treft om de niet-functionele eisen te realiseren. ICTU gebruikt een generiek kwaliteitsplan als basis voor projectspecifieke kwaliteitsplannen.

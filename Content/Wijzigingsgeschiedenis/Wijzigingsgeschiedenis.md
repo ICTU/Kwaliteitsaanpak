@@ -5,6 +5,7 @@
 - M16: Versiebeheer toegevoegd.
 - M29: Nieuwe maatregel voor het verantwoord starten van projecten.
 - De term 'projectverantwoordelijke' vervangen door 'projectleider'.
+- De term 'projectenorganisatie' vervangen door 'projectorganisatie'.
 - Actielijst toegevoegd aan self-assessment spreadsheet.
 
 ### Versie 1.3.1, 1 mei 2019

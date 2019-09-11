@@ -32,11 +32,11 @@ Binnen het project worden door ICTU de volgende testsoorten onderscheiden en toe
 
 Het team zal volgens de agile Scrummethode werken. Dat betekent dat de expertise van de diverse componenten in het landschap bij elkaar in één team zit en dat het testen van de gerealiseerde oplossing in principe tijdens de sprint plaatsvindt.
 
-{Mogelijke uitzonderingen hierop zijn de securitytest, Migratietest (MT), performancetest en Product Acceptatie Test (PAT). Deze behoren niet perse tot de vaste sprintactiviteiten.>
+{Mogelijke uitzonderingen hierop zijn de securitytest, Migratietest (MT), performancetest en Product Acceptatie Test (PAT). Deze behoren niet perse tot de vaste sprintactiviteiten.}
 
 ## Testactiviteiten tijdens sprints
 
-Deze paragraaf beschrijft de testactiviteiten die plaatsvinden binnen de grenzen van een sprint. De testengineers nemen actief deel aan de sprint planning. De stappen voor het testen van een user story zijn als volgt:
+Deze paragraaf beschrijft de testactiviteiten die plaatsvinden binnen de grenzen van een sprint. De testengineers nemen actief deel aan de sprintplanning. De stappen voor het testen van een user story zijn als volgt:
 
 1. Ontwikkelen testgevallen in Jira, gebaseerd op user story
     a. Logische testgevallen laten reviewen door teamgenoot;
@@ -148,7 +148,7 @@ De volgende externe testrapportages zijn onderdeel van elke release:
 
 De volgende testartifacten worden bij een release opgeleverd:
 
-* ART (broncode),
+* Broncode van de ART,
 * Performance testrapportage,
 * Security testrapportage,
 * Toegankelijkheidstestrapport,

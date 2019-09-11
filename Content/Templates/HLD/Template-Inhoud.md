@@ -1,6 +1,6 @@
 # Technische infrastructuureisen
 
-De technische eisen die ten grondslag liggen aan dit document zijn en niet beschreven staan in andere documenten uit de voorfase:
+De volgende tabel bevat technische eisen die ten grondslag liggen aan het project en aan dit document zijn en die niet beschreven staan in andere documenten uit de voorfase.
 
 | Volgnummer | Infrastructuureis |
 |:----|:----|
@@ -13,9 +13,9 @@ De technische eisen die ten grondslag liggen aan dit document zijn en niet besch
 
 {Beschrijving van de netwerkomgeving}
 
-{Infrastructuurplaat met zonering, waarbij aangegeven in welke laag van de architectuur je alles configureert}
+{Afbeelding van de infrastructuur met zonering, waarbij aangegeven in welke laag van de architectuur je alles configureert}
 
-{beschrijving OTAP-omgevingen}
+{Beschrijving OTAP-omgevingen}
 
 ## {Component 1}
 
@@ -48,13 +48,13 @@ De volgende servers zijn aanwezig:
 | Server | Beschrijving softwarecomponent | Ontwikkel | Test | Acceptatie | Productie |
 |:----|:----|:----|:----|:----|:----|
 | Databases |
-| {server} | {beschrijving} |   |   |   |   |		
+| {server} | {beschrijving} |   |   |   |   |
 | Applicatieservers |
-| {server} | {beschrijving} |   |   |   |   |				
+| {server} | {beschrijving} |   |   |   |   |
 | Overige |
-| {server} | {beschrijving} |   |   |   |   |				
+| {server} | {beschrijving} |   |   |   |   |
 
-{WAT STAAT IN DE OTAP-KOLOMMEN?}
+{@@WAT STAAT IN DE OTAP-KOLOMMEN?}
 
 ## Gebruikte URL’s {optioneel}
 

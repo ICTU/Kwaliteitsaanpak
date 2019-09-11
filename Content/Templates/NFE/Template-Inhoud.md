@@ -173,7 +173,7 @@ De mate waarin een product of systeem informatie en gegevens beschermt zodat per
 
 ## BIR- en SSD-eisen
 
-De Rijksoverheid is gebonden aan kaderstelling op het gebied van informatiebeveiliging, zoals de Baseline Informatiebeveiliging Rijksdienst (BIR). Handvatten zoals Secure Software Development (SSD) van het Centrum informatiebeveiliging en privacybescherming dienen als leidraad voor het veilig ontwikkelen van software die het voldoen aan de BIR ondersteunt. De BIR is een toepassing van de (ISO 27001:2005) op het domein van de Rijksoverheid. In die toepassing zijn het Voorschrift Informatiebeveiliging Rijksdienst (VIR) en het Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie (VIRBI) verwerkt.
+De Rijksoverheid is gebonden aan kaderstelling op het gebied van informatiebeveiliging, zoals de Baseline Informatiebeveiliging Rijksdienst (BIR). Handvatten zoals Secure Software Development (SSD) van het Centrum Informatiebeveiliging en Privacybescherming dienen als leidraad voor het veilig ontwikkelen van software die het voldoen aan de BIR ondersteunt. De BIR is een toepassing van de (ISO 27001:2005) op het domein van de Rijksoverheid. In die toepassing zijn het Voorschrift Informatiebeveiliging Rijksdienst (VIR) en het Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie (VIRBI) verwerkt.
 
 BIR en SSD bevatten ook een aantal maatregelen ten aanzien van software en/of de infrastructurele componenten waar deze software gebruik van maakt. Deze maatregelen zijn hieronder als eisen opgenomen.
 

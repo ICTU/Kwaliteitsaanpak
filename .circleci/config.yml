@@ -8,30 +8,24 @@ jobs:
       - run:
           docker-compose up
       - store_artifacts:
-          path: ICTU-Kwaliteitsaanpak-Full.pdf
+          path: dist/ICTU-Kwaliteitsaanpak-Full.pdf
       - store_artifacts:
-          path: ICTU-Kwaliteitsaanpak-Generic.pdf
+          path: dist/ICTU-Kwaliteitsaanpak-Full.docx
       - store_artifacts:
-          path: ICTU-Kwaliteitsaanpak-Checklist.xlsx
-#      - store_artifacts:
-#          path: Generated/Full/document.html
+          path: dist/ICTU-Kwaliteitsaanpak-Generic.pdf
       - store_artifacts:
-          path: Generated/Templates/Template/document-post.md
+          path: dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx
       - store_artifacts:
-          path: Generated/Templates/Template/document.html
+          path: dist/Template-Kwaliteitsplan.docx
       - store_artifacts:
-          path: Generated/Templates/Template/header.html
+          path: dist/Template-Niet-Functionele-Eisen.docx
       - store_artifacts:
-          path: Generated/Templates/Template/cover.html
+          path: dist/Template-Globaal-Functioneel-Ontwerp.docx
       - store_artifacts:
-          path: Template-Kwaliteitsplan.pdf
+          path: dist/Template-High-Level-Design.docx
       - store_artifacts:
-          path: Template-Niet-Functionele-Eisen.pdf
+          path: dist/Template-Detailtestplan.docx
       - store_artifacts:
-          path: Template-Globaal-Functioneel-Ontwerp.pdf
+          path: dist/Template-Generiek.docx
       - store_artifacts:
-          path: Template-High-Level-Design.pdf
-      - store_artifacts:
-          path: Template-Generiek.pdf
-#      - store_artifacts:
-#          path: maatregel-dictionary.txt
+          path: build/Templates/Template/document-post.md

@@ -8,5 +8,7 @@ In verschillende documenten zijn eisen en wensen opgenomen die ten grondslag lig
 * Niet-functionele eisen (NFE), {documentreferentie}
 * Informatiebeveiligingsplan (bevat eisen en wensen en mogelijk maatregelen tegen informatiebeveiligingsrisico’s), {documentreferentie}
 
+{@@WAT IS DIE RELATIE?}
+
 Het Low Level Design (LLD) beschrijft elk sub-component van de infrastructuur op een gedetailleerder niveau, zoals de instellingen van routers en firewalls.
 {IS ER NIET ALTIJD, NIET IN STANDAARD LIJST}

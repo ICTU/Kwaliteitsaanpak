@@ -28,4 +28,4 @@ jobs:
       - store_artifacts:
           path: dist/Template-Generiek.docx
       - store_artifacts:
-          path: build/Templates/Template/document-expanded.md
+          path: build/Templates/Template/Template-Generiek-expanded.md

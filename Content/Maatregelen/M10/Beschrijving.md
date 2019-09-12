@@ -1,7 +1,7 @@
 @{{{M10-no-link}}
 De projectleider organiseert een periodiek projectoverleg. Dit overleg vindt wekelijks plaats en duurt niet langer dan een uur.
 
-Vereiste aanwezigen zijn de projectleider, een vertegenwoordiger uit elk van de realiserende teams en de kwaliteitsmanager van het project. Andere aanwezigen kunnen zijn: de projectarchitect en de product owner.
+Vereiste aanwezigen zijn de projectleider, een vertegenwoordiger uit elk van de projectteams en de kwaliteitsmanager van het project. Andere aanwezigen kunnen zijn: de projectarchitect en de product owner.
 
 De agenda voor dit overleg bestaat ten minste uit de volgende onderwerpen:
 

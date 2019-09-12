@@ -68,3 +68,4 @@
 #include "Content/Bijlagen/Manifest-Maatregelen.md"
 #include "Content/Bijlagen/Risico.md"
 #include "Content/Bijlagen/Documenten.md"
+#include "Content/Bijlagen/Wijzigingsgeschiedenis.md"

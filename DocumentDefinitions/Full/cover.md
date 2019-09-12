@@ -8,4 +8,4 @@ Kwaliteitsaanpak ICTU Software Realisatie
 
 # Wijzigingsgeschiedenis
 
-#include "Content/Wijzigingsgeschiedenis/Wijzigingsgeschiedenis.md"
+De wijzigingsgeschiedenis van de Kwaliteitsaanpak is te vinden in de [bijlagen](#wijzigingsgeschiedenis).

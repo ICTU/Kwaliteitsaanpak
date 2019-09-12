@@ -1,13 +1,11 @@
-### Versie 2.0, 11 september 2019
+### Versie 2.0, 12 september 2019
 
 - M02, M08 en M16: Naast HQ ook Quality-time vermeld.
 - M08: Toegevoegd dat projecten regelmatig en voldoende tijd besteden aan het voorkomen en oplossen van technische schuld.
-- M16: Versiebeheer toegevoegd.
+- M16: Versiebeheer toegevoegd, met als concrete tools GitLab en TFS.
 - M29: Nieuwe maatregel voor het verantwoord starten van projecten.
-- De term 'projectverantwoordelijke' vervangen door 'projectleider'.
-- De term 'projectenorganisatie' vervangen door 'projectorganisatie'.
+- Termen aangepast: 'projectverantwoordelijke' is vervangen door 'projectleider', 'projectenorganisatie' door 'projectorganisatie' en 'realiserend team' door 'projectteam'.
 - Actielijst toegevoegd aan self-assessment spreadsheet.
-- M16: GitLab en TFS toegevoegd.
 
 ### Versie 1.3.1, 1 mei 2019
 

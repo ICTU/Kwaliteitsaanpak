@@ -1,6 +1,6 @@
 ## M02: Het project voldoet continu aan de kwaliteitsnormen
 
-#include "Content/Maatregelen/M02/Beschrijving.md"
+#include "Content/Maatregelen/M02/Definitie.md"
 
 Bij ICTU wordt tijdens de voorfase van softwarerealisatieprojecten (zie ook {{M14}}) het voldoen aan de kwaliteitsnormen met behulp van reviews gecontroleerd. Tijdens de realisatiefase van projecten wordt het voldoen aan de kwaliteitsnormen diverse malen per uur gemeten door het 'Kwaliteitssysteem', genaamd Quality-time (de nieuwe versie) en HQ (de oude versie). Het projectteam kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het team. De ICTU-specifieke invulling van de kwaliteitsnormen is te vinden in het helpmenu van de geautomatiseerde kwaliteitsrapportages van ICTU.
 

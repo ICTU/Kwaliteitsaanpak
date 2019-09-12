@@ -1,6 +1,6 @@
 ## M16: Het project gebruikt tools voor vastgestelde taken
 
-#include "Content/Maatregelen/M16/Beschrijving.md"
+#include "Content/Maatregelen/M16/Definitie.md"
 
 ICTU ondersteunt hiervoor de volgende tools:
 

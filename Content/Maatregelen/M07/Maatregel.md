@@ -1,6 +1,6 @@
 ## M07: Het project gebruikt een continuous delivery pipeline met vaste onderdelen
 
-#include "Content/Maatregelen/M07/Beschrijving.md"
+#include "Content/Maatregelen/M07/Definitie.md"
 
 Niet alle testen en controles kunnen altijd geautomatiseerd worden uitgevoerd. Denk aan kwaliteitscontroles op architectuurbeslissingen of het testen van toegankelijkheidseisen. Waar mogelijk wordt wel een groot mogelijk deel van de testen en controles geautomatiseerd en als onderdeel van de pipeline uitgevoerd.
 

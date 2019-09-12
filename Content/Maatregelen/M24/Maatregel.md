@@ -1,6 +1,6 @@
 ## M24: De projectorganisatie implementeert wijzigingen van de Kwaliteitsaanpak en kwaliteitsnormen op gestructureerde wijze
 
-#include "Content/Maatregelen/M24/Beschrijving.md"
+#include "Content/Maatregelen/M24/Definitie.md"
 
 ### Rationale
 

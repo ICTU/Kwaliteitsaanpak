@@ -1,6 +1,6 @@
 ## M04: Het project gebruikt geautomatiseerde regressietests
 
-#include "Content/Maatregelen/M04/Beschrijving.md"
+#include "Content/Maatregelen/M04/Definitie.md"
 
 ICTU stimuleert het gebruik van geautomatiseerde regressietests en hanteert een norm voor de dekking van regressietests.
 

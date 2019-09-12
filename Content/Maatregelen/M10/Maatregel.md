@@ -1,6 +1,6 @@
 ## M10: Het project kent een periodiek projectoverleg
 
-#include "Content/Maatregelen/M10/Beschrijving.md"
+#include "Content/Maatregelen/M10/Definitie.md"
 
 Het periodiek projectoverleg heet bij ICTU het "Intern Projectoverleg" of "IPO".
 

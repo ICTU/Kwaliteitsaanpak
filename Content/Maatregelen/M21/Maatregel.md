@@ -1,6 +1,6 @@
 ## M21: Het project selecteert medewerkers op basis van kwaliteit
 
-#include "Content/Maatregelen/M21/Beschrijving.md"
+#include "Content/Maatregelen/M21/Definitie.md"
 
 ### Rationale
 

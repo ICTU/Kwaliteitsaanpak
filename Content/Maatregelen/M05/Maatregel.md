@@ -1,6 +1,6 @@
 ## M05: Het project hanteert een iteratief en incrementeel ontwikkelproces
 
-#include "Content/Maatregelen/M05/Beschrijving.md"
+#include "Content/Maatregelen/M05/Definitie.md"
 
 ICTU gebruikt hiervoor Scrum, een raamwerk voor agile productontwikkeling. ICTU propageert de kernwaarden van Scrum en vereist de volgende onderdelen van Scrum:
 

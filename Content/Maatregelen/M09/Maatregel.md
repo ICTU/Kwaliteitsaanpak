@@ -1,6 +1,6 @@
 ## M09: Het project implementeert nieuwe versies van de Kwaliteitsaanpak binnen de gestelde termijn
 
-#include "Content/Maatregelen/M09/Beschrijving.md"
+#include "Content/Maatregelen/M09/Definitie.md"
 
 Bij ICTU is de software delivery manager verantwoordelijk voor de implementatie van de kwaliteitsaanpak. De software delivery manager stemt periodiek de self-assessmentresultaten af met de projectleider en het afdelingshoofd ISR.
 

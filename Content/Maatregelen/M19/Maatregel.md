@@ -1,6 +1,6 @@
 ## M19: De projectorganisatie biedt projecten een afgeschermde digitale omgeving
 
-#include "Content/Maatregelen/M19/Beschrijving.md"
+#include "Content/Maatregelen/M19/Definitie.md"
 
 ICTU ondersteunt dit met Docker en/of virtuele machines en een VLAN (Virtual local area network) per project. Een nieuwe afgeschermde digitale omgeving is binnen een werkweek na aanvraag beschikbaar.
 

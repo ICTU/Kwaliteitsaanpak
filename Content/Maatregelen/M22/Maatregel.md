@@ -1,6 +1,6 @@
 ## M22: Het project betrekt de projectorganisatie om kennis over de Kwaliteitsaanpak te incorporeren
 
-#include "Content/Maatregelen/M22/Beschrijving.md"
+#include "Content/Maatregelen/M22/Definitie.md"
 
 Bij het inzetten van medewerkers zijn één of meer ICTU-medewerkers betrokken die ervaring hebben met de Kwaliteitsaanpak.
 

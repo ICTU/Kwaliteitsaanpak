@@ -1,6 +1,6 @@
 ## M08: Het project maakt technische schuld inzichtelijk en lost deze planmatig op
 
-#include "Content/Maatregelen/M08/Beschrijving.md"
+#include "Content/Maatregelen/M08/Definitie.md"
 
 De kwaliteitsmanager maakt de technische schuld inzichtelijk met behulp van een geautomatiseerd kwaliteitssysteem. Technische schuld die niet geautomatiseerd kan worden gemeten legt de kwaliteitsmanager handmatig vast.
 

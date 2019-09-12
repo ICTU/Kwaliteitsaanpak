@@ -1,6 +1,6 @@
 ## M27: Het project sluit projectfasen en zichzelf expliciet af
 
-#include "Content/Maatregelen/M27/Beschrijving.md"
+#include "Content/Maatregelen/M27/Definitie.md"
 
 De software delivery manager is verantwoordelijk voor het archiveren. De software delivery manager geeft het projectteam opdracht de archivering voor te bereiden en geeft het technisch beheerteam de opdracht de archivering uit te voeren.
 

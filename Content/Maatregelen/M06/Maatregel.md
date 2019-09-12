@@ -1,6 +1,6 @@
 ## M06: Het project meet kwaliteitsnormen geautomatiseerd en frequent
 
-#include "Content/Maatregelen/M06/Beschrijving.md"
+#include "Content/Maatregelen/M06/Definitie.md"
 
 De projectorganisatie faciliteert dit met mensen en middelen.
 

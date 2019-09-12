@@ -1,6 +1,6 @@
 ## M01: Het project levert in elke fase vastgestelde producten op
 
-#include "Content/Maatregelen/M01/Beschrijving.md"
+#include "Content/Maatregelen/M01/Definitie.md"
 
 ICTU hanteert de volgende documenten, templates en documentstandaarden voor softwarerealisatieprojecten:
 

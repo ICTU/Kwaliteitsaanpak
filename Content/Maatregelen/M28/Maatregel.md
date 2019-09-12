@@ -1,6 +1,6 @@
 ## M28: Het project voert periodiek een self-assessment uit ten aanzien van de Kwaliteitsaanpak
 
-#include "Content/Maatregelen/M28/Beschrijving.md"
+#include "Content/Maatregelen/M28/Definitie.md"
 
 Deze assessment geeft inzicht in de huidige status van het project en kan aanleiding geven tot het nemen van maatregelen binnen het project.
 

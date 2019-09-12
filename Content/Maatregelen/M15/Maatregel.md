@@ -1,6 +1,6 @@
 ## M15: De projectorganisatie geeft de voorkeur aan open source tools
 
-#include "Content/Maatregelen/M15/Beschrijving.md"
+#include "Content/Maatregelen/M15/Definitie.md"
 
 Tools die ICTU ontwikkelt ter ondersteuning van softwarerealisatieprojecten, worden bij voorkeur als open source beschikbaar gesteld.
 

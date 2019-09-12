@@ -2,9 +2,9 @@
 
 #include "Content/Maatregelen/M06/Definitie.md"
 
-De projectorganisatie faciliteert dit met mensen en middelen.
+De projectorganisatie faciliteert dit met mensen en middelen. Het kwaliteitssysteem van ICTU meet het voldoen aan de normen meermaals per uur. De daaruit voortvloeiende kwaliteitsrapportage wordt besproken tijdens stand-ups en/of tijdens het projectoverleg.
 
-Bij een ICTU-softwareproject is het voldoen aan de normen onderdeel van de 'Definition of Done' en wordt het voldoen aan kwaliteitsnormen meermaals per uur gemeten. Projecten nemen de kwaliteitsrapportage door tijdens de stand-up en tijdens het wekelijks projectoverleg.
+Zie ook {{M10}}.
 
 ### Rationale
 

@@ -2,7 +2,9 @@
 
 #include "Content/Maatregelen/M09/Definitie.md"
 
-Bij ICTU is de software delivery manager verantwoordelijk voor de implementatie van de kwaliteitsaanpak. De software delivery manager stemt periodiek de self-assessmentresultaten af met de projectleider en het afdelingshoofd ISR.
+De software delivery manager is verantwoordelijk voor de implementatie van de Kwaliteitsaanpak. De software delivery manager stemt periodiek de self-assessmentresultaten af met de projectleider.
+
+Zie {{M12}} voor het tot stand komen van de gestelde termijnen.
 
 ### Rationale
 

@@ -1,4 +1,4 @@
-## M29: Het project start verantwoord
+## M29: De projectorganisatie zorgt dat een project verantwoord kan starten
 
 #include "Content/Maatregelen/M29/Definitie.md"
 

@@ -70,16 +70,15 @@ class ParagraphConverter:
             if cont:
                 continue
 
-            if remainder.startswith(MD_INSTRUCTION_START) and MD_INSTRUCTION_START in remainder[1:]:
+            self.buffer += remainder[0]
+
+            if remainder.startswith(MD_INSTRUCTION_START) and MD_INSTRUCTION_END in remainder[1:]:
                 self.start_style(paragraph)
-                pos += 1
                 self.instruction_started = True
             if remainder.startswith(MD_INSTRUCTION_END) and self.instruction_started:
                 self.end_style(paragraph, MD_INSTRUCTION_END)
-                pos += 1
                 self.instruction_started = False
 
-            self.buffer += remainder[0]
             pos += 1
 
         if self.buffer:

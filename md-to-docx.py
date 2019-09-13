@@ -41,83 +41,68 @@ MD_INSTRUCTION_END = '}'
 
 class ParagraphConverter:
     def __init__(self):
-        self.pos = 0
         self.buffer = ""
-        self.bold_started = False
-        self.italic_started = False
-        self.strikethrough_started = False
-        self.instructie_started = False
+        self.format_started = {
+            MD_BOLD: False, MD_BOLD_ALTERNATIVE: False, MD_ITALIC: False, MD_ITALIC_ALTERNATIVE: False,
+            MD_STRIKETHROUGH: False}
+        self.instruction_started = False
 
-    def format(self, parent, paragraph, line):
-        while self.pos < len(line):
-            current = line[self.pos]
-            if self.pos < len(line)-1:
-                next = line[self.pos+1]
-            else:
-                next = ''
-            if current+next == MD_BOLD or current+next == MD_BOLD_ALTERNATIVE:
-                if self.bold_started:
-                    self.end_style(parent, paragraph, MD_BOLD)
-                    self.bold_started = False
-                    continue
-                elif line[self.pos+2:].find(current+next) >= 0:
-                    self.start_style(parent, paragraph, MD_BOLD)
-                    self.bold_started = True
-                    continue
-            elif current+next == MD_STRIKETHROUGH:
-                if self.strikethrough_started:
-                    self.end_style(parent, paragraph, MD_STRIKETHROUGH)
-                    self.strikethrough_started = False
-                    continue
-                elif line[self.pos+2:].find(current+next) >= 0:
-                    self.start_style(parent, paragraph, MD_STRIKETHROUGH)
-                    self.strikethrough_started = True
-                    continue
-            elif current == MD_ITALIC or current == MD_ITALIC_ALTERNATIVE:
-                if self.italic_started:
-                    self.end_style(parent, paragraph, MD_ITALIC)
-                    self.italic_started = False
-                    continue
-                elif line[self.pos+1:].find(current) >= 0:
-                    self.start_style(parent, paragraph, MD_ITALIC)
-                    self.italic_started = True
-                    continue
-            elif current == MD_INSTRUCTION_START and line[self.pos:].find(MD_INSTRUCTION_END) >= 0:
-                self.start_style(parent, paragraph, MD_INSTRUCTION_START)
-                self.buffer += current
-                self.instructie_started = True
-                continue
-            elif current == MD_INSTRUCTION_END and self.instructie_started:
-                self.buffer += current
-                self.end_style(parent, paragraph, MD_INSTRUCTION_END)
-                self.instructie_started = False
+    def format(self, paragraph, line):
+        pos = 0
+        while pos < len(line):
+            remainder = line[pos:]
+
+            cont = False
+            for md_format in self.format_started.keys():
+                if remainder.startswith(md_format):
+                    if md_format in remainder[len(md_format):]:
+                        self.start_style(paragraph)
+                        pos += len(md_format)
+                        self.format_started[md_format] = True
+                        cont = True
+                        break
+                    elif self.format_started[md_format]:
+                        self.end_style(paragraph, md_format)
+                        self.format_started[md_format] = False
+                        pos += len(md_format)
+                        cont = True
+                        break
+            if cont:
                 continue
 
-            self.buffer += current
-            self.pos += 1
+            if remainder.startswith(MD_INSTRUCTION_START) and MD_INSTRUCTION_START in remainder[1:]:
+                self.start_style(paragraph)
+                pos += 1
+                self.instruction_started = True
+            if remainder.startswith(MD_INSTRUCTION_END) and self.instruction_started:
+                self.end_style(paragraph, MD_INSTRUCTION_END)
+                pos += 1
+                self.instruction_started = False
+
+            self.buffer += remainder[0]
+            pos += 1
 
         if self.buffer:
             paragraph.add_run(self.buffer)
 
         return paragraph
 
-    def start_style(self, document, paragraph, markup):
-        self.flush(document, paragraph)
-        self.pos += len(markup)
+    def start_style(self, paragraph):
+        self.flush(paragraph)
 
-    def end_style(self, document, paragraph, markup):
-        self.flush(document, paragraph,
-            is_bold=(markup==MD_BOLD or markup==MD_BOLD_ALTERNATIVE),
-            is_italic=(markup==MD_ITALIC or markup==MD_ITALIC_ALTERNATIVE),
+    def end_style(self, paragraph, markup):
+        self.flush(
+            paragraph,
+            is_bold=markup in (MD_BOLD, MD_BOLD_ALTERNATIVE),
+            is_italic=markup in (MD_ITALIC, MD_ITALIC_ALTERNATIVE),
             is_strikethrough=(markup==MD_STRIKETHROUGH),
             is_instructie=(markup==MD_INSTRUCTION_END))
-        self.pos += len(markup)
 
-    def flush(self, document, paragraph, is_bold=False, is_italic=False, is_strikethrough=False, is_instructie=False):
+    def flush(self, paragraph, is_bold=False, is_italic=False, is_strikethrough=False, is_instructie=False):
         p = paragraph.add_run(self.buffer)
-        p.bold = is_bold or self.bold_started
-        p.italic = is_italic or self.italic_started
-        p.font.strike = is_strikethrough or self.strikethrough_started
+        p.bold = is_bold or self.format_started[MD_BOLD] or self.format_started[MD_BOLD_ALTERNATIVE]
+        p.italic = is_italic or self.format_started[MD_ITALIC] or self.format_started[MD_ITALIC_ALTERNATIVE]
+        p.font.strike = is_strikethrough or self.format_started[MD_STRIKETHROUGH]
         if is_instructie:
             p.style = STYLE_INSTRUCTION
         self.buffer = ""
@@ -415,7 +400,7 @@ class DocumentConverter:
 
     def create_paragraph(self, parent, line, style=STYLE_NORMAL):
         p = parent.add_paragraph("", style=STYLE_MAATREGEL if self.in_maatregel else style)
-        return ParagraphConverter().format(parent, p, line)
+        return ParagraphConverter().format(p, line)
 
     def process_header_row(self, document, line):
         cells = self.get_cells(line)
@@ -425,7 +410,7 @@ class DocumentConverter:
         self.cell_alignment = []
         hdr_cells = table.rows[0].cells
         for i in range(len(cells)):
-            ParagraphConverter().format(hdr_cells[i], hdr_cells[i].paragraphs[0], cells[i])
+            ParagraphConverter().format(hdr_cells[i].paragraphs[0], cells[i])
         return table
 
     def process_table_row(self, document, line):
@@ -453,7 +438,7 @@ class DocumentConverter:
         row_cells = self.table.add_row().cells
         for i in range(len(cells)):
             p = row_cells[i].paragraphs[0]
-            ParagraphConverter().format(row_cells[i], p, cells[i])
+            ParagraphConverter().format(p, cells[i])
             if i < len(self.cell_alignment):
                 p.alignment = self.cell_alignment[i]
 

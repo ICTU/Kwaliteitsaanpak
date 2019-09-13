@@ -4,7 +4,7 @@ Kwaliteitsmanagement is gericht op het borgen dat het projectresultaat voldoet a
 
 De Kwaliteitsaanpak ICTU Software Realisatie (zie bijlagen) ligt ten grondslag aan dit kwaliteitsplan en vereist dat projecten continu voldoen aan de kwaliteitseisen.
 
-#include "Content/Maatregelen/M02/Beschrijving.md"
+#include "Content/Maatregelen/M02/Definitie.md"
 
 Dit kwaliteitsplan beschrijft in nader detail op welke wijze invulling wordt gegeven aan de maatregelen uit de Kwaliteitsaanpak, waar afwijkingen van toepassing zijn en benoemt eventuele aanvullende kwaliteitsmaatregelen. Het kwaliteitsplan wordt gedurende de voorfase van een softwareontwikkelproject opgesteld en heeft betrekking op de realisatiefase van het project.
 

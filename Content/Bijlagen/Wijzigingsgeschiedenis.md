@@ -1,3 +1,5 @@
+## Wijzigingsgeschiedenis
+
 ### Versie 2.0, 12 september 2019
 
 - M02, M08 en M16: Naast HQ ook Quality-time vermeld.

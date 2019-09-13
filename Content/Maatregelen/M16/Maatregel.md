@@ -1,20 +1,22 @@
 ## M16: Het project gebruikt tools voor vastgestelde taken
 
-#include "Content/Maatregelen/M16/Beschrijving.md"
+#include "Content/Maatregelen/M16/Definitie.md"
 
-ICTU ondersteunt hiervoor de volgende tools:
+Onder het ondersteunen van "agile werken" vallen het opvoeren van eisen, het opvoeren van logische testgevallen, het koppelen van logische testgevallen aan eisen, het bijhouden van een werkvoorraad, het plannen van iteraties en het toewijzen van eisen aan iteraties. De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog en de iteraties als sprints.
 
-1. Jira - De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog, de iteraties als sprints,
-2. Jenkins voor Javaprojecten en TFS (Team Foundation Server) voor DotNet-projecten,
-3. SonarQube,
-4. GitLab en TFS,
-5. Release Manager,
-6. Reporting (ontwikkeld met behulp van Business Intelligence Reporting Tool, BIRT),
-7. HQ en Quality-time,
-8. OpenVAS (Vulnerability Assessment System) en OWASP (Open Web Application Security Project) ZAP (Zed Attack Proxy),
-9. OWASP Dependency Checker,
-10. Checkmarx,
-11. Axe.
+ICTU adviseert en ondersteunt hiervoor de volgende tools:
+
+1. Agile werken: Jira,
+2. Continuous delivery pipeline: Jenkins voor Javaprojecten en TFS (Team Foundation Server) voor DotNet-projecten,
+3. Kwaliteit van broncode: SonarQube,
+4. Versiebeheer: GitLab en TFS,
+5. Release: Release Manager,
+6. Testrapportages: Reporting (ontwikkeld met behulp van Business Intelligence Reporting Tool, BIRT),
+7. Kwaliteitsrapportages: HQ en Quality-time,
+8. Kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System) en OWASP (Open Web Application Security Project) ZAP (Zed Attack Proxy),
+9. Kwetsbaarheden in externe software: OWASP Dependency Checker,
+10. Kwetsbaarheden in broncode: Checkmarx,
+11. Toegankelijkheid: Axe.
 
 ### Rationale
 

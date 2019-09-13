@@ -1,6 +1,17 @@
 ## M11: De projectorganisatie beheert en onderhoudt de Kwaliteitsaanpak en kwaliteitsnormen
 
-#include "Content/Maatregelen/M11/Beschrijving.md"
+#include "Content/Maatregelen/M11/Definitie.md"
+
+Wijzigingsvoorstellen bevatten ten minste:
+
+- het doel van de wijziging,
+- een beschrijving van de wijziging,
+- de sponsor van de wijziging,
+- impact van de wijziging op lopende projecten (eenmalig en structureel),
+- eventuele financiële kosten van de wijziging (eenmalig en structureel),
+- de belanghebbenden bij de wijziging,
+- oplossingsvarianten,
+- een onderbouwd advies ter besluitvorming.
 
 Iedereen die betrokken is bij softwarerealisatieprojecten kan een wijzigingsvoorstel indienen bij het hoofd van de afdeling ICTU Software Realisatie (ISR). Het ISR-coördinatieteam behandelt de wijzigingsvoorstellen en faciliteert besluitvorming door het afdelingshoofd.
 

@@ -1,6 +1,6 @@
 ## M23: Het project zorgt voor de aanwezigheid van ervaring met de Kwaliteitsaanpak
 
-#include "Content/Maatregelen/M23/Beschrijving.md"
+#include "Content/Maatregelen/M23/Definitie.md"
 
 ### Rationale
 

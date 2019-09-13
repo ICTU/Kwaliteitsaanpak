@@ -1,6 +1,6 @@
 ## M13: Het project gebruikt ISO-25010 voor de specificatie van kwaliteitseisen
 
-#include "Content/Maatregelen/M13/Beschrijving.md"
+#include "Content/Maatregelen/M13/Definitie.md"
 
 De standaard ISO/IEC 25010:2011, kortweg "ISO-25010", biedt een model voor het beschrijven van productkwaliteit. Kwaliteitseigenschappen zijn voorzien van een naam, definitie en classificatie. ISO-25010 dekt een breed spectrum van kwaliteitseigenschappen af.
 

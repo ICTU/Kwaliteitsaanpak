@@ -1,6 +1,6 @@
 ## M03: Het project voldoet traceerbaar aan eisen
 
-#include "Content/Maatregelen/M03/Beschrijving.md"
+#include "Content/Maatregelen/M03/Definitie.md"
 
 Functionele eisen in de vorm van user stories zijn gekoppeld aan logische testgevallen. Ontwerpdocumentatie in de vorm van use cases is gekoppeld aan logische testgevallen. ICTU gebruikt hiervoor Jira. Logische testgevallen zijn gekoppeld aan fysieke testgevallen. De fysieke testgevallen worden geannoteerd met een identifier van de logische testgevallen. Het project is verantwoordelijk voor het traceerbaar voldoen aan de eisen.
 

@@ -1,12 +1,12 @@
 ## M17: De projectorganisatie zorgt dat een aantal vastgestelde tools snel beschikbaar is voor een project
 
-#include "Content/Maatregelen/M17/Beschrijving.md"
+#include "Content/Maatregelen/M17/Definitie.md"
 
-ICTU gebruikt hiervoor de volgende tools:
+ICTU adviseert en gebruikt hiervoor de volgende tools:
 
-1. Docker dashboard
-2. MediaWiki
-3. Wekan
+1. Installeren van tools: Docker dashboard
+2. Projectinformatie: MediaWiki
+3. Actie- en besluitenlijsten en risicologs: Wekan
 
 De tools zijn beschikbaar via een eigen cloud (vergelijkbaar met een 'app store'), binnen een werkdag na aanvraag.
 

@@ -8,12 +8,6 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-pos = 0
-buffer = ""
-bold_started = False
-italic_started = False
-strikethrough_started = False
-instructie_started = False
 
 STYLE_NORMAL = 'Normal'
 STYLE_NORMAL_COMPACT = 'Compact'
@@ -44,113 +38,90 @@ MD_STRIKETHROUGH = '~~'
 MD_INSTRUCTION_START = '{'
 MD_INSTRUCTION_END = '}'
 
-def flush(document, paragraph, is_bold=False, is_italic=False, is_strikethrough=False, is_instructie=False):
-    global buffer
-    global bold_started
-    global italic_started
-    p = paragraph.add_run(buffer)
-    p.bold = is_bold or bold_started
-    p.italic = is_italic or italic_started
-    p.font.strike = is_strikethrough or strikethrough_started
-    if is_instructie:
-        p.style = STYLE_INSTRUCTION
-    buffer = ""
 
-def start_style(document, paragraph, markup):
-    global pos
-    flush(document, paragraph)
-    pos = pos + len(markup)
+class ParagraphConverter:
+    def __init__(self):
+        self.pos = 0
+        self.buffer = ""
+        self.bold_started = False
+        self.italic_started = False
+        self.strikethrough_started = False
+        self.instructie_started = False
 
-def end_style(document, paragraph, markup):
-    global pos
-    flush(document, paragraph,
-        is_bold=(markup==MD_BOLD or markup==MD_BOLD_ALTERNATIVE),
-        is_italic=(markup==MD_ITALIC or markup==MD_ITALIC_ALTERNATIVE),
-        is_strikethrough=(markup==MD_STRIKETHROUGH),
-        is_instructie=(markup==MD_INSTRUCTION_END))
-    pos = pos + len(markup)
-
-def delete_element(paragraph):
-    p = paragraph._element
-    p.getparent().remove(p)
-    p._p = p._element = None
-
-def clear_document(document):
-    paragraphs = document.paragraphs
-    for paragraph in paragraphs:
-        delete_element(paragraph)
-    tables = document.tables
-    for table in tables:
-        delete_element(table)
-
-def format_paragraph(parent, paragraph, line):
-    global pos
-    global buffer
-    global bold_started
-    global italic_started
-    global strikethrough_started
-    global instructie_started
-    buffer = ""
-    pos = 0
-    bold_started = False
-    italic_started = False
-    strikethrough_started = False
-    instructie_started = False
-
-    while pos < len(line):
-        current = line[pos]
-        if pos < len(line)-1:
-            next = line[pos+1]
-        else:
-            next = ''
-        if current+next == MD_BOLD or current+next == MD_BOLD_ALTERNATIVE:
-            if bold_started:
-                end_style(parent, paragraph, MD_BOLD)
-                bold_started = False
+    def format(self, parent, paragraph, line):
+        while self.pos < len(line):
+            current = line[self.pos]
+            if self.pos < len(line)-1:
+                next = line[self.pos+1]
+            else:
+                next = ''
+            if current+next == MD_BOLD or current+next == MD_BOLD_ALTERNATIVE:
+                if self.bold_started:
+                    self.end_style(parent, paragraph, MD_BOLD)
+                    self.bold_started = False
+                    continue
+                elif line[self.pos+2:].find(current+next) >= 0:
+                    self.start_style(parent, paragraph, MD_BOLD)
+                    self.bold_started = True
+                    continue
+            elif current+next == MD_STRIKETHROUGH:
+                if self.strikethrough_started:
+                    self.end_style(parent, paragraph, MD_STRIKETHROUGH)
+                    self.strikethrough_started = False
+                    continue
+                elif line[self.pos+2:].find(current+next) >= 0:
+                    self.start_style(parent, paragraph, MD_STRIKETHROUGH)
+                    self.strikethrough_started = True
+                    continue
+            elif current == MD_ITALIC or current == MD_ITALIC_ALTERNATIVE:
+                if self.italic_started:
+                    self.end_style(parent, paragraph, MD_ITALIC)
+                    self.italic_started = False
+                    continue
+                elif line[self.pos+1:].find(current) >= 0:
+                    self.start_style(parent, paragraph, MD_ITALIC)
+                    self.italic_started = True
+                    continue
+            elif current == MD_INSTRUCTION_START and line[self.pos:].find(MD_INSTRUCTION_END) >= 0:
+                self.start_style(parent, paragraph, MD_INSTRUCTION_START)
+                self.buffer += current
+                self.instructie_started = True
                 continue
-            elif line[pos+2:].find(current+next) >= 0:
-                start_style(parent, paragraph, MD_BOLD)
-                bold_started = True
+            elif current == MD_INSTRUCTION_END and self.instructie_started:
+                self.buffer += current
+                self.end_style(parent, paragraph, MD_INSTRUCTION_END)
+                self.instructie_started = False
                 continue
-        elif current+next == MD_STRIKETHROUGH:
-            if strikethrough_started:
-                end_style(parent, paragraph, MD_STRIKETHROUGH)
-                strikethrough_started = False
-                continue
-            elif line[pos+2:].find(current+next) >= 0:
-                start_style(parent, paragraph, MD_STRIKETHROUGH)
-                strikethrough_started = True
-                continue
-        elif current == MD_ITALIC or current == MD_ITALIC_ALTERNATIVE:
-            if italic_started:
-                end_style(parent, paragraph, MD_ITALIC)
-                italic_started = False
-                continue
-            elif line[pos+1:].find(current) >= 0:
-                start_style(parent, paragraph, MD_ITALIC)
-                italic_started = True
-                continue
-        elif current == MD_INSTRUCTION_START and line[pos:].find(MD_INSTRUCTION_END) >= 0:
-            start_style(parent, paragraph, MD_INSTRUCTION_START)
-            buffer = buffer + current
-            instructie_started = True
-            continue
-        elif current == MD_INSTRUCTION_END and instructie_started:
-            buffer = buffer + current
-            end_style(parent, paragraph, MD_INSTRUCTION_END)
-            instructie_started = False
-            continue
 
-        buffer = buffer + current
-        pos = pos + 1
+            self.buffer += current
+            self.pos += 1
 
-    if len(buffer) > 0:
-        paragraph.add_run(buffer)
+        if self.buffer:
+            paragraph.add_run(self.buffer)
 
-    return paragraph
+        return paragraph
 
-def bijlage_heading_style(level):
-    return {1: STYLE_APPENDIX_HEADING1, 2: STYLE_APPENDIX_HEADING2}.get(level, STYLE_APPENDIX_HEADING3)
+    def start_style(self, document, paragraph, markup):
+        self.flush(document, paragraph)
+        self.pos += len(markup)
+
+    def end_style(self, document, paragraph, markup):
+        self.flush(document, paragraph,
+            is_bold=(markup==MD_BOLD or markup==MD_BOLD_ALTERNATIVE),
+            is_italic=(markup==MD_ITALIC or markup==MD_ITALIC_ALTERNATIVE),
+            is_strikethrough=(markup==MD_STRIKETHROUGH),
+            is_instructie=(markup==MD_INSTRUCTION_END))
+        self.pos += len(markup)
+
+    def flush(self, document, paragraph, is_bold=False, is_italic=False, is_strikethrough=False, is_instructie=False):
+        p = paragraph.add_run(self.buffer)
+        p.bold = is_bold or self.bold_started
+        p.italic = is_italic or self.italic_started
+        p.font.strike = is_strikethrough or self.strikethrough_started
+        if is_instructie:
+            p.style = STYLE_INSTRUCTION
+        self.buffer = ""
+
 
 def list_number(doc, par, prev=None, level=None, num=True):
     """
@@ -331,7 +302,7 @@ def create_table_of_contents(document):
     document.add_page_break()
 
 
-class Converter:
+class DocumentConverter:
     def __init__(self):
         self.in_bijlagen = False
         self.in_list = False
@@ -340,11 +311,11 @@ class Converter:
         self.table = None
         self.cell_alignment = []
 
-    def create_document(self, input, output, reference, title):
+    def convert(self, input, output, reference, title):
         if reference != None:
             print(f"Converting {input} to {output} using reference {reference}.")
             document = Document(reference)
-            clear_document(document)
+            self.clear_document(document)
             #for style in document.styles:
             #    print(f"style: {style.name}")
         else:
@@ -368,23 +339,9 @@ class Converter:
 
     def process_line(self, document, line, previous, indented):
         p = None
-        leaving_maatregel = False
-
-        if line.startswith("@{"):
-            self.in_maatregel = True
-            line = line[2:]
-        if self.in_maatregel and line.count('}@') > 0:
-            leaving_maatregel = True
-            line = line.replace('}@', '')
-
-        #table
+        line, leaving_maatregel = self.process_maatregel_line(line)
         if line.startswith("|"):
-            if self.in_table:
-                self.process_table_row(document, line)
-            else:
-                #print(f"Creating table")
-                self.table = self.process_header_row(document, line)
-                self.in_table = True
+            self.process_table_line(document, line)
         else:
             self.close_table()
             # heading
@@ -414,6 +371,23 @@ class Converter:
             self.in_maatregel = False
         return p
 
+    def process_maatregel_line(self, line):
+        leaving_maatregel = False
+        if line.startswith("@{"):
+            self.in_maatregel = True
+            line = line[2:]
+        if self.in_maatregel and line.count('}@') > 0:
+            leaving_maatregel = True
+            line = line.replace('}@', '')
+        return line, leaving_maatregel
+
+    def process_table_line(self, document, line):
+        if self.in_table:
+            self.process_table_row(document, line)
+        else:
+            self.table = self.process_header_row(document, line)
+            self.in_table = True
+
     def create_heading(self, document, line):
         heading_level = line.count('#')
         line = line.strip('#').strip()
@@ -422,7 +396,7 @@ class Converter:
             self.in_bijlagen = True
 
         if self.in_bijlagen:
-            return document.add_paragraph(line, style=bijlage_heading_style(heading_level))
+            return document.add_paragraph(line, style=self.bijlage_heading_style(heading_level))
         else:
             return document.add_heading(line, level=heading_level)
 
@@ -441,7 +415,7 @@ class Converter:
 
     def create_paragraph(self, parent, line, style=STYLE_NORMAL):
         p = parent.add_paragraph("", style=STYLE_MAATREGEL if self.in_maatregel else style)
-        return format_paragraph(parent, p, line)
+        return ParagraphConverter().format(parent, p, line)
 
     def process_header_row(self, document, line):
         cells = self.get_cells(line)
@@ -451,7 +425,7 @@ class Converter:
         self.cell_alignment = []
         hdr_cells = table.rows[0].cells
         for i in range(len(cells)):
-            format_paragraph(hdr_cells[i], hdr_cells[i].paragraphs[0], cells[i])
+            ParagraphConverter().format(hdr_cells[i], hdr_cells[i].paragraphs[0], cells[i])
         return table
 
     def process_table_row(self, document, line):
@@ -479,7 +453,7 @@ class Converter:
         row_cells = self.table.add_row().cells
         for i in range(len(cells)):
             p = row_cells[i].paragraphs[0]
-            format_paragraph(row_cells[i], p, cells[i])
+            ParagraphConverter().format(row_cells[i], p, cells[i])
             if i < len(self.cell_alignment):
                 p.alignment = self.cell_alignment[i]
 
@@ -489,9 +463,26 @@ class Converter:
             self.table = None
             self.in_table = False
 
+    def delete_element(self, paragraph):
+        p = paragraph._element
+        p.getparent().remove(p)
+        p._p = p._element = None
+
+    def clear_document(self, document):
+        paragraphs = document.paragraphs
+        for paragraph in paragraphs:
+            self.delete_element(paragraph)
+        tables = document.tables
+        for table in tables:
+            self.delete_element(table)
+
     @staticmethod
     def get_cells(line):
         return [cell.strip() for cell in line.strip('| ').split('|')]
+
+    @staticmethod
+    def bijlage_heading_style(level):
+        return {1: STYLE_APPENDIX_HEADING1, 2: STYLE_APPENDIX_HEADING2}.get(level, STYLE_APPENDIX_HEADING3)
 
 
 if __name__ == "__main__":
@@ -503,6 +494,6 @@ if __name__ == "__main__":
         reference = None
         if len(arguments) == 4:
             reference = arguments[3]
-        Converter().create_document(input, output, reference, title)
+        DocumentConverter().convert(input, output, reference, title)
     else:
         print(f"USAGE: md-to-docx <input file> <output file> <document title> [<reference file>]")

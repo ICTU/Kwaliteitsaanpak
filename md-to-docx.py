@@ -48,38 +48,28 @@ class ParagraphConverter:
         self.instruction_started = False
 
     def format(self, paragraph, line):
-        pos = 0
-        while pos < len(line):
-            remainder = line[pos:]
-
-            cont = False
+        while line:
             for md_format in self.format_started.keys():
-                if remainder.startswith(md_format):
-                    if md_format in remainder[len(md_format):]:
+                if line.startswith(md_format):
+                    if md_format in line[len(md_format):]:
                         self.start_style(paragraph)
-                        pos += len(md_format)
+                        line = line[len(md_format):]
                         self.format_started[md_format] = True
-                        cont = True
                         break
                     elif self.format_started[md_format]:
                         self.end_style(paragraph, md_format)
                         self.format_started[md_format] = False
-                        pos += len(md_format)
-                        cont = True
+                        line = line[len(md_format):]
                         break
-            if cont:
-                continue
-
-            self.buffer += remainder[0]
-
-            if remainder.startswith(MD_INSTRUCTION_START) and MD_INSTRUCTION_END in remainder[1:]:
-                self.start_style(paragraph)
-                self.instruction_started = True
-            if remainder.startswith(MD_INSTRUCTION_END) and self.instruction_started:
-                self.end_style(paragraph, MD_INSTRUCTION_END)
-                self.instruction_started = False
-
-            pos += 1
+            else:
+                self.buffer += line[0]
+                if line.startswith(MD_INSTRUCTION_START) and MD_INSTRUCTION_END in line[len(MD_INSTRUCTION_START):]:
+                    self.start_style(paragraph)
+                    self.instruction_started = True
+                if line.startswith(MD_INSTRUCTION_END) and self.instruction_started:
+                    self.end_style(paragraph, MD_INSTRUCTION_END)
+                    self.instruction_started = False
+                line = line[1:]
 
         if self.buffer:
             paragraph.add_run(self.buffer)
@@ -90,19 +80,14 @@ class ParagraphConverter:
         self.flush(paragraph)
 
     def end_style(self, paragraph, markup):
-        self.flush(
-            paragraph,
-            is_bold=markup in (MD_BOLD, MD_BOLD_ALTERNATIVE),
-            is_italic=markup in (MD_ITALIC, MD_ITALIC_ALTERNATIVE),
-            is_strikethrough=(markup==MD_STRIKETHROUGH),
-            is_instructie=(markup==MD_INSTRUCTION_END))
+        self.flush(paragraph, markup)
 
-    def flush(self, paragraph, is_bold=False, is_italic=False, is_strikethrough=False, is_instructie=False):
+    def flush(self, paragraph, markup=None):
         p = paragraph.add_run(self.buffer)
-        p.bold = is_bold or self.format_started[MD_BOLD] or self.format_started[MD_BOLD_ALTERNATIVE]
-        p.italic = is_italic or self.format_started[MD_ITALIC] or self.format_started[MD_ITALIC_ALTERNATIVE]
-        p.font.strike = is_strikethrough or self.format_started[MD_STRIKETHROUGH]
-        if is_instructie:
+        p.bold = markup in (MD_BOLD, MD_BOLD_ALTERNATIVE)
+        p.italic = markup in (MD_ITALIC, MD_ITALIC_ALTERNATIVE)
+        p.font.strike = markup == MD_STRIKETHROUGH
+        if markup == MD_INSTRUCTION_END:
             p.style = STYLE_INSTRUCTION
         self.buffer = ""
 
@@ -219,71 +204,96 @@ def define_char_style(document, name, font_name, font_size):
     style.font.name = font_name
     style.font.size = font_size
 
-def set_styles(document):
-    define_char_style(document, STYLE_DEFAULT_PARAGRAPH_TEXT, DEFAULT_FONT, Pt(12))
-    define_style(document, STYLE_NORMAL, DEFAULT_FONT, Pt(12))
-    define_style(document, STYLE_HEADING1, DEFAULT_FONT, Pt(32), top_margin=Pt(30), keep_with_next=True, page_break_before=True)
-    define_style(document, STYLE_HEADING2, DEFAULT_FONT, Pt(18), top_margin=Pt(20), keep_with_next=True)
-    define_style(document, STYLE_HEADING3, DEFAULT_FONT, Pt(12), top_margin=Pt(10), keep_with_next=True)
-    define_style(document, STYLE_HEADING4, DEFAULT_FONT, Pt(12), keep_with_next=True)
-    define_style(document, STYLE_HEADING5, DEFAULT_FONT, Pt(12), keep_with_next=True)
 
-def create_frontpage(document, title):
-    document.add_picture(IMAGE_ICTU_LOGO)
-    document.add_paragraph(f'{title}', style=STYLE_TITLE)
-    p = document.add_paragraph('', style=STYLE_NORMAL_COMPACT)
-    p = p.add_run('{Projectnaam}')
-    p.style = STYLE_INSTRUCTION
-    p.bold = True
-    document.add_paragraph('')
-    p = document.add_paragraph('Versie ', style=STYLE_NORMAL_COMPACT)
-    p = p.add_run('{versienummer}')
-    p.style = STYLE_INSTRUCTION
-    p = document.add_paragraph('Datum ', style=STYLE_NORMAL_COMPACT)
-    p = p.add_run('{datum}')
-    p.style = STYLE_INSTRUCTION
-    document.add_paragraph('')
-    document.add_paragraph('')
-    document.add_paragraph('')
-    document.add_paragraph('')
-    p = document.add_picture(IMAGE_WORDCLOUD)
-    p.top_margin = Pt(36)
-    document.add_page_break()
+class ICTUDocument:
+    def __init__(self, title, reference=None):
+        self.document = Document(reference)
+        if reference:
+            self.clear_document()
+        else:
+            self.set_styles()
+        self.create_header(title)
+        self.create_frontpage(title)
+        self.create_table_of_contents()
 
-def create_header(document, title):
-    document.sections[0].different_first_page_header_footer = True
-    header_paragraph = document.sections[0].header.paragraphs[0]
-    header_paragraph.clear()
-    p = header_paragraph.add_run('{Projectnaam}')
-    p.style = STYLE_INSTRUCTION
-    header_paragraph.add_run(f'\t\t{title}')
+    def __getattr__(self, attr):
+        return getattr(self.document, attr)
 
-def create_table_of_contents(document):
-    document.add_paragraph("Inhoudsopgave", style=STYLE_HEADING_TOC)
-    paragraph = document.add_paragraph()
-    run = paragraph.add_run()
-    fldChar = OxmlElement('w:fldChar')  # creates a new element
-    fldChar.set(qn('w:fldCharType'), 'begin')  # sets attribute on element
-    instrText = OxmlElement('w:instrText')
-    instrText.set(qn('xml:space'), 'preserve')  # sets attribute on element
-    instrText.text = 'TOC \\o "1-3" \\h \\z \\u'   # change 1-3 depending on heading levels you need
+    def clear_document(self):
+        for paragraph in self.document.paragraphs:
+            self.delete_element(paragraph)
+        for table in self.document.tables:
+            self.delete_element(table)
 
-    fldChar2 = OxmlElement('w:fldChar')
-    fldChar2.set(qn('w:fldCharType'), 'separate')
-    fldChar3 = OxmlElement('w:t')
-    fldChar3.text = "Right-click to update field."
-    fldChar2.append(fldChar3)
+    def set_styles(self):
+        define_char_style(self.document, STYLE_DEFAULT_PARAGRAPH_TEXT, DEFAULT_FONT, Pt(12))
+        define_style(self.document, STYLE_NORMAL, DEFAULT_FONT, Pt(12))
+        define_style(self.document, STYLE_HEADING1, DEFAULT_FONT, Pt(32), top_margin=Pt(30), keep_with_next=True, page_break_before=True)
+        define_style(self.document, STYLE_HEADING2, DEFAULT_FONT, Pt(18), top_margin=Pt(20), keep_with_next=True)
+        define_style(self.document, STYLE_HEADING3, DEFAULT_FONT, Pt(12), top_margin=Pt(10), keep_with_next=True)
+        define_style(self.document, STYLE_HEADING4, DEFAULT_FONT, Pt(12), keep_with_next=True)
+        define_style(self.document, STYLE_HEADING5, DEFAULT_FONT, Pt(12), keep_with_next=True)
 
-    fldChar4 = OxmlElement('w:fldChar')
-    fldChar4.set(qn('w:fldCharType'), 'end')
+    def create_header(self, title):
+        self.document.sections[0].different_first_page_header_footer = True
+        header_paragraph = self.document.sections[0].header.paragraphs[0]
+        header_paragraph.clear()
+        p = header_paragraph.add_run('{Projectnaam}')
+        p.style = STYLE_INSTRUCTION
+        header_paragraph.add_run(f'\t\t{title}')
 
-    r_element = run._r
-    r_element.append(fldChar)
-    r_element.append(instrText)
-    r_element.append(fldChar2)
-    r_element.append(fldChar4)
-    p_element = paragraph._p
-    document.add_page_break()
+    def create_frontpage(self, title):
+        self.document.add_picture(IMAGE_ICTU_LOGO)
+        self.document.add_paragraph(f'{title}', style=STYLE_TITLE)
+        p = self.document.add_paragraph('', style=STYLE_NORMAL_COMPACT)
+        p = p.add_run('{Projectnaam}')
+        p.style = STYLE_INSTRUCTION
+        p.bold = True
+        self.document.add_paragraph('')
+        p = self.document.add_paragraph('Versie ', style=STYLE_NORMAL_COMPACT)
+        p = p.add_run('{versienummer}')
+        p.style = STYLE_INSTRUCTION
+        p = self.document.add_paragraph('Datum ', style=STYLE_NORMAL_COMPACT)
+        p = p.add_run('{datum}')
+        p.style = STYLE_INSTRUCTION
+        for empty_paragraph in [''] * 4:
+            self.document.add_paragraph(empty_paragraph)
+        p = self.document.add_picture(IMAGE_WORDCLOUD)
+        p.top_margin = Pt(36)
+        self.document.add_page_break()
+
+    def create_table_of_contents(self):
+        self.document.add_paragraph("Inhoudsopgave", style=STYLE_HEADING_TOC)
+        paragraph = self.document.add_paragraph()
+        run = paragraph.add_run()
+        fldChar = OxmlElement('w:fldChar')  # creates a new element
+        fldChar.set(qn('w:fldCharType'), 'begin')  # sets attribute on element
+        instrText = OxmlElement('w:instrText')
+        instrText.set(qn('xml:space'), 'preserve')  # sets attribute on element
+        instrText.text = 'TOC \\o "1-3" \\h \\z \\u'   # change 1-3 depending on heading levels you need
+
+        fldChar2 = OxmlElement('w:fldChar')
+        fldChar2.set(qn('w:fldCharType'), 'separate')
+        fldChar3 = OxmlElement('w:t')
+        fldChar3.text = "Right-click to update field."
+        fldChar2.append(fldChar3)
+
+        fldChar4 = OxmlElement('w:fldChar')
+        fldChar4.set(qn('w:fldCharType'), 'end')
+
+        r_element = run._r
+        r_element.append(fldChar)
+        r_element.append(instrText)
+        r_element.append(fldChar2)
+        r_element.append(fldChar4)
+        p_element = paragraph._p
+        self.document.add_page_break()
+
+    @staticmethod
+    def delete_element(paragraph):
+        p = paragraph._element
+        p.getparent().remove(p)
+        p._p = p._element = None
 
 
 class DocumentConverter:
@@ -296,20 +306,9 @@ class DocumentConverter:
         self.cell_alignment = []
 
     def convert(self, input, output, reference, title):
-        if reference != None:
-            print(f"Converting {input} to {output} using reference {reference}.")
-            document = Document(reference)
-            self.clear_document(document)
-            #for style in document.styles:
-            #    print(f"style: {style.name}")
-        else:
-            print(f"Converting {input} to {output} using default styles.")
-            document = Document()
-            set_styles(document)
-
-        create_header(document, title)
-        create_frontpage(document, title)
-        create_table_of_contents(document)
+        styles = f"reference {reference}" if reference else "default styles"
+        print(f"Converting {input} to {output} using {styles}.")
+        document = ICTUDocument(title, reference)
 
         with open(input, mode='r', encoding='utf8') as source_file:
             lines = source_file.readlines()
@@ -446,19 +445,6 @@ class DocumentConverter:
             self.table.autofit = True
             self.table = None
             self.in_table = False
-
-    def delete_element(self, paragraph):
-        p = paragraph._element
-        p.getparent().remove(p)
-        p._p = p._element = None
-
-    def clear_document(self, document):
-        paragraphs = document.paragraphs
-        for paragraph in paragraphs:
-            self.delete_element(paragraph)
-        tables = document.tables
-        for table in tables:
-            self.delete_element(table)
 
     @staticmethod
     def get_cells(line):

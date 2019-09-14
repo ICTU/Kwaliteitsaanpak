@@ -39,49 +39,10 @@ MD_INSTRUCTION_START = '{'
 MD_INSTRUCTION_END = '}'
 
 
-def format_paragraph(paragraph, line):
-    processed_line, buffer = "", ""
-    md_format_markers = (
-        (MD_BOLD, MD_BOLD), (MD_BOLD_ALTERNATIVE, MD_BOLD_ALTERNATIVE),
-        (MD_ITALIC, MD_ITALIC), (MD_ITALIC_ALTERNATIVE, MD_ITALIC_ALTERNATIVE),
-        (MD_STRIKETHROUGH, MD_STRIKETHROUGH), (MD_INSTRUCTION_START, MD_INSTRUCTION_END))
-    md_format_markers_to_keep = (MD_INSTRUCTION_START, MD_INSTRUCTION_END)
-
-    def flush_buffer(markup=None):
-        p = paragraph.add_run(buffer)
-        p.bold = markup in (MD_BOLD, MD_BOLD_ALTERNATIVE)
-        p.italic = markup in (MD_ITALIC, MD_ITALIC_ALTERNATIVE)
-        p.font.strike = markup == MD_STRIKETHROUGH
-        if markup == MD_INSTRUCTION_END:
-            p.style = STYLE_INSTRUCTION
-
-    while line:
-        for md_format_start, md_format_end in md_format_markers:
-            if line.startswith(md_format_start) and md_format_end in line[len(md_format_start):]:
-                processed_chars = md_format_start
-                flush_buffer()
-                buffer = processed_chars if processed_chars in md_format_markers_to_keep else ''
-                break
-            elif line.startswith(md_format_end) and md_format_start in processed_line:
-                processed_chars = md_format_end
-                buffer += processed_chars if processed_chars in md_format_markers_to_keep else ''
-                flush_buffer(md_format_end)
-                buffer = ""
-                break
-        else:
-            processed_chars = line[0]
-            buffer += processed_chars
-        line = line[len(processed_chars):]  # Move to the first character after the processed characters
-        processed_line += processed_chars
-
-    if buffer:
-        paragraph.add_run(buffer)
-
-    return paragraph
-
-
 def list_number(doc, par, prev=None, level=None, num=True):
     """
+    This code was copied from: https://stackoverflow.com/questions/51829366/bullet-lists-in-python-docx
+
     Makes a paragraph into a list item with a specific level and
     optional restart.
 
@@ -179,21 +140,49 @@ def list_number(doc, par, prev=None, level=None, num=True):
     par._p.get_or_add_pPr().get_or_add_numPr().get_or_add_numId().val = num
     par._p.get_or_add_pPr().get_or_add_numPr().get_or_add_ilvl().val = level
 
-def define_style(document, name, font_name, font_size, top_margin=Pt(0), keep_with_next=False, page_break_before=False):
-    style = document.styles[name]
-    style.font.name = font_name
-    style.font.size = font_size
-    style.paragraph_format.space_before = top_margin
-    style.paragraph_format.keep_with_next = keep_with_next
-    style.paragraph_format.page_break_before = page_break_before
 
-def define_char_style(document, name, font_name, font_size):
-    style = document.styles[name]
-    style.font.name = font_name
-    style.font.size = font_size
+def format_paragraph(paragraph, line):
+    processed_line, buffer = "", ""
+    md_format_markers = (
+        (MD_BOLD, MD_BOLD), (MD_BOLD_ALTERNATIVE, MD_BOLD_ALTERNATIVE),
+        (MD_ITALIC, MD_ITALIC), (MD_ITALIC_ALTERNATIVE, MD_ITALIC_ALTERNATIVE),
+        (MD_STRIKETHROUGH, MD_STRIKETHROUGH), (MD_INSTRUCTION_START, MD_INSTRUCTION_END))
+    md_format_markers_to_keep = (MD_INSTRUCTION_START, MD_INSTRUCTION_END)
+
+    def flush_buffer(markup=None):
+        p = paragraph.add_run(text=buffer, style=STYLE_INSTRUCTION if markup == MD_INSTRUCTION_END else None)
+        p.bold = markup in (MD_BOLD, MD_BOLD_ALTERNATIVE)
+        p.italic = markup in (MD_ITALIC, MD_ITALIC_ALTERNATIVE)
+        p.font.strike = markup == MD_STRIKETHROUGH
+
+    while line:
+        for md_format_start, md_format_end in md_format_markers:
+            if line.startswith(md_format_start) and md_format_end in line[len(md_format_start):]:
+                processed_chars = md_format_start
+                flush_buffer()
+                buffer = processed_chars if processed_chars in md_format_markers_to_keep else ''
+                break
+            elif line.startswith(md_format_end) and md_format_start in processed_line:
+                processed_chars = md_format_end
+                buffer += processed_chars if processed_chars in md_format_markers_to_keep else ''
+                flush_buffer(md_format_end)
+                buffer = ""
+                break
+        else:
+            processed_chars = line[0]
+            buffer += processed_chars
+        line = line[len(processed_chars):]  # Move to the first character after the processed characters
+        processed_line += processed_chars
+
+    if buffer:
+        paragraph.add_run(buffer)
+
+    return paragraph
 
 
 class ICTUDocument:
+    """Wrap a docx Document and add ICTU specific styles and content."""
+
     def __init__(self, title, reference=None):
         self.document = Document(reference)
         if reference:
@@ -205,7 +194,7 @@ class ICTUDocument:
         self.create_table_of_contents()
 
     def __getattr__(self, attr):
-        return getattr(self.document, attr)
+        return getattr(self.document, attr)  # Forward all unknown attribute lookups to the document
 
     def clear_document(self):
         for paragraph in self.document.paragraphs:
@@ -214,13 +203,26 @@ class ICTUDocument:
             self.delete_element(table)
 
     def set_styles(self):
-        define_char_style(self.document, STYLE_DEFAULT_PARAGRAPH_TEXT, DEFAULT_FONT, Pt(12))
-        define_style(self.document, STYLE_NORMAL, DEFAULT_FONT, Pt(12))
-        define_style(self.document, STYLE_HEADING1, DEFAULT_FONT, Pt(32), top_margin=Pt(30), keep_with_next=True, page_break_before=True)
-        define_style(self.document, STYLE_HEADING2, DEFAULT_FONT, Pt(18), top_margin=Pt(20), keep_with_next=True)
-        define_style(self.document, STYLE_HEADING3, DEFAULT_FONT, Pt(12), top_margin=Pt(10), keep_with_next=True)
-        define_style(self.document, STYLE_HEADING4, DEFAULT_FONT, Pt(12), keep_with_next=True)
-        define_style(self.document, STYLE_HEADING5, DEFAULT_FONT, Pt(12), keep_with_next=True)
+        self.define_char_style(STYLE_DEFAULT_PARAGRAPH_TEXT, DEFAULT_FONT, Pt(12))
+        self.define_style(STYLE_NORMAL, DEFAULT_FONT, Pt(12))
+        self.define_style(STYLE_HEADING1, DEFAULT_FONT, Pt(32), top_margin=Pt(30), keep_with_next=True, page_break_before=True)
+        self.define_style(STYLE_HEADING2, DEFAULT_FONT, Pt(18), top_margin=Pt(20), keep_with_next=True)
+        self.define_style(STYLE_HEADING3, DEFAULT_FONT, Pt(12), top_margin=Pt(10), keep_with_next=True)
+        self.define_style(STYLE_HEADING4, DEFAULT_FONT, Pt(12), keep_with_next=True)
+        self.define_style(STYLE_HEADING5, DEFAULT_FONT, Pt(12), keep_with_next=True)
+
+    def define_style(self, name, font_name, font_size, top_margin=Pt(0), keep_with_next=False, page_break_before=False):
+        style = self.document.styles[name]
+        style.font.name = font_name
+        style.font.size = font_size
+        style.paragraph_format.space_before = top_margin
+        style.paragraph_format.keep_with_next = keep_with_next
+        style.paragraph_format.page_break_before = page_break_before
+
+    def define_char_style(self, name, font_name, font_size):
+        style = self.document.styles[name]
+        style.font.name = font_name
+        style.font.size = font_size
 
     def create_header(self, title):
         self.document.sections[0].different_first_page_header_footer = True
@@ -269,12 +271,8 @@ class ICTUDocument:
         fldChar4 = OxmlElement('w:fldChar')
         fldChar4.set(qn('w:fldCharType'), 'end')
 
-        r_element = run._r
-        r_element.append(fldChar)
-        r_element.append(instrText)
-        r_element.append(fldChar2)
-        r_element.append(fldChar4)
-        p_element = paragraph._p
+        for element in (fldChar, instrText, fldChar2, fldChar4):
+            run._r.append(element)
         self.document.add_page_break()
 
     @staticmethod
@@ -297,15 +295,13 @@ class DocumentConverter:
         styles = f"reference {reference}" if reference else "default styles"
         print(f"Converting {input} to {output} using {styles}.")
         document = ICTUDocument(title, reference)
-
         with open(input, mode='r', encoding='utf8') as source_file:
             lines = source_file.readlines()
-            previous = None
-            for line in lines:
-                indented = len(line) > 0 and line.startswith(' ')
-                stripped_line = line.strip()
-                if len(stripped_line) > 0:
-                    previous = self.process_line(document, stripped_line, previous, indented)
+        previous = None
+        for line in lines:
+            stripped_line = line.strip()
+            if stripped_line:
+                previous = self.process_line(document, stripped_line, previous, indented=line.startswith(' '))
         document.save(output)
 
     def process_line(self, document, line, previous, indented):
@@ -315,29 +311,19 @@ class DocumentConverter:
             self.process_table_line(document, line)
         else:
             self.close_table()
-            # heading
-            if line.startswith('#'):
+            if line.startswith('#'):  # heading
                 p = self.create_heading(document, line)
-            # bullet list
-            elif re.match(r"^[*+-] .*", line):
+            elif re.match(r"^[*+-] .*", line):  # bullet list
                 bullet_char = line[0]
                 line = re.sub(r"^[*+-] ", "", line).strip()
                 p = self.create_bullet_list_item(document, line, previous, bullet_char)
-            # numbered list
-            elif re.match(r"^[0-9a-zA-Z]+[.] .*", line):
-                if line[0].isalpha():
-                    level = 1
-                elif indented:
-                    level = 2
-                else:
-                    level = 0
+            elif re.match(r"^[0-9a-zA-Z]+[.] .*", line):  # numbered list
+                level = 1 if line[0].isalpha() else (2 if indented else 0)
                 line = re.sub(r"^[0-9a-zA-Z]+[.] ", "", line).strip()
                 p = self.create_numbered_list_item(document, line, previous, level)
-            # regular text paragraph
-            else:
+            else:  # regular text paragraph
                 self.in_list = False
                 p = self.create_paragraph(document, line)
-
         if leaving_maatregel:
             self.in_maatregel = False
         return p
@@ -347,7 +333,7 @@ class DocumentConverter:
         if line.startswith("@{"):
             self.in_maatregel = True
             line = line[2:]
-        if self.in_maatregel and line.count('}@') > 0:
+        if self.in_maatregel and '}@' in line:
             leaving_maatregel = True
             line = line.replace('}@', '')
         return line, leaving_maatregel
@@ -365,7 +351,6 @@ class DocumentConverter:
         self.in_list = False
         if heading_level == 1 and line.upper() == 'BIJLAGEN':
             self.in_bijlagen = True
-
         if self.in_bijlagen:
             return document.add_paragraph(line, style=self.bijlage_heading_style(heading_level))
         else:
@@ -394,9 +379,9 @@ class DocumentConverter:
         table.style = STYLE_TABLE
         table.allow_autofit = True
         self.cell_alignment = []
-        hdr_cells = table.rows[0].cells
-        for i in range(len(cells)):
-            format_paragraph(hdr_cells[i].paragraphs[0], cells[i])
+        header_cells = table.rows[0].cells
+        for header_cell, cell in zip(header_cells, cells):
+            format_paragraph(header_cell.paragraphs[0], cell)
         return table
 
     def process_table_row(self, document, line):
@@ -416,17 +401,16 @@ class DocumentConverter:
             else:
                 self.cell_alignment.append(WD_ALIGN_PARAGRAPH.LEFT)
         for row in self.table.rows:
-            for i in range(len(row.cells)):
-                cell = row.cells[i]
-                cell.paragraphs[0].alignment = self.cell_alignment[i]
+            for index, cell in enumerate(row.cells):
+                cell.paragraphs[0].alignment = self.cell_alignment[index]
 
     def process_table_row_content(self, cells):
         row_cells = self.table.add_row().cells
-        for i in range(len(cells)):
-            p = row_cells[i].paragraphs[0]
-            format_paragraph(p, cells[i])
-            if i < len(self.cell_alignment):
-                p.alignment = self.cell_alignment[i]
+        for index, cell in enumerate(cells):
+            p = row_cells[index].paragraphs[0]
+            format_paragraph(p, cell)
+            if index < len(self.cell_alignment):
+                p.alignment = self.cell_alignment[index]
 
     def close_table(self):
         if self.in_table:
@@ -446,12 +430,8 @@ class DocumentConverter:
 if __name__ == "__main__":
     arguments = sys.argv[1:]
     if 3 <= len(arguments) <= 4:
-        input = arguments[0]
-        output = arguments[1]
-        title = arguments[2]
-        reference = None
-        if len(arguments) == 4:
-            reference = arguments[3]
+        input, output, title, *optional_reference = arguments
+        reference = optional_reference[0] if optional_reference else None
         DocumentConverter().convert(input, output, reference, title)
     else:
         print(f"USAGE: md-to-docx <input file> <output file> <document title> [<reference file>]")

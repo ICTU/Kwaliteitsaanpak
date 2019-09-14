@@ -39,57 +39,45 @@ MD_INSTRUCTION_START = '{'
 MD_INSTRUCTION_END = '}'
 
 
-class ParagraphConverter:
-    def __init__(self):
-        self.buffer = ""
-        self.format_started = {
-            MD_BOLD: False, MD_BOLD_ALTERNATIVE: False, MD_ITALIC: False, MD_ITALIC_ALTERNATIVE: False,
-            MD_STRIKETHROUGH: False}
-        self.instruction_started = False
+def format_paragraph(paragraph, line):
+    processed_line, buffer = "", ""
+    md_format_markers = (
+        (MD_BOLD, MD_BOLD), (MD_BOLD_ALTERNATIVE, MD_BOLD_ALTERNATIVE),
+        (MD_ITALIC, MD_ITALIC), (MD_ITALIC_ALTERNATIVE, MD_ITALIC_ALTERNATIVE),
+        (MD_STRIKETHROUGH, MD_STRIKETHROUGH), (MD_INSTRUCTION_START, MD_INSTRUCTION_END))
+    md_format_markers_to_keep = (MD_INSTRUCTION_START, MD_INSTRUCTION_END)
 
-    def format(self, paragraph, line):
-        while line:
-            for md_format in self.format_started.keys():
-                if line.startswith(md_format):
-                    if md_format in line[len(md_format):]:
-                        self.start_style(paragraph)
-                        line = line[len(md_format):]
-                        self.format_started[md_format] = True
-                        break
-                    elif self.format_started[md_format]:
-                        self.end_style(paragraph, md_format)
-                        self.format_started[md_format] = False
-                        line = line[len(md_format):]
-                        break
-            else:
-                self.buffer += line[0]
-                if line.startswith(MD_INSTRUCTION_START) and MD_INSTRUCTION_END in line[len(MD_INSTRUCTION_START):]:
-                    self.start_style(paragraph)
-                    self.instruction_started = True
-                if line.startswith(MD_INSTRUCTION_END) and self.instruction_started:
-                    self.end_style(paragraph, MD_INSTRUCTION_END)
-                    self.instruction_started = False
-                line = line[1:]
-
-        if self.buffer:
-            paragraph.add_run(self.buffer)
-
-        return paragraph
-
-    def start_style(self, paragraph):
-        self.flush(paragraph)
-
-    def end_style(self, paragraph, markup):
-        self.flush(paragraph, markup)
-
-    def flush(self, paragraph, markup=None):
-        p = paragraph.add_run(self.buffer)
+    def flush_buffer(markup=None):
+        p = paragraph.add_run(buffer)
         p.bold = markup in (MD_BOLD, MD_BOLD_ALTERNATIVE)
         p.italic = markup in (MD_ITALIC, MD_ITALIC_ALTERNATIVE)
         p.font.strike = markup == MD_STRIKETHROUGH
         if markup == MD_INSTRUCTION_END:
             p.style = STYLE_INSTRUCTION
-        self.buffer = ""
+
+    while line:
+        for md_format_start, md_format_end in md_format_markers:
+            if line.startswith(md_format_start) and md_format_end in line[len(md_format_start):]:
+                processed_chars = md_format_start
+                flush_buffer()
+                buffer = processed_chars if processed_chars in md_format_markers_to_keep else ''
+                break
+            elif line.startswith(md_format_end) and md_format_start in processed_line:
+                processed_chars = md_format_end
+                buffer += processed_chars if processed_chars in md_format_markers_to_keep else ''
+                flush_buffer(md_format_end)
+                buffer = ""
+                break
+        else:
+            processed_chars = line[0]
+            buffer += processed_chars
+        line = line[len(processed_chars):]  # Move to the first character after the processed characters
+        processed_line += processed_chars
+
+    if buffer:
+        paragraph.add_run(buffer)
+
+    return paragraph
 
 
 def list_number(doc, par, prev=None, level=None, num=True):
@@ -398,7 +386,7 @@ class DocumentConverter:
 
     def create_paragraph(self, parent, line, style=STYLE_NORMAL):
         p = parent.add_paragraph("", style=STYLE_MAATREGEL if self.in_maatregel else style)
-        return ParagraphConverter().format(p, line)
+        return format_paragraph(p, line)
 
     def process_header_row(self, document, line):
         cells = self.get_cells(line)
@@ -408,7 +396,7 @@ class DocumentConverter:
         self.cell_alignment = []
         hdr_cells = table.rows[0].cells
         for i in range(len(cells)):
-            ParagraphConverter().format(hdr_cells[i].paragraphs[0], cells[i])
+            format_paragraph(hdr_cells[i].paragraphs[0], cells[i])
         return table
 
     def process_table_row(self, document, line):
@@ -436,7 +424,7 @@ class DocumentConverter:
         row_cells = self.table.add_row().cells
         for i in range(len(cells)):
             p = row_cells[i].paragraphs[0]
-            ParagraphConverter().format(p, cells[i])
+            format_paragraph(p, cells[i])
             if i < len(self.cell_alignment):
                 p.alignment = self.cell_alignment[i]
 

@@ -336,7 +336,7 @@ class format_document:
 
     def process_table_line(self, line):
         if self.in_table:
-            self.process_table_row(line, self.document.tables[-1])
+            self.process_table_row(line)
         else:
             self.in_table = True
             self.process_header_row(line)
@@ -378,32 +378,29 @@ class format_document:
             format_paragraph(header_cell.paragraphs[0], cell)
         return table
 
-    @classmethod
-    def process_table_row(cls, line, table):
-        if len(table.rows) == 1 and '---' in line:
-            cls.process_table_row_alignment(line, table)
+    def process_table_row(self, line):
+        if len(self.document.tables[-1].rows) == 1 and '---' in line:
+            self.process_table_row_alignment(line)
         else:
-            cls.process_table_row_content(line, table)
+            self.process_table_row_content(line)
 
-    @classmethod
-    def process_table_row_alignment(cls, line, table):
-        cells = cls.get_cells(line)
+    def process_table_row_alignment(self, line):
         cell_alignment = []
-        for cell in cells:
+        for cell in self.get_cells(line):
             if re.match(r"^:.*:$", cell):
                 cell_alignment.append(WD_ALIGN_PARAGRAPH.CENTER)
             elif re.match(r".*:$", cell):
                 cell_alignment.append(WD_ALIGN_PARAGRAPH.RIGHT)
             else:
                 cell_alignment.append(WD_ALIGN_PARAGRAPH.LEFT)
-        for row in table.rows:
+        for row in self.document.tables[-1].rows:
             for index, cell in enumerate(row.cells):
                 cell.paragraphs[0].alignment = cell_alignment[index]
 
-    @classmethod
-    def process_table_row_content(cls, line, table):
+    def process_table_row_content(self, line):
+        table = self.document.tables[-1]
         row_cells = table.add_row().cells
-        for index, cell in enumerate(cls.get_cells(line)):
+        for index, cell in enumerate(self.get_cells(line)):
             p = row_cells[index].paragraphs[0]
             format_paragraph(p, cell)
             p.alignment = table.rows[0].cells[index].paragraphs[0].alignment

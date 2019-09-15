@@ -376,7 +376,6 @@ class format_document:
         header_cells = table.rows[0].cells
         for header_cell, cell in zip(header_cells, cells):
             format_paragraph(header_cell.paragraphs[0], cell)
-        return table
 
     def process_table_row(self, line):
         if len(self.document.tables[-1].rows) == 1 and '---' in line:

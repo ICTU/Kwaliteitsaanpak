@@ -282,48 +282,44 @@ class ICTUDocument:
         p._p = p._element = None
 
 
-class DocumentConverter:
-    def __init__(self):
+class format_document:
+    def __init__(self, input, output, reference, title):
         self.in_bijlagen = False
         self.in_list = False
         self.in_maatregel = False
         self.in_table = False
-        self.table = None
-        self.cell_alignment = []
-
-    def convert(self, input, output, reference, title):
         styles = f"reference {reference}" if reference else "default styles"
         print(f"Converting {input} to {output} using {styles}.")
-        document = ICTUDocument(title, reference)
+        self.document = ICTUDocument(title, reference)
         with open(input, mode='r', encoding='utf8') as source_file:
             lines = source_file.readlines()
         previous = None
         for line in lines:
             stripped_line = line.strip()
             if stripped_line:
-                previous = self.process_line(document, stripped_line, previous, indented=line.startswith(' '))
-        document.save(output)
+                previous = self.process_line(stripped_line, previous, indented=line.startswith(' '))
+        self.document.save(output)
 
-    def process_line(self, document, line, previous, indented):
+    def process_line(self, line, previous, indented):
         p = None
         line, leaving_maatregel = self.process_maatregel_line(line)
         if line.startswith("|"):
-            self.process_table_line(document, line)
+            self.process_table_line(line)
         else:
             self.close_table()
             if line.startswith('#'):  # heading
-                p = self.create_heading(document, line)
+                p = self.create_heading(line)
             elif re.match(r"^[*+-] .*", line):  # bullet list
                 bullet_char = line[0]
                 line = re.sub(r"^[*+-] ", "", line).strip()
-                p = self.create_bullet_list_item(document, line, previous, bullet_char)
+                p = self.create_bullet_list_item(line, previous, bullet_char)
             elif re.match(r"^[0-9a-zA-Z]+[.] .*", line):  # numbered list
                 level = 1 if line[0].isalpha() else (2 if indented else 0)
                 line = re.sub(r"^[0-9a-zA-Z]+[.] ", "", line).strip()
-                p = self.create_numbered_list_item(document, line, previous, level)
+                p = self.create_numbered_list_item(line, previous, level)
             else:  # regular text paragraph
                 self.in_list = False
-                p = self.create_paragraph(document, line)
+                p = self.create_paragraph(line)
         if leaving_maatregel:
             self.in_maatregel = False
         return p
@@ -338,84 +334,87 @@ class DocumentConverter:
             line = line.replace('}@', '')
         return line, leaving_maatregel
 
-    def process_table_line(self, document, line):
+    def process_table_line(self, line):
         if self.in_table:
-            self.process_table_row(document, line)
+            self.process_table_row(line, self.document.tables[-1])
         else:
-            self.table = self.process_header_row(document, line)
             self.in_table = True
+            self.process_header_row(line)
 
-    def create_heading(self, document, line):
+    def create_heading(self, line):
         heading_level = line.count('#')
         line = line.strip('#').strip()
         self.in_list = False
         if heading_level == 1 and line.upper() == 'BIJLAGEN':
             self.in_bijlagen = True
         if self.in_bijlagen:
-            return document.add_paragraph(line, style=self.bijlage_heading_style(heading_level))
+            return self.document.add_paragraph(line, style=self.bijlage_heading_style(heading_level))
         else:
-            return document.add_heading(line, level=heading_level)
+            return self.document.add_heading(line, level=heading_level)
 
-    def create_numbered_list_item(self, document, line, previous, level=0):
-        p = self.create_paragraph(document, line, style=STYLE_LIST_NUMBER)
-        list_number(document, p, previous if self.in_list else None, level, True)
+    def create_numbered_list_item(self, line, previous, level=0):
+        p = self.create_paragraph(line, style=STYLE_LIST_NUMBER)
+        list_number(self.document, p, previous if self.in_list else None, level, num=True)
         self.in_list = True
         return p
 
-    def create_bullet_list_item(self, document, line, previous, bullet_char):
+    def create_bullet_list_item(self, line, previous, bullet_char):
         level = {'+': 1, '-': 2}.get(bullet_char, 0)
-        p = self.create_paragraph(document, line, style=STYLE_LIST_BULLET)
-        list_number(document, p, previous if self.in_list else None, level, False)
+        p = self.create_paragraph(line, style=STYLE_LIST_BULLET)
+        list_number(self.document, p, previous if self.in_list else None, level, num=False)
         self.in_list = True
         return p
 
-    def create_paragraph(self, parent, line, style=STYLE_NORMAL):
-        p = parent.add_paragraph("", style=STYLE_MAATREGEL if self.in_maatregel else style)
+    def create_paragraph(self, line, style=STYLE_NORMAL):
+        p = self.document.add_paragraph("", style=STYLE_MAATREGEL if self.in_maatregel else style)
         return format_paragraph(p, line)
 
-    def process_header_row(self, document, line):
+    def process_header_row(self, line):
         cells = self.get_cells(line)
-        table = document.add_table(rows=1, cols=len(cells))
+        table = self.document.add_table(rows=1, cols=len(cells))
         table.style = STYLE_TABLE
-        table.allow_autofit = True
-        self.cell_alignment = []
         header_cells = table.rows[0].cells
         for header_cell, cell in zip(header_cells, cells):
             format_paragraph(header_cell.paragraphs[0], cell)
         return table
 
-    def process_table_row(self, document, line):
-        cells = self.get_cells(line)
-        if len(self.table.rows) == 1 and line.find('---') >= 0:
-            self.process_table_row_alignment(cells)
+    @classmethod
+    def process_table_row(cls, line, table):
+        if len(table.rows) == 1 and '---' in line:
+            cls.process_table_row_alignment(line, table)
         else:
-            self.process_table_row_content(cells)
+            cls.process_table_row_content(line, table)
 
-    def process_table_row_alignment(self, cells):
-        self.cell_alignment = []
+    @classmethod
+    def process_table_row_alignment(cls, line, table):
+        cells = cls.get_cells(line)
+        cell_alignment = []
         for cell in cells:
             if re.match(r"^:.*:$", cell):
-                self.cell_alignment.append(WD_ALIGN_PARAGRAPH.CENTER)
+                cell_alignment.append(WD_ALIGN_PARAGRAPH.CENTER)
             elif re.match(r".*:$", cell):
-                self.cell_alignment.append(WD_ALIGN_PARAGRAPH.RIGHT)
+                cell_alignment.append(WD_ALIGN_PARAGRAPH.RIGHT)
             else:
-                self.cell_alignment.append(WD_ALIGN_PARAGRAPH.LEFT)
-        for row in self.table.rows:
+                cell_alignment.append(WD_ALIGN_PARAGRAPH.LEFT)
+        for row in table.rows:
             for index, cell in enumerate(row.cells):
-                cell.paragraphs[0].alignment = self.cell_alignment[index]
+                cell.paragraphs[0].alignment = cell_alignment[index]
 
-    def process_table_row_content(self, cells):
-        row_cells = self.table.add_row().cells
-        for index, cell in enumerate(cells):
+    @classmethod
+    def process_table_row_content(cls, line, table):
+        row_cells = table.add_row().cells
+        for index, cell in enumerate(cls.get_cells(line)):
             p = row_cells[index].paragraphs[0]
             format_paragraph(p, cell)
-            if index < len(self.cell_alignment):
-                p.alignment = self.cell_alignment[index]
+            p.alignment = table.rows[0].cells[index].paragraphs[0].alignment
 
     def close_table(self):
         if self.in_table:
-            self.table.autofit = True
-            self.table = None
+            # Autofit is broken (https://github.com/python-openxml/python-docx/issues/209), use this work-around
+            # instead of self.document.tables[-1].autofit = True
+            for column in self.document.tables[-1].columns:
+                for cell in column.cells:
+                    cell._tc.get_or_add_tcPr().get_or_add_tcW().type = 'auto'
             self.in_table = False
 
     @staticmethod
@@ -432,6 +431,6 @@ if __name__ == "__main__":
     if 3 <= len(arguments) <= 4:
         input, output, title, *optional_reference = arguments
         reference = optional_reference[0] if optional_reference else None
-        DocumentConverter().convert(input, output, reference, title)
+        format_document(input, output, reference, title)
     else:
         print(f"USAGE: md-to-docx <input file> <output file> <document title> [<reference file>]")

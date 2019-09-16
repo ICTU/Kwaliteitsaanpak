@@ -1,0 +1,12 @@
+.dockerignore
+.DS_Store
+.git
+.idea
+.vscode
+LICENSE
+README.md
+build
+dist
+node_modules
+Dockerfile
+venv

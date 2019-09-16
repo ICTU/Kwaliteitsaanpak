@@ -71,6 +71,9 @@ build
 .venv
 venv
 
+# Mypy
+.mypy_cache
+
 # Temp Excel files
 ~$*.xlsx
 

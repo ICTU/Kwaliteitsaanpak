@@ -2,11 +2,12 @@ import sys
 import pathlib
 import re
 from docx import Document
-from docx.shared import Inches
-from docx.shared import Pt
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
+from docx.shared import Inches
+from docx.shared import Pt
+from docx.table import Table
 
 
 STYLE_NORMAL = 'Normal'
@@ -286,26 +287,22 @@ class format_document:
     def __init__(self, input, output, reference, title):
         self.in_list = False
         self.in_maatregel = False
-        self.in_table = False
         styles = f"reference {reference}" if reference else "default styles"
         print(f"Converting {input} to {output} using {styles}.")
         self.document = ICTUDocument(title, reference)
         with open(input, mode='r', encoding='utf8') as source_file:
-            lines = source_file.readlines()
+            non_empty_lines = [line for line in source_file.readlines() if line.strip()]
         previous = None
-        for line in lines:
-            stripped_line = line.strip()
-            if stripped_line:
-                previous = self.process_line(stripped_line, previous, indented=line.startswith(' '))
+        for line in non_empty_lines:
+            previous = self.process_line(line.strip(), previous, indented=line.startswith(' '))
         self.document.save(output)
 
     def process_line(self, line, previous, indented):
         p = None
         line, leaving_maatregel = self.process_maatregel_line(line)
         if line.startswith("|"):
-            self.process_table_line(line)
+            p = self.process_table_line(line, previous)
         else:
-            self.close_table()
             if line.startswith('#'):  # heading
                 p = self.create_heading(line)
             elif re.match(r"^[*+-] .*", line):  # bullet list
@@ -333,12 +330,8 @@ class format_document:
             line = line.replace('}@', '')
         return line, leaving_maatregel
 
-    def process_table_line(self, line):
-        if self.in_table:
-            self.process_table_row(line)
-        else:
-            self.in_table = True
-            self.process_header_row(line)
+    def process_table_line(self, line, previous):
+        return self.process_table_row(line, previous) if isinstance(previous, Table) else self.process_header_row(line)
 
     def create_heading(self, line):
         heading_level = line.count('#')
@@ -374,14 +367,16 @@ class format_document:
         header_cells = table.rows[0].cells
         for header_cell, cell in zip(header_cells, cells):
             format_paragraph(header_cell.paragraphs[0], cell)
+        return table
 
-    def process_table_row(self, line):
-        if len(self.document.tables[-1].rows) == 1 and '---' in line:
-            self.process_table_row_alignment(line)
+    def process_table_row(self, line, table):
+        if len(table.rows) == 1 and '---' in line:
+            self.process_table_row_alignment(line, table)
         else:
-            self.process_table_row_content(line)
+            self.process_table_row_content(line, table)
+        return table
 
-    def process_table_row_alignment(self, line):
+    def process_table_row_alignment(self, line, table):
         cell_alignment = []
         for cell in self.get_cells(line):
             if re.match(r"^:.*:$", cell):
@@ -390,26 +385,19 @@ class format_document:
                 cell_alignment.append(WD_ALIGN_PARAGRAPH.RIGHT)
             else:
                 cell_alignment.append(WD_ALIGN_PARAGRAPH.LEFT)
-        for row in self.document.tables[-1].rows:
+        for row in table.rows:
             for index, cell in enumerate(row.cells):
                 cell.paragraphs[0].alignment = cell_alignment[index]
 
-    def process_table_row_content(self, line):
-        table = self.document.tables[-1]
+    def process_table_row_content(self, line, table):
         row_cells = table.add_row().cells
         for index, cell in enumerate(self.get_cells(line)):
             p = row_cells[index].paragraphs[0]
             format_paragraph(p, cell)
             p.alignment = table.rows[0].cells[index].paragraphs[0].alignment
-
-    def close_table(self):
-        if self.in_table:
             # Autofit is broken (https://github.com/python-openxml/python-docx/issues/209), use this work-around
-            # instead of self.document.tables[-1].autofit = True
-            for column in self.document.tables[-1].columns:
-                for cell in column.cells:
-                    cell._tc.get_or_add_tcPr().get_or_add_tcW().type = 'auto'
-            self.in_table = False
+            # instead of table.autofit = True
+            row_cells[index]._tc.get_or_add_tcPr().get_or_add_tcW().type = 'auto'
 
     @staticmethod
     def get_cells(line):

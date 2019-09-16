@@ -284,7 +284,6 @@ class ICTUDocument:
 
 class format_document:
     def __init__(self, input, output, reference, title):
-        self.in_bijlagen = False
         self.in_list = False
         self.in_maatregel = False
         self.in_table = False
@@ -345,12 +344,11 @@ class format_document:
         heading_level = line.count('#')
         line = line.strip('#').strip()
         self.in_list = False
-        if heading_level == 1 and line.upper() == 'BIJLAGEN':
-            self.in_bijlagen = True
-        if self.in_bijlagen:
-            return self.document.add_paragraph(line, style=self.bijlage_heading_style(heading_level))
+        if "BIJLAGEN" in [p.text.upper() for p in self.document.paragraphs]:
+            h = self.document.add_paragraph("", style=self.bijlage_heading_style(heading_level))
         else:
-            return self.document.add_heading(line, level=heading_level)
+            h = self.document.add_heading("", level=heading_level)
+        return format_paragraph(h, line)
 
     def create_numbered_list_item(self, line, previous, level=0):
         p = self.create_paragraph(line, style=STYLE_LIST_NUMBER)

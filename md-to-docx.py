@@ -1,14 +1,19 @@
 import sys
 import pathlib
 import re
+from typing import Optional, Sequence, Tuple, Union
+
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
+from docx.parts import Paragraph
 from docx.shared import Inches
 from docx.shared import Pt
 from docx.table import Table
 
+
+Element = Union[Paragraph, Table]
 
 STYLE_NORMAL = 'Normal'
 STYLE_NORMAL_COMPACT = 'Compact'
@@ -142,7 +147,7 @@ def list_number(doc, par, prev=None, level=None, num=True):
     par._p.get_or_add_pPr().get_or_add_numPr().get_or_add_ilvl().val = level
 
 
-def format_paragraph(paragraph, line):
+def format_paragraph(paragraph: Paragraph, line: str) -> Paragraph:
     processed_line, buffer = "", ""
     md_format_markers = (
         (MD_BOLD, MD_BOLD), (MD_BOLD_ALTERNATIVE, MD_BOLD_ALTERNATIVE),
@@ -150,7 +155,7 @@ def format_paragraph(paragraph, line):
         (MD_STRIKETHROUGH, MD_STRIKETHROUGH), (MD_INSTRUCTION_START, MD_INSTRUCTION_END))
     md_format_markers_to_keep = (MD_INSTRUCTION_START, MD_INSTRUCTION_END)
 
-    def flush_buffer(markup=None):
+    def flush_buffer(markup: str = None) -> None:
         p = paragraph.add_run(text=buffer, style=STYLE_INSTRUCTION if markup == MD_INSTRUCTION_END else None)
         p.bold = markup in (MD_BOLD, MD_BOLD_ALTERNATIVE)
         p.italic = markup in (MD_ITALIC, MD_ITALIC_ALTERNATIVE)
@@ -184,7 +189,7 @@ def format_paragraph(paragraph, line):
 class ICTUDocument:
     """Wrap a docx Document and add ICTU specific styles and content."""
 
-    def __init__(self, title, reference=None):
+    def __init__(self, title: str, reference: str = None) -> None:
         self.document = Document(reference)
         if reference:
             self.clear_document()
@@ -194,16 +199,16 @@ class ICTUDocument:
         self.create_frontpage(title)
         self.create_table_of_contents()
 
-    def __getattr__(self, attr):
+    def __getattr__(self, attr: str):
         return getattr(self.document, attr)  # Forward all unknown attribute lookups to the document
 
-    def clear_document(self):
+    def clear_document(self) -> None:
         for paragraph in self.document.paragraphs:
             self.delete_element(paragraph)
         for table in self.document.tables:
             self.delete_element(table)
 
-    def set_styles(self):
+    def set_styles(self) -> None:
         self.define_char_style(STYLE_DEFAULT_PARAGRAPH_TEXT, DEFAULT_FONT, Pt(12))
         self.define_style(STYLE_NORMAL, DEFAULT_FONT, Pt(12))
         self.define_style(STYLE_HEADING1, DEFAULT_FONT, Pt(32), top_margin=Pt(30), keep_with_next=True, page_break_before=True)
@@ -220,12 +225,12 @@ class ICTUDocument:
         style.paragraph_format.keep_with_next = keep_with_next
         style.paragraph_format.page_break_before = page_break_before
 
-    def define_char_style(self, name, font_name, font_size):
+    def define_char_style(self, name, font_name, font_size) -> None:
         style = self.document.styles[name]
         style.font.name = font_name
         style.font.size = font_size
 
-    def create_header(self, title):
+    def create_header(self, title: str) -> None:
         self.document.sections[0].different_first_page_header_footer = True
         header_paragraph = self.document.sections[0].header.paragraphs[0]
         header_paragraph.clear()
@@ -233,7 +238,7 @@ class ICTUDocument:
         p.style = STYLE_INSTRUCTION
         header_paragraph.add_run(f'\t\t{title}')
 
-    def create_frontpage(self, title):
+    def create_frontpage(self, title: str) -> None:
         self.document.add_picture(IMAGE_ICTU_LOGO)
         self.document.add_paragraph(f'{title}', style=STYLE_TITLE)
         p = self.document.add_paragraph('', style=STYLE_NORMAL_COMPACT)
@@ -253,7 +258,7 @@ class ICTUDocument:
         p.top_margin = Pt(36)
         self.document.add_page_break()
 
-    def create_table_of_contents(self):
+    def create_table_of_contents(self) -> None:
         self.document.add_paragraph("Inhoudsopgave", style=STYLE_HEADING_TOC)
         paragraph = self.document.add_paragraph()
         run = paragraph.add_run()
@@ -277,16 +282,16 @@ class ICTUDocument:
         self.document.add_page_break()
 
     @staticmethod
-    def delete_element(paragraph):
+    def delete_element(paragraph: Element) -> None:
         p = paragraph._element
         p.getparent().remove(p)
         p._p = p._element = None
 
 
 class format_document:
-    def __init__(self, input, output, reference, title):
+    def __init__(self, input: str, output: str, reference: Optional[str], title: str) -> None:
         self.in_list = False
-        self.in_maatregel = False
+        self.in_maatregel: bool = False
         styles = f"reference {reference}" if reference else "default styles"
         print(f"Converting {input} to {output} using {styles}.")
         self.document = ICTUDocument(title, reference)
@@ -297,8 +302,7 @@ class format_document:
             previous = self.process_line(line.strip(), previous, indented=line.startswith(' '))
         self.document.save(output)
 
-    def process_line(self, line, previous, indented):
-        p = None
+    def process_line(self, line: str, previous: Optional[Element], indented: bool) -> Element:
         line, leaving_maatregel = self.process_maatregel_line(line)
         if line.startswith("|"):
             p = self.process_table_line(line, previous)
@@ -320,7 +324,7 @@ class format_document:
             self.in_maatregel = False
         return p
 
-    def process_maatregel_line(self, line):
+    def process_maatregel_line(self, line: str) -> Tuple[str, bool]:
         leaving_maatregel = False
         if line.startswith("@{"):
             self.in_maatregel = True
@@ -330,10 +334,10 @@ class format_document:
             line = line.replace('}@', '')
         return line, leaving_maatregel
 
-    def process_table_line(self, line, previous):
+    def process_table_line(self, line: str, previous: Optional[Element]) -> Element:
         return self.process_table_row(line, previous) if isinstance(previous, Table) else self.process_header_row(line)
 
-    def create_heading(self, line):
+    def create_heading(self, line: str) -> Element:
         heading_level = line.count('#')
         line = line.strip('#').strip()
         self.in_list = False
@@ -343,24 +347,24 @@ class format_document:
             h = self.document.add_heading("", level=heading_level)
         return format_paragraph(h, line)
 
-    def create_numbered_list_item(self, line, previous, level=0):
+    def create_numbered_list_item(self, line: str, previous: Optional[Element], level=0) -> Element:
         p = self.create_paragraph(line, style=STYLE_LIST_NUMBER)
         list_number(self.document, p, previous if self.in_list else None, level, num=True)
         self.in_list = True
         return p
 
-    def create_bullet_list_item(self, line, previous, bullet_char):
+    def create_bullet_list_item(self, line: str, previous: Optional[Element], bullet_char: str) -> Element:
         level = {'+': 1, '-': 2}.get(bullet_char, 0)
         p = self.create_paragraph(line, style=STYLE_LIST_BULLET)
         list_number(self.document, p, previous if self.in_list else None, level, num=False)
         self.in_list = True
         return p
 
-    def create_paragraph(self, line, style=STYLE_NORMAL):
+    def create_paragraph(self, line: str, style: str = STYLE_NORMAL) -> Element:
         p = self.document.add_paragraph("", style=STYLE_MAATREGEL if self.in_maatregel else style)
         return format_paragraph(p, line)
 
-    def process_header_row(self, line):
+    def process_header_row(self, line: str) -> Element:
         cells = self.get_cells(line)
         table = self.document.add_table(rows=1, cols=len(cells))
         table.style = STYLE_TABLE
@@ -369,19 +373,19 @@ class format_document:
             format_paragraph(header_cell.paragraphs[0], cell)
         return table
 
-    def process_table_row(self, line, table):
+    def process_table_row(self, line: str, table: Element) -> Element:
         if len(table.rows) == 1 and '---' in line:
             self.process_table_row_alignment(line, table)
         else:
             self.process_table_row_content(line, table)
         return table
 
-    def process_table_row_alignment(self, line, table):
+    def process_table_row_alignment(self, line: str, table: Element) -> None:
         cell_alignment = []
-        for cell in self.get_cells(line):
-            if re.match(r"^:.*:$", cell):
+        for md_cell in self.get_cells(line):
+            if re.match(r"^:.*:$", md_cell):
                 cell_alignment.append(WD_ALIGN_PARAGRAPH.CENTER)
-            elif re.match(r".*:$", cell):
+            elif re.match(r".*:$", md_cell):
                 cell_alignment.append(WD_ALIGN_PARAGRAPH.RIGHT)
             else:
                 cell_alignment.append(WD_ALIGN_PARAGRAPH.LEFT)
@@ -389,7 +393,7 @@ class format_document:
             for index, cell in enumerate(row.cells):
                 cell.paragraphs[0].alignment = cell_alignment[index]
 
-    def process_table_row_content(self, line, table):
+    def process_table_row_content(self, line: str, table: Element) -> None:
         row_cells = table.add_row().cells
         for index, cell in enumerate(self.get_cells(line)):
             p = row_cells[index].paragraphs[0]
@@ -400,11 +404,11 @@ class format_document:
             row_cells[index]._tc.get_or_add_tcPr().get_or_add_tcW().type = 'auto'
 
     @staticmethod
-    def get_cells(line):
+    def get_cells(line: str) -> Sequence[str]:
         return [cell.strip() for cell in line.strip('| ').split('|')]
 
     @staticmethod
-    def bijlage_heading_style(level):
+    def bijlage_heading_style(level: int) -> str:
         return {1: STYLE_APPENDIX_HEADING1, 2: STYLE_APPENDIX_HEADING2}.get(level, STYLE_APPENDIX_HEADING3)
 
 

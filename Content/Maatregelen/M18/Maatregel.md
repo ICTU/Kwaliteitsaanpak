@@ -1,4 +1,4 @@
-## M18: De projectorganisatie biedt ondersteuning voor verplichtgestelde tools
+## M18: De projectorganisatie biedt ondersteuning voor verplicht gestelde tools
 
 #include "Content/Maatregelen/M18/Definitie.md"
 

@@ -37,12 +37,28 @@ def process_m16_m17(worksheet, row, contents, maatregel_format, status_format, t
     return process_submaatregel(worksheet, row, tools, maatregel_format, status_format, toelichting_format)
 
 
+def read_md_file(filepath):
+    """ Read the markdown file and process #include's, if any. """
+    contents = []
+    reference_without_link = re.compile(r"\{\{M\d+\-no\-link\}\}")
+    references = re.compile(r"@\{|\}@|\{\{|\}\}")
+    with filepath.open(encoding="utf-8") as markdown:
+        for line in markdown.readlines():
+            if line.startswith("#include "):
+                included_filepath = pathlib.Path(line.strip('# include "').strip().strip('"'))
+                contents.extend(read_md_file(included_filepath))
+            else:
+                line = reference_without_link.sub("", line)
+                line = references.sub("", line)
+                if line:
+                    contents.append(line)
+    return contents
+
 def process_maatregel(workbook, worksheet, maatregel_folder, row):
     """ Process the maatregel in the given folder. """
     maatregel_md = maatregel_folder / "Maatregel.md"
-    with maatregel_md.open(encoding="utf-8") as maatregel:
-        contents = maatregel.readlines()
-    maatregel_id = contents[0].strip().split("(")[1].strip(")")
+    contents = read_md_file(maatregel_md)
+    maatregel_id = contents[0].strip().split(":")[0][len("## "):]
     maatregel_format_options = dict(bg_color="#BCD2EE", text_wrap=True)
     maatregel_format = workbook.add_format(maatregel_format_options)
     worksheet.write(row, 0, maatregel_id, maatregel_format)
@@ -93,14 +109,14 @@ class DocumentStructure:
     def maatregelen_sections(self):
         """ Return a list of sections in the document. """
         for line in self.lines:
-            if line.startswith("##") and not "Bijlagen" in line:
-                yield line.strip().strip("## ")
+            if line.startswith("# ") and not "Bijlagen" in line:
+                yield line.strip().strip("# ")
 
     def maatregelen_folders(self, section):
         """ Return a list of maatregelen folders in the right order. """
         in_section = False
         for line in self.lines:
-            if line.startswith("## "):
+            if line.startswith("# "):
                 in_section = section in line
             if in_section and '/Maatregel.md"' in line:
                 yield pathlib.Path(line.strip().strip('# include "').strip('/Maatregel.md"'))
@@ -152,7 +168,7 @@ def create_action_list(workbook):
     header_format = workbook.add_format(dict(text_wrap=True, font_size=14, bold=True, bg_color="#B3D6C9"))
     worksheet.merge_range(
         "A1:D1",
-        "Onderstaande actielijst kan gebruikt worden om acties n.a.v. de self-assessment bij te houden.", 
+        "Onderstaande actielijst kan gebruikt worden om acties n.a.v. de self-assessment bij te houden.",
         header_format)
     worksheet.set_row(0, 30)
     worksheet.set_row(1, 30)

@@ -7,6 +7,8 @@ ICTU hanteert de volgende documenten, templates en documentstandaarden voor soft
 **Functionele eisen**
 De beschrijving van functionele eisen bestaat uit een geprioriteerde backlog met epics en/of user stories. De beschrijving bevat in ieder geval eisen voor ondersteuning van beheerfuncties, die door de beoogd beheerder gesteld worden, en voor logging, inclusief de globale inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen.
 
+Bronnen als een programma van eisen en projectstartarchitectuur zijn het startpunt voor de functionele eisen. Tijdens het project worden use cases in samenwerking met de product owner vertaald naar user stories.
+
 **Niet-functionele eisen**
 Niet-functionele eisen (requirements) specificeren criteria om het functioneren van het systeem te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Voor de beschrijving en onderverdeling van niet-functionele eisen gebruikt ICTU:
 
@@ -70,7 +72,7 @@ De deploymentdocumentatie bevat informatie over de eisen die een applicatie stel
 Het kwaliteitsplan beschrijft welke maatregelen de projectorganisatie treft om de niet-functionele eisen te realiseren. ICTU gebruikt een generiek kwaliteitsplan als basis voor projectspecifieke kwaliteitsplannen.
 
 **Vrijgaveadvies**
-Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen. Zie ook {{M26}} en {{M16}}. Indien er beveiligingsissues zijn, zijn deze voorzien van een beschreven voorziene impact.
+Voor elke major release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook {{M26}} en {{M16}}. Indien er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.
 
 **Overzicht**
 De onderstaande tabel bevat de hierboven genoemde documentatie en geeft aan in welke fase het product van belang zijn en worden opgeleverd, ook als ze opgesteld zijn door externe auteurs.

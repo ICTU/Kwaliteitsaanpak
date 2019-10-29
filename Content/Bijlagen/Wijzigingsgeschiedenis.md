@@ -1,7 +1,9 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.0, 12 september 2019
+### Versie 2.0, 29 oktober 2019
 
+- Maatregelen, waar mogelijk, compacter geformuleerd.
+- M01: Toelichting op documenten, maatregel beknopter.
 - M02, M08 en M16: Naast HQ ook Quality-time vermeld.
 - M08: Toegevoegd dat projecten regelmatig en voldoende tijd besteden aan het voorkomen en oplossen van technische schuld.
 - M16: Versiebeheer toegevoegd, met als concrete tools GitLab en TFS.

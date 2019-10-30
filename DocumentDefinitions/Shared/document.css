@@ -14,7 +14,7 @@ h1::before {
 h1 {
     line-height: 150%;
     color: #2C64AD;
-    font-size: 42pt;
+    font-size: 20pt;
     font-weight: bold;
     page-break-before: always;
     counter-reset: subsection;
@@ -37,7 +37,7 @@ h2::before {
 h2 {
     margin-top: 20px;
     color: #DB1778;
-    font-size: 18pt;
+    font-size: 16pt;
     font-weight: bold;
 }
 

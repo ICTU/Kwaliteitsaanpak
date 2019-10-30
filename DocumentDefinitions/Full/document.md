@@ -67,5 +67,6 @@
 
 #include "Content/Bijlagen/Manifest-Maatregelen.md"
 #include "Content/Bijlagen/Terminologie.md"
+#include "Content/Bijlagen/Overzicht-Maatregelen.md"
 #include "Content/Bijlagen/Risico.md"
 #include "Content/Bijlagen/Wijzigingsgeschiedenis.md"

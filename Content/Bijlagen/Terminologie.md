@@ -25,4 +25,4 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | PvE | programma van eisen |
 | use case | Een afgebakende eenheid van interactie tussen een actor en het systeem. |
 | VIR | Voorschrift Informatiebeveiliging Rijksdienst |
-| VIR-BI | Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie
+| VIR-BI | Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie |

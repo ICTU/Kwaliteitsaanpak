@@ -1,4 +1,4 @@
-## M17: De projectorganisatie zorgt dat een aantal vastgestelde tools snel beschikbaar is voor een project
+## M17: ICTU zorgt dat een aantal vastgestelde tools snel beschikbaar is voor een project
 
 #include "Content/Maatregelen/M17/Definitie.md"
 
@@ -14,4 +14,4 @@ Zie ook {{M16}}.
 
 ### Rationale
 
-Snelle beschikbaarheid van tools betekent dat projecten snel kunnen beginnen. De niet-verplichte tools geven daarnaast de voorkeur van de projectorganisatie weer.
+Snelle beschikbaarheid van tools betekent dat projecten snel kunnen beginnen. De niet-verplichte tools geven daarnaast de voorkeur van ICTU weer.

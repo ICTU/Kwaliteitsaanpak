@@ -143,8 +143,8 @@ def create_checklist(workbook):
     worksheet.write_comment(
         header_row, 2,
         "Bij maatregelen die primair door een project moeten worden toegepast geeft Status aan in "
-        "hoevere het project dat doet. Bij maatregelen die primair door de projectorganisatie "
-        "(bij ICTU: ISR) moeten worden toegepast geeft de status aan in hoeverre de projectorganisatie dat "
+        "hoevere het project dat doet. Bij maatregelen die primair door ICTU "
+        "moeten worden toegepast geeft de status aan in hoeverre ICTU dat "
         "doet, gezien vanuit het perspectief van het project.",
         dict(x_scale=3, y_scale=3))
 

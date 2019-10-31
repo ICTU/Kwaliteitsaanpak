@@ -8,7 +8,7 @@
 - M08: Toegevoegd dat projecten regelmatig en voldoende tijd besteden aan het voorkomen en oplossen van technische schuld.
 - M16: Versiebeheer toegevoegd, met als concrete tools GitLab en TFS.
 - M29: Nieuwe maatregel voor het verantwoord starten van projecten.
-- Termen aangepast: 'projectverantwoordelijke' is vervangen door 'projectleider', 'projectenorganisatie' door 'projectorganisatie' en 'realiserend team' door 'projectteam'.
+- Termen aangepast: 'projectverantwoordelijke' is vervangen door 'projectleider', 'projectenorganisatie' en 'projectorganisatie' door 'ICTU' en 'realiserend team' door 'projectteam'.
 - Actielijst toegevoegd aan self-assessment spreadsheet.
 
 ### Versie 1.3.1, 1 mei 2019

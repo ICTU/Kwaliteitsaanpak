@@ -1,6 +1,6 @@
 ![ICTU](../../Content/Images/ICTU.png "ictu-logo")
 
-Kwaliteitsaanpak ICTU Software Realisatie
+{{TITLE}}
 
 #include "Content/Versie.md"
 

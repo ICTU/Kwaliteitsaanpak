@@ -1,4 +1,4 @@
-## M24: De projectorganisatie implementeert wijzigingen van de Kwaliteitsaanpak en kwaliteitsnormen op gestructureerde wijze
+## M24: ICTU implementeert wijzigingen van de Kwaliteitsaanpak en kwaliteitsnormen op gestructureerde wijze
 
 #include "Content/Maatregelen/M24/Definitie.md"
 

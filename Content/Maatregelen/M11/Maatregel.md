@@ -17,8 +17,8 @@ Iedereen die betrokken is bij softwarerealisatieprojecten kan een wijzigingsvoor
 
 ### Rationale
 
-Expliciet beheer en onderhoud van de kwaliteitsaanpak is nodig om lessen geleerd in projecten, nieuwe inzichten uit bijvoorbeeld wetenschappelijke literatuur en nieuwe technische mogelijkheden voor meting en analyse te verwerken in de kwaliteitsaanpak. De kwaliteitsaanpak wordt door de projectorganisatie - en niet door een project - onderhouden, zodat deze bij meerdere projecten kan worden toegepast.
+Expliciet beheer en onderhoud van de kwaliteitsaanpak is nodig om lessen geleerd in projecten, nieuwe inzichten uit bijvoorbeeld wetenschappelijke literatuur en nieuwe technische mogelijkheden voor meting en analyse te verwerken in de Kwaliteitsaanpak. De Kwaliteitsaanpak wordt door de projectorganisatie, ICTU, - en niet door een project - onderhouden, zodat deze bij meerdere projecten kan worden toegepast.
 
 Wijzigingsvoorstellen moeten een sponsor hebben zodat het duidelijk is dat iemand baat heeft bij en zich hard maakt voor het realiseren van de wijziging.
 
-Wijzigingsvoorstellen bevatten een advies ter besluitvorming aan de projectorganisatie. NB: het advies kan ook zijn de wijziging niet door te voeren.
+Wijzigingsvoorstellen bevatten een advies ter besluitvorming aan ICTU. NB: het advies kan ook zijn de wijziging niet door te voeren.

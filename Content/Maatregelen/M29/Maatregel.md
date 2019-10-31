@@ -1,4 +1,4 @@
-## M29: De projectorganisatie zorgt dat een project verantwoord kan starten
+## M29: ICTU zorgt dat een project verantwoord kan starten
 
 #include "Content/Maatregelen/M29/Definitie.md"
 

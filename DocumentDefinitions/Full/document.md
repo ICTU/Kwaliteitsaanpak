@@ -35,7 +35,7 @@
 
 #include "Content/Maatregelen/M28/Maatregel.md"
 
-# Projectorganisatie
+# Projectorganisatie (ICTU)
 
 #include "Content/Maatregelen/M11/Maatregel.md"
 

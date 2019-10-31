@@ -1,8 +1,8 @@
-## M12: De projectorganisatie publiceert nieuwe versies van de Kwaliteitsaanpak en normen periodiek en op een vaste locatie
+## M12: ICTU publiceert nieuwe versies van de Kwaliteitsaanpak en normen periodiek en op een vaste locatie
 
 #include "Content/Maatregelen/M12/Definitie.md"
 
-De Kwaliteitsaanpak is te vinden op het ICTU Portaal (Sharepoint). Publicatie van een nieuwe versie wordt aangekondigd via een e-mail naar belanghebbenden en, indien relevant, 'de ICTU Software Realisatie-zeepkist'.
+De Kwaliteitsaanpak is te vinden op het ICTU Portaal (Sharepoint). Publicatie van een nieuwe versie wordt aangekondigd via een e-mail naar belanghebbenden en de 'Zeepkist', een terugkerende informatiebijeenkomst van afdeling ISR.
 
 De kwaliteitsnormen zijn op dit moment te vinden in elke kwaliteitsrapportage, in het 'helpmenu'.
 

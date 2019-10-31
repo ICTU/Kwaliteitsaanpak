@@ -146,6 +146,9 @@ function generate-template
     generate $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
+docker build --tag dotnet-helloworld DotNetHelloWorld
+docker run --volume `pwd`/DotNetHelloWorld/output:/output dotnet-helloworld 
+
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
@@ -158,3 +161,4 @@ generate-template HLD Template-High-Level-Design "High-Level Design"
 generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 
 python3 create-checklist.py
+

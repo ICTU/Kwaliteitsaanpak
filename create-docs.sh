@@ -147,9 +147,7 @@ function generate-template
     generate $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
-#docker build dotnet-helloword -t helloworlddotnet --no-cache
-
-#docker run -v `pwd`/dotnet-helloword/output:/output helloworlddotnet
+docker-compose run dotnet
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS

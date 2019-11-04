@@ -1,6 +1,6 @@
 FROM python:3.6-jessie
 
-RUN apt-get update && apt-get install -y libfreetype6 libfontconfig xfonts-75dpi xfonts-base 
+RUN apt-get update && apt-get install -y docker libfreetype6 libfontconfig xfonts-75dpi xfonts-base 
 
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs
 

@@ -97,18 +97,19 @@ function generate
 
     # PDF generation
     # Cover
-    create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /ka/DocumentDefinitions/Shared/cover.css 
+    create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /work/DocumentDefinitions/Shared/cover.css 
     # Body
-    create-html "$EXPANDED" "$HTML_BUILD" /ka/DocumentDefinitions/Shared/document.css
+    create-html "$EXPANDED" "$HTML_BUILD" /work/DocumentDefinitions/Shared/document.css
     # Header
     map-refsd DocumentDefinitions/Shared/header.html "$HEADER_HTML_BUILD" $DICTIONARY
     # Create pdf
-    wkhtmltopdf --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
-        --header-html "$HEADER_HTML_BUILD" --header-spacing 10 \
+    docker-compose run wkhtmltopdf -c "wkhtmltopdf \
+        --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
+        --header-html $HEADER_HTML_BUILD --header-spacing 10 \
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
-        cover "$COVER_HTML_BUILD" \
+        cover $COVER_HTML_BUILD \
         toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-        "$HTML_BUILD" "$PDF_OUTPUT"
+        $HTML_BUILD $PDF_OUTPUT"
 
     # DOCX generation
     create-word $EXPANDED $DOCX_OUTPUT $8 "$TITLE"
@@ -146,8 +147,9 @@ function generate-template
     generate $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
-docker build dotnet-helloword -t helloworlddotnet --no-cache
-docker run -v `pwd`/dotnet-helloword/output:/output helloworlddotnet
+#docker build dotnet-helloword -t helloworlddotnet --no-cache
+
+#docker run -v `pwd`/dotnet-helloword/output:/output helloworlddotnet
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS

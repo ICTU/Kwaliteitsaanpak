@@ -12,7 +12,7 @@
         <title>Inhoudsopgave</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <style>
-          @import url("/ka/DocumentDefinitions/Shared/cover.css");
+          @import url("/work/DocumentDefinitions/Shared/cover.css");
           div {
             border-bottom: 1px solid #AFAFAF;
           }

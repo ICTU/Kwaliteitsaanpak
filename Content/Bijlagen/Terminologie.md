@@ -19,6 +19,8 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | Minimum Viable Product | De eerste versie van een product of dienst, die zo vroeg mogelijk wordt uitgerold naar de opdrachtgever. Het bevat net voldoende functionaliteit om het gestelde doel te behalen, en niet meer dan dat. |
 | MVP | Minimum Viable Product |
 | NFE | niet-functionele eis(en) |
+| NORA | Nederlandse OverheidsReferentieArchitectuur |
+| NPR | Nederlandse PraktijkRichtlijn |
 | OTAP | Ontwikkel, Test, Acceptatie, Productie; gebruikt om verschillende soorten omgevingen aan te duiden. |
 | PID | projectinitiatiedocument |
 | PSA | projectstartarchitectuur |

@@ -18,18 +18,18 @@ Voorafgaand aan de start van een project organiseert ICTU een "Doordacht-van-Sta
 
 Projectvoorstellen van ICTU voor projecten die door ISR worden ondersteund, hebben ten minste de onderstaande stappen doorlopen. Input voor een projectvoorstel bestaat niet alleen uit schriftelijke communicatie, maar ook uit gesprekken met opdrachtgever en andere belanghebbenden.
 
-1. De verwachtingen van de opdrachtgever met betrekking tot omvang, doorlooptijd en kosten zijn geïdentificeerd voordat het projectvoorstel wordt geschreven. 
+1. De verwachtingen van de opdrachtgever met betrekking tot omvang, doorlooptijd en kosten zijn geïdentificeerd voordat het projectvoorstel wordt geschreven.
 
-2. De schattingen voor doorlooptijd en teambezetting zijn gebaseerd op een expertschatting en optioneel een functiepuntentelling. 
+2. De schattingen voor doorlooptijd en teambezetting zijn gebaseerd op een expertschatting en optioneel een functiepuntentelling.
 
-3. Zowel de afdeling Relatiemanagement als de afdeling ISR reviewen het projectvoorstel. ISR gebruikt hiervoor de onderstaande checklist. 
+3. Zowel de afdeling Relatiemanagement als de afdeling ISR reviewen het projectvoorstel. ISR gebruikt hiervoor de onderstaande checklist.
 
 4. De relatiemanager en de beoogd projectleider en/of software delivery manager nemen het projectvoorstel mondeling door met de opdrachtgever.
 
 Een projectvoorstel bevat ten minste de volgende onderdelen:
 
 * een beknopte en heldere omschrijving van het doel van het project: welk probleem van de opdrachtgever lost het project op;
-* een beschrijving van het beoogde resultaat van het project; 
+* een beschrijving van het beoogde resultaat van het project;
 * een beschrijving van de deliverables van het project;
 * een beschrijving van de aanpak van het project;
 * een beschrijving van de planning van het project, inclusief doorlooptijd, aantal sprints, lengte van sprints, eventuele voorbereidingstijd, sprint 0, overdrachtsfase, en nazorg;
@@ -47,7 +47,7 @@ Een projectvoorstel bevat ten minste de volgende onderdelen:
 * een versienummer, datum, auteur, status;
 * een algemene beschrijving van ICTU.
 
-In het geval van een voorstel voor een voorfase, zijn de volgende aanvullende onderdelen opgenomen: 
+In het geval van een voorstel voor een voorfase, zijn de volgende aanvullende onderdelen opgenomen:
 
 * hoe, door wie, en wanneer wordt besloten over het vervolg op de voorfase,
 * of er mensen beschikbaar worden gehouden, en, zo ja, hoe lang, tussen voorfase en eventuele realisatiefase.

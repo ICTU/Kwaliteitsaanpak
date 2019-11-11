@@ -1,8 +1,22 @@
 version: '3'
 services:
-  ka-full:
+  ka:
     build: .
+    working_dir: ${PWD}
     volumes:
-      - .:/ka
+      - ${PWD}:${PWD}
+      - /var/run/docker.sock:/var/run/docker.sock
     entrypoint: bash
-    command: ./create-docs.sh
+    command: ${PWD}/create-docs.sh
+  wkhtmltopdf:
+    build: 
+      context: .
+      dockerfile: Dockerfile.wkhtmltopdf
+    working_dir: /work
+    volumes:
+      - ${PWD}:/work
+    entrypoint: bash
+  dotnet:
+    build: dotnet-helloworld
+    volumes:
+      - ${PWD}/dotnet-helloworld/output:/output 

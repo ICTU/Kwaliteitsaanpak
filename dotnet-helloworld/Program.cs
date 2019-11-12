@@ -9,6 +9,8 @@ namespace HelloWorldDotNet
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(">>> Starting dotnet app");
+
             // Open a WordprocessingDocument for editing using the filepath.
             using (WordprocessingDocument wordDocument = WordprocessingDocument.Create("/output/Hello world.docx", WordprocessingDocumentType.Document))
             {
@@ -22,6 +24,8 @@ namespace HelloWorldDotNet
                 Run run = para.AppendChild(new Run());
                 run.AppendChild(new Text($"Hello world @ {DateTime.Now.ToLongTimeString()}"));
             }
+
+            Console.WriteLine(">>> Finishing dotnet app");
         }
     }
 }

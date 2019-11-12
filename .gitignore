@@ -79,3 +79,7 @@ venv
 
 # Final deliverables
 dist
+*.dtbcache
+netcoreapp3.0
+v15
+obj

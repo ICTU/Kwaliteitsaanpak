@@ -14,7 +14,7 @@ Niet-functionele eisen (requirements) specificeren criteria om het functioneren 
 
 * ISO/IEC-25010,
 * Wbni (Wet beveiliging netwerk- en informatiesystemen),
-* BIR (Baseline Informatiebeveiliging Rijksdienst),
+* BIO (Baseline Informatiebeveiliging Overheid),
 * methode Grip op SSD (Secure Software Development) van het CIP (Centrum Informatiebeveiliging en Privacybescherming)
 * hoofdstuk 9 van de Europese Standaard EN 301 549 - dit  is gelijk aan de Web Content Accessibility Guidelines versie 2.1, niveau A en AA.
 

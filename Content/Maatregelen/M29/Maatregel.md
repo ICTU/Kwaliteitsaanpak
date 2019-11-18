@@ -6,7 +6,7 @@ Voordat ICTU een project verantwoord kan starten en het door de afdeling ISR ond
 
 1. Het project ontwikkelt en/of onderhoudt maatwerksoftware volgens deze Kwaliteitsaanpak.
 2. De opdrachtgever heeft kennisgenomen van en commiteert zich aan de Kwaliteitsaanpak.
-3. Er is projectmanagement en -governance ingericht, zowel aan opdrachtgeverszijde als aan ICTU-zijde.
+3. Er is adequaat projectmanagement en -governance ingericht, zowel aan opdrachtgeverszijde als aan ICTU-zijde.
 4. De omvang, de snelheid van opschaling, en de behoefte aan ondersteuning van het project is zodanig dat dit samengaat met ongestoorde dienstverlening aan de lopende projecten.
 5. Er is een ICTU-projectleider verantwoordelijk voor projectuitvoering, projectresultaat en de geleverde kwaliteit.
 6. De projectleider en andere projectmedewerkers met projectmanagementverantwoordelijkheid hebben kennis van en ervaring met de Kwaliteitsaanpak en het ecosysteem.

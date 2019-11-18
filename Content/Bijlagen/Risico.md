@@ -2,15 +2,15 @@
 
 Softwareontwikkeling brengt risico's met zich mee. De {{TITLE}} beoogt een deel van die risico's te mitigeren. Als raamwerk en startpunt voor het classificeren van risico's maakt de kwaliteitsaanpak gebruik van *Taxonomy-Based Risk Identification* van het Software Engineering Institute (CMU/SEI-93-TR-6), een taxonomie van risico's.
 
-Deze bijlage geeft eerst een overzicht van de taxonomie van risico's en vervolgens een lijst van veelvoorkomende risico's. Voor elk van die risico's is aangegeven door welke maatregel(en) uit de kwaliteitsaanpak ze worden verminderd en geclassificeerd bij welke onderdelen van de risicotaxonomie ze horen. Hoe en waarom de maatregelen de risico's precies verminderen moet nog worden uitgewerkt.
+Deze bijlage geeft eerst een overzicht van de taxonomie van risico's en vervolgens een lijst van veelvoorkomende risico's. Voor elk van die risico's is aangegeven door welke maatregel(en) uit de kwaliteitsaanpak ze worden verminderd en geclassificeerd bij welke onderdelen van de risicotaxonomie ze horen.
 
 ### Gebruik van de risicotaxonomie
 
-De taxonomie benoemt zelf geen risico's, maar is een middel om risico's te ordenen. Naast het kunnen classificeren van risico's biedt het gebruik van de taxonomie de volgende voordelen:
+De taxonomie benoemt zelf geen risico's, maar is een middel om risico's te ordenen. Naast het kunnen classificeren van risico's, biedt het gebruik van de taxonomie de volgende voordelen:
 
-- Eenduidige terminologie: de taxonomie bestaat uit een lijst van begrippen met een vaste betekenis, die het mogelijk maakt om risico's te vergelijken en te classificeren.
-- Controle op volledigheid: voor elk element uit de taxonomie kan de vraag gesteld worden “bevat de kwaliteitsaanpak maatregelen voor risico's bij dit element?”
-- Betere rationale: door aan te geven op welke in de taxonomie genoemde risicogebieden een maatregel betrekking heeft is duidelijker wat de maatregel beoogt te bereiken.
+* Eenduidige terminologie: de taxonomie bestaat uit een lijst van begrippen met een vaste betekenis, die het mogelijk maakt om risico's te vergelijken en te classificeren.
+* Controle op volledigheid: voor elk element uit de taxonomie kan de vraag gesteld worden “bevat de kwaliteitsaanpak maatregelen voor risico's bij dit element?”
+* Betere rationale: door aan te geven op welke in de taxonomie genoemde risicogebieden een maatregel betrekking heeft is duidelijker wat de maatregel beoogt te bereiken.
 
 ### Risicotaxonomie
 
@@ -116,145 +116,145 @@ De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico's bij so
 
 Maatregelen:
 
-- {{M05}}
-- {{M07}}
-- {{M10}}
-- {{M14}}
-- {{M15}}
+* {{M05}}
+* {{M07}}
+* {{M10}}
+* {{M14}}
+* {{M15}}
 
 Classificatie:
 
-- Projectvoorwaarden ➞ Middelen
+* Projectvoorwaarden ➞ Middelen
 
 #### Risico: De software heeft niet alle gewenste functionaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 
 Maatregelen:
 
-- {{M05}} - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.
-- {{M04}}
-- {{M07}}
-- {{M10}}
-- {{M14}}
-- {{M17}}
-- {{M18}}
-- {{M19}} - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
+* {{M05}} - De product owner bepaalt de prioriteiten tijdens de ontwikkeling en kan er zo voor zorgen dat de belangrijkste functionaliteit zo vroeg mogelijk wordt gerealiseerd.
+* {{M04}}
+* {{M07}}
+* {{M10}}
+* {{M14}}
+* {{M17}}
+* {{M18}}
+* {{M19}} - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
 
 Classificatie:
 
-- Productontwikkeling ➞ Requirements
-- Projectvoorwaarden ➞ Middelen
+* Productontwikkeling ➞ Requirements
+* Projectvoorwaarden ➞ Middelen
 
 #### Risico: De software heeft niet de gewenste kwaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 
 Maatregelen:
 
-- {{M02}}
-- {{M06}}
-- {{M07}}
-- {{M08}}
-- {{M14}}
-- {{M15}}
-- {{M17}}
-- {{M18}}
-- {{M21}}
-- {{M28}}
+* {{M02}}
+* {{M06}}
+* {{M07}}
+* {{M08}}
+* {{M14}}
+* {{M15}}
+* {{M17}}
+* {{M18}}
+* {{M21}}
+* {{M28}}
 
 Classificatie:
 
-- Productontwikkeling ➞ Requirements
-- Projectvoorwaarden ➞ Middelen
-- Productontwikkeling ➞ Specialiteiten ➞ Onderhoudbaarheid
-- Productontwikkeling ➞ Specialiteiten ➞ Betrouwbaarheid
-- Productontwikkeling ➞ Specialiteiten ➞ Beveiliging
+* Productontwikkeling ➞ Requirements
+* Projectvoorwaarden ➞ Middelen
+* Productontwikkeling ➞ Specialiteiten ➞ Onderhoudbaarheid
+* Productontwikkeling ➞ Specialiteiten ➞ Betrouwbaarheid
+* Productontwikkeling ➞ Specialiteiten ➞ Beveiliging
 
 #### Risico: De software voldoet niet aan de eisen en wensen van de opdrachtgever
 
 Maatregelen:
 
-- {{M01}}
-- {{M03}}
-- {{M05}}
-- {{M06}}
-- {{M08}}
-- {{M14}}
-- {{M28}}
+* {{M01}}
+* {{M03}}
+* {{M05}}
+* {{M06}}
+* {{M08}}
+* {{M14}}
+* {{M28}}
 
 Classificatie:
 
-- Productontwikkeling ➞ Requirements ➞ Volledigheid
-- Productontwikkeling ➞ Requirements ➞ Duidelijkheid
-- Productontwikkeling ➞ Requirements ➞ Validiteit
-- Productontwikkeling ➞ Requirements ➞ Haalbaarheid
+* Productontwikkeling ➞ Requirements ➞ Volledigheid
+* Productontwikkeling ➞ Requirements ➞ Duidelijkheid
+* Productontwikkeling ➞ Requirements ➞ Validiteit
+* Productontwikkeling ➞ Requirements ➞ Haalbaarheid
 
 #### Risico: Na oplevering blijkt de software niet te voldoen aan niet eerder expliciet gemaakte eisen en wensen
 
 Maatregelen:
 
-- {{M10}}
-- {{M13}}
-- {{M28}}
+* {{M10}}
+* {{M13}}
+* {{M28}}
 
 Classificatie:
 
-- Productontwikkeling ➞ Requirements ➞ Volledigheid
-- Productontwikkeling ➞ Requirements ➞ Validiteit
+* Productontwikkeling ➞ Requirements ➞ Volledigheid
+* Productontwikkeling ➞ Requirements ➞ Validiteit
 
 #### Risico: De opdrachtgever of het project leggen te veel nadruk op de te realiseren functionaliteit, ten koste van niet-functionele eigenschappen van de software
 
 Maatregelen:
 
-- {{M02}}
-- {{M06}}
-- {{M08}}
-- {{M13}}
-- {{M14}} - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
-- {{M28}}
+* {{M02}}
+* {{M06}}
+* {{M08}}
+* {{M13}}
+* {{M14}} - De voorbereidingsfase heeft minder last van de "dagelijkse druk" die later tijdens het traject vaak ontstaat.
+* {{M28}}
 
 Classificatie:
 
-- Ontwikkelomgeving ➞ Managementmethode ➞ Kwaliteitsborging
-- Ontwikkelomgeving ➞ Werkomgeving ➞ Attitude
+* Ontwikkelomgeving ➞ Managementmethode ➞ Kwaliteitsborging
+* Ontwikkelomgeving ➞ Werkomgeving ➞ Attitude
 
 #### Risico: Opgeleverde software blijkt defecten te bevatten
 
 Maatregelen:
 
-- {{M02}}
-- {{M03}}
-- {{M04}}
-- {{M06}}
-- {{M07}}
-- {{M13}}
-- {{M21}}
-- {{M28}}
+* {{M02}}
+* {{M03}}
+* {{M04}}
+* {{M06}}
+* {{M07}}
+* {{M13}}
+* {{M21}}
+* {{M28}}
 
 Classificatie:
 
-- Productontwikkeling ➞ Ontwerp ➞ Testbaarheid
-- Productontwikkeling ➞ Integratie en Test
-- Productontwikkeling ➞ Engineering Specialiteiten ➞ Betrouwbaarheid
-- Ontwikkelomgeving ➞ Ontwikkelproces ➞ Productbeheersing
+* Productontwikkeling ➞ Ontwerp ➞ Testbaarheid
+* Productontwikkeling ➞ Integratie en Test
+* Productontwikkeling ➞ Engineering Specialiteiten ➞ Betrouwbaarheid
+* Ontwikkelomgeving ➞ Ontwikkelproces ➞ Productbeheersing
 
 #### Risico: Er treden fouten op bij installatie van de software in de doelomgeving
 
 Maatregelen:
 
-- {{M01}}
-- {{M07}}
+* {{M01}}
+* {{M07}}
 
 Classificatie:
 
-- Productontwikkeling ➞ Ontwerp ➞ Hardware-eisen
-- Productontwikkeling ➞ Integratie en Test ➞ Productintegratie
-- Productontwikkeling ➞ Integratie en Test ➞ Systeemintegratie
+* Productontwikkeling ➞ Ontwerp ➞ Hardware-eisen
+* Productontwikkeling ➞ Integratie en Test ➞ Productintegratie
+* Productontwikkeling ➞ Integratie en Test ➞ Systeemintegratie
 
 #### Risico: Bij overdracht naar een derde partij is niet alle relevante en benodigde documentatie beschikbaar
 
 Maatregelen:
 
-- {{M01}}
-- {{M28}}
+* {{M01}}
+* {{M28}}
 
 Classificatie:
 
-- Productontwikkeling ➞ Specialiteiten ➞ Onderhoudbaarheid
+* Productontwikkeling ➞ Specialiteiten ➞ Onderhoudbaarheid

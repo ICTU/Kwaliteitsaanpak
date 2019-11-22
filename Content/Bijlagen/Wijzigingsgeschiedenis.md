@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.0, 11 november 2019
+### Versie 2.0, 30 november 2019
 
 * Maatregelen, waar mogelijk, compacter geformuleerd.
 * M01: Toelichting op documenten, maatregel beknopter.

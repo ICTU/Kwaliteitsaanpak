@@ -10,8 +10,8 @@
 - M29: Nieuwe maatregel voor het verantwoord starten van projecten.
 - Termen aangepast: 'projectverantwoordelijke' is vervangen door 'projectleider', 'projectenorganisatie' en 'projectorganisatie' door 'ICTU' en 'realiserend team' door 'projectteam'.
 - Actielijst toegevoegd aan self-assessment spreadsheet.
-- BIR vervangen door BIO.
 - Waar relevant bij de rationale van maatregelen verwezen naar overeenkomende risicobeheersmaatregelen uit de NPR 5326.
+- Referenties aan de Baseline Informatiebeveiliging Rijksdienst (BIR) omgezet naar de Baseline Informatiebeveiliging Overheid (BIO).
 
 ### Versie 1.3.1, 1 mei 2019
 

@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.0, 29 oktober 2019
+### Versie 2.0, 11 november 2019
 
 - Maatregelen, waar mogelijk, compacter geformuleerd.
 - M01: Toelichting op documenten, maatregel beknopter.
@@ -11,6 +11,7 @@
 - Termen aangepast: 'projectverantwoordelijke' is vervangen door 'projectleider', 'projectenorganisatie' en 'projectorganisatie' door 'ICTU' en 'realiserend team' door 'projectteam'.
 - Actielijst toegevoegd aan self-assessment spreadsheet.
 - BIR vervangen door BIO.
+- Waar relevant bij de rationale van maatregelen verwezen naar overeenkomende risicobeheersmaatregelen uit de NPR 5326.
 
 ### Versie 1.3.1, 1 mei 2019
 

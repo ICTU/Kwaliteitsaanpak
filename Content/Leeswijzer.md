@@ -10,7 +10,7 @@ Dit document 'Kwaliteitsaanpak ICTU Software Realisatie' is bedoeld voor program
 
 De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico's die samenhangen met softwareontwikkeling te mitigeren. De bijlage [Risico's van softwareontwikkeling](#risico-s-van-softwareontwikkeling) beschrijft de relatie tussen risico's en maatregelen.
 
-De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort de maatregel tot de Kwaliteitsaanpak?
+De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort de maatregel tot de Kwaliteitsaanpak? Waar mogelijk verwijst de rationale naar maatregelen uit standaarden en richtlijnen die overeenkomen met de door ICTU getroffen maatregelen.
 
 Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rollen' om aan te geven wie verantwoordelijkheid draagt voor het uitvoeren van de maatregelen:
 

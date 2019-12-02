@@ -13,6 +13,7 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | DoR | Definition of Ready |
 | GFO | globaal functioneel ontwerp |
 | IPO | intern projectoverleg |
+| ISO | International Organization for Standardization |
 | ISR | ICTU Softwarerealisatie, afdeling van ICTU die maatwerksoftwareprojecten ondersteunt |
 | Jira | Tool om use cases, user stories, logische testgevallen en issues vast te leggen. |
 | KPI | key performance indicator |

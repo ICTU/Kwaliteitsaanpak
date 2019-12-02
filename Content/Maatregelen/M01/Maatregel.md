@@ -49,7 +49,7 @@ Een projectstartarchitectuur is bedoeld om te borgen dat nieuwe ontwikkelingen e
 
 Zie [http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)](http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)).
 
-Het softwarearchitectuurdocument verschaft een compleet overzicht van en rationale voor de architectuur van het te bouwen systeem, waarbij diverse relevante views diverse aspecten van het systeem belichten. Zie bijvoorbeeld [http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf](http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf), maar andere manieren van architectuurbeschrijving zijn toegestaan
+Het softwarearchitectuurdocument verschaft een compleet overzicht van en rationale voor de architectuur van het te bouwen systeem, waarbij diverse relevante views diverse aspecten van het systeem belichten. Zie bijvoorbeeld [http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf](http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf); andere manieren van architectuurbeschrijving zijn ook toegestaan.
 
 De infrastructuurarchitectuur beschrijft de topologie van de implementatie-omgeving waaronder protocollen, beveiligingsniveaus en services. Deze architectuur biedt een logische afbeelding van eisen naar implementatie-omgeving en geeft onderbouwing voor gemaakte keuzes.
 

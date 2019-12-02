@@ -12,4 +12,11 @@ De implementatie van een nieuwe versie van de kwaliteitsaanpak kost tijd. De int
 
 Anderzijds is het voor de uniformiteit van kwaliteitsmeting en rapportage en de doorontwikkeling van de kwaliteitsaanpak van belang de implementatieperiode zo kort mogelijk en voorspelbaar te houden. Daarom stemt ICTU met de projecten een implementatiemoment en -periode af.
 
-Omdat implementatie van maatregelen in een project tijd kost is de self-assessment ({{M28}}) gericht op het in kaart brengen van de belangrijkste verschillen tussen kwaliteitsaanpak en de in het project toegepaste werkwijze en niet op het uitputtend inventariseren van alle verschillen.
+Omdat implementatie van maatregelen in een project tijd kost is de self-assessment gericht op het in kaart brengen van de belangrijkste verschillen tussen kwaliteitsaanpak en de in het project toegepaste werkwijze en niet op het uitputtend inventariseren van alle verschillen.
+
+### Referenties
+
+Zie ook:
+
+* {{M12}}
+* {{M28}}

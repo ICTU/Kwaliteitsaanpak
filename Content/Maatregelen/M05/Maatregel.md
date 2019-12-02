@@ -9,12 +9,18 @@ ICTU gebruikt hiervoor Scrum, een raamwerk voor agile productontwikkeling. ICTU 
 - Definition of Ready en Definition of Done,
 - Product backlog en sprint backlog.
 
-Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn ({{M01}}) en voldoen aan de door ICTU vastgestelde kwaliteitsnormen ({{M02}}).
-
-Zie ook {{M16}}.
+Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn en voldoen aan de door ICTU vastgestelde kwaliteitsnormen.
 
 ### Rationale
 
 De incrementele oplevering levert vrijwel iedere iteratie toegevoegde waarde en stelt opdrachtgevers, gebruikers en anderen in staat om gaandeweg ervaring op te doen en bij te sturen. Verder dwingt het vroegtijdige tests en kwaliteitscontroles af, die daarmee verankerd worden in het ontwikkel- en onderhoudsproces. Door naast de software telkens ook alle andere producten bij te werken en op te leveren, wordt bereikt dat het product als geheel consistent blijft en dat er geen achterstallig onderhoud ontstaat. Dit leidt tot een zich continu verbeterend proces.
 
 Het toepassen van een iteratief en incrementeel ontwikkelproces is conform Maatregel 07: "Incrementele oplevering van het product" en Maatregel 08: "Iteratieve ontwikkelaanpak" uit de NPR 5326.
+
+### Referenties
+
+Zie ook:
+
+* {{M01}}
+* {{M02}}
+* {{M16}}

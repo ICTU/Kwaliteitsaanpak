@@ -1,8 +1,8 @@
-## Hoe de kwaliteitsaanpak het manifest ondersteunt
+## Hoe de Kwaliteitsaanpak het manifest ondersteunt
 
 ### Het belang van de burger staat voorop
 
-Deze kwaliteitsaanpak helpt opdrachtgevers van maatwerksoftware het belang van burgers en ambtenaren, die diensten aan burgers verlenen, voorop te zetten door:
+De {{TITLE}} helpt opdrachtgevers van maatwerksoftware het belang van burgers en ambtenaren, die diensten aan burgers verlenen, voorop te zetten door:
 
 * voordat het project echt gaat bouwen goed na te denken over de mogelijke oplossingen en de kwaliteitseigenschappen die voor burgers en  gebruikers van belang zijn; denk aan gebruikskwaliteit, beveiliging, privacy, performance en toegankelijkheid ({{M14}});
 * bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan ({{M21}}).
@@ -11,7 +11,7 @@ Deze kwaliteitsaanpak helpt opdrachtgevers van maatwerksoftware het belang van b
 
 We delen wat we goed kunnen door:
 
-* geleerde lessen te verwerken in deze kwaliteitsaanpak ({{M11}}) en die te delen tussen projecten ({{M24}}) en te publiceren via [http://www.ictu.nl/kwaliteitsaanpak](http://www.ictu.nl/kwaliteitsaanpak) ({{M12}});
+* geleerde lessen te verwerken in deze Kwaliteitsaanpak ({{M11}}) en die te delen tussen projecten ({{M24}}) en te publiceren via [http://www.ictu.nl/kwaliteitsaanpak](http://www.ictu.nl/kwaliteitsaanpak) ({{M12}});
 * de tools die we ontwikkelen ter ondersteuning van softwarerealisatieprojecten zoveel mogelijk als open source beschikbaar te stellen ({{M15}}).
 
 We gebruiken wat anderen beter doen door:
@@ -23,7 +23,7 @@ We gebruiken wat anderen beter doen door:
 
 ### Op zoek naar de juiste oplossing is het experiment soms de kortste weg
 
-De kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om uit te proberen en te leren. We delen de lessen geleerd in projecten via de kwaliteitsaanpak zelf ({{M11}})
+De Kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om uit te proberen en te leren. We delen de lessen geleerd in projecten via de Kwaliteitsaanpak zelf ({{M11}})
 
 ### Wij geloven in agile werken bij de overheid
 
@@ -35,7 +35,7 @@ Door agile te werken ({{M05}}) kunnen wij:
 
 ### Wij geven inzicht in de kwaliteit van ons werk
 
-Deze kwaliteitsaanpak helpt inzicht te geven aan opdrachtgevers in de kwaliteit van het werk door:
+Deze Kwaliteitsaanpak helpt inzicht te geven aan opdrachtgevers in de kwaliteit van het werk door:
 
 - documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen ({{M01}});
 - continu de kwaliteit van het werk te meten en opdrachtgevers hierover te rapporteren ({{M02}}).

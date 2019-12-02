@@ -1,15 +1,15 @@
 ## Risico's van softwareontwikkeling
 
-Softwareontwikkeling brengt risico's met zich mee. De {{TITLE}} beoogt een deel van die risico's te mitigeren. Als raamwerk en startpunt voor het classificeren van risico's maakt de kwaliteitsaanpak gebruik van *Taxonomy-Based Risk Identification* van het Software Engineering Institute (CMU/SEI-93-TR-6), een taxonomie van risico's.
+Softwareontwikkeling brengt risico's met zich mee. De {{TITLE}} beoogt een deel van die risico's te mitigeren. Als raamwerk en startpunt voor het classificeren van risico's maakt de Kwaliteitsaanpak gebruik van *Taxonomy-Based Risk Identification* van het Software Engineering Institute (CMU/SEI-93-TR-6), een taxonomie van risico's.
 
-Deze bijlage geeft eerst een overzicht van de taxonomie van risico's en vervolgens een lijst van veelvoorkomende risico's. Voor elk van die risico's is aangegeven door welke maatregel(en) uit de kwaliteitsaanpak ze worden verminderd en geclassificeerd bij welke onderdelen van de risicotaxonomie ze horen.
+Deze bijlage geeft eerst een overzicht van de taxonomie van risico's en vervolgens een lijst van veelvoorkomende risico's. Voor elk van die risico's is aangegeven door welke maatregel(en) uit de Kwaliteitsaanpak ze worden verminderd en geclassificeerd bij welke onderdelen van de risicotaxonomie ze horen.
 
 ### Gebruik van de risicotaxonomie
 
 De taxonomie benoemt zelf geen risico's, maar is een middel om risico's te ordenen. Naast het kunnen classificeren van risico's, biedt het gebruik van de taxonomie de volgende voordelen:
 
 * Eenduidige terminologie: de taxonomie bestaat uit een lijst van begrippen met een vaste betekenis, die het mogelijk maakt om risico's te vergelijken en te classificeren.
-* Controle op volledigheid: voor elk element uit de taxonomie kan de vraag gesteld worden “bevat de kwaliteitsaanpak maatregelen voor risico's bij dit element?”
+* Controle op volledigheid: voor elk element uit de taxonomie kan de vraag gesteld worden “bevat de Kwaliteitsaanpak maatregelen voor risico's bij dit element?”
 * Betere rationale: door aan te geven op welke in de taxonomie genoemde risicogebieden een maatregel betrekking heeft is duidelijker wat de maatregel beoogt te bereiken.
 
 ### Risicotaxonomie
@@ -110,7 +110,7 @@ Deze groep heeft betrekking op externe factoren voor het project; deze factoren 
 
 ### Risico's en maatregelen
 
-De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico's bij softwareontwikkelprojecten. Elk beschreven risico is geclassificeerd volgens de risicotaxonomie en is voorzien van de bijbehorende maatregelen uit de kwaliteitsaanpak.
+De onderstaande lijst bevat een aantal algemene, veelvoorkomende risico's bij softwareontwikkelprojecten. Elk beschreven risico is geclassificeerd volgens de risicotaxonomie en is voorzien van de bijbehorende maatregelen uit de Kwaliteitsaanpak.
 
 #### Risico: De software is niet gebruiksgereed, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 

@@ -13,7 +13,7 @@ Indien de kwaliteitsdoelstellingen langdurig of niet tijdig worden behaald, heef
 1. De kwaliteitsmanager bespreekt de situatie met de software delivery manager.
 2. Indien dat niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de projectleider.
 
-De specifieke kwaliteitsnormen voor producten zijn in deze versie van de kwaliteitsaanpak niet opgenomen.
+De specifieke kwaliteitsnormen voor producten zijn in deze versie van de Kwaliteitsaanpak niet opgenomen.
 
 ### Rationale
 

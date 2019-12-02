@@ -42,8 +42,6 @@ Hieronder zijn alle maatregeldefinities uit deze Kwaliteitsaanpak opgenomen, op 
 
 #include "Content/Maatregelen/M21/Definitie.md"
 
-#include "Content/Maatregelen/M22/Definitie.md"
-
 #include "Content/Maatregelen/M23/Definitie.md"
 
 #include "Content/Maatregelen/M24/Definitie.md"

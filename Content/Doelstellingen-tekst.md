@@ -1,4 +1,4 @@
-De kwaliteitsaanpak heeft drie doelstellingen:
+De {{TITLE}} heeft drie doelstellingen:
 
 1. Opdrachtgevers helpen bekende risico's bij softwareontwikkeling, zoals technische schuld, vertraging en defecten, zo veel mogelijk te voorkomen.
 
@@ -6,6 +6,6 @@ De kwaliteitsaanpak heeft drie doelstellingen:
 
 3. De overheid als geheel helpen bij het zo goed mogelijk ontwikkelen van software.
 
-De kwaliteitsaanpak zelf is geformuleerd in de vorm van maatregelen die elke software-ontwikkelende organisatie kan treffen om risico's van softwareontwikkeling te mitigeren en de kans op succesvolle softwareontwikkeling en -onderhoudsprojecten te vergroten. De maatregelen zijn beschreven in algemene termen; waar van toepassing is ook de ICTU-specifieke invulling van de maatregel telkens separaat bijgevoegd.
+De Kwaliteitsaanpak zelf is geformuleerd in de vorm van maatregelen die elke software-ontwikkelende organisatie kan treffen om risico's van softwareontwikkeling te mitigeren en de kans op succesvolle softwareontwikkeling en -onderhoudsprojecten te vergroten. De maatregelen zijn gebaseerd op geleerde lessen uit de praktijk van ICTU.
 
-De beschrijving van de kwaliteitsaanpak is gebaseerd op de huidige aanpak van softwareontwikkeling en -onderhoud bij ICTU. De kwaliteitsaanpak evolueert op basis van praktijkervaringen bij ICTU en bij andere organisaties.
+De beschrijving van de Kwaliteitsaanpak is gebaseerd op de huidige aanpak van softwareontwikkeling en -onderhoud bij ICTU. De Kwaliteitsaanpak evolueert op basis van praktijkervaringen bij ICTU en bij andere organisaties.

@@ -59,8 +59,6 @@
 
 #include "Content/Maatregelen/M21/Maatregel.md"
 
-#include "Content/Maatregelen/M22/Maatregel.md"
-
 #include "Content/Maatregelen/M23/Maatregel.md"
 
 # Bijlagen

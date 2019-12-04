@@ -20,13 +20,4 @@ Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rolle
 * Software Delivery Manager: verantwoordelijk voor de softwareontwikkelings- en/of onderhoudswerkzaamheden binnen het project,
 * Kwaliteitsmanager: projectmedewerker belast met de controle op en borging van kwaliteit, aangesteld door de projectleider.
 
-Projecten bij ICTU die software ontwikkelen volgens deze Kwaliteitsaanpak kunnen ondersteunen krijgen van de afdeling ICTU Softwarerealisatie (ISR). Deze ondersteunende afdeling is dus niet verantwoordelijk voor de projectuitvoering, maar voor het bieden van diensten om projecten in staat te stellen efficiënt en effectief volgens de Kwaliteitsaanpak te werken.
-
-
-
-=
-
-
- Als raamwerk en startpunt voor het classificeren van risico's maakt de Kwaliteitsaanpak gebruik van *Taxonomy-Based Risk Identification* van het Software Engineering Institute (CMU/SEI-93-TR-6), een taxonomie van risico's.
-
-Deze bijlage geeft eerst een overzicht van de taxonomie van risico's en vervolgens een lijst van veelvoorkomende risico's. Voor elk van die risico's is aangegeven door welke maatregel(en) uit de Kwaliteitsaanpak ze worden verminderd en geclassificeerd bij welke onderdelen van de risicotaxonomie ze horen.
+Projecten bij ICTU die software ontwikkelen volgens deze Kwaliteitsaanpak, kunnen ondersteuning krijgen van de afdeling ICTU Softwarerealisatie (ISR). Deze ondersteunende afdeling is dus niet verantwoordelijk voor de projectuitvoering, maar voor het bieden van diensten om projecten in staat te stellen efficiënt en effectief volgens de Kwaliteitsaanpak te werken.

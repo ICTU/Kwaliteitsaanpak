@@ -9,13 +9,3 @@ Niet-functionele eisen zijn gekoppeld aan onder andere softwarearchitectuurdocum
 ### Rationale
 
 Door eisen en testgevallen te koppelen en traceerbaar te maken, is het mogelijk de dekking van tests ten opzichte van eisen te bepalen.
-
-### Geadresseerde risico's
-
-Deze maatregel adresseert risico's met betrekking tot:
-
-* Specialiteiten (Specificaties)
-* Ontwikkelproces (Productbeheersing)
-* Managementproces (Wendbaarheid)
-* Managementmethode (Kwaliteitsborging)
-* Middelen (Planning)

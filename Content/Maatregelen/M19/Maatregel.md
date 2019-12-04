@@ -9,10 +9,3 @@ De projectleider is verantwoordelijk voor het autoriseren van personen voor toeg
 ### Rationale
 
 Door het bieden van een afgeschermde digitale omgeving zijn de afhankelijkheden en invloeden tussen projecten minimaal en worden beveiligingsrisico's verkleind.
-
-### Geadresseerde risico's
-
-Deze maatregel adresseert risico's met betrekking tot:
-
-* Specialiteiten (Beveiliging)
-* Middelen (Planning, Faciliteiten)

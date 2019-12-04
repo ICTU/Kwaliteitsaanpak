@@ -12,16 +12,6 @@ ICTU gebruikt Jenkins of TFS (Team Foundation Server) als tool voor de implement
 
 Software incrementeel opleveren vereist dat de software frequent gebouwd, getest en opgeleverd kan worden. Om dit efficiënt en foutvrij te doen, dient het proces van bouwen, testen en opleveren geautomatiseerd te zijn; een continuous delivery pipeline faciliteert dit.
 
-Het gebruiken van een continuous delivery pipeline is conform Maatregel 09: "Geautomatiseerde ontwikkelpijplijn inrichten" uit de NPR 5326.
-
-### Geadresseerde risico's
-
-Deze maatregel adresseert risico's met betrekking tot:
-
-* Ontwikkelproces (Formaliteit, Productbeheersing)
-* Ontwikkelsysteem (Geschiktheid)
-* Middelen (Faciliteiten)
-
 ### Referenties
 
 Zie ook:

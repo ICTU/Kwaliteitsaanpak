@@ -15,16 +15,6 @@ Vast onderdeel van de Definition of Done is dat producten actueel en onderling c
 
 De incrementele oplevering levert vrijwel iedere iteratie toegevoegde waarde en stelt opdrachtgevers, gebruikers en anderen in staat om gaandeweg ervaring op te doen en bij te sturen. Verder dwingt het vroegtijdige tests en kwaliteitscontroles af, die daarmee verankerd worden in het ontwikkel- en onderhoudsproces. Door naast de software telkens ook alle andere producten bij te werken en op te leveren, wordt bereikt dat het product als geheel consistent blijft en dat er geen achterstallig onderhoud ontstaat. Dit leidt tot een zich continu verbeterend proces.
 
-Het toepassen van een iteratief en incrementeel ontwikkelproces is conform Maatregel 07: "Incrementele oplevering van het product" en Maatregel 08: "Iteratieve ontwikkelaanpak" uit de NPR 5326.
-
-### Geadresseerde risico's
-
-Deze maatregel adresseert risico's met betrekking tot:
-
-* Ontwikkelproces (Geschiktheid, Procesbeheersing)
-* Managementproces (Wendbaarheid)
-* Middelen (Planning, Budget)
-
 ### Referenties
 
 Zie ook:

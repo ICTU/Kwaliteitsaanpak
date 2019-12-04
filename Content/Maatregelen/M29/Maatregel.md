@@ -60,13 +60,3 @@ In het geval van een voorstel voor een realisatiefase, zijn de volgende aanvulle
 ### Rationale
 
 Om de Kwaliteitsaanpak succesvol in te zetten, is ondersteuning van het project nodig. Het vooraf toetsen of deze ondersteuning in de juiste mate beschikbaar is, voorkomt dat projecten niet of niet goed volgens de Kwaliteitsaanpak kunnen werken.
-
-### Geadresseerde risico's
-
-Deze maatregel adresseert risico's met betrekking tot:
-
-* Managementproces (Projectorganisatie)
-* Managementmethode (Monitoring)
-* Middelen (Planning, Bemensing, Budget, Faciliteiten)
-* Contract (Contracttype, Beperkingen, Afhankelijkheden)
-* Raakvlakken (Opdrachtgever, Co-aannemers, Onderaannemers, Organisatiemanagement, Leveranciers, Politiek)

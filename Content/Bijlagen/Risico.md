@@ -24,6 +24,7 @@ Maatregelen:
 * {{M17}}
 * {{M18}}
 * {{M19}} - Testers kunnen efficiënt werken dankzij een afgezonderde testomgeving.
+* {{M29}}
 
 #### Risico: De software heeft niet de gewenste kwaliteit, maar de benodigde middelen zijn uitgeput of niet langer beschikbaar (tijd, geld, mensen, kennis, tools)
 
@@ -39,6 +40,7 @@ Maatregelen:
 * {{M18}}
 * {{M21}}
 * {{M28}}
+* {{M29}}
 
 #### Risico: De software voldoet niet aan de eisen en wensen van de opdrachtgever
 
@@ -51,6 +53,7 @@ Maatregelen:
 * {{M08}}
 * {{M14}}
 * {{M28}}
+* {{M29}}
 
 #### Risico: Na oplevering blijkt de software niet te voldoen aan niet eerder expliciet gemaakte eisen en wensen
 
@@ -97,3 +100,4 @@ Maatregelen:
 
 * {{M01}}
 * {{M28}}
+* {{M29}}

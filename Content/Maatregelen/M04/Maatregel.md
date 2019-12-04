@@ -10,6 +10,13 @@ Handmatig uitgevoerde regressietests zijn arbeidsintensief, foutgevoelig en afha
 
 Het toepassen van geautomatiseerde regressietesten is conform Maatregel 10: "Voortdurend voldoen aan de eisen met regressietests" uit de NPR 5326.
 
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Ontwikkelproces (Productbeheersing)
+* Managementmethode (Monitoring, Kwaliteitsborging)
+
 ### Referenties
 
 Zie ook:

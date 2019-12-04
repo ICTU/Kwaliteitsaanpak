@@ -14,6 +14,16 @@ De beveiligingstesten vinden plaats in aanvulling op de door tools uitgevoerde c
 
 Door het inschakelen van actuele, specifieke expertise wordt de kans vergroot dat eventuele kwetsbaarheden in de gerealiseerde software tijdig herkend worden.
 
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Requirements (Volledigheid)
+* Integratie en Test (Productintegratie)
+* Specialiteiten (Beveiliging)
+* Ontwikkelproces (Procesbeheersing, Productbeheersing)
+* Managementmethode (Kwaliteitsborging)
+
 ### Referenties
 
 Zie ook:

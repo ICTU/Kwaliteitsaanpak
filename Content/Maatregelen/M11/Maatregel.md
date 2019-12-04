@@ -22,3 +22,11 @@ Expliciet beheer en onderhoud van de {{TITLE}} is nodig om lessen geleerd in pro
 Wijzigingsvoorstellen moeten een sponsor hebben zodat het duidelijk is dat iemand baat heeft bij en zich hard maakt voor het realiseren van de wijziging.
 
 Wijzigingsvoorstellen bevatten een advies ter besluitvorming aan ICTU. NB: het advies kan ook zijn de wijziging niet door te voeren.
+
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Ontwikkelproces (Bekendheid)
+* Managementmethode (Kwaliteitsbeheersing)
+* Middelen (Faciliteiten)

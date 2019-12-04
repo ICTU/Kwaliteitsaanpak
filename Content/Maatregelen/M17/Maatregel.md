@@ -14,6 +14,12 @@ De tools zijn beschikbaar via een eigen cloud (vergelijkbaar met een 'app store'
 
 Snelle beschikbaarheid van tools betekent dat projecten snel kunnen beginnen. De niet-verplichte tools geven daarnaast de voorkeur van ICTU weer.
 
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Middelen (Planning, Faciliteiten)
+
 ### Referenties
 
 Zie ook:

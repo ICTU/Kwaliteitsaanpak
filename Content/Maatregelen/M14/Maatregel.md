@@ -12,6 +12,15 @@ Het doel van de voorfase is ten eerste om uitgangspunten, risico's en randvoorwa
 
 Al tijdens de voorfase moeten keuzes gemaakt worden die invloed hebben op de beveiligingsmaatregelen. Aanwezigheid van een voldoende gemandateerde vertegenwoordiger van de opdrachtgever zorgt dat deze keuzes gemaakt en bekrachtigd kunnen worden. De keuzes komen onder meer tot uitdrukking in de ontwerp- en architectuurdocumentatie, zie {{M01}}. De infrastructuur gerelateerde documentatie wordt opgesteld door de beoogd beheerder en dekt een deel van de totale beveiligingsmaatregelen af. Aanwezigheid van de beoogd beheerder in de voorfase zorgt dat dekking van dit deel van de beveiligingsmaatregelen geborgd blijft gedurende de realisatie en exploitatie.
 
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Ontwikkelproces (Formaliteit, Procesbeheersing)
+* Managementproces (Wendbaarheid)
+* Middelen (Planning, Bemensing, Budget, Faciliteiten)
+* Contract (Contracttype, Beperkingen, Afhankelijkheden)
+
 ### Referenties
 
 Zie ook:

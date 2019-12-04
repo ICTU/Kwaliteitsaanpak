@@ -12,6 +12,12 @@ Anderzijds is het voor de uniformiteit van kwaliteitsmeting en rapportage en de 
 
 Omdat implementatie van maatregelen in een project tijd kost is de self-assessment gericht op het in kaart brengen van de belangrijkste verschillen tussen de Kwaliteitsaanpak en de in het project toegepaste werkwijze, maar niet op het uitputtend inventariseren van alle verschillen.
 
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Managementmethode (Kwaliteitsborging)
+
 ### Referenties
 
 Zie ook:

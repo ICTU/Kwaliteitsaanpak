@@ -11,3 +11,10 @@ De keuze om het gebruik van een aantal tools verplicht te stellen ({{M16}}) volg
 De verplicht gestelde tools zijn beperkt in aantal, bewezen en gangbaar; veel medewerkers zullen deze tools al kennen.
 
 Het organiseren van ondersteuning aan de projecten is conform Maatregel 16: "Teams met specialistische kennis en hulpmiddelen ondersteunen" uit de NPR 5326.
+
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Ontwikkelsysteem (Bekendheid, Ondersteuning)
+* Middelen (Faciliteiten)

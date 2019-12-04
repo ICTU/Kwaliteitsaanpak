@@ -19,6 +19,18 @@ De specifieke kwaliteitsnormen voor producten zijn in deze versie van de Kwalite
 
 Het zo snel mogelijk en continu voldoen aan de kwaliteitsnormen beperkt toekomstige hersteltijd. Het dwingt tevens een systematische kwaliteitscontrole af.
 
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Ontwerp (Interfaces, Performance, Testbaarheid)
+* Code en Unit Test (Uitvoerbaarheid, Unit Test, Coding/Implementatie)
+* Specialiteiten (Onderhoudbaarheid, Beveiliging, Specificaties)
+* Ontwikkelproces (Procesbeheersing, Productbeheersing)
+* Managementproces (Wendbaarheid)
+* Managementmethode (Monitoring, Kwaliteitsborging)
+* Werkomgeving (Attitude)
+
 ### Referenties
 
 Zie ook:

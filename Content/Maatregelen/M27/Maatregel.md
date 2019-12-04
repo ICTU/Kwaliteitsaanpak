@@ -9,3 +9,11 @@ De software delivery manager is verantwoordelijk voor het archiveren. De softwar
 Archiveren faciliteert het eventueel herstarten of overdragen van het project op een later tijdstip. Verwijderen neemt een onnodig risico op inbreuk op vertrouwelijkheid weg en vrijwaart projectmedewerkers en ICTU van verdenking en aansprakelijkheid wanneer een incident optreedt.
 
 Het expliciet afsluiten van het project is conform Maatregel 14: "Archivering" uit de NPR 5326.
+
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Specialiteiten (Beveiliging)
+* Ontwikkelsysteem (Overdraagbaarheid)
+* Raakvlakken (Opdrachtgever)

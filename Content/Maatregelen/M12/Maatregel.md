@@ -9,11 +9,3 @@ De kwaliteitsnormen zijn op dit moment te vinden in elke kwaliteitsrapportage, i
 ### Rationale
 
 Medewerkers moeten te allen tijde de actuele Kwaliteitsaanpak en -normen kunnen raadplegen. Welke versie actueel is en wanneer een nieuwe versie actueel wordt, is essentiële informatie voor de planning van werkzaamheden binnen de projecten en binnen de afdeling als geheel.
-
-### Geadresseerde risico's
-
-Deze maatregel adresseert risico's met betrekking tot:
-
-* Ontwikkelsysteem (Bekendheid)
-* Managementmethode (Kwaliteitsborging)
-* Werkomgeving (Attitude, Communicatie)

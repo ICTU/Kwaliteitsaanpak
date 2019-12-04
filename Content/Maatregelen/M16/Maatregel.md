@@ -21,11 +21,3 @@ ICTU adviseert en ondersteunt hiervoor de volgende tools:
 ### Rationale
 
 Projecten hebben een redelijke vrijheid bij het kiezen en gebruiken van tools, maar voor een aantal taken is het gebruik verplicht gesteld. Deze tools zijn nodig voor een efficiënte uitvoering van de Kwaliteitsaanpak. Uniform gebruik van deze tools maakt het mogelijk koppeling tussen die tools voor alle projecten te standaardiseren; daarnaast bevordert het de uitwisselbaarheid van medewerkers en neemt het risico op het gebruik van onvolwassen tools af. Tot slot is het gebruik in een aantal gevallen, ten behoeve van informatiebeveiliging bij de overheid, verplicht.
-
-### Geadresseerde risico's
-
-Deze maatregel adresseert risico's met betrekking tot:
-
-* Ontwikkelproces (Formaliteit, Procesbeheersing, Bekendheid, Productbeheersing)
-* Ontwikkelsysteem (Geschiktheid, Bruikbaarheid, Ondersteuning)
-* Managementmethode (Monitoring, Kwaliteitsborging)

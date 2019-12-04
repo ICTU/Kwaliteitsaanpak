@@ -119,17 +119,3 @@ Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te
 In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
 
 In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of systeem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen.
-
-De genoemde op te leveren producten zijn in lijn met de volgende risicobeheersmaatregelen uit de NPR 5326:
-
-* Maatregel 02: Belangrijke niet-functionele eisen identificeren
-* Maatregel 03: Belangrijke functionele eisen identificeren
-* Maatregel 04: Productdecompositie in incrementeel opleverbare delen met business-waarde
-* Maatregel 05: Technische schuld identificeren, inzichtelijk maken en planmatig oplossen
-
-### Geadresseerde risico's
-
-Deze maatregel adresseert risico's met betrekking tot:
-
-* Requirements (Stabiliteit, Volledigheid, Duidelijkheid, Validiteit, Haalbaarheid)
-* Ontwerp (Functionaliteit, Complexiteit, Interfaces, Performance, Testbaarheid, Hardware-eisen, Software van derden)

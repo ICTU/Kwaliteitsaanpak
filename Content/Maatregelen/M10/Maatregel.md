@@ -26,3 +26,12 @@ Het kwaliteitssysteem bewaakt de actualiteit van de actie- en besluitenlijst en 
 ### Rationale
 
 Het doel van het periodiek projectoverleg is alle directe betrokkenen, breder dan de projectteams, op hetzelfde informatieniveau te brengen en te houden. Directe betrokkenen zijn alle medewerkers die geen onderdeel uitmaken van de projectteams, maar wel verantwoordelijkheid dragen voor het projectsucces.
+
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Ontwikkelproces (Procesbeheersing, Productbeheersing)
+* Managementproces (Communicatiekanalen)
+* Managementmethode (Monitoring)
+* Werkomgeving (Communicatie)

@@ -14,6 +14,14 @@ Software incrementeel opleveren vereist dat de software frequent gebouwd, getest
 
 Het gebruiken van een continuous delivery pipeline is conform Maatregel 09: "Geautomatiseerde ontwikkelpijplijn inrichten" uit de NPR 5326.
 
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Ontwikkelproces (Formaliteit, Productbeheersing)
+* Ontwikkelsysteem (Geschiktheid)
+* Middelen (Faciliteiten)
+
 ### Referenties
 
 Zie ook:

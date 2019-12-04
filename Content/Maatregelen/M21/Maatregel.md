@@ -5,3 +5,12 @@
 ### Rationale
 
 Goede kwaliteit van producten ontstaat primair door het werk van mensen; standaardisatie, kwaliteitsnormen en monitoring zijn hulpmiddelen. De kans dat kwalitatief goede medewerkers ook goede producten maken, is groter dan bij minder goede medewerkers.
+
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Ontwikkelproces (Bekendheid)
+* Managementmethode (Personeelsbeheer)
+* Werkomgeving (Attitude)
+* Middelen (Bemensing)

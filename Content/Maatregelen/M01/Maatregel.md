@@ -126,3 +126,10 @@ De genoemde op te leveren producten zijn in lijn met de volgende risicobeheersma
 * Maatregel 03: Belangrijke functionele eisen identificeren
 * Maatregel 04: Productdecompositie in incrementeel opleverbare delen met business-waarde
 * Maatregel 05: Technische schuld identificeren, inzichtelijk maken en planmatig oplossen
+
+### Geadresseerde risico's
+
+Deze maatregel adresseert risico's met betrekking tot:
+
+* Requirements (Stabiliteit, Volledigheid, Duidelijkheid, Validiteit, Haalbaarheid)
+* Ontwerp (Functionaliteit, Complexiteit, Interfaces, Performance, Testbaarheid, Hardware-eisen, Software van derden)

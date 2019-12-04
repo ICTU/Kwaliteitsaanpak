@@ -8,7 +8,7 @@ Dit document '{{TITLE}}', verder ook aangeduid met 'de Kwaliteitsaanpak', is bed
 
 3. Organisatie - Het derde deel van de Kwaliteitsaanpak heeft betrekking op de overkoepelende ontwikkelorganisatie, waarbinnen projecten worden uitgevoerd: ICTU; dit gaat over de samenhang tussen projecten en de faciliteiten die projecten ter beschikking moeten hebben.
 
-De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico's die samenhangen met softwareontwikkeling te mitigeren. De bijlage [Risico's van softwareontwikkeling](#risico-s-van-softwareontwikkeling) beschrijft de relatie tussen risico's en maatregelen.
+De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico's die samenhangen met softwareontwikkeling te mitigeren. De bijlage [Risico's van softwareontwikkeling](#risico-s-van-softwareontwikkeling) beschrijft de relatie tussen veelvoorkomende risico's en maatregelen.
 
 De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort de maatregel tot de Kwaliteitsaanpak? Waar mogelijk verwijst de rationale naar maatregelen uit standaarden en richtlijnen die overeenkomen met de door ICTU getroffen maatregelen.
 
@@ -21,3 +21,12 @@ Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rolle
 * Kwaliteitsmanager: projectmedewerker belast met de controle op en borging van kwaliteit, aangesteld door de projectleider.
 
 Projecten bij ICTU die software ontwikkelen volgens deze Kwaliteitsaanpak kunnen ondersteunen krijgen van de afdeling ICTU Softwarerealisatie (ISR). Deze ondersteunende afdeling is dus niet verantwoordelijk voor de projectuitvoering, maar voor het bieden van diensten om projecten in staat te stellen efficiënt en effectief volgens de Kwaliteitsaanpak te werken.
+
+
+
+=
+
+
+ Als raamwerk en startpunt voor het classificeren van risico's maakt de Kwaliteitsaanpak gebruik van *Taxonomy-Based Risk Identification* van het Software Engineering Institute (CMU/SEI-93-TR-6), een taxonomie van risico's.
+
+Deze bijlage geeft eerst een overzicht van de taxonomie van risico's en vervolgens een lijst van veelvoorkomende risico's. Voor elk van die risico's is aangegeven door welke maatregel(en) uit de Kwaliteitsaanpak ze worden verminderd en geclassificeerd bij welke onderdelen van de risicotaxonomie ze horen.

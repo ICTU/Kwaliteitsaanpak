@@ -10,7 +10,7 @@ MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
 
 # Map symbolic references, like title and Maatregelen, to their mapped content from a dictionary file
 # map-refs 1:<source file> 2:<output file> 3:<dictionary file>
-function map-refsd 
+function map-refsd
 {
     echo "--- map references in {$1} using {$3} to create {$2}"
     awk -F= 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
@@ -61,7 +61,7 @@ function create-template
 # Generate into folder $1 the document $2.pdf, with title $3 and header $4, using MD cover file $5 and MD document file $6.
 # generate 1:<output folder> 2:<name of document output without extension>
 #          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file> 8:<docx reference file>
-function generate 
+function generate
 {
     BUILD_PATH="build/$1"
     OUTPUT_PATH="dist"  # Folder to write the final documents to
@@ -97,7 +97,7 @@ function generate
 
     # PDF generation
     # Cover
-    create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /work/DocumentDefinitions/Shared/cover.css 
+    create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /work/DocumentDefinitions/Shared/cover.css
     # Body
     create-html "$EXPANDED" "$HTML_BUILD" /work/DocumentDefinitions/Shared/document.css
     # Header
@@ -117,7 +117,7 @@ function generate
 
 # Generate into folder $1 the document $2.pdf, titled $3.
 # generate-kwaliteitsaanpak 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
-function generate-kwaliteitsaanpak 
+function generate-kwaliteitsaanpak
 {
     TITLE="$3"
     HEADER="$TITLE"
@@ -129,7 +129,7 @@ function generate-kwaliteitsaanpak
 
 # Generate into folder Templates/$1 the template document $2.pdf, titled $3.
 # generate-template 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
-function generate-template 
+function generate-template
 {
     TITLE="$3"
     HEADER="$TITLE {projectnaam} {versie}"
@@ -152,7 +152,7 @@ docker-compose run dotnet
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
-generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak-Full "ICTU Kwaliteitsaanpak Software Realisatie"
+generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "ICTU Kwaliteitsaanpak Software Realisatie"
 generate-template Template Template-Generiek "Generiek Template"
 generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"

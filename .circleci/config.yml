@@ -8,11 +8,9 @@ jobs:
       - run:
           docker-compose up
       - store_artifacts:
-          path: dist/ICTU-Kwaliteitsaanpak-Full.pdf
+          path: dist/ICTU-Kwaliteitsaanpak.pdf
       - store_artifacts:
-          path: dist/ICTU-Kwaliteitsaanpak-Full.docx
-      - store_artifacts:
-          path: dist/ICTU-Kwaliteitsaanpak-Generic.pdf
+          path: dist/ICTU-Kwaliteitsaanpak.docx
       - store_artifacts:
           path: dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx
       - store_artifacts:

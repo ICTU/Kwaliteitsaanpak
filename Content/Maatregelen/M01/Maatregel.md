@@ -36,7 +36,7 @@ Zie [http://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog](http:
 **Ontwerp en architectuur**
 De ontwerp- en architectuurdocumentatie beschrijft de opzet van de te bouwen software in de context waarbinnen het moet opereren en de ontwerpkeuzes en -principes die zijn gevolgd. Die documentatie laat tevens zien hoe het systeem aan de gestelde functionele en niet-functionele eisen voldoet.
 
-Ontwerp- en architectuurinformatie kan haar plaats vinden in verschillende documenten en producten, zoals een projectstartarchitectuur (PSA), een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) en een prototype en/of interactieontwerp. 
+Ontwerp- en architectuurinformatie kan haar plaats vinden in verschillende documenten en producten, zoals een projectstartarchitectuur (PSA), een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) en een prototype en/of interactieontwerp.
 
 Een projectstartarchitectuur is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. Een PSA bevat in ieder geval de volgende onderwerpen:
 
@@ -101,7 +101,7 @@ Als tijdens een project bestaande software dient te worden afgebouwd, onderhoude
 | Deploymentdocumentatie                                                                 |   |   | ✔ |
 | Uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                  |   | ✔ |   |
 | Transitieplan voor af te bouwen, te onderhouden en/of te herbouwen softwareproducten   |   | ✔ |   |
-| Plan voor aflossen technische schuld, indien van toepassing                            |   | ✔ |   |
+| Plan voor aflossen technische schuld, indien van toepassing                            |   | ✔ |   ||
 
 ¹) De opdrachtgever stelt bij voorkeur een BIA en PIA voorafgaand aan een voorbereidende fase beschikbaar. Indien dat niet mogelijk is worden deze analyses gedurende de voorbereidende fase onder verantwoordelijkheid van de opdrachtgever uitgevoerd.
 ²) Indien een PIA niet nodig is, is een verklaring daaromtrent vereist.

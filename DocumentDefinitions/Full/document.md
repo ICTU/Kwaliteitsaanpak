@@ -15,15 +15,20 @@
 
 #include "Content/Maatregelen/M04/Maatregel.md"
 
+#include "Content/Maatregelen/M07/Maatregel.md"
+
 #include "Content/Maatregelen/M26/Maatregel.md"
 
 # Processen
+
+#include "Content/Maatregelen/M21/Maatregel.md"
+
+#include "Content/Maatregelen/M23/Maatregel.md"
 
 #include "Content/Maatregelen/M05/Maatregel.md"
 
 #include "Content/Maatregelen/M06/Maatregel.md"
 
-#include "Content/Maatregelen/M07/Maatregel.md"
 
 #include "Content/Maatregelen/M08/Maatregel.md"
 
@@ -35,17 +40,11 @@
 
 #include "Content/Maatregelen/M28/Maatregel.md"
 
-# Projectorganisatie (ICTU)
+# Faciliterend
 
 #include "Content/Maatregelen/M11/Maatregel.md"
 
-#include "Content/Maatregelen/M24/Maatregel.md"
-
 #include "Content/Maatregelen/M12/Maatregel.md"
-
-#include "Content/Maatregelen/M29/Maatregel.md"
-
-#include "Content/Maatregelen/M14/Maatregel.md"
 
 #include "Content/Maatregelen/M15/Maatregel.md"
 
@@ -57,9 +56,15 @@
 
 #include "Content/Maatregelen/M19/Maatregel.md"
 
-#include "Content/Maatregelen/M21/Maatregel.md"
+# Projectorganisatie (ICTU)
 
-#include "Content/Maatregelen/M23/Maatregel.md"
+#include "Content/Maatregelen/M24/Maatregel.md"
+
+#include "Content/Maatregelen/M29/Maatregel.md"
+
+#include "Content/Maatregelen/M14/Maatregel.md"
+
+
 
 # Bijlagen
 

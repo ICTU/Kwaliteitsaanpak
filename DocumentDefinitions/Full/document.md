@@ -1,6 +1,7 @@
 #include "Content/Inleiding.md"
 #include "Content/Manifest.md"
 #include "Content/Doelstellingen.md"
+#include "Content/Begrippenkader.md"
 #include "Content/Leeswijzer.md"
 
 # Producten

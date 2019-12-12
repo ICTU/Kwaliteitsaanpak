@@ -10,7 +10,7 @@ De beschrijving van functionele eisen bestaat uit een geprioriteerde backlog met
 Bronnen als een programma van eisen en projectstartarchitectuur zijn het startpunt voor de functionele eisen. Tijdens het project worden use cases in samenwerking met de product owner vertaald naar user stories.
 
 **Niet-functionele eisen**
-Niet-functionele eisen specificeren criteria om het functioneren van het systeem te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Voor de beschrijving en onderverdeling van niet-functionele eisen gebruikt ICTU:
+Niet-functionele eisen specificeren criteria om het functioneren van de software te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Voor de beschrijving en onderverdeling van niet-functionele eisen gebruikt ICTU:
 
 * ISO/IEC-25010,
 * Wbni (Wet beveiliging netwerk- en informatiesystemen),
@@ -34,7 +34,7 @@ De product owner is verantwoordelijk voor de inhoud en bepaalt de prioritering v
 Zie [http://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog](http://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog).
 
 **Ontwerp en architectuur**
-De ontwerp- en architectuurdocumentatie beschrijft de opzet van de te bouwen software in de context waarbinnen het moet opereren en de ontwerpkeuzes en -principes die zijn gevolgd. Die documentatie laat tevens zien hoe het systeem aan de gestelde functionele en niet-functionele eisen voldoet.
+De ontwerp- en architectuurdocumentatie beschrijft de opzet van de te bouwen software in de context waarbinnen het moet opereren en de ontwerpkeuzes en -principes die zijn gevolgd. Die documentatie laat tevens zien hoe de software aan de gestelde functionele en niet-functionele eisen voldoet.
 
 Ontwerp- en architectuurinformatie kan haar plaats vinden in verschillende documenten en producten, zoals een projectstartarchitectuur (PSA), een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) en een prototype en/of interactieontwerp. 
 
@@ -49,7 +49,7 @@ Een projectstartarchitectuur is bedoeld om te borgen dat nieuwe ontwikkelingen e
 
 Zie [http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)](http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)).
 
-Het softwarearchitectuurdocument verschaft een compleet overzicht van en rationale voor de architectuur van het te bouwen systeem, waarbij diverse relevante views diverse aspecten van het systeem belichten. Zie bijvoorbeeld [http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf](http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf); andere manieren van architectuurbeschrijving zijn ook toegestaan.
+Het softwarearchitectuurdocument verschaft een compleet overzicht van en rationale voor de architectuur van de te ontwikkelen software, waarbij diverse relevante views diverse aspecten van de software belichten. Zie bijvoorbeeld [http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf](http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf); andere manieren van architectuurbeschrijving zijn ook toegestaan.
 
 De infrastructuurarchitectuur beschrijft de topologie van de implementatie-omgeving waaronder protocollen, beveiligingsniveaus en services. Deze architectuur biedt een logische afbeelding van eisen naar implementatie-omgeving en geeft onderbouwing voor gemaakte keuzes.
 
@@ -118,4 +118,4 @@ Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te
 
 In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
 
-In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of systeem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen.
+In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen.

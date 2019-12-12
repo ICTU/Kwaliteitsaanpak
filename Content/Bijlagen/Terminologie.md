@@ -4,7 +4,7 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 
 | Term/afkorting | Toelichting |
 |:---------------|:------------|
-| **actor** | een persoon die of een extern systeem dat een handeling verricht op het systeem |
+| **actor** | een persoon die of een extern informatiesysteem dat een handeling verricht op het informatiesysteem |
 | **ART** | automatische **regressietest** |
 | **authenticatie** | het vaststellen van de identiteit van een **actor** |
 | **autorisatie** | aan een **actor** toegekende rechten |
@@ -30,8 +30,8 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | **PRA** | productrisicoanalyse |
 | **PSA** | projectstartarchitectuur |
 | **PvE** | programma van eisen |
-| **regressietest** | test die na een wijziging controleert of niet-gewijzigde delen van een systeem nog steeds correct functioneren |
-| **use case** | een afgebakende eenheid van interactie tussen een **actor** en het systeem |
+| **regressietest** | test die na een wijziging controleert of niet-gewijzigde delen van de software nog steeds correct functioneren |
+| **use case** | een afgebakende eenheid van interactie tussen een **actor** en de software |
 | **TVA** | thread and vulnerability assessment |
 | **VIR** | Voorschrift Informatiebeveiliging Rijksdienst |
 | **VIR-BI** | Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie |

@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "node-pandoc": "^0.3.0",
-    "npm": "^6.10.3"
+    "npm": "^6.13.4"
   },
   "devDependencies": {
     "extract-json": "^0.2.0",

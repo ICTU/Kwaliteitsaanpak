@@ -15,7 +15,7 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | **GFO** | globaal functioneel ontwerp |
 | **IPO** | intern projectoverleg |
 | **ISO** | International Organization for Standardization |
-| **ISR** | ICTU Softwarerealisatie, afdeling van ICTU die maatwerksoftwareprojecten ondersteunt |
+| **ISR** | ICTU Softwarerealisatie, afdeling van ICTU die softwareontwikkelprojecten ondersteunt |
 | **Jira** | tool om **use cases**, user stories, logische testgevallen en issues vast te leggen |
 | **KPI** | key performance indicator |
 | **minimum viable product** | de eerste versie van een product of dienst, die zo vroeg mogelijk wordt uitgerold naar de opdrachtgever; het bevat net voldoende functionaliteit om het gestelde doel te behalen, en niet meer dan dat |
@@ -30,14 +30,9 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | **PRA** | productrisicoanalyse |
 | **PSA** | projectstartarchitectuur |
 | **PvE** | programma van eisen |
-<<<<<<< Updated upstream
-| **regressietest** | test die na een wijziging controleert of niet-gewijzigde delen van de software nog steeds correct functioneren |
-| **use case** | een afgebakende eenheid van interactie tussen een **actor** en de software |
-=======
 | **regressietest** | test die na een wijziging controleert of niet-gewijzigde delen van een systeem nog steeds correct functioneren |
 | **softwareontwikkeling** | een activiteit die nieuwe software maakt en/of bestaande software aanpast |
 | **use case** | een afgebakende eenheid van interactie tussen een **actor** en het systeem |
->>>>>>> Stashed changes
 | **TVA** | thread and vulnerability assessment |
 | **VIR** | Voorschrift Informatiebeveiliging Rijksdienst |
 | **VIR-BI** | Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie |

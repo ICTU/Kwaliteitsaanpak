@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M01/Definitie.md"
 
-ICTU hanteert de volgende documenten, templates en documentstandaarden voor softwareprojecten:
+ICTU hanteert de volgende documenten, templates en documentstandaarden voor softwareontwikkelprojecten:
 
 **Functionele eisen**
 De beschrijving van functionele eisen bestaat uit een geprioriteerde backlog met epics en/of user stories, eventueel aangevuld met use cases. De beschrijving bevat tevens eisen voor ondersteuning van beheerfuncties, die door de beoogd beheerder gesteld worden, en voor logging, inclusief de globale inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen.

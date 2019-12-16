@@ -133,7 +133,7 @@ def create_checklist(workbook):
     worksheet.merge_range(
         "A1:D1",
         "Onderstaande checklist kan gebruikt worden voor het uitvoeren van een assessment tegen de "
-        "Kwaliteitsaanpak ICTU Software Realisatie {0}.".format(version.lower()), header_format)
+        "ICTU Kwaliteitsaanpak Softwareontwikkeling {0}.".format(version.lower()), header_format)
     worksheet.set_row(0, 30)
     worksheet.set_row(header_row, 30)
     for column, (header, width) in enumerate([("Maatregel", 12), ("Omschrijving", 70),

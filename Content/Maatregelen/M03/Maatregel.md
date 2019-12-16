@@ -1,4 +1,4 @@
-## M03: Het project voldoet traceerbaar aan eisen
+## M03: Het project zorgt dat het product traceerbaar aan eisen voldoet
 
 #include "Content/Maatregelen/M03/Definitie.md"
 

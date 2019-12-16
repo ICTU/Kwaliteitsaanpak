@@ -11,7 +11,7 @@ De {{TITLE}} helpt opdrachtgevers van maatwerksoftware het belang van burgers en
 
 We delen wat we goed kunnen door:
 
-* geleerde lessen te verwerken in deze Kwaliteitsaanpak ({{M11}}) en die te delen tussen projecten ({{M24}}) en te publiceren via [http://www.ictu.nl/kwaliteitsaanpak](http://www.ictu.nl/kwaliteitsaanpak) ({{M12}});
+* geleerde lessen te verwerken in deze Kwaliteitsaanpak ({{M11}}), die te delen tussen projecten en te publiceren via [http://www.ictu.nl/kwaliteitsaanpak](http://www.ictu.nl/kwaliteitsaanpak) ({{M12}});
 * de tools die we ontwikkelen ter ondersteuning van softwareontwikkelprojecten zoveel mogelijk als open source beschikbaar te stellen ({{M15}}).
 
 We gebruiken wat anderen beter doen door:

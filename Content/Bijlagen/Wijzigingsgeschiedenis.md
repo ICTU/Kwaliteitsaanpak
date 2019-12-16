@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.0, 16 december 2019
+### Versie 2.0, 2 januari 2020
 
 * Naam van de Kwaliteitsaanpak veranderd van "Kwaliteitsaanpak ICTU Software Realisatie" naar "ICTU Kwaliteitsaanpak Softwareontwikkeling". Waar relevant "softwarerealisatie" veranderd in "softwareontwikkeling".
 * Maatregelen, waar mogelijk, compacter geformuleerd.
@@ -9,7 +9,8 @@
 * M02, M08 en M16: Naast HQ ook Quality-time vermeld.
 * M08: Toegevoegd dat projecten regelmatig en voldoende tijd besteden aan het voorkomen en oplossen van technische schuld.
 * M16: Versiebeheer toegevoegd, met als concrete tools GitLab en TFS.
-* M22 verwijderd.
+* M22: Verwijderd.
+* M24: Verwijderd.
 * M29: Nieuwe maatregel voor het verantwoord starten van projecten.
 * Termen aangepast: 'projectverantwoordelijke' is vervangen door 'projectleider', 'projectenorganisatie' en 'projectorganisatie' door 'ICTU' en 'realiserend team' door 'projectteam'.
 * Actielijst toegevoegd aan self-assessment spreadsheet.

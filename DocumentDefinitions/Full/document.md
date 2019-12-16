@@ -60,8 +60,6 @@
 
 #include "Content/Maatregelen/M12/Maatregel.md"
 
-#include "Content/Maatregelen/M24/Maatregel.md"
-
 # Bijlagen
 
 #include "Content/Bijlagen/Manifest-Maatregelen.md"

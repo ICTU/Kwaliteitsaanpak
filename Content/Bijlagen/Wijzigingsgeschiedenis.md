@@ -16,6 +16,7 @@
 * Waar relevant bij de rationale van maatregelen verwezen naar overeenkomende risicobeheersmaatregelen uit de NPR 5326.
 * Referenties aan de Baseline Informatiebeveiliging Rijksdienst (BIR) omgezet naar de Baseline Informatiebeveiliging Overheid (BIO).
 * Tekstuele en stilistische verbeteringen.
+* De beschrijving van de rollen van Software Delivery Manager en Kwaliteitsmanager aangescherpt.
 
 ### Versie 1.3.1, 1 mei 2019
 

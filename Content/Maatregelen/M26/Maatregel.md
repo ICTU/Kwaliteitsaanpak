@@ -1,4 +1,4 @@
-## M26: Het project laat periodiek de beveiliging van de ontwikkelde software beoordelen
+## M26: Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen
 
 #include "Content/Maatregelen/M26/Definitie.md"
 

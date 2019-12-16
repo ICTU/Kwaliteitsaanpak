@@ -1,4 +1,4 @@
-## M02: Het project voldoet continu aan de kwaliteitsnormen
+## M02: Het porject zorgt dat het product continu aan de kwaliteitsnormen voldoet
 
 #include "Content/Maatregelen/M02/Definitie.md"
 

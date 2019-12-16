@@ -1,4 +1,4 @@
-## M04: Het project gebruikt geautomatiseerde regressietests
+## M04: Het project borgt de correcte werking van het product met geautomatiseerde regressietests
 
 #include "Content/Maatregelen/M04/Definitie.md"
 

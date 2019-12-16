@@ -1,4 +1,4 @@
-## M07: Het project gebruikt een continuous delivery pipeline met vaste onderdelen
+## M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren
 
 #include "Content/Maatregelen/M07/Definitie.md"
 

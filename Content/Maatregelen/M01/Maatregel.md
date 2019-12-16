@@ -1,4 +1,4 @@
-## M01: Het project levert in elke fase vastgestelde informatie vast
+## M01: Het project levert in elke fase vastgestelde informatie over het product op
 
 #include "Content/Maatregelen/M01/Definitie.md"
 
@@ -36,7 +36,7 @@ Zie [http://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog](http:
 **Ontwerp en architectuur**
 De ontwerp- en architectuurdocumentatie beschrijft de opzet van de te bouwen software in de context waarbinnen het moet opereren en de ontwerpkeuzes en -principes die zijn gevolgd. Die documentatie laat tevens zien hoe het systeem aan de gestelde functionele en niet-functionele eisen voldoet.
 
-Ontwerp- en architectuurinformatie kan haar plaats vinden in verschillende documenten en producten, zoals een projectstartarchitectuur (PSA), een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) en een prototype en/of interactieontwerp. 
+Ontwerp- en architectuurinformatie kan haar plaats vinden in verschillende documenten en producten, zoals een projectstartarchitectuur (PSA), een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) en een prototype en/of interactieontwerp.
 
 Een projectstartarchitectuur is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. Een PSA bevat in ieder geval de volgende onderwerpen:
 

@@ -152,7 +152,7 @@ docker-compose run dotnet
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
-generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "ICTU Kwaliteitsaanpak Software Realisatie"
+generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "ICTU Kwaliteitsaanpak Softwareontwikkeling"
 generate-template Template Template-Generiek "Generiek Template"
 generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"

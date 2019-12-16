@@ -30,8 +30,14 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | **PRA** | productrisicoanalyse |
 | **PSA** | projectstartarchitectuur |
 | **PvE** | programma van eisen |
+<<<<<<< Updated upstream
 | **regressietest** | test die na een wijziging controleert of niet-gewijzigde delen van de software nog steeds correct functioneren |
 | **use case** | een afgebakende eenheid van interactie tussen een **actor** en de software |
+=======
+| **regressietest** | test die na een wijziging controleert of niet-gewijzigde delen van een systeem nog steeds correct functioneren |
+| **softwareontwikkeling** | een activiteit die nieuwe software maakt en/of bestaande software aanpast |
+| **use case** | een afgebakende eenheid van interactie tussen een **actor** en het systeem |
+>>>>>>> Stashed changes
 | **TVA** | thread and vulnerability assessment |
 | **VIR** | Voorschrift Informatiebeveiliging Rijksdienst |
 | **VIR-BI** | Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie |

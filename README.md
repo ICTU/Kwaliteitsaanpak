@@ -1,4 +1,4 @@
-# ICTU Kwaliteitsaanpak Software Realisatie
+# ICTU Kwaliteitsaanpak Softwareontwikkeling
 
 ICTU's Kwaliteitsaanpak is a set of guidelines used at [ICTU](https://www.ictu.nl/) for software development projects.
 

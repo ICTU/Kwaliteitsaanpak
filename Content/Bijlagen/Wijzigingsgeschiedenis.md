@@ -1,7 +1,10 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.0, 30 november 2019
+### Versie 2.0, 16 december 2019
+
+* Naam van de Kwaliteitsaanpak veranderd van "Kwaliteitsaanpak ICTU Software Realisatie" naar "ICTU Kwaliteitsaanpak Softwareontwikkeling". Waar relevant "softwarerealisatie" veranderd in "softwareontwikkeling".
 * Maatregelen, waar mogelijk, compacter geformuleerd.
+* Maatregelen herverdeeld over de drie maatregelhoofdstukken.
 * M01: Toelichting op documenten, maatregel beknopter.
 * M02, M08 en M16: Naast HQ ook Quality-time vermeld.
 * M08: Toegevoegd dat projecten regelmatig en voldoende tijd besteden aan het voorkomen en oplossen van technische schuld.

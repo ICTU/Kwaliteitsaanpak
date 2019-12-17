@@ -16,7 +16,7 @@ services:
     volumes:
       - ${PWD}:/work
     entrypoint: bash
-  dotnet:
+  mdconvert:
     build: mdconvert
     volumes:
       - ${PWD}/mdconvert/output:/output 

@@ -1,4 +1,4 @@
-## {{KA_TITLE}}
+## De Kwaliteitsaanpak
 
 #include "Content/Inleiding-tekst.md"
 

@@ -17,7 +17,7 @@ Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende 'rolle
 * Projectorganisatie: ICTU,
 * Hoofd projectorganisatie: directeur Projecten,
 * Projectleider: de verantwoordelijke voor uitvoering van het project,
-* Software Delivery Manager: verantwoordelijk voor de softwareontwikkelings- en/of onderhoudswerkzaamheden binnen het project,
-* Kwaliteitsmanager: projectmedewerker belast met de controle op en borging van kwaliteit, aangesteld door de projectleider.
+* Software Delivery Manager: organiseert het ontwikkelen en opleveren van software conform de vastgestelde eisen en de Kwaliteitsaanpak, rapporteert aan de projectleider,
+* Kwaliteitsmanager: controleert en borgt de kwaliteit van software conform de vastgestelde kwaliteitseisen en de Kwaliteitsaanpak, rapporteert aan de projectleider.
 
-Projecten bij ICTU die software ontwikkelen volgens deze Kwaliteitsaanpak, kunnen ondersteuning krijgen van de afdeling ICTU Softwarerealisatie (ISR). Deze ondersteunende afdeling is dus niet verantwoordelijk voor de projectuitvoering, maar voor het bieden van diensten om projecten in staat te stellen efficiënt en effectief volgens de Kwaliteitsaanpak te werken.
+Projecten bij ICTU die software ontwikkelen en/of onderhouden volgens deze Kwaliteitsaanpak, kunnen ondersteuning krijgen van de afdeling ICTU Softwarerealisatie (ISR). Deze ondersteunende afdeling is dus niet verantwoordelijk voor de projectuitvoering, maar voor het bieden van diensten om projecten in staat te stellen efficiënt en effectief volgens de Kwaliteitsaanpak te werken.

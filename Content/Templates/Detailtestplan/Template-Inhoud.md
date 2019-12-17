@@ -14,13 +14,13 @@ Binnen het project worden door ICTU de volgende testsoorten onderscheiden en toe
 
 * Functionele testen:
     + **Smoke test:** Dit is een snelle geautomatiseerde test met weinig diepgang. Deze test wordt uitgevoerd om een build te valideren. Fouten tijdens deze test worden aangemerkt als bouwfouten.
-    + **Geautomatiseerde regressietest (ART):** Dit is een uitputtende geautomatiseerde test die aantoont dat de bestaande, niet aangepaste functionaliteit nog steeds juist werkt. 
+    + **Geautomatiseerde regressietest (ART):** Dit is een uitputtende geautomatiseerde test die aantoont dat de bestaande, niet aangepaste functionaliteit nog steeds juist werkt.
     + **Handmatig testen van nieuwe functionaliteit:** Het handmatig uitvoeren van fysieke testgevallen om de werking van de nieuwgebouwde functionaliteit te testen.
     + **Handmatig regressietesten:** Het handmatig uitvoeren van fysieke testgevallen om de werking van de bestaande functionaliteit te controleren. Deze testgevallen zijn veelal te complex om te automatiseren.
 
 * Niet-functionele testen:
     + **Performancetesten:** Het testen van de snelheid van afhandeling van bepaalde functies van het systeem onder een vooraf gedefinieerde belasting. Performancetesten vinden bij voorkeur plaats in een productie-like omgeving, maar kunnen ook in een niet-productie-like omgeving plaatsvinden ten behoeve van het volgen van de relatieve performance van verschillende versies van de software. Er vinden zowel een loadtest (normale en piekbelasting), als een duurtest (normale belasting voor langere tijd), als een stresstest (verhogen van de belasting totdat het systeem het begeeft) plaats. De Kwaliteitsaanpak schrijft voor dat er tijdens de realisatiefase performancetesten worden uitgevoerd. Deze worden bij voorkeur automatisch gegenereerd. Belangrijk is dat de performancetest die op de testomgeving wordt uitgevoerd, niet vanzelfsprekend representatief is voor de productieomgeving. Dit betekent dat een opdrachtgever op de eigen productieomgeving een performancetest moet uitvoeren om te controleren dat er aan de gestelde performance-eisen is voldaan.
-    + **Securitytesten:** Security- en penetratietesten uitgevoerd door een externe partij. Normaliter worden deze minimaal twee maal per jaar of met elke grote release uitgevoerd en niet elke sprint. Securitytesten vinden bij voorkeur plaats in een productie-like omgeving, maar kunnen ook in een niet-productie-like omgeving plaatsvinden ten behoeve van het testen van de beveiliging van de software zelf. De securitytest is inclusief een review van de broncode. Tijdens de realisatie draaien standaard al de volgende securitytesttools mee in de geautomatiseerde pijplijn: Checkmarx, OWASP dependency checker, OWASP ZAP en OpenVAS; de bevindingen die uit deze tools komen worden meteen tijdens de realisatie van het systeem opgepakt. 
+    + **Securitytesten:** Security- en penetratietesten uitgevoerd door een externe partij. Normaliter worden deze minimaal twee maal per jaar of met elke grote release uitgevoerd en niet elke sprint. Securitytesten vinden bij voorkeur plaats in een productie-like omgeving, maar kunnen ook in een niet-productie-like omgeving plaatsvinden ten behoeve van het testen van de beveiliging van de software zelf. De securitytest is inclusief een review van de broncode. Tijdens de realisatie draaien standaard al de volgende securitytesttools mee in de geautomatiseerde pijplijn: Checkmarx, OWASP dependency checker, OWASP ZAP en OpenVAS; de bevindingen die uit deze tools komen worden meteen tijdens de realisatie van het systeem opgepakt.
 
 * **Integratietesten:** Tijdens deze test wordt de onderlinge verwerkingswijze tussen de verschillende applicaties getest. Denk hierbij aan gewijzigde applicaties die samen werken met ongewijzigde applicaties. Indien van toepassing zullen hier ook externe systemen bij betrokken worden, in de vorm van stubs. Integratietesten zijn normaal gesproken geautomatiseerde tests. Als onderdeel van de integratietesten wordt getest of de software kan omgaan met fouten in andere applicaties en na een herstart goed blijft functioneren.
 
@@ -71,7 +71,7 @@ Aan het eind van de sprint zal er alleen functionaliteit overgedragen worden die
 
 {Neem hieronder alleen testomgevingen op die voor het project van toepassing zijn.}
 
-De onderstaande testomgevingen zijn inzetbaar voor het project:
+Conform BIO-12.1.4 zijn productieomgevingen gescheiden van testomgevingen en wordt er niet getest in productieomgevingen. De onderstaande testomgevingen zijn inzetbaar voor het project:
 
 * **Ontwikkelomgeving:** Op deze omgeving wordt de smoketest uitgevoerd;
 * **Testomgeving:** Handmatig testen van nieuwe functionaliteit en het automatiseren van handmatig uitgevoerde testen om op te nemen in de ART;
@@ -89,6 +89,7 @@ ICTU beschikt over een private cloud waarin deze omgevingen allemaal kunnen word
 {Geef alleen de tools weer die voor het project van toepassing zijn en vul aan waar nodig.}
 
 Tijdens het testen worden de onderstaande tools gebruikt:
+
 * **Axe:** Axe is een testtool voor de Web Content Accessibility Guidelines.
 * **Selenium:** Web UI driver library, wordt gebruikt om de browser aan te sturen vanuit de ART.
 * **Jenkins:** Jenkins is een Continuous Integration (CI) server die wordt gebruikt om de ART uit te voeren.
@@ -97,7 +98,7 @@ Tijdens het testen worden de onderstaande tools gebruikt:
 
 ## Testdata
 
-In de ontwikkel-, test- en regressietestomgevingen wordt nagemaakte testdata gebruikt. In de integratie- en performanceomgevingen wordt geanonimiseerde productiedata gebruikt. Deze richtlijnen zijn bedoeld om privacy te waarborgen.
+Conform BIO-14.3 wordt er niet met productiedata getest. In de ontwikkel-, test- en regressietestomgevingen wordt nagemaakte testdata gebruikt. In de integratie- en performanceomgevingen wordt gegenereerde testdata of eventueel geanonimiseerde productiedata gebruikt. Deze richtlijnen zijn bedoeld om privacy te waarborgen.
 
 Er worden drie soorten data onderscheiden:
 
@@ -158,9 +159,10 @@ De volgende testartifacten worden bij een release opgeleverd:
 
 {@@En het onderstaande hoort in het projectplan - en dus niet hier:}
 
-Go/No-go-beslissing 
+Go/No-go-beslissing
 {Geef hier de onderwerpen weer die voor het project van toepassing zijn}
 De Go/No-go-beslissing wordt ondersteund door een managementsamenvatting die de beslissing om wel of niet in productie te nemen onderbouwt. Het bestaat uit de volgende onderwerpen:
+
 * ART uitgevoerd, aantal testcases,
 * Handmatig uitgevoerde tests,
 * Integratietesten,

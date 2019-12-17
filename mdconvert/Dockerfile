@@ -16,5 +16,5 @@ FROM mcr.microsoft.com/dotnet/core/runtime:3.0 AS runtime
 WORKDIR /app/out
 COPY --from=build /app/out ./
 RUN ls -la
-RUN chmod +x HelloWorldDotNet
-ENTRYPOINT ["./HelloWorldDotNet"]
+RUN chmod +x mdconvert
+ENTRYPOINT ["./mdconvert"]

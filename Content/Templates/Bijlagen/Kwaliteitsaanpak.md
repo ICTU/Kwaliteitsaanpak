@@ -1,4 +1,4 @@
-## ICTU Kwaliteitsaanpak Softwareontwikkeling
+## {{KA_TITLE}}
 
 #include "Content/Inleiding-tekst.md"
 

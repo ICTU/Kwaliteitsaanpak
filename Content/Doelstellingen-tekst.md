@@ -1,4 +1,4 @@
-De {{TITLE}} heeft drie doelstellingen:
+De {{KA-TITLE}} heeft drie doelstellingen:
 
 1. Opdrachtgevers helpen bekende risico's bij softwareontwikkeling, zoals technische schuld, vertraging en defecten, zo veel mogelijk te voorkomen.
 

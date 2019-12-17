@@ -7,7 +7,7 @@ ICTU hanteert de volgende documenten, templates en documentstandaarden voor soft
 **Functionele eisen**
 De beschrijving van functionele eisen bestaat uit een geprioriteerde backlog met epics en/of user stories, eventueel aangevuld met use cases. De beschrijving bevat tevens eisen voor ondersteuning van beheerfuncties, die door de beoogd beheerder gesteld worden, en voor logging, inclusief de globale inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen.
 
-Bronnen als een programma van eisen en projectstartarchitectuur zijn het startpunt voor de functionele eisen. Tijdens het project worden use cases in samenwerking met de product owner vertaald naar user stories.
+Bronnen als procesbeschrijvingen, een programma van eisen en projectstartarchitectuur zijn het startpunt voor de functionele eisen. Tijdens het project worden use cases in samenwerking met de product owner vertaald naar user stories.
 
 **Niet-functionele eisen**
 Niet-functionele eisen specificeren criteria om het functioneren van de software te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Voor de beschrijving en onderverdeling van niet-functionele eisen gebruikt ICTU:
@@ -16,11 +16,13 @@ Niet-functionele eisen specificeren criteria om het functioneren van de software
 * Wbni (Wet beveiliging netwerk- en informatiesystemen),
 * BIO (Baseline Informatiebeveiliging Overheid),
 * methode Grip op SSD (Secure Software Development) van het CIP (Centrum Informatiebeveiliging en Privacybescherming),
-* hoofdstuk 9 van de Europese Standaard EN 301 549 - dit  is gelijk aan de Web Content Accessibility Guidelines versie 2.1, niveau A en AA.
+* hoofdstuk 9 van de Europese Standaard EN 301 549 - dit is gelijk aan de Web Content Accessibility Guidelines versie 2.1, niveau A en AA.
 
 De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties. Bepaalde niet-functionele eisen kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door deze eisen expliciet in de voorfase te benoemen, wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.
 
 Overheidsorganisaties moeten een [toegankelijkheidsverklaring](https://www.digitoegankelijk.nl/verklaring) op hun websites plaatsen. Indien gewenst ondersteunt ICTU bij het opstellen van de toegankelijkheidsverklaring.
+
+Bronnen als procesbeschrijvingen, beheeracceptatiecriteria, beveiligingsbeleid, programma van eisen en projectstartarchitectuur zijn het startpunt voor de niet-functionele eisen.
 
 **Product backlog**
 De product backlog is een overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:

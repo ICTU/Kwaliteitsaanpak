@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Generate Kwaliteitsaanpak
 
 on: [push]
 
@@ -10,5 +10,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build the Kwaliteitsaanpak
+    - name: Generate artifacts
       run: docker-compose up ka
+    - name: Archive generated artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: dist
+        path: dist

@@ -20,4 +20,3 @@ services:
     build: mdconvert
     volumes:
       - ${PWD}/mdconvert/output:/output 
-    

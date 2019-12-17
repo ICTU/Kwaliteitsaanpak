@@ -20,7 +20,7 @@ services:
     build: dotnet-helloworld
     volumes:
       - ${PWD}/dotnet-helloworld/output:/output 
-  dotnet:
+  mdconvert:
     build: mdconvert
     volumes:
       - ${PWD}/mdconvert/output:/output 

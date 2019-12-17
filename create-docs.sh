@@ -147,7 +147,7 @@ function generate-template
     generate $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
-docker-compose run dotnet
+docker-compose run mdconvert
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS

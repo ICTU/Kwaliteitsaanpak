@@ -90,7 +90,7 @@ function generate
 
     # Create dictionary
     cat $7 > $DICTIONARY
-    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n{{KA-TITLE}}=$KA_TITLE\n" >> $DICTIONARY
+    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n{{KA-TITLE}}=$KA_TITLE\n{{KA_TITLE}}=$KA_TITLE\n{{KWALITEITSAANPAK}}=$KA_TITLE\n" >> $DICTIONARY
     echo "--- dictionary created: $DICTIONARY"
 
     # Expand MD file

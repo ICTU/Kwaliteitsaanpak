@@ -9,7 +9,7 @@ services:
     entrypoint: bash
     command: ${PWD}/create-docs.sh
   wkhtmltopdf:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.wkhtmltopdf
     working_dir: /work
@@ -19,4 +19,4 @@ services:
   mdconvert:
     build: mdconvert
     volumes:
-      - ${PWD}/mdconvert/output:/output 
+      - ${PWD}:/work

@@ -15,7 +15,8 @@ MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
 function map-refsd
 {
     echo "--- map references in {$1} using {$3} to create {$2}"
-    awk -F= 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
+    #awk -F= 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
+    python3 map.py $1 $3 > $$2
 }
 
 # Expand MD file

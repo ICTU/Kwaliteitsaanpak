@@ -16,7 +16,7 @@ function map-refsd
 {
     echo "--- map references in {$1} using {$3} to create {$2}"
     #awk -F= 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
-    python3 map.py $1 $3 > $$2
+    python3 map.py $1 $3 > $2
 }
 
 # Expand MD file
@@ -150,7 +150,7 @@ function generate-template
     generate $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
-docker-compose run dotnet
+docker-compose run mdconvert
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS

@@ -9,19 +9,11 @@ namespace mdconvert
     class Program
     {
         private const string APP_NAME = "MDCONVERT";
-        private const string APP_PREFIX = APP_NAME+": ";
+        private const string APP_PREFIX = APP_NAME + ": ";
 
         static int Main(string[] args)
-        {    
-            DocumentSettings documentSettings = new DocumentSettings()
-            {
-                Title = "No title",
-                DocumentType = DocumentType.Generic,
-                IncludeMarkdownSource = false,
-                IncludeFrontPage = true,
-                IncludeTableOfContents = true,
-                ImagePath = "Images"
-            };
+        {
+            DocumentSettings documentSettings;
 
             if (args.Length == 1)
             {

@@ -14,6 +14,12 @@ jobs:
       - store_artifacts:
           path: dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx
       - store_artifacts:
+          path: build/Templates/Kwaliteitsplan/Template-Kwaliteitsplan-expanded.md
+      - store_artifacts:
+          path: dist/Template-Kwaliteitsplan-expanded.xml
+      - store_artifacts:
+          path: dist/Template-Kwaliteitsplan-expanded.docx
+      - store_artifacts:
           path: dist/Template-Kwaliteitsplan.docx
       - store_artifacts:
           path: dist/Template-Niet-Functionele-Eisen.docx
@@ -25,5 +31,3 @@ jobs:
           path: dist/Template-Detailtestplan.docx
       - store_artifacts:
           path: dist/Template-Generiek.docx
-      - store_artifacts:
-          path: build/Templates/Template/Template-Generiek-expanded.md

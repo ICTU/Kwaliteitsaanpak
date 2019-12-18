@@ -7,7 +7,7 @@
     "IncludeMarkdownSource": false,
     "IncludeTableOfContents": true,
     "ImagePath": "/work/Content/Images",
-    "DocxReferenceFile": "/work/reference.docx",
+    "DocxReferenceFile": "/work/DocumentDefinitions/reference2.docx",
     "OutputFormats": [
         "docx"
     ]

@@ -5,6 +5,8 @@ echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date
 
 mkdir -p build
 
+KA_TITLE="ICTU Kwaliteitsaanpak Softwareontwikkeling"
+
 MAATREGEL_DICTIONARY="build/maatregel-dictionary.txt"
 MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
 
@@ -13,7 +15,8 @@ MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
 function map-refsd
 {
     echo "--- map references in {$1} using {$3} to create {$2}"
-    awk -F= 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
+    #awk -F= 'FNR==NR{a[$1]=$2;next} {for (i in a)sub(i, a[i]);print}' $3 $1 > $2
+    python3 map.py $1 $3 > $2
 }
 
 # Expand MD file
@@ -88,7 +91,7 @@ function generate
 
     # Create dictionary
     cat $7 > $DICTIONARY
-    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n" >> $DICTIONARY
+    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n{{KA-TITLE}}=$KA_TITLE\n{{KA_TITLE}}=$KA_TITLE\n{{KWALITEITSAANPAK}}=$KA_TITLE\n" >> $DICTIONARY
     echo "--- dictionary created: $DICTIONARY"
 
     # Expand MD file
@@ -147,12 +150,12 @@ function generate-template
     generate $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
-docker-compose run dotnet
+docker-compose run mdconvert
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
-generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "ICTU Kwaliteitsaanpak Softwareontwikkeling"
+generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "$KA_TITLE"
 generate-template Template Template-Generiek "Generiek Template"
 generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"

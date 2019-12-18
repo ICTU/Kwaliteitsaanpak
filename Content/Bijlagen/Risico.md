@@ -1,6 +1,6 @@
 ## Risico's van softwareontwikkeling
 
-Softwareontwikkeling brengt risico's met zich mee. De {{TITLE}} beoogt een deel van die risico's te mitigeren. Deze bijlage geeft een overzicht van algemene, veelvoorkomende risico's; voor elk risico is aangegeven door welke maatregel(en) uit de Kwaliteitsaanpak ze worden verminderd.
+Softwareontwikkeling brengt risico's met zich mee. De {{KWALITEITSAANPAK}} beoogt een deel van die risico's te mitigeren. Deze bijlage geeft een overzicht van algemene, veelvoorkomende risico's; voor elk risico is aangegeven door welke maatregel(en) uit de Kwaliteitsaanpak ze worden verminderd.
 
 | Risico | Maatregelen Kwaliteitsaanpak |
 |:-----|:------------|

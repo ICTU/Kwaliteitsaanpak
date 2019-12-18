@@ -1,0 +1,14 @@
+{
+    "InputFile": "/work/build/Templates/Kwaliteitsplan/Template-Kwaliteitsplan-expanded.md",
+    "OutputPath": "/work/dist/",
+    "Title": "Kwaliteitsplan",
+    "DocumentType": "Template",
+    "IncludeFrontPage": true,
+    "IncludeMarkdownSource": false,
+    "IncludeTableOfContents": true,
+    "ImagePath": "/work/Content/Images",
+    "DocxReferenceFile": "/work/reference.docx",
+    "OutputFormats": [
+        "docx"
+    ]
+}

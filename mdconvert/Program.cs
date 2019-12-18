@@ -8,8 +8,11 @@ namespace mdconvert
 {
     class Program
     {
+        private const string APP_NAME = "MDCONVERT";
+        private const string APP_PREFIX = APP_NAME+": ";
+
         static int Main(string[] args)
-        {
+        {    
             DocumentSettings documentSettings = new DocumentSettings()
             {
                 Title = "No title",
@@ -26,7 +29,7 @@ namespace mdconvert
 
                 if (!File.Exists(settingsFile))
                 {
-                    Console.WriteLine($"File not found: '{settingsFile}'");
+                    Console.WriteLine($"{APP_PREFIX}File not found: '{settingsFile}'");
                     return 1;
                 }
 
@@ -37,25 +40,25 @@ namespace mdconvert
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"Exception during reading document settings: {e.Message}");
+                    Console.WriteLine($"{APP_PREFIX}Exception during reading document settings: {e.Message}");
                     return 1;
                 }
             }         
             else
             {
-                Console.WriteLine("USAGE: mdconvert <document settings file>");
+                Console.WriteLine($"USAGE: {APP_NAME} <document settings file>");
                 return 1;
             }
 
             if (string.IsNullOrWhiteSpace(documentSettings.InputFile))
             {
-                Console.WriteLine($"Error: missing input file name");
+                Console.WriteLine($"{APP_PREFIX}Missing input file name");
                 return 1;
             }
 
             if (!File.Exists(documentSettings.InputFile))
             {
-                Console.WriteLine($"Error: file not found '{documentSettings.InputFile}'");
+                Console.WriteLine($"{APP_PREFIX}File not found '{documentSettings.InputFile}'");
                 return 1;
             }
 
@@ -64,14 +67,14 @@ namespace mdconvert
 
             try
             {
-                Console.WriteLine($"Converting file '{documentSettings.InputFile}' using settings:");
-                Console.WriteLine($"....Title = '{documentSettings.Title}'");
-                Console.WriteLine($"....Type = {documentSettings.DocumentType}");
-                Console.WriteLine($"....Include front page = {documentSettings.IncludeFrontPage}");
-                Console.WriteLine($"....Include Markdown source = {documentSettings.IncludeMarkdownSource}");
-                Console.WriteLine($"....Include table of contents = {documentSettings.IncludeTableOfContents}");
-                Console.WriteLine($"....Image path = {documentSettings.ImagePath}");
-                Console.Write("....Output formats = {");
+                Console.WriteLine($"{APP_PREFIX}Converting file '{documentSettings.InputFile}' using settings:");
+                Console.WriteLine($"{APP_PREFIX}....Title = '{documentSettings.Title}'");
+                Console.WriteLine($"{APP_PREFIX}....Type = {documentSettings.DocumentType}");
+                Console.WriteLine($"{APP_PREFIX}....Include front page = {documentSettings.IncludeFrontPage}");
+                Console.WriteLine($"{APP_PREFIX}....Include Markdown source = {documentSettings.IncludeMarkdownSource}");
+                Console.WriteLine($"{APP_PREFIX}....Include table of contents = {documentSettings.IncludeTableOfContents}");
+                Console.WriteLine($"{APP_PREFIX}....Image path = {documentSettings.ImagePath}");
+                Console.Write($"{APP_PREFIX}....Output formats = {{");
 
                 foreach (DocumentFormat format in documentSettings.OutputFormats)
                 {
@@ -81,17 +84,17 @@ namespace mdconvert
 
                 if (documentSettings.OutputFormats.Contains(DocumentFormat.Docx))
                 {
-                    Console.WriteLine($"....Docx reference file = {documentSettings.DocxReferenceFile}");
+                    Console.WriteLine($"{APP_PREFIX}....docx reference file = {documentSettings.DocxReferenceFile}");
                 }
 
-                Console.WriteLine($">> Converting file '{documentSettings.InputFile}' to '{xmlFile}'");
+                Console.WriteLine($"{APP_PREFIX}Converting file '{documentSettings.InputFile}' to '{xmlFile}'");
                 MarkdownConverter converter = new MarkdownConverter();
                 string result = converter.ConvertFile(documentSettings.InputFile, documentSettings);
                 WriteOutput(result, xmlFile);
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Exception while converting Markdown: {e.Message}");
+                Console.WriteLine($"{APP_PREFIX}Exception while converting Markdown: {e.Message}");
                 return 1;
             }
 
@@ -118,25 +121,25 @@ namespace mdconvert
                         break;
 
                     default:
-                        Console.WriteLine($"Warning: unknown output format: '{format}'");
+                        Console.WriteLine($"{APP_PREFIX}Warning: unknown output format: '{format}'");
                         continue;
                 }
 
                 if (!File.Exists(xmlFile))
                 {
-                    Console.WriteLine($"File not found: '{xmlFile}'");
+                    Console.WriteLine($"{APP_PREFIX}File not found: '{xmlFile}'");
                     return 1;
                 }
 
                 try
                 {
-                    Console.WriteLine($">> Converting file '{xmlFile}' to '{outputFilename}'");
+                    Console.WriteLine($"{APP_PREFIX}Converting file '{xmlFile}' to '{outputFilename}'");
                     XMLConverter converter = new XMLConverter(xmlFile);
                     converter.Convert(builder, documentSettings);
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"Exception during conversion: {e.Message}");
+                    Console.WriteLine($"{APP_PREFIX}Exception during conversion: {e.Message}");
                     return 1;
                 }
             }

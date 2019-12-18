@@ -95,6 +95,7 @@ namespace mdconvert
 
             foreach (DocumentFormat format in documentSettings.OutputFormats)
             {
+                builder = null;
                 switch (format)
                 {
                     case DocumentFormat.Markdown:
@@ -109,7 +110,15 @@ namespace mdconvert
 
                     case DocumentFormat.Docx:
                         outputFilename = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "docx"));
-                        builder = new DocxBuilder(outputFilename, documentSettings.DocxReferenceFile);
+
+                        if (!File.Exists(documentSettings.DocxReferenceFile))
+                        {
+                            Console.WriteLine($"{APP_PREFIX}Docx reference file not found: {documentSettings.DocxReferenceFile}");
+                        }
+                        else
+                        {
+                            builder = new DocxBuilder(outputFilename, documentSettings.DocxReferenceFile);
+                        }
                         break;
 
                     default:
@@ -123,16 +132,19 @@ namespace mdconvert
                     return 1;
                 }
 
-                try
+                if (builder != null)
                 {
-                    Console.WriteLine($"{APP_PREFIX}Converting file '{xmlFile}' to '{outputFilename}'");
-                    XMLConverter converter = new XMLConverter(xmlFile);
-                    converter.Convert(builder, documentSettings);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"{APP_PREFIX}Exception during conversion: {e.Message}");
-                    return 1;
+                    try
+                    {
+                        Console.WriteLine($"{APP_PREFIX}Converting file '{xmlFile}' to '{outputFilename}'");
+                        XMLConverter converter = new XMLConverter(xmlFile);
+                        converter.Convert(builder, documentSettings);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"{APP_PREFIX}Exception during conversion: {e.Message}");
+                        return 1;
+                    }
                 }
             }
 

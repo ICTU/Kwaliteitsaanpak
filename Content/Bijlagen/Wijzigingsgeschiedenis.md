@@ -12,6 +12,7 @@
 * M22: Verwijderd.
 * M24: Verwijderd.
 * M29: Nieuwe maatregel voor het verantwoord starten van projecten.
+* M30: Nieuwe maatregel voor risicomanagement.
 * Termen aangepast: 'projectverantwoordelijke' is vervangen door 'projectleider', 'projectenorganisatie' en 'projectorganisatie' door 'ICTU' en 'realiserend team' door 'projectteam'.
 * Actielijst toegevoegd aan self-assessment spreadsheet.
 * Waar relevant bij de rationale van maatregelen verwezen naar overeenkomende risicobeheersmaatregelen uit de NPR 5326.

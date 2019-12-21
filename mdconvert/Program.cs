@@ -8,8 +8,8 @@ namespace mdconvert
 {
     class Program
     {
-        private const string APP_NAME = "MDCONVERT";
-        private const string APP_PREFIX = APP_NAME + ": ";
+        public const string APP_NAME = "mdconvert";
+        public const string APP_PREFIX = APP_NAME + "> ";
 
         static int Main(string[] args)
         {
@@ -56,6 +56,11 @@ namespace mdconvert
 
             string filename = Path.GetFileName(documentSettings.InputFile);
             string xmlFile = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "xml"));
+
+            if (!documentSettings.ImagePath.EndsWith("/") && !documentSettings.ImagePath.EndsWith("\\"))
+            {
+                documentSettings.ImagePath = $"{documentSettings.ImagePath}/";
+            }
 
             try
             {

@@ -56,7 +56,6 @@ namespace mdconvert.Builders
 
         public void StartDocument(string title)
         {
-            Console.WriteLine("Starting html document");
             output.WriteStartElement(HtmlDocument);
             output.WriteStartElement(HtmlHead);
             output.WriteElementString(HtmlTitle, title);

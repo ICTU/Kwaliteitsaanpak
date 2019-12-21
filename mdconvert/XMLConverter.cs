@@ -94,7 +94,7 @@ namespace mdconvert
                         builder.InsertPageBreak();
                         break;
                     case Tags.TagImage:
-                        builder.InsertPicture($"{documentSettings.ImagePath}/{element.Value}");
+                        builder.InsertPicture($"{documentSettings.ImagePath}{element.Value}");
                         break;
                 }           
             }
@@ -102,9 +102,11 @@ namespace mdconvert
 
         private int ReadIntAttribute(XElement element, string name, int defaultValue)
         {
-            int result = defaultValue;
             string value = element.Attribute(name)?.Value;
-            int.TryParse(value, out result);
+            if (!int.TryParse(value, out int result))
+            {
+                result = defaultValue;
+            }
             return result;
         }
 
@@ -124,8 +126,6 @@ namespace mdconvert
                 headingParagraph = ReadParagraph(heading);
                 builder.CreateHeading(level, headingParagraph, isAppendix, context);
             }
-
-            //Console.WriteLine($"Converting section level {level}: {(headingParagraph != null ? headingParagraph.ToString() : "")}");
 
             ConvertContent(section, context, builder, documentSettings);
         }

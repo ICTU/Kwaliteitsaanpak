@@ -60,27 +60,18 @@ namespace mdconvert.Builders
             mainPart = doc.MainDocumentPart;
             if (mainPart == null)
             {
-                Console.WriteLine("mainPart == null");
+                Console.WriteLine($"{Program.APP_PREFIX}Error: mainPart == null");
             }
 
             body = mainPart.Document.Body;
             if (body == null)
             {
-                Console.WriteLine("body == null");
+                Console.WriteLine($"{Program.APP_PREFIX}Error: body == null");
             }
             body.RemoveAllChildren();
             body.AppendChild(new SectionProperties(new TitlePage() { Val = true }));
 
-            //StyleDefinitionsPart stylePart = mainPart.StyleDefinitionsPart;
-
-            //foreach (var s in stylePart.Styles.Elements<Style>())
-            //{
-            //    Console.WriteLine($"Style {s.StyleName.Val} id={s.StyleId}");
-            //}
-
             NumberingDefinitionsPart numberingDefinitionsPart = mainPart.NumberingDefinitionsPart;
-
-            //Console.WriteLine($"numberingDP={numberingDefinitionsPart}");
 
             foreach(var p in numberingDefinitionsPart.Numbering.Elements<AbstractNum>())
             {
@@ -91,12 +82,10 @@ namespace mdconvert.Builders
                         string s = l.ParagraphStyleIdInLevel.Val;
                         if (s.Equals(StyleNumberedList, StringComparison.OrdinalIgnoreCase))
                         {
-                            //Console.WriteLine($"Numbered list abstract num id = {p.AbstractNumberId}");
                             NumberedListAbstractNumId = p.AbstractNumberId;
                         }
                         else if (s.Equals(StyleBulletList, StringComparison.OrdinalIgnoreCase))
                         {
-                            //Console.WriteLine($"Bullet list abstract num id = {p.AbstractNumberId}");
                             BulletListAbstractNumId = p.AbstractNumberId;
                         }
                     }
@@ -136,13 +125,13 @@ namespace mdconvert.Builders
 
         public void BuildHeader(XParagraph header)
         {
-            Console.WriteLine($"DEBUG: creating header {header}");
+            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: creating header {header}");
 
             mainPart.DeleteParts(mainPart.HeaderParts);
 
             HeaderPart newHeaderPart = mainPart.AddNewPart<HeaderPart>();
             string headerPartId = mainPart.GetIdOfPart(newHeaderPart);
-            Console.WriteLine($"DEBUG: HeaderId= {headerPartId}");
+            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: HeaderId= {headerPartId}");
 
             Header docxHeader = new Header();
             Format(docxHeader, header, "Header", JustificationValues.Right); // new ParagraphProperties(new ParagraphStyleId() { Val = "Header" }, new Justification() { Val = JustificationValues.Right }));
@@ -164,13 +153,13 @@ namespace mdconvert.Builders
 
         public void BuildFooter()
         {
-            Console.WriteLine($"DEBUG: Creating footer");
+            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: Creating footer");
 
             mainPart.DeleteParts(mainPart.FooterParts);
 
             FooterPart newFooterPart = mainPart.AddNewPart<FooterPart>();
             string footerPartId = mainPart.GetIdOfPart(newFooterPart);
-            Console.WriteLine($"DEBUG: FooterId= {footerPartId}");
+            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: FooterId= {footerPartId}");
 
             Paragraph footerParagraph = new Paragraph(
               new ParagraphProperties(
@@ -183,25 +172,21 @@ namespace mdconvert.Builders
             Footer docxFooter = new Footer();
 
             docxFooter.AppendChild(footerParagraph);
-
-            //Format(docxFooter, footer, new ParagraphProperties(new ParagraphStyleId() { Val = "Footer" }));
             newFooterPart.Footer = docxFooter;
 
             IEnumerable<SectionProperties> sections = body.Elements<SectionProperties>();
-            //Console.WriteLine($"Adding footer to {sections.Count()} section(s)");
-
             foreach (var section in sections)
             {
                 // Delete existing references to headers and footers
                 section.RemoveAllChildren<FooterReference>();
                 // Create the new header and footer reference node
-                section.PrependChild<FooterReference>(new FooterReference() { Type = HeaderFooterValues.Default, Id = footerPartId });
+                section.PrependChild(new FooterReference() { Type = HeaderFooterValues.Default, Id = footerPartId });
             }
         }
 
         public void BuildTableOfContents()
         {
-            Console.WriteLine("DEBUG: Adding table of contents");
+            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: Adding table of contents");
 
             var sdtBlock = new SdtBlock();
             sdtBlock.InnerXml = GetTOC("Inhoudsopgave", 11);
@@ -214,7 +199,6 @@ namespace mdconvert.Builders
             string styleId = isAppendix 
                 ? AppendixHeadingLevelToStyle.GetValueOrDefault(level)
                 : HeadingLevelToStyle.GetValueOrDefault(level);
-            //Console.WriteLine($"Creating docx heading {styleId}");
 
             ParagraphProperties pp = new ParagraphProperties(new ParagraphStyleId() { Val = styleId });
             Format(body, paragraph, pp);
@@ -222,8 +206,6 @@ namespace mdconvert.Builders
 
         public void StartList(bool numbered)
         {
-            //Console.WriteLine("Starting list");
-
             NumberingInstance numberingInstance = new NumberingInstance()
             {
                 AbstractNumId = new AbstractNumId() { Val = numbered ? NumberedListAbstractNumId : BulletListAbstractNumId },
@@ -238,7 +220,6 @@ namespace mdconvert.Builders
 
         public void EndList()
         {
-            //Console.WriteLine("Ending list");
             listNumId++;
         }
 
@@ -269,8 +250,6 @@ namespace mdconvert.Builders
 
         public void CreateTable(XTable<XParagraph> table, Context context)
         {
-            //Console.WriteLine("Building table");
-
             Table t = new Table();
 
             TableProperties tblProp = new TableProperties(
@@ -313,6 +292,12 @@ namespace mdconvert.Builders
 
         public void InsertPicture(string fileName)
         {
+            if (!File.Exists(fileName))
+            {
+                Console.WriteLine($"{Program.APP_PREFIX}Image not found '{fileName}'");
+                return;
+            }
+
             float imageWidth;
             float imageHeight;
             float horizontalRes;

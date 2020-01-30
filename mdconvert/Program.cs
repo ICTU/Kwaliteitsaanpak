@@ -147,7 +147,11 @@ namespace mdconvert
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine($"{APP_PREFIX}Exception during conversion: {e.Message}");
+                        Console.WriteLine($"{APP_PREFIX}Exception during conversion: {e.Message}\nTRACE:\n{e.StackTrace}");
+                        if (e.InnerException != null)
+                        {
+                            Console.WriteLine($"INNER:\n{e.InnerException?.Message}");
+                        }
                         return 1;
                     }
                 }

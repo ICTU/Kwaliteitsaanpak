@@ -7,7 +7,8 @@ RUN apt-get update \
         libc6-dev \
         libgdiplus \
         libx11-dev \
-     && rm -rf /var/lib/apt/lists/*
+     && rm -rf /var/lib/apt/lists/* \
+     && ls /usr/lib/x86_64-linux-gnu
 
 # copy csproj and restore as distinct layers
 COPY *.csproj ./dotnetapp/

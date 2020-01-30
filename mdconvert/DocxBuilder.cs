@@ -20,7 +20,7 @@ namespace mdconvert.Builders
         private readonly WordprocessingDocument doc;
         private readonly MainDocumentPart mainPart;
         private readonly Body body;
-        private static readonly IEnumerable<XStyle> EmptyStyleList = new XStyle[0];
+        //private static readonly IEnumerable<XStyle> EmptyStyleList = new XStyle[0];
         private int listNumId = 1;
 
         private static readonly Dictionary<int, string> HeadingLevelToStyle = new Dictionary<int, string>()

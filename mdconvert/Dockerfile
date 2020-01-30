@@ -8,7 +8,7 @@ RUN apt-get update \
         libgdiplus \
         libx11-dev \
      && rm -rf /var/lib/apt/lists/* \
-     && ls /usr/lib/x86_64-linux-gnu
+     && export LD_DEBUG=libs
 
 # copy csproj and restore as distinct layers
 COPY *.csproj ./dotnetapp/

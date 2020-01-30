@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M30/Definitie.md"
 
-## Rationale
+### Rationale
 
 Een flink deel van de risico's die komen kijken bij het ontwikkelen van software zijn bekend. NPR 5326 geeft voor een deel van deze generieke risico's beheersmaatregelen. De maatregelen in deze Kwaliteitsaanpak komen grotendeels overeen met de beheersmaatregelen in NPR 5326.
 

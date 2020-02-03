@@ -6,7 +6,7 @@ Niet alle testen en controles kunnen altijd geautomatiseerd worden uitgevoerd. D
 
 ICTU voorziet door middel van de afdeling ISR in mensen en hulpmiddelen, zodat projecten deze pipeline kunnen toepassen. Projecten zijn verantwoordelijk voor de correcte werking van de pipeline.
 
-ICTU gebruikt Jenkins of TFS (Team Foundation Server) als tool voor de implementatie van de continuous delivery pipeline. De ICTU Release Manager ondersteunt de laatste stap (oplevering van het totale product).
+ICTU gebruikt Jenkins of Azure DevOps (voorheen Team Foundation Server) als tool voor de implementatie van de continuous delivery pipeline. ISR biedt de projecten een voorziening om releases van het totale product van het total product veilig op te leveren aan opdrachtgevers en beheerpartijen.
 
 ### Rationale
 

@@ -4,7 +4,7 @@
 
 ICTU adviseert en gebruikt hiervoor de volgende tools:
 
-1. Installeren van tools: Docker dashboard
+1. Installeren van tools: Docker dashboard of Portainer
 2. Projectinformatie: MediaWiki
 3. Actie- en besluitenlijsten en risicologs: Wekan
 

@@ -62,7 +62,7 @@ De testplannen bestaan uit een mastertestplan (MTP), gemaakt op basis van een pr
 
 De detailtestplannen zijn gebaseerd op het mastertestplan.
 
-Logische testgevallen worden vastgelegd in Jira en gekoppeld met use cases en user stories. Fysieke testgevallen worden vastgelegd in het formaat van de gebruikte tooling (bijvoorbeeld TestX) en gekoppeld met de logische testgevallen. Op basis hiervan worden testrapportages gegenereerd die laten zien dat alle use cases en user stories zijn getest en dat die tests zijn geslaagd.
+Logische testgevallen worden vastgelegd in Jira en gekoppeld met use cases en user stories. Fysieke testgevallen worden vastgelegd in het formaat van de gebruikte tooling en gekoppeld met de logische testgevallen. Op basis hiervan worden testrapportages gegenereerd die laten zien dat alle use cases en user stories zijn getest en dat die tests zijn geslaagd.
 
 **Informatiebeveiliging**
 Het informatiebeveiligingsplan vormt een handzaam document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en hoe die bescherming vorm krijgt. Mogelijke bronnen voor het informatiebeveiligingsplan zijn de Business Impact Analysis (BIA), Privacy Impact Analysis (PIA) en de Threat and Vulnerability Assessment (TVA). De TVA wordt tijdens de voorfase opgesteld op basis van de resultaten van de BIA, de eventuele PIA en inhoud van de ontwerp- en architectuurdocumentatie. Een TVA levert een deel van een traceerbare onderbouwing voor de te treffen beveiligingsmaatregelen.

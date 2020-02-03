@@ -40,7 +40,7 @@ def map_dictionary(input_file_name, dictionary_file_name):
         while line:
             for key in dictionary:
                 line = line.replace(key, dictionary[key])
-            print(line)
+            print(line, end="")
             line = input_file.readline()
    
 if __name__ == "__main__":

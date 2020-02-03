@@ -302,14 +302,14 @@ namespace mdconvert.Builders
             float horizontalRes = 200;
             float verticalRes = 200;
 
-            //using (FileStream pngStream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
-            //using (var image = new Bitmap(pngStream))
-            //{
-            //    imageWidth = image.Width;
-            //    imageHeight = image.Height;
-            //    horizontalRes = image.HorizontalResolution;
-            //    verticalRes = image.VerticalResolution;
-            //}
+            using (FileStream pngStream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            using (var image = new Bitmap(pngStream))
+            {
+                imageWidth = image.Width;
+                imageHeight = image.Height;
+                horizontalRes = image.HorizontalResolution;
+                verticalRes = image.VerticalResolution;
+            }
 
             ImagePart imagePart = mainPart.AddImagePart(ImagePartType.Png);
 

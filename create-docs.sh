@@ -115,7 +115,7 @@ function generate
         $HTML_BUILD $PDF_OUTPUT"
 
     # DOCX generation
-    create-word $EXPANDED $DOCX_OUTPUT $8 "$TITLE"
+    # create-word $EXPANDED $DOCX_OUTPUT $8 "$TITLE"
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.
@@ -154,12 +154,12 @@ python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "$KA_TITLE"
-# generate-template Template Template-Generiek "Generiek Template"
-# generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
-# generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
-# generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
-# generate-template HLD Template-High-Level-Design "High-Level Design"
-# generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
+generate-template Template Template-Generiek "Generiek Template"
+generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
+generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
+generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
+generate-template HLD Template-High-Level-Design "High-Level Design"
+generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 
 python3 create-checklist.py
 

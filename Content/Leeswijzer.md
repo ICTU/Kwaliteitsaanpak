@@ -8,7 +8,7 @@ Dit document '{{TITLE}}', verder ook aangeduid met 'de Kwaliteitsaanpak', is bed
 
 3. Organisatie - Het derde deel van de Kwaliteitsaanpak heeft betrekking op de overkoepelende ontwikkelorganisatie, waarbinnen projecten worden uitgevoerd: ICTU; dit gaat over de samenhang tussen projecten en de faciliteiten die projecten ter beschikking moeten hebben.
 
-De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico's die samenhangen met softwareontwikkeling te mitigeren. De bijlage [Risico's van softwareontwikkeling](#risico-s-van-softwareontwikkeling) beschrijft de relatie tussen veelvoorkomende risico's en maatregelen.
+De drie aspecten komen hieronder in meer detail aan bod in de vorm van maatregelen die ICTU heeft getroffen om de risico's die samenhangen met softwareontwikkeling te mitigeren. De bijlage [Risico's van softwareontwikkeling](#risico-s-van-softwareontwikkeling) beschrijft de relatie tussen veelvoorkomende risico's en maatregelen. Bijlage [Relatie met NEN NPR 5326](#relatie-met-nen-npr-5326) beschrijft de relatie tussen de Kwaliteitsaanpak en de praktijkrichtlijn “Risicobeheersing bij ontwikkeling en onderhoud van maatwerksoftware” (NPR 5326:2019).
 
 De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort de maatregel tot de Kwaliteitsaanpak? Waar mogelijk verwijst de rationale naar maatregelen uit standaarden en richtlijnen die overeenkomen met de door ICTU getroffen maatregelen.
 

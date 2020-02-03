@@ -1,5 +1,5 @@
 {
-    "InputFile": "/work/build/Templates/Kwaliteitsplan/Template-Kwaliteitsplan-expanded.md",
+    "InputFile": "/work/build/Templates/Kwaliteitsplan/Template-Kwaliteitsplan.md",
     "OutputPath": "/work/dist/",
     "Title": "Kwaliteitsplan",
     "DocumentType": "Template",

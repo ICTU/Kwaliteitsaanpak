@@ -1,5 +1,5 @@
 {
-    "InputFile": "/work/build/Templates/Detailtestplan/Template-Detailtestplan-expanded.md",
+    "InputFile": "/work/build/Templates/Detailtestplan/Template-Detailtestplan.md",
     "OutputPath": "/work/dist/",
     "Title": "Detailtestplan",
     "DocumentType": "Template",

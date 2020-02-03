@@ -10,4 +10,4 @@ jobs:
       - store_artifacts:
           path: dist
       - store_artifacts:
-          path: build/Templates/Kwaliteitsplan/Template-Kwaliteitsplan-expanded.md
+          path: build/Templates/Kwaliteitsplan/Template-Kwaliteitsplan.md

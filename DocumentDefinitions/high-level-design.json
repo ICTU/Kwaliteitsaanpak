@@ -1,5 +1,5 @@
 {
-    "InputFile": "/work/build/Templates/HLD/Template-High-Level-Design-expanded.md",
+    "InputFile": "/work/build/Templates/HLD/Template-High-Level-Design.md",
     "OutputPath": "/work/dist/",
     "Title": "High-Level Design",
     "DocumentType": "Template",

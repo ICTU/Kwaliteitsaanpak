@@ -139,7 +139,6 @@ namespace mdconvert.Builders
             newHeaderPart.Header = docxHeader;
 
             IEnumerable<SectionProperties> sections = body.Elements<SectionProperties>();
-            //Console.WriteLine($"DEBUG: Adding header to {sections.Count()} section(s)");
 
             foreach (var section in sections)
             {
@@ -298,19 +297,19 @@ namespace mdconvert.Builders
                 return;
             }
 
-            float imageWidth;
-            float imageHeight;
-            float horizontalRes;
-            float verticalRes;
+            float imageWidth = 100;
+            float imageHeight = 100;
+            float horizontalRes = 200;
+            float verticalRes = 200;
 
-            using (FileStream pngStream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
-            using (var image = new Bitmap(pngStream))
-            {
-                imageWidth = image.Width;
-                imageHeight = image.Height;
-                horizontalRes = image.HorizontalResolution;
-                verticalRes = image.VerticalResolution;
-            }
+            //using (FileStream pngStream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+            //using (var image = new Bitmap(pngStream))
+            //{
+            //    imageWidth = image.Width;
+            //    imageHeight = image.Height;
+            //    horizontalRes = image.HorizontalResolution;
+            //    verticalRes = image.VerticalResolution;
+            //}
 
             ImagePart imagePart = mainPart.AddImagePart(ImagePartType.Png);
 
@@ -335,12 +334,12 @@ namespace mdconvert.Builders
             Format(parent, paragraph, styleId, JustificationValues.Left);
         }
 
-        private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, JustificationValues justification)
-        {
-            ParagraphProperties pp = new ParagraphProperties(
-                   new Justification() { Val = justification });
-            Format(parent, paragraph, pp);
-        }
+        //private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, JustificationValues justification)
+        //{
+        //    ParagraphProperties pp = new ParagraphProperties(
+        //           new Justification() { Val = justification });
+        //    Format(parent, paragraph, pp);
+        //}
 
         private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, ParagraphProperties properties = null)
         {
@@ -408,7 +407,7 @@ namespace mdconvert.Builders
                 heightEmus = (long)(widthEmus * ratio);
             }
 
-            //Console.WriteLine($"width={imageWidthPx}, height={imageHeightPx} => widthEmus={widthEmus}, heightEmus={heightEmus}");
+            Console.WriteLine($">>> image={relationshipId}, width={imageWidthPx}, height={imageHeightPx}, horizontalRes={horizontalRes}, verticalRes={verticalRes} => widthEmus={widthEmus}, heightEmus={heightEmus}");
 
             // Define the reference of the image.
             var element =

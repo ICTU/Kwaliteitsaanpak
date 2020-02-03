@@ -1,0 +1,14 @@
+{
+    "InputFile": "/work/build/Templates/HLD/Template-High-Level-Design-expanded.md",
+    "OutputPath": "/work/dist/",
+    "Title": "High-Level Design",
+    "DocumentType": "Template",
+    "IncludeFrontPage": true,
+    "IncludeMarkdownSource": false,
+    "IncludeTableOfContents": true,
+    "ImagePath": "/work/Content/Images",
+    "DocxReferenceFile": "/work/DocumentDefinitions/reference2.docx",
+    "OutputFormats": [
+        "docx"
+    ]
+}

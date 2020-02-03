@@ -1,0 +1,14 @@
+{
+    "InputFile": "/work/build/Templates/NFE/Template-Niet-Functionele-Eisen-expanded.md",
+    "OutputPath": "/work/dist/",
+    "Title": "Niet-Functionele Eisen",
+    "DocumentType": "Template",
+    "IncludeFrontPage": true,
+    "IncludeMarkdownSource": false,
+    "IncludeTableOfContents": true,
+    "ImagePath": "/work/Content/Images",
+    "DocxReferenceFile": "/work/DocumentDefinitions/reference2.docx",
+    "OutputFormats": [
+        "docx"
+    ]
+}

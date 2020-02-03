@@ -154,13 +154,17 @@ python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "$KA_TITLE"
-generate-template Template Template-Generiek "Generiek Template"
-generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
-generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
-generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
-generate-template HLD Template-High-Level-Design "High-Level Design"
-generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
+# generate-template Template Template-Generiek "Generiek Template"
+# generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
+# generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
+# generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
+# generate-template HLD Template-High-Level-Design "High-Level Design"
+# generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 
 python3 create-checklist.py
 
+docker-compose run mdconvert /work/DocumentDefinitions/detailtestplan.json
+docker-compose run mdconvert /work/DocumentDefinitions/globaal-functioneel-ontwerp.json
+docker-compose run mdconvert /work/DocumentDefinitions/high-level-design.json
 docker-compose run mdconvert /work/DocumentDefinitions/kwaliteitsplan.json
+docker-compose run mdconvert /work/DocumentDefinitions/niet-functionele-eisen.json

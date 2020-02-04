@@ -10,7 +10,7 @@ namespace mdconvert
     {
         private readonly XDocument document;
         private readonly XElement root;
-        private static readonly IEnumerable<XStyle> EmptyStyleList = new XStyle[0];
+        private static readonly IEnumerable<XStyle> EmptyStyleList = Array.Empty<XStyle>();
         private int listLevel = 0;
 
         private static readonly Dictionary<string, XStyle> TagToStyle = new Dictionary<string, XStyle>()
@@ -100,7 +100,7 @@ namespace mdconvert
             }
         }       
 
-        private int ReadIntAttribute(XElement element, string name, int defaultValue)
+        private static int ReadIntAttribute(XElement element, string name, int defaultValue)
         {
             string value = element.Attribute(name)?.Value;
             if (!int.TryParse(value, out int result))
@@ -110,7 +110,7 @@ namespace mdconvert
             return result;
         }
 
-        private int ReadElementLevel(XElement element) => ReadIntAttribute(element, Tags.AttributeListLevel, 1);
+        private static int ReadElementLevel(XElement element) => ReadIntAttribute(element, Tags.AttributeListLevel, 1);
 
         private void ConvertSection(XElement section, Context context, IDocumentBuilder builder, DocumentSettings documentSettings)
         {
@@ -120,7 +120,7 @@ namespace mdconvert
 
             XElement heading = section.Elements(Tags.TagHeading).FirstOrDefault();
 
-            XParagraph headingParagraph = null;
+            XParagraph headingParagraph;
             if (heading != null)
             {
                 headingParagraph = ReadParagraph(heading);
@@ -192,7 +192,7 @@ namespace mdconvert
         private void ConvertTable(XElement tableElement, Context context, IDocumentBuilder builder)
         {
             int columns = ReadIntAttribute(tableElement, Tags.AttributeColumns, 1);
-            int rows = ReadIntAttribute(tableElement, Tags.AttributeRows, 0);
+            //int rows = ReadIntAttribute(tableElement, Tags.AttributeRows, 0);
 
             if (columns > 0)
             {

@@ -14,7 +14,7 @@ namespace mdconvert
         }
 
         public XFragment(string text)
-            : this(text, new XStyle[0])
+            : this(text, Array.Empty<XStyle>())
         {
         }
 
@@ -37,6 +37,6 @@ namespace mdconvert
 
         public bool HasStyle => Bold || Italic || Strikethrough || Instruction;
 
-        public override string ToString() =>Text;
+        public override string ToString() => Text;
     }
 }

@@ -101,7 +101,7 @@ namespace mdconvert
 
             CreateFrontPage(documentSettings);
             CreateHeader(documentSettings);
-            CreateFooter(documentSettings);
+            CreateFooter();
         }
 
         private void CreateFrontPage(DocumentSettings documentSettings)
@@ -176,7 +176,7 @@ namespace mdconvert
             output.WriteEndElement();
         }
 
-        private void CreateFooter(DocumentSettings documentSettings)
+        private void CreateFooter()
         {
             output.WriteStartElement(Tags.TagFooter);
             output.WriteEndElement();
@@ -243,7 +243,7 @@ namespace mdconvert
 
                 bool matched = MatchHeading(trimmedLine, documentSettings)
                         || MatchList(trimmedLine, indent, documentSettings)
-                        || MatchTableRow(trimmedLine, documentSettings);
+                        || MatchTableRow(trimmedLine);
 
                 if (!matched)
                 {
@@ -322,7 +322,7 @@ namespace mdconvert
             return false;
         }
 
-        private bool IsDigit(char c) => c >= '0' && c <= '9';        
+        private static bool IsDigit(char c) => c >= '0' && c <= '9';        
 
         private bool MatchList(string line, int indent, DocumentSettings documentSettings)
         {
@@ -373,7 +373,7 @@ namespace mdconvert
             return true;
         }
       
-        private bool MatchTableRow(string line, DocumentSettings documentSettings)
+        private bool MatchTableRow(string line)
         {
             if (line.StartsWith(Markdown.TableMarker))
             {
@@ -451,13 +451,15 @@ namespace mdconvert
                 output.WriteAttributeString(Tags.AttributeSource, table.HeaderSource);
             }
 
-            for(int column = 0; column < table.HeaderCells.Length; column++)
-            {
+            int column = 0;
+            foreach(string headerCell in table.HeaderCells)
+            { 
                 output.WriteStartElement(Tags.TagTableCell);
                 output.WriteAttributeString(Tags.AttributeColumnAlignment, 
                     AlignmentToStr.GetValueOrDefault(table.GetAlignment(column), Tags.AlignmentLeft));
-                ProcessFormattedText(table.HeaderCells[column]);
+                ProcessFormattedText(headerCell);
                 output.WriteEndElement();
+                column++;
             }
 
             output.WriteEndElement();

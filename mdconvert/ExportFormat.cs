@@ -4,7 +4,7 @@ using System.Text;
 
 namespace mdconvert
 {
-    public enum DocumentFormat
+    public enum ExportFormat
     {
         Docx,
         Markdown,

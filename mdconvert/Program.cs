@@ -10,6 +10,7 @@ namespace mdconvert
     {
         public const string APP_NAME = "mdconvert";
         public const string APP_PREFIX = APP_NAME + "> ";
+        public bool DEBUG = true;
 
         static int Main(string[] args)
         {
@@ -21,7 +22,7 @@ namespace mdconvert
 
                 if (!File.Exists(settingsFile))
                 {
-                    Console.WriteLine($"{APP_PREFIX}File not found: '{settingsFile}'");
+                    Error($"File not found: '{settingsFile}'");
                     return 1;
                 }
 
@@ -32,25 +33,25 @@ namespace mdconvert
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"{APP_PREFIX}Exception during reading document settings: {e.Message}");
+                    Error($"Exception during reading document settings: {e.Message}");
                     return 1;
                 }
             }         
             else
             {
-                Console.WriteLine($"USAGE: {APP_NAME} <document settings file>");
+                Info($"USAGE: {APP_NAME} <document settings file>");
                 return 1;
             }
 
             if (string.IsNullOrWhiteSpace(documentSettings.InputFile))
             {
-                Console.WriteLine($"{APP_PREFIX}Missing input file name");
+                Error($"Missing input file name");
                 return 1;
             }
 
             if (!File.Exists(documentSettings.InputFile))
             {
-                Console.WriteLine($"{APP_PREFIX}File not found '{documentSettings.InputFile}'");
+                Error($"File not found '{documentSettings.InputFile}'");
                 return 1;
             }
 
@@ -64,61 +65,61 @@ namespace mdconvert
 
             try
             {
-                Console.WriteLine($"{APP_PREFIX}Converting file '{documentSettings.InputFile}' using settings:");
-                Console.WriteLine($"{APP_PREFIX}....Title = '{documentSettings.Title}'");
-                Console.WriteLine($"{APP_PREFIX}....Type = {documentSettings.DocumentType}");
-                Console.WriteLine($"{APP_PREFIX}....Include front page = {documentSettings.IncludeFrontPage}");
-                Console.WriteLine($"{APP_PREFIX}....Include Markdown source = {documentSettings.IncludeMarkdownSource}");
-                Console.WriteLine($"{APP_PREFIX}....Include table of contents = {documentSettings.IncludeTableOfContents}");
-                Console.WriteLine($"{APP_PREFIX}....Image path = {documentSettings.ImagePath}");
-                Console.Write($"{APP_PREFIX}....Output formats = {{");
+                Info($"Converting file '{documentSettings.InputFile}' using settings:");
+                Info($".Title = '{documentSettings.Title}'");
+                Info($".Type = {documentSettings.DocumentType}");
+                Info($".Include front page = {documentSettings.IncludeFrontPage}");
+                Info($".Include Markdown source = {documentSettings.IncludeMarkdownSource}");
+                Info($".Include table of contents = {documentSettings.IncludeTableOfContents}");
+                Info($".Image path = {documentSettings.ImagePath}");
 
-                foreach (DocumentFormat format in documentSettings.OutputFormats)
+                string formats = "";
+                foreach (ExportFormat format in documentSettings.OutputFormats)
                 {
-                    Console.Write($"{format} ");
+                    formats += $"{format} ";
                 }
-                Console.WriteLine("}");
+                Info($".Output formats = {{{formats}}}");
 
-                if (documentSettings.OutputFormats.Contains(DocumentFormat.Docx))
+                if (documentSettings.OutputFormats.Contains(ExportFormat.Docx))
                 {
-                    Console.WriteLine($"{APP_PREFIX}....docx reference file = {documentSettings.DocxReferenceFile}");
+                    Info($".Docx reference file = {documentSettings.DocxReferenceFile}");
                 }
 
-                Console.WriteLine($"{APP_PREFIX}Converting file '{documentSettings.InputFile}' to '{xmlFile}'");
+                Info($"Converting file '{documentSettings.InputFile}' to '{xmlFile}'");
                 MarkdownConverter converter = new MarkdownConverter();
                 string result = converter.ConvertFile(documentSettings.InputFile, documentSettings);
                 WriteOutput(result, xmlFile);
             }
             catch (Exception e)
             {
-                Console.WriteLine($"{APP_PREFIX}Exception while converting Markdown: {e.Message}");
+                Error($"Exception while converting Markdown: {e.Message}");
                 return 1;
             }
 
             string outputFilename;
             IDocumentBuilder builder;
 
-            foreach (DocumentFormat format in documentSettings.OutputFormats)
+            foreach (ExportFormat format in documentSettings.OutputFormats)
             {
                 builder = null;
                 switch (format)
                 {
-                    case DocumentFormat.Markdown:
+                    case ExportFormat.Markdown:
                         outputFilename = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "md"));
                         builder = new MarkdownBuilder(outputFilename);
                         break;
 
-                    case DocumentFormat.Html:
+                    case ExportFormat.Html:
                         outputFilename = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "html"));
                         builder = new HtmlBuilder(outputFilename);
                         break;
 
-                    case DocumentFormat.Docx:
+                    case ExportFormat.Docx:
                         outputFilename = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "docx"));
 
                         if (!File.Exists(documentSettings.DocxReferenceFile))
                         {
-                            Console.WriteLine($"{APP_PREFIX}Docx reference file not found: {documentSettings.DocxReferenceFile}");
+                            Error($"Docx reference file not found: {documentSettings.DocxReferenceFile}");
                         }
                         else
                         {
@@ -127,13 +128,13 @@ namespace mdconvert
                         break;
 
                     default:
-                        Console.WriteLine($"{APP_PREFIX}Warning: unknown output format: '{format}'");
+                        Warning($"{APP_PREFIX}unknown output format: '{format}'");
                         continue;
                 }
 
                 if (!File.Exists(xmlFile))
                 {
-                    Console.WriteLine($"{APP_PREFIX}File not found: '{xmlFile}'");
+                    Error($"File not found: '{xmlFile}'");
                     return 1;
                 }
 
@@ -141,23 +142,39 @@ namespace mdconvert
                 {
                     try
                     {
-                        Console.WriteLine($"{APP_PREFIX}Converting file '{xmlFile}' to '{outputFilename}'");
+                        Info($"Converting file '{xmlFile}' to '{outputFilename}'");
                         XMLConverter converter = new XMLConverter(xmlFile);
                         converter.Convert(builder, documentSettings);
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine($"{APP_PREFIX}Exception during conversion: {e.Message}\nTRACE:\n{e.StackTrace}");
-                        if (e.InnerException != null)
-                        {
-                            Console.WriteLine($"INNER:\n{e.InnerException?.Message}");
-                        }
+                        Error($"{APP_PREFIX}Exception during conversion: {e.Message}\nTRACE:\n{e.StackTrace}");
                         return 1;
                     }
                 }
             }
 
             return 0;
+        }
+
+        public static void Info(string output)
+        {
+            Console.WriteLine($"{APP_PREFIX}{output}");
+        }
+
+        public static void Debug(string output)
+        {
+            Console.WriteLine($"{APP_PREFIX}DEBUG: {output}");
+        }
+
+        public static void Error(string output)
+        {
+            Console.WriteLine($"{APP_PREFIX}ERROR: {output}");
+        }
+
+        public static void Warning(string output)
+        {
+            Console.WriteLine($"{APP_PREFIX}WARNING: {output}");
         }
 
         private static void WriteOutput(string result, string outputFilename)

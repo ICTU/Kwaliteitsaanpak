@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace mdconvert
@@ -8,22 +9,22 @@ namespace mdconvert
     {
         private readonly List<T[]> rows = new List<T[]>();
         private readonly List<string> rowSource = new List<string>();
-        private readonly Alignment[] columnAlignment = new Alignment[0];
+        private readonly Alignment[] columnAlignment = Array.Empty<Alignment>();
 
         public XTable(T[] headerCells, string headerSource = "")
         {
             HeaderCells = headerCells;
             HeaderSource = headerSource;
-            columnAlignment = new Alignment[headerCells.Length];
+            columnAlignment = new Alignment[headerCells != null ? headerCells.Length : 0];
         }
 
-        public T[] HeaderCells { get; private set; } = new T[0];
+        public IEnumerable<T> HeaderCells { get; private set; } = Array.Empty<T>();
 
         public string HeaderSource { get; private set; }
 
         public int RowCount => rows.Count;
 
-        public int ColumnCount => HeaderCells.Length;
+        public int ColumnCount => HeaderCells.Count();
 
         public int DataRowCount => rows.Count;
 

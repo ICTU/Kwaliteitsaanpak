@@ -60,13 +60,13 @@ namespace mdconvert.Builders
             mainPart = doc.MainDocumentPart;
             if (mainPart == null)
             {
-                Console.WriteLine($"{Program.APP_PREFIX}Error: mainPart == null");
+                Program.Error($"mainPart == null");
             }
 
             body = mainPart.Document.Body;
             if (body == null)
             {
-                Console.WriteLine($"{Program.APP_PREFIX}Error: body == null");
+                Program.Error($"body == null");
             }
             body.RemoveAllChildren();
             body.AppendChild(new SectionProperties(new TitlePage() { Val = true }));
@@ -118,20 +118,18 @@ namespace mdconvert.Builders
 
         public void EndDocument()
         {
-            NumberingDefinitionsPart numberingDefinitionsPart = mainPart.NumberingDefinitionsPart;
-
             doc.Close();
         }
 
         public void BuildHeader(XParagraph header)
         {
-            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: creating header {header}");
+            Program.Debug($"creating header {header}");
 
             mainPart.DeleteParts(mainPart.HeaderParts);
 
             HeaderPart newHeaderPart = mainPart.AddNewPart<HeaderPart>();
             string headerPartId = mainPart.GetIdOfPart(newHeaderPart);
-            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: HeaderId= {headerPartId}");
+            Program.Debug($"HeaderId= {headerPartId}");
 
             Header docxHeader = new Header();
             Format(docxHeader, header, "Header", JustificationValues.Right); // new ParagraphProperties(new ParagraphStyleId() { Val = "Header" }, new Justification() { Val = JustificationValues.Right }));
@@ -146,19 +144,19 @@ namespace mdconvert.Builders
                 section.RemoveAllChildren<HeaderReference>();
 
                 // Create the new header and footer reference node
-                section.PrependChild<HeaderReference>(new HeaderReference() { Type = HeaderFooterValues.Default, Id = headerPartId });
+                section.PrependChild(new HeaderReference() { Type = HeaderFooterValues.Default, Id = headerPartId });
             }
         }
 
         public void BuildFooter()
         {
-            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: Creating footer");
+            Program.Debug($"Creating footer");
 
             mainPart.DeleteParts(mainPart.FooterParts);
 
             FooterPart newFooterPart = mainPart.AddNewPart<FooterPart>();
             string footerPartId = mainPart.GetIdOfPart(newFooterPart);
-            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: FooterId= {footerPartId}");
+            Program.Debug($"FooterId= {footerPartId}");
 
             Paragraph footerParagraph = new Paragraph(
               new ParagraphProperties(
@@ -185,10 +183,12 @@ namespace mdconvert.Builders
 
         public void BuildTableOfContents()
         {
-            Console.WriteLine($"{Program.APP_PREFIX}DEBUG: Adding table of contents");
+            Program.Debug($"Adding table of contents");
 
-            var sdtBlock = new SdtBlock();
-            sdtBlock.InnerXml = GetTOC("Inhoudsopgave", 11);
+            var sdtBlock = new SdtBlock
+            {
+                InnerXml = GetTOC("Inhoudsopgave", 11)
+            };
             body.AppendChild(sdtBlock);
             InsertPageBreak();
         }
@@ -237,14 +237,7 @@ namespace mdconvert.Builders
 
         public void CreateParagraph(XParagraph paragraph, Context context)
         {
-            if (context == Context.Title)
-            {
-                Format(body, paragraph, StyleTitle);
-            }
-            else
-            {
-                Format(body, paragraph);
-            }
+            Format(body, paragraph, context == Context.Title ? StyleTitle : null);
         }
 
         public void CreateTable(XTable<XParagraph> table, Context context)
@@ -252,10 +245,7 @@ namespace mdconvert.Builders
             Table t = new Table();
 
             TableProperties tblProp = new TableProperties(
-                new TableStyle()
-                {
-                    Val = StyleTable
-                },
+                new TableStyle() { Val = StyleTable },
                 new TableWidth() { Width = "5000", Type = TableWidthUnitValues.Pct }
             );
             t.AppendChild(tblProp);
@@ -293,7 +283,7 @@ namespace mdconvert.Builders
         {
             if (!File.Exists(fileName))
             {
-                Console.WriteLine($"{Program.APP_PREFIX}Image not found '{fileName}'");
+                Program.Error($"Image not found '{fileName}'");
                 return;
             }
 
@@ -334,13 +324,6 @@ namespace mdconvert.Builders
             Format(parent, paragraph, styleId, JustificationValues.Left);
         }
 
-        //private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, JustificationValues justification)
-        //{
-        //    ParagraphProperties pp = new ParagraphProperties(
-        //           new Justification() { Val = justification });
-        //    Format(parent, paragraph, pp);
-        //}
-
         private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, ParagraphProperties properties = null)
         {
             Paragraph p = parent.AppendChild(new Paragraph());
@@ -358,13 +341,13 @@ namespace mdconvert.Builders
         private static void Format(Paragraph parent, XFragment fragment)
         {
             Run run = parent.AppendChild(new Run());
-            run.AppendChild(new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve });
 
             if (fragment.HasStyle)
             {
                 RunProperties props = new RunProperties();
                 if (fragment.Bold)
                 {
+                    //props.Bold = new Bold();
                     props.Append(new Bold());
                 }
                 if (fragment.Italic)
@@ -378,10 +361,14 @@ namespace mdconvert.Builders
                 if (fragment.Instruction)
                 {
                     props.Append(new Highlight { Val = HighlightColorValues.Yellow });
+                    //Program.Debug($"{props.ToString()}");
                 }
-                run.RunProperties = props;
+                run.AppendChild(props);
+                //run.RunProperties = props;
             }
-        }        
+
+            run.AppendChild(new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve });
+        }
 
         public string GetStyleIdFromStyleName(string styleName)
         {
@@ -407,7 +394,7 @@ namespace mdconvert.Builders
                 heightEmus = (long)(widthEmus * ratio);
             }
 
-            Console.WriteLine($">>> image={relationshipId}, width={imageWidthPx}, height={imageHeightPx}, horizontalRes={horizontalRes}, verticalRes={verticalRes} => widthEmus={widthEmus}, heightEmus={heightEmus}");
+            Program.Debug($"image={relationshipId}, width={imageWidthPx}, height={imageHeightPx}, horizontalRes={horizontalRes}, verticalRes={verticalRes}");
 
             // Define the reference of the image.
             var element =

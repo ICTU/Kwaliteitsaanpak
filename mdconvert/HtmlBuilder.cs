@@ -98,9 +98,9 @@ namespace mdconvert.Builders
             writer.Close();
         }
 
-        public void BuildFrontPage(XParagraph title)
-        {
-        }
+        //public void BuildFrontPage(XParagraph title)
+        //{
+        //}
 
         public void BuildHeader(XParagraph header)
         {

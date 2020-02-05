@@ -20,7 +20,6 @@ namespace mdconvert.Builders
         private readonly WordprocessingDocument doc;
         private readonly MainDocumentPart mainPart;
         private readonly Body body;
-        //private static readonly IEnumerable<XStyle> EmptyStyleList = new XStyle[0];
         private int listNumId = 1;
 
         private static readonly Dictionary<int, string> HeadingLevelToStyle = new Dictionary<int, string>()
@@ -92,15 +91,9 @@ namespace mdconvert.Builders
                 }
             }
 
-            //foreach (var p in numberingDefinitionsPart.Numbering.Elements<NumberingInstance>())
-            //{
-            //    Console.WriteLine($"numberinginstance id={p.NumberID} abstract={p.AbstractNumId.Val} localname={p.LocalName}");
-            //}
-
             listNumId = numberingDefinitionsPart.Numbering.Elements<NumberingInstance>().Count() + 1;
 
             // Set auto update
-
             DocumentSettingsPart settingsPart = mainPart.DocumentSettingsPart;
             if (settingsPart == null)
             {
@@ -361,10 +354,8 @@ namespace mdconvert.Builders
                 if (fragment.Instruction)
                 {
                     props.Append(new Highlight { Val = HighlightColorValues.Yellow });
-                    //Program.Debug($"{props.ToString()}");
                 }
                 run.AppendChild(props);
-                //run.RunProperties = props;
             }
 
             run.AppendChild(new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve });
@@ -374,7 +365,7 @@ namespace mdconvert.Builders
         {
             StyleDefinitionsPart stylePart = mainPart.StyleDefinitionsPart;          
             string styleId = stylePart.Styles.Descendants<StyleId>()
-                .Where(s => s.Val.Value.Equals(styleName))
+                .Where(s => s.Val.Value.Equals(styleName, StringComparison.OrdinalIgnoreCase))
                 .Select(n => ((Style)n.Parent).StyleId).FirstOrDefault();
             return styleId ?? styleName;
         }

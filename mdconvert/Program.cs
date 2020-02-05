@@ -58,7 +58,8 @@ namespace mdconvert
             string filename = Path.GetFileName(documentSettings.InputFile);
             string xmlFile = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "xml"));
 
-            if (!documentSettings.ImagePath.EndsWith("/") && !documentSettings.ImagePath.EndsWith("\\"))
+            if (!documentSettings.ImagePath.EndsWith("/", StringComparison.OrdinalIgnoreCase) 
+                && !documentSettings.ImagePath.EndsWith("\\", StringComparison.OrdinalIgnoreCase))
             {
                 documentSettings.ImagePath = $"{documentSettings.ImagePath}/";
             }

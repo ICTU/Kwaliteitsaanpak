@@ -7,6 +7,7 @@ namespace mdconvert
     public static class Tags
     {
         public const string AppendixHeading = "Bijlagen";
+
         public const string TagParagraph = "p";
         public const string TagFragment = "f";
         public const string TagNumberedList = "numbered-list";

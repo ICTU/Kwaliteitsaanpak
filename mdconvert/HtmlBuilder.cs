@@ -13,7 +13,7 @@ namespace mdconvert.Builders
         private readonly StringBuilder stringBuilder;
         private readonly string filename;
 
-        private static readonly IEnumerable<XStyle> EmptyStyleList = new XStyle[0];
+        private static readonly IEnumerable<XStyle> EmptyStyleList = Array.Empty<XStyle>();
 
         private const string HtmlDocument = "html";
         private const string HtmlHead = "head";

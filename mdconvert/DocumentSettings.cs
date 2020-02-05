@@ -29,7 +29,7 @@ namespace mdconvert
 
         public string ImagePath { get; set; } = "images";
 
-        public ExportFormat[] OutputFormats { get; set; } = new ExportFormat[] { ExportFormat.Docx };
+        public IEnumerable<ExportFormat> OutputFormats { get; set; } = new ExportFormat[] { ExportFormat.Docx };
 
         public string DocxReferenceFile { get; set; } = @".\reference.docx";
     }

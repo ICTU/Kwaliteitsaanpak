@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -228,14 +229,14 @@ namespace mdconvert
 
             if (!string.IsNullOrWhiteSpace(trimmedLine))
             {
-                if (trimmedLine.StartsWith(Markdown.MeasureStart) && !in_measure)
+                if (trimmedLine.StartsWith(Markdown.MeasureStart, StringComparison.OrdinalIgnoreCase) && !in_measure)
                 {
                     output.WriteStartElement(Tags.TagMeasure);
                     trimmedLine = trimmedLine.Substring(Markdown.MeasureStart.Length);
                     in_measure = true;
                 }
 
-                if (trimmedLine.EndsWith(Markdown.MeasureEnd) && in_measure)
+                if (trimmedLine.EndsWith(Markdown.MeasureEnd, StringComparison.OrdinalIgnoreCase) && in_measure)
                 {
                     ending_measure = true;
                     trimmedLine = trimmedLine.Substring(0, trimmedLine.Length - Markdown.MeasureEnd.Length);
@@ -277,7 +278,7 @@ namespace mdconvert
 
                 if (level == 1)
                 {
-                    in_bijlagen = heading.ToUpper().Equals(Tags.AppendixHeading.ToUpper());
+                    in_bijlagen = heading.Equals(Tags.AppendixHeading, StringComparison.OrdinalIgnoreCase);
                 }
 
                 //Console.WriteLine($"Matched heading '{heading}', level {level}, in_bijlagen {in_bijlagen}");
@@ -294,7 +295,7 @@ namespace mdconvert
 
                     output.WriteEndElement();
                     output.WriteStartElement(Tags.TagSection);
-                    output.WriteAttributeString(Tags.AttributeSectionLevel, currentSectionLevel.ToString());
+                    output.WriteAttributeString(Tags.AttributeSectionLevel, currentSectionLevel.ToString(CultureInfo.InvariantCulture));
                 }
                 else
                 {
@@ -302,7 +303,7 @@ namespace mdconvert
                     {
                         currentSectionLevel++;
                         output.WriteStartElement(Tags.TagSection);
-                        output.WriteAttributeString(Tags.AttributeSectionLevel, currentSectionLevel.ToString());
+                        output.WriteAttributeString(Tags.AttributeSectionLevel, currentSectionLevel.ToString(CultureInfo.InvariantCulture));
                     }
                 }
                 if (in_bijlagen)
@@ -354,7 +355,7 @@ namespace mdconvert
             {
                 currentListLevel++;
                 output.WriteStartElement(tag);
-                output.WriteAttributeString(Tags.AttributeListLevel, currentListLevel.ToString());
+                output.WriteAttributeString(Tags.AttributeListLevel, currentListLevel.ToString(CultureInfo.InvariantCulture));
             }
             while (currentListLevel > listLevel)
             {
@@ -403,7 +404,7 @@ namespace mdconvert
 
         private void ProcessTableRow(string[] cells, string source)
         {
-            if (cells[0].Contains("---") && table.DataRowCount == 0)
+            if (cells[0].Contains("---", StringComparison.OrdinalIgnoreCase) && table.DataRowCount == 0)
             {
                 for(int i = 0; i< cells.Length; i++)
                 {
@@ -428,7 +429,7 @@ namespace mdconvert
             }
         }
 
-        private string[] GetTableCells(string line)
+        private static string[] GetTableCells(string line)
         {
             line = line.Trim(Markdown.TableMarker, ' ', '\t');
             string[] cells = line.Split(Markdown.TableMarker);
@@ -442,8 +443,8 @@ namespace mdconvert
         private void FlushTable(DocumentSettings documentSettings)
         {
             output.WriteStartElement(Tags.TagTable);
-            output.WriteAttributeString(Tags.AttributeColumns, table.ColumnCount.ToString());
-            output.WriteAttributeString(Tags.AttributeRows, table.RowCount.ToString());
+            output.WriteAttributeString(Tags.AttributeColumns, table.ColumnCount.ToString(CultureInfo.InvariantCulture));
+            output.WriteAttributeString(Tags.AttributeRows, table.RowCount.ToString(CultureInfo.InvariantCulture));
 
             output.WriteStartElement(Tags.TagTableHeaderRow);
             if (documentSettings.IncludeMarkdownSource)
@@ -530,7 +531,7 @@ namespace mdconvert
                 string current = $"{text[pos]}";
                 string current2 = (pos < text.Length - 1) ? $"{current}{text[pos + 1]}" : "";
                 
-                if (current2.Equals(Markdown.Bold) || current2.Equals(Markdown.BoldAlternative))
+                if (current2.Equals(Markdown.Bold, StringComparison.OrdinalIgnoreCase) || current2.Equals(Markdown.BoldAlternative, StringComparison.OrdinalIgnoreCase))
                 {
                     if (is_bold)
                     {
@@ -538,14 +539,14 @@ namespace mdconvert
                         is_bold = false;
                         continue;
                     }
-                    else if (text.Substring(pos+2).Contains(current2))
+                    else if (text.Substring(pos+2).Contains(current2, StringComparison.OrdinalIgnoreCase))
                     {
                         StartStyle(current2, Tags.TagBold);
                         is_bold = true;
                         continue;
                     }
                 }
-                else if (current2.Equals(Markdown.Strikethrough))
+                else if (current2.Equals(Markdown.Strikethrough, StringComparison.OrdinalIgnoreCase))
                 {
                     if (is_strikethrough)
                     {
@@ -553,14 +554,14 @@ namespace mdconvert
                         is_strikethrough = false;
                         continue;
                     }
-                    else if (text.Substring(pos + 2).Contains(current2))
+                    else if (text.Substring(pos + 2).Contains(current2, StringComparison.OrdinalIgnoreCase))
                     {
                         StartStyle(current2, Tags.TagStrikethrough);
                         is_strikethrough = true;
                         continue;
                     }
                 }
-                else if (current.Equals(Markdown.Italic) || current.Equals(Markdown.ItalicAlternative))
+                else if (current.Equals(Markdown.Italic, StringComparison.OrdinalIgnoreCase) || current.Equals(Markdown.ItalicAlternative, StringComparison.OrdinalIgnoreCase))
                 {
                     if (is_italic)
                     {
@@ -568,21 +569,22 @@ namespace mdconvert
                         is_italic = false;
                         continue;
                     }
-                    else if (text.Substring(pos + 1).Contains(current))
+                    else if (text.Substring(pos + 1).Contains(current, StringComparison.OrdinalIgnoreCase))
                     {
                         StartStyle(current, Tags.TagItalic);
                         is_italic = true;
                         continue;
                     }
                 }
-                else if (current.Equals(Markdown.InstructionStart) && text.Substring(pos + 1).Contains(Markdown.InstructionEnd))
+                else if (current.Equals(Markdown.InstructionStart, StringComparison.OrdinalIgnoreCase)
+                    && text.Substring(pos + 1).Contains(Markdown.InstructionEnd, StringComparison.OrdinalIgnoreCase))
                 {
                     StartStyle(current, Tags.TagInstruction);
                     buffer += Markdown.InstructionStart;
                     is_instruction = true;
                     continue;
                 }
-                else if (current.Equals(Markdown.InstructionEnd) && is_instruction)
+                else if (current.Equals(Markdown.InstructionEnd, StringComparison.OrdinalIgnoreCase) && is_instruction)
                 {
                     buffer += Markdown.InstructionEnd;
                     EndStyle(Markdown.InstructionEnd);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
@@ -69,7 +70,9 @@ namespace mdconvert
         {
             foreach (XElement element in parent.Elements())
             {
-                string n = element.Name.LocalName.ToLower();
+#pragma warning disable CA1308 // Normalize strings to uppercase
+                string n = element.Name.LocalName.ToLowerInvariant();
+#pragma warning restore CA1308 // Normalize strings to uppercase
                 switch (n)
                 {
                     case Tags.TagParagraph:
@@ -116,7 +119,7 @@ namespace mdconvert
         {
             int level = ReadElementLevel(section);
             XAttribute appendix = section.Attribute(Tags.AttributeAppendix);
-            bool isAppendix = appendix != null && appendix.Value.ToLower() == "y";
+            bool isAppendix = appendix != null && appendix.Value.ToUpperInvariant() == "Y";
 
             XElement heading = section.Elements(Tags.TagHeading).FirstOrDefault();
 
@@ -147,7 +150,9 @@ namespace mdconvert
                 }
                 else if (node is XElement element)
                 {
-                    string n = element.Name.LocalName.ToLower();
+#pragma warning disable CA1308 // Normalize strings to uppercase
+                    string n = element.Name.LocalName.ToLowerInvariant();
+#pragma warning restore CA1308 // Normalize strings to uppercase
                     XStyle s = TagToStyle.GetValueOrDefault(n, XStyle.None);
                     BuildParagraph(paragraph, styles.Append(s), element);
                 }

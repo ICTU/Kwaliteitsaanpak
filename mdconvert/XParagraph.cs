@@ -5,7 +5,7 @@ namespace mdconvert
 {
     internal class XParagraph
     {
-        private List<XFragment> fragments = new List<XFragment>();
+        private readonly List<XFragment> fragments = new List<XFragment>();
 
         public XParagraph()
         {

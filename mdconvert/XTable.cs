@@ -33,15 +33,9 @@ namespace mdconvert
             rowSource.Add(source);
         }
 
-        public T[] GetRowCells(int row)
-        {
-            return rows[row];
-        }
+        public T[] GetRowCells(int row) => rows[row];
 
-        public string GetRowSource(int row)
-        {
-            return rowSource[row];
-        }
+        public string GetRowSource(int row) => rowSource[row];
 
         public void SetAlignment(int column, TextAlignment alignment)
         {

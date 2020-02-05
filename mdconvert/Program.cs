@@ -10,7 +10,7 @@ namespace mdconvert
     {
         public const string APP_NAME = "mdconvert";
         public const string APP_PREFIX = APP_NAME + "> ";
-        public bool DEBUG = true;
+        private static bool DEBUG = false;
 
         private static int Main(string[] args)
         {
@@ -34,7 +34,7 @@ namespace mdconvert
                 catch (Exception e)
                 {
                     Error($"Exception during reading document settings: {e.Message}");
-                    return 1;
+                    throw;
                 }
             }
             else
@@ -94,7 +94,7 @@ namespace mdconvert
             catch (Exception e)
             {
                 Error($"Exception while converting Markdown: {e.Message}");
-                return 1;
+                throw;
             }
 
             string outputFilename;
@@ -150,7 +150,7 @@ namespace mdconvert
                     catch (Exception e)
                     {
                         Error($"{APP_PREFIX}Exception during conversion: {e.Message}\nTRACE:\n{e.StackTrace}");
-                        return 1;
+                        throw;
                     }
                 }
             }
@@ -165,7 +165,10 @@ namespace mdconvert
 
         public static void Debug(string output)
         {
-            Console.WriteLine($"{APP_PREFIX}DEBUG: {output}");
+            if (DEBUG)
+            {
+                Console.WriteLine($"{APP_PREFIX}DEBUG: {output}");
+            }
         }
 
         public static void Error(string output)

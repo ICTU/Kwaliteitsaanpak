@@ -7,7 +7,10 @@ using System.Xml;
 
 namespace mdconvert.Builders
 {
-    class HtmlBuilder : IDocumentBuilder
+    /// <summary>
+    /// Document builder for HTML documents. 
+    /// </summary>
+    internal class HtmlBuilder : IDocumentBuilder
     {
         private readonly XmlWriter output;
         private readonly StringBuilder stringBuilder;
@@ -146,7 +149,7 @@ namespace mdconvert.Builders
             output.WriteAttributeString("style", "width:100%");
 
             output.WriteStartElement(HtmlTableRow);
-            foreach(XParagraph headerCell in table.HeaderCells)
+            foreach (XParagraph headerCell in table.HeaderCells)
             {
                 output.WriteStartElement(HtmlTableHeading);
                 Format(headerCell);
@@ -154,7 +157,7 @@ namespace mdconvert.Builders
             }
             output.WriteEndElement(); // tr
 
-            for (int r= 0; r<table.DataRowCount; r++)
+            for (int r = 0; r < table.DataRowCount; r++)
             {
                 output.WriteStartElement(HtmlTableRow);
                 foreach (XParagraph dataCell in table.GetRowCells(r))
@@ -234,6 +237,7 @@ namespace mdconvert.Builders
                 case XStyle.Strikethrough:
                     output.WriteStartElement(StyleToHtmlMapping[style]);
                     break;
+
                 case XStyle.Instruction:
                     output.WriteStartElement("span");
                     output.WriteAttributeString("class", StyleInstruction);

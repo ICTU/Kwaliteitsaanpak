@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Xml.Linq;
 
 namespace mdconvert
 {
-    class XMLConverter
+    /// <summary>
+    /// An XMLConverter converts an intermediary XML file to a specific document representation, specified by a document builder and document settings. 
+    /// </summary>
+    internal class XMLConverter
     {
         private readonly XDocument document;
         private readonly XElement root;
@@ -16,27 +17,27 @@ namespace mdconvert
 
         private static readonly Dictionary<string, XStyle> TagToStyle = new Dictionary<string, XStyle>()
         {
-            [Tags.TagBold] = XStyle.Bold,
-            [Tags.TagItalic] = XStyle.Italic,
-            [Tags.TagStrikethrough] = XStyle.Strikethrough,
-            [Tags.TagInstruction] = XStyle.Instruction
+            [XMLTags.TagBold] = XStyle.Bold,
+            [XMLTags.TagItalic] = XStyle.Italic,
+            [XMLTags.TagStrikethrough] = XStyle.Strikethrough,
+            [XMLTags.TagInstruction] = XStyle.Instruction
         };
 
         public XMLConverter(string inputFilename)
         {
             document = XDocument.Load(inputFilename);
-            root = document.Element(Tags.TagDocument); 
+            root = document.Element(XMLTags.TagDocument);
         }
 
         public void Convert(IDocumentBuilder builder, DocumentSettings documentSettings)
         {
-            XElement xTitle = root.Elements(Tags.TagTitle).FirstOrDefault();
+            XElement xTitle = root.Elements(XMLTags.TagTitle).FirstOrDefault();
             string title = xTitle?.Value ?? "";
             listLevel = 0;
 
             builder.StartDocument(title);
 
-            XElement xFrontpage = root.Elements(Tags.TagFrontPage).FirstOrDefault();
+            XElement xFrontpage = root.Elements(XMLTags.TagFrontPage).FirstOrDefault();
 
             if (xFrontpage != null)
             {
@@ -48,14 +49,14 @@ namespace mdconvert
                 builder.BuildTableOfContents();
             }
 
-            XElement xHeader = root.Elements(Tags.TagHeader).FirstOrDefault();
+            XElement xHeader = root.Elements(XMLTags.TagHeader).FirstOrDefault();
             if (xHeader != null)
             {
                 XParagraph headerP = ReadParagraph(xHeader);
                 builder.BuildHeader(headerP);
             }
 
-            XElement xFooter = root.Elements(Tags.TagFooter).FirstOrDefault();
+            XElement xFooter = root.Elements(XMLTags.TagFooter).FirstOrDefault();
             if (xFooter != null)
             {
                 builder.BuildFooter();
@@ -75,33 +76,40 @@ namespace mdconvert
 #pragma warning restore CA1308 // Normalize strings to uppercase
                 switch (n)
                 {
-                    case Tags.TagParagraph:
+                    case XMLTags.TagParagraph:
                         builder.CreateParagraph(ReadParagraph(element), context);
                         break;
-                    case Tags.TagSection:
+
+                    case XMLTags.TagSection:
                         ConvertSection(element, context, builder, documentSettings);
                         break;
-                    case Tags.TagBulletList:
+
+                    case XMLTags.TagBulletList:
                         ConvertList(element, false, context, builder);
                         break;
-                    case Tags.TagNumberedList:
+
+                    case XMLTags.TagNumberedList:
                         ConvertList(element, true, context, builder);
                         break;
-                    case Tags.TagTable:
+
+                    case XMLTags.TagTable:
                         ConvertTable(element, context, builder);
                         break;
-                    case Tags.TagTitle:
+
+                    case XMLTags.TagTitle:
                         builder.CreateParagraph(ReadParagraph(element), Context.Title);
                         break;
-                    case Tags.TagPageBreak:
+
+                    case XMLTags.TagPageBreak:
                         builder.InsertPageBreak();
                         break;
-                    case Tags.TagImage:
+
+                    case XMLTags.TagImage:
                         builder.InsertPicture($"{documentSettings.ImagePath}{element.Value}");
                         break;
-                }           
+                }
             }
-        }       
+        }
 
         private static int ReadIntAttribute(XElement element, string name, int defaultValue)
         {
@@ -113,15 +121,15 @@ namespace mdconvert
             return result;
         }
 
-        private static int ReadElementLevel(XElement element) => ReadIntAttribute(element, Tags.AttributeListLevel, 1);
+        private static int ReadElementLevel(XElement element) => ReadIntAttribute(element, XMLTags.AttributeListLevel, 1);
 
         private void ConvertSection(XElement section, Context context, IDocumentBuilder builder, DocumentSettings documentSettings)
         {
             int level = ReadElementLevel(section);
-            XAttribute appendix = section.Attribute(Tags.AttributeAppendix);
+            XAttribute appendix = section.Attribute(XMLTags.AttributeAppendix);
             bool isAppendix = appendix != null && appendix.Value.ToUpperInvariant() == "Y";
 
-            XElement heading = section.Elements(Tags.TagHeading).FirstOrDefault();
+            XElement heading = section.Elements(XMLTags.TagHeading).FirstOrDefault();
 
             XParagraph headingParagraph;
             if (heading != null)
@@ -172,15 +180,15 @@ namespace mdconvert
             foreach (XElement element in list.Elements())
             {
                 string n = element.Name.LocalName;
-                if (n.Equals(Tags.TagListItem, StringComparison.OrdinalIgnoreCase))
+                if (n.Equals(XMLTags.TagListItem, StringComparison.OrdinalIgnoreCase))
                 {
                     builder.CreateListItem(level, numbered, ReadParagraph(element), context);
                 }
-                else if (n.Equals(Tags.TagBulletList, StringComparison.OrdinalIgnoreCase))
+                else if (n.Equals(XMLTags.TagBulletList, StringComparison.OrdinalIgnoreCase))
                 {
                     ConvertList(element, false, context, builder);
                 }
-                else if (n.Equals(Tags.TagNumberedList, StringComparison.OrdinalIgnoreCase))
+                else if (n.Equals(XMLTags.TagNumberedList, StringComparison.OrdinalIgnoreCase))
                 {
                     ConvertList(element, true, context, builder);
                 }
@@ -196,15 +204,15 @@ namespace mdconvert
 
         private void ConvertTable(XElement tableElement, Context context, IDocumentBuilder builder)
         {
-            int columns = ReadIntAttribute(tableElement, Tags.AttributeColumns, 1);
+            int columns = ReadIntAttribute(tableElement, XMLTags.AttributeColumns, 1);
             //int rows = ReadIntAttribute(tableElement, Tags.AttributeRows, 0);
 
             if (columns > 0)
             {
-                XElement headerRow = tableElement.Elements(Tags.TagTableHeaderRow).FirstOrDefault();
+                XElement headerRow = tableElement.Elements(XMLTags.TagTableHeaderRow).FirstOrDefault();
                 XTable<XParagraph> table = new XTable<XParagraph>(ReadRow(headerRow));
 
-                foreach (XElement row in tableElement.Elements(Tags.TagTableRow))
+                foreach (XElement row in tableElement.Elements(XMLTags.TagTableRow))
                 {
                     table.AddRow(ReadRow(row));
                 }
@@ -216,7 +224,7 @@ namespace mdconvert
         private XParagraph[] ReadRow(XElement row)
         {
             List<XParagraph> cells = new List<XParagraph>();
-            foreach (XElement cell in row.Elements(Tags.TagTableCell))
+            foreach (XElement cell in row.Elements(XMLTags.TagTableCell))
             {
                 cells.Add(ReadParagraph(cell));
             }

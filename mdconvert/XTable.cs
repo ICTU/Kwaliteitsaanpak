@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace mdconvert
 {
@@ -9,13 +8,13 @@ namespace mdconvert
     {
         private readonly List<T[]> rows = new List<T[]>();
         private readonly List<string> rowSource = new List<string>();
-        private readonly Alignment[] columnAlignment = Array.Empty<Alignment>();
+        private readonly TextAlignment[] columnAlignment = Array.Empty<TextAlignment>();
 
         public XTable(T[] headerCells, string headerSource = "")
         {
             HeaderCells = headerCells;
             HeaderSource = headerSource;
-            columnAlignment = new Alignment[headerCells != null ? headerCells.Length : 0];
+            columnAlignment = new TextAlignment[headerCells != null ? headerCells.Length : 0];
         }
 
         public IEnumerable<T> HeaderCells { get; private set; } = Array.Empty<T>();
@@ -44,7 +43,7 @@ namespace mdconvert
             return rowSource[row];
         }
 
-        public void SetAlignment(int column, Alignment alignment)
+        public void SetAlignment(int column, TextAlignment alignment)
         {
             if (column >= 0 && column < ColumnCount)
             {
@@ -52,7 +51,7 @@ namespace mdconvert
             }
         }
 
-        public Alignment GetAlignment(int column) 
-            => column >= 0 && column < ColumnCount ? columnAlignment[column] : Alignment.Left;
+        public TextAlignment GetAlignment(int column)
+            => column >= 0 && column < ColumnCount ? columnAlignment[column] : TextAlignment.Left;
     }
 }

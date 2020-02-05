@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace mdconvert
+﻿namespace mdconvert
 {
-    public static class Markdown
+    /// <summary>
+    /// Markdown-specific tokens and patterns, needed to parse Markdown files. 
+    /// </summary>
+    public static class MarkdownSyntax
     {
         public const string Bold = "**";
         public const string BoldAlternative = "__";
@@ -25,6 +24,6 @@ namespace mdconvert
         public const char BulletLevel2 = '+';
         public const char BulletLevel3 = '-';
         public const char TableMarker = '|';
-        public const char CellAlignmentMarker = ':';        
+        public const char CellAlignmentMarker = ':';
     }
 }

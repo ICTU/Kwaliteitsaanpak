@@ -4,5 +4,6 @@ using System.Text;
 
 namespace mdconvert
 {
-    public enum Alignment { Left = 0, Center, Right };
+    /// Text alignment
+    public enum TextAlignment { Left = 0, Center, Right };
 }

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace mdconvert
 {
-    class XFragment
+    internal class XFragment
     {
         public XFragment(string text, IEnumerable<XStyle> styles)
         {

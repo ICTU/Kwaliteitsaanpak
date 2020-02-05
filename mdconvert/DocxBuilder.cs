@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
-using DocumentFormat.OpenXml;
+﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Linq;
 using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using System.Drawing;
 
 namespace mdconvert.Builders
 {
-    class DocxBuilder : IDocumentBuilder
+    /// <summary>
+    /// Document builder for DOCX documents. 
+    /// </summary>
+    internal class DocxBuilder : IDocumentBuilder
     {
         private readonly WordprocessingDocument doc;
         private readonly MainDocumentPart mainPart;
@@ -72,7 +72,7 @@ namespace mdconvert.Builders
 
             NumberingDefinitionsPart numberingDefinitionsPart = mainPart.NumberingDefinitionsPart;
 
-            foreach(var p in numberingDefinitionsPart.Numbering.Elements<AbstractNum>())
+            foreach (var p in numberingDefinitionsPart.Numbering.Elements<AbstractNum>())
             {
                 foreach (var l in p.Elements<Level>())
                 {
@@ -106,7 +106,7 @@ namespace mdconvert.Builders
         public string Extension => "docx";
 
         public void StartDocument(string title)
-        { 
+        {
         }
 
         public void EndDocument()
@@ -188,7 +188,7 @@ namespace mdconvert.Builders
 
         public void CreateHeading(int level, XParagraph paragraph, bool isAppendix, Context context)
         {
-            string styleId = isAppendix 
+            string styleId = isAppendix
                 ? AppendixHeadingLevelToStyle.GetValueOrDefault(level)
                 : HeadingLevelToStyle.GetValueOrDefault(level);
 
@@ -201,7 +201,7 @@ namespace mdconvert.Builders
             NumberingInstance numberingInstance = new NumberingInstance()
             {
                 AbstractNumId = new AbstractNumId() { Val = numbered ? NumberedListAbstractNumId : BulletListAbstractNumId },
-                NumberID = listNumId,               
+                NumberID = listNumId,
             };
             numberingInstance.AppendChild(new StartOverrideNumberingValue() { Val = 1 });
 
@@ -307,7 +307,7 @@ namespace mdconvert.Builders
         private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, string styleId, JustificationValues justification)
         {
             ParagraphProperties pp = new ParagraphProperties(
-                   new ParagraphStyleId() { Val = styleId }, 
+                   new ParagraphStyleId() { Val = styleId },
                    new Justification() { Val = justification });
             Format(parent, paragraph, pp);
         }
@@ -363,14 +363,14 @@ namespace mdconvert.Builders
 
         public string GetStyleIdFromStyleName(string styleName)
         {
-            StyleDefinitionsPart stylePart = mainPart.StyleDefinitionsPart;          
+            StyleDefinitionsPart stylePart = mainPart.StyleDefinitionsPart;
             string styleId = stylePart.Styles.Descendants<StyleId>()
                 .Where(s => s.Val.Value.Equals(styleName, StringComparison.OrdinalIgnoreCase))
                 .Select(n => ((Style)n.Parent).StyleId).FirstOrDefault();
             return styleId ?? styleName;
         }
 
-        private void AddImageToBody(string relationshipId, float imageWidthPx, float imageHeightPx, 
+        private void AddImageToBody(string relationshipId, float imageWidthPx, float imageHeightPx,
             float horizontalRes, float verticalRes)
         {
             const int emusPerInch = 914400;
@@ -408,7 +408,7 @@ namespace mdconvert.Builders
                                      new PIC.BlipFill(
                                          new A.Blip(
                                              new A.BlipExtensionList(
-                                                 new A.BlipExtension(){ Uri = "{28A0092B-C50C-407E-A947-70E740481C1C}" })
+                                                 new A.BlipExtension() { Uri = "{28A0092B-C50C-407E-A947-70E740481C1C}" })
                                          )
                                          {
                                              Embed = relationshipId,
@@ -465,14 +465,14 @@ namespace mdconvert.Builders
                     <w:p w:rsidR=""00095C65"" w:rsidRDefault=""00095C65"">
                        <w:pPr>
                           <w:pStyle w:val=""TOCHeading"" />
-                          <w:jc w:val=""left"" /> 
+                          <w:jc w:val=""left"" />
                        </w:pPr>
                        <w:r>
                             <w:rPr>
-                              <w:b /> 
-                              <w:color w:val=""2E74B5"" w:themeColor=""accent1"" w:themeShade=""BF"" /> 
-                              <w:sz w:val=""{titleFontSize * 2}"" /> 
-                              <w:szCs w:val=""{titleFontSize * 2}"" /> 
+                              <w:b />
+                              <w:color w:val=""2E74B5"" w:themeColor=""accent1"" w:themeShade=""BF"" />
+                              <w:sz w:val=""{titleFontSize * 2}"" />
+                              <w:szCs w:val=""{titleFontSize * 2}"" />
                           </w:rPr>
                           <w:t>{title}</w:t>
                        </w:r>
@@ -535,7 +535,5 @@ namespace mdconvert.Builders
 
     settingsPart.Settings.Append(new UpdateFieldsOnOpen() { Val = true });
          */
-
-
     }
 }

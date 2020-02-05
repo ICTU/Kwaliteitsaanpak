@@ -6,13 +6,13 @@ using System.Linq;
 
 namespace mdconvert
 {
-    class Program
+    internal class Program
     {
         public const string APP_NAME = "mdconvert";
         public const string APP_PREFIX = APP_NAME + "> ";
         public bool DEBUG = true;
 
-        static int Main(string[] args)
+        private static int Main(string[] args)
         {
             DocumentSettings documentSettings;
 
@@ -36,7 +36,7 @@ namespace mdconvert
                     Error($"Exception during reading document settings: {e.Message}");
                     return 1;
                 }
-            }         
+            }
             else
             {
                 Info($"USAGE: {APP_NAME} <document settings file>");
@@ -58,7 +58,7 @@ namespace mdconvert
             string filename = Path.GetFileName(documentSettings.InputFile);
             string xmlFile = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "xml"));
 
-            if (!documentSettings.ImagePath.EndsWith("/", StringComparison.OrdinalIgnoreCase) 
+            if (!documentSettings.ImagePath.EndsWith("/", StringComparison.OrdinalIgnoreCase)
                 && !documentSettings.ImagePath.EndsWith("\\", StringComparison.OrdinalIgnoreCase))
             {
                 documentSettings.ImagePath = $"{documentSettings.ImagePath}/";

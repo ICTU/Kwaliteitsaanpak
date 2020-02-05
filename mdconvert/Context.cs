@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace mdconvert
+﻿namespace mdconvert
 {
-    enum Context
+    /// <summary>
+    /// Context in which a piece of text is to be formatted. 
+    /// </summary>
+    internal enum Context
     {
         Regular,
         Measure,

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,11 @@ using System.Xml;
 
 namespace mdconvert
 {
-    class MarkdownConverter
+    /// <summary>
+    /// Converts a collection of Markdown lines, usually the contents of a Markdown file, to an intermediary XML representation, that captures content 
+    /// and (some) semantics.
+    /// </summary>
+    internal class MarkdownConverter
     {
         private XmlWriter output;
         private int currentSectionLevel = 0;
@@ -18,18 +23,23 @@ namespace mdconvert
         private bool in_measure = false;
         private XTable<string> table = null;
 
+        // The name of the heading denoted the start of the appendix section.
+        // Note: this should be part of the DocumentSettings.
+        private const string AppendixHeading = "Bijlagen";
+
+
         private static readonly Dictionary<char, int> BulletLevel = new Dictionary<char, int>()
         {
-            [Markdown.BulletLevel1] = 1,
-            [Markdown.BulletLevel2] = 2,
-            [Markdown.BulletLevel3] = 3,
+            [MarkdownSyntax.BulletLevel1] = 1,
+            [MarkdownSyntax.BulletLevel2] = 2,
+            [MarkdownSyntax.BulletLevel3] = 3,
         };
 
-        private static readonly Dictionary<Alignment, string> AlignmentToStr = new Dictionary<Alignment, string>()
+        private static readonly Dictionary<TextAlignment, string> AlignmentToStr = new Dictionary<TextAlignment, string>()
         {
-            [Alignment.Left] = Tags.AlignmentLeft,
-            [Alignment.Center] = Tags.AlignmentCenter,
-            [Alignment.Right] = Tags.AlignmentRight
+            [TextAlignment.Left] = XMLTags.AlignmentLeft,
+            [TextAlignment.Center] = XMLTags.AlignmentCenter,
+            [TextAlignment.Right] = XMLTags.AlignmentRight
         };
 
         public MarkdownConverter()
@@ -55,7 +65,7 @@ namespace mdconvert
             output = XmlWriter.Create(stringBuilder, settings);
 
             StartDocument(documentSettings);
-            foreach(string line in lines)
+            foreach (string line in lines)
             {
                 ProcessLine(line, documentSettings);
             }
@@ -87,7 +97,7 @@ namespace mdconvert
 
         private void StartDocument(DocumentSettings documentSettings)
         {
-            output.WriteStartElement(Tags.TagDocument);
+            output.WriteStartElement(XMLTags.TagDocument);
             currentSectionLevel = 0;
             currentListLevel = 0;
             in_bijlagen = false;
@@ -96,60 +106,60 @@ namespace mdconvert
 
             if (!string.IsNullOrWhiteSpace(documentSettings.Title))
             {
-                output.WriteAttributeString(Tags.AttributeTitle, documentSettings.Title);
+                output.WriteAttributeString(XMLTags.AttributeTitle, documentSettings.Title);
             }
 
             CreateFrontPage(documentSettings);
             CreateHeader(documentSettings);
-            CreateFooter(documentSettings);
+            CreateFooter();
         }
 
         private void CreateFrontPage(DocumentSettings documentSettings)
         {
             if (documentSettings.IncludeFrontPage)
             {
-                output.WriteStartElement(Tags.TagFrontPage);
+                output.WriteStartElement(XMLTags.TagFrontPage);
 
                 switch (documentSettings.DocumentType)
                 {
                     case DocumentType.Generic:
-                        output.WriteElementString(Tags.TagTitle, documentSettings.Title);
-                        output.WriteElementString(Tags.TagPageBreak, "");
+                        output.WriteElementString(XMLTags.TagTitle, documentSettings.Title);
+                        output.WriteElementString(XMLTags.TagPageBreak, "");
                         break;
 
                     case DocumentType.Kwaliteitsaanpak:
-                        output.WriteElementString(Tags.TagImage, "ICTU.png");
-                        output.WriteElementString(Tags.TagTitle, documentSettings.Title);
-                        output.WriteElementString(Tags.TagImage, "word-cloud.png");
-                        output.WriteElementString(Tags.TagPageBreak, "");
+                        output.WriteElementString(XMLTags.TagImage, "ICTU.png");
+                        output.WriteElementString(XMLTags.TagTitle, documentSettings.Title);
+                        output.WriteElementString(XMLTags.TagImage, "word-cloud.png");
+                        output.WriteElementString(XMLTags.TagPageBreak, "");
                         break;
 
                     case DocumentType.Template:
-                        output.WriteElementString(Tags.TagImage, "ICTU.png");
-                        output.WriteElementString(Tags.TagTitle, documentSettings.Title);
+                        output.WriteElementString(XMLTags.TagImage, "ICTU.png");
+                        output.WriteElementString(XMLTags.TagTitle, documentSettings.Title);
 
-                        output.WriteStartElement(Tags.TagParagraph);
-                        output.WriteStartElement(Tags.TagInstruction);
-                        output.WriteElementString(Tags.TagBold, "{Projectnaam}");
+                        output.WriteStartElement(XMLTags.TagParagraph);
+                        output.WriteStartElement(XMLTags.TagInstruction);
+                        output.WriteElementString(XMLTags.TagBold, "{Projectnaam}");
                         output.WriteEndElement();
                         output.WriteEndElement();
 
-                        output.WriteElementString(Tags.TagParagraph, "");
+                        output.WriteElementString(XMLTags.TagParagraph, "");
 
-                        output.WriteStartElement(Tags.TagParagraph);
+                        output.WriteStartElement(XMLTags.TagParagraph);
                         output.WriteString("Versie ");
-                        output.WriteElementString(Tags.TagInstruction, "{Versienummer}");
+                        output.WriteElementString(XMLTags.TagInstruction, "{Versienummer}");
                         output.WriteEndElement();
 
-                        output.WriteStartElement(Tags.TagParagraph);
+                        output.WriteStartElement(XMLTags.TagParagraph);
                         output.WriteString("Datum ");
-                        output.WriteElementString(Tags.TagInstruction, "{Datum}");
+                        output.WriteElementString(XMLTags.TagInstruction, "{Datum}");
                         output.WriteEndElement();
 
-                        output.WriteElementString(Tags.TagParagraph, "");
+                        output.WriteElementString(XMLTags.TagParagraph, "");
 
-                        output.WriteElementString(Tags.TagImage, "word-cloud.png");
-                        output.WriteElementString(Tags.TagPageBreak, "");
+                        output.WriteElementString(XMLTags.TagImage, "word-cloud.png");
+                        output.WriteElementString(XMLTags.TagPageBreak, "");
                         break;
                 }
 
@@ -159,26 +169,26 @@ namespace mdconvert
 
         private void CreateHeader(DocumentSettings documentSettings)
         {
-            output.WriteStartElement(Tags.TagHeader);
+            output.WriteStartElement(XMLTags.TagHeader);
 
             if (documentSettings.DocumentType == DocumentType.Template)
             {
-                output.WriteStartElement(Tags.TagParagraph);
+                output.WriteStartElement(XMLTags.TagParagraph);
                 output.WriteString($"{documentSettings.Title} ");
-                output.WriteElementString(Tags.TagInstruction, "{Projectnaam}");
+                output.WriteElementString(XMLTags.TagInstruction, "{Projectnaam}");
                 output.WriteEndElement();
             }
             else
             {
-                output.WriteElementString(Tags.TagParagraph, documentSettings.Title);
+                output.WriteElementString(XMLTags.TagParagraph, documentSettings.Title);
             }
 
             output.WriteEndElement();
         }
 
-        private void CreateFooter(DocumentSettings documentSettings)
+        private void CreateFooter()
         {
-            output.WriteStartElement(Tags.TagFooter);
+            output.WriteStartElement(XMLTags.TagFooter);
             output.WriteEndElement();
         }
 
@@ -219,7 +229,7 @@ namespace mdconvert
             FinishList();
             FinishTable(documentSettings);
         }
-        
+
         private void ProcessLine(string line, DocumentSettings documentSettings)
         {
             int indent = line.TakeWhile(c => c == ' ').Count();
@@ -228,31 +238,31 @@ namespace mdconvert
 
             if (!string.IsNullOrWhiteSpace(trimmedLine))
             {
-                if (trimmedLine.StartsWith(Markdown.MeasureStart) && !in_measure)
+                if (trimmedLine.StartsWith(MarkdownSyntax.MeasureStart, StringComparison.OrdinalIgnoreCase) && !in_measure)
                 {
-                    output.WriteStartElement(Tags.TagMeasure);
-                    trimmedLine = trimmedLine.Substring(Markdown.MeasureStart.Length);
+                    output.WriteStartElement(XMLTags.TagMeasure);
+                    trimmedLine = trimmedLine.Substring(MarkdownSyntax.MeasureStart.Length);
                     in_measure = true;
                 }
 
-                if (trimmedLine.EndsWith(Markdown.MeasureEnd) && in_measure)
+                if (trimmedLine.EndsWith(MarkdownSyntax.MeasureEnd, StringComparison.OrdinalIgnoreCase) && in_measure)
                 {
                     ending_measure = true;
-                    trimmedLine = trimmedLine.Substring(0, trimmedLine.Length - Markdown.MeasureEnd.Length);
+                    trimmedLine = trimmedLine.Substring(0, trimmedLine.Length - MarkdownSyntax.MeasureEnd.Length);
                 }
 
                 bool matched = MatchHeading(trimmedLine, documentSettings)
                         || MatchList(trimmedLine, indent, documentSettings)
-                        || MatchTableRow(trimmedLine, documentSettings);
+                        || MatchTableRow(trimmedLine);
 
                 if (!matched)
                 {
                     FinishAll(documentSettings);
-                    output.WriteStartElement(Tags.TagParagraph);
+                    output.WriteStartElement(XMLTags.TagParagraph);
 
                     if (documentSettings.IncludeMarkdownSource)
                     {
-                        output.WriteAttributeString(Tags.AttributeSource, line);
+                        output.WriteAttributeString(XMLTags.AttributeSource, line);
                     }
 
                     ProcessFormattedText(trimmedLine);
@@ -269,7 +279,7 @@ namespace mdconvert
 
         private bool MatchHeading(string line, DocumentSettings documentSettings)
         {
-            Match m = Regex.Match(line, Markdown.HeadingPattern);
+            Match m = Regex.Match(line, MarkdownSyntax.HeadingPattern);
             if (m.Success)
             {
                 int level = m.Length - 1;
@@ -277,10 +287,8 @@ namespace mdconvert
 
                 if (level == 1)
                 {
-                    in_bijlagen = heading.ToUpper().Equals(Tags.AppendixHeading.ToUpper());
+                    in_bijlagen = heading.Equals(AppendixHeading, StringComparison.OrdinalIgnoreCase);
                 }
-
-                //Console.WriteLine($"Matched heading '{heading}', level {level}, in_bijlagen {in_bijlagen}");
 
                 FinishAll(documentSettings);
 
@@ -293,27 +301,27 @@ namespace mdconvert
                     }
 
                     output.WriteEndElement();
-                    output.WriteStartElement(Tags.TagSection);
-                    output.WriteAttributeString(Tags.AttributeSectionLevel, currentSectionLevel.ToString());
+                    output.WriteStartElement(XMLTags.TagSection);
+                    output.WriteAttributeString(XMLTags.AttributeSectionLevel, currentSectionLevel.ToString(CultureInfo.InvariantCulture));
                 }
                 else
                 {
                     while (currentSectionLevel < level)
                     {
                         currentSectionLevel++;
-                        output.WriteStartElement(Tags.TagSection);
-                        output.WriteAttributeString(Tags.AttributeSectionLevel, currentSectionLevel.ToString());
+                        output.WriteStartElement(XMLTags.TagSection);
+                        output.WriteAttributeString(XMLTags.AttributeSectionLevel, currentSectionLevel.ToString(CultureInfo.InvariantCulture));
                     }
                 }
                 if (in_bijlagen)
                 {
-                    output.WriteAttributeString(Tags.AttributeAppendix, "y");
+                    output.WriteAttributeString(XMLTags.AttributeAppendix, "y");
                 }
                 if (documentSettings.IncludeMarkdownSource)
                 {
-                    output.WriteAttributeString(Tags.AttributeSource, line);
+                    output.WriteAttributeString(XMLTags.AttributeSource, line);
                 }
-                output.WriteStartElement(Tags.TagHeading);
+                output.WriteStartElement(XMLTags.TagHeading);
                 ProcessFormattedText(heading);
                 output.WriteEndElement();
 
@@ -322,29 +330,29 @@ namespace mdconvert
             return false;
         }
 
-        private bool IsDigit(char c) => c >= '0' && c <= '9';        
+        private static bool IsDigit(char c) => c >= '0' && c <= '9';
 
         private bool MatchList(string line, int indent, DocumentSettings documentSettings)
         {
             string tag;
             int listLevel;
 
-            Match m = Regex.Match(line, Markdown.BulletListPattern);
+            Match m = Regex.Match(line, MarkdownSyntax.BulletListPattern);
             if (m.Success)
             {
-                tag = Tags.TagBulletList;
-                listLevel = BulletLevel.GetValueOrDefault(line[0], Markdown.BulletLevel1);
+                tag = XMLTags.TagBulletList;
+                listLevel = BulletLevel.GetValueOrDefault(line[0], MarkdownSyntax.BulletLevel1);
             }
             else
             {
-                m = Regex.Match(line, Markdown.NumberedListPattern);
+                m = Regex.Match(line, MarkdownSyntax.NumberedListPattern);
 
                 if (!m.Success)
                 {
                     return false;
                 }
 
-                tag = Tags.TagNumberedList;
+                tag = XMLTags.TagNumberedList;
                 listLevel = IsDigit(line[0]) ? ((indent == 0) ? 1 : 3) : 2;
             }
 
@@ -354,7 +362,7 @@ namespace mdconvert
             {
                 currentListLevel++;
                 output.WriteStartElement(tag);
-                output.WriteAttributeString(Tags.AttributeListLevel, currentListLevel.ToString());
+                output.WriteAttributeString(XMLTags.AttributeListLevel, currentListLevel.ToString(CultureInfo.InvariantCulture));
             }
             while (currentListLevel > listLevel)
             {
@@ -362,20 +370,20 @@ namespace mdconvert
                 currentListLevel--;
             }
 
-            output.WriteStartElement(Tags.TagListItem);
+            output.WriteStartElement(XMLTags.TagListItem);
             if (documentSettings.IncludeMarkdownSource)
             {
-                output.WriteAttributeString(Tags.AttributeSource, line);
+                output.WriteAttributeString(XMLTags.AttributeSource, line);
             }
             ProcessFormattedText(item);
             output.WriteEndElement();
 
             return true;
         }
-      
-        private bool MatchTableRow(string line, DocumentSettings documentSettings)
+
+        private bool MatchTableRow(string line)
         {
-            if (line.StartsWith(Markdown.TableMarker))
+            if (line.StartsWith(MarkdownSyntax.TableMarker))
             {
                 string[] cells = GetTableCells(line);
                 if (cells.Length > 0)
@@ -403,22 +411,22 @@ namespace mdconvert
 
         private void ProcessTableRow(string[] cells, string source)
         {
-            if (cells[0].Contains("---") && table.DataRowCount == 0)
+            if (cells[0].Contains("---", StringComparison.OrdinalIgnoreCase) && table.DataRowCount == 0)
             {
-                for(int i = 0; i< cells.Length; i++)
+                for (int i = 0; i < cells.Length; i++)
                 {
                     string c = cells[i];
-                    if (c.StartsWith(Markdown.CellAlignmentMarker) && c.EndsWith(Markdown.CellAlignmentMarker))
+                    if (c.StartsWith(MarkdownSyntax.CellAlignmentMarker) && c.EndsWith(MarkdownSyntax.CellAlignmentMarker))
                     {
-                        table.SetAlignment(i, Alignment.Center);
+                        table.SetAlignment(i, TextAlignment.Center);
                     }
-                    else if (c.EndsWith(Markdown.CellAlignmentMarker))
+                    else if (c.EndsWith(MarkdownSyntax.CellAlignmentMarker))
                     {
-                        table.SetAlignment(i, Alignment.Right);
+                        table.SetAlignment(i, TextAlignment.Right);
                     }
                     else
                     {
-                        table.SetAlignment(i, Alignment.Left);
+                        table.SetAlignment(i, TextAlignment.Left);
                     }
                 }
             }
@@ -428,10 +436,10 @@ namespace mdconvert
             }
         }
 
-        private string[] GetTableCells(string line)
+        private static string[] GetTableCells(string line)
         {
-            line = line.Trim(Markdown.TableMarker, ' ', '\t');
-            string[] cells = line.Split(Markdown.TableMarker);
+            line = line.Trim(MarkdownSyntax.TableMarker, ' ', '\t');
+            string[] cells = line.Split(MarkdownSyntax.TableMarker);
             for (int i = 0; i < cells.Length; i++)
             {
                 cells[i] = cells[i].Trim();
@@ -441,40 +449,42 @@ namespace mdconvert
 
         private void FlushTable(DocumentSettings documentSettings)
         {
-            output.WriteStartElement(Tags.TagTable);
-            output.WriteAttributeString(Tags.AttributeColumns, table.ColumnCount.ToString());
-            output.WriteAttributeString(Tags.AttributeRows, table.RowCount.ToString());
+            output.WriteStartElement(XMLTags.TagTable);
+            output.WriteAttributeString(XMLTags.AttributeColumns, table.ColumnCount.ToString(CultureInfo.InvariantCulture));
+            output.WriteAttributeString(XMLTags.AttributeRows, table.RowCount.ToString(CultureInfo.InvariantCulture));
 
-            output.WriteStartElement(Tags.TagTableHeaderRow);
+            output.WriteStartElement(XMLTags.TagTableHeaderRow);
             if (documentSettings.IncludeMarkdownSource)
             {
-                output.WriteAttributeString(Tags.AttributeSource, table.HeaderSource);
+                output.WriteAttributeString(XMLTags.AttributeSource, table.HeaderSource);
             }
 
-            for(int column = 0; column < table.HeaderCells.Length; column++)
+            int column = 0;
+            foreach (string headerCell in table.HeaderCells)
             {
-                output.WriteStartElement(Tags.TagTableCell);
-                output.WriteAttributeString(Tags.AttributeColumnAlignment, 
-                    AlignmentToStr.GetValueOrDefault(table.GetAlignment(column), Tags.AlignmentLeft));
-                ProcessFormattedText(table.HeaderCells[column]);
+                output.WriteStartElement(XMLTags.TagTableCell);
+                output.WriteAttributeString(XMLTags.AttributeColumnAlignment,
+                    AlignmentToStr.GetValueOrDefault(table.GetAlignment(column), XMLTags.AlignmentLeft));
+                ProcessFormattedText(headerCell);
                 output.WriteEndElement();
+                column++;
             }
 
             output.WriteEndElement();
 
-            for(int r = 0; r < table.RowCount; r++)
+            for (int r = 0; r < table.RowCount; r++)
             {
                 string[] cells = table.GetRowCells(r);
-           
-                output.WriteStartElement(Tags.TagTableRow);
+
+                output.WriteStartElement(XMLTags.TagTableRow);
                 if (documentSettings.IncludeMarkdownSource)
                 {
-                    output.WriteAttributeString(Tags.AttributeSource, table.GetRowSource(r));
+                    output.WriteAttributeString(XMLTags.AttributeSource, table.GetRowSource(r));
                 }
 
                 foreach (string cell in cells)
                 {
-                    output.WriteStartElement(Tags.TagTableCell);
+                    output.WriteStartElement(XMLTags.TagTableCell);
                     ProcessFormattedText(cell);
                     output.WriteEndElement();
                 }
@@ -484,12 +494,12 @@ namespace mdconvert
             output.WriteEndElement();
         }
 
-        string buffer = "";
-        int pos = 0;
-        bool is_bold = false;
-        bool is_italic = false;
-        bool is_strikethrough = false;
-        bool is_instruction = false;
+        private string buffer = "";
+        private int pos = 0;
+        private bool is_bold = false;
+        private bool is_italic = false;
+        private bool is_strikethrough = false;
+        private bool is_instruction = false;
 
         private void Flush()
         {
@@ -522,13 +532,13 @@ namespace mdconvert
             is_italic = false;
             is_strikethrough = false;
             is_instruction = false;
-         
+
             while (pos < text.Length)
             {
                 string current = $"{text[pos]}";
                 string current2 = (pos < text.Length - 1) ? $"{current}{text[pos + 1]}" : "";
-                
-                if (current2.Equals(Markdown.Bold) || current2.Equals(Markdown.BoldAlternative))
+
+                if (current2.Equals(MarkdownSyntax.Bold, StringComparison.OrdinalIgnoreCase) || current2.Equals(MarkdownSyntax.BoldAlternative, StringComparison.OrdinalIgnoreCase))
                 {
                     if (is_bold)
                     {
@@ -536,14 +546,14 @@ namespace mdconvert
                         is_bold = false;
                         continue;
                     }
-                    else if (text.Substring(pos+2).Contains(current2))
+                    else if (text.Substring(pos + 2).Contains(current2, StringComparison.OrdinalIgnoreCase))
                     {
-                        StartStyle(current2, Tags.TagBold);
+                        StartStyle(current2, XMLTags.TagBold);
                         is_bold = true;
                         continue;
                     }
                 }
-                else if (current2.Equals(Markdown.Strikethrough))
+                else if (current2.Equals(MarkdownSyntax.Strikethrough, StringComparison.OrdinalIgnoreCase))
                 {
                     if (is_strikethrough)
                     {
@@ -551,14 +561,14 @@ namespace mdconvert
                         is_strikethrough = false;
                         continue;
                     }
-                    else if (text.Substring(pos + 2).Contains(current2))
+                    else if (text.Substring(pos + 2).Contains(current2, StringComparison.OrdinalIgnoreCase))
                     {
-                        StartStyle(current2, Tags.TagStrikethrough);
+                        StartStyle(current2, XMLTags.TagStrikethrough);
                         is_strikethrough = true;
                         continue;
                     }
                 }
-                else if (current.Equals(Markdown.Italic) || current.Equals(Markdown.ItalicAlternative))
+                else if (current.Equals(MarkdownSyntax.Italic, StringComparison.OrdinalIgnoreCase) || current.Equals(MarkdownSyntax.ItalicAlternative, StringComparison.OrdinalIgnoreCase))
                 {
                     if (is_italic)
                     {
@@ -566,24 +576,25 @@ namespace mdconvert
                         is_italic = false;
                         continue;
                     }
-                    else if (text.Substring(pos + 1).Contains(current))
+                    else if (text.Substring(pos + 1).Contains(current, StringComparison.OrdinalIgnoreCase))
                     {
-                        StartStyle(current, Tags.TagItalic);
+                        StartStyle(current, XMLTags.TagItalic);
                         is_italic = true;
                         continue;
                     }
                 }
-                else if (current.Equals(Markdown.InstructionStart) && text.Substring(pos + 1).Contains(Markdown.InstructionEnd))
+                else if (current.Equals(MarkdownSyntax.InstructionStart, StringComparison.OrdinalIgnoreCase)
+                    && text.Substring(pos + 1).Contains(MarkdownSyntax.InstructionEnd, StringComparison.OrdinalIgnoreCase))
                 {
-                    StartStyle(current, Tags.TagInstruction);
-                    buffer += Markdown.InstructionStart;
+                    StartStyle(current, XMLTags.TagInstruction);
+                    buffer += MarkdownSyntax.InstructionStart;
                     is_instruction = true;
                     continue;
                 }
-                else if (current.Equals(Markdown.InstructionEnd) && is_instruction)
+                else if (current.Equals(MarkdownSyntax.InstructionEnd, StringComparison.OrdinalIgnoreCase) && is_instruction)
                 {
-                    buffer += Markdown.InstructionEnd;
-                    EndStyle(Markdown.InstructionEnd);
+                    buffer += MarkdownSyntax.InstructionEnd;
+                    EndStyle(MarkdownSyntax.InstructionEnd);
                     is_instruction = false;
                     continue;
                 }

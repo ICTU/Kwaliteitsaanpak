@@ -1,8 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace mdconvert
 {
@@ -29,7 +27,7 @@ namespace mdconvert
 
         public string ImagePath { get; set; } = "images";
 
-        public DocumentFormat[] OutputFormats { get; set; } = new DocumentFormat[] { DocumentFormat.Docx };
+        public IEnumerable<ExportFormat> OutputFormats { get; set; } = new ExportFormat[] { ExportFormat.Docx };
 
         public string DocxReferenceFile { get; set; } = @".\reference.docx";
     }

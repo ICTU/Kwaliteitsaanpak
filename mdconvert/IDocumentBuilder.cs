@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace mdconvert
+﻿namespace mdconvert
 {
-    interface IDocumentBuilder
+    internal interface IDocumentBuilder
     {
         string Extension { get; }
 

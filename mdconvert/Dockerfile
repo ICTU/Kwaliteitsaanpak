@@ -1,6 +1,15 @@
 ﻿FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 WORKDIR /app
 
+# install System.Drawing native dependencies
+RUN apt-get update \
+    && apt-get install -y --allow-unauthenticated \
+        libc6-dev \
+        libgdiplus \
+        libx11-dev \
+     && rm -rf /var/lib/apt/lists/* \
+     && export LD_DEBUG=libs
+
 # copy csproj and restore as distinct layers
 COPY *.csproj ./dotnetapp/
 WORKDIR /app/dotnetapp
@@ -13,6 +22,14 @@ WORKDIR /app/dotnetapp
 RUN dotnet publish -c Release /p:PublishingSingleFile=true -o /app/out
 
 FROM mcr.microsoft.com/dotnet/core/runtime:3.0 AS runtime
+RUN apt-get update \
+    && apt-get install -y --allow-unauthenticated \
+        libc6-dev \
+        libgdiplus \
+        libx11-dev \
+     && rm -rf /var/lib/apt/lists/* \
+     && export LD_DEBUG=libs
+
 WORKDIR /app/out
 COPY --from=build /app/out ./
 RUN ls -la

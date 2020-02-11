@@ -6,6 +6,7 @@ echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date
 mkdir -p build
 
 KA_TITLE="ICTU Kwaliteitsaanpak Softwareontwikkeling"
+OUTPUT_PATH="dist"  # Folder to write the final documents to
 
 MAATREGEL_DICTIONARY="build/maatregel-dictionary.txt"
 MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
@@ -60,16 +61,15 @@ function create-template
     sed s/{{TEMPLATE-FOLDER}}/"$2"/g $1 > $3
 }
 
-# Generate into folder $1 the document $2.pdf, with title $3 and header $4, using MD cover file $5 and MD document file $6.
-# generate 1:<output folder> 2:<name of document output without extension>
-#          3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file> 8:<docx reference file>
-function generate
+# Expand MD document into folder $1, creating $2.md, with title $3 and header $4, using MD cover file $5 and MD document file $6 using dictionary file $7.
+# expand 1:<output folder> 2:<name of document output without extension>
+#        3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
+function expand
 {
     BUILD_PATH="build/$1"
-    OUTPUT_PATH="dist"  # Folder to write the final documents to
     DICTIONARY="$BUILD_PATH/dict.txt"
-    EXPANDED="$BUILD_PATH/$2-expanded.md"
-    EXPANDED_COVER="$BUILD_PATH/$2-cover-expanded.md"
+    EXPANDED="$BUILD_PATH/$2.md"
+    EXPANDED_COVER="$BUILD_PATH/$2-cover.md"
     COVER_MD="$5"
     DOCUMENT_MD="$6"
     TITLE="$3"
@@ -78,7 +78,6 @@ function generate
     COVER_HTML_BUILD="$BUILD_PATH/cover.html"
     HEADER_HTML_BUILD="$BUILD_PATH/header.html"
     PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
-    DOCX_OUTPUT="$OUTPUT_PATH/$2.docx"
 
     echo "-- generate: $2"
 
@@ -99,6 +98,45 @@ function generate
 
     # PDF generation
     # Cover
+    # create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /work/DocumentDefinitions/Shared/cover.css
+    # Body
+    # create-html "$EXPANDED" "$HTML_BUILD" /work/DocumentDefinitions/Shared/document.css
+    # Header
+    # map-refsd DocumentDefinitions/Shared/header.html "$HEADER_HTML_BUILD" $DICTIONARY
+    # Create pdf
+    # docker-compose run wkhtmltopdf -c "wkhtmltopdf \
+    #    --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
+    #    --header-html $HEADER_HTML_BUILD --header-spacing 10 \
+    #    --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
+    #    cover $COVER_HTML_BUILD \
+    #    toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
+    #    $HTML_BUILD $PDF_OUTPUT"
+
+    # DOCX generation
+    # create-word $EXPANDED $DOCX_OUTPUT $8 "$TITLE"
+}
+
+# Generate into folder $1 the document $2.pdf, titled $3.
+# generate-kwaliteitsaanpak 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
+function generate-kwaliteitsaanpak
+{
+    BUILD_PATH="build/$1"
+    TITLE="$3"
+    HEADER="$TITLE"
+    COVER_MD="DocumentDefinitions/$1/cover.md"
+    EXPANDED_COVER="$BUILD_PATH/$2-cover.md"
+    COVER_HTML_BUILD="$BUILD_PATH/cover.html"
+    DOC_MD="DocumentDefinitions/$1/document.md"
+    DICTIONARY="$BUILD_PATH/dict.txt"
+    EXPANDED="$BUILD_PATH/$2.md"
+    HTML_BUILD="$BUILD_PATH/document.html"
+    HEADER_HTML_BUILD="$BUILD_PATH/header.html"
+    PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
+
+    expand $1 $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY_LINKS
+
+    # PDF generation
+    # Cover
     create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /work/DocumentDefinitions/Shared/cover.css
     # Body
     create-html "$EXPANDED" "$HTML_BUILD" /work/DocumentDefinitions/Shared/document.css
@@ -112,21 +150,6 @@ function generate
         cover $COVER_HTML_BUILD \
         toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
         $HTML_BUILD $PDF_OUTPUT"
-
-    # DOCX generation
-    create-word $EXPANDED $DOCX_OUTPUT $8 "$TITLE"
-}
-
-# Generate into folder $1 the document $2.pdf, titled $3.
-# generate-kwaliteitsaanpak 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
-function generate-kwaliteitsaanpak
-{
-    TITLE="$3"
-    HEADER="$TITLE"
-    COVER_MD="DocumentDefinitions/$1/cover.md"
-    DOC_MD="DocumentDefinitions/$1/document.md"
-    DOCX_REF="DocumentDefinitions/reference.docx"
-    generate $1 $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY_LINKS $DOCX_REF
 }
 
 # Generate into folder Templates/$1 the template document $2.pdf, titled $3.
@@ -146,10 +169,8 @@ function generate-template
     mkdir -p $BUILD_PATH
     create-template "$TEMPLATE_TEMPLATE" $1 $DOC_MD
 
-    generate $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
+    expand $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
-
-docker-compose run mdconvert
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
@@ -163,3 +184,9 @@ generate-template HLD Template-High-Level-Design "High-Level Design"
 generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 
 python3 create-checklist.py
+
+docker-compose run mdconvert /work/DocumentDefinitions/detailtestplan.json
+docker-compose run mdconvert /work/DocumentDefinitions/globaal-functioneel-ontwerp.json
+docker-compose run mdconvert /work/DocumentDefinitions/high-level-design.json
+docker-compose run mdconvert /work/DocumentDefinitions/kwaliteitsplan.json
+docker-compose run mdconvert /work/DocumentDefinitions/niet-functionele-eisen.json

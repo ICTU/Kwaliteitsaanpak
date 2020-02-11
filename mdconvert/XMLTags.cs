@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace mdconvert
+﻿namespace mdconvert
 {
-    public static class Tags
+    /// <summary>
+    /// XML tags and attributes used in the intermediary XML format. 
+    /// </summary>
+    public static class XMLTags
     {
-        public const string AppendixHeading = "Bijlagen";
         public const string TagParagraph = "p";
         public const string TagFragment = "f";
         public const string TagNumberedList = "numbered-list";

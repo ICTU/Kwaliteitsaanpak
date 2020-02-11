@@ -4,10 +4,6 @@ using System.Text;
 
 namespace mdconvert
 {
-    public enum DocumentFormat
-    {
-        Docx,
-        Markdown,
-        Html
-    }
+    /// Text alignment
+    public enum TextAlignment { Left = 0, Center, Right };
 }

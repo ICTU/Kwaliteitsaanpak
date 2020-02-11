@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace mdconvert
+﻿namespace mdconvert
 {
+    /// <summary>
+    /// Type of document to be generated. Each type of document could have specific formatting. 
+    /// </summary>
     public enum DocumentType
     {
         Generic,

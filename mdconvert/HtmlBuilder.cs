@@ -7,13 +7,16 @@ using System.Xml;
 
 namespace mdconvert.Builders
 {
-    class HtmlBuilder : IDocumentBuilder
+    /// <summary>
+    /// Document builder for HTML documents. 
+    /// </summary>
+    internal class HtmlBuilder : IDocumentBuilder
     {
         private readonly XmlWriter output;
         private readonly StringBuilder stringBuilder;
         private readonly string filename;
 
-        private static readonly IEnumerable<XStyle> EmptyStyleList = new XStyle[0];
+        private static readonly IEnumerable<XStyle> EmptyStyleList = Array.Empty<XStyle>();
 
         private const string HtmlDocument = "html";
         private const string HtmlHead = "head";
@@ -56,7 +59,6 @@ namespace mdconvert.Builders
 
         public void StartDocument(string title)
         {
-            Console.WriteLine("Starting html document");
             output.WriteStartElement(HtmlDocument);
             output.WriteStartElement(HtmlHead);
             output.WriteElementString(HtmlTitle, title);
@@ -99,9 +101,9 @@ namespace mdconvert.Builders
             writer.Close();
         }
 
-        public void BuildFrontPage(XParagraph title)
-        {
-        }
+        //public void BuildFrontPage(XParagraph title)
+        //{
+        //}
 
         public void BuildHeader(XParagraph header)
         {
@@ -147,7 +149,7 @@ namespace mdconvert.Builders
             output.WriteAttributeString("style", "width:100%");
 
             output.WriteStartElement(HtmlTableRow);
-            foreach(XParagraph headerCell in table.HeaderCells)
+            foreach (XParagraph headerCell in table.HeaderCells)
             {
                 output.WriteStartElement(HtmlTableHeading);
                 Format(headerCell);
@@ -155,7 +157,7 @@ namespace mdconvert.Builders
             }
             output.WriteEndElement(); // tr
 
-            for (int r= 0; r<table.DataRowCount; r++)
+            for (int r = 0; r < table.DataRowCount; r++)
             {
                 output.WriteStartElement(HtmlTableRow);
                 foreach (XParagraph dataCell in table.GetRowCells(r))
@@ -235,6 +237,7 @@ namespace mdconvert.Builders
                 case XStyle.Strikethrough:
                     output.WriteStartElement(StyleToHtmlMapping[style]);
                     break;
+
                 case XStyle.Instruction:
                     output.WriteStartElement("span");
                     output.WriteAttributeString("class", StyleInstruction);

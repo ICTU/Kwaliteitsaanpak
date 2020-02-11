@@ -83,3 +83,5 @@ dist
 netcoreapp3.0
 v15
 obj
+.vs
+mdconvert/test/output

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace mdconvert
 {
-    class XFragment
+    internal class XFragment
     {
         public XFragment(string text, IEnumerable<XStyle> styles)
         {
@@ -14,7 +13,7 @@ namespace mdconvert
         }
 
         public XFragment(string text)
-            : this(text, new XStyle[0])
+            : this(text, Array.Empty<XStyle>())
         {
         }
 
@@ -37,6 +36,6 @@ namespace mdconvert
 
         public bool HasStyle => Bold || Italic || Strikethrough || Instruction;
 
-        public override string ToString() =>Text;
+        public override string ToString() => Text;
     }
 }

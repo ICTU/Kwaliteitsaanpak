@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
 
 namespace mdconvert
 {
-    class XParagraph
+    internal class XParagraph
     {
-        private List<XFragment> fragments = new List<XFragment>();
+        private readonly List<XFragment> fragments = new List<XFragment>();
 
         public XParagraph()
         {
@@ -26,7 +25,7 @@ namespace mdconvert
         public override string ToString()
         {
             StringBuilder b = new StringBuilder();
-            foreach(XFragment f in Fragments)
+            foreach (XFragment f in Fragments)
             {
                 b.Append(f.ToString());
             }

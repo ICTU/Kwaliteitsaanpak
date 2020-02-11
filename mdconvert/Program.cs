@@ -6,19 +6,15 @@ using System.Linq;
 
 namespace mdconvert
 {
-    class Program
+    internal class Program
     {
-        static int Main(string[] args)
+        public const string APP_NAME = "mdconvert";
+        public const string APP_PREFIX = APP_NAME + "> ";
+        private static bool DEBUG = false;
+
+        private static int Main(string[] args)
         {
-            DocumentSettings documentSettings = new DocumentSettings()
-            {
-                Title = "No title",
-                DocumentType = DocumentType.Generic,
-                IncludeMarkdownSource = false,
-                IncludeFrontPage = true,
-                IncludeTableOfContents = true,
-                ImagePath = "Images"
-            };
+            DocumentSettings documentSettings;
 
             if (args.Length == 1)
             {
@@ -26,7 +22,7 @@ namespace mdconvert
 
                 if (!File.Exists(settingsFile))
                 {
-                    Console.WriteLine($"File not found: '{settingsFile}'");
+                    Error($"File not found: '{settingsFile}'");
                     return 1;
                 }
 
@@ -37,111 +33,152 @@ namespace mdconvert
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine($"Exception during reading document settings: {e.Message}");
-                    return 1;
+                    Error($"Exception during reading document settings: {e.Message}");
+                    throw;
                 }
-            }         
+            }
             else
             {
-                Console.WriteLine("USAGE: mdconvert <document settings file>");
+                Info($"USAGE: {APP_NAME} <document settings file>");
                 return 1;
             }
 
             if (string.IsNullOrWhiteSpace(documentSettings.InputFile))
             {
-                Console.WriteLine($"Error: missing input file name");
+                Error($"Missing input file name");
                 return 1;
             }
 
             if (!File.Exists(documentSettings.InputFile))
             {
-                Console.WriteLine($"Error: file not found '{documentSettings.InputFile}'");
+                Error($"File not found '{documentSettings.InputFile}'");
                 return 1;
             }
 
             string filename = Path.GetFileName(documentSettings.InputFile);
             string xmlFile = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "xml"));
 
+            if (!documentSettings.ImagePath.EndsWith("/", StringComparison.OrdinalIgnoreCase)
+                && !documentSettings.ImagePath.EndsWith("\\", StringComparison.OrdinalIgnoreCase))
+            {
+                documentSettings.ImagePath = $"{documentSettings.ImagePath}/";
+            }
+
             try
             {
-                Console.WriteLine($"Converting file '{documentSettings.InputFile}' using settings:");
-                Console.WriteLine($"....Title = '{documentSettings.Title}'");
-                Console.WriteLine($"....Type = {documentSettings.DocumentType}");
-                Console.WriteLine($"....Include front page = {documentSettings.IncludeFrontPage}");
-                Console.WriteLine($"....Include Markdown source = {documentSettings.IncludeMarkdownSource}");
-                Console.WriteLine($"....Include table of contents = {documentSettings.IncludeTableOfContents}");
-                Console.WriteLine($"....Image path = {documentSettings.ImagePath}");
-                Console.Write("....Output formats = {");
+                Info($"Converting file '{documentSettings.InputFile}' using settings:");
+                Info($".Title = '{documentSettings.Title}'");
+                Info($".Type = {documentSettings.DocumentType}");
+                Info($".Include front page = {documentSettings.IncludeFrontPage}");
+                Info($".Include Markdown source = {documentSettings.IncludeMarkdownSource}");
+                Info($".Include table of contents = {documentSettings.IncludeTableOfContents}");
+                Info($".Image path = {documentSettings.ImagePath}");
 
-                foreach (DocumentFormat format in documentSettings.OutputFormats)
+                string formats = "";
+                foreach (ExportFormat format in documentSettings.OutputFormats)
                 {
-                    Console.Write($"{format} ");
+                    formats += $"{format} ";
                 }
-                Console.WriteLine("}");
+                Info($".Output formats = {{{formats}}}");
 
-                if (documentSettings.OutputFormats.Contains(DocumentFormat.Docx))
+                if (documentSettings.OutputFormats.Contains(ExportFormat.Docx))
                 {
-                    Console.WriteLine($"....Docx reference file = {documentSettings.DocxReferenceFile}");
+                    Info($".Docx reference file = {documentSettings.DocxReferenceFile}");
                 }
 
-                Console.WriteLine($">> Converting file '{documentSettings.InputFile}' to '{xmlFile}'");
+                Info($"Converting file '{documentSettings.InputFile}' to '{xmlFile}'");
                 MarkdownConverter converter = new MarkdownConverter();
                 string result = converter.ConvertFile(documentSettings.InputFile, documentSettings);
                 WriteOutput(result, xmlFile);
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Exception while converting Markdown: {e.Message}");
-                return 1;
+                Error($"Exception while converting Markdown: {e.Message}");
+                throw;
             }
 
             string outputFilename;
             IDocumentBuilder builder;
 
-            foreach (DocumentFormat format in documentSettings.OutputFormats)
+            foreach (ExportFormat format in documentSettings.OutputFormats)
             {
+                builder = null;
                 switch (format)
                 {
-                    case DocumentFormat.Markdown:
+                    case ExportFormat.Markdown:
                         outputFilename = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "md"));
                         builder = new MarkdownBuilder(outputFilename);
                         break;
 
-                    case DocumentFormat.Html:
+                    case ExportFormat.Html:
                         outputFilename = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "html"));
                         builder = new HtmlBuilder(outputFilename);
                         break;
 
-                    case DocumentFormat.Docx:
+                    case ExportFormat.Docx:
                         outputFilename = Path.Combine(documentSettings.OutputPath, Path.ChangeExtension(filename, "docx"));
-                        builder = new DocxBuilder(outputFilename, documentSettings.DocxReferenceFile);
+
+                        if (!File.Exists(documentSettings.DocxReferenceFile))
+                        {
+                            Error($"Docx reference file not found: {documentSettings.DocxReferenceFile}");
+                        }
+                        else
+                        {
+                            builder = new DocxBuilder(outputFilename, documentSettings.DocxReferenceFile);
+                        }
                         break;
 
                     default:
-                        Console.WriteLine($"Warning: unknown output format: '{format}'");
+                        Warning($"{APP_PREFIX}unknown output format: '{format}'");
                         continue;
                 }
 
                 if (!File.Exists(xmlFile))
                 {
-                    Console.WriteLine($"File not found: '{xmlFile}'");
+                    Error($"File not found: '{xmlFile}'");
                     return 1;
                 }
 
-                try
+                if (builder != null)
                 {
-                    Console.WriteLine($">> Converting file '{xmlFile}' to '{outputFilename}'");
-                    XMLConverter converter = new XMLConverter(xmlFile);
-                    converter.Convert(builder, documentSettings);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"Exception during conversion: {e.Message}");
-                    return 1;
+                    try
+                    {
+                        Info($"Converting file '{xmlFile}' to '{outputFilename}'");
+                        XMLConverter converter = new XMLConverter(xmlFile);
+                        converter.Convert(builder, documentSettings);
+                    }
+                    catch (Exception e)
+                    {
+                        Error($"{APP_PREFIX}Exception during conversion: {e.Message}\nTRACE:\n{e.StackTrace}");
+                        throw;
+                    }
                 }
             }
 
             return 0;
+        }
+
+        public static void Info(string output)
+        {
+            Console.WriteLine($"{APP_PREFIX}{output}");
+        }
+
+        public static void Debug(string output)
+        {
+            if (DEBUG)
+            {
+                Console.WriteLine($"{APP_PREFIX}DEBUG: {output}");
+            }
+        }
+
+        public static void Error(string output)
+        {
+            Console.WriteLine($"{APP_PREFIX}ERROR: {output}");
+        }
+
+        public static void Warning(string output)
+        {
+            Console.WriteLine($"{APP_PREFIX}WARNING: {output}");
         }
 
         private static void WriteOutput(string result, string outputFilename)

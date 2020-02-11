@@ -6,21 +6,23 @@ using System.Text;
 
 namespace mdconvert.Builders
 {
-    class MarkdownBuilder : IDocumentBuilder
+    /// <summary>
+    /// Document builder for Markdown documents. 
+    /// </summary>
+    internal class MarkdownBuilder : IDocumentBuilder
     {
         private readonly string filename;
         private const int MaxLevel = 3;
-        private StringBuilder doc;
+        private readonly StringBuilder doc;
         private bool listItemBefore = false;
-        private int[] listItemCount = new int[MaxLevel+1];
-        private Context previousContext = Context.Regular;
-        private static readonly IEnumerable<XStyle> EmptyStyleList = new XStyle[0];
+        private readonly int[] listItemCount = new int[MaxLevel + 1];
+        private static readonly IEnumerable<XStyle> EmptyStyleList = Array.Empty<XStyle>();
 
         private static readonly Dictionary<XStyle, string> StyleToMarkdownMapping = new Dictionary<XStyle, string>()
         {
-            [XStyle.Bold] = Markdown.Bold,
-            [XStyle.Italic] = Markdown.Italic,
-            [XStyle.Strikethrough] = Markdown.Strikethrough,
+            [XStyle.Bold] = MarkdownSyntax.Bold,
+            [XStyle.Italic] = MarkdownSyntax.Italic,
+            [XStyle.Strikethrough] = MarkdownSyntax.Strikethrough,
         };
 
         public MarkdownBuilder(string filename)
@@ -59,11 +61,6 @@ namespace mdconvert.Builders
             writer.Close();
         }
 
-        public void BuildFrontPage(XParagraph title)
-        {
-            // Markdown documents don't have front pages.
-        }
-
         public void BuildHeader(XParagraph header)
         {
             // Markdown documents don't have headers.
@@ -76,13 +73,13 @@ namespace mdconvert.Builders
 
         public void BuildTableOfContents()
         {
+            // Markdown documents don't have tables of contents.
         }
 
         public void CreateHeading(int level, XParagraph paragraph, bool isAppendix, Context context)
         {
             doc.AppendLine($"{Repeat("#", level)} {Format(paragraph)}");
             doc.AppendLine();
-            previousContext = context;
         }
 
         public void StartList(bool numbered)
@@ -108,14 +105,16 @@ namespace mdconvert.Builders
 
             listItemCount[level]++;
 
-            switch(level)
+            switch (level)
             {
                 case 1:
                     prefix = numbered ? $"{listItemCount[level]}." : "*";
                     break;
+
                 case 2:
                     prefix = numbered ? "  a." : "  +";
                     break;
+
                 case 3:
                     prefix = numbered ? $"    {listItemCount[level]}." : "    -";
                     break;
@@ -123,28 +122,28 @@ namespace mdconvert.Builders
             doc.AppendLine($"{prefix} {Format(paragraph)}");
 
             listItemBefore = true;
-            previousContext = context;
         }
 
         public void CreateParagraph(XParagraph paragraph, Context context)
         {
             doc.AppendLine(Format(paragraph));
             doc.AppendLine();
-            previousContext = context;
         }
 
         public void CreateTable(XTable<XParagraph> table, Context context)
         {
             string headerRow = "";
             string alignmentRow = "";
-            for (int i = 0; i < table.ColumnCount; i++)
+
+            foreach (XParagraph headerCell in table.HeaderCells)
             {
-                string f = Format(table.HeaderCells[i]);
-                headerRow += $"{Markdown.TableMarker} {f} ";
-                alignmentRow += $"{Markdown.TableMarker}{Repeat("-", f.Length + 2)}";
+                string f = Format(headerCell);
+                headerRow += $"{MarkdownSyntax.TableMarker} {f} ";
+                alignmentRow += $"{MarkdownSyntax.TableMarker}{Repeat("-", f.Length + 2)}";
             }
-            headerRow += Markdown.TableMarker;
-            alignmentRow += Markdown.TableMarker;
+
+            headerRow += MarkdownSyntax.TableMarker;
+            alignmentRow += MarkdownSyntax.TableMarker;
             doc.AppendLine(headerRow);
             doc.AppendLine(alignmentRow);
 
@@ -154,14 +153,13 @@ namespace mdconvert.Builders
                 XParagraph[] row = table.GetRowCells(r);
                 for (int c = 0; c < row.Length; c++)
                 {
-                    dataRow += $"{Markdown.TableMarker} { Format(row[c])} ";
+                    dataRow += $"{MarkdownSyntax.TableMarker} { Format(row[c])} ";
                 }
-                dataRow += Markdown.TableMarker;
+                dataRow += MarkdownSyntax.TableMarker;
                 doc.AppendLine(dataRow);
             }
 
             doc.AppendLine();
-            previousContext = context;
         }
 
         public void InsertPageBreak()
@@ -175,13 +173,13 @@ namespace mdconvert.Builders
         private static string Format(XParagraph paragraph)
         {
             string result = "";
-            for(int i = 0; i< paragraph.NumFragments; i++)
+            for (int i = 0; i < paragraph.NumFragments; i++)
             {
                 IEnumerable<XStyle> previousStyles = (i > 0)
-                    ? paragraph.Get(i - 1).Styles 
+                    ? paragraph.Get(i - 1).Styles
                     : EmptyStyleList;
-                IEnumerable<XStyle> nextStyles = (i < paragraph.NumFragments - 1) 
-                    ? paragraph.Get(i + 1).Styles 
+                IEnumerable<XStyle> nextStyles = (i < paragraph.NumFragments - 1)
+                    ? paragraph.Get(i + 1).Styles
                     : EmptyStyleList;
                 result += Format(paragraph.Get(i), previousStyles, nextStyles);
             }
@@ -198,7 +196,7 @@ namespace mdconvert.Builders
         private static string StylesToPrefix(IEnumerable<XStyle> styles)
         {
             string result = "";
-            foreach(XStyle style in styles)
+            foreach (XStyle style in styles)
             {
                 result += StyleToMarkdown(style);
             }
@@ -222,11 +220,5 @@ namespace mdconvert.Builders
         {
             return new StringBuilder(value.Length * count).Insert(0, value, count).ToString();
         }
-
-        private static string ContextPrefix(Context previousContext, Context currentContext) 
-            => previousContext != Context.Measure && currentContext == Context.Measure ? Markdown.MeasureStart : "";
-
-        private static string ContextSuffix(Context currentContext, Context nextContext)
-            => currentContext == Context.Measure && nextContext != Context.Measure ? Markdown.MeasureEnd : "";
     }
 }

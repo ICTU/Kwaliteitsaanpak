@@ -1,26 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Xml;
-using System.Xml.Linq;
-using DocumentFormat.OpenXml;
+﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Linq;
 using A = DocumentFormat.OpenXml.Drawing;
 using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
 using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using System.Drawing;
 
 namespace mdconvert.Builders
 {
-    class DocxBuilder : IDocumentBuilder
+    /// <summary>
+    /// Document builder for DOCX documents. 
+    /// </summary>
+    internal class DocxBuilder : IDocumentBuilder
     {
         private readonly WordprocessingDocument doc;
         private readonly MainDocumentPart mainPart;
         private readonly Body body;
-        private static readonly IEnumerable<XStyle> EmptyStyleList = new XStyle[0];
         private int listNumId = 1;
 
         private static readonly Dictionary<int, string> HeadingLevelToStyle = new Dictionary<int, string>()
@@ -60,29 +59,20 @@ namespace mdconvert.Builders
             mainPart = doc.MainDocumentPart;
             if (mainPart == null)
             {
-                Console.WriteLine("mainPart == null");
+                Program.Error($"mainPart == null");
             }
 
             body = mainPart.Document.Body;
             if (body == null)
             {
-                Console.WriteLine("body == null");
+                Program.Error($"body == null");
             }
             body.RemoveAllChildren();
             body.AppendChild(new SectionProperties(new TitlePage() { Val = true }));
 
-            //StyleDefinitionsPart stylePart = mainPart.StyleDefinitionsPart;
-
-            //foreach (var s in stylePart.Styles.Elements<Style>())
-            //{
-            //    Console.WriteLine($"Style {s.StyleName.Val} id={s.StyleId}");
-            //}
-
             NumberingDefinitionsPart numberingDefinitionsPart = mainPart.NumberingDefinitionsPart;
 
-            //Console.WriteLine($"numberingDP={numberingDefinitionsPart}");
-
-            foreach(var p in numberingDefinitionsPart.Numbering.Elements<AbstractNum>())
+            foreach (var p in numberingDefinitionsPart.Numbering.Elements<AbstractNum>())
             {
                 foreach (var l in p.Elements<Level>())
                 {
@@ -91,27 +81,19 @@ namespace mdconvert.Builders
                         string s = l.ParagraphStyleIdInLevel.Val;
                         if (s.Equals(StyleNumberedList, StringComparison.OrdinalIgnoreCase))
                         {
-                            //Console.WriteLine($"Numbered list abstract num id = {p.AbstractNumberId}");
                             NumberedListAbstractNumId = p.AbstractNumberId;
                         }
                         else if (s.Equals(StyleBulletList, StringComparison.OrdinalIgnoreCase))
                         {
-                            //Console.WriteLine($"Bullet list abstract num id = {p.AbstractNumberId}");
                             BulletListAbstractNumId = p.AbstractNumberId;
                         }
                     }
                 }
             }
 
-            //foreach (var p in numberingDefinitionsPart.Numbering.Elements<NumberingInstance>())
-            //{
-            //    Console.WriteLine($"numberinginstance id={p.NumberID} abstract={p.AbstractNumId.Val} localname={p.LocalName}");
-            //}
-
             listNumId = numberingDefinitionsPart.Numbering.Elements<NumberingInstance>().Count() + 1;
 
             // Set auto update
-
             DocumentSettingsPart settingsPart = mainPart.DocumentSettingsPart;
             if (settingsPart == null)
             {
@@ -124,25 +106,23 @@ namespace mdconvert.Builders
         public string Extension => "docx";
 
         public void StartDocument(string title)
-        { 
+        {
         }
 
         public void EndDocument()
         {
-            NumberingDefinitionsPart numberingDefinitionsPart = mainPart.NumberingDefinitionsPart;
-
             doc.Close();
         }
 
         public void BuildHeader(XParagraph header)
         {
-            Console.WriteLine($"DEBUG: creating header {header}");
+            Program.Debug($"creating header {header}");
 
             mainPart.DeleteParts(mainPart.HeaderParts);
 
             HeaderPart newHeaderPart = mainPart.AddNewPart<HeaderPart>();
             string headerPartId = mainPart.GetIdOfPart(newHeaderPart);
-            Console.WriteLine($"DEBUG: HeaderId= {headerPartId}");
+            Program.Debug($"HeaderId= {headerPartId}");
 
             Header docxHeader = new Header();
             Format(docxHeader, header, "Header", JustificationValues.Right); // new ParagraphProperties(new ParagraphStyleId() { Val = "Header" }, new Justification() { Val = JustificationValues.Right }));
@@ -150,7 +130,6 @@ namespace mdconvert.Builders
             newHeaderPart.Header = docxHeader;
 
             IEnumerable<SectionProperties> sections = body.Elements<SectionProperties>();
-            //Console.WriteLine($"DEBUG: Adding header to {sections.Count()} section(s)");
 
             foreach (var section in sections)
             {
@@ -158,19 +137,19 @@ namespace mdconvert.Builders
                 section.RemoveAllChildren<HeaderReference>();
 
                 // Create the new header and footer reference node
-                section.PrependChild<HeaderReference>(new HeaderReference() { Type = HeaderFooterValues.Default, Id = headerPartId });
+                section.PrependChild(new HeaderReference() { Type = HeaderFooterValues.Default, Id = headerPartId });
             }
         }
 
         public void BuildFooter()
         {
-            Console.WriteLine($"DEBUG: Creating footer");
+            Program.Debug($"Creating footer");
 
             mainPart.DeleteParts(mainPart.FooterParts);
 
             FooterPart newFooterPart = mainPart.AddNewPart<FooterPart>();
             string footerPartId = mainPart.GetIdOfPart(newFooterPart);
-            Console.WriteLine($"DEBUG: FooterId= {footerPartId}");
+            Program.Debug($"FooterId= {footerPartId}");
 
             Paragraph footerParagraph = new Paragraph(
               new ParagraphProperties(
@@ -183,38 +162,35 @@ namespace mdconvert.Builders
             Footer docxFooter = new Footer();
 
             docxFooter.AppendChild(footerParagraph);
-
-            //Format(docxFooter, footer, new ParagraphProperties(new ParagraphStyleId() { Val = "Footer" }));
             newFooterPart.Footer = docxFooter;
 
             IEnumerable<SectionProperties> sections = body.Elements<SectionProperties>();
-            //Console.WriteLine($"Adding footer to {sections.Count()} section(s)");
-
             foreach (var section in sections)
             {
                 // Delete existing references to headers and footers
                 section.RemoveAllChildren<FooterReference>();
                 // Create the new header and footer reference node
-                section.PrependChild<FooterReference>(new FooterReference() { Type = HeaderFooterValues.Default, Id = footerPartId });
+                section.PrependChild(new FooterReference() { Type = HeaderFooterValues.Default, Id = footerPartId });
             }
         }
 
         public void BuildTableOfContents()
         {
-            Console.WriteLine("DEBUG: Adding table of contents");
+            Program.Debug($"Adding table of contents");
 
-            var sdtBlock = new SdtBlock();
-            sdtBlock.InnerXml = GetTOC("Inhoudsopgave", 11);
+            var sdtBlock = new SdtBlock
+            {
+                InnerXml = GetTOC("Inhoudsopgave", 11)
+            };
             body.AppendChild(sdtBlock);
             InsertPageBreak();
         }
 
         public void CreateHeading(int level, XParagraph paragraph, bool isAppendix, Context context)
         {
-            string styleId = isAppendix 
+            string styleId = isAppendix
                 ? AppendixHeadingLevelToStyle.GetValueOrDefault(level)
                 : HeadingLevelToStyle.GetValueOrDefault(level);
-            //Console.WriteLine($"Creating docx heading {styleId}");
 
             ParagraphProperties pp = new ParagraphProperties(new ParagraphStyleId() { Val = styleId });
             Format(body, paragraph, pp);
@@ -222,12 +198,10 @@ namespace mdconvert.Builders
 
         public void StartList(bool numbered)
         {
-            //Console.WriteLine("Starting list");
-
             NumberingInstance numberingInstance = new NumberingInstance()
             {
                 AbstractNumId = new AbstractNumId() { Val = numbered ? NumberedListAbstractNumId : BulletListAbstractNumId },
-                NumberID = listNumId,               
+                NumberID = listNumId,
             };
             numberingInstance.AppendChild(new StartOverrideNumberingValue() { Val = 1 });
 
@@ -238,7 +212,6 @@ namespace mdconvert.Builders
 
         public void EndList()
         {
-            //Console.WriteLine("Ending list");
             listNumId++;
         }
 
@@ -257,27 +230,15 @@ namespace mdconvert.Builders
 
         public void CreateParagraph(XParagraph paragraph, Context context)
         {
-            if (context == Context.Title)
-            {
-                Format(body, paragraph, StyleTitle);
-            }
-            else
-            {
-                Format(body, paragraph);
-            }
+            Format(body, paragraph, context == Context.Title ? StyleTitle : null);
         }
 
         public void CreateTable(XTable<XParagraph> table, Context context)
         {
-            //Console.WriteLine("Building table");
-
             Table t = new Table();
 
             TableProperties tblProp = new TableProperties(
-                new TableStyle()
-                {
-                    Val = StyleTable
-                },
+                new TableStyle() { Val = StyleTable },
                 new TableWidth() { Width = "5000", Type = TableWidthUnitValues.Pct }
             );
             t.AppendChild(tblProp);
@@ -313,10 +274,16 @@ namespace mdconvert.Builders
 
         public void InsertPicture(string fileName)
         {
-            float imageWidth;
-            float imageHeight;
-            float horizontalRes;
-            float verticalRes;
+            if (!File.Exists(fileName))
+            {
+                Program.Error($"Image not found '{fileName}'");
+                return;
+            }
+
+            float imageWidth = 100;
+            float imageHeight = 100;
+            float horizontalRes = 200;
+            float verticalRes = 200;
 
             using (FileStream pngStream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
             using (var image = new Bitmap(pngStream))
@@ -340,7 +307,7 @@ namespace mdconvert.Builders
         private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, string styleId, JustificationValues justification)
         {
             ParagraphProperties pp = new ParagraphProperties(
-                   new ParagraphStyleId() { Val = styleId }, 
+                   new ParagraphStyleId() { Val = styleId },
                    new Justification() { Val = justification });
             Format(parent, paragraph, pp);
         }
@@ -348,13 +315,6 @@ namespace mdconvert.Builders
         private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, string styleId)
         {
             Format(parent, paragraph, styleId, JustificationValues.Left);
-        }
-
-        private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, JustificationValues justification)
-        {
-            ParagraphProperties pp = new ParagraphProperties(
-                   new Justification() { Val = justification });
-            Format(parent, paragraph, pp);
         }
 
         private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, ParagraphProperties properties = null)
@@ -374,13 +334,13 @@ namespace mdconvert.Builders
         private static void Format(Paragraph parent, XFragment fragment)
         {
             Run run = parent.AppendChild(new Run());
-            run.AppendChild(new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve });
 
             if (fragment.HasStyle)
             {
                 RunProperties props = new RunProperties();
                 if (fragment.Bold)
                 {
+                    //props.Bold = new Bold();
                     props.Append(new Bold());
                 }
                 if (fragment.Italic)
@@ -395,20 +355,22 @@ namespace mdconvert.Builders
                 {
                     props.Append(new Highlight { Val = HighlightColorValues.Yellow });
                 }
-                run.RunProperties = props;
+                run.AppendChild(props);
             }
-        }        
+
+            run.AppendChild(new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve });
+        }
 
         public string GetStyleIdFromStyleName(string styleName)
         {
-            StyleDefinitionsPart stylePart = mainPart.StyleDefinitionsPart;          
+            StyleDefinitionsPart stylePart = mainPart.StyleDefinitionsPart;
             string styleId = stylePart.Styles.Descendants<StyleId>()
-                .Where(s => s.Val.Value.Equals(styleName))
+                .Where(s => s.Val.Value.Equals(styleName, StringComparison.OrdinalIgnoreCase))
                 .Select(n => ((Style)n.Parent).StyleId).FirstOrDefault();
             return styleId ?? styleName;
         }
 
-        private void AddImageToBody(string relationshipId, float imageWidthPx, float imageHeightPx, 
+        private void AddImageToBody(string relationshipId, float imageWidthPx, float imageHeightPx,
             float horizontalRes, float verticalRes)
         {
             const int emusPerInch = 914400;
@@ -423,7 +385,7 @@ namespace mdconvert.Builders
                 heightEmus = (long)(widthEmus * ratio);
             }
 
-            //Console.WriteLine($"width={imageWidthPx}, height={imageHeightPx} => widthEmus={widthEmus}, heightEmus={heightEmus}");
+            Program.Debug($"image={relationshipId}, width={imageWidthPx}, height={imageHeightPx}, horizontalRes={horizontalRes}, verticalRes={verticalRes}");
 
             // Define the reference of the image.
             var element =
@@ -446,7 +408,7 @@ namespace mdconvert.Builders
                                      new PIC.BlipFill(
                                          new A.Blip(
                                              new A.BlipExtensionList(
-                                                 new A.BlipExtension(){ Uri = "{28A0092B-C50C-407E-A947-70E740481C1C}" })
+                                                 new A.BlipExtension() { Uri = "{28A0092B-C50C-407E-A947-70E740481C1C}" })
                                          )
                                          {
                                              Embed = relationshipId,
@@ -503,14 +465,14 @@ namespace mdconvert.Builders
                     <w:p w:rsidR=""00095C65"" w:rsidRDefault=""00095C65"">
                        <w:pPr>
                           <w:pStyle w:val=""TOCHeading"" />
-                          <w:jc w:val=""left"" /> 
+                          <w:jc w:val=""left"" />
                        </w:pPr>
                        <w:r>
                             <w:rPr>
-                              <w:b /> 
-                              <w:color w:val=""2E74B5"" w:themeColor=""accent1"" w:themeShade=""BF"" /> 
-                              <w:sz w:val=""{titleFontSize * 2}"" /> 
-                              <w:szCs w:val=""{titleFontSize * 2}"" /> 
+                              <w:b />
+                              <w:color w:val=""2E74B5"" w:themeColor=""accent1"" w:themeShade=""BF"" />
+                              <w:sz w:val=""{titleFontSize * 2}"" />
+                              <w:szCs w:val=""{titleFontSize * 2}"" />
                           </w:rPr>
                           <w:t>{title}</w:t>
                        </w:r>
@@ -573,7 +535,5 @@ namespace mdconvert.Builders
 
     settingsPart.Settings.Append(new UpdateFieldsOnOpen() { Val = true });
          */
-
-
     }
 }

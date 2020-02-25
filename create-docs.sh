@@ -183,7 +183,7 @@ generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel 
 generate-template HLD Template-High-Level-Design "High-Level Design"
 generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 
-python3 create-checklist.py
+python3 create-checklist.py "$KA_TITLE"
 
 docker-compose run mdconvert /work/DocumentDefinitions/detailtestplan.json
 docker-compose run mdconvert /work/DocumentDefinitions/globaal-functioneel-ontwerp.json

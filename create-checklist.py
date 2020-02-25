@@ -30,11 +30,7 @@ def process_m05_m07(worksheet, row, contents, maatregel_format, status_format, t
 
 def process_m16_m17(worksheet, row, contents, maatregel_format, status_format, toelichting_format):
     """ Read the list of tools from the markdown list. """
-    tools = [line for line in contents if re.match(r"^\d+\. ", line)]
-    generic_tools = tools[:len(tools)//2]
-    ictu_tools = tools[len(tools)//2:]
-    tools = ["{0} Bij ICTU: {1}".format(generic_tool.strip().split(". ")[1], ictu_tool.strip().split(". ")[1])
-             for generic_tool, ictu_tool in zip(generic_tools, ictu_tools)]
+    tools = [line.split(". ")[1].strip() for line in contents if re.match(r"^\d+\. ", line)]
     return process_submaatregel(worksheet, row, tools, maatregel_format, status_format, toelichting_format)
 
 

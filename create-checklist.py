@@ -54,10 +54,10 @@ def process_maatregel(workbook, worksheet, maatregel_folder, row, title):
     maatregel_md = maatregel_folder / "Maatregel.md"
     contents = read_md_file(maatregel_md, title)
     maatregel_id = contents[0].strip().split(":")[0][len("## "):]
-    maatregel_format_options = dict(bg_color="#BCD2EE", text_wrap=True)
+    maatregel_format_options = dict(bg_color="#BCD2EE", text_wrap=True, valign="top")
     maatregel_format = workbook.add_format(maatregel_format_options)
     worksheet.write(row, 0, maatregel_id, maatregel_format)
-    title = contents[0].strip("#").split("(")[0].strip()
+    title = contents[0].split(":")[1].strip()
     worksheet.write(row, 1, title, maatregel_format)
     worksheet.write_comment(row, 1, "".join([line.strip("#").strip(" ") for line in contents]),
                             dict(x_scale=5, y_scale=7))

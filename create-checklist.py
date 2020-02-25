@@ -1,5 +1,6 @@
 import pathlib
 import re
+import sys
 
 import xlsxwriter
 
@@ -37,16 +38,17 @@ def process_m16_m17(worksheet, row, contents, maatregel_format, status_format, t
     return process_submaatregel(worksheet, row, tools, maatregel_format, status_format, toelichting_format)
 
 
-def read_md_file(filepath):
+def read_md_file(filepath, title):
     """ Read the markdown file and process #include's, if any. """
     contents = []
     reference_without_link = re.compile(r"\{\{M\d+\-no\-link\}\}")
     references = re.compile(r"@\{|\}@|\{\{|\}\}")
     with filepath.open(encoding="utf-8") as markdown:
         for line in markdown.readlines():
+            line = line.replace("{{TITLE}}", title)
             if line.startswith("#include "):
                 included_filepath = pathlib.Path(line.strip('# include "').strip().strip('"'))
-                contents.extend(read_md_file(included_filepath))
+                contents.extend(read_md_file(included_filepath, title))
             else:
                 line = reference_without_link.sub("", line)
                 line = references.sub("", line)
@@ -54,10 +56,11 @@ def read_md_file(filepath):
                     contents.append(line)
     return contents
 
-def process_maatregel(workbook, worksheet, maatregel_folder, row):
+
+def process_maatregel(workbook, worksheet, maatregel_folder, row, title):
     """ Process the maatregel in the given folder. """
     maatregel_md = maatregel_folder / "Maatregel.md"
-    contents = read_md_file(maatregel_md)
+    contents = read_md_file(maatregel_md, title)
     maatregel_id = contents[0].strip().split(":")[0][len("## "):]
     maatregel_format_options = dict(bg_color="#BCD2EE", text_wrap=True)
     maatregel_format = workbook.add_format(maatregel_format_options)
@@ -122,7 +125,7 @@ class DocumentStructure:
                 yield pathlib.Path(line.strip().strip('# include "').strip('/Maatregel.md"'))
 
 
-def create_checklist(workbook):
+def create_checklist(workbook, title):
     """ Create the worksheet  with the self-assessment checklist. """
     worksheet = workbook.add_worksheet('Self-assessment checklist')
     with open("Content/Versie.md") as version_file:
@@ -155,7 +158,7 @@ def create_checklist(workbook):
         row += 1
         worksheet.merge_range("A{row}:D{row}".format(row=row), section, header_format)
         for folder in document.maatregelen_folders(section):
-            row = process_maatregel(workbook, worksheet, folder, row)
+            row = process_maatregel(workbook, worksheet, folder, row, title)
 
     status_column = 2
     write_assessment_choices(workbook, worksheet, maatregel_start_row, row, status_column)
@@ -181,7 +184,8 @@ def create_action_list(workbook):
 def create_workbook():
     """ Create the workbook with the different worksheets. """
     workbook = xlsxwriter.Workbook('dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx')
-    create_checklist(workbook)
+    title = sys.argv[1]
+    create_checklist(workbook, title)
     create_action_list(workbook)
     workbook.close()
 

@@ -24,7 +24,7 @@ def process_m01(worksheet, row, contents, maatregel_format, status_format, toeli
 
 def process_m05_m07(worksheet, row, contents, maatregel_format, status_format, toelichting_format):
     """ Read the list of parts from the markdown list. """
-    parts = [line[2:].strip().strip(",.") for line in contents if line.startswith("- ")]
+    parts = [line[2:].strip().strip(",.") for line in contents if line.startswith("- ") or line.startswith("* ")]
     return process_submaatregel(worksheet, row, parts, maatregel_format, status_format, toelichting_format)
 
 

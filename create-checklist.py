@@ -36,6 +36,8 @@ def read_md_file(filepath, title):
     with filepath.open(encoding="utf-8") as markdown:
         for line in markdown.readlines():
             line = line.replace("{{TITLE}}", title)
+            line = re.sub("[¹²³⁴⁵⁶⁷⁸⁹⁰]+", "", line)
+            line = line.replace("¹", "")
             if line.startswith("#include "):
                 included_filepath = pathlib.Path(line.strip('# include "').strip().strip('"'))
                 contents.extend(read_md_file(included_filepath, title))

@@ -99,9 +99,9 @@ Het project definieert en hanteert een Definition of Ready (DoR) voor user stori
 7. Het verwachte aantal logische testgevallen is ingevuld;
 8. Er is ingeschat of de user story een performance risico of een beveiligingsrisico met zich meebrengt.
 
-### Definition of Done (DoD)
+### Definition of Done voor sprints
 
-Het project definieert en hanteert een Definition of Done (DoD) voor de sprint. De kwaliteitsmanager controleert of er een DoD is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
+Het project definieert en hanteert een Definition of Done (DoD) voor de sprint (zie ook hoofdstuk [Definition of Done](#definition-of-done)). De kwaliteitsmanager controleert of er een DoD is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
 
 ### Vrijgaveadvies
 
@@ -143,9 +143,9 @@ Broncode, zowel van productiesoftware als van geautomatiseerde tests, wordt in e
 
 ## Testen 
 
-Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor de realisatie- en beheerfase worden uitgevoerd. Documenten die input leveren voor het MTP zijn de documenten die in de voorfase worden opgeleverd, zoals PSA, SAD en GFO. Een product risicoanalyse (PRA) is uitgevoerd en is de basis voor de vaststelling van de diepgang waarmee de gedefinieerde testsoorten uitgevoerd moeten worden.
+Gedurende de realisatiefase worden de use cases in samenwerking met de product owner vertaald naar user stories. Per user story worden één of meer logische testgevallen opgesteld; per logisch testgeval worden één of meer fysieke testgevallen opgesteld. De user stories, logische testgevallen en fysieke testgevallen zijn expliciet aan elkaar gekoppeld. User stories en logische testgevallen worden vastgelegd in Jira; zie de bijlagen voor de te gebruiken typen en relaties. Afwijkingen op deze standaard aanpak zijn alleen toegestaan met goedkeuring van de kwaliteitsmanager.
 
-De te gebruiken logische testgevallen worden gedefinieerd in Jira; zie bijlage.
+Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor de realisatie- en beheerfase worden uitgevoerd. Documenten die input leveren voor het MTP zijn de documenten die in de voorfase worden opgeleverd, zoals PSA, SAD en GFO. Een product risicoanalyse (PRA) is uitgevoerd en is de basis voor de vaststelling van de diepgang waarmee de gedefinieerde testsoorten uitgevoerd moeten worden.
 
 ## Unit tests
 
@@ -247,25 +247,15 @@ De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van
 | 13 | Final Release | | Projectteam | 5 jaar |
 | 14 | {Projectspecifieke producten} | | | |
 
+# Definition of Done
 
+De Definition Of Done van het project bevat de volgende criteria:
 
-----
-Gedurende de realisatiefase, uitgevoerd op basis van Scrum, worden de use cases in samenwerking met de product owner vertaald naar user stories. Per user story worden één of meer logische testgevallen opgesteld. Per logisch testgeval worden één of meer fysieke testgevallen opgesteld. De user stories, logische testgevallen en fysieke testgevallen zijn expliciet aan elkaar gelinkt. User stories en logische testgevallen worden vastgelegd in Jira; zie bijlage 2 voor de te gebruiken typen en relaties. Afwijkingen op deze standaard aanpak zijn alleen toegestaan met goedkeuring van de kwaliteitsmanager.  
-
-Na elk formele release wordt het GFO bijgewerkt op basis van de user stories in Jira.  
-
-TODO: bijlagen
-
-
-# Kwaliteitsmaatregelen voor processen
-
-Blablabla.
-
-uit testplan voor DoD:
-* Testgevallen gereviewd en geaccordeerd door reviewer,
-* Succesvol afgeronde functionele testen,
-* Dekkingsgraad code functionele test ≥ 80% (maar meer indien mogelijk),
-* Succesvol afgeronde integratietesten,
-* Succesvol afgeronde performancetesten,
-* Succesvol afgeronde toegankelijkheidstesten,
-* Release artifacts volledig.
+* Alle testgevallen zijn gereviewd en geaccordeerd door reviewer,
+* Functionele testen zijn succesvol afgerond,
+* De dekkingsgraad van de functionele testen is minstens 80% (maar meer indien mogelijk),
+* Integratietesten zijn succesvol afgerond,
+* Performancetesten zijn succesvol afgerond,
+* Toegankelijkheidstesten zijn succesvol afgerond,
+* De release van artifacts is volledig en succesvol,
+* Na elke release is het GFO bijgewerkt op basis van de user stories in Jira.  

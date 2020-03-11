@@ -4,15 +4,13 @@ Tijdens de voorfase wordt in diverse documenten beschreven welke eisen en wensen
 
 De volgende documenten vormen de basis voor dit detailtestplan:
 
-* Master test plan (MTP)
-* Projectplan
-* Softwarearchitectuurdocument (SAD)
-* Kwaliteitsplan
-* Informatiebeveiligingsplan
-
-{@@WAT IS DIE RELATIE?}
+* Mastertestplan {documentreferentie},
+* Projectplan {documentreferentie},
+* Softwarearchitectuurdocument {documentreferentie},
+* Kwaliteitsplan {documentreferentie},
+* Informatiebeveiligingsplan {documentreferentie}.
 
 De testbasis wordt gevormd door de volgende documenten:
 
-* Globaal functioneel ontwerp (GFO)
-* Niet-functionele eisen (NFE)
+* Globaal functioneel ontwerp {documentreferentie},
+* Niet-functionele eisen {documentreferentie}.

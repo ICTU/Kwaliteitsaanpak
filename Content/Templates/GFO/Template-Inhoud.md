@@ -72,7 +72,3 @@ Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable p
 | Doel | {doel van de epic} |
 | {user story ID} | {titel van de user story} |
 | {user story ID} | {titel van de user story} |
-
-# Invulling van eisen
-
-{@@???}

@@ -6,6 +6,8 @@ Tijdens de voorfase wordt het voldoen aan de kwaliteitsnormen met behulp van rev
 
 Tijdens de realisatiefase wordt de kwaliteit diverse malen per uur gemeten door een geautomatiseerd kwaliteitssysteem, genaamd Quality-time (de nieuwe versie) of HQ (de oude versie). Het projectteam kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie, indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het team. De invulling van de kwaliteitsnormen is te vinden in het helpmenu van de geautomatiseerde kwaliteitsrapportages van ICTU.
 
+Kwaliteitseigenschappen van de software die niet (volledig) geautomatiseerd kunnen worden gemeten, worden tijdens de realisatiefase periodiek handmatig geëvalueerd. Minimaal betreft dit de beveiliging van de software, zie {{M26}}. Voor kwaliteitsaspecten als toegankelijkheid en gebruikskwaliteit organiseert het projectteam handmatige testen en/of evaluaties in een vorm en met een frequentie die aansluit bij de door de opdrachtgever gestelde eisen. De kwaliteitsmanager houdt in het kwaliteitssysteem bij wanneer de laatste test of evaluatie is uitgevoerd en wanneer het tijd is voor de volgende.
+
 Documenten, die onderdeel uitmaken van het op te leveren projectresultaat, zijn zo veel mogelijk geactualiseerd; eventuele achterstand wordt planmatig weggewerkt. De kwaliteitscontrole van documenten gebeurt op basis van reviews. De auteur van een document en de software delivery manager zorgen dat de juiste reviewers benoemd zijn; hiertoe behoort in ieder geval de kwaliteitsmanager. De auteur van het document zorgt voor een correct versiebeheer van het document. De auteur koppelt aan de reviewers terug of en hoe het ontvangen commentaar is verwerkt in de volgende versie van het betreffende document.
 
 Indien de kwaliteitsdoelstellingen langdurig of niet tijdig worden behaald, heeft de kwaliteitsmanager de volgende escalatielijn:
@@ -23,5 +25,6 @@ Het zo snel mogelijk en continu voldoen aan de kwaliteitsnormen beperkt toekomst
 
 Zie ook:
 
-* {{M14}}
 * {{M08}}
+* {{M14}}
+* {{M26}}

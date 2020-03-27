@@ -1,3 +1,3 @@
 ## Over dit document
 
-{Het doel van dit document, inclusief de scope van wat beschreven is.}
+Dit Software-architectuurdocument (SAD) beschrijft de software-architectuur van {applicatie}. Het beschrijft op hoofdlijnen de softwarecomponenten, hun functies en hun onderlinge interacties en samenhang voor specifieke use cases. Het SAD heeft niet het detailniveau van een technisch ontwerp; dat wordt tijdens de realisatie verder uitgewerkt.

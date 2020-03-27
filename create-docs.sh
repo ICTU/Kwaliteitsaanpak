@@ -182,7 +182,7 @@ generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
 generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
 generate-template HLD Template-High-Level-Design "High-Level Design"
 generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
-generate-template SAD Template-Softwarearchitectuurdocument "Softwarearchitectuurdocument"
+generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
 
 python3 create-checklist.py "$KA_TITLE"
 
@@ -191,3 +191,4 @@ docker-compose run mdconvert /work/DocumentDefinitions/globaal-functioneel-ontwe
 docker-compose run mdconvert /work/DocumentDefinitions/high-level-design.json
 docker-compose run mdconvert /work/DocumentDefinitions/kwaliteitsplan.json
 docker-compose run mdconvert /work/DocumentDefinitions/niet-functionele-eisen.json
+docker-compose run mdconvert /work/DocumentDefinitions/softwarearchitectuurdocument.json

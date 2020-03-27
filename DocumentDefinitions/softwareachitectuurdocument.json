@@ -1,7 +1,7 @@
 {
-    "InputFile": "/work/build/Templates/SAD/Template-Softwarearchitectuurdocument.md",
+    "InputFile": "/work/build/Templates/SAD/Template-Software-architectuurdocument.md",
     "OutputPath": "/work/dist/",
-    "Title": "Softwarearchitectuurdocument",
+    "Title": "Software-architectuurdocument",
     "DocumentType": "Template",
     "IncludeFrontPage": true,
     "IncludeMarkdownSource": false,

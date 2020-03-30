@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.0, 25 februari 2020
+### Versie 2.0, 30 maart 2020
 
 * Naam van de Kwaliteitsaanpak veranderd van "Kwaliteitsaanpak ICTU Software Realisatie" naar "ICTU Kwaliteitsaanpak Softwareontwikkeling". Waar relevant "softwarerealisatie" veranderd in "softwareontwikkeling".
 * Maatregelen, waar mogelijk, compacter geformuleerd.
@@ -9,17 +9,18 @@
 * Bij de maatregelen "Het project zorgt dat het product continue aan de kwaliteitsnormen voldoet" (M02), "Het project maakt technische schuld inzichtelijk en lost deze planmatig op" (M08) en "Het project gebruikt tools voor vastgestelde taken" (M16) naast HQ ook Quality-time vermeld.
 * Bij de maatregel "Het project maakt technische schuld inzichtelijk en lost deze planmatig op" (M08) toegevoegd dat projecten regelmatig en voldoende tijd besteden aan het voorkomen en oplossen van technische schuld.
 * Bij de maatregel "Het project gebruikt tools voor vastgestelde taken" (M16) versiebeheer toegevoegd, met als concrete tools GitLab en Azure DevOps.
+* Explicieter aandacht besteed aan gebruikskwaliteit in de maatregelen "Het project levert in elke fase vastgestelde informatie over het product op" (M01) en "Het project zorgt dat het product continue aan de kwaliteitsnormen voldoet" (M02).
 * De maatregel "Betrokkenheid bij inzet" (M22) verwijderd.
 * De maatregel "Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen" (M24) verwijderd.
 * Nieuwe maatregel toegevoegd voor het starten van projecten: "ICTU zorgt dat een project verantwoord kan starten" (M29).
 * Nieuwe maatregel toegevoegd voor risicomanagement: "Projecten identificeren, mitigeren en bewaken risico's" (M30).
 * Termen aangepast: 'projectverantwoordelijke' is vervangen door 'projectleider', 'projectenorganisatie' en 'projectorganisatie' door 'ICTU' en 'realiserend team' door 'projectteam'.
-* Actielijst toegevoegd aan self-assessment spreadsheet.
+* De beschrijving van de rollen van Software Delivery Manager en Kwaliteitsmanager aangescherpt.
 * Waar relevant bij de rationale van maatregelen verwezen naar overeenkomende risicobeheersmaatregelen uit de NPR 5326.
 * Referenties aan de Baseline Informatiebeveiliging Rijksdienst (BIR) omgezet naar de Baseline Informatiebeveiliging Overheid (BIO).
 * Referenties aan tools geactualiseerd.
 * Tekstuele en stilistische verbeteringen.
-* De beschrijving van de rollen van Software Delivery Manager en Kwaliteitsmanager aangescherpt.
+* Actielijst toegevoegd aan self-assessment spreadsheet.
 
 ### Versie 1.3.1, 1 mei 2019
 

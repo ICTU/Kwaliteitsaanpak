@@ -16,6 +16,7 @@ Niet-functionele eisen specificeren criteria om het functioneren van de software
 * Wbni (Wet beveiliging netwerk- en informatiesystemen),
 * BIO (Baseline Informatiebeveiliging Overheid),
 * methode Grip op SSD (Secure Software Development) van het CIP (Centrum Informatiebeveiliging en Privacybescherming),
+* ISO 9241-210:2019 Ergonomics of human-system interaction - Part 210: Human-centred design for interactive systems,
 * hoofdstuk 9 van de Europese Standaard EN 301 549 - dit is gelijk aan de Web Content Accessibility Guidelines versie 2.1, niveau A en AA.
 
 De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties. Bepaalde niet-functionele eisen kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door deze eisen expliciet in de voorfase te benoemen, wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.
@@ -60,7 +61,7 @@ Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illust
 **Test**
 De testplannen bestaan uit een mastertestplan (MTP), gemaakt op basis van een productrisicoanalyse (PRA), en detailtestplannen. Het doel van een mastertestplan is om betrokkenen bij het testproces te informeren over de aanpak, de activiteiten, inclusief de onderlinge relaties en afhankelijkheden, en de op te leveren producten met betrekking tot het testtraject. Het mastertestplan beschrijft deze aanpak, activiteiten en eindproducten, die in de detailtestplannen verder worden gedetailleerd.
 
-De detailtestplannen zijn gebaseerd op het mastertestplan.
+De detailtestplannen zijn gebaseerd op het mastertestplan. Detailtestplannen worden gemaakt voor handmatig uitgevoerde testen zoals penetratietesten en evaluaties van gebruikskwaliteit.
 
 Logische testgevallen worden vastgelegd in Jira en gekoppeld met use cases en user stories. Fysieke testgevallen worden vastgelegd in het formaat van de gebruikte tooling en gekoppeld met de logische testgevallen. Op basis hiervan worden testrapportages gegenereerd die laten zien dat alle use cases en user stories zijn getest en dat die tests zijn geslaagd.
 

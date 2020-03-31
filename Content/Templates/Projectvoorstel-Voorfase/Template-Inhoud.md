@@ -12,46 +12,52 @@ Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak.
 
 De voorfase wordt uitgevoerd in iteraties, "sprints" genaamd, van twee weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de status van de producten. Rondom de thema’s {thema's zoals functionaliteit, architectuur, techniek en veiligheid} organiseert ICTU werksessies.
 
-**Plan van aanpak voorfase**
+## Plan van aanpak voorfase
+
 Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de voorfase en het voorbereiden en plannen van een kick-off. In het (beknopte) plan van aanpak voorfase wordt aandacht besteed aan de exacte invulling van de voorfase. 
 
-**Kick-off**
+## Kick-off
+
 Voor een goede start wordt er, bij aanvang van de voorfase, een kick-off georganiseerd met alle projectmedewerkers, beoogde stuurgroepleden en de opdrachtgever. Na opdrachtverstrekking zal de projectleider van ICTU de kick-off plannen.
 
-**Projectteam**
+## Projectteam
+
 {opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} dagdelen per week door alle partijen op één locatie bij {locatie} wordt samengewerkt. {partij} stelt hiervoor ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Indien op locatie ICTU wordt gewerkt: Om deze binnen ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU voorschrift Zakelijk gebruik ICT-diensten en voorzieningen. De huidige versie van het voorschrift is opgenomen in de bijlagen.}
 
-**Oplevering producten**
+## Oplevering producten
+
 De voorfase is op basis van timeboxes ingericht. Aan het einde van de timebox zijn alle tot dan toe opgedane inzichten verwerkt in de producten. Indien er na afronding van de voorfase nieuwe inzichten ontstaan, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren. 
 
-**Kwaliteitsbeheersing**
+## Kwaliteitsbeheersing
+
 Op te leveren producten worden gemaakt door de penvoerder en gereviewd door de andere partijen. De penvoerder verwerkt de resultaten van de review in de producten. Op deze wijze levert het projectteam gecontroleerde resultaten op aan de projectleider van ICTU.
 De experts reviewen op zaken zoals:
--	heldere structuur en onderlinge samenhang van de documenten;
--	“fitness for use” van de producten; Dit betekent dat deze producten geschikt zijn om een Scrumontwikkeltraject te starten en te sturen;
--	interne en onderlinge consistentie;
--	volledigheid.
+* heldere structuur en onderlinge samenhang van de documenten;
+* “fitness for use” van de producten; Dit betekent dat deze producten geschikt zijn om een Scrumontwikkeltraject te starten en te sturen;
+* interne en onderlinge consistentie;
+* volledigheid.
 
-**Inzet {opdrachtgever/partijen}**
+## Inzet {opdrachtgever/partijen}
+
 Betrokkenheid van inhoudsdeskundigen van {opdrachtgever/partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
--	De producten worden opgesteld tijdens verschillende werksessies. Aanwezigheid bij de werksessies (welke zoveel mogelijk tijdens de dagdelen waarop {opdrachtgever/partijen} en ICTU samenwerken worden gepland) en indien gewenst aan vervolgafspraken in dat kader;
--	Actief bijdragen aan het schrijven en reviewen van de producten; 
--	Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden. 
+* De producten worden opgesteld tijdens verschillende werksessies. Aanwezigheid bij de werksessies (welke zoveel mogelijk tijdens de dagdelen waarop {opdrachtgever/partijen} en ICTU samenwerken worden gepland) en indien gewenst aan vervolgafspraken in dat kader;
+* Actief bijdragen aan het schrijven en reviewen van de producten; 
+* Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden. 
 
 Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoering van dit projectvoorstel (één persoon kan eventueel meer dan één rol vervullen):
 {selecteer de juiste rollen en vul aan, vul ook de juiste verantwoordelijkheden in, onderstaande is een eerste opzet met zoveel mogelijk rollen}
 
-| Rollen | Verwachte inzet in aantal dagen per week | Verantwoordelijkheden |
+| Rollen | Verwachte inzet per week | Verantwoordelijkheden |
 |:----|:----|:----|
-| Expert informatiebeveiliging | …. dagen | Opstellen BIA, TVA en IB-plan, reviewen {documenten} |
-| Privacy-expert | …. dagen | Opstellen PIA, reviewen {documenten} |
-| Infrastructuurarchitect | …. dagen | Opstellen infrastructuurarchitectuur (high level design, HLD), reviewen SAD, NFE en IB-plan |
-| Architect | …. dagen | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur |
-| Testmanager | …. dagen | Opstellen PRA, mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie |
-| Diverse inhoudelijk deskundigen | …. dagen | Eventuele betrokkenheid van (eind)gebruikers en stakeholders |
-| Product owner | ….. dagen | Inhoudelijk sturing / prioritering, opstellen backlog, NFE, minimal viable product, reviewen GFO en prototype |
-| Projectleider (Opdrachtgever) | …. dagen | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan kick-off en eventuele workshops |
-| Diverse technisch en inhoudelijk specialisten | Ad-hoc | Inzet op ad-hoc basis ter ondersteuning van de andere rollen |
+| Expert informatiebeveiliging | {aantal} dagen | Opstellen BIA, TVA en IB-plan, reviewen {documenten} |
+| Privacy-expert | {aantal} dagen | Opstellen PIA, reviewen {documenten} |
+| Infrastructuurarchitect | {aantal} dagen | Opstellen infrastructuurarchitectuur (high level design, HLD), reviewen SAD, NFE en IB-plan |
+| Architect | {aantal} dagen | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur |
+| Testmanager | {aantal} dagen | Opstellen PRA, mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie |
+| Diverse inhoudelijk deskundigen | {aantal} dagen | Eventuele betrokkenheid van (eind)gebruikers en stakeholders |
+| Product owner | {aantal} dagen | Inhoudelijk sturing / prioritering, opstellen backlog, NFE, minimal viable product, reviewen GFO en prototype |
+| Projectleider (Opdrachtgever) | {aantal} dagen | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan kick-off en eventuele workshops |
+| Diverse technisch en inhoudelijk specialisten | ad hoc | Inzet op ad-hocbasis ter ondersteuning van de andere rollen |
 
 # Planning en doorlooptijd
 

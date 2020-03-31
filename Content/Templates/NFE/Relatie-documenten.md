@@ -1,5 +1,3 @@
 ## Relatie met andere documenten
 
-{@@Relatie met andere documenten}
-
-{@@WAT IS DIE RELATIE?}
+{Relatie met andere documenten}

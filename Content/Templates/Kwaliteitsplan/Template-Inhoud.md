@@ -243,9 +243,9 @@ De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van
 | 9 | Jira | Jira | Jirabeheerder | 2 jaar |
 | 10 | Releasemanager-tabellen | Op de BIRT server/service (bij BIRT 2.0) en op de testwiki.lrk.org server bij BIRT 1.0 | DBA | 0,5 jaar |
 | 11 | Overige documentatie | Projectspecifiek | Projectteam | 5 jaar |
-| 12 | VM’s ontwikkelteams | | ISR Technisch beheer | 2 jaar |
-| 13 | Final Release | | Projectteam | 5 jaar |
-| 14 | {Projectspecifieke producten} | | | |
+| 12 | VM’s ontwikkelteams | {waar} | ISR Technisch beheer | 2 jaar |
+| 13 | Final Release | {waar} | Projectteam | 5 jaar |
+| 14 | {Projectspecifieke producten} | {waar} | {wie} | {termijn} |
 
 # Definition of Done
 

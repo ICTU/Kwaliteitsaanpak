@@ -11,33 +11,33 @@ In totaal zijn de volgende 31 eigenschappen onderkend:
 | Hoofdeigenschap | Eigenschap |
 |:----|:----|
 | Functionele geschiktheid | Functionele compleetheid |
-| | Functionele correctheid |
-| | Functionele toepasbaarheid
+| Functionele geschiktheid| Functionele correctheid |
+| Functionele geschiktheid| Functionele toepasbaarheid
 | Efficiëntie | Snelheid |
-| | Middelenbeslag
-| | Capaciteit
+| Efficiëntie| Middelenbeslag
+| Efficiëntie| Capaciteit
 | Uitwisselbaarheid | Beïnvloedbaarheid |
-| | Koppelbaarheid
+| Uitwisselbaarheid | Koppelbaarheid
 | Bruikbaarheid | Herkenbaarheid van geschiktheid |
-| | Leerbaarheid
-| | Bedienbaarheid
-| | Voorkomen gebruikersfouten
-| | Volmaaktheid gebruikersinterface
-| | Toegankelijkheid
+| Bruikbaarheid | Leerbaarheid
+| Bruikbaarheid | Bedienbaarheid
+| Bruikbaarheid | Voorkomen gebruikersfouten
+| Bruikbaarheid | Volmaaktheid gebruikersinterface
+| Bruikbaarheid | Toegankelijkheid
 | Betrouwbaarheid | Volwassenheid |
-| | Beschikbaarheid
-| | Foutbestendigheid
-| | Herstelbaarheid
+| Betrouwbaarheid | Beschikbaarheid
+| Betrouwbaarheid | Foutbestendigheid
+| Betrouwbaarheid | Herstelbaarheid
 | Beveiligbaarheid | Vertrouwelijkheid |
-| | Integriteit
-| | Onweerlegbaarheid
-| | Verantwoording
-| | Authenticiteit
+| Beveiligbaarheid | Integriteit
+| Beveiligbaarheid | Onweerlegbaarheid
+| Beveiligbaarheid | Verantwoording
+| Beveiligbaarheid | Authenticiteit
 | Onderhoudbaarheid | Modulariteit |
-| | Herbruikbaarheid
-| | Analyseerbaarheid
-| | Wijzigbaarheid
-| | Testbaarheid
+| Onderhoudbaarheid | Herbruikbaarheid
+| Onderhoudbaarheid | Analyseerbaarheid
+| Onderhoudbaarheid | Wijzigbaarheid
+| Onderhoudbaarheid | Testbaarheid
 | Overdraagbaarheid | Aanpasbaarheid |
-| | Installeerbaarheid
-| | Vervangbaarheid
+| Overdraagbaarheid | Installeerbaarheid
+| Overdraagbaarheid | Vervangbaarheid

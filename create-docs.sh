@@ -183,6 +183,7 @@ generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel 
 generate-template HLD Template-High-Level-Design "High-Level Design"
 generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
+generate-template SAD Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
 
 python3 create-checklist.py "$KA_TITLE"
 
@@ -192,3 +193,4 @@ docker-compose run mdconvert /work/DocumentDefinitions/high-level-design.json
 docker-compose run mdconvert /work/DocumentDefinitions/kwaliteitsplan.json
 docker-compose run mdconvert /work/DocumentDefinitions/niet-functionele-eisen.json
 docker-compose run mdconvert /work/DocumentDefinitions/softwarearchitectuurdocument.json
+docker-compose run mdconvert /work/DocumentDefinitions/projectvoorstel-voorfase.json

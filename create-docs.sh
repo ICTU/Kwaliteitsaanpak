@@ -45,14 +45,6 @@ function create-html
         PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $2
 }
 
-# Create word document from MD source
-# create-word 1:<source md> 2:<output file> 3:<style ref document> 4:<document title>
-function create-word
-{
-    echo "--- create-word {$2} from {$1} using style {$3} and title {$4}"
-    python3 md-to-docx.py "$1" "$2" "$4" "$3"
-}
-
 # Create main document for a template
 # create-template 1:<template document> 2:<template folder name> 3:<output file>
 function create-template
@@ -95,25 +87,6 @@ function expand
     # Expand MD file
     expand-md $DOCUMENT_MD "$EXPANDED" "$DICTIONARY"
     expand-md $COVER_MD "$EXPANDED_COVER" "$DICTIONARY"
-
-    # PDF generation
-    # Cover
-    # create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /work/DocumentDefinitions/Shared/cover.css
-    # Body
-    # create-html "$EXPANDED" "$HTML_BUILD" /work/DocumentDefinitions/Shared/document.css
-    # Header
-    # map-refsd DocumentDefinitions/Shared/header.html "$HEADER_HTML_BUILD" $DICTIONARY
-    # Create pdf
-    # docker-compose run wkhtmltopdf -c "wkhtmltopdf \
-    #    --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
-    #    --header-html $HEADER_HTML_BUILD --header-spacing 10 \
-    #    --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
-    #    cover $COVER_HTML_BUILD \
-    #    toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-    #    $HTML_BUILD $PDF_OUTPUT"
-
-    # DOCX generation
-    # create-word $EXPANDED $DOCX_OUTPUT $8 "$TITLE"
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.
@@ -182,6 +155,8 @@ generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
 generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
 generate-template HLD Template-High-Level-Design "High-Level Design"
 generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
+generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
+generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
 
 python3 create-checklist.py "$KA_TITLE"
 
@@ -190,3 +165,5 @@ docker-compose run mdconvert /work/DocumentDefinitions/globaal-functioneel-ontwe
 docker-compose run mdconvert /work/DocumentDefinitions/high-level-design.json
 docker-compose run mdconvert /work/DocumentDefinitions/kwaliteitsplan.json
 docker-compose run mdconvert /work/DocumentDefinitions/niet-functionele-eisen.json
+docker-compose run mdconvert /work/DocumentDefinitions/softwarearchitectuurdocument.json
+docker-compose run mdconvert /work/DocumentDefinitions/projectvoorstel-voorfase.json

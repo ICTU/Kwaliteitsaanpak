@@ -1,4 +1,4 @@
-## De Kwaliteitsaanpak
+## De {{KWALITEITSAANPAK}}
 
 #include "Content/Inleiding-tekst.md"
 

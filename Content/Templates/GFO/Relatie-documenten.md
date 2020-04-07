@@ -4,7 +4,7 @@ Dit document beschrijft de functionele user stories. De architectuur, die ten gr
 
 In verschillende documenten zijn eisen en wensen opgenomen die ten grondslag liggen aan dit globaal functioneel ontwerp. Deze zijn opgenomen in de volgende documenten:
 
-* Informatiebeveiligingsplan (bevat eisen en wensen en mogelijk maatregelen tegen informatiebeveiligingsrisico’s), {documentreferentie}
-* Projectstartarchitectuur (PSA), {documentreferentie}
-* Software-architectuurdocument (SAD), {documentreferentie}
-* Niet-functionele eisen (NFE) (deze kunnen leiden tot functionele user stories), {documentreferentie}
+* Informatiebeveiligingsplan (bevat eisen en wensen en mogelijk maatregelen tegen informatiebeveiligingsrisico’s) {documentreferentie},
+* Projectstartarchitectuur {documentreferentie},
+* Software-architectuurdocument {documentreferentie},
+* Niet-functionele eisen (deze kunnen leiden tot functionele user stories), {documentreferentie}.

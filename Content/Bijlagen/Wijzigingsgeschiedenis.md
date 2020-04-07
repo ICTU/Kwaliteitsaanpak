@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.0, 30 maart 2020
+### Versie 2.0, 1 april 2020
 
 * Naam van de Kwaliteitsaanpak veranderd van "Kwaliteitsaanpak ICTU Software Realisatie" naar "ICTU Kwaliteitsaanpak Softwareontwikkeling". Waar relevant "softwarerealisatie" veranderd in "softwareontwikkeling".
 * Maatregelen, waar mogelijk, compacter geformuleerd.
@@ -21,6 +21,8 @@
 * Referenties aan tools geactualiseerd.
 * Tekstuele en stilistische verbeteringen.
 * Actielijst toegevoegd aan self-assessment spreadsheet.
+* De beschrijving van de rollen van Software Delivery Manager en Kwaliteitsmanager aangescherpt.
+* Generatie van documenttemplates is onderdeel van de Kwaliteitsaanpak.
 
 ### Versie 1.3.1, 1 mei 2019
 

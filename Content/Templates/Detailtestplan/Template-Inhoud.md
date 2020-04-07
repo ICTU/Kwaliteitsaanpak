@@ -30,9 +30,9 @@ Binnen het project worden door ICTU de volgende testsoorten onderscheiden en toe
 
 ## Agile werkwijze
 
-Het team zal volgens de agile Scrummethode werken. Dat betekent dat de expertise van de diverse componenten in het landschap bij elkaar in één team zit en dat het testen van de gerealiseerde oplossing in principe tijdens de sprint plaatsvindt.
+Het team zal volgens de Scrummethode werken. Dat betekent dat de expertise van de diverse componenten in het landschap bij elkaar in één team zit en dat het testen van de gerealiseerde oplossing in principe tijdens de sprint plaatsvindt.
 
-{Mogelijke uitzonderingen hierop zijn de securitytest, Migratietest (MT), performancetest en Product Acceptatie Test (PAT). Deze behoren niet perse tot de vaste sprintactiviteiten.}
+{Mogelijke uitzonderingen hierop zijn de securitytest, Migratietest (MT), performancetest en Product Acceptatie Test (PAT). Deze behoren niet vanzelfsprekend tot de vaste sprintactiviteiten.}
 
 ## Testactiviteiten tijdens sprints
 
@@ -156,18 +156,3 @@ De volgende testartifacten worden bij een release opgeleverd:
 * Eind(test)rapport,
 * Kwaliteitsrapport,
 * Vrijgaveadvies.
-
-{@@En het onderstaande hoort in het projectplan - en dus niet hier:}
-
-Go/No-go-beslissing
-{Geef hier de onderwerpen weer die voor het project van toepassing zijn}
-De Go/No-go-beslissing wordt ondersteund door een managementsamenvatting die de beslissing om wel of niet in productie te nemen onderbouwt. Het bestaat uit de volgende onderwerpen:
-
-* ART uitgevoerd, aantal testcases,
-* Handmatig uitgevoerde tests,
-* Integratietesten,
-* Performancetesten met bijbehorende resultaten,
-* Securitytesten met bijbehorende resultaten en aanbevelingen,
-* Wat is er niet getest (veelal 3rd party),
-* Known issues,
-* Kwaliteitsgerelateerde issues.

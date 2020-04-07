@@ -14,3 +14,4 @@
 # Bijlagen
 
 #include "Content/Templates/Bijlagen/Standaard-Bijlagen.md"
+#include "Content/Templates/{{TEMPLATE-FOLDER}}/Specifieke-Bijlagen.md"

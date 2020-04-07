@@ -1,3 +1,3 @@
 ## Leeswijzer
 
-Wat staat waar in dit kwaliteitsplan?
+{Wat staat waar in dit kwaliteitsplan?}

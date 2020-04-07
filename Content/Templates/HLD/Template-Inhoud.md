@@ -11,11 +11,11 @@ De volgende tabel bevat technische eisen die ten grondslag liggen aan het projec
 
 ## Netwerkomgeving
 
-{Beschrijving van de netwerkomgeving}
+{Beschrijving van de netwerkomgeving}.
 
-{Afbeelding van de infrastructuur met zonering, waarbij aangegeven in welke laag van de architectuur je alles configureert}
+{Afbeelding van de infrastructuur met zonering, waarbij aangegeven in welke laag van de architectuur je alles configureert.}
 
-{Beschrijving OTAP-omgevingen}
+{Beschrijving OTAP-omgevingen.}
 
 ## {Component 1}
 

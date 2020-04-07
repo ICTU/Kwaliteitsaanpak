@@ -215,7 +215,7 @@ Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementati
 
 ## Certificeringen
 
-Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; voorbeelden zijn BIR compliancy en ISO127001 compliancy.  
+Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; voorbeelden zijn BIR compliancy en ISO 127001 compliancy.  
 
 ## Projectspecifieke maatregelen 
 

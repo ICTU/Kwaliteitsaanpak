@@ -9,7 +9,7 @@
 * Bij de maatregelen "Het project zorgt dat het product continue aan de kwaliteitsnormen voldoet" (M02), "Het project maakt technische schuld inzichtelijk en lost deze planmatig op" (M08) en "Het project gebruikt tools voor vastgestelde taken" (M16) naast HQ ook Quality-time vermeld.
 * Bij de maatregel "Het project maakt technische schuld inzichtelijk en lost deze planmatig op" (M08) toegevoegd dat projecten regelmatig en voldoende tijd besteden aan het voorkomen en oplossen van technische schuld.
 * Bij de maatregel "Het project gebruikt tools voor vastgestelde taken" (M16) versiebeheer toegevoegd, met als concrete tools GitLab en Azure DevOps.
-* Explicieter aandacht besteed aan gebruikskwaliteit in de maatregelen "Het project levert in elke fase vastgestelde informatie over het product op" (M01) en "Het project zorgt dat het product continue aan de kwaliteitsnormen voldoet" (M02).
+* Explicieter aandacht besteed aan gebruikskwaliteit in de maatregelen "Het project levert in elke fase vastgestelde informatie over het product op" (M01) en "Het project zorgt dat het product continue aan de kwaliteitsnormen voldoet" (M02). ISO 9241-210 opgenomen als standaard die ICTU hanteert voor gebruikskwaliteit.
 * De maatregel "Betrokkenheid bij inzet" (M22) verwijderd.
 * De maatregel "Implementatie van wijzigingen aan de kwaliteitsaanpak en -normen" (M24) verwijderd.
 * Nieuwe maatregel toegevoegd voor het starten van projecten: "ICTU zorgt dat een project verantwoord kan starten" (M29).

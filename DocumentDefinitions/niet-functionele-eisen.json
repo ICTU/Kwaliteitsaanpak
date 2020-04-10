@@ -1,6 +1,7 @@
 {
     "InputFile": "/work/build/Templates/NFE/Template-Niet-Functionele-Eisen.md",
     "OutputPath": "/work/dist/",
+    "BuildPath": "/work/build/Templates/NFE/",
     "Title": "Niet-Functionele Eisen",
     "DocumentType": "Template",
     "IncludeFrontPage": true,

@@ -1,6 +1,7 @@
 {
     "InputFile": "/work/build/Templates/GFO/Template-Globaal-Functioneel-Ontwerp.md",
     "OutputPath": "/work/dist/",
+    "BuildPath": "/work/build/Templates/GFO/",
     "Title": "Globaal Functioneel Ontwerp",
     "DocumentType": "Template",
     "IncludeFrontPage": true,

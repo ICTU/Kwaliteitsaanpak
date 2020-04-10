@@ -1,11 +1,10 @@
 ## Terminologie en afkortingen
 
-De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in ICTU-documentatie.
+De onderstaande tabel bevat afkortingen en termen die voorkomen in de {{KWALITEITSAANPAK}} en bijbehorende templates.
 
 | Term/afkorting | Toelichting |
 |:---------------|:------------|
 | **actor** | een persoon die of een extern informatiesysteem dat een handeling verricht op het informatiesysteem |
-| **ACID** | atomic, consistent, isolated, durable; eigenschappen die transacties moeten hebben om gegevensintegriteit te waarborgen |
 | **API** | application programming interface |
 | **ART** | automatische **regressietest** |
 | **auditing** | Vastlegging van de door een actor verrichtte handelingen. |
@@ -13,8 +12,6 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | **autorisatie** | aan een **actor** toegekende rechten |
 | **BIA** | business impact analysis |
 | **BIO** | Baseline Informatiebeveiliging Overheid |
-| **CRL** | certificate revocation list |
-| **CSP** | certification service provider |
 | **DoD** | Definition of Done |
 | **DoR** | Definition of Ready |
 | **GFO** | globaal functioneel ontwerp |
@@ -29,16 +26,11 @@ De onderstaande tabel bevat afkortingen en termen die regelmatig voorkomen in IC
 | **NFE** | niet-functionele eis(en) |
 | **NORA** | Nederlandse OverheidsReferentieArchitectuur |
 | **NPR** | Nederlandse PraktijkRichtlijn |
-| **OIN** | OverheidsIdentificatieNummer |
 | **OTAP** | Ontwikkel, Test, Acceptatie, Productie; gebruikt om verschillende soorten omgevingen aan te duiden |
-| **OTAPP** | Ontwikkel, Test, Acceptatie, Preproductie en Productie |
 | **PIA** | privacy impact analysis |
-| **PID** | projectinitiatiedocument |
-| **PKI-O** | PKIoverheid |
 | **PRA** | productrisicoanalyse |
 | **PSA** | projectstartarchitectuur |
 | **PvE** | programma van eisen |
-| **QoS** | quality of service |
 | **regressietest** | test die na een wijziging controleert of niet-gewijzigde delen van een systeem nog steeds correct functioneren |
 | **SAD** | software-architectuurdocument |
 | **softwareontwikkeling** | een activiteit die nieuwe software maakt en/of bestaande software aanpast |

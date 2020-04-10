@@ -60,7 +60,7 @@ def process_maatregel(workbook, worksheet, maatregel_folder, row, title):
     title = contents[0].split(":")[1].strip()
     worksheet.write(row, 1, title, maatregel_format)
     worksheet.write_comment(row, 1, "".join([line.strip("#").strip(" ") for line in contents]),
-                            dict(x_scale=5, y_scale=7))
+                            dict(x_scale=7, y_scale=8))
     status_format_options = dict(bg_color="#FED32D", text_wrap=True)
     status_format = workbook.add_format(status_format_options)
     worksheet.write(row, 2, "", status_format)

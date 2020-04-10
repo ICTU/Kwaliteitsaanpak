@@ -46,7 +46,8 @@ Een projectstartarchitectuur is bedoeld om te borgen dat nieuwe ontwikkelingen e
 * Een beschrijving van de doelen en ambities waaraan het project bijdraagt en invulling geeft. Dus niet de projectdoelen en -ambitie.
 * Een afbakening van het project en de context van de voorziening/oplossing die het project gaat realiseren gezien als een 'black box'. Denk o.a. ook aan relaties met andere projecten en generieke en specifieke diensten (services).
 * De belangrijkste functies van de door het project te realiseren voorziening, informatiestromen en koppelvlakken.
-* Een beschrijving van de belangrijkste betrokken stakeholders en/of ketenpartijen. een concretisering van van toepassing zijnde kaders en randvoorwaarden.
+* Een beschrijving van de belangrijkste betrokken stakeholders en/of ketenpartijen.
+* Een concretisering van kaders en randvoorwaarden die van toepassing zijn.
 * Beleidsuitgangspunten (drijfveren en doelen), zowel voor het specifieke project als algemeen voor de organisatie en visie (oplossingsrichting).
 * Standaarden en normen (open standaarden van het Forum Standaardisatie en domeinspecifieke standaarden).
 

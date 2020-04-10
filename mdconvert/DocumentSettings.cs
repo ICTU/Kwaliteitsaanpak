@@ -14,6 +14,10 @@ namespace mdconvert
 
         public string OutputPath { get; set; } = "";
 
+        public string BuildPath { get; set; } = "";
+
+        public string ImagePath { get; set; } = "images";
+
         public string Title { get; set; } = "";
 
         [JsonConverter(typeof(StringEnumConverter))]
@@ -24,8 +28,6 @@ namespace mdconvert
         public bool IncludeMarkdownSource { get; set; } = false;
 
         public bool IncludeTableOfContents { get; set; } = false;
-
-        public string ImagePath { get; set; } = "images";
 
         public IEnumerable<ExportFormat> OutputFormats { get; set; } = new ExportFormat[] { ExportFormat.Docx };
 

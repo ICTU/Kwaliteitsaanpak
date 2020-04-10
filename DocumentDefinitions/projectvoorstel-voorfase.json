@@ -1,6 +1,7 @@
 {
     "InputFile": "/work/build/Templates/Projectvoorstel-Voorfase/Template-Projectvoorstel-Voorfase.md",
     "OutputPath": "/work/dist/",
+    "BuildPath": "/work/build/Templates/Projectvoorstel-Voorfase/",
     "Title": "Projectvoorstel Voorfase",
     "DocumentType": "Template",
     "IncludeFrontPage": true,

@@ -1,20 +1,20 @@
 # Werkwijze
 
-Het succes van deze opdracht, en van het eventueel later uit te voeren realisatietraject, is sterk afhankelijk van de beschikbaarheid en inzet van alle betrokkenen. Deze betrokkenheid dient daarom voor aanvang van het project expliciet te worden geborgd door de betrokken organisaties. Dit zal door de projectleider ICTU en {opdrachtgever} gemonitord worden. 
+Het succes van deze opdracht, en van het eventueel later uit te voeren realisatietraject, is sterk afhankelijk van de beschikbaarheid en inzet van alle betrokkenen. Deze betrokkenheid dient daarom voor aanvang van het project expliciet te worden geborgd door de betrokken organisaties. Dit zal door de projectleider ICTU en {opdrachtgever} gemonitord worden.
 
 Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak. Dit vertaalt zich concreet in:
 
-* Eén team met medewerkers van {opdrachtgever/partijen} en ICTU werkt minimaal {aantal} dagdelen per week op locatie van {locatie} aan de gedefinieerde documenten. 
+* Eén team met medewerkers van {opdrachtgever/partijen} en ICTU werkt minimaal {aantal} dagdelen per week op locatie van {locatie} aan de gedefinieerde documenten.
 * Er is een product owner door {opdrachtgever} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
-* Voor elk product is een inhoudelijk verantwoordelijke, een penvoerder/schrijver en één of meer reviewers. Alle partijen werken constructief samen. Reviews zijn gericht op kwaliteitsverbeteringen. Waar nodig schrijven reviewers mee aan de documenten. 
-* Nieuwe tussentijdse versies van documenten worden kortcyclisch opgeleverd, uiterlijk {termijn}. 
-* Alle tussentijdse versies worden gereviewd door {reviewers} binnen de afgesproken termijn (maximaal {aantal} werkdagen). 
+* Voor elk product is een inhoudelijk verantwoordelijke, een penvoerder/schrijver en één of meer reviewers. Alle partijen werken constructief samen. Reviews zijn gericht op kwaliteitsverbeteringen. Waar nodig schrijven reviewers mee aan de documenten.
+* Nieuwe tussentijdse versies van documenten worden kortcyclisch opgeleverd, uiterlijk {termijn}.
+* Alle tussentijdse versies worden gereviewd door {reviewers} binnen de afgesproken termijn (maximaal {aantal} werkdagen).
 
 De voorfase wordt uitgevoerd in iteraties, "sprints" genaamd, van twee weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de status van de producten. Rondom de thema’s {thema's zoals functionaliteit, architectuur, techniek en veiligheid} organiseert ICTU werksessies.
 
 ## Plan van aanpak voorfase
 
-Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de voorfase en het voorbereiden en plannen van een kick-off. In het (beknopte) plan van aanpak voorfase wordt aandacht besteed aan de exacte invulling van de voorfase. 
+Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de voorfase en het voorbereiden en plannen van een kick-off. In het (beknopte) plan van aanpak voorfase wordt aandacht besteed aan de exacte invulling van de voorfase.
 
 ## Kick-off
 
@@ -26,12 +26,13 @@ Voor een goede start wordt er, bij aanvang van de voorfase, een kick-off georgan
 
 ## Oplevering producten
 
-De voorfase is op basis van timeboxes ingericht. Aan het einde van de timebox zijn alle tot dan toe opgedane inzichten verwerkt in de producten. Indien er na afronding van de voorfase nieuwe inzichten ontstaan, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren. 
+De voorfase is op basis van timeboxes ingericht. Aan het einde van de timebox zijn alle tot dan toe opgedane inzichten verwerkt in de producten. Indien er na afronding van de voorfase nieuwe inzichten ontstaan, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
 
 ## Kwaliteitsbeheersing
 
 Op te leveren producten worden gemaakt door de penvoerder en gereviewd door de andere partijen. De penvoerder verwerkt de resultaten van de review in de producten. Op deze wijze levert het projectteam gecontroleerde resultaten op aan de projectleider van ICTU.
 De experts reviewen op zaken zoals:
+
 * heldere structuur en onderlinge samenhang van de documenten;
 * “fitness for use” van de producten; Dit betekent dat deze producten geschikt zijn om een Scrumontwikkeltraject te starten en te sturen;
 * interne en onderlinge consistentie;
@@ -40,9 +41,10 @@ De experts reviewen op zaken zoals:
 ## Inzet {opdrachtgever/partijen}
 
 Betrokkenheid van inhoudsdeskundigen van {opdrachtgever/partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
+
 * De producten worden opgesteld tijdens verschillende werksessies. Aanwezigheid bij de werksessies (welke zoveel mogelijk tijdens de dagdelen waarop {opdrachtgever/partijen} en ICTU samenwerken worden gepland) en indien gewenst aan vervolgafspraken in dat kader;
-* Actief bijdragen aan het schrijven en reviewen van de producten; 
-* Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden. 
+* Actief bijdragen aan het schrijven en reviewen van de producten;
+* Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden.
 
 Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoering van dit projectvoorstel (één persoon kan eventueel meer dan één rol vervullen):
 {selecteer de juiste rollen en vul aan, vul ook de juiste verantwoordelijkheden in, onderstaande is een eerste opzet met zoveel mogelijk rollen}
@@ -54,7 +56,7 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 | Infrastructuurarchitect | {aantal} dagen | Opstellen infrastructuurarchitectuur (high level design, HLD), reviewen SAD, NFE en IB-plan |
 | Architect | {aantal} dagen | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur |
 | Testmanager | {aantal} dagen | Opstellen PRA, mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie |
-| Diverse inhoudelijk deskundigen | {aantal} dagen | Eventuele betrokkenheid van (eind)gebruikers en stakeholders |
+| Diverse inhoudelijk deskundigen | {aantal} dagen | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden |
 | Product owner | {aantal} dagen | Inhoudelijk sturing / prioritering, opstellen backlog, NFE, minimal viable product, reviewen GFO en prototype |
 | Projectleider (Opdrachtgever) | {aantal} dagen | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan kick-off en eventuele workshops |
 | Diverse technisch en inhoudelijk specialisten | ad hoc | Inzet op ad-hocbasis ter ondersteuning van de andere rollen |
@@ -63,7 +65,7 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 
 De start van het project vindt uiterlijk {aantal} weken na ondertekening van dit projectvoorstel plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het team samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
 
-De verwachte doorlooptijd van de uitvoering van dit projectvoorstel is {aantal} weken.  
+De verwachte doorlooptijd van de uitvoering van dit projectvoorstel is {aantal} weken.
 
 Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct na de “go” op het projectvoorstel afgestemd worden. Mogelijk wordt hierdoor de doorlooptijd langer. Op dat moment wordt ook de verdere invulling van de planning en de sprints afgestemd.
 
@@ -74,20 +76,20 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 | Kick-off |  |  |  |  |  |  |  |  |
 | Realisatie producten sprint 1 |  |  |  |  |  |  |  |  |
 | Realisatie producten sprint 2 |  |  |  |  |  |  |  |  |
-| Realisatie producten sprint 3 |  |  |  |  |  |  |  |  |	 
-| Afronden en afsluiten voorfase |  |  |  |  |  |  |  |  |	 	 
+| Realisatie producten sprint 3 |  |  |  |  |  |  |  |  |
+| Afronden en afsluiten voorfase |  |  |  |  |  |  |  |  |
 
 # Randvoorwaarden
 
 Voor de uitvoering van de voorfase gelden de volgende randvoorwaarden:
 
-| Nr | Randvoorwaarde |
+| Nr   | Randvoorwaarde |
 |:-----|:----|
-| R01 | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd. |
-| R02 | De product owner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.  |
-| R03 | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever} en ICTU. Deze is in lijn met de {{KWALITEITSAANPAK}}. |
-| R04 | De producten {producten} zijn beschikbaar voor aanvang van de voorfase. |
-| R05 | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar. |
+| R01  | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd. |
+| R02  | De product owner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.  |
+| R03  | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever} en ICTU. Deze is in lijn met de {{KWALITEITSAANPAK}}. |
+| R04  | De producten {producten} zijn beschikbaar voor aanvang van de voorfase. |
+| R05  | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar. |
 | {volgnummer} | {randvoorwaarde} |
 
 # Projectrisico’s
@@ -127,7 +129,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoo
 | Diverse technisch specialisten | {x} uur | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is |
 | Totaal | {x} uur |  |
 
-## Kosten 
+## Kosten
 
 Dit resulteert in de volgende kosten:
 
@@ -145,4 +147,4 @@ ICTU werkt op basis van bevoorschotting. Opdrachtgever wordt dan ook verzocht om
 
 ICTU verricht de Opdracht tegen vergoeding van de daadwerkelijk gemaakte kosten. Dit betekent dat na afronding van de opdracht ICTU een eventueel resterend deel van het bevoorschotte bedrag aan Opdrachtgever retourneert.
 
-Meer informatie over ICTU’s kostprijsmodel kunt u vinden in de bijlage "Werken met ICTU: informatie voor opdrachtgevers”. Met het invullen en retourneren van bijlage “Facturatiegegevens” bevordert u een soepele financiële afwikkeling. 
+Meer informatie over ICTU’s kostprijsmodel kunt u vinden in de bijlage "Werken met ICTU: informatie voor opdrachtgevers”. Met het invullen en retourneren van bijlage “Facturatiegegevens” bevordert u een soepele financiële afwikkeling.

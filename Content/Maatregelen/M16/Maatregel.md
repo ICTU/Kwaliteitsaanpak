@@ -7,7 +7,7 @@ Onder het ondersteunen van "agile werken" vallen het opvoeren van eisen, het opv
 ICTU adviseert en ondersteunt hiervoor de volgende tools:
 
 1. Agile werken: Jira,
-2. Continuous delivery pipeline: Jenkins voor Javaprojecten en Azure DevOps (voorheen Team Foundation Server) voor DotNet-projecten,
+2. Continuous delivery pipeline: Jenkins, GitLab CI en Azure DevOps (voorheen Team Foundation Server),
 3. Kwaliteit van broncode: SonarQube,
 4. Versiebeheer: GitLab en Azure DevOps,
 5. Release: Release Manager,

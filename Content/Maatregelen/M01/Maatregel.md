@@ -84,7 +84,7 @@ De onderstaande tabel bevat de hierboven genoemde producten en geeft aan in welk
 
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom 'Realisatiefase') en wordt de kwaliteit van de bestaande softwareproducten getoetst. Dit onderzoek, dat bij ICTU een "due diligence" heet, is onderdeel van de voorfase en wordt uitgevoerd door vertegenwoordigers van ICTU en medewerkers van het desbetreffende project, in samenwerking met vertegenwoordigers van de opdrachtgever.
 
-| Product                | Voorfase  | Voorfase᠆ met onderzoek  | Realisatie᠆fase |
+| Product                                      | Voorfase | Voorfase᠆ met onderzoek | Realisatie᠆fase |
 |----------------------------------------------------------------------------------------|---|---|---|
 | BIA (Business impact analysis)¹                                                        | ✔ | ✔ | ✔ |
 | PIA (Privacy impact analysis)²                                                         | ✔ | ✔ | ✔ |

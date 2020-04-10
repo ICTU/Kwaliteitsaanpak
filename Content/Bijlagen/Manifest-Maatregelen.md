@@ -11,7 +11,7 @@ De {{KWALITEITSAANPAK}} helpt opdrachtgevers van maatwerksoftware het belang van
 
 We delen wat we goed kunnen door:
 
-* geleerde lessen te verwerken in deze Kwaliteitsaanpak ({{M11}}), die te delen tussen projecten en te publiceren via [http://www.ictu.nl/kwaliteitsaanpak](http://www.ictu.nl/kwaliteitsaanpak) ({{M12}});
+* geleerde lessen te verwerken in deze Kwaliteitsaanpak ({{M11}}), die te delen tussen projecten en te publiceren via [https://www.ictu.nl/kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak) ({{M12}});
 * de tools die we ontwikkelen ter ondersteuning van softwareontwikkelprojecten zoveel mogelijk als open source beschikbaar te stellen ({{M15}}).
 
 We gebruiken wat anderen beter doen door:
@@ -29,13 +29,13 @@ De Kwaliteitsaanpak is het kader voor de projecten, maar daarbinnen is ruimte om
 
 Door agile te werken ({{M05}}) kunnen wij:
 
-- duurzame kwaliteit leveren ({{M06}}, {{M02}} en {{M28}});
-- frequent waarde leveren ({{M07}});
-- technische schuld beheersen ({{M08}}).
+* duurzame kwaliteit leveren ({{M06}}, {{M02}} en {{M28}});
+* frequent waarde leveren ({{M07}});
+* technische schuld beheersen ({{M08}}).
 
 ### Wij geven inzicht in de kwaliteit van ons werk
 
 Deze Kwaliteitsaanpak helpt inzicht te geven aan opdrachtgevers in de kwaliteit van het werk door:
 
-- documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen ({{M01}});
-- continu de kwaliteit van het werk te meten en opdrachtgevers hierover te rapporteren ({{M02}}).
+* documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen ({{M01}});
+* continu de kwaliteit van het werk te meten en opdrachtgevers hierover te rapporteren ({{M02}}).

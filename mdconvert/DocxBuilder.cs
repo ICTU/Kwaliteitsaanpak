@@ -13,7 +13,7 @@ using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
 namespace mdconvert.Builders
 {
     /// <summary>
-    /// Document builder for DOCX documents. 
+    /// Document builder for DOCX documents.
     /// </summary>
     internal class DocxBuilder : IDocumentBuilder
     {
@@ -340,7 +340,6 @@ namespace mdconvert.Builders
                 RunProperties props = new RunProperties();
                 if (fragment.Bold)
                 {
-                    //props.Bold = new Bold();
                     props.Append(new Bold());
                 }
                 if (fragment.Italic)

@@ -10,7 +10,7 @@ using System.Xml;
 namespace mdconvert
 {
     /// <summary>
-    /// Converts a collection of Markdown lines, usually the contents of a Markdown file, to an intermediary XML representation, that captures content 
+    /// Converts a collection of Markdown lines, usually the contents of a Markdown file, to an intermediary XML representation, that captures content
     /// and (some) semantics.
     /// </summary>
     internal class MarkdownConverter
@@ -524,6 +524,16 @@ namespace mdconvert
             pos += markup.Length;
         }
 
+        private void Link(string markup, string anchor, string link)
+        {
+            Flush();
+            output.WriteStartElement(XMLTags.TagAnchor);
+            output.WriteAttributeString(XMLTags.AttributeLink, link);
+            output.WriteString(anchor);
+            output.WriteEndElement();
+            pos += markup.Length;
+        }
+
         private void ProcessFormattedText(string text)
         {
             buffer = "";
@@ -597,6 +607,13 @@ namespace mdconvert
                     EndStyle(MarkdownSyntax.InstructionEnd);
                     is_instruction = false;
                     continue;
+                } else {
+                    Match m = Regex.Match(text.Substring(pos), MarkdownSyntax.LinkPattern);
+                    if (m.Success)
+                    {
+                        Link(m.Value, m.Groups[1].Value, m.Groups[2].Value);
+                        continue;
+                    }
                 }
 
                 buffer += current;

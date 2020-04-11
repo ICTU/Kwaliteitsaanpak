@@ -1,7 +1,7 @@
 ﻿namespace mdconvert
 {
     /// <summary>
-    /// XML tags and attributes used in the intermediary XML format. 
+    /// XML tags and attributes used in the intermediary XML format.
     /// </summary>
     public static class XMLTags
     {
@@ -42,6 +42,8 @@
         public const string AttributeTitle = "title";
         public const string TagHeader = "header";
         public const string TagFooter = "footer";
+        public const string TagAnchor = "anchor";
+        public const string AttributeLink = "link";
 
         public const string AlignmentLeft = "left";
         public const string AlignmentCenter = "center";

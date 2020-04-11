@@ -1,7 +1,7 @@
 ﻿namespace mdconvert
 {
     /// <summary>
-    /// Markdown-specific tokens and patterns, needed to parse Markdown files. 
+    /// Markdown-specific tokens and patterns, needed to parse Markdown files.
     /// </summary>
     public static class MarkdownSyntax
     {
@@ -19,6 +19,7 @@
         public const string HeadingPattern = @"^#+\s";
         public const string BulletListPattern = @"^[\*\+\-]\s";
         public const string NumberedListPattern = @"^[0-9A-Za-z]\.\s";
+        public const string LinkPattern = @"^\[([^\]]+)\]\(([^\)]+)\)";
 
         public const char BulletLevel1 = '*';
         public const char BulletLevel2 = '+';

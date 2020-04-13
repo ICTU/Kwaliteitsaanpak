@@ -6,7 +6,7 @@ import sys
 
 
 class StateMachine:
-    headings = tuple("<h{nr}".format(nr=nr) for nr in range(3, 7))
+    headings = tuple("<h{nr}".format(nr=nr) for nr in range(2, 7))
 
     def __init__(self):
         self.__state = self.default
@@ -14,7 +14,7 @@ class StateMachine:
 
     def default(self, line):
         """ While in the default state, look for headings we need to keep together with the first paragraph
-            following it. """       
+            following it. """
         if line.startswith('<h1 id="bijlagen">'):
             self.__in_bijlagen = True
         if line.startswith(self.headings):
@@ -25,7 +25,7 @@ class StateMachine:
         line = self.styling(line)
         yield line
 
-    def styling(self, line): 
+    def styling(self, line):
         line = line.replace("<p>@{", '<p class="maatregel">')
         line = line.replace("}@", '')
         line = self.bijlagen(line)

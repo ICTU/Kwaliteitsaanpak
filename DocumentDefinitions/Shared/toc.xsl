@@ -85,10 +85,10 @@
             <xsl:value-of select="@title"/>
           </a>
           <xsl:if test="$depth = 2">
-            <span class="chapter-page-number"> <xsl:value-of select="@page+1" /> </span>
+            <span class="chapter-page-number"> <xsl:value-of select="@page" /> </span>
           </xsl:if>
           <xsl:if test="$depth > 2">
-            <span class="section-page-number"> <xsl:value-of select="@page+1" /> </span>
+            <span class="section-page-number"> <xsl:value-of select="@page" /> </span>
           </xsl:if>
         </div>
       </xsl:if>

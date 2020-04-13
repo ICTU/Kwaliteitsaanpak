@@ -46,7 +46,8 @@ Een projectstartarchitectuur is bedoeld om te borgen dat nieuwe ontwikkelingen e
 * Een beschrijving van de doelen en ambities waaraan het project bijdraagt en invulling geeft. Dus niet de projectdoelen en -ambitie.
 * Een afbakening van het project en de context van de voorziening/oplossing die het project gaat realiseren gezien als een 'black box'. Denk o.a. ook aan relaties met andere projecten en generieke en specifieke diensten (services).
 * De belangrijkste functies van de door het project te realiseren voorziening, informatiestromen en koppelvlakken.
-* Een beschrijving van de belangrijkste betrokken stakeholders en/of ketenpartijen. een concretisering van van toepassing zijnde kaders en randvoorwaarden.
+* Een beschrijving van de belangrijkste belanghebbenden en/of betrokken ketenpartijen.
+* Een concretisering van kaders en randvoorwaarden die van toepassing zijn.
 * Beleidsuitgangspunten (drijfveren en doelen), zowel voor het specifieke project als algemeen voor de organisatie en visie (oplossingsrichting).
 * Standaarden en normen (open standaarden van het Forum Standaardisatie en domeinspecifieke standaarden).
 
@@ -84,7 +85,7 @@ De onderstaande tabel bevat de hierboven genoemde producten en geeft aan in welk
 
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom 'Realisatiefase') en wordt de kwaliteit van de bestaande softwareproducten getoetst. Dit onderzoek, dat bij ICTU een "due diligence" heet, is onderdeel van de voorfase en wordt uitgevoerd door vertegenwoordigers van ICTU en medewerkers van het desbetreffende project, in samenwerking met vertegenwoordigers van de opdrachtgever.
 
-| Product                | Voorfase  | Voorfase᠆ met onderzoek  | Realisatie᠆fase |
+| Product                                      | Voorfase | Voorfase᠆ met onderzoek | Realisatie᠆fase |
 |----------------------------------------------------------------------------------------|---|---|---|
 | BIA (Business impact analysis)¹                                                        | ✔ | ✔ | ✔ |
 | PIA (Privacy impact analysis)²                                                         | ✔ | ✔ | ✔ |
@@ -95,7 +96,7 @@ Als tijdens een project bestaande software dient te worden afgebouwd, onderhoude
 | Testdocumentatie: testgevallen, rapportages                                            |   |   | ✔ |
 | Informatiebeveiligingsplan                                                             | ✔ | ✔ | ✔ |
 | Projectplan                                                                            | ✔ | ✔ |   |
-| Kwaliteitsplan                                                                         | ✔ | ✔ |   |
+| Kwaliteitsplan                                                                         | ✔ | ✔ | ✔ |
 | Deploybare versie van de software                                                      |   |   | ✔ |
 | Broncode, inclusief de benodigdheden voor het bouwen van de software                   |   |   | ✔ |
 | Regressietests, inclusief de benodigdheden voor het uitvoeren van de regressietesten   |   |   | ✔ |
@@ -113,7 +114,7 @@ Als tijdens een project bestaande software dient te worden afgebouwd, onderhoude
 
 Het uniformeren van op te leveren producten biedt voordelen voor planning (het is bekend welke producten gemaakt moeten worden), voor bemensing (het is bekend welke expertise nodig is) en voor het uitwisselen van medewerkers.
 
-De voorgeschreven producten stellen de ontvanger in staat om de opgeleverde software uit te voeren, te beheren en te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.
+De voorgeschreven producten stellen de ontvanger in staat om de opgeleverde software uit te rollen, te beheren en te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.
 
 De genoemde producten uit de voorbereidingsfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen, zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.
 
@@ -121,4 +122,10 @@ Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te
 
 In een BIA legt de vragende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
 
-In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan verdragen.
+In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan overdragen.
+
+### Referenties
+
+Zie ook:
+
+* {{M14}}

@@ -161,9 +161,9 @@ namespace mdconvert
 #pragma warning disable CA1308 // Normalize strings to uppercase
                     string n = element.Name.LocalName.ToLowerInvariant();
 #pragma warning restore CA1308 // Normalize strings to uppercase
-                    if (n == "anchor")
+                    if (n == XMLTags.TagAnchor)
                     {
-                        paragraph.Add(new XFragment(element.Value, element.Attribute("link")?.Value, styles));
+                        paragraph.Add(new XFragment(element.Value, element.Attribute(XMLTags.AttributeLink)?.Value, styles));
                     }
                     else
                     {

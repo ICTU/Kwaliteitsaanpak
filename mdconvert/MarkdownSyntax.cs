@@ -19,7 +19,7 @@
         public const string HeadingPattern = @"^#+\s";
         public const string BulletListPattern = @"^[\*\+\-]\s";
         public const string NumberedListPattern = @"^[0-9A-Za-z]\.\s";
-        public const string LinkPattern = @"^\[([^\]]+)\]\(([^\)]+)\)";
+        public const string LinkPattern = @"^\[([^\]]+)\]\(([^#][^\)]+)\)";
 
         public const char BulletLevel1 = '*';
         public const char BulletLevel2 = '+';

@@ -333,13 +333,12 @@ namespace mdconvert.Builders
 
         private void Format(Paragraph parent, XFragment fragment)
         {
+            Text text = new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve };
             if (fragment.HasLink)
             {
-                var rel = mainPart.AddHyperlinkRelationship(new Uri(fragment.Link), true);
+                var relationship = mainPart.AddHyperlinkRelationship(new Uri(fragment.Link), true);
                 Hyperlink hyperlink = new Hyperlink(
-                    new Run(
-                        new RunProperties(new RunStyle { Val = "Hyperlink" }),
-                        new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve })) { Id = rel.Id };
+                    new Run(new RunProperties(new RunStyle { Val = "Hyperlink" }), text)) { Id = relationship.Id };
                 parent.AppendChild(hyperlink);
             }
             else
@@ -368,7 +367,7 @@ namespace mdconvert.Builders
                     run.AppendChild(props);
                 }
 
-                run.AppendChild(new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve });
+                run.AppendChild(text);
             }
         }
 

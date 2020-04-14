@@ -6,23 +6,36 @@ namespace mdconvert
 {
     internal class XFragment
     {
-        public XFragment(string text, IEnumerable<XStyle> styles)
+        public XFragment(string text, string link, IEnumerable<XStyle> styles)
         {
             Text = text;
+            Link = link;
             Styles = styles;
         }
 
+        public XFragment(string text, IEnumerable<XStyle> styles)
+            : this(text, "", styles)
+        {
+        }
+
+        public XFragment(string text, string link)
+            : this(text, link, Array.Empty<XStyle>())
+        {
+        }
+
         public XFragment(string text)
-            : this(text, Array.Empty<XStyle>())
+            : this(text, "", Array.Empty<XStyle>())
         {
         }
 
         public XFragment()
-            : this("")
+            : this("", "", Array.Empty<XStyle>())
         {
         }
 
         public string Text { get; set; }
+
+        public string Link { get; set; }
 
         public IEnumerable<XStyle> Styles { get; set; }
 
@@ -35,6 +48,8 @@ namespace mdconvert
         public bool Instruction => Styles.Contains(XStyle.Instruction);
 
         public bool HasStyle => Bold || Italic || Strikethrough || Instruction;
+
+        public bool HasLink => Link.Length > 0;
 
         public override string ToString() => Text;
     }

@@ -6,7 +6,7 @@ using System.Xml.Linq;
 namespace mdconvert
 {
     /// <summary>
-    /// An XMLConverter converts an intermediary XML file to a specific document representation, specified by a document builder and document settings. 
+    /// An XMLConverter converts an intermediary XML file to a specific document representation, specified by a document builder and document settings.
     /// </summary>
     internal class XMLConverter
     {
@@ -31,8 +31,7 @@ namespace mdconvert
 
         public void Convert(IDocumentBuilder builder, DocumentSettings documentSettings)
         {
-            XElement xTitle = root.Elements(XMLTags.TagTitle).FirstOrDefault();
-            string title = xTitle?.Value ?? "";
+            string title = root.Attribute(XMLTags.AttributeTitle)?.Value;
             listLevel = 0;
 
             builder.StartDocument(title);
@@ -161,8 +160,15 @@ namespace mdconvert
 #pragma warning disable CA1308 // Normalize strings to uppercase
                     string n = element.Name.LocalName.ToLowerInvariant();
 #pragma warning restore CA1308 // Normalize strings to uppercase
-                    XStyle s = TagToStyle.GetValueOrDefault(n, XStyle.None);
-                    BuildParagraph(paragraph, styles.Append(s), element);
+                    if (n == XMLTags.TagAnchor)
+                    {
+                        paragraph.Add(new XFragment(element.Value, element.Attribute(XMLTags.AttributeLink)?.Value, styles));
+                    }
+                    else
+                    {
+                        XStyle s = TagToStyle.GetValueOrDefault(n, XStyle.None);
+                        BuildParagraph(paragraph, styles.Append(s), element);
+                    }
                 }
             }
         }

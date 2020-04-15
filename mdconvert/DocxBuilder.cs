@@ -13,7 +13,7 @@ using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
 namespace mdconvert.Builders
 {
     /// <summary>
-    /// Document builder for DOCX documents. 
+    /// Document builder for DOCX documents.
     /// </summary>
     internal class DocxBuilder : IDocumentBuilder
     {
@@ -304,7 +304,7 @@ namespace mdconvert.Builders
             AddImageToBody(mainPart.GetIdOfPart(imagePart), imageWidth, imageHeight, horizontalRes, verticalRes);
         }
 
-        private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, string styleId, JustificationValues justification)
+        private void Format(OpenXmlCompositeElement parent, XParagraph paragraph, string styleId, JustificationValues justification)
         {
             ParagraphProperties pp = new ParagraphProperties(
                    new ParagraphStyleId() { Val = styleId },
@@ -312,12 +312,12 @@ namespace mdconvert.Builders
             Format(parent, paragraph, pp);
         }
 
-        private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, string styleId)
+        private void Format(OpenXmlCompositeElement parent, XParagraph paragraph, string styleId)
         {
             Format(parent, paragraph, styleId, JustificationValues.Left);
         }
 
-        private static void Format(OpenXmlCompositeElement parent, XParagraph paragraph, ParagraphProperties properties = null)
+        private void Format(OpenXmlCompositeElement parent, XParagraph paragraph, ParagraphProperties properties = null)
         {
             Paragraph p = parent.AppendChild(new Paragraph());
             if (properties != null)
@@ -331,34 +331,44 @@ namespace mdconvert.Builders
             }
         }
 
-        private static void Format(Paragraph parent, XFragment fragment)
+        private void Format(Paragraph parent, XFragment fragment)
         {
-            Run run = parent.AppendChild(new Run());
-
-            if (fragment.HasStyle)
+            Text text = new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve };
+            if (fragment.HasLink)
             {
-                RunProperties props = new RunProperties();
-                if (fragment.Bold)
-                {
-                    //props.Bold = new Bold();
-                    props.Append(new Bold());
-                }
-                if (fragment.Italic)
-                {
-                    props.Append(new Italic());
-                }
-                if (fragment.Strikethrough)
-                {
-                    props.Append(new Strike());
-                }
-                if (fragment.Instruction)
-                {
-                    props.Append(new Highlight { Val = HighlightColorValues.Yellow });
-                }
-                run.AppendChild(props);
+                var relationship = mainPart.AddHyperlinkRelationship(new Uri(fragment.Link), true);
+                Hyperlink hyperlink = new Hyperlink(
+                    new Run(new RunProperties(new RunStyle { Val = "Hyperlink" }), text)) { Id = relationship.Id };
+                parent.AppendChild(hyperlink);
             }
+            else
+            {
+                Run run = parent.AppendChild(new Run());
 
-            run.AppendChild(new Text(fragment.ToString()) { Space = SpaceProcessingModeValues.Preserve });
+                if (fragment.HasStyle)
+                {
+                    RunProperties props = new RunProperties();
+                    if (fragment.Bold)
+                    {
+                        props.Append(new Bold());
+                    }
+                    if (fragment.Italic)
+                    {
+                        props.Append(new Italic());
+                    }
+                    if (fragment.Strikethrough)
+                    {
+                        props.Append(new Strike());
+                    }
+                    if (fragment.Instruction)
+                    {
+                        props.Append(new Highlight { Val = HighlightColorValues.Yellow });
+                    }
+                    run.AppendChild(props);
+                }
+
+                run.AppendChild(text);
+            }
         }
 
         public string GetStyleIdFromStyleName(string styleName)

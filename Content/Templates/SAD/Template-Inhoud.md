@@ -174,10 +174,10 @@ Dit hoofdstuk vat de technische beveiliging van {applicatie} samen. De maatregel
 
 Bij de ontwikkeling van de programmatuur worden de volgende richtlijnen in acht genomen:
 
-* OWASP Top-10 (https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project),
+* [OWASP Top-10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project),
 * NCSC ICT-beveiligingsrichtlijnen voor webapplicaties.
 
-##	Overzicht van gebruikte certificaten
+## Overzicht van gebruikte certificaten
 
 Certificaten (alle PKIoverheid):
 1. {lijst van PKIoverheidcertificaten}

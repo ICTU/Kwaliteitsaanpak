@@ -7,7 +7,7 @@ using System.Text;
 namespace mdconvert.Builders
 {
     /// <summary>
-    /// Document builder for Markdown documents. 
+    /// Document builder for Markdown documents.
     /// </summary>
     internal class MarkdownBuilder : IDocumentBuilder
     {
@@ -190,7 +190,12 @@ namespace mdconvert.Builders
         {
             IEnumerable<XStyle> stylesStarted = fragment.Styles.Where(s => !previousStyles.Contains(s));
             IEnumerable<XStyle> stylesEnded = fragment.Styles.Where(s => !nextStyles.Contains(s));
-            return $"{StylesToPrefix(stylesStarted)}{fragment.Text}{StylesToSuffix(stylesEnded)}";
+            string text = fragment.Text;
+            if (fragment.HasLink)
+            {
+                text = $"[{text}]({fragment.Link})";
+            }
+            return $"{StylesToPrefix(stylesStarted)}{text}{StylesToSuffix(stylesEnded)}";
         }
 
         private static string StylesToPrefix(IEnumerable<XStyle> styles)
@@ -203,18 +208,9 @@ namespace mdconvert.Builders
             return result;
         }
 
-        private static string StylesToSuffix(IEnumerable<XStyle> styles)
-        {
-            string result = "";
-            foreach (XStyle style in styles.Reverse())
-            {
-                result += StyleToMarkdown(style);
-            }
-            return result;
-        }
+        private static string StylesToSuffix(IEnumerable<XStyle> styles) => StylesToPrefix(styles.Reverse());
 
-        private static string StyleToMarkdown(XStyle style)
-            => StyleToMarkdownMapping.GetValueOrDefault(style, "");
+        private static string StyleToMarkdown(XStyle style) => StyleToMarkdownMapping.GetValueOrDefault(style, "");
 
         private static string Repeat(string value, int count)
         {

@@ -22,11 +22,11 @@ Voor een goede start wordt er, bij aanvang van de voorfase, een kick-off georgan
 
 ## Projectteam
 
-{opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} dagdelen per week door alle partijen op één locatie bij {locatie} wordt samengewerkt. {partij} stelt hiervoor ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Indien op locatie ICTU wordt gewerkt: Om deze binnen ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU voorschrift Zakelijk gebruik ICT-diensten en voorzieningen. De huidige versie van het voorschrift is opgenomen in de bijlagen.}
+{opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} dagdelen per week door alle partijen op één locatie bij {locatie} wordt samengewerkt. {partij} stelt hiervoor ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Indien op locatie ICTU wordt gewerkt: Om deze binnen ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen. De huidige versie van het voorschrift is opgenomen in de bijlagen.}
 
 ## Oplevering producten
 
-De voorfase is op basis van timeboxes ingericht. Aan het einde van de timebox zijn alle tot dan toe opgedane inzichten verwerkt in de producten. Indien er na afronding van de voorfase nieuwe inzichten ontstaan, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
+De voorfase is op basis van timeboxes ingericht. Aan het einde van elke timebox zijn alle tot dan toe opgedane inzichten verwerkt in de producten. Indien er na afronding van de voorfase nieuwe inzichten ontstaan, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
 
 ## Kwaliteitsbeheersing
 
@@ -49,17 +49,17 @@ Betrokkenheid van inhoudsdeskundigen van {opdrachtgever/partijen} is randvoorwaa
 Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoering van dit projectvoorstel (één persoon kan eventueel meer dan één rol vervullen):
 {selecteer de juiste rollen en vul aan, vul ook de juiste verantwoordelijkheden in, onderstaande is een eerste opzet met zoveel mogelijk rollen}
 
-| Rollen | Verwachte inzet per week | Verantwoordelijkheden |
-|:----|:----|:----|
-| Expert informatiebeveiliging | {aantal} dagen | Opstellen BIA, TVA en IB-plan, reviewen {documenten} |
-| Privacy-expert | {aantal} dagen | Opstellen PIA, reviewen {documenten} |
-| Infrastructuurarchitect | {aantal} dagen | Opstellen infrastructuurarchitectuur (high level design, HLD), reviewen SAD, NFE en IB-plan |
-| Architect | {aantal} dagen | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur |
-| Testmanager | {aantal} dagen | Opstellen PRA, mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie |
-| Diverse inhoudelijk deskundigen | {aantal} dagen | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden |
-| Product owner | {aantal} dagen | Inhoudelijk sturing / prioritering, opstellen backlog, NFE, minimal viable product, reviewen GFO en prototype |
-| Projectleider (Opdrachtgever) | {aantal} dagen | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan kick-off en eventuele workshops |
-| Diverse technisch en inhoudelijk specialisten | ad hoc | Inzet op ad-hocbasis ter ondersteuning van de andere rollen |
+| Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                          |
+|:----------------------------------------------|:-------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
+| Expert informatiebeveiliging                  | {aantal} dagen           | Opstellen BIA, TVA en IB-plan, reviewen {documenten}                                                                           |
+| Privacy-expert                                | {aantal} dagen           | Opstellen PIA, reviewen {documenten}                                                                                           |
+| Infrastructuurarchitect                       | {aantal} dagen           | Opstellen infrastructuurarchitectuur (high level design, HLD), reviewen SAD, NFE en IB-plan                                    |
+| Architect                                     | {aantal} dagen           | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur                                |
+| Testmanager                                   | {aantal} dagen           | Opstellen PRA, mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie                                            |
+| Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                                |
+| Product owner                                 | {aantal} dagen           | Inhoudelijk sturing / prioritering, opstellen backlog, NFE, minimal viable product, reviewen GFO en prototype                  |
+| Projectleider (Opdrachtgever)                 | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan kick-off en eventuele workshops |
+| Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                    |
 
 # Planning en doorlooptijd
 
@@ -71,26 +71,26 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 
 {Hieronder een voorbeeld van een planning}
 
-| Onderdeel | wk 1 | wk 2 | wk 3 | wk 4 | wk 5 | wk 6 | wk 7 | wk 8 |
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| Kick-off |  |  |  |  |  |  |  |  |
-| Realisatie producten sprint 1 |  |  |  |  |  |  |  |  |
-| Realisatie producten sprint 2 |  |  |  |  |  |  |  |  |
-| Realisatie producten sprint 3 |  |  |  |  |  |  |  |  |
-| Afronden en afsluiten voorfase |  |  |  |  |  |  |  |  |
+| Onderdeel                      | wk 1 | wk 2 | wk 3 | wk 4 | wk 5 | wk 6 | wk 7 | wk 8 |
+|:-------------------------------|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
+| Kick-off                       | {X}  |      |      |      |      |      |      |      |
+| Realisatie producten sprint 1  |      | {X}  | {X}  |      |      |      |      |      |
+| Realisatie producten sprint 2  |      |      |      | {X}  | {X}  |      |      |      |
+| Realisatie producten sprint 3  |      |      |      |      |      | {X}  | {X}  |      |
+| Afronden en afsluiten voorfase |      |      |      |      |      |      |      | {X}  |
 
 # Randvoorwaarden
 
 Voor de uitvoering van de voorfase gelden de volgende randvoorwaarden:
 
-| Nr   | Randvoorwaarde |
-|:-----|:----|
-| R01  | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd. |
-| R02  | De product owner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.  |
-| R03  | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever} en ICTU. Deze is in lijn met de {{KWALITEITSAANPAK}}. |
-| R04  | De producten {producten} zijn beschikbaar voor aanvang van de voorfase. |
-| R05  | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar. |
-| {volgnummer} | {randvoorwaarde} |
+| Nr           | Randvoorwaarde                                                                                                             |
+|:-------------|:---------------------------------------------------------------------------------------------------------------------------|
+| R01          | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd.                           |
+| R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.                        |
+| R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever} en ICTU. Deze is in lijn met de {{KWALITEITSAANPAK}}. |
+| R04          | De producten {producten} zijn beschikbaar voor aanvang van de voorfase.                                                    |
+| R05          | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar.                                                         |
+| {volgnummer} | {randvoorwaarde}                                                                                                           |
 
 # Projectrisico’s
 
@@ -98,12 +98,12 @@ De onderstaande projectrisico’s, die het succes van de voorfase kunnen belemme
 
 {Deze tabel dient op basis van het concrete project en voorstel aangepast te worden.}
 
-| Projectrisico | Maatregel |
-|:---|:---|
+| Projectrisico                                                                                                                                | Maatregel                                                                                                                                                                               |
+|:---------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Verwachtingen over dit project tussen verschillende partijen ({partijen}, ICTU) kunnen niet waargemaakt worden, waardoor vertraging ontstaat | Wekelijks projectoverleg, samenwerken door middel van werkgroepen en fysiek bij elkaar komen, kick-off met alle betrokkenen waarbij {opdrachtgever} het doel van de voorfase uiteenzet. |
-| Scope-uitbreiding, gebrek aan focus |  Scope voorfase bewaken, alleen de scope uitbreiden als dit noodzakelijk is voor {doel} |
-| Onvoldoende bemensing door vakanties | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert. |
-| {risico} | {maatregel} |
+| Scope-uitbreiding, gebrek aan focus                                                                                                          | Scope voorfase bewaken, alleen de scope uitbreiden als dit noodzakelijk is voor {doel}                                                                                                  |
+| Onvoldoende bemensing door vakanties                                                                                                         | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert.                                                                                                    |
+| {risico}                                                                                                                                     | {maatregel}                                                                                                                                                                             |
 
 # Begroting
 
@@ -113,31 +113,31 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoo
 
 {Selecteer de rollen die nodig zijn en vul ze aan. Vul de juiste verantwoordelijkheden in. De onderstaande tabel is een eerste opzet met veel voorkomende rollen.}
 
-| Rol | Verwachte inzet | Verantwoordelijkheden |
-|:-----|:----|:----|
-| Software-architect/senior ontwikkelaar | {x} uur | Penvoerder SAD, reviewen {documenten} |
-| Functioneel ontwerper | {x} uur | Penvoerder GFO, reviewen {documenten} |
-| Database administrator | {x} uur | Opstellen logisch datamodel en fysiek database ontwerp, reviewen {documenten} |
-| UX-designer | {x} uur | Opstellen UX-richtlijnen, maken prototype, reviewen {documenten} |
-| Informatiebeveiligingsexpert | {x} uur | Penvoerder {documenten}, reviewen {documenten} |
-| Privacy expert | {x} uur | Penvoerder {documenten}, reviewen {documenten} |
-| Testmanager | {x} uur | Penvoerder testplan softwarerealisatie, reviewen {documenten} |
-| Kwaliteitsmanager | {x} uur | Penvoerder kwaliteitsplan, reviewen {documenten} |
-| Software Delivery Manager | {x} uur | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het team, inhoudelijke rapportage |
-| Projectleider | {x} uur | Voorbereiden en plannen kick-off, opstellen projectvoorstel en voorstel/overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
-| Projectsecretaris | {x} uur | Ondersteuning, rapportage, administratie |
-| Diverse technisch specialisten | {x} uur | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is |
-| Totaal | {x} uur |  |
+| Rol                                    | Verwachte inzet | Verantwoordelijkheden                                                                                                                                                                       |
+|:---------------------------------------|:----------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Software-architect/senior ontwikkelaar | {x} uur         | Penvoerder SAD, reviewen {documenten}                                                                                                                                                       |
+| Functioneel ontwerper                  | {x} uur         | Penvoerder GFO, reviewen {documenten}                                                                                                                                                       |
+| Database administrator                 | {x} uur         | Opstellen logisch datamodel en fysiek database ontwerp, reviewen {documenten}                                                                                                               |
+| UX-designer                            | {x} uur         | Opstellen UX-richtlijnen, maken prototype, reviewen {documenten}                                                                                                                            |
+| Informatiebeveiligingsexpert           | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                              |
+| Privacy expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                              |
+| Testmanager                            | {x} uur         | Penvoerder testplan softwarerealisatie, reviewen {documenten}                                                                                                                               |
+| Kwaliteitsmanager                      | {x} uur         | Penvoerder kwaliteitsplan, reviewen {documenten}                                                                                                                                            |
+| Software Delivery Manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het team, inhoudelijke rapportage                               |
+| Projectleider                          | {x} uur         | Voorbereiden en plannen kick-off, opstellen projectvoorstel en voorstel/overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
+| Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                                                                                    |
+| Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is                                                                  |
+| Totaal                                 | {x} uur         |
 
 ## Kosten
 
 Dit resulteert in de volgende kosten:
 
-| Kostenpost | Bedrag |
-|:----|----:|
+| Kostenpost       |       Bedrag |
+|:-----------------|-------------:|
 | Personeelskosten | € {bedrag},- |
 | Onvoorzien (10%) | € {bedrag},- |
-| Totaal | € {bedrag},- |
+| Totaal           | € {bedrag},- |
 
 {Controleer de hieronder opgenomen tarieven.}
 

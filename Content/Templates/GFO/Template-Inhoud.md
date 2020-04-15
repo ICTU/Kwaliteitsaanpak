@@ -32,15 +32,15 @@ De user stories beschrijven alle beoogde functionaliteit van het systeem. De lij
 
 User stories worden opgesteld volgens een vast formaat. De onderstaande tabel toont de gegevens die over een user story worden opgenomen.
 
-| User story ID         | *Een unieke identificatie van de user story* |
-|:----------------------|:----|
-| User story titel      | *Korte aanduiding van de user story* |
+| User story ID         | *Een unieke identificatie van de user story*                                                                                                                     |
+|:----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| User story titel      | *Korte aanduiding van de user story*                                                                                                                             |
 | Beschrijving          | *Beschrijving van het doel in vast formaat: als __ROL__ wil ik __ACTIE__ zodat __REDEN__. De reden is de rationale die duidelijk maakt wat de businesswaarde is* |
-| Screenshot prototype  | *Opnemen of verwijzen naar een screenshot of schets of een beschikbaar prototype* |
-| Acceptatiecriteria    | *Acceptatiecriteria voor de betreffende user story, die niet al onderdeel zijn van de NFE* |
-| Afhankelijkheden¹     | *Hier worden afhankelijkheden bedoeld die niet evident zijn, zoals bijvoorbeeld een koppeling 'e-herkenning'* |
-| Performancerisico’s¹  | *Wanneer sprake is van omstandigheden die de performance nadelig kunnen beïnvloeden, zoals grote aantallen gebruikers of transacties* |
-| Beveiligingsrisico’s¹ | *Wanneer sprake is van specifieke potentiële beveiligingsproblemen* |
+| Screenshot prototype  | *Opnemen of verwijzen naar een screenshot of schets of een beschikbaar prototype*                                                                                |
+| Acceptatiecriteria    | *Acceptatiecriteria voor de betreffende user story, die niet al onderdeel zijn van de NFE*                                                                       |
+| Afhankelijkheden¹     | *Hier worden afhankelijkheden bedoeld die niet evident zijn, zoals bijvoorbeeld een koppeling 'e-herkenning'*                                                    |
+| Performancerisico’s¹  | *Wanneer sprake is van omstandigheden die de performance nadelig kunnen beïnvloeden, zoals grote aantallen gebruikers of transacties*                            |
+| Beveiligingsrisico’s¹ | *Wanneer sprake is van specifieke potentiële beveiligingsproblemen*                                                                                              |
 
 ¹) Indien van toepassing
 

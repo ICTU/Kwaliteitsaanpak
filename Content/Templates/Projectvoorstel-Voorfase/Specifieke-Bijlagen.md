@@ -2,26 +2,26 @@
 
 **Over ICTU**
 
-ICTU’s missie: ICTU werkt aan een betere digitale overheid. ICTU helpt overheden bij het verbeteren van hun dienstverlening met ICT. Als advies- en projectenorganisatie in dienst van het openbaar bestuur. Innovatief, creatief, technologisch hoogwaardig en met expertise in de uitvoering. Gedreven door vakmanschap, met hart voor de publieke zaak en zonder winstdoel. Resultaat voor de overheid, burgers en bedrijven staat daarbij steeds centraal. De manier waarop burgers met overheden en overheden onderling communiceren verandert. In toenemende mate wordt digitaal en mobiel gewerkt.  
+ICTU’s missie: ICTU werkt aan een betere digitale overheid. ICTU helpt overheden bij het verbeteren van hun dienstverlening met ICT. Als advies- en projectenorganisatie in dienst van het openbaar bestuur. Innovatief, creatief, technologisch hoogwaardig en met expertise in de uitvoering. Gedreven door vakmanschap, met hart voor de publieke zaak en zonder winstdoel. Resultaat voor de overheid, burgers en bedrijven staat daarbij steeds centraal. De manier waarop burgers met overheden en overheden onderling communiceren verandert. In toenemende mate wordt digitaal en mobiel gewerkt.
 
-De samenleving digitaliseert en dat heeft ook consequenties voor de overheid. Dit is bij uitstek het werkveld van ICTU. Gebruik van ICT is een enabler voor verbetering van overheidsdienstverlening, het biedt kansen voor innovatie en helpt overheden te anticiperen op maatschappelijke vraagstukken. 
+De samenleving digitaliseert en dat heeft ook consequenties voor de overheid. Dit is bij uitstek het werkveld van ICTU. Gebruik van ICT is een enabler voor verbetering van overheidsdienstverlening, het biedt kansen voor innovatie en helpt overheden te anticiperen op maatschappelijke vraagstukken.
 
 ICTU is sterk in het verbinden op vraagstukken die sectoroverstijgend zijn, gezamenlijke overheidsprojecten op het gebied van organisatie- en procesinrichting, waar resultaat wordt bereikt als meerdere overheden samen werken en samen veranderen, ook met inzet van ICT.
 
 **Organisatie en werkwijze**
 
-ICTU kent een stichtingsvorm en is in 2001 opgericht door VNG en het ministerie van BZK. Alle lagen van de overheid zijn vertegenwoordigd in het bestuur van ICTU. ICTU ís overheid en alle overheden kunnen projecten door ICTU laten uitvoeren. ICTU is een flexibele projectorganisatie die voor overheden snel de juiste mix van interne en externe deskundigheid kan organiseren, tegen reële tarieven. Projecten en programma’s kunnen door ICTU vlot en efficiënt worden gestart. ICTU zet beleid van overheden om in concrete projecten, diensten en producten. Het betreft taken die gewoonlijk tot het domein van de overheid behoren. Een opdracht aan ICTU is een vorm van inbesteding.  
+ICTU kent een stichtingsvorm en is in 2001 opgericht door VNG en het ministerie van BZK. Alle lagen van de overheid zijn vertegenwoordigd in het bestuur van ICTU. ICTU ís overheid en alle overheden kunnen projecten door ICTU laten uitvoeren. ICTU is een flexibele projectorganisatie die voor overheden snel de juiste mix van interne en externe deskundigheid kan organiseren, tegen reële tarieven. Projecten en programma’s kunnen door ICTU vlot en efficiënt worden gestart. ICTU zet beleid van overheden om in concrete projecten, diensten en producten. Het betreft taken die gewoonlijk tot het domein van de overheid behoren. Een opdracht aan ICTU is een vorm van inbesteding.
 
 **Opdrachten**
 
-ICTU kan worden ingezet op grofweg vier typen opdrachten: 
+ICTU kan worden ingezet op grofweg vier typen opdrachten:
 
 1. adviestrajecten (als voortraject van potentieel door ICTU op te pakken projecten, of in de vorm van het leveren van een specifieke bijdrage op haar expertisegebied aan een project, dat door een andere overheidsorganisatie wordt uitgevoerd);
 2. projectmatig ontwikkelen (en door ontwikkelen) van concrete producten en software;
 3. projectmatig verzorgen van de implementatie van de ontwikkelde producten;
 4. tijdelijk beheer (als er sprake is van projecten waarbij het zwaartepunt op ontwikkeling ligt, die ook al operationeel en dus in beheer zijn).
 
-ICTU werkt in een opdrachtnemer-opdrachtgeverrelatie met een overheidsorganisatie, of een samenwerkingsverband daarvan, op basis van een projectovereenkomst. ICTU levert de projectleider en zorgt voor de kwartiermakerfase, inrichting, bemensing en uitvoering van het project.  
+ICTU werkt in een opdrachtnemer-opdrachtgeverrelatie met een overheidsorganisatie, of een samenwerkingsverband daarvan, op basis van een projectovereenkomst. ICTU levert de projectleider en zorgt voor de kwartiermakerfase, inrichting, bemensing en uitvoering van het project.
 
 **Tarieven**
 
@@ -29,13 +29,13 @@ ICTU is volledig opdrachtgefinancierd. ICTU's kostprijsmodel is gebaseerd op het
 
 Opdrachten aan ICTU zijn doorgaans opgebouwd uit drie soorten kosten:
 
-1. Inzet intern personeel 
-2. Inzet extern personeel 
-3. Materiële kosten (bijv. aanschaf van hardware/software, uitzetten van een softwareontwikkeltraject als resultaatverplichting, etc.) 
+1. Inzet intern personeel
+2. Inzet extern personeel
+3. Materiële kosten (bijv. aanschaf van hardware/software, uitzetten van een softwareontwikkeltraject als resultaatverplichting, etc.)
 
 Het kostprijsmodel en de tarieven zijn vastgesteld door het stichtingsbestuur en houdt rekening met deze drie kostensoorten. Alle ICTU-projecten dragen op deze manier bij aan de dekking van de apparaatskosten van ICTU. Deze bijdrage is gemiddeld 15,4%.
 
-De kosten zijn mede relatief laag doordat ICTU-projecten deels uitvoert met specialisten in dienst bij ICTU. ICTU heeft tevens de beschikking over een professionele inkoopafdeling die zorg draagt voor scherpe inkoop van externe expertise.  
+De kosten zijn mede relatief laag doordat ICTU-projecten deels uitvoert met specialisten in dienst bij ICTU. ICTU heeft tevens de beschikking over een professionele inkoopafdeling die zorg draagt voor scherpe inkoop van externe expertise.
 
 **Standaarden en hergebruik**
 
@@ -43,38 +43,45 @@ ICTU draagt er zorg voor dat de digitale processen van de opdrachtgever aansluit
 
 **Tot slot**
 
-ICTU heeft ruim vijftien jaar ervaring met de uitvoering en implementatie van innovatieve projecten en programma’s. Daarmee heeft ICTU een unieke positie verworven binnen de overheid in een uitdagende bestuurlijke omgeving. 
+ICTU heeft ruim vijftien jaar ervaring met de uitvoering en implementatie van innovatieve projecten en programma’s. Daarmee heeft ICTU een unieke positie verworven binnen de overheid in een uitdagende bestuurlijke omgeving.
 
-## Facturatiegegevens  
-  
-In te vullen door de opdrachtgever: 
+## Facturatiegegevens
 
-Factuuradres
+In te vullen door de opdrachtgever:
 
-| Departement / organisatie | …………………………………………………………………………………………………………………………………………………………… |
-| Ter attentie van | …………………………………………………………………………………………………………………………………………………………… |
-| Postadres | …………………………………………………………………………………………………………………………………………………………… |
-| Postcode + Vestigingsplaats | …………………………………………………………………………………………………………………………………………………………… |
- 
-Door de opdrachtgever gewenste administratieve gegevens
+|                             | Factuuradres                |
+|:----------------------------|:----------------------------|
+| Departement / organisatie   | ……………………………………………………………………… |
+| Ter attentie van            | ……………………………………………………………………… |
+| Postadres                   | ……………………………………………………………………… |
+| Postcode + Vestigingsplaats | ……………………………………………………………………… |
 
-| Projectnaam | …………………………………………………………………………………………………………………………………………………………… |
-| Verplichtingennummer | …………………………………………………………………………………………………………………………………………………………… |
-| Kenmerk | …………………………………………………………………………………………………………………………………………………………… |
-| Overig | …………………………………………………………………………………………………………………………………………………………… |
- 
-Financieel contactpersoon bij de organisatie van de opdrachtgever 
+Door de opdrachtgever gewenste administratieve gegevens:
 
-| Naam | …………………………………………………………………………………………………………………………………………………………… |
-| Afdeling | …………………………………………………………………………………………………………………………………………………………… |
-| Telefoonnummer | …………………………………………………………………………………………………………………………………………………………… |
-| E-mail | …………………………………………………………………………………………………………………………………………………………… |
- 
-Contactgegevens voor de facturatie bij Stichting ICTU 
+|                           | Administratieve gegevens    |
+|:--------------------------|:----------------------------|
+| Departement / organisatie | ……………………………………………………………………… |
+| Projectnaam               | ……………………………………………………………………… |
+| Verplichtingennummer      | ……………………………………………………………………… |
+| Kenmerk                   | ……………………………………………………………………… |
+| Overig                    | ……………………………………………………………………… |
 
-| Afdeling | SC Financiën |
-| E-mail | fa@ictu.nl |
-| Telefoonnummer | (06) 2113 7321 |
+Financieel contactpersoon bij de organisatie van de opdrachtgever:
+
+|                | Contactgegevens             |
+|:---------------|:----------------------------|
+| Naam           | ……………………………………………………………………… |
+| Afdeling       | ……………………………………………………………………… |
+| Telefoonnummer | ……………………………………………………………………… |
+| E-mail         | ……………………………………………………………………… |
+
+Contactgegevens voor de facturatie bij Stichting ICTU:
+
+|                | Contactgegevens |
+|:---------------|:----------------|
+| Afdeling       | SC Financiën    |
+| E-mail         | fa@ictu.nl      |
+| Telefoonnummer | (06) 2113 7321  |
 
 ## ICTU-voorschrift zakelijk gebruik ICT-diensten en voorzieningen
 
@@ -91,7 +98,7 @@ Daarnaast is ter ondersteuning hiervan een infographic gemaakt, die als bijlage 
 
 Onderstaande regels zijn van toepassing op alle medewerkers (eigen en inhuur) en op alle ICT-middelen (laptops, tablets, mobiele telefoons, opslagmedia, software) die gebruikt worden tijdens het werken voor en/of bij ICTU. Alle door ICTU beschikbaar gestelde ICT-middelen en -diensten voldoen standaard aan de hier benoemde beveiligingsrichtlijnen.
 
-### Voorschrift
+***Voorschrift***
 
 **Algemene regels en gedrag**
 

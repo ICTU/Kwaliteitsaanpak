@@ -55,13 +55,18 @@ In situaties waarin het niet op voorhand duidelijk is wat de correcte reactie va
 
 ### Functieservices
 
-##	Omliggende systemen
+## Omliggende systemen
 
 ### Management & control
+
 ### Softwareprovisioning
+
 ### Identity- en authorization-provisioning
+
 ### Dataprovisioning
+
 ### Logging & auditing
+
 ### Backup & recovery
 
 ## Gebruikerssystemen
@@ -77,8 +82,10 @@ In situaties waarin het niet op voorhand duidelijk is wat de correcte reactie va
 ## Uitwisseling van gegevens met externe systemen
 
 ### Koppelvlak {identiteiten- en autorisatiessysteem}
-### Koppelvlak {naam}
-### Koppelvlak {naam}
+
+### Koppelvlak {naam 1}
+
+### Koppelvlak {naam 2}
 
 ## Conceptueel gegevensmodel
 
@@ -109,7 +116,7 @@ Dit hoofdstuk beschrijft de algemene richtlijnen voor de implementatie van {appl
 Criteria voor de keuze van een programmeertaal voor de implementatie zijn:
 
 1. De programmeertaal moet toekomstvast en gangbaar zijn.
-2. De programmeertaal en run-timeomgeving kennen een redelijke mate van onafhankelijkheid van het onderliggend operating system.
+2. De programmeertaal en run-timeomgeving kennen een redelijke mate van onafhankelijkheid van het onderliggend besturingssysteem.
 3. Het totale softwareplatform met gebruikte tooling moet eenvoudig over te zetten zijn naar een andere leverancier.
 
 ### Technische applicatielogging
@@ -126,7 +133,7 @@ Criteria voor de keuze van een programmeertaal voor de implementatie zijn:
 
 ## Implementatietechnologie
 
-### Operating systeem en middleware
+### Besturingssysteem en middleware
 
 ### Applicatiecode
 
@@ -149,38 +156,40 @@ Dit hoofdstuk vat de technische beveiliging van {applicatie} samen. De maatregel
 ## Gegevensbeveiliging tijdens transport
 
 | Nr | Technische maatregel | Relatie IB-plan |
-|:-----|:------------|:-----------|
-| 1 | {maatregel} | {relatie} |
+|:---|:---------------------|:----------------|
+| 1  | {maatregel}          | {relatie}       |
 
 ## Gegevensbeveiliging opgeslagen gegevens
 
 | Nr | Technische maatregel | Relatie IB-plan |
-|:-----|:------------|:-----------|
-| 1 | {maatregel} | {relatie} |
+|:---|:---------------------|:----------------|
+| 1  | {maatregel}          | {relatie}       |
 
 ## Authenticatie en autorisatie
 
 | Nr | Technische maatregel | Relatie IB-plan |
-|:-----|:------------|:-----------|
-| 1 | {maatregel} | {relatie} |
+|:---|:---------------------|:----------------|
+| 1  | {maatregel}          | {relatie}       |
 
 ## Auditing en accounting
 
 | Nr | Technische maatregel | Relatie IB-plan |
-|:-----|:------------|:-----------|
-| 1 | {maatregel} | {relatie} |
+|:---|:---------------------|:----------------|
+| 1  | {maatregel}          | {relatie}       |
 
 ## Richtlijnen
 
 Bij de ontwikkeling van de programmatuur worden de volgende richtlijnen in acht genomen:
 
 * [OWASP Top-10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project),
-* NCSC ICT-beveiligingsrichtlijnen voor webapplicaties.
+* [NCSC ICT-beveiligingsrichtlijnen voor webapplicaties](https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-webapplicaties).
 
 ## Overzicht van gebruikte certificaten
 
 Certificaten (alle PKIoverheid):
+
 1. {lijst van PKIoverheidcertificaten}
 
 Certificaten van anderen:
+
 1. {lijst van andere certificaten}

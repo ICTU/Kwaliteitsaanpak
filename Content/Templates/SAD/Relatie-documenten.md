@@ -4,7 +4,7 @@ Dit document beschrijft de software-architectuur. De architectuur die ten gronds
 
 In verschillende documenten zijn eisen en wensen opgenomen die als basis dienen voor de software-architectuur. Deze zijn opgenomen in de volgende documenten:
 
-•	informatiebeveiligingsplan (bevat eisen en wensen en mogelijk maatregelen tegen informatiebeveiligingsrisico’s) {documentreferentie},
-•	projectstartarchitectuur (PSA) {documentreferentie},
-•	globaal functioneel ontwerp (GFO), {documentreferentie},
-•	niet-functionele eisen (NFE) (deze kunnen leiden tot functionele user stories), {documentreferentie}.
+* informatiebeveiligingsplan (bevat eisen en wensen en mogelijk maatregelen tegen informatiebeveiligingsrisico’s) {documentreferentie},
+* projectstartarchitectuur (PSA) {documentreferentie},
+* globaal functioneel ontwerp (GFO), {documentreferentie},
+* niet-functionele eisen (NFE) (deze kunnen leiden tot functionele user stories), {documentreferentie}.

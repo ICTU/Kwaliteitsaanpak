@@ -31,8 +31,7 @@ namespace mdconvert
 
         public void Convert(IDocumentBuilder builder, DocumentSettings documentSettings)
         {
-            XElement xTitle = root.Elements(XMLTags.TagTitle).FirstOrDefault();
-            string title = xTitle?.Value ?? "";
+            string title = root.Attribute(XMLTags.AttributeTitle)?.Value;
             listLevel = 0;
 
             builder.StartDocument(title);

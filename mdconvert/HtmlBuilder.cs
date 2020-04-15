@@ -8,7 +8,7 @@ using System.Xml;
 namespace mdconvert.Builders
 {
     /// <summary>
-    /// Document builder for HTML documents. 
+    /// Document builder for HTML documents.
     /// </summary>
     internal class HtmlBuilder : IDocumentBuilder
     {
@@ -28,6 +28,8 @@ namespace mdconvert.Builders
         private const string HtmlBold = "b";
         private const string HtmlItalic = "i";
         private const string HtmlStrikethrough = "del";
+        private const string HtmlAnchor = "a";
+        private const string HtmlLinkAttribute = "href";
         private const string HtmlTable = "table";
         private const string HtmlTableRow = "tr";
         private const string HtmlTableHeading = "th";
@@ -200,7 +202,17 @@ namespace mdconvert.Builders
             IEnumerable<XStyle> stylesEnded = fragment.Styles.Where(s => !nextStyles.Contains(s));
 
             StartStyles(stylesStarted);
-            output.WriteString(fragment.Text);
+            if (fragment.HasLink)
+            {
+                output.WriteStartElement(HtmlAnchor);
+                output.WriteAttributeString(HtmlLinkAttribute, fragment.Link);
+                output.WriteString(fragment.Text);
+                output.WriteEndElement();
+            }
+            else
+            {
+                output.WriteString(fragment.Text);
+            }
             EndStyles(stylesEnded);
         }
 

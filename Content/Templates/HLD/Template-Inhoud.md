@@ -3,9 +3,9 @@
 De volgende tabel bevat technische eisen die ten grondslag liggen aan het project en aan dit document zijn en die niet beschreven staan in andere documenten uit de voorfase.
 
 | Volgnummer | Infrastructuureis |
-|:----|:----|
-| TR01 | {eis} |
-| TR02 | {eis} |
+|:-----------|:------------------|
+| TR01       | {eis}             |
+| TR02       | {eis}             |
 
 # Ontwerp
 
@@ -23,9 +23,9 @@ De volgende tabel bevat technische eisen die ten grondslag liggen aan het projec
 
 {Componentnaam} bestaat uit onderstaande subcomponenten:
 
-| Subcomponent | Rol | Specificatie | Zone |
-|:----|:----|:----|:----|
-| {naam subcomponent} | {rol}| {specificatie} | {zone} |
+| Subcomponent        | Rol   | Specificatie   | Zone   |
+|:--------------------|:------|:---------------|:-------|
+| {naam subcomponent} | {rol} | {specificatie} | {zone} |
 
 {Beschrijving van subcomponenten en een gedetailleerde infrastructuurplaat opnemen, indien dit toegevoegde waarde heeft.}
 
@@ -35,9 +35,9 @@ De volgende tabel bevat technische eisen die ten grondslag liggen aan het projec
 
 {Componentnaam} bestaat uit onderstaande subcomponenten:
 
-| Subcomponent | Rol | Specificatie | Zone |
-|:----|:----|:----|:----|
-| {naam subcomponent} | {rol}| {specificatie} | {zone} |
+| Subcomponent        | Rol   | Specificatie   | Zone   |
+|:--------------------|:------|:---------------|:-------|
+| {naam subcomponent} | {rol} | {specificatie} | {zone} |
 
 {Beschrijving van subcomponenten en een gedetailleerde infrastructuurplaat opnemen, indien dit toegevoegde waarde heeft.}
 
@@ -45,16 +45,11 @@ De volgende tabel bevat technische eisen die ten grondslag liggen aan het projec
 
 De volgende servers zijn aanwezig:
 
-| Server | Beschrijving softwarecomponent | Ontwikkel | Test | Acceptatie | Productie |
-|:----|:----|:----|:----|:----|:----|
-| Databases |
-| {server} | {beschrijving} |   |   |   |   |
-| Applicatieservers |
-| {server} | {beschrijving} |   |   |   |   |
-| Overige |
-| {server} | {beschrijving} |   |   |   |   |
-
-{@@WAT STAAT IN DE OTAP-KOLOMMEN?}
+| Server             | Beschrijving component | Ontwikkel | Test   | Acceptatie | Productie |
+|:-------------------|:-----------------------|:----------|:-------|:-----------|:----------|
+| {applicatieserver} | {beschrijving}         | {naam}    | {naam} | {naam}     | {naam}    |
+| {database server}  | {beschrijving}         | {naam}    | {naam} | {naam}     | {naam}    |
+| {overige servers}  | {beschrijving}         | {naam}    | {naam} | {naam}     | {naam}    |
 
 ## Gebruikte URL’s {optioneel}
 

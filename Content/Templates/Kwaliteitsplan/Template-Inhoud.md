@@ -88,7 +88,9 @@ De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende realisatiefa
 
 ### Definition of Ready (DoR)
 
-Het project definieert en hanteert een Definition of Ready (DoR) voor user stories. Een user story kan pas in een sprint worden opgepakt als deze aan de DoR voldoet. De kwaliteitsmanager controleert of er een DoR is gedefinieerd en controleert periodiek of deze wordt gehanteerd. Minimaal zijn de volgende controles in de DoR opgenomen:
+Het project definieert en hanteert een Definition of Ready (DoR) voor user stories. Een user story kan pas in een sprint worden opgepakt als deze aan de DoR voldoet. De kwaliteitsmanager controleert of er een DoR is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
+
+De Definition Of Ready van het project bevat de volgende criteria ({vul aan en pas aan}):
 
 1. De beschrijving voldoet aan het user story formaat “als <rol> wil ik <actie> zodat <reden>”;
 2. De annotaties en screenshots/prototype zijn gereed;
@@ -97,11 +99,22 @@ Het project definieert en hanteert een Definition of Ready (DoR) voor user stori
 5. De story is goedgekeurd door de product owner;
 6. De story is goedgekeurd door de reviewer binnen het team;
 7. Het verwachte aantal logische testgevallen is ingevuld;
-8. Er is ingeschat of de user story een performance risico of een beveiligingsrisico met zich meebrengt.
+8. Er is ingeschat of de user story een performance risico, een beveiligingsrisico en/of een infrastructuurwijziging met zich meebrengt.
 
 ### Definition of Done voor sprints
 
-Het project definieert en hanteert een Definition of Done (DoD) voor de sprint (zie ook hoofdstuk [Definition of Done](#definition-of-done)). De kwaliteitsmanager controleert of er een DoD is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
+Het project definieert en hanteert een Definition of Done (DoD) voor de sprint. De kwaliteitsmanager controleert of er een DoD is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
+
+De Definition Of Done van het project bevat de volgende criteria ({vul aan en pas aan}):
+
+1. Alle testgevallen zijn gereviewd en geaccordeerd door reviewer,
+2. Functionele testen zijn succesvol afgerond,
+3. De dekkingsgraad van de functionele testen is minstens 80% (maar meer indien mogelijk),
+4. Integratietesten zijn succesvol afgerond,
+5. Performancetesten zijn succesvol afgerond,
+6. Toegankelijkheidstesten zijn succesvol afgerond,
+7. Het GFO is bijgewerkt,
+8. De demo van de user story is voorbereid.
 
 ### Vrijgaveadvies
 
@@ -127,7 +140,14 @@ Om de onderhoudbaarheid van de software te bevorderen dient er zo min mogelijk d
 
 ### Omvang van het systeem beperken
 
-Om de onderhoudbaarheid van de software te bevorderen dient de totale omvang beperkt te blijven. Volgens de SIG/TüVIT-standaard heeft een goed onderhoudbaar systeem een herbouwtijd van maximaal vijf mensjaren. Dit staat volgens de SIG/TüVIT-standaard gelijk aan ongeveer 43.750 regels Java-code. Het ICTU-kwaliteitssysteem bewaakt de totale omvang van het systeem.
+Om de onderhoudbaarheid van de software te bevorderen dient de totale omvang beperkt te blijven, gemeten in mensjaren herbouwtijd. De SIG/TüVIT-standaard geeft een maximale herbouwtijd en vertaalt deze in een maximum omvang van de software gemeten in regels code. Die maximale omvang verschilt per programmeertaal. Het ICTU-kwaliteitssysteem bewaakt de totale omvang van het systeem.
+
+Voor dit project gelden de volgende normen:
+
+| Programmeertaal     | Maximale omvang in regels code |
+|:--------------------|:-------------------------------|
+| {programmeertaal A} | {maximale omvang}              |
+| {programmeertaal B} | {maximale omvang}              |
 
 ### Omvang van methoden beperken
 
@@ -139,7 +159,7 @@ Om de onderhoudbaarheid van de software te bevorderen, dienen methoden niet te v
 
 ## Versiebeheer broncode
 
-Broncode, zowel van productiesoftware als van geautomatiseerde tests, wordt in een versiebeheersysteem geplaatst. Alleen projectmedewerkers hebben toegang tot de broncode. Het ICTU-kwaliteitssysteem bewaakt of branches worden gemerged met de trunk.
+Broncode, zowel van productiesoftware als van geautomatiseerde tests, wordt in een versiebeheersysteem geplaatst. Alleen projectmedewerkers hebben toegang tot de broncode. Het ICTU-kwaliteitssysteem bewaakt of branches worden gemerged met de default branch (meestal *master* of *develop* genoemd).
 
 ## Testen
 
@@ -155,7 +175,7 @@ De default normen voor broncodedekking met unit tests zijn 90% line coverage en 
 
 ## Systeemtesten
 
-Om de correcte werking van de software te borgen maakt het team systeemtesten. Deze bestaan uit een combinatie van handmatige eenmalige testen, handmatige regressietesten en automatische regressietesten. De automatische regressietesten draaien als onderdeel van de geautomatiseerde pijplijn en de broncode dekking van de automatische regressietesten wordt gemeten. Het ICTU-kwaliteitssysteem rapporteert over het aantal handmatige regressietesten, de hoeveelheid tijd die het kost de handmatige regressietesten uit te voeren en de laatste datum dat ze zijn uitgevoerd. Het ICTU-kwaliteitssysteem rapportage ook over het aantal automatische regressietesten, of ze al dan niet falen en de broncodedekking van de geautomatiseerde regressietesten.
+Om de correcte werking van de software te borgen maakt het team systeemtesten. Deze bestaan uit een combinatie van handmatige eenmalige testen, handmatige regressietesten en automatische regressietesten. De automatische regressietesten draaien als onderdeel van de geautomatiseerde pijplijn en de broncode dekking van de automatische regressietesten wordt gemeten. Het ICTU-kwaliteitssysteem rapporteert over het aantal handmatige regressietesten, de hoeveelheid tijd die het kost de handmatige regressietesten uit te voeren en de laatste datum dat ze zijn uitgevoerd. Het ICTU-kwaliteitssysteem rapporteert ook over het aantal automatische regressietesten, of ze al dan niet falen en de broncodedekking van de geautomatiseerde regressietesten.
 
 De default normen voor broncodedekking met geautomatiseerde regressietesten zijn 80% line coverage en 70% branch coverage. De norm geldt niet voor gegenereerde code, code van derde-partijen die ICTU zelf niet onderhoudt en triviale code zoals getters/setters/framework boiler plate code.
 
@@ -163,9 +183,9 @@ De default normen voor broncodedekking met geautomatiseerde regressietesten zijn
 
 Het ICTU-kwaliteitssysteem kan ook de geaggregeerde broncodedekking van unit tests en automatische regressietesten samen rapporteren. In dat geval zijn de default normen voor geaggregeerde broncodedekking 90% line coverage en 85% branch coverage.
 
-Het is, ook als de geaggregeerde dekking gemeten wordt, nog steeds handig te weten welke code de automatisch regressietesten (ART) en unit tests elk voor zich raken. Het is aan het project te beslissen welke norm nuttig is ART-dekking en unittest-dekking en of daar überhaupt normen voor nodig zijn.
+Het is, ook als de geaggregeerde dekking gemeten wordt, nog steeds handig te weten welke code de automatische regressietesten (ART) en unit tests elk voor zich raken. Het is aan het project te beslissen welke norm nuttig is ART-dekking en unittest-dekking en of daar überhaupt normen voor nodig zijn.
 
-Het uitgangspunt is dat zoveel mogelijk van de software die ICTU maakt, geautomatiseerd getest wordt en dat daarbij bewuste keuzes zijn gemaakt over de code die niet geautomatiseerd wordt getest. Om die keuzes goed te kunnen maken is het belangrijk dat het deel van de code, dat niet wordt geraakt door geautomatiseerde testen, relatief klein is; daardoor blijven de benodigde hoeveelheid handmatig testwerk beperkt en de risico's van handmatig testen beperkt.
+Het uitgangspunt is dat zoveel mogelijk van de software die ICTU maakt, geautomatiseerd getest wordt en dat daarbij bewuste keuzes zijn gemaakt over de code die niet geautomatiseerd wordt getest. Om die keuzes goed te kunnen maken is het belangrijk dat het deel van de code, dat niet wordt geraakt door geautomatiseerde testen, relatief klein is; daardoor blijft de benodigde hoeveelheid handmatig testwerk beperkt en de risico's van handmatig testen beperkt.
 
 ## Performance-testen
 
@@ -177,17 +197,17 @@ Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen.
 
 De eisen aan de beveiliging worden in de documenten projectstartarchitectuur en niet-functionele eisen gedefinieerd. De in te richten testen dienen aan te tonen dat de gestelde beveiligingseisen wordt voldaan.
 
-De geautomatiseerde broncodereviews en rapportages uit het ICTU-kwaliteitssysteem bevatten diverse KPI’s voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulpp van Checkmarx, OWASP dependency checker, OWASP ZAP en OpenVAS. Randvoorwaarden voor de ondersteuning met deze tooling is dat de testomgeving/applicatie bereikbaar is vanuit of uitgerold op Jenkins/dashboard-omgeving, dat deze bereikbaar is via standaard protocollen/poorten (ssh/22, http/80, https/443) en dat de broncode zich bevindt in git(lab), TFS of Subversion.
+De geautomatiseerde broncodereviews en rapportages uit het ICTU-kwaliteitssysteem bevatten diverse KPI’s voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van Checkmarx, OWASP dependency checker, OWASP ZAP en OpenVAS.
 
-Om de veiligheid van de software te testen kan deze met enige regelmatig getest worden door een externe partij. Het MTP beschrijft de gekozen aanpak.
+Om de veiligheid van de software te testen kan deze met enige regelmaat getest worden door een externe partij. Het MTP beschrijft de gekozen aanpak.
 
 Elke beveiligingstest resulteert in een beveiligingstestrapportage met daarin de aangetroffen beveiligingsissues. Issues die voortkomen uit deze testen worden opgenomen in Jira met het label "security_bevinding". Voor beveiligingsissues gelden de volgende oplostermijnen:
 
-| Kwalificatie beveiligingsissue  | Oplostermijn bij software die wel in productie is | Oplostermijn bij software niet in productie is |
-|:-----|:----|:----|
-| Hoog (hoog risico en/of hoge impact) | Zo snel mogelijk, resulteert in een bug fix release | Voor de eerste productierelease |
-| Midden (gemiddeld risico en/of gemiddelde impact) | Voor de eerstvolgende major productierelease | Voor de eerste productierelease |
-| Laag (laag risico en lage impact) | In overleg met de product owner | In overleg met de product owner |
+| Kwalificatie beveiligingsissue                    | Oplostermijn bij software die wel in productie is   | Oplostermijn bij software die niet in productie is |
+|:--------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------|
+| Hoog (hoog risico en/of hoge impact)              | Zo snel mogelijk, resulteert in een bug fix release | Voor de eerste productierelease                    |
+| Midden (gemiddeld risico en/of gemiddelde impact) | Voor de eerstvolgende major productierelease        | Voor de eerste productierelease                    |
+| Laag (laag risico en lage impact)                 | In overleg met de product owner                     | In overleg met de product owner                    |
 
 Het ICTU-kwaliteitssysteem rapporteert of gevonden beveiligingsissues niet te lang open staan.
 
@@ -205,7 +225,7 @@ Issues die voortkomen uit usabilitytests worden opgenomen in Jira met het label 
 
 Technische schuld zijn eigenschappen van de software die de lange-termijninzetbaarheid en onderhoudbaarheid van de software bedreigen; denk hierbij aan hoge complexiteit, lage testdekking, ontbrekende testsoorten en ontbrekende documentatie.
 
-Als het ontwikkelteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in het kwaliteitssysteem als zodanig om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het team, in overleg met de Software Delivery Manager en de Scrum master, om de omvang van de technische schuld in te schatten in user-storypunten. Vervolgens wordt een plan gemaakt om de technische schuld in een beheerst tempo - de ontwikkeling/onderhoud van de software moet wel doorgang vinden - weg te werken. Uitgangspunt is ongeveer 10% van de user-storypunten die het team normaal in een sprint doet; dit kan in principe zonder overleg met de opdrachtgever, omdat het leveren van kwaliteit onderdeel van het werk is.
+Als het ontwikkelteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in het kwaliteitssysteem als zodanig om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het team, in overleg met de Software Delivery Manager en de Scrum master, om de omvang van de technische schuld in te schatten in user-storypunten. Vervolgens wordt een plan gemaakt om de technische schuld in een beheerst tempo - de ontwikkeling/onderhoud van de software moet wel doorgang vinden - weg te werken. Uitgangspunt is ongeveer 10% van de user-storypunten die het team normaal in een sprint realiseert; dit kan in principe zonder overleg met de opdrachtgever, omdat het leveren van kwaliteit onderdeel van het werk is.
 
 ## Beheer
 
@@ -221,41 +241,22 @@ Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan spe
 
 Deze paragraaf bevat maatregelen voor functionele en niet-functionele eisen, die via de standaardmaatregelen uit de ICTU-kwaliteitsaanpak niet voldoende worden geborgd.
 
-| Eis | Omschrijving | Extra maatregelen | Hoe controleren | Verificatie |
-|:----|:----|:----|:----|:----|
+| Eis      | Omschrijving                                                    | Extra maatregelen                 | Hoe controleren  | Verificatie                                                |
+|:---------|:----------------------------------------------------------------|:----------------------------------|:-----------------|:-----------------------------------------------------------|
 | {Nummer} | {vb: onderdeel A moet kunnen worden vervangen door onderdeel B} | {vb: scenariotest opnemen in MTP} | {vb: review MTP} | {vb: dd/mm/jjjj review MTP, test opgenomen in hoofdstuk x} |
-| {Nummer} | {Omschrijving} | {Maatregelen} | {Controle} | {Verificatie} |
+| {Nummer} | {Omschrijving}                                                  | {Maatregelen}                     | {Controle}       | {Verificatie}                                              |
 
 # Kwaliteitsmaatregelen projectafsluiting
 
 De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van een project worden uitgevoerd. De projectleider is verantwoordelijk voor het archiveren.
 
-| # | Wat | Waar staat het | Wie archiveert het | Bewaartermijn |
-|:----|:----|:----|:----|:----|
-| 1 | Docker-omgevingen | Op de VM die in onderstaande tabel wordt gebackupt bij stap 4 | ISR Technisch beheer | 0,5 jaar |
-| 2 | Jenkins jobs | Op de VM die in onderstaande tabel wordt gebackupt bij stap 4 | ISR Technisch beheer | 0,5 jaar |
-| 3 | BIRT-rapportagedata | TRR database | DBA | 0,5 jaar |
-| 4 | ART-testscripts | GIT/SVN | Projectteam (als onderdeel GIT/SVN dump) | 5 jaar |
-| 5 | Performancestraat | GIT/SVN | Projectteam (als onderdeel GIT/SVN dump) | 5 jaar |
-| 6 | Kwaliteitsrapportage (zip) | Generieke GIT/SVN | Coördinator realisatiefase | 2 jaar |
-| 7 | SVN/GIT | nvt | Projectteam | 5 jaar |
-| 8 | Wiki | Op de wiki server/service | ISR Technisch beheer | 2 jaar |
-| 9 | Jira | Jira | Jirabeheerder | 2 jaar |
-| 10 | Releasemanager-tabellen | Op de BIRT server/service (bij BIRT 2.0) en op de testwiki.lrk.org server bij BIRT 1.0 | DBA | 0,5 jaar |
-| 11 | Overige documentatie | Projectspecifiek | Projectteam | 5 jaar |
-| 12 | VM’s ontwikkelteams | {waar} | ISR Technisch beheer | 2 jaar |
-| 13 | Final Release | {waar} | Projectteam | 5 jaar |
-| 14 | {Projectspecifieke producten} | {waar} | {wie} | {termijn} |
-
-# Definition of Done
-
-De Definition Of Done van het project bevat de volgende criteria:
-
-* Alle testgevallen zijn gereviewd en geaccordeerd door reviewer,
-* Functionele testen zijn succesvol afgerond,
-* De dekkingsgraad van de functionele testen is minstens 80% (maar meer indien mogelijk),
-* Integratietesten zijn succesvol afgerond,
-* Performancetesten zijn succesvol afgerond,
-* Toegankelijkheidstesten zijn succesvol afgerond,
-* De release van artifacts is volledig en succesvol,
-* Na elke release is het GFO bijgewerkt op basis van de user stories in Jira.
+| Wat                                   | Waar staat het                       | Wie archiveert het   | Bewaartermijn |
+|:--------------------------------------|:-------------------------------------|:---------------------|:--------------|
+| Broncode, testscripts en documentatie | Git                                  | Projectteam          | 5 jaar        |
+| Overige documentatie                  | Sharepoint of andere samenwerkruimte | Projectteam          | 5 jaar        |
+| Final Release                         | {waar}                               | Projectteam          | 5 jaar        |
+| Performancetestscripts                | Git performanceteam                  | Performanceteam      | 5 jaar        |
+| Kwaliteitsrapportage                  | Quality-time database                | ISR Technisch beheer | 2 jaar        |
+| Bugs, user stories en andere issues   | Jira                                 | Jirabeheerder        | 2 jaar        |
+| VM’s ontwikkelteams                   | {waar}                               | ISR Technisch beheer | 2 jaar        |
+| {Projectspecifieke producten}         | {waar}                               | {wie}                | {termijn}     |

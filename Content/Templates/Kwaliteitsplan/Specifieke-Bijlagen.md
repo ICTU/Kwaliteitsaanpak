@@ -1,6 +1,6 @@
 ## Gebruik van Jira
 
-Gedurende de realisatiefase wordt voor de vastlegging van diverse objecten, zoals user stories en logische testgevallen, gebruik gemaakt van Jira. Teams registreren specifieke informatie gedurende de gehele projectduur. Deze bijlage beschrijft welke informatie vastgelegd wordt in Jira, welke Jira-issuetypen hierbij gebruikt worden en wat de onderlinge relaties zijn. Het project richt hiervoor haar eigen Jira-project in. 
+Gedurende de realisatiefase wordt voor de vastlegging van diverse objecten, zoals user stories en logische testgevallen, gebruik gemaakt van Jira. Teams registreren specifieke informatie gedurende de gehele projectduur. Deze bijlage beschrijft welke informatie vastgelegd wordt in Jira, welke Jira-issuetypen hierbij gebruikt worden en wat de onderlinge relaties zijn. Het project richt hiervoor haar eigen Jira-project in.
 
 ### Jira-typen
 
@@ -24,7 +24,7 @@ Elk Jira-type maakt gebruik van een standaard workflow. Omdat de kwaliteitsrappo
 
 ### Systeembeschrijving
 
-Het op te leveren systeem is beschreven in documenten zoals projectstartarchitectuur (PSA) en globaal functioneel ontwerp (GFO). De actuele situatie van het systeem kan anders zijn in situatie waarin gefaseerd het gewenste systeem wordt opgeleverd of waarin het systeem door de agile-manier van werken reeds vooruit loopt op het GFO. Om de actuele situatie te beschrijven wordt gebruik gemaakt van de Jira-typen _Systeemfunctie_ en _Use Cases_. Tevens zijn de hierbij behorende logische testgevallen beschreven.
+Het op te leveren systeem is beschreven in documenten zoals projectstartarchitectuur (PSA) en globaal functioneel ontwerp (GFO). De actuele situatie van het systeem kan anders zijn in situatie waarin gefaseerd het gewenste systeem wordt opgeleverd of waarin het systeem door de agile-manier van werken reeds vooruitloopt op het GFO. Om de actuele situatie te beschrijven wordt gebruik gemaakt van de Jira-typen _Systeemfunctie_ en _Use Cases_. Tevens zijn de hierbij behorende logische testgevallen beschreven.
 
 **Systeemfunctie**
 Het te ontworpen systeem wordt door het team, meestal door een functioneel ontwerper, vastgelegd in Jira door een issue aan te maken van het type _Systeemfunctie_. Een systeemfunctie is de vastlegging van het globaal functioneel ontwerp of delen ervan. Een goedgekeurde versie van het GFO bevat de gewenste situatie van een specifiek release en zal als attachment in het issue bijgevoegd worden.
@@ -41,7 +41,7 @@ Het logische testgeval zelf wordt beschreven volgens het Given/When/Then formaat
 
 * De _Given_ van een logisch testgeval beschrijft welke niet-triviale informatie aanwezig wordt verondersteld of in welke context een gebruiker zich bevindt. Bijvoorbeeld: "Gegeven een afgesloten inspectierapport" of "Gegeven een medewerker die zich net heeft geregistreerd". Context die vanzelfsprekend is, bijvoorbeeld dat een gebruiker is ingelogd, hoeft niet expliciet te worden opgeschreven.
 * De _When_ van een logisch testgeval beschrijft welke actie de gebruiker doet. Bijvoorbeeld: "Als de inspecteur het afgesloten inspectierapport heropent" of "Als de medewerker zijn registratie bekijkt". Passief taalgebruik ("een rapport wordt geopend") is niet toegestaan, omdat dan niet duidelijk is wie de actie doet. Let ook op dat het testgeval logisch is, dat wil zeggen, geen user interface elementen beschrijft. Dus niet "Als de gemeentemedewerker op het dropdown menu klikt", maar "Als de gemeentemedewerker een type kinderopvang kiest".
-* De _Then_ van een logisch testgeval beschrijft hoe het systeem reageert op de actie van de gebruiker, met een focus op datgene wat het testgeval beoogt te testen. Bijvoorbeeld: "Dan toont het systeem het inspectierapport met als startdatum de datum van vandaag" of "Dan toont het systeem de registratie van de gebruiker en dat aantal inlogpogingen 0 is". 
+* De _Then_ van een logisch testgeval beschrijft hoe het systeem reageert op de actie van de gebruiker, met een focus op datgene wat het testgeval beoogt te testen. Bijvoorbeeld: "Dan toont het systeem het inspectierapport met als startdatum de datum van vandaag" of "Dan toont het systeem de registratie van de gebruiker en dat aantal inlogpogingen 0 is".
 Logische testgevallen worden als geautomatiseerd (Automated), handmatig (Manual) of eenmalig te testen (Will not execute) gemarkeerd. Geautomatiseerd betekent dat fysieke testgevallen worden opgenomen in de automatische regressietest (ART) van het project. Handmatig betekent dat het logische testgeval elke sprint handmatig zal worden getest door de testers. Eenmalig betekent dat de tester eenmalig handmatig het logische testgeval zal uitvoeren. In principe dienen alle logische testgevallen te worden geautomatiseerd, tenzij er goede redenen zijn om dat niet te doen, bijvoorbeeld omdat het technisch niet mogelijk is het testgeval te automatiseren. Eenmalige testen doen we bij triviale wijzigingen zoals het aanpassen van een label of de layout van een scherm.
 
 ### Realisatie-activiteiten
@@ -70,7 +70,7 @@ De sprint bug beschrijft de geconstateerde afwijking op een duidelijke en eendui
 * Minor: functionaliteit is niet geheel correct, maar dit heeft niet of nauwelijks invloed op de demo;
 * Trivial: issues zijn cosmetisch en hebben niet of nauwelijks invloed op de demo.
 
-In de kwaliteitsrapportage wordt gerapporteerd over het aantal non-closed (sprint) bugs. 
+In de kwaliteitsrapportage wordt gerapporteerd over het aantal non-closed (sprint) bugs.
 
 **Custom issues**
 Gedurende de realisatie van de epics kunnen er issues zijn die van belang zijn om formeel vast te leggen en de voortgang te bewaken. Dit kunnen bijvoorbeeld onduidelijkheden zijn die niet specifiek betrekking hebben op een user story of openstaande activiteiten die user story overstijgend zijn.
@@ -94,14 +94,14 @@ Indien de bug opgelost gaat worden, zal er een Jira link van het type _Is realiz
 
 Het ICTU-kwaliteitssysteem voert verschillende controles uit op user stories (US) en logische testgevallen (LTC). Hieronder is in een overzicht gegeven welke controle er wordt uitgevoerd, welke metriekbron hiervoor wordt geraadpleegd en een korte beschrijving op welke plek in Jira deze administratie bijgehouden dient te worden:
 
-| Controle  | Metriekbron | Beschrijving |
-|:-----|:----|:----|
-| Ready user story zonder security risk beoordeling | Jira filter | Betreffende US bevat een tab “Risks”, hier wordt de zwaarte van het Security Risk beoordeeld |
-| Ready user story zonder performance risk beoordeling | Jira filter | Betreffende US bevat een tab “Risks”, hier wordt de zwaarte van het Performance Risk beoordeeld |
-| Uitvoeringstijd handmatig logisch testgeval | Jira filter | Betreffende LTC bevat een tab “Main Tab”, hier wordt in het geval van een handmatig logisch testgeval de uitvoeringstijd ingevuld |
-| Niet gereviewde user story, Niet goedgekeurde user story | Birt report | Betreffende US bevat een tab “Review”, hier wordt de US Approved na review |
-| Niet gereviewd logisch testgeval, Niet goedgekeurd logisch testgeval | Birt report | Betreffende LTC bevat een tab “Review”, hier wordt de LTC Approved na review |
-| User story met een onvoldoende aantal logische testgevallen | Birt report | Betreffende US bevat een tab “Review”, hier wordt het aantal Expected number of LTC’s geconfigureerd |
-| Nog te automatiseren logisch testgeval | Birt report | Betreffende LTC bevat een tab “Main Tab”, hier wordt Test execution Automated geconfigureerd |
-| Uitvoerdatum logisch testgeval | Birt report | Betreffende LTC bevat een tab “Comment” hier wordt iedere Sprint onderstaande als comment toegevoegd: Versie: <versie> Geslaagd: <YYYYMMDD> |
-| Handmatig logisch testgeval | Birt report | Betreffende LTC bevat een tab “Main Tab”, hier wordt Test execution Manual geconfigureerd |
+| Controle                                                             | Metriekbron | Beschrijving                                                                                                                                |
+|:---------------------------------------------------------------------|:------------|:--------------------------------------------------------------------------------------------------------------------------------------------|
+| Ready user story zonder security risk beoordeling                    | Jira filter | Betreffende US bevat een tab “Risks”, hier wordt de zwaarte van het Security Risk beoordeeld                                                |
+| Ready user story zonder performance risk beoordeling                 | Jira filter | Betreffende US bevat een tab “Risks”, hier wordt de zwaarte van het Performance Risk beoordeeld                                             |
+| Uitvoeringstijd handmatig logisch testgeval                          | Jira filter | Betreffende LTC bevat een tab “Main Tab”, hier wordt in het geval van een handmatig logisch testgeval de uitvoeringstijd ingevuld           |
+| Niet gereviewde user story, Niet goedgekeurde user story             | Birt report | Betreffende US bevat een tab “Review”, hier wordt de US Approved na review                                                                  |
+| Niet gereviewd logisch testgeval, Niet goedgekeurd logisch testgeval | Birt report | Betreffende LTC bevat een tab “Review”, hier wordt de LTC Approved na review                                                                |
+| User story met een onvoldoende aantal logische testgevallen          | Birt report | Betreffende US bevat een tab “Review”, hier wordt het aantal Expected number of LTC’s geconfigureerd                                        |
+| Nog te automatiseren logisch testgeval                               | Birt report | Betreffende LTC bevat een tab “Main Tab”, hier wordt Test execution Automated geconfigureerd                                                |
+| Uitvoerdatum logisch testgeval                                       | Birt report | Betreffende LTC bevat een tab “Comment” hier wordt iedere Sprint onderstaande als comment toegevoegd: Versie: <versie> Geslaagd: <YYYYMMDD> |
+| Handmatig logisch testgeval                                          | Birt report | Betreffende LTC bevat een tab “Main Tab”, hier wordt Test execution Manual geconfigureerd                                                   |

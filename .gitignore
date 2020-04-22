@@ -85,3 +85,6 @@ v15
 obj
 .vs
 mdconvert/test/output
+
+# Python
+__pycache__

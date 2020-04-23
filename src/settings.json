@@ -3,6 +3,7 @@
     "OutputPath": "dist",
     "BuildPath": "build",
     "Title": "Test",
+    "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
     "IncludeFrontPage": true,
     "IncludeMarkdownSource": false,

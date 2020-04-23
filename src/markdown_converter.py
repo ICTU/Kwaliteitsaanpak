@@ -48,7 +48,7 @@ class MarkdownConverter:
             if document_type == "Template":
                 with self.element(xmltags.PARAGRAPH):
                     with self.element(xmltags.INSTRUCTION):
-                        self.add_element(xmltags.BOLD, "{Projectnaam}")
+                        self.add_element(xmltags.BOLD, settings["Subtitle"])
                 self.add_element(xmltags.PARAGRAPH)
                 with self.element(xmltags.PARAGRAPH):
                     self.builder.data("Versie ")
@@ -68,7 +68,7 @@ class MarkdownConverter:
             if settings["DocumentType"] == "Template":
                 with self.element(xmltags.PARAGRAPH):
                     self.builder.data(f"{title} ")
-                    self.add_element(xmltags.INSTRUCTION, "{Projectnaam}")
+                    self.add_element(xmltags.INSTRUCTION, settings["Subtitle"])
             else:
                 self.add_element(xmltags.PARAGRAPH, title)
 

@@ -3,6 +3,7 @@
     "OutputPath": "/work/dist/",
     "BuildPath": "/work/build/Templates/HLD/",
     "Title": "High-Level Design",
+    "Subtitle": "{Productnaam}",
     "DocumentType": "Template",
     "IncludeFrontPage": true,
     "IncludeMarkdownSource": false,

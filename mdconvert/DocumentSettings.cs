@@ -20,6 +20,8 @@ namespace mdconvert
 
         public string Title { get; set; } = "";
 
+        public string Subtitle { get; set; } = "";
+
         [JsonConverter(typeof(StringEnumConverter))]
         public DocumentType DocumentType { get; set; } = DocumentType.Generic;
 

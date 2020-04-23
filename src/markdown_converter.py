@@ -1,6 +1,7 @@
 """Markdown converter."""
 
 import contextlib
+import logging
 import re
 from typing import Dict, List
 from xml.etree.ElementTree import ElementTree, TreeBuilder
@@ -80,6 +81,7 @@ class MarkdownConverter:
         """Process a line of Markdown."""
         if not (stripped_line := line.strip()):
             self.end_lists()
+            self.end_table()
             return  # Empty line, nothing further to do
         ending_measure = False
         if stripped_line.startswith(markdown_syntax.MEASURE_START) and not self.in_measure:
@@ -144,21 +146,58 @@ class MarkdownConverter:
     def process_table_row(self, line: str) -> None:
         """Process table row."""
         if cells := self.get_table_cells(line):
-            if self.in_table:
-                self.process_table_cells(cells, line)
+            if self.table is None:
+                self.process_table_header(cells)
             else:
-                self.process_table_header(cells, line)
+                self.process_table_cells(cells)
 
     def get_table_cells(self, line: str) -> List[str]:
         """Return the table cells."""
         line = line.strip(markdown_syntax.TABLE_MARKER + " " + "\t")
         return [cell.strip() for cell in line.split(markdown_syntax.TABLE_MARKER)]
 
-    def process_table_cells(self, cells: List[str], line: str) -> None
+    def process_table_cells(self, cells: List[str]) -> None:
         """Process the table cells."""
         if "---" in cells[0] and len(self.table.rows) == 0:
-            for cell in cells:
-                if cell.startswith(markd    )
+            self.process_table_alignment(cells)
+        else:
+            self.table.rows.append(cells)
+
+    def process_table_alignment(self, cells: List[str]) -> None:
+        """Process the alignment row of the Markdown table."""
+        alignment_marker = markdown_syntax.CELL_ALIGNMENT_MARKER
+        for cell in cells:
+            if cell.startswith(alignment_marker) and cell.endswith(alignment_marker):
+                alignment = "center"
+            elif cell.endswith(alignment_marker):
+                alignment = "right"
+            else:
+                alignment = "left"
+            self.table.column_alignment.append(alignment)
+
+    def process_table_header(self, cells: List[str]) -> None:
+        """Process the table header."""
+        logging.debug("process_table_header: %s", cells)
+        self.table = Table(cells)
+
+    def end_table(self) -> None:
+        """Flush the table."""
+        if self.table is None:
+            return
+        logging.debug("end_table: %s", self.table.header_cells)
+        table_attributes = {
+            xmltags.TABLE_COLUMNS: str(len(self.table.header_cells)), xmltags.TABLE_ROWS: str(len(self.table.rows))}
+        with self.element(xmltags.TABLE, table_attributes):
+            with self.element(xmltags.TABLE_HEADER_ROW):
+                for cell, alignment in zip(self.table.header_cells, self.table.column_alignment):
+                    with self.element(xmltags.TABLE_CELL, {xmltags.TABLE_CELL_ALIGNMENT: alignment}):
+                        self.process_formatted_text(cell)
+            for row in self.table.rows:
+                with self.element(xmltags.TABLE_ROW):
+                    for cell in row:
+                        with self.element(xmltags.TABLE_CELL):
+                            self.process_formatted_text(cell)
+        self.table = None
 
     def process_formatted_text(self, line: str) -> None:
         """Process formatted Markdown text."""
@@ -195,6 +234,8 @@ class MarkdownConverter:
 
     def end_document(self) -> None:
         """End the document."""
+        self.end_lists()
+        self.end_table()
         self.builder.end(xmltags.DOCUMENT)
 
     def add_element(self, tag: str, text: str = "", attributes: Dict[str, str] = None) -> None:

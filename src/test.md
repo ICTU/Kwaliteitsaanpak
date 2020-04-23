@@ -44,3 +44,8 @@ measure}@
     1. Numbered list item 2.a.2
   a. Numbered list item 2.b
 1. Numbered list item with *formatting*
+
+| Nr. | Description | Markdown |
+|:---:|------------:|:---------|
+|  1  |        Bold | **bold** |
+|  2  |      Italic | *italic* |

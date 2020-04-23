@@ -27,7 +27,7 @@ Componenten uit een laag mogen alleen componenten uit dezelfde of een diepere la
 
 ## Gebruik van bewezen componenten en standaarden
 
-{Applicatie} is gebaseerd op industriestandaarden {opsomming van standaarden}. Om deze standaarden te implementeren gebruikt {applicatie} gangbare componenten en bibliotheken, bij voorkeur die onderdeel uitmaken van beheerde platformen. Gebruik van gangbare en bewezen componenten verlaagt de beheerlast op langere termijn; gebruik van beheerde en volwassen componenten verlaagt beveiligingsrisico's.
+{Applicatie} is gebaseerd op industriestandaarden {opsomming van standaarden}. Om deze standaarden te implementeren gebruikt {applicatie} gangbare componenten en bibliotheken, bij voorkeur die onderdeel uitmaken van beheerde platformen. Gebruik van gangbare, bewezen en actief onderhouden componenten verlaagt de beheerlast op langere termijn; gebruik van beheerde en volwassen componenten verlaagt beveiligingsrisico's.
 
 De toegankelijkheid van de applicatie voldoet aan de WCAG 2.1 (Web Content Accessibility Guidelines).
 
@@ -43,17 +43,9 @@ De toegankelijkheid van de applicatie voldoet aan de WCAG 2.1 (Web Content Acces
 
 In situaties waarin het niet op voorhand duidelijk is wat de correcte reactie van de applicatie is, wordt de keus aan de gebruiker gelaten. Een voorbeeld is het langdurig uitblijven van een reactie bij opvragen van gegevens: bij het bereiken van de ingestelde maximale wachttijd, krijgt de gebruiker de mogelijkheid om de betreffende actie nogmaals uit te voeren.
 
-# Applicatiearchitectuur
+# Applicatiecontext
 
-## Componenten
-
-{Figuur met alle componenten}
-
-### Webserver
-
-### Directoryserver
-
-### Functieservices
+{Beschrijf in dit hoofdstuk de technische context waarbinnen de applicatie zal opereren. Indien deze informatie al in de PSA of ander document beschreven staan kan dit hoofdstuk weggelaten worden.}
 
 ## Omliggende systemen
 
@@ -73,9 +65,23 @@ In situaties waarin het niet op voorhand duidelijk is wat de correcte reactie va
 
 ## Externe systemen
 
+# Applicatiearchitectuur
+
+## Componenten
+
+{Figuur met alle componenten}
+
+### Webserver
+
+### Directoryserver
+
+### Functieservices
+
 ## Logische View - Dynamisch
 
 ### Use cases
+
+{Beschrijf hier alleen de architecturally-significant use cases.}
 
 # Informatiearchitectuur
 
@@ -183,6 +189,8 @@ Bij de ontwikkeling van de programmatuur worden de volgende richtlijnen in acht 
 
 * [OWASP Top-10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project),
 * [NCSC ICT-beveiligingsrichtlijnen voor webapplicaties](https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-webapplicaties).
+* [Baseline Informatiebeveiliging Overheid (BIO)](https://bio-overheid.nl/media/1400/70463-rapport-bio-versie-104_digi.pdf).
+* [Software Development (SSD) van het Centrum Informatiebeveiliging en Privacybescherming](https://www.cip-overheid.nl/media/1101/grip-op-ssd-het-proces-v20.pdf)
 
 ## Overzicht van gebruikte certificaten
 
@@ -193,3 +201,29 @@ Certificaten (alle PKIoverheid):
 Certificaten van anderen:
 
 1. {lijst van andere certificaten}
+
+# Performance view
+
+## Inleiding
+
+Dit hoofdstuk vat de performancekarakteristieken van {applicatie} samen en beschrijft hoe de benodigde throughput, response tijden en schaalbaarheid bereikt zullen worden.
+
+## Belasting
+
+{Beschrijf of verwijs naar de verwachte belasting van het systeem: aantallen gebruikers, aantallen transacties, hoeveelheden te bewaren data, etc.}
+
+## Snelheid (time behavior)
+
+{Beschrijf hoe de applicatie de gewenste response tijden en throughput gaat realiseren}
+
+## Middelen beslag (resource utilization)
+
+{Beschrijf welke en hoeveel middelen (denk aan storage, bandbreedte, rekencapaciteit) nodig zijn voor de vereiste performance}
+
+## Schaalbaarheid
+
+{Beschrijf hoe de applicatie horizontaal danwel verticaal schaalbaar is}
+
+# {Overige architectureel-significante niet-functionele eigenschappen}
+
+{Voeg indien nodig hoofdstukken toe voor andere architectuureel-significante niet-functionele eigenschappen van de applicatie}

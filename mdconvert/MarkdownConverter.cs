@@ -140,7 +140,7 @@ namespace mdconvert
 
                         output.WriteStartElement(XMLTags.TagParagraph);
                         output.WriteStartElement(XMLTags.TagInstruction);
-                        output.WriteElementString(XMLTags.TagBold, "{Projectnaam}");
+                        output.WriteElementString(XMLTags.TagBold, documentSettings.Subtitle);
                         output.WriteEndElement();
                         output.WriteEndElement();
 
@@ -175,7 +175,7 @@ namespace mdconvert
             {
                 output.WriteStartElement(XMLTags.TagParagraph);
                 output.WriteString($"{documentSettings.Title} ");
-                output.WriteElementString(XMLTags.TagInstruction, "{Projectnaam}");
+                output.WriteElementString(XMLTags.TagInstruction, documentSettings.Subtitle);
                 output.WriteEndElement();
             }
             else

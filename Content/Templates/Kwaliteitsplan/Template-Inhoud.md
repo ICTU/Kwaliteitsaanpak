@@ -231,6 +231,8 @@ Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is in
 
 ## Usability-testen
 
+{Verwijder deze paragraaf indien usability-testen niet van toepassing zijn}
+
 Om de usability van de software te testen worden usability-testen uitgevoerd. Hiervoor zijn twee opties: ofwel het project laat minimaal eenmaal per jaar een usabilitylabtest uitvoeren, of het project voert minimaal eenmaal per drie sprints een guerilla usabilitytest uit. Het MTP beschrijft de gekozen aanpak.
 
 Issues die voortkomen uit usabilitytests worden opgenomen in Jira met het label "usability_bevinding".
@@ -249,16 +251,20 @@ Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementati
 
 ## Certificeringen
 
+{Verwijder deze paragraaf indien certificeringen niet van toepassing zijn}
+
 Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld ISO 127001 compliancy.
 
 ## Projectspecifieke maatregelen
 
+{Verwijder deze paragraaf indien er geen projectspecifieke kwaliteitsmaatregelen nodig zijn}
+
 Deze paragraaf bevat maatregelen voor functionele en niet-functionele eisen, die via de standaardmaatregelen uit de ICTU-kwaliteitsaanpak niet voldoende worden geborgd.
 
-| Eis      | Omschrijving                                                    | Extra maatregelen                 | Hoe controleren  | Verificatie                                                |
-|:---------|:----------------------------------------------------------------|:----------------------------------|:-----------------|:-----------------------------------------------------------|
-| {Nummer} | {vb: onderdeel A moet kunnen worden vervangen door onderdeel B} | {vb: scenariotest opnemen in MTP} | {vb: review MTP} | {vb: dd/mm/jjjj review MTP, test opgenomen in hoofdstuk x} |
-| {Nummer} | {Omschrijving}                                                  | {Maatregelen}                     | {Controle}       | {Verificatie}                                              |
+| Eis      | Omschrijving                                                           | Extra maatregelen                        | Hoe controleren         | Verificatie                                                       |
+|:---------|:-----------------------------------------------------------------------|:-----------------------------------------|:------------------------|:------------------------------------------------------------------|
+| {Nummer} | {voorbeeld: onderdeel A moet kunnen worden vervangen door onderdeel B} | {voorbeeld: scenariotest opnemen in MTP} | {voorbeeld: review MTP} | {voorbeeld: dd/mm/jjjj review MTP, test opgenomen in hoofdstuk x} |
+| {Nummer} | {Omschrijving}                                                         | {Maatregelen}                            | {Controle}              | {Verificatie}                                                     |
 
 # Kwaliteitsmaatregelen projectafsluiting
 

@@ -6,7 +6,7 @@ De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende het gehele p
 
 ### Wekelijks projectoverleg
 
-Het project houdt een wekelijks intern projectoverleg (IPO) waarin planning, voortgang, kwaliteitsrapportage, acties, risico's en overige relevante zaken worden besproken ({{M10}}). Het doel is om informatie uit te wisselen binnen het project, impediments te melden die het team niet zelf kan oplossen en eventueel te besluiten over escalaties buiten het project.
+Het project houdt een wekelijks intern projectoverleg (IPO) waarin planning, voortgang, kwaliteitsrapportage, acties, risico's en overige relevante zaken worden besproken ({{M10}}). Het doel is om informatie uit te wisselen binnen het project, belemmeringen voor de voortgang die het team niet zelf kan oplossen te melden en eventueel te besluiten over escalaties buiten het project.
 
 De IPO-agenda bevat minimaal: mededelingen, kwaliteit, voortgang, risico's, acties en rondvraag. Aanwezig zijn in ieder geval de projectleider, de software delivery manager, de kwaliteitsmanager, de Scrum master en een vertegenwoordiger uit elk projectteam.
 
@@ -34,11 +34,11 @@ De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsdoelst
 
 ### Versiebeheer documenten
 
-Alle documenten die een deliverable van het project zijn, zoals architectuurdocumenten, functioneel ontwerp en installatiehandleidingen, worden in de digitale samenwerkruimte van het project geplaatst. De opgeleverde documenten worden in pdf-formaat opgeslagen en bevatten een versienummer in de naam. De versies van de bronbestanden van deliverables worden opgeslagen in een online werkomgeving van de auteur en moeten beschikbaar zijn om later aangepast te kunnen worden; bij voorkeur een versiebeheersysteem zoals Git.
+Alle documenten die een deliverable van het project zijn, zoals architectuurdocumenten, functioneel ontwerp en installatiehandleidingen, worden in de digitale samenwerkruimte van het project geplaatst. De opgeleverde documenten worden in pdf-formaat opgeslagen en bevatten een versienummer in de naam. De versies van de bronbestanden van deliverables worden opgeslagen in een online werkomgeving en moeten beschikbaar zijn om later aangepast te kunnen worden. Dit project gebruikt {Git, Sharepoint, Samenwerkingsruimte}.
 
 Bij elk formele release moeten de documenten geactualiseerd zijn en formeel opgeleverd worden.
 
-Elk document bevat een verantwoordingsparagraaf waarin aangeven wordt aan welke eisen (PvE, NFE, Programma SA) wordt voldaan en op welke wijze deze in het document zijn verwerkt.
+Elk document bevat een verantwoordingsparagraaf waarin aangeven wordt aan welke eisen (zoals opgenomen in bijvoorbeeld PSA en NFE) wordt voldaan en op welke wijze deze in het document zijn verwerkt.
 
 ### Documentreview
 
@@ -46,7 +46,7 @@ Alle deliverables worden gereviewd. De auteur van een deliverable zorgt, in over
 
 Reviewers worden uitgenodigd door de auteur van het document en ontvangen de juiste versie van de auteur. De werkwijze wordt in overleg door de software delivery manager en kwaliteitsmanager bepaald.
 
-Bij reviewers buiten ICTU koppelt de auteur expliciet terug hoe het reviewcommentaar is verwerkt in de volgende versie van de deliverable. De opstellers verwerken het commentaar. Vervolgens sturen de opstellers een toelichting op de wijze waarop het commentaar al dan niet is verwerkt naar de reviewers.
+De opstellers verwerken het commentaar. Vervolgens sturen de opstellers een toelichting op de wijze waarop het commentaar al dan niet is verwerkt naar de reviewers.
 
 # Kwaliteitsmaatregelen voorfase
 
@@ -64,13 +64,13 @@ Het PvE is het startpunt van de opdrachtgever en kan gedurende de vervolgfases i
 
 ### Functionele eisen
 
-Het programma van eisen en de projectstartarchitectuur zijn de basis voor de op te leveren ICTU-documenten, zoals architectuur en ontwerpdocumenten.
+Het programma van eisen en de projectstartarchitectuur, beide opgesteld door de opdrachtgever, zijn de basis voor de op te leveren ICTU-documenten, zoals architectuur en ontwerpdocumenten.
 
 ### Niet-Functionele eisen
 
 Niet-functionele eisen aan het te ontwikkelen systeem worden vastgelegd op basis van de projectstartarchitectuur en aan de hand van de ISO-25010-standaard in een NFE-document. De ISO-25010-kwaliteitsattributen worden door de belanghebbenden geprioriteerd in een of meer workshops (PRA – zie ook testen). Voor de kwaliteitsattributen worden SMART-eisen geformuleerd.
 
-Informatiebeveiliging is een essentieel en integraal onderdeel van de werkzaamheden. De eisen worden in een afzonderlijk informatiebeveiligingsplan opgesteld. De software zal zodanig worden voortgebracht dat deze de BIR:2017-compliance van de opdrachtgever niet zal hinderen.
+Informatiebeveiliging is een essentieel en integraal onderdeel van de werkzaamheden. De eisen worden in een afzonderlijk informatiebeveiligingsplan opgesteld. De software zal zodanig worden voortgebracht dat deze de BIO-compliance van de opdrachtgever niet zal hinderen.
 
 Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.1, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
 
@@ -84,7 +84,9 @@ In aanvulling op de maatregelen met betrekking tot reviews, zie paragraaf [Docum
 
 De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende realisatiefasen.
 
-## Quality Gates
+## Entry- en exitcriteria
+
+ICTU volgt een agile aanpak bij het realiseren van software, waarbij gewerkt wordt in korte iteraties (sprints) waarin user stories worden omgezet in werkende software. De resultaten van één of meer sprints worden gebundeld in (major) releases. Hierbij worden entry- en exitcriteria gebruikt om te bepalen of werk kan worden opgepakt of gereed is: Definition of Ready (entry criteria) en Definition of Done (exit criteria) voor user stories en het vrijgaveadvies voor releases (exit criteria).
 
 ### Definition of Ready (DoR)
 
@@ -101,13 +103,13 @@ De Definition Of Ready van het project bevat de volgende criteria ({vul aan en p
 7. Het verwachte aantal logische testgevallen is ingevuld;
 8. Er is ingeschat of de user story een performance risico, een beveiligingsrisico en/of een infrastructuurwijziging met zich meebrengt.
 
-### Definition of Done voor sprints
+### Definition of Done
 
-Het project definieert en hanteert een Definition of Done (DoD) voor de sprint. De kwaliteitsmanager controleert of er een DoD is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
+Het project definieert en hanteert een Definition of Done (DoD) voor user stories. De kwaliteitsmanager controleert of er een DoD is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
 
 De Definition Of Done van het project bevat de volgende criteria ({vul aan en pas aan}):
 
-1. Alle testgevallen zijn gereviewd en geaccordeerd door reviewer,
+1. Nieuwe testgevallen zijn gereviewd en geaccordeerd door reviewer,
 2. Functionele testen zijn succesvol afgerond,
 3. De dekkingsgraad van de functionele testen is minstens 80% (maar meer indien mogelijk),
 4. Integratietesten zijn succesvol afgerond,
@@ -120,6 +122,14 @@ De Definition Of Done van het project bevat de volgende criteria ({vul aan en pa
 
 Voor elke major release stelt het project (bijvoorbeeld de testmanager) een vrijgaveadvies op. Eventuele afwijkingen in de kwaliteitsrapportage en hieruit voortvloeiende risico's ("rode metrieken") worden in het vrijgaveadvies toegelicht. De kwaliteitsmanager reviewt het vrijgaveadvies.
 
+Het vrijgaveadvies beschrijft ({vul aan en pas aan}):
+
+1. Samenvatting testresultaten,
+2. Openstaande bugs,
+3. Afwijkingen kwaliteitsrapportage,
+4. Overige risico's,
+5. Het advies van ICTU wat betreft ingebruikname van de release.
+
 ## ICTU-kwaliteitssysteem
 
 Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automatisch metrieken worden verzameld en samengesteld. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden diverse malen per dag bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. In de bijlagen een overzicht van de mogelijke metrieken en de daarbij horende standaard instelling; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
@@ -129,6 +139,8 @@ Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automat
 Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het mastertestplan opgenomen. ICTU maakt gebruik van een geautomatiseerd kwaliteitssysteem, waarbij de broncode continu wordt gecheckt en gerapporteerd. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
 
 De volledige lijst met mogelijke meetbare KPI’s is opgenomen in de bijlagen; de meest actuele lijst is opgenomen in de kwaliteitsrapportage van het project. Gedurende het project wordt uitgegaan van de standaard normen; afwijkingen op de standaard zijn alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
+
+De keuze van programmeertalen en andere technologie staat beschreven in het SAD.
 
 ### Complexiteit van broncode limiteren
 
@@ -165,7 +177,7 @@ Broncode, zowel van productiesoftware als van geautomatiseerde tests, wordt in e
 
 Gedurende de realisatiefase worden de use cases in samenwerking met de product owner vertaald naar user stories. Per user story worden één of meer logische testgevallen opgesteld; per logisch testgeval worden één of meer fysieke testgevallen opgesteld. De user stories, logische testgevallen en fysieke testgevallen zijn expliciet aan elkaar gekoppeld. User stories en logische testgevallen worden vastgelegd in Jira; zie de bijlagen voor de te gebruiken typen en relaties. Afwijkingen op deze standaard aanpak zijn alleen toegestaan met goedkeuring van de kwaliteitsmanager.
 
-Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor de realisatie- en beheerfase worden uitgevoerd. Documenten die input leveren voor het MTP zijn de documenten die in de voorfase worden opgeleverd, zoals PSA, SAD en GFO. Een product risicoanalyse (PRA) is uitgevoerd en is de basis voor de vaststelling van de diepgang waarmee de gedefinieerde testsoorten uitgevoerd moeten worden.
+Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor de realisatie- en beheerfase worden uitgevoerd. Documenten die input leveren voor het MTP zijn de documenten die in de voorfase worden opgeleverd, zoals PSA, NFE, SAD en GFO. Een product risicoanalyse (PRA) is uitgevoerd en is de basis voor de vaststelling van de diepgang waarmee de gedefinieerde testsoorten uitgevoerd moeten worden.
 
 ## Unit tests
 
@@ -191,7 +203,7 @@ Het uitgangspunt is dat zoveel mogelijk van de software die ICTU maakt, geautoma
 
 Om de performance van de software te borgen kunnen performance-testen uitgevoerd worden. Het MTP beschrijft de gekozen aanpak.
 
-Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan de kwaliteitsmanager en software delivery manager. Issues die voortkomen uit performance-testen worden opgenomen in Jira met het label "performance_bevinding".
+Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen uitgevoerd in de ontwikkelomgeving van ICTU. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het ontwikkelteam. Issues die voortkomen uit performance-testen worden opgenomen in Jira met het label "performance_bevinding".
 
 ## Security-testen
 
@@ -199,7 +211,7 @@ De eisen aan de beveiliging worden in de documenten projectstartarchitectuur en 
 
 De geautomatiseerde broncodereviews en rapportages uit het ICTU-kwaliteitssysteem bevatten diverse KPI’s voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van Checkmarx, OWASP dependency checker, OWASP ZAP en OpenVAS.
 
-Om de veiligheid van de software te testen kan deze met enige regelmaat getest worden door een externe partij. Het MTP beschrijft de gekozen aanpak.
+Om de beveiliging van de software te testen kan deze met enige regelmaat getest worden door een externe partij. Het MTP beschrijft de gekozen aanpak.
 
 Elke beveiligingstest resulteert in een beveiligingstestrapportage met daarin de aangetroffen beveiligingsissues. Issues die voortkomen uit deze testen worden opgenomen in Jira met het label "security_bevinding". Voor beveiligingsissues gelden de volgende oplostermijnen:
 
@@ -210,6 +222,8 @@ Elke beveiligingstest resulteert in een beveiligingstestrapportage met daarin de
 | Laag (laag risico en lage impact)                 | In overleg met de product owner                     | In overleg met de product owner                    |
 
 Het ICTU-kwaliteitssysteem rapporteert of gevonden beveiligingsissues niet te lang open staan.
+
+NB. De beveiliging van de software in de acceptatie- en productieomgeving kan niet door ICTU getest worden. Deze test moet de opdrachtgever of de beheerpartij uitvoeren.
 
 ## Toegankelijkheidstesten
 

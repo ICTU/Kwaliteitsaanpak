@@ -1,4 +1,4 @@
-## M30: Projecten identificeren, mitigeren en bewaken risico's
+## M30: Het project identificeert, mitigeert en bewaakt risico's
 
 #include "Content/Maatregelen/M30/Definitie.md"
 

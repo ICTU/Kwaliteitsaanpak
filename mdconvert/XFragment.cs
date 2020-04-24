@@ -49,7 +49,7 @@ namespace mdconvert
 
         public bool HasStyle => Bold || Italic || Strikethrough || Instruction;
 
-        public bool HasLink => Link.Length > 0;
+        public bool HasLink => Link.Length > 0 && !Link.StartsWith("#");
 
         public override string ToString() => Text;
     }

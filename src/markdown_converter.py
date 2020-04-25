@@ -14,8 +14,13 @@ import xmltags
 
 class MarkdownConverter:
     """Convert Markdown to XML."""
+
+    APPENDIX_HEADING = "Bijlagen"
+    APPENDIX_LEVEL = 1
+
     def __init__(self) -> None:
         self.builder = TreeBuilder()
+        self.in_appendices = False
         self.in_measure = False
         self.current_section_level = 0
         self.current_list_tags = []
@@ -92,9 +97,7 @@ class MarkdownConverter:
             ending_measure = True
             stripped_line = stripped_line[:-len(markdown_syntax.MEASURE_END)]
         if match := re.match(markdown_syntax.HEADING_PATTERN, stripped_line):
-            level = len(match.group(1))
-            heading = match.group(2)
-            self.process_heading(heading, level)
+            self.process_heading(heading=match.group(2), level=len(match.group(1)))
         elif match := re.match(markdown_syntax.BULLET_LIST_PATTERN, stripped_line):
             list_level = {"*": 1, "+": 2, "-": 3}[stripped_line[0]]
             self.process_list(stripped_line, xmltags.BULLET_LIST, list_level)
@@ -112,16 +115,20 @@ class MarkdownConverter:
 
     def process_heading(self, heading: str, level: int) -> None:
         """Process a heading."""
+        if level == self.APPENDIX_LEVEL and heading == self.APPENDIX_HEADING:
+            self.in_appendices = True
+        is_appendix = {xmltags.SECTION_IS_APPENDIX: "y"} if self.in_appendices else {}
         if self.current_section_level >= level:
             while self.current_section_level > level:
                 self.current_section_level -= 1
                 self.builder.end(xmltags.SECTION)
             self.builder.end(xmltags.SECTION)
-            self.builder.start(xmltags.SECTION, {xmltags.SECTION_LEVEL: str(self.current_section_level)})
+            self.builder.start(xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)})
         else:
             while self.current_section_level < level:
                 self.current_section_level += 1
-                self.builder.start(xmltags.SECTION, {xmltags.SECTION_LEVEL: str(self.current_section_level)})
+                self.builder.start(
+                    xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)})
         with self.element(xmltags.HEADING):
             self.process_formatted_text(heading)
 

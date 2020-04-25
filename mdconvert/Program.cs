@@ -49,11 +49,11 @@ namespace mdconvert
                 return 1;
             }
 
-            if (!File.Exists(documentSettings.InputFile))
-            {
-                Error($"File not found '{documentSettings.InputFile}'");
-                return 1;
-            }
+            //if (!File.Exists(documentSettings.InputFile))
+            //{
+                //Error($"File not found '{documentSettings.InputFile}'");
+                //return 1;
+            //}
 
             string filename = Path.GetFileName(documentSettings.InputFile);
             string xmlFile = Path.Combine(documentSettings.BuildPath, Path.ChangeExtension(filename, "xml"));
@@ -86,10 +86,10 @@ namespace mdconvert
                     Info($".Docx reference file = {documentSettings.DocxReferenceFile}");
                 }
 
-                Info($"Converting file '{documentSettings.InputFile}' to '{xmlFile}'");
-                MarkdownConverter converter = new MarkdownConverter();
-                string result = converter.ConvertFile(documentSettings.InputFile, documentSettings);
-                WriteOutput(result, xmlFile);
+                //Info($"Converting file '{documentSettings.InputFile}' to '{xmlFile}'");
+                //MarkdownConverter converter = new MarkdownConverter();
+                //string result = converter.ConvertFile(documentSettings.InputFile, documentSettings);
+                //WriteOutput(result, xmlFile);
             }
             catch (Exception e)
             {

@@ -160,10 +160,18 @@ generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Pr
 
 python3 create-checklist.py "$KA_TITLE"
 
-docker-compose run mdconvert /work/DocumentDefinitions/detailtestplan.json
-docker-compose run mdconvert /work/DocumentDefinitions/globaal-functioneel-ontwerp.json
-docker-compose run mdconvert /work/DocumentDefinitions/high-level-design.json
-docker-compose run mdconvert /work/DocumentDefinitions/kwaliteitsplan.json
-docker-compose run mdconvert /work/DocumentDefinitions/niet-functionele-eisen.json
-docker-compose run mdconvert /work/DocumentDefinitions/softwarearchitectuurdocument.json
-docker-compose run mdconvert /work/DocumentDefinitions/projectvoorstel-voorfase.json
+python3 src/convert.py --log INFO DocumentDefinitions/detailtestplan.json
+python3 src/convert.py --log INFO DocumentDefinitions/globaal-functioneel-ontwerp.json
+python3 src/convert.py --log INFO DocumentDefinitions/high-level-design.json
+python3 src/convert.py --log INFO DocumentDefinitions/kwaliteitsplan.json
+python3 src/convert.py --log INFO DocumentDefinitions/niet-functionele-eisen.json
+python3 src/convert.py --log INFO DocumentDefinitions/softwarearchitectuurdocument.json
+python3 src/convert.py --log INFO DocumentDefinitions/projectvoorstel-voorfase.json
+
+docker-compose run mdconvert DocumentDefinitions/detailtestplan.json
+docker-compose run mdconvert DocumentDefinitions/globaal-functioneel-ontwerp.json
+docker-compose run mdconvert DocumentDefinitions/high-level-design.json
+docker-compose run mdconvert DocumentDefinitions/kwaliteitsplan.json
+docker-compose run mdconvert DocumentDefinitions/niet-functionele-eisen.json
+docker-compose run mdconvert DocumentDefinitions/softwarearchitectuurdocument.json
+docker-compose run mdconvert DocumentDefinitions/projectvoorstel-voorfase.json

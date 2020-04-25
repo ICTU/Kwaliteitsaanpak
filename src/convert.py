@@ -7,7 +7,6 @@ import pathlib
 import pprint
 import sys
 from typing import List
-from xml.dom.minidom import parseString
 from xml.etree.ElementTree import ElementTree
 
 from cli import parse_cli_arguments
@@ -31,12 +30,8 @@ def read_markdown(settings: Settings) -> List[str]:
 def write_xml(xml: ElementTree, settings: Settings) -> None:
     """Write the XML to the file specified in the settings."""
     markdown_filename = pathlib.Path(settings["InputFile"])
-    #xml_filename = pathlib.Path(settings["BuildPath"]) / markdown_filename.with_suffix(".xml")
-    xml_filename = markdown_filename.with_suffix(".xml")
-    xml_string = io.StringIO()
-    xml.write(xml_string, encoding="unicode")
-    with open(xml_filename, "w") as xml_file:
-        xml_file.write(parseString(xml_string.getvalue()).toprettyxml(indent="    "))
+    xml_filename = pathlib.Path(settings["BuildPath"]) / markdown_filename.with_suffix(".xml").name
+    xml.write(xml_filename, encoding="utf-8")
 
 
 def main(settings_filename: str) -> None:

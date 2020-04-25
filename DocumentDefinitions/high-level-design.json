@@ -1,15 +1,15 @@
 {
-    "InputFile": "/work/build/Templates/HLD/Template-High-Level-Design.md",
-    "OutputPath": "/work/dist/",
-    "BuildPath": "/work/build/Templates/HLD/",
+    "InputFile": "build/Templates/HLD/Template-High-Level-Design.md",
+    "OutputPath": "dist/",
+    "BuildPath": "build/Templates/HLD/",
     "Title": "High-Level Design",
     "Subtitle": "{Productnaam}",
     "DocumentType": "Template",
     "IncludeFrontPage": true,
     "IncludeMarkdownSource": false,
     "IncludeTableOfContents": true,
-    "ImagePath": "/work/Content/Images",
-    "DocxReferenceFile": "/work/DocumentDefinitions/reference2.docx",
+    "ImagePath": "Content/Images",
+    "DocxReferenceFile": "DocumentDefinitions/reference2.docx",
     "OutputFormats": [
         "docx"
     ]

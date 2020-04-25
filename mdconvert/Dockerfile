@@ -34,4 +34,4 @@ WORKDIR /app/out
 COPY --from=build /app/out ./
 RUN ls -la
 RUN chmod +x mdconvert
-ENTRYPOINT ["./mdconvert"]
+ENTRYPOINT ["/app/out/mdconvert"]

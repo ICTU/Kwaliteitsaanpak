@@ -224,8 +224,12 @@ class MarkdownConverter:
                     self.flush(seen)
                     seen = ""
                     with self.element(xml_tag):
+                        if xml_tag == xmltags.INSTRUCTION:
+                            self.builder.data(md_start)
                         formatted_text, line = line[len(md_start):].split(md_end, maxsplit=1)
                         self.process_formatted_text(formatted_text)
+                        if xml_tag == xmltags.INSTRUCTION:
+                            self.builder.data(md_end)
                     break
             else:
                 if match := re.match(markdown_syntax.LINK_PATTERN, line):

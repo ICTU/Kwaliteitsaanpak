@@ -24,6 +24,6 @@ class Converter:
             builder.text(element.tag, element.text)
         for child_element in element:
             self.convert_element(child_element, builder)
-        builder.end_element(element.tag)
+        builder.end_element(element.tag, element.attrib)
         if element.tail:
             builder.tail(element.tag, element.tail)

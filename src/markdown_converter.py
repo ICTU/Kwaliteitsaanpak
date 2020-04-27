@@ -1,7 +1,6 @@
 """Markdown converter."""
 
 import contextlib
-import logging
 import re
 from typing import Dict, List
 from xml.etree.ElementTree import ElementTree, TreeBuilder
@@ -184,14 +183,12 @@ class MarkdownConverter:
 
     def process_table_header(self, cells: List[str]) -> None:
         """Process the table header."""
-        logging.debug("process_table_header: %s", cells)
         self.table = Table(cells)
 
     def end_table(self) -> None:
         """Flush the table."""
         if self.table is None:
             return
-        logging.debug("end_table: %s", self.table.header_cells)
         table_attributes = {
             xmltags.TABLE_COLUMNS: str(len(self.table.header_cells)), xmltags.TABLE_ROWS: str(len(self.table.rows))}
         with self.element(xmltags.TABLE, table_attributes):

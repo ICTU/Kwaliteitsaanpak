@@ -10,6 +10,8 @@ from typing import List
 from xml.etree.ElementTree import ElementTree
 
 from cli import parse_cli_arguments
+from converter import Converter
+from markdown_builder import MarkdownBuilder
 from markdown_converter import MarkdownConverter
 from custom_types import Settings
 
@@ -41,6 +43,9 @@ def main(settings_filename: str) -> None:
     markdown = read_markdown(settings)
     xml = MarkdownConverter().convert(markdown, settings)
     write_xml(xml, settings)
+    markdown_output_filename = pathlib.Path(settings["BuildPath"]) / pathlib.Path(settings["InputFile"]).with_suffix(".exported_md").name
+    markdown_builder = MarkdownBuilder(markdown_output_filename)
+    Converter(xml).convert(markdown_builder)
 
 
 if __name__ == "__main__":

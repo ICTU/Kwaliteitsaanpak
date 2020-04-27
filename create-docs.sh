@@ -148,7 +148,7 @@ function generate-template
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
-generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "$KA_TITLE"
+#generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "$KA_TITLE"
 generate-template Template Template-Generiek "Generiek Template"
 generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
@@ -158,20 +158,20 @@ generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
 generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
 
-python3 create-checklist.py "$KA_TITLE"
+#python3 create-checklist.py "$KA_TITLE"
 
-python3 src/convert.py --log INFO DocumentDefinitions/detailtestplan.json
-python3 src/convert.py --log INFO DocumentDefinitions/globaal-functioneel-ontwerp.json
-python3 src/convert.py --log INFO DocumentDefinitions/high-level-design.json
-python3 src/convert.py --log INFO DocumentDefinitions/kwaliteitsplan.json
-python3 src/convert.py --log INFO DocumentDefinitions/niet-functionele-eisen.json
-python3 src/convert.py --log INFO DocumentDefinitions/softwarearchitectuurdocument.json
-python3 src/convert.py --log INFO DocumentDefinitions/projectvoorstel-voorfase.json
-
-docker-compose run mdconvert DocumentDefinitions/detailtestplan.json
-docker-compose run mdconvert DocumentDefinitions/globaal-functioneel-ontwerp.json
-docker-compose run mdconvert DocumentDefinitions/high-level-design.json
-docker-compose run mdconvert DocumentDefinitions/kwaliteitsplan.json
-docker-compose run mdconvert DocumentDefinitions/niet-functionele-eisen.json
-docker-compose run mdconvert DocumentDefinitions/softwarearchitectuurdocument.json
-docker-compose run mdconvert DocumentDefinitions/projectvoorstel-voorfase.json
+python3 src/convert.py --log DEBUG DocumentDefinitions/detailtestplan.json
+#python3 src/convert.py --log INFO DocumentDefinitions/globaal-functioneel-ontwerp.json
+#python3 src/convert.py --log INFO DocumentDefinitions/high-level-design.json
+#python3 src/convert.py --log INFO DocumentDefinitions/kwaliteitsplan.json
+#python3 src/convert.py --log INFO DocumentDefinitions/niet-functionele-eisen.json
+#python3 src/convert.py --log INFO DocumentDefinitions/softwarearchitectuurdocument.json
+#python3 src/convert.py --log INFO DocumentDefinitions/projectvoorstel-voorfase.json
+#
+#docker-compose run mdconvert DocumentDefinitions/detailtestplan.json
+#docker-compose run mdconvert DocumentDefinitions/globaal-functioneel-ontwerp.json
+#docker-compose run mdconvert DocumentDefinitions/high-level-design.json
+#docker-compose run mdconvert DocumentDefinitions/kwaliteitsplan.json
+#docker-compose run mdconvert DocumentDefinitions/niet-functionele-eisen.json
+#docker-compose run mdconvert DocumentDefinitions/softwarearchitectuurdocument.json
+#docker-compose run mdconvert DocumentDefinitions/projectvoorstel-voorfase.json

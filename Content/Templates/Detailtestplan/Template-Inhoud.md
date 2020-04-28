@@ -1,3 +1,15 @@
+# Scope
+
+Dit hoofdstuk beschrijft welke projecten, systemen, componenten, releases, use cases, user stories en niet-functionele eigenschappen binnen of juist buiten de scope van dit testplan vallen.
+
+## Binnen scope
+
+{Beschrijf hier het beschouwingsgebied in gedetailleerde termen als projecten, systemen, releases, versies en user stories die binnen de opdracht vallen.}
+
+## Buiten scope
+
+{Beschrijf hier relevante projecten, systemen, releases, versies en user stories die juist buitne de opdracht vallen.}
+
 # Testaanpak
 
 Dit hoofdstuk beschrijft hoe de testen conform de teststrategie, beschreven in het Mastertestplan, concreet worden aangepakt.
@@ -24,7 +36,7 @@ Binnen het project worden door ICTU de volgende testsoorten onderscheiden en toe
 
 * **Integratietesten:** Tijdens deze test wordt de onderlinge verwerkingswijze tussen de verschillende applicaties getest. Denk hierbij aan gewijzigde applicaties die samen werken met ongewijzigde applicaties. Indien van toepassing zullen hier ook externe systemen bij betrokken worden, in de vorm van stubs. Integratietesten zijn normaal gesproken geautomatiseerde tests. Als onderdeel van de integratietesten wordt getest of de software kan omgaan met fouten in andere applicaties en na een herstart goed blijft functioneren.
 
-* **Gebruikersacceptatietest (GAT):** In tegenstelling tot de ‘traditionele’ watervalmethode biedt agile ontwikkelen meer ruimte voor de gebruiker om te participeren in het ontwikkeltraject. Tijdens elke sprint wordt nieuwe functionaliteit gedemonstreerd op de GAT-testomgeving waar gebruikers kunnen werken met de nieuwe applicaties. Bevindingen worden tijdens workshops verzameld om in de backlogs verwerkt te worden. De product owner prioriteert vervolgens deze bevindingen.
+* **Gebruikersacceptatietest (GAT):** In tegenstelling tot de ‘traditionele’ watervalmethode biedt agile ontwikkelen meer ruimte voor de gebruiker om te participeren in het ontwikkeltraject. Tijdens elke sprint wordt nieuwe functionaliteit gedemonstreerd door het ontwikkeling team in een demo-omgeving. De opdrachtgever en/of beheerorganisatie kan een GAT-testomgeving beschikbaar stellen waar gebruikers kunnen werken met de nieuwe applicaties. Bevindingen worden tijdens trainingen of workshops verzameld om in de backlogs verwerkt te worden. De product owner prioriteert vervolgens deze bevindingen.
 
 * **Usabilitytesten:** Het doel van deze test is om te bepalen hoe gemakkelijk / toegankelijk het systeem is in het gebruik ervan. Onderdeel van deze test is de toegankelijkheidstest; hiermee wordt bepaald in welke mate de software voldoet aan de wettelijke vereisten van de Web Content Accessibility Guidelines (WCAG2.1) en eventuele aanvullende toegankelijkheidseisen. Deze toegankelijkheidstesten worden waar mogelijk geautomatiseerd uitgevoerd. De toegankelijkheidseisen die niet geautomatiseerd getest kunnen worden, worden periodiek handmatig getest.
 
@@ -32,7 +44,7 @@ Binnen het project worden door ICTU de volgende testsoorten onderscheiden en toe
 
 Het team zal volgens de Scrummethode werken. Dat betekent dat de expertise van de diverse componenten in het landschap bij elkaar in één team zit en dat het testen van de gerealiseerde oplossing in principe tijdens de sprint plaatsvindt.
 
-{Mogelijke uitzonderingen hierop zijn de securitytest, Migratietest (MT), performancetest en Product Acceptatie Test (PAT). Deze behoren niet vanzelfsprekend tot de vaste sprintactiviteiten.}
+{Mogelijke uitzonderingen hierop zijn de gebruikersacceptatietest (GAT), securitytest, migratietest (MT), performancetest, ketentest en productacceptatietest (PAT). Deze behoren niet vanzelfsprekend tot de vaste sprintactiviteiten.}
 
 ## Testactiviteiten tijdens sprints
 
@@ -106,7 +118,7 @@ Er worden drie soorten data onderscheiden:
 * **Dynamische data:** Dit is data die voortkomt uit de interactie tussen gebruiker en systemen (applicaties);
 * **Testgegevens:** Deze data wordt gebruikt om de test correct uit te kunnen voeren en wordt gecreëerd aan het begin van een testscript. Na het uitvoeren van de test wordt deze data weer verwijderd.
 
-{Neem hier eventuele bijzonderheden op over testdata in het project.}
+{Neem hier eventuele bijzonderheden op over testdata in het project en beschrijf wie verantwoordelijk is voor het maken en onderhouden van de testdata.}
 
 # Rapportages en testartifacten
 

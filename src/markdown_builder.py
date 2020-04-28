@@ -6,29 +6,7 @@ from typing import Dict
 import markdown_syntax
 import xmltags
 
-
-class Builder:
-    """Abstract builder."""
-    def __init__(self, filename: pathlib.Path) -> None:
-        self.filename = filename
-
-    def start_document(self) -> None:
-        """Start the document."""
-
-    def end_document(self) -> None:
-        """End the document."""
-
-    def start_element(self, tag: str) -> None:
-        """Start element."""
-
-    def text(self, tag: str, text: str) -> None:
-        """Element text."""
-
-    def end_element(self, tag: str) -> None:
-        """Start element."""
-
-    def tail(self, tag: str, tail: str) -> None:
-        """Element tail."""
+from builder import Builder
 
 
 class MarkdownBuilder(Builder):

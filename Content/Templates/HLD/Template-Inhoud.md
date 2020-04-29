@@ -7,6 +7,26 @@ De volgende tabel bevat technische eisen die ten grondslag liggen aan het projec
 | TR01       | {eis}             |
 | TR02       | {eis}             |
 
+# Standaard componenten
+
+{Beschrijving van de standaard componenten voor de operationele en beheeromgeving die beschikbaar zijn voor het systeem.}
+
+## Identity provisioning
+
+{Beschrijving van de identity provisioning voorziening}.
+
+## Logging
+
+{Beschrijving van de logging voorziening}.
+
+## Monitoring
+
+{Beschrijving van de monitoring voorziening}.
+
+## Back-up en restore
+
+{Beschrijving van de backup voorziening}.
+
 # Ontwerp
 
 ## Netwerkomgeving

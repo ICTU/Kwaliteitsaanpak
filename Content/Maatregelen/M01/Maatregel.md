@@ -13,9 +13,10 @@ Bronnen als procesbeschrijvingen, een programma van eisen en projectstartarchite
 Niet-functionele eisen specificeren criteria om het functioneren van de software te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Voor de beschrijving en onderverdeling van niet-functionele eisen gebruikt ICTU:
 
 * ISO/IEC-25010,
-* Wbni (Wet beveiliging netwerk- en informatiesystemen),
-* BIO (Baseline Informatiebeveiliging Overheid),
-* methode Grip op SSD (Secure Software Development) van het CIP (Centrum Informatiebeveiliging en Privacybescherming),
+* Wet beveiliging netwerk- en informatiesystemen (Wbni),
+* Baseline Informatiebeveiliging Overheid (BIO),
+* methode Grip op SDD (Secure Software Development) van het Centrum Informatiebeveiliging en Privacybescherming (CIP),
+* Algemene verordening gegevensbescherming (AVG),
 * ISO 9241-210:2019 Ergonomics of human-system interaction - Part 210: Human-centred design for interactive systems,
 * hoofdstuk 9 van de Europese Standaard EN 301 549 - dit is gelijk aan de Web Content Accessibility Guidelines versie 2.1, niveau A en AA.
 
@@ -23,7 +24,7 @@ De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan 
 
 Overheidsorganisaties moeten een [toegankelijkheidsverklaring](https://www.digitoegankelijk.nl/verklaring) op hun websites plaatsen. Indien gewenst ondersteunt ICTU bij het opstellen van de toegankelijkheidsverklaring.
 
-Bronnen als procesbeschrijvingen, beheeracceptatiecriteria, beveiligingsbeleid, programma van eisen en projectstartarchitectuur zijn het startpunt voor de niet-functionele eisen.
+Bronnen als procesbeschrijvingen, privacy impact analysis (PIA), beheeracceptatiecriteria, beveiligingsbeleid, programma van eisen en projectstartarchitectuur zijn het startpunt voor de niet-functionele eisen.
 
 **Product backlog**
 De product backlog is een overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:

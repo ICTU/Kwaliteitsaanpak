@@ -1,5 +1,5 @@
 ## Kaders
 
-De volgende kaders zijn van toepassing op het projectresultaat:
+De volgende kaders zijn van toepassing op het realisatieproces van het project. Merk op dat kaders die van toepassing zijn op het te realiseren *product* opgenomen zijn in PSA, NFE en/of backlog.
 
-#include "Content/Templates/Standaard-Product-Kaders.md"
+#include "Content/Templates/Standaard-Proces-Kaders.md"

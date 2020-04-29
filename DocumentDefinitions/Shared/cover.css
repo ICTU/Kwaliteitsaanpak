@@ -4,33 +4,12 @@ body {
    line-height: 150%;
 }
 
-.title {
-    margin-top:40px;
-    color: #D55FF8;
-    font-size: 46px;
-    line-height: 150%;
-}
-
 h1 {
     margin-top: 30px;
     color: #2C64AD;
     font-size: 42pt;
     font-weight: bold;
-    page-break-before: always;
-}
-
-h2 {
-    margin-top:20px;
-    color: #DB1778;
-    font-size: 18pt;
-    font-weight: bold;
-}
-
-h3 {
-    margin-top: 10px;
-    color: black;
-    font-size: 12pt;
-    margin-bottom: -15px;  /* Remove vertical space between header and next element */
+    line-height: 130%;
 }
 
 img[title='word-cloud'] {

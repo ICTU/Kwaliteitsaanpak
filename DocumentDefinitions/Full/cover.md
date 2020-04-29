@@ -1,6 +1,6 @@
 ![ICTU](../../Content/Images/ICTU.png "ictu-logo")
 
-{{TITLE}}
+# {{TITLE}}
 
 #include "Content/Versie.md"
 

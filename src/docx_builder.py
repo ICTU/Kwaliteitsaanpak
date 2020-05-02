@@ -18,10 +18,9 @@ class DocxBuilder(Builder):
         filename.unlink(missing_ok=True)
         shutil.copy(docx_reference_filename, filename)
         self.doc = Document(filename)
-        self.paragraph = None
-        self.current_list_style = []
-        self.current_list_level = 0
-        self.previous_list_item = []
+        self.paragraph = None  # The current paragraph
+        self.current_list_style = []  # Stack of list styles
+        self.previous_list_item = []  # Stack of previous list items
 
     def start_element(self, tag: str, attributes: Attributes) -> None:
         if tag == xmltags.PARAGRAPH:
@@ -31,18 +30,21 @@ class DocxBuilder(Builder):
         elif tag == xmltags.BULLET_LIST:
             self.current_list_style.append("Lijst opsom.teken1")
             self.previous_list_item.append(None)
-            self.current_list_level += 1
         elif tag == xmltags.NUMBERED_LIST:
             self.current_list_style.append("Lijstnummering1")
             self.previous_list_item.append(None)
-            self.current_list_level += 1
         elif tag == xmltags.LIST_ITEM:
             self.paragraph = self.doc.add_paragraph(style=self.current_list_style[-1])
-            self.paragraph._p.get_or_add_pPr().get_or_add_numPr().get_or_add_ilvl().val = self.current_list_level - 1
+            level = len(self.current_list_style) - 1
+            self.paragraph._p.get_or_add_pPr().get_or_add_numPr().get_or_add_ilvl().val = level
             if "Lijstnummering1" == self.current_list_style[-1]:
                 if self.previous_list_item[-1] is None:
-                    num = self.doc.part.numbering_part.numbering_definitions._numbering.add_num("0")  # Abstract numId of Lijstnummering1
-                    num.add_lvlOverride(ilvl=self.current_list_level - 1).add_startOverride(1)
+                    # Add a new concrete numbering for Lijstnummering1. "0" is the id of the abstract numbering of
+                    # Lijstnummering1. This id can be found in the word/numbering.xml file (unzip reference.docx so
+                    # see word/numbering.xml), look for the <w:abstractNum w:abstractNumId="0" ...> that has a
+                    # child element <w:pStyle w:val="Lijstnummering1"/>
+                    num = self.doc.part.numbering_part.numbering_definitions._numbering.add_num("0")
+                    num.add_lvlOverride(ilvl=level).add_startOverride(1)  # Restart the numbering
                     num = num.numId
                 else:
                     num = self.previous_list_item[-1]._p.pPr.numPr.numId.val
@@ -67,7 +69,6 @@ class DocxBuilder(Builder):
         if tag in (xmltags.BULLET_LIST, xmltags.NUMBERED_LIST):
             self.current_list_style.pop()
             self.previous_list_item.pop()
-            self.current_list_level -= 1
 
     def tail(self, tag: str, tail: str, parent: str) -> None:
         self.text(parent, tail)

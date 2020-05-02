@@ -7,6 +7,7 @@ from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
 from typing import Dict
 
 from builder import Attributes, Builder
+from hyperlink import add_hyperlink
 import xmltags
 
 
@@ -24,6 +25,7 @@ class DocxBuilder(Builder):
         self.table = None
         self.row = None
         self.column_index = 0
+        self.link = None
 
     def start_element(self, tag: str, attributes: Attributes) -> None:
         if tag == xmltags.PARAGRAPH:
@@ -72,6 +74,8 @@ class DocxBuilder(Builder):
                     center=WD_PARAGRAPH_ALIGNMENT.CENTER)[alignment_attr]
                 self.paragraph.paragraph_format.alignment = alignment
             self.column_index += 1
+        elif tag == xmltags.ANCHOR:
+            self.link = attributes["link"]
 
     def text(self, tag: str, text: str) -> None:
         if tag == xmltags.PARAGRAPH:
@@ -90,6 +94,8 @@ class DocxBuilder(Builder):
             self.paragraph.add_run(text)
         elif tag == xmltags.TABLE_CELL:
             self.paragraph.add_run(text)
+        elif tag == xmltags.ANCHOR:
+            add_hyperlink(self.paragraph, self.link, text)
 
     def end_element(self, tag: str, attributes: Attributes) -> None:
         if tag in (xmltags.BULLET_LIST, xmltags.NUMBERED_LIST):

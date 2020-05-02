@@ -71,11 +71,10 @@ class MarkdownConverter:
         title = settings["Title"]
         with self.element(xmltags.HEADER):
             if settings["DocumentType"] == "Template":
-                with self.element(xmltags.PARAGRAPH):
-                    self.builder.data(f"{title} ")
-                    self.add_element(xmltags.INSTRUCTION, settings["Subtitle"])
+                self.builder.data(f"{title} ")
+                self.add_element(xmltags.INSTRUCTION, settings["Subtitle"])
             else:
-                self.add_element(xmltags.PARAGRAPH, title)
+                self.builder.data(title)
 
     def create_footer(self) -> None:
         """Create the page footer."""

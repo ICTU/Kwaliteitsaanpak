@@ -6,7 +6,7 @@ from typing import Dict
 import markdown_syntax
 import xmltags
 
-from builder import Builder
+from builder import Attributes, Builder
 
 
 class MarkdownBuilder(Builder):
@@ -31,7 +31,7 @@ class MarkdownBuilder(Builder):
         self.current_list_item = []
         self.table_alignments = ""
 
-    def start_element(self, tag: str, attributes: Dict[str, str]) -> None:
+    def start_element(self, tag: str, attributes: Attributes) -> None:
         if tag in self.FORMAT_START:
             self.markdown += self.FORMAT_START[tag]
         elif tag == xmltags.SECTION:
@@ -45,7 +45,7 @@ class MarkdownBuilder(Builder):
             self.markdown += self.current_list_item[-1]
         elif tag in (xmltags.TABLE_HEADER_ROW, xmltags.TABLE_ROW):
             self.table_alignments = ""
-            self.markdown += "|"
+            self.markdown += markdown_syntax.TABLE_MARKER
         elif tag == xmltags.TABLE_CELL:
             alignment = attributes.get(xmltags.TABLE_CELL_ALIGNMENT, "left")
             self.table_alignments += dict(left="|:---", center="|:---:", right="|---:")[alignment]
@@ -57,7 +57,7 @@ class MarkdownBuilder(Builder):
         if tag != xmltags.IMAGE:
             self.markdown += text
 
-    def end_element(self, tag: str, attributes: Dict[str, str]) -> None:
+    def end_element(self, tag: str, attributes: Attributes) -> None:
         if tag in self.FORMAT_END:
             self.markdown += self.FORMAT_END[tag]
         elif tag == xmltags.PARAGRAPH:
@@ -75,15 +75,15 @@ class MarkdownBuilder(Builder):
         elif tag == xmltags.TABLE:
             self.markdown += "\n"
         elif tag == xmltags.TABLE_CELL:
-            self.markdown += " |"
+            self.markdown += f" {markdown_syntax.TABLE_MARKER}"
         elif tag == xmltags.TABLE_HEADER_ROW:
-            self.markdown += f"\n{self.table_alignments}|\n"
+            self.markdown += f"\n{self.table_alignments}{markdown_syntax.TABLE_MARKER}\n"
         elif tag == xmltags.TABLE_ROW:
             self.markdown += "\n"
         elif tag == xmltags.ANCHOR:
             self.markdown += f"]({attributes[xmltags.ANCHOR_LINK]})"
 
-    def tail(self, tag: str, tail: str) -> None:
+    def tail(self, tag: str, tail: str, parent: str = None) -> None:
         self.markdown += tail
 
     def end_document(self) -> None:

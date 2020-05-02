@@ -7,7 +7,7 @@ import xmltags
 
 
 class Converter:
-    """Converter."""
+    """Convert the XML to a destination format using a document builder."""
     def __init__(self, xml: ElementTree) -> None:
         self.root = xml.getroot()
 
@@ -17,13 +17,13 @@ class Converter:
         self.convert_element(self.root, builder)
         builder.end_document()
 
-    def convert_element(self, element: Element, builder: Builder) -> None:
-        """Convert the element using the builder."""
+    def convert_element(self, element: Element, builder: Builder, parent: Element = None) -> None:
+        """Recursively convert the element using the builder."""
         builder.start_element(element.tag, element.attrib)
         if element.text:
             builder.text(element.tag, element.text)
         for child_element in element:
-            self.convert_element(child_element, builder)
+            self.convert_element(child_element, builder, element)
         builder.end_element(element.tag, element.attrib)
         if element.tail:
-            builder.tail(element.tag, element.tail)
+            builder.tail(element.tag, element.tail, parent.tag)

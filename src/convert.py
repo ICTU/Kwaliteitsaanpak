@@ -43,7 +43,7 @@ def main(settings_filename: str) -> None:
     logging.info("Converting with settings:\n%s", pprint.pformat(settings))
     markdown = read_markdown(settings)
     xml = MarkdownConverter().convert(markdown, settings)
-    #write_xml(xml, settings)
+    write_xml(xml, settings)
     converter = Converter(xml)
     build_path = pathlib.Path(settings["BuildPath"])
     if "md" in settings["OutputFormats"]:
@@ -52,7 +52,7 @@ def main(settings_filename: str) -> None:
         converter.convert(markdown_builder)
     if "docx" in settings["OutputFormats"]:
         docx_output_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".docx").name
-        docx_builder = DocxBuilder(docx_output_filename, settings["DocxReferenceFile"])
+        docx_builder = DocxBuilder(docx_output_filename, pathlib.Path(settings["DocxReferenceFile"]))
         converter.convert(docx_builder)
 
 

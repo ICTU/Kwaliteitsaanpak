@@ -50,6 +50,10 @@ class DocxBuilder(Builder):
                     num = self.previous_list_item[-1]._p.pPr.numPr.numId.val
                 self.paragraph._p.get_or_add_pPr().get_or_add_numPr().get_or_add_numId().val = num
             self.previous_list_item[-1] = self.paragraph
+        elif tag == xmltags.SECTION:
+            level = attributes["level"]
+            style = f"Kop {level} Bijlage" if attributes.get("is-appendix") else f"heading {level}"
+            self.paragraph = self.doc.add_paragraph(style=style)
 
     def text(self, tag: str, text: str) -> None:
         if tag == xmltags.PARAGRAPH:
@@ -63,6 +67,8 @@ class DocxBuilder(Builder):
         elif tag == xmltags.STRIKETHROUGH:
             self.paragraph.add_run(text).font.strike = True
         elif tag == xmltags.LIST_ITEM:
+            self.paragraph.add_run(text)
+        elif tag == xmltags.HEADING:
             self.paragraph.add_run(text)
 
     def end_element(self, tag: str, attributes: Attributes) -> None:

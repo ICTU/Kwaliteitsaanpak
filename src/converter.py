@@ -26,4 +26,4 @@ class Converter:
             self.convert_element(child_element, builder, element)
         builder.end_element(element.tag, element.attrib)
         if element.tail:
-            builder.tail(element.tag, element.tail, parent.tag)
+            builder.tail(element.tag, element.tail, parent.tag if parent else None)

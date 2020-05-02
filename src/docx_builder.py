@@ -26,6 +26,7 @@ class DocxBuilder(Builder):
         self.row = None
         self.column_index = 0
         self.link = None
+        self.section_style = None
 
     def start_element(self, tag: str, attributes: Attributes) -> None:
         if tag == xmltags.PARAGRAPH:
@@ -57,8 +58,9 @@ class DocxBuilder(Builder):
             self.previous_list_item[-1] = self.paragraph
         elif tag == xmltags.SECTION:
             level = attributes["level"]
-            style = f"Kop {level} Bijlage" if attributes.get("is-appendix") else f"heading {level}"
-            self.paragraph = self.doc.add_paragraph(style=style)
+            self.section_style = f"Kop {level} Bijlage" if attributes.get("is-appendix") else f"heading {level}"
+        elif tag == xmltags.HEADING:
+            self.paragraph = self.doc.add_paragraph(style=self.section_style)
         elif tag == xmltags.TABLE:
             self.table = self.doc.add_table(0, int(attributes["columns"]), style="Tabelraster1")
         elif tag in (xmltags.TABLE_HEADER_ROW, xmltags.TABLE_ROW):

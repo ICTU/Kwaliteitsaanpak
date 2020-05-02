@@ -3,7 +3,7 @@
 import pathlib
 import shutil
 from docx import Document
-from docx.enum.text import WD_COLOR_INDEX
+from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
 from typing import Dict
 
 from builder import Attributes, Builder
@@ -21,6 +21,9 @@ class DocxBuilder(Builder):
         self.paragraph = None  # The current paragraph
         self.current_list_style = []  # Stack of list styles
         self.previous_list_item = []  # Stack of previous list items
+        self.table = None
+        self.row = None
+        self.column_index = 0
 
     def start_element(self, tag: str, attributes: Attributes) -> None:
         if tag == xmltags.PARAGRAPH:
@@ -54,6 +57,21 @@ class DocxBuilder(Builder):
             level = attributes["level"]
             style = f"Kop {level} Bijlage" if attributes.get("is-appendix") else f"heading {level}"
             self.paragraph = self.doc.add_paragraph(style=style)
+        elif tag == xmltags.TABLE:
+            self.table = self.doc.add_table(0, int(attributes["columns"]), style="Tabelraster1")
+        elif tag in (xmltags.TABLE_HEADER_ROW, xmltags.TABLE_ROW):
+            self.row = self.table.add_row()
+            self.column_index = 0
+        elif tag == xmltags.TABLE_CELL:
+            cell = self.row.cells[self.column_index]
+            cell._tc.tcPr.tcW.type = 'auto'
+            self.paragraph = cell.paragraphs[0]
+            if alignment_attr := attributes.get(xmltags.TABLE_CELL_ALIGNMENT):
+                alignment = dict(
+                    left=WD_PARAGRAPH_ALIGNMENT.LEFT, right=WD_PARAGRAPH_ALIGNMENT.RIGHT,
+                    center=WD_PARAGRAPH_ALIGNMENT.CENTER)[alignment_attr]
+                self.paragraph.paragraph_format.alignment = alignment
+            self.column_index += 1
 
     def text(self, tag: str, text: str) -> None:
         if tag == xmltags.PARAGRAPH:
@@ -69,6 +87,8 @@ class DocxBuilder(Builder):
         elif tag == xmltags.LIST_ITEM:
             self.paragraph.add_run(text)
         elif tag == xmltags.HEADING:
+            self.paragraph.add_run(text)
+        elif tag == xmltags.TABLE_CELL:
             self.paragraph.add_run(text)
 
     def end_element(self, tag: str, attributes: Attributes) -> None:

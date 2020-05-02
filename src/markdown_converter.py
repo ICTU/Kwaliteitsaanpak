@@ -187,20 +187,21 @@ class MarkdownConverter:
 
     def end_table(self) -> None:
         """Flush the table."""
+
+        def table_row(tag: str, cells):
+            with self.element(tag):
+                for cell, alignment in zip(cells, self.table.column_alignment):
+                    with self.element(xmltags.TABLE_CELL, {xmltags.TABLE_CELL_ALIGNMENT: alignment}):
+                        self.process_formatted_text(cell)
+
         if self.table is None:
             return
         table_attributes = {
             xmltags.TABLE_COLUMNS: str(len(self.table.header_cells)), xmltags.TABLE_ROWS: str(len(self.table.rows))}
         with self.element(xmltags.TABLE, table_attributes):
-            with self.element(xmltags.TABLE_HEADER_ROW):
-                for cell, alignment in zip(self.table.header_cells, self.table.column_alignment):
-                    with self.element(xmltags.TABLE_CELL, {xmltags.TABLE_CELL_ALIGNMENT: alignment}):
-                        self.process_formatted_text(cell)
+            table_row(xmltags.TABLE_HEADER_ROW, self.table.header_cells)
             for row in self.table.rows:
-                with self.element(xmltags.TABLE_ROW):
-                    for cell in row:
-                        with self.element(xmltags.TABLE_CELL):
-                            self.process_formatted_text(cell)
+                table_row(xmltags.TABLE_ROW, row)
         self.table = None
 
     def process_formatted_text(self, line: str) -> None:

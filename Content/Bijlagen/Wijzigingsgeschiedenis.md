@@ -1,5 +1,9 @@
 ## Wijzigingsgeschiedenis
 
+### [Unreleased]
+
+* Generiek template toegevoegd dat als basis kan dienen voor documenten waarvoor nog geen specifiek template is.
+
 ### Versie 2.0.0, 29 april 2020
 
 * Naam van de Kwaliteitsaanpak veranderd van "Kwaliteitsaanpak ICTU Software Realisatie" naar "ICTU Kwaliteitsaanpak Softwareontwikkeling". Waar relevant "softwarerealisatie" veranderd in "softwareontwikkeling".

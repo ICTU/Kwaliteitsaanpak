@@ -107,6 +107,8 @@ class DocxBuilder(Builder):
             self.paragraph.add_run(text)
         elif tag == xmltags.TITLE:
             self.paragraph.add_run(text)
+        elif tag == xmltags.IMAGE:
+            self.doc.add_picture(text)
 
     def end_element(self, tag: str, attributes: Attributes) -> None:
         if tag in (xmltags.BULLET_LIST, xmltags.NUMBERED_LIST):

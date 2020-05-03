@@ -48,7 +48,7 @@ class MarkdownConverter:
         document_type = settings["DocumentType"]
         with self.element(xmltags.FRONTPAGE):
             if document_type in ("Kwaliteitsaanpak", "Template"):
-                self.add_element(xmltags.IMAGE, "ICTU.png")
+                self.add_element(xmltags.IMAGE, "Content/Images/ICTU.png")
             self.add_element(xmltags.TITLE, settings["Title"])
             if document_type == "Template":
                 with self.element(xmltags.PARAGRAPH):
@@ -63,7 +63,7 @@ class MarkdownConverter:
                     self.add_element(xmltags.INSTRUCTION, "{Datum}")
                 self.add_element(xmltags.PARAGRAPH)
             if document_type in ("Kwaliteitsaanpak", "Template"):
-                self.add_element(xmltags.IMAGE, "word-cloud.png")
+                self.add_element(xmltags.IMAGE, "Content/Images/word-cloud.png")
             self.add_element(xmltags.PAGEBREAK)
 
     def create_header(self, settings: Settings) -> None:

@@ -18,7 +18,7 @@ class DocxBuilder(Builder):
     SCHEMA = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
     FORMAT_TAGS = (xmltags.INSTRUCTION, xmltags.BOLD, xmltags.ITALIC, xmltags.STRIKETHROUGH)
     TEXT_TAGS = (
-        xmltags.PARAGRAPH, xmltags.LIST_ITEM, xmltags.HEADING, xmltags.TABLE_CELL, xmltags.HEADER,
+        xmltags.PARAGRAPH, xmltags.LIST_ITEM, xmltags.MEASURE, xmltags.HEADING, xmltags.TABLE_CELL, xmltags.HEADER,
         xmltags.TITLE) + FORMAT_TAGS
 
     def __init__(self, filename: pathlib.Path, docx_reference_filename: pathlib.Path) -> None:
@@ -35,10 +35,11 @@ class DocxBuilder(Builder):
         self.link = None
         self.section_style = None
         self.formatting = set()
+        self.style = None
 
     def start_element(self, tag: str, attributes: Attributes) -> None:
         if tag == xmltags.PARAGRAPH:
-            self.paragraph = self.doc.add_paragraph()
+            self.paragraph = self.doc.add_paragraph(style=self.style)
         elif tag == xmltags.PAGEBREAK:
             self.doc.add_page_break()
         elif tag == xmltags.BULLET_LIST:
@@ -98,6 +99,8 @@ class DocxBuilder(Builder):
         elif tag == xmltags.TABLE_OF_CONTENTS:
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
+        elif tag == xmltags.MEASURE:
+            self.style = "Maatregel"
         elif tag in self.FORMAT_TAGS:
             self.formatting.add(tag)
 
@@ -123,6 +126,8 @@ class DocxBuilder(Builder):
             self.previous_list_item.pop()
         elif tag in self.FORMAT_TAGS:
             self.formatting.remove(tag)
+        elif tag == xmltags.MEASURE:
+            self.style = None
 
     def tail(self, tag: str, tail: str, parent: str) -> None:
         self.text(parent, tail)

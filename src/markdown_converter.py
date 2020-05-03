@@ -51,7 +51,8 @@ class MarkdownConverter:
         with self.element(xmltags.FRONTPAGE):
             if document_type in ("Kwaliteitsaanpak", "Template"):
                 self.add_element(xmltags.IMAGE, "Content/Images/ICTU.png")
-            self.add_element(xmltags.TITLE, settings["Title"])
+            with self.element(xmltags.TITLE):
+                self.process_formatted_text(settings["Title"])
             if document_type == "Template":
                 with self.element(xmltags.PARAGRAPH):
                     with self.element(xmltags.INSTRUCTION):
@@ -73,7 +74,7 @@ class MarkdownConverter:
         title = settings["Title"]
         with self.element(xmltags.HEADER):
             if settings["DocumentType"] == "Template":
-                self.builder.data(f"{title} ")
+                self.process_formatted_text(f"{title} ")
                 self.add_element(xmltags.INSTRUCTION, settings["Subtitle"])
             else:
                 self.builder.data(title)

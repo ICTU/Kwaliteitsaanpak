@@ -8,7 +8,6 @@
     "IncludeFrontPage": true,
     "IncludeMarkdownSource": false,
     "IncludeTableOfContents": true,
-    "ImagePath": "Content/Images",
     "DocxReferenceFile": "DocumentDefinitions/reference2.docx",
     "OutputFormats": [
         "docx"

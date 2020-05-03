@@ -8,7 +8,7 @@
     "IncludeFrontPage": true,
     "IncludeMarkdownSource": false,
     "IncludeTableOfContents": true,
-    "DocxReferenceFile": "DocumentDefinitions/reference2.docx",
+    "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": [
         "docx"
     ]

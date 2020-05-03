@@ -15,6 +15,8 @@ import xmltags
 class DocxBuilder(Builder):
     """Docx builder."""
 
+    SCHEMA = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+
     def __init__(self, filename: pathlib.Path, docx_reference_filename: pathlib.Path) -> None:
         super().__init__(filename)
         filename.unlink(missing_ok=True)
@@ -65,6 +67,9 @@ class DocxBuilder(Builder):
             self.paragraph = self.doc.add_paragraph(style=self.section_style)
         elif tag == xmltags.TABLE:
             self.table = self.doc.add_table(0, int(attributes[xmltags.TABLE_COLUMNS]), style="Tabelraster1")
+            # Set table width to 100%
+            self.table._tbl.tblPr.xpath("./w:tblW")[0].attrib[f"{self.SCHEMA}type"] = "pct"
+            self.table._tbl.tblPr.xpath("./w:tblW")[0].attrib[f"{self.SCHEMA}w"] = "100%"
         elif tag in (xmltags.TABLE_HEADER_ROW, xmltags.TABLE_ROW):
             self.row = self.table.add_row()
             self.column_index = 0

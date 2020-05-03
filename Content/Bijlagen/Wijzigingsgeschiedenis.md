@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### [Unreleased]
+### Versie 2.1.0-unreleased, 3 mei 2020
 
 * Generiek template toegevoegd dat als basis kan dienen voor documenten waarvoor nog geen specifiek template is.
 

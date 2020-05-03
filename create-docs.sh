@@ -1,6 +1,6 @@
 #!/bin/bash
 npm i
-npm version 2.0.0 --force --no-git-tag-version --allow-same-version
+npm version 2.1.0-unreleased --force --no-git-tag-version --allow-same-version
 echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
 mkdir -p build

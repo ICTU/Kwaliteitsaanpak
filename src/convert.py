@@ -45,13 +45,13 @@ def main(settings_filename: str) -> None:
     xml = MarkdownConverter().convert(markdown, settings)
     write_xml(xml, settings)
     converter = Converter(xml)
-    build_path = pathlib.Path(settings["BuildPath"])
+    output_path = pathlib.Path(settings["OutputPath"])
     if "md" in settings["OutputFormats"]:
-        markdown_output_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".exported_md").name
+        markdown_output_filename = output_path / pathlib.Path(settings["InputFile"]).with_suffix(".md").name
         markdown_builder = MarkdownBuilder(markdown_output_filename)
         converter.convert(markdown_builder)
     if "docx" in settings["OutputFormats"]:
-        docx_output_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".docx").name
+        docx_output_filename = output_path / pathlib.Path(settings["InputFile"]).with_suffix(".docx").name
         docx_builder = DocxBuilder(docx_output_filename, pathlib.Path(settings["DocxReferenceFile"]))
         converter.convert(docx_builder)
 

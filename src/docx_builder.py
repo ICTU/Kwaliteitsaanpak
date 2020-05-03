@@ -81,6 +81,8 @@ class DocxBuilder(Builder):
         elif tag == xmltags.HEADER:
             self.paragraph = self.doc.sections[0].header.paragraphs[0]
             self.paragraph.paragraph_format.alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT
+        elif tag == xmltags.TITLE:
+            self.paragraph = self.doc.add_paragraph(style="Title")
 
     def text(self, tag: str, text: str) -> None:
         if tag == xmltags.PARAGRAPH:
@@ -102,6 +104,8 @@ class DocxBuilder(Builder):
         elif tag == xmltags.ANCHOR:
             add_hyperlink(self.paragraph, self.link, text)
         elif tag == xmltags.HEADER:
+            self.paragraph.add_run(text)
+        elif tag == xmltags.TITLE:
             self.paragraph.add_run(text)
 
     def end_element(self, tag: str, attributes: Attributes) -> None:

@@ -42,6 +42,8 @@ class MarkdownConverter:
             self.create_frontpage(settings)
         self.create_header(settings)
         self.create_footer()
+        if settings["IncludeTableOfContents"]:
+            self.create_table_of_contents()
 
     def create_frontpage(self, settings: Settings) -> None:
         """Create a front page."""
@@ -79,6 +81,12 @@ class MarkdownConverter:
     def create_footer(self) -> None:
         """Create the page footer."""
         self.add_element(xmltags.FOOTER)
+
+    def create_table_of_contents(self) -> None:
+        """Create the table of contents placeholder. Actually creating a table of contents is the responsibility of the
+        target format (e.g. docx)."""
+        self.add_element(xmltags.TABLE_OF_CONTENTS, attributes={xmltags.TABLE_OF_CONTENTS_HEADING: "Inhoudsopgave"})
+        self.add_element(xmltags.PAGEBREAK)
 
     def process_line(self, line: str, settings: Settings) -> None:
         """Process a line of Markdown."""

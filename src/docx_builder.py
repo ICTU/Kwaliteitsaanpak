@@ -8,6 +8,7 @@ from typing import Dict
 
 from builder import Attributes, Builder
 from hyperlink import add_hyperlink
+from table_of_contents import add_table_of_contents
 import xmltags
 
 
@@ -57,12 +58,13 @@ class DocxBuilder(Builder):
                 self.paragraph._p.get_or_add_pPr().get_or_add_numPr().get_or_add_numId().val = num
             self.previous_list_item[-1] = self.paragraph
         elif tag == xmltags.SECTION:
-            level = attributes["level"]
-            self.section_style = f"Kop {level} Bijlage" if attributes.get("is-appendix") else f"heading {level}"
+            level = attributes[xmltags.SECTION_LEVEL]
+            is_appendix = attributes.get(xmltags.SECTION_IS_APPENDIX)
+            self.section_style = f"Kop {level} Bijlage" if is_appendix else f"heading {level}"
         elif tag == xmltags.HEADING:
             self.paragraph = self.doc.add_paragraph(style=self.section_style)
         elif tag == xmltags.TABLE:
-            self.table = self.doc.add_table(0, int(attributes["columns"]), style="Tabelraster1")
+            self.table = self.doc.add_table(0, int(attributes[xmltags.TABLE_COLUMNS]), style="Tabelraster1")
         elif tag in (xmltags.TABLE_HEADER_ROW, xmltags.TABLE_ROW):
             self.row = self.table.add_row()
             self.column_index = 0
@@ -77,12 +79,15 @@ class DocxBuilder(Builder):
                 self.paragraph.paragraph_format.alignment = alignment
             self.column_index += 1
         elif tag == xmltags.ANCHOR:
-            self.link = attributes["link"]
+            self.link = attributes[xmltags.ANCHOR_LINK]
         elif tag == xmltags.HEADER:
             self.paragraph = self.doc.sections[0].header.paragraphs[0]
             self.paragraph.paragraph_format.alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT
         elif tag == xmltags.TITLE:
             self.paragraph = self.doc.add_paragraph(style="Title")
+        elif tag == xmltags.TABLE_OF_CONTENTS:
+            self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
+            add_table_of_contents(self.doc.add_paragraph())
 
     def text(self, tag: str, text: str) -> None:
         if tag == xmltags.PARAGRAPH:

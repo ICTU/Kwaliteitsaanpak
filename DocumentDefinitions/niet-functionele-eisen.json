@@ -1,15 +1,14 @@
 {
-    "InputFile": "/work/build/Templates/NFE/Template-Niet-Functionele-Eisen.md",
-    "OutputPath": "/work/dist/",
-    "BuildPath": "/work/build/Templates/NFE/",
+    "InputFile": "build/Templates/NFE/Template-Niet-Functionele-Eisen.md",
+    "OutputPath": "dist/",
+    "BuildPath": "build/Templates/NFE/",
     "Title": "Niet-Functionele Eisen",
     "Subtitle": "{Productnaam}",
     "DocumentType": "Template",
     "IncludeFrontPage": true,
     "IncludeMarkdownSource": false,
     "IncludeTableOfContents": true,
-    "ImagePath": "/work/Content/Images",
-    "DocxReferenceFile": "/work/DocumentDefinitions/reference2.docx",
+    "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": [
         "docx"
     ]

@@ -1,8 +1,8 @@
 {
-    "InputFile": "build/Templates/Projectvoorstel-Voorfase/Template-Projectvoorstel-Voorfase.md",
+    "InputFile": "build/Templates/Template/Template-Generiek.md",
     "OutputPath": "dist/",
-    "BuildPath": "build/Templates/Projectvoorstel-Voorfase/",
-    "Title": "Projectvoorstel Voorfase",
+    "BuildPath": "build/Templates/Template/",
+    "Title": "{Documentnaam}",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
     "IncludeFrontPage": true,

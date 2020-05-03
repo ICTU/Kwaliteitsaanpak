@@ -98,7 +98,7 @@ Daarnaast is ter ondersteuning hiervan een infographic gemaakt, die als bijlage 
 
 Onderstaande regels zijn van toepassing op alle medewerkers (eigen en inhuur) en op alle ICT-middelen (laptops, tablets, mobiele telefoons, opslagmedia, software) die gebruikt worden tijdens het werken voor en/of bij ICTU. Alle door ICTU beschikbaar gestelde ICT-middelen en -diensten voldoen standaard aan de hier benoemde beveiligingsrichtlijnen.
 
-***Voorschrift***
+__*Voorschrift*__
 
 **Algemene regels en gedrag**
 

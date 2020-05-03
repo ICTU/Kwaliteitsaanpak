@@ -6,7 +6,7 @@ This repository contains the source information and automation scripts for gener
 
 ## Documents
 
-The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak itself, a number of Templates, and a self-assessment checklist. The sources are a collection of markdown files and supporting material. Scripts convert the Kwaliteitsaanpak main document to pdf, the Templates to docx, and the self-assessment checklist to xslx.
+The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak itself, a number of templates, and a self-assessment checklist. The sources are a collection of Markdown files and supporting material. Scripts convert the Kwaliteitsaanpak main document to pdf, the templates to docx, and the self-assessment checklist to xslx.
 
 ## Authoring guidelines
 
@@ -26,7 +26,7 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
   - cover.md - cover material (front page)
   - cover.css - styling
 - Shared material such as headers, footers, and stylesheets are in the ./DocumentDefinitions/Shared folder
-- The script instructions for building a new Template have to be added to ./create-docs.sh
+- The script instructions for building a new template have to be added to ./create-docs.sh
 
 ## Generating the documentation (pdf, docx, and xlsx)
 

@@ -16,6 +16,10 @@ class DocxBuilder(Builder):
     """Docx builder."""
 
     SCHEMA = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+    FORMAT_TAGS = (xmltags.INSTRUCTION, xmltags.BOLD, xmltags.ITALIC, xmltags.STRIKETHROUGH)
+    TEXT_TAGS = (
+        xmltags.PARAGRAPH, xmltags.LIST_ITEM, xmltags.HEADING, xmltags.TABLE_CELL, xmltags.HEADER,
+        xmltags.TITLE) + FORMAT_TAGS
 
     def __init__(self, filename: pathlib.Path, docx_reference_filename: pathlib.Path) -> None:
         super().__init__(filename)
@@ -30,6 +34,7 @@ class DocxBuilder(Builder):
         self.column_index = 0
         self.link = None
         self.section_style = None
+        self.formatting = set()
 
     def start_element(self, tag: str, attributes: Attributes) -> None:
         if tag == xmltags.PARAGRAPH:
@@ -93,30 +98,22 @@ class DocxBuilder(Builder):
         elif tag == xmltags.TABLE_OF_CONTENTS:
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
+        elif tag in self.FORMAT_TAGS:
+            self.formatting.add(tag)
 
     def text(self, tag: str, text: str) -> None:
-        if tag == xmltags.PARAGRAPH:
-            self.paragraph.add_run(text)
-        elif tag == xmltags.INSTRUCTION:
-            self.paragraph.add_run(text).font.highlight_color = WD_COLOR_INDEX.YELLOW
-        elif tag == xmltags.BOLD:
-            self.paragraph.add_run(text).font.bold = True
-        elif tag == xmltags.ITALIC:
-            self.paragraph.add_run(text).font.italic = True
-        elif tag == xmltags.STRIKETHROUGH:
-            self.paragraph.add_run(text).font.strike = True
-        elif tag == xmltags.LIST_ITEM:
-            self.paragraph.add_run(text)
-        elif tag == xmltags.HEADING:
-            self.paragraph.add_run(text)
-        elif tag == xmltags.TABLE_CELL:
-            self.paragraph.add_run(text)
+        if tag in self.TEXT_TAGS:
+            run = self.paragraph.add_run(text)
+            if xmltags.BOLD in self.formatting:
+                run.font.bold = True
+            if xmltags.INSTRUCTION in self.formatting:
+                run.font.highlight_color = WD_COLOR_INDEX.YELLOW
+            if xmltags.ITALIC in self.formatting:
+                run.font.italic = True
+            if xmltags.STRIKETHROUGH in self.formatting:
+                run.font.strike = True
         elif tag == xmltags.ANCHOR:
             add_hyperlink(self.paragraph, self.link, text)
-        elif tag == xmltags.HEADER:
-            self.paragraph.add_run(text)
-        elif tag == xmltags.TITLE:
-            self.paragraph.add_run(text)
         elif tag == xmltags.IMAGE:
             self.doc.add_picture(text)
 
@@ -124,6 +121,8 @@ class DocxBuilder(Builder):
         if tag in (xmltags.BULLET_LIST, xmltags.NUMBERED_LIST):
             self.current_list_style.pop()
             self.previous_list_item.pop()
+        elif tag in self.FORMAT_TAGS:
+            self.formatting.remove(tag)
 
     def tail(self, tag: str, tail: str, parent: str) -> None:
         self.text(parent, tail)

@@ -16,8 +16,3 @@ services:
     volumes:
       - ${PWD}:/work
     entrypoint: bash
-  mdconvert:
-    build: mdconvert
-    working_dir: ${PWD}
-    volumes:
-      - ${PWD}:${PWD}

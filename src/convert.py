@@ -12,6 +12,7 @@ from xml.etree.ElementTree import ElementTree
 from cli import parse_cli_arguments
 from converter import Converter
 from docx_builder import DocxBuilder
+from html_builder import HTMLBuilder
 from markdown_builder import MarkdownBuilder
 from markdown_converter import MarkdownConverter
 from custom_types import Settings
@@ -54,6 +55,10 @@ def main(settings_filename: str) -> None:
         docx_output_filename = output_path / pathlib.Path(settings["InputFile"]).with_suffix(".docx").name
         docx_builder = DocxBuilder(docx_output_filename, pathlib.Path(settings["DocxReferenceFile"]))
         converter.convert(docx_builder)
+    if "html" in settings["OutputFormats"]:
+        html_output_filename = output_path / pathlib.Path(settings["InputFile"]).with_suffix(".html").name
+        html_builder = HTMLBuilder(html_output_filename)
+        converter.convert(html_builder)
 
 
 if __name__ == "__main__":

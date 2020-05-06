@@ -1,0 +1,13 @@
+{
+    "InputFile": "build/Full/ICTU-Kwaliteitsaanpak.md",
+    "OutputPath": "build/Full/",
+    "BuildPath": "build/Full/",
+    "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
+    "DocumentType": "Kwaliteitsaanpak",
+    "IncludeFrontPage": true,
+    "IncludeMarkdownSource": false,
+    "IncludeTableOfContents": false,
+    "OutputFormats": [
+        "html"
+    ]
+}

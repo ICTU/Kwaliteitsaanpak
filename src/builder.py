@@ -24,8 +24,9 @@ class Builder:
     def end_element(self, tag: str, attributes: Attributes) -> None:
         """End element."""
 
-    def tail(self, tag: str, tail: str) -> None:
+    def tail(self, tag: str, tail: str, parent: str) -> None:
         """Element tail."""
+        self.text(parent, tail)
 
     def end_document(self) -> None:
         """End the document."""

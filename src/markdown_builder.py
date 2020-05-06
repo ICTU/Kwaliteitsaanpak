@@ -3,10 +3,9 @@
 import pathlib
 from typing import Dict
 
+from builder import Attributes, Builder
 import markdown_syntax
 import xmltags
-
-from builder import Attributes, Builder
 
 
 class MarkdownBuilder(Builder):
@@ -82,9 +81,6 @@ class MarkdownBuilder(Builder):
             self.markdown += "\n"
         elif tag == xmltags.ANCHOR:
             self.markdown += f"]({attributes[xmltags.ANCHOR_LINK]})"
-
-    def tail(self, tag: str, tail: str, parent: str = None) -> None:
-        self.markdown += tail
 
     def end_document(self) -> None:
         with open(self.filename, "w") as markdown_file:

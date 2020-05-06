@@ -66,10 +66,6 @@ function expand
     DOCUMENT_MD="$6"
     TITLE="$3"
     HEADER="$4"
-    HTML_BUILD="$BUILD_PATH/document.html"
-    COVER_HTML_BUILD="$BUILD_PATH/cover.html"
-    HEADER_HTML_BUILD="$BUILD_PATH/header.html"
-    PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
 
     echo "-- generate: $2"
 
@@ -102,7 +98,7 @@ function generate-kwaliteitsaanpak
     DOC_MD="DocumentDefinitions/$1/document.md"
     DICTIONARY="$BUILD_PATH/dict.txt"
     EXPANDED="$BUILD_PATH/$2.md"
-    HTML_BUILD="$BUILD_PATH/document.html"
+    HTML_BUILD="$BUILD_PATH/ICTU-Kwaliteitsaanpak.html"
     HEADER_HTML_BUILD="$BUILD_PATH/header.html"
     PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
 
@@ -112,7 +108,7 @@ function generate-kwaliteitsaanpak
     # Cover
     create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /work/DocumentDefinitions/Shared/cover.css
     # Body
-    create-html "$EXPANDED" "$HTML_BUILD" /work/DocumentDefinitions/Shared/document.css
+    python3 src/convert.py --log INFO DocumentDefinitions/kwaliteitsaanpak.json
     # Header
     map-refsd DocumentDefinitions/Shared/header.html "$HEADER_HTML_BUILD" $DICTIONARY
     # Create pdf
@@ -149,6 +145,7 @@ python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "$KA_TITLE"
+
 generate-template Template Template-Generiek "Generiek template"
 generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
@@ -158,8 +155,6 @@ generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
 generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
 generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
 
-python3 create-checklist.py "$KA_TITLE"
-
 python3 src/convert.py --log INFO DocumentDefinitions/generiek-template.json
 python3 src/convert.py --log INFO DocumentDefinitions/detailtestplan.json
 python3 src/convert.py --log INFO DocumentDefinitions/globaal-functioneel-ontwerp.json
@@ -168,3 +163,5 @@ python3 src/convert.py --log INFO DocumentDefinitions/kwaliteitsplan.json
 python3 src/convert.py --log INFO DocumentDefinitions/niet-functionele-eisen.json
 python3 src/convert.py --log INFO DocumentDefinitions/softwarearchitectuurdocument.json
 python3 src/convert.py --log INFO DocumentDefinitions/projectvoorstel-voorfase.json
+
+python3 create-checklist.py "$KA_TITLE"

@@ -18,7 +18,7 @@ def read_maatregel(path, do_create_link):
         headers = [line.strip("##").strip(path.name+":").strip() for line in maatregel_file if line.startswith('## ')]
     for header in headers:
         if do_create_link:
-            print("{{" + path.name + "}}=[**" + header + "**](#" + create_link(header) + ")")
+            print("{{" + path.name + "}}=**[" + header + "](#" + create_link(header) + ")**")
         else:
             print("{{" + path.name + "}}=**" + header + "**")
         print("{{" + path.name + "-no-link}}=**" + header + "**")

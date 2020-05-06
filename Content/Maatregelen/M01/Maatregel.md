@@ -86,7 +86,7 @@ De onderstaande tabel bevat de hierboven genoemde producten en geeft aan in welk
 
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom 'Realisatiefase') en wordt de kwaliteit van de bestaande softwareproducten getoetst. Dit onderzoek, dat bij ICTU een "due diligence" heet, is onderdeel van de voorfase en wordt uitgevoerd door vertegenwoordigers van ICTU en medewerkers van het desbetreffende project, in samenwerking met vertegenwoordigers van de opdrachtgever.
 
-| Product                                      | Voorfase | Voorfase᠆ met onderzoek | Realisatie᠆fase |
+| Product                                       | Voorfase | Voorfase met onderzoek | Realisatiefase |
 |----------------------------------------------------------------------------------------|---|---|---|
 | BIA (Business impact analysis)¹                                                        | ✔ | ✔ | ✔ |
 | PIA (Privacy impact analysis)²                                                         | ✔ | ✔ | ✔ |
@@ -106,7 +106,7 @@ Als tijdens een project bestaande software dient te worden afgebouwd, onderhoude
 | Deploymentdocumentatie                                                                 |   |   | ✔ |
 | Uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                  |   | ✔ |   |
 | Transitieplan voor af te bouwen, te onderhouden en/of te herbouwen softwareproducten   |   | ✔ |   |
-| Plan voor aflossen technische schuld, indien van toepassing                            |   | ✔ |   ||
+| Plan voor aflossen technische schuld, indien van toepassing                            |   | ✔ |   |
 
 ¹) De opdrachtgever stelt bij voorkeur een BIA en PIA voorafgaand aan een voorbereidende fase beschikbaar. Indien dat niet mogelijk is worden deze analyses gedurende de voorbereidende fase onder verantwoordelijkheid van de opdrachtgever uitgevoerd.
 ²) Indien een PIA niet nodig is, is een verklaring daaromtrent vereist.

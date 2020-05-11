@@ -133,14 +133,6 @@ class MarkdownConverter:
         if level == self.APPENDIX_LEVEL and heading == self.APPENDIX_HEADING:
             self.in_appendices = True
         is_appendix = {xmltags.SECTION_IS_APPENDIX: "y"} if self.in_appendices else {}
-        """
-        if self.current_section_level == 0:
-            while self.current_section_level < level - 1:
-                self.current_section_level += 1
-                self.builder.start(
-                    xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)})
-        else:
-        """
         if self.current_section_level >= level:
             while self.current_section_level >= level:
                 self.builder.end(xmltags.SECTION)

@@ -41,8 +41,7 @@ function expand-md
 function create-html
 {
     echo "--- create-html {$2} from {$1} using style {$3}"
-    node_modules/markdown-to-html/bin/markdown "$1" -s "$3" | \
-        PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $2
+    node_modules/markdown-to-html/bin/markdown "$1" -s "$3" > $2
 }
 
 # Create main document for a template

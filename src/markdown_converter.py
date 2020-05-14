@@ -1,5 +1,6 @@
 """Markdown converter."""
 
+import datetime
 import contextlib
 import logging
 import re
@@ -51,8 +52,7 @@ class MarkdownConverter:
         """Create a front page."""
         document_type = settings["DocumentType"]
         with self.element(xmltags.FRONTPAGE):
-            if document_type in ("Kwaliteitsaanpak", "Template"):
-                self.add_element(xmltags.IMAGE, "Content/Images/ICTU.png")
+            self.add_element(xmltags.IMAGE, "/work/Content/Images/ICTU.png", attributes={xmltags.TITLE: "ictu-logo"})
             with self.element(xmltags.TITLE):
                 self.process_formatted_text(settings["Title"])
             if document_type == "Template":
@@ -63,12 +63,14 @@ class MarkdownConverter:
                 with self.element(xmltags.PARAGRAPH):
                     self.builder.data("Versie ")
                     self.add_element(xmltags.INSTRUCTION, "{Versienummer}")
-                with self.element(xmltags.PARAGRAPH):
-                    self.builder.data("Datum ")
+                    self.builder.data(", ")
                     self.add_element(xmltags.INSTRUCTION, "{Datum}")
                 self.add_element(xmltags.PARAGRAPH)
-            if document_type in ("Kwaliteitsaanpak", "Template"):
-                self.add_element(xmltags.IMAGE, "Content/Images/word-cloud.png")
+            elif document_type == "Kwaliteitsaanpak":
+                with self.element(xmltags.PARAGRAPH):
+                    self.builder.data(f"Versie {settings['Versie']}, {datetime.date.today().strftime('%d-%m-%Y')}")
+            self.add_element(
+                xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"})
             self.add_element(xmltags.PAGEBREAK)
 
     def create_header(self, settings: Settings) -> None:

@@ -104,7 +104,7 @@ class DocxBuilder(Builder):
         elif tag in self.FORMAT_TAGS:
             self.formatting.add(tag)
 
-    def text(self, tag: str, text: str) -> None:
+    def text(self, tag: str, text: str, attributes: Attributes) -> None:
         if tag in self.TEXT_TAGS:
             run = self.paragraph.add_run(text)
             if xmltags.BOLD in self.formatting:
@@ -121,6 +121,7 @@ class DocxBuilder(Builder):
             else:
                 add_hyperlink(self.paragraph, self.link, text)
         elif tag == xmltags.IMAGE:
+            text = text[len("/work/"):]
             self.doc.add_picture(text)
 
     def end_element(self, tag: str, attributes: Attributes) -> None:

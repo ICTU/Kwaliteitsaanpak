@@ -10,6 +10,6 @@ RUN lxml_run_time_deps='libxml2-dev libxslt-dev' \
 ADD ./requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
-WORKDIR /ka
-COPY package.json /ka
+WORKDIR /work
+COPY package.json /work
 RUN npm install

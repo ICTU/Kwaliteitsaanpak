@@ -52,7 +52,7 @@ class MarkdownBuilder(Builder):
         elif tag == xmltags.ANCHOR:
             self.markdown += "["
 
-    def text(self, tag: str, text: str) -> None:
+    def text(self, tag: str, text: str, attributes: Attributes) -> None:
         if tag != xmltags.IMAGE:
             self.markdown += text
 

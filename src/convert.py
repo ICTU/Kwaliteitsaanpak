@@ -12,7 +12,7 @@ from xml.etree.ElementTree import ElementTree
 from cli import parse_cli_arguments
 from converter import Converter
 from docx_builder import DocxBuilder
-from html_builder import HTMLBuilder
+from html_builder import HTMLBuilder, HTMLCoverBuilder
 from markdown_builder import MarkdownBuilder
 from markdown_converter import MarkdownConverter
 from custom_types import Settings
@@ -38,9 +38,10 @@ def write_xml(xml: ElementTree, settings: Settings) -> None:
     xml.write(xml_filename, encoding="utf-8")
 
 
-def main(settings_filename: str) -> None:
+def main(settings_filename: str, version: str) -> None:
     """Convert the input document to the specified output formats."""
     settings = read_settings(settings_filename)
+    settings["Versie"] = version
     logging.info("Converting with settings:\n%s", pprint.pformat(settings))
     markdown = read_markdown(settings)
     xml = MarkdownConverter().convert(markdown, settings)
@@ -56,12 +57,15 @@ def main(settings_filename: str) -> None:
         docx_builder = DocxBuilder(docx_output_filename, pathlib.Path(settings["DocxReferenceFile"]))
         converter.convert(docx_builder)
     if "html" in settings["OutputFormats"]:
-        html_output_filename = output_path / pathlib.Path(settings["InputFile"]).with_suffix(".html").name
-        html_builder = HTMLBuilder(html_output_filename)
+        html_filename = output_path / pathlib.Path(settings["InputFile"]).with_suffix(".html").name
+        html_builder = HTMLBuilder(html_filename)
         converter.convert(html_builder)
+        html_cover_filename = output_path / pathlib.Path(settings["InputFile"]).with_suffix(".cover.html").name
+        html_cover_builder = HTMLCoverBuilder(html_cover_filename)
+        converter.convert(html_cover_builder)
 
 
 if __name__ == "__main__":
     args = parse_cli_arguments()
     logging.basicConfig(level=getattr(logging, args.log))
-    main(args.settings)
+    main(args.settings, args.version)

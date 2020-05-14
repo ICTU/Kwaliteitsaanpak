@@ -36,14 +36,6 @@ function expand-md
     map-refsd $TMP $2 $3
 }
 
-# Create html document from MD source.
-# create-html 1:<source md> 2:<output file> 3:<css>
-function create-html
-{
-    echo "--- create-html {$2} from {$1} using style {$3}"
-    node_modules/markdown-to-html/bin/markdown "$1" -s "$3" > $2
-}
-
 # Create main document for a template
 # create-template 1:<template document> 2:<template folder name> 3:<output file>
 function create-template
@@ -93,7 +85,7 @@ function generate-kwaliteitsaanpak
     HEADER="$TITLE"
     COVER_MD="DocumentDefinitions/$1/cover.md"
     EXPANDED_COVER="$BUILD_PATH/$2-cover.md"
-    COVER_HTML_BUILD="$BUILD_PATH/cover.html"
+    COVER_HTML_BUILD="$BUILD_PATH/ICTU-Kwaliteitsaanpak.cover.html"
     DOC_MD="DocumentDefinitions/$1/document.md"
     DICTIONARY="$BUILD_PATH/dict.txt"
     EXPANDED="$BUILD_PATH/$2.md"
@@ -104,8 +96,6 @@ function generate-kwaliteitsaanpak
     expand $1 $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY_LINKS
 
     # PDF generation
-    # Cover
-    create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /work/DocumentDefinitions/Shared/cover.css
     # Body
     python3 src/convert.py --log INFO DocumentDefinitions/kwaliteitsaanpak.json
     # Header

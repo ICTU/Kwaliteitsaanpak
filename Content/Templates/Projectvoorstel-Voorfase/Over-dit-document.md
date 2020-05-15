@@ -12,7 +12,7 @@ Indien akkoord gelieve u dit voorstel inclusief de projectovereenkomst te voorzi
 
 {omschrijving vraag}
 
-Bij de uitvoering van softwareontwikkelprojecten hanteert ICTU de {{KWALITEITSAANPAK}}. Conform deze aanpak zijn projecten gesplitst in een voorbereidende fase, "voorfase" genoemd, en een realisatiefase, waarin de software wordt ontwikkeld.
+Bij de uitvoering van softwareontwikkelprojecten hanteert ICTU de $KWALITEITSAANPAK$. Conform deze aanpak zijn projecten gesplitst in een voorbereidende fase, "voorfase" genoemd, en een realisatiefase, waarin de software wordt ontwikkeld.
 
 De voorfase heeft de volgende doelen:
 
@@ -63,7 +63,7 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Plan van aanpak realisatiefase                  | ICTU                         | ICTU         | {reviewers}             |
 | Tussentijdse rapportage t.b.v. go/no-go besluit | {verantwoordelijke}          | ICTU         | {reviewers}             |
 
-De penvoerder van het product is de uitvoerende partij die verantwoordelijk is voor het opleveren van het product tijdens de voorfase; de inhoudelijk verantwoordelijke bepaalt de uiteindelijke inhoud. Zie de {{KWALITEITSAANPAK}} voor een nadere toelichting op de documentatie.
+De penvoerder van het product is de uitvoerende partij die verantwoordelijk is voor het opleveren van het product tijdens de voorfase; de inhoudelijk verantwoordelijke bepaalt de uiteindelijke inhoud. Zie de $KWALITEITSAANPAK$ voor een nadere toelichting op de documentatie.
 
 {Een aantal documenten is bij voorkeur al beschikbaar bij de start van de voorfase. De andere documentatie is afhankelijk van deze documenten, dus mochten de benodigde documenten niet aanwezig zijn, dan heeft dat impact op de planning. Controleer de bovenstaande tabel en de planning.}
 

@@ -1,6 +1,6 @@
 ![ICTU](/work/Content/Images/ICTU.png "ictu-logo")
 
-# {{TITLE}}
+# $KWALITEITSAANPAK$
 
 #include "Content/Versie.md"
 

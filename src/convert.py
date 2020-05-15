@@ -6,7 +6,7 @@ import logging
 import pathlib
 import pprint
 import sys
-from typing import List
+from typing import cast, List
 from xml.etree.ElementTree import ElementTree
 
 from cli import parse_cli_arguments
@@ -15,13 +15,13 @@ from docx_builder import DocxBuilder
 from html_builder import HTMLBuilder, HTMLCoverBuilder
 from markdown_builder import MarkdownBuilder
 from markdown_converter import MarkdownConverter
-from custom_types import Settings
+from custom_types import JSON, Settings, Variables
 
 
-def read_settings(settings_filename: str) -> Settings:
-    """Read the settings from the specified filename."""
-    with open(settings_filename) as settings_file:
-        return json.load(settings_file)
+def read_json(json_filename: str) -> JSON:
+    """Read JSON from the specified filename."""
+    with open(json_filename) as json_file:
+        return json.load(json_file)
 
 
 def read_markdown(settings: Settings) -> List[str]:
@@ -40,11 +40,15 @@ def write_xml(xml: ElementTree, settings: Settings) -> None:
 
 def main(settings_filename: str, version: str) -> None:
     """Convert the input document to the specified output formats."""
-    settings = read_settings(settings_filename)
-    settings["Versie"] = version
-    logging.info("Converting with settings:\n%s", pprint.pformat(settings))
+    settings = cast(Settings, read_json(settings_filename))
+    variables: Variables = {}
+    for variable_file in settings["VariablesFiles"]:
+        variables.update(cast(Variables, read_json(variable_file)))
+    variables["VERSIE"] = settings["Versie"] = version
+    logging.info(
+        "Converting with settings:\n%s\nand variables:\n%s", pprint.pformat(settings), pprint.pformat(variables))
     markdown = read_markdown(settings)
-    xml = MarkdownConverter().convert(markdown, settings)
+    xml = MarkdownConverter(variables).convert(markdown, settings)
     write_xml(xml, settings)
     converter = Converter(xml)
     output_path = pathlib.Path(settings["OutputPath"])

@@ -73,24 +73,24 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 
 | Onderdeel                      | wk 1 | wk 2 | wk 3 | wk 4 | wk 5 | wk 6 | wk 7 | wk 8 |
 |:-------------------------------|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| Kick-off                       | {X}  |      |      |      |      |      |      |      |
-| Realisatie producten sprint 1  |      | {X}  | {X}  |      |      |      |      |      |
-| Realisatie producten sprint 2  |      |      |      | {X}  | {X}  |      |      |      |
-| Realisatie producten sprint 3  |      |      |      |      |      | {X}  | {X}  |      |
+| Kick-off                       | {X}  |      |      |      |      |      |      |      |
+| Realisatie producten sprint 1  |      | {X}  | {X}  |      |      |      |      |      |
+| Realisatie producten sprint 2  |      |      |      | {X}  | {X}  |      |      |      |
+| Realisatie producten sprint 3  |      |      |      |      |      | {X}  | {X}  |      |
 | Afronden en afsluiten voorfase |      |      |      |      |      |      |      | {X}  |
 
 # Randvoorwaarden
 
 Voor de uitvoering van de voorfase gelden de volgende randvoorwaarden:
 
-| Nr           | Randvoorwaarde                                                                                                             |
-|:-------------|:---------------------------------------------------------------------------------------------------------------------------|
-| R01          | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd.                           |
-| R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.                        |
-| R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever} en ICTU. Deze is in lijn met de {{KWALITEITSAANPAK}}. |
-| R04          | De producten {producten} zijn beschikbaar voor aanvang van de voorfase.                                                    |
-| R05          | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar.                                                         |
-| {volgnummer} | {randvoorwaarde}                                                                                                           |
+| Nr           | Randvoorwaarde                                                                                                           |
+|:-------------|:-------------------------------------------------------------------------------------------------------------------------|
+| R01          | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd.                         |
+| R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.                      |
+| R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
+| R04          | De producten {producten} zijn beschikbaar voor aanvang van de voorfase.                                                  |
+| R05          | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar.                                                       |
+| {volgnummer} | {randvoorwaarde}                                                                                                         |
 
 # Projectrisico’s
 
@@ -127,7 +127,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoo
 | Projectleider                          | {x} uur         | Voorbereiden en plannen kick-off, opstellen projectvoorstel en voorstel/overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
 | Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                                                                                    |
 | Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is                                                                  |
-| Totaal                                 | {x} uur         |
+| Totaal                                 | {x} uur         |                                                                                                                                                                                             |
 
 ## Kosten
 

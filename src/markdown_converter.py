@@ -8,7 +8,7 @@ import sys
 from typing import Dict, List
 from xml.etree.ElementTree import ElementTree, TreeBuilder
 
-from custom_types import Settings
+from custom_types import Settings, Variables
 import markdown_syntax
 from table import Table
 import xmltags
@@ -20,13 +20,14 @@ class MarkdownConverter:
     APPENDIX_HEADING = "Bijlagen"
     APPENDIX_LEVEL = 1
 
-    def __init__(self) -> None:
+    def __init__(self, variables: Variables) -> None:
         self.builder = TreeBuilder()
         self.in_appendices = False
         self.in_measure = False
         self.current_section_level = 0
         self.current_list_tags = []
         self.table = None
+        self.variables = variables
 
     def convert(self, markdown: List[str], settings: Settings) -> ElementTree:
         """Convert the markdown to XML."""
@@ -261,6 +262,13 @@ class MarkdownConverter:
                     seen = ""
                     self.add_element(xmltags.ANCHOR, match.group(1), {xmltags.ANCHOR_LINK: match.group(2)})
                     line = line[len(match.group(0)):]
+                elif match := re.match(markdown_syntax.VARIABLE_USE_PATTERN, line):
+                    format_found = True
+                    self.flush(seen)
+                    seen = ""
+                    self.builder.data(self.variables[match.group(1)])
+                    line = line[len(match.group(0)):]
+
             if not format_found:
                 seen += line[0] if line else ""
                 line = line[1:]

@@ -44,7 +44,7 @@ function create-template
     sed s/{{TEMPLATE-FOLDER}}/"$2"/g $1 > $3
 }
 
-# Expand MD document into folder $1, creating $2.md, with title $3 and header $4, using MD cover file $5 and MD document file $6 using dictionary file $7.
+# Expand MD document into folder $1, creating $2.md, with title $3 and header $4, and MD document file $5 using dictionary file $6.
 # expand 1:<output folder> 2:<name of document output without extension>
 #        3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
 function expand
@@ -52,11 +52,9 @@ function expand
     BUILD_PATH="build/$1"
     DICTIONARY="$BUILD_PATH/dict.txt"
     EXPANDED="$BUILD_PATH/$2.md"
-    EXPANDED_COVER="$BUILD_PATH/$2-cover.md"
-    COVER_MD="$5"
-    DOCUMENT_MD="$6"
     TITLE="$3"
     HEADER="$4"
+    DOCUMENT_MD="$5"
 
     echo "-- generate: $2"
 
@@ -67,13 +65,12 @@ function expand
     mkdir -p $OUTPUT_PATH
 
     # Create dictionary
-    cat $7 > $DICTIONARY
-    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n{{KA-TITLE}}=$KA_TITLE\n{{KA_TITLE}}=$KA_TITLE\n{{KWALITEITSAANPAK}}=$KA_TITLE\n" >> $DICTIONARY
+    cat $6 > $DICTIONARY
+    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n" >> $DICTIONARY
     echo "--- dictionary created: $DICTIONARY"
 
     # Expand MD file
     expand-md $DOCUMENT_MD "$EXPANDED" "$DICTIONARY"
-    expand-md $COVER_MD "$EXPANDED_COVER" "$DICTIONARY"
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.
@@ -83,8 +80,6 @@ function generate-kwaliteitsaanpak
     BUILD_PATH="build/$1"
     TITLE="$3"
     HEADER="$TITLE"
-    COVER_MD="DocumentDefinitions/$1/cover.md"
-    EXPANDED_COVER="$BUILD_PATH/$2-cover.md"
     COVER_HTML_BUILD="$BUILD_PATH/ICTU-Kwaliteitsaanpak.cover.html"
     DOC_MD="DocumentDefinitions/$1/document.md"
     DICTIONARY="$BUILD_PATH/dict.txt"
@@ -93,7 +88,7 @@ function generate-kwaliteitsaanpak
     HEADER_HTML_BUILD="$BUILD_PATH/header.html"
     PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
 
-    expand $1 $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY_LINKS
+    expand $1 $2 "$TITLE" "$HEADER" $DOC_MD $MAATREGEL_DICTIONARY_LINKS
 
     # PDF generation
     # Body
@@ -118,7 +113,6 @@ function generate-template
     HEADER="$TITLE {projectnaam} {versie}"
     TEMPLATE_TEMPLATE="DocumentDefinitions/Templates/document-template.md"
     TEMPLATE_PATH="Templates/$1"
-    COVER_MD="DocumentDefinitions/Templates/Shared/cover.md"
     BUILD_PATH="build/$TEMPLATE_PATH"
     DOC_MD="$BUILD_PATH/document.md"
     DOCX_REF="DocumentDefinitions/reference.docx"
@@ -127,7 +121,7 @@ function generate-template
     mkdir -p $BUILD_PATH
     create-template "$TEMPLATE_TEMPLATE" $1 $DOC_MD
 
-    expand $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
+    expand $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY

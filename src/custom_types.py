@@ -3,4 +3,4 @@
 from typing import Dict
 
 
-Settings = Dict[str, str]
+Variables = Settings = JSON = Dict[str, str]

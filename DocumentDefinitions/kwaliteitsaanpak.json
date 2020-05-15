@@ -9,5 +9,5 @@
     "IncludeTableOfContents": false,
     "OutputFormats": [
         "html"
-    ]
-}
+    ],
+    "VariablesFiles": ["DocumentDefinitions/variables.json"]}

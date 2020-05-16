@@ -19,6 +19,6 @@ De incrementele oplevering levert vrijwel iedere iteratie toegevoegde waarde en 
 
 Zie ook:
 
-* {{M01}}
+* [$M01$](#m01)
 * {{M02}}
 * {{M16}}

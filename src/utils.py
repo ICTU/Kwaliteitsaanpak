@@ -1,8 +1,12 @@
 """Utility functions."""
 
+import re
+
 
 def slugify(text: str) -> str:
     """Slugify a text."""
+    if match := re.match(r"(M\d+): "):
+        return match.group(1).lower()
     slug = ""
     for char in text:
         if char.isalnum():

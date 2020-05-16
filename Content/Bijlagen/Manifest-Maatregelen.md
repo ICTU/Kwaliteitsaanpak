@@ -37,5 +37,5 @@ Door agile te werken ({{M05}}) kunnen wij:
 
 Deze Kwaliteitsaanpak helpt inzicht te geven aan opdrachtgevers in de kwaliteit van het werk door:
 
-* documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen ({{M01}});
+* documenten te maken samen met de opdrachtgever en andere belanghebbenden en die documenten ook vroegtijdig te laten reviewen ([$M01$](#m01));
 * continu de kwaliteit van het werk te meten en opdrachtgevers hierover te rapporteren ({{M02}}).

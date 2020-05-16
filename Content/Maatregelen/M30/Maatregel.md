@@ -12,6 +12,6 @@ Echter, naast generieke risico's loopt elke project ook projectspecifieke risico
 
 Zie ook:
 
-* {{M01}}
+* [$M01$](#m01)
 * {{M10}}
 * [Relatie met NEN NPR 5326](#relatie-met-nen-npr-5326)

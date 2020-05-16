@@ -1,4 +1,4 @@
-## M01: Het project levert in elke fase vastgestelde informatie over het product op
+## $M01$
 
 #include "Content/Maatregelen/M01/Definitie.md"
 

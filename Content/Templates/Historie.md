@@ -23,4 +23,4 @@
 
 ##### Template versie
 
-#include "Content/Versie.md"
+Versie $VERSIE$, $DATUM$

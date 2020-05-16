@@ -24,9 +24,6 @@ def read_maatregel(path, do_create_link):
         print("{{" + path.name + "-no-link}}=**" + header + "**")
 
 def create_dictionary(do_create_links):
-    with open("Content/Versie.md") as version_file:
-        version = version_file.read().strip()
-        print("{{VERSIE}}=" + version)
     path = pathlib.Path('Content/Maatregelen')
     for mdir in sorted(path.glob('M*')):
         if mdir.is_dir():

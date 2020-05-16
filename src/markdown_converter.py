@@ -1,6 +1,5 @@
 """Markdown converter."""
 
-import datetime
 import contextlib
 import logging
 import re
@@ -69,7 +68,7 @@ class MarkdownConverter:
                 self.add_element(xmltags.PARAGRAPH)
             elif document_type == "Kwaliteitsaanpak":
                 with self.element(xmltags.PARAGRAPH):
-                    self.builder.data(f"Versie {settings['Versie']}, {datetime.date.today().strftime('%d-%m-%Y')}")
+                    self.builder.data(f"Versie {settings['Versie']}, {settings['Datum']}")
             self.add_element(
                 xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"})
             self.add_element(xmltags.PAGEBREAK)

@@ -1,3 +1,4 @@
+import datetime
 import pathlib
 import re
 import sys
@@ -116,18 +117,16 @@ class DocumentStructure:
                 yield pathlib.Path(line.strip().strip('# include "').strip('/Maatregel.md"'))
 
 
-def create_checklist(workbook, title):
+def create_checklist(workbook, title: str, version: str) -> None:
     """ Create the worksheet  with the self-assessment checklist. """
     worksheet = workbook.add_worksheet('Self-assessment checklist')
-    with open("Content/Versie.md") as version_file:
-        version = version_file.read().strip()
-
     header_format = workbook.add_format(dict(text_wrap=True, font_size=14, bold=True, bg_color="#B3D6C9"))
     header_row = 1
     worksheet.merge_range(
         "A1:D1",
         "Onderstaande checklist kan gebruikt worden voor het uitvoeren van een assessment tegen de "
-        "ICTU Kwaliteitsaanpak Softwareontwikkeling {0}.".format(version.lower()), header_format)
+        "ICTU Kwaliteitsaanpak Softwareontwikkeling versie {0}, {1}.".format(
+            version, datetime.date.today().strftime("%d-%m-%Y")), header_format)
     worksheet.set_row(0, 30)
     worksheet.set_row(header_row, 30)
     for column, (header, width) in enumerate([("Maatregel", 12), ("Omschrijving", 70),
@@ -172,11 +171,11 @@ def create_action_list(workbook):
         worksheet.set_column('{0}:{0}'.format("ABCD"[column]), width)
 
 
-def create_workbook():
+def create_workbook() -> None:
     """ Create the workbook with the different worksheets. """
     workbook = xlsxwriter.Workbook('dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx')
-    title = sys.argv[1]
-    create_checklist(workbook, title)
+    title, version = sys.argv[1:]
+    create_checklist(workbook, title, version)
     create_action_list(workbook)
     workbook.close()
 

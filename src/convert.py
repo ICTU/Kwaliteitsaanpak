@@ -1,5 +1,6 @@
 """Main program to convert Markdown files to different possible output formats."""
 
+import datetime
 import io
 import json
 import logging
@@ -45,6 +46,7 @@ def main(settings_filename: str, version: str) -> None:
     for variable_file in settings["VariablesFiles"]:
         variables.update(cast(Variables, read_json(variable_file)))
     variables["VERSIE"] = settings["Versie"] = version
+    variables["DATUM"] = settings["Datum"] = datetime.date.today().strftime('%d-%m-%Y')
     logging.info(
         "Converting with settings:\n%s\nand variables:\n%s", pprint.pformat(settings), pprint.pformat(variables))
     markdown = read_markdown(settings)

@@ -1,11 +1,11 @@
 #!/bin/bash
 npm i
-npm version 2.1.0-unreleased --force --no-git-tag-version --allow-same-version
-echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
 mkdir -p build
 
 KA_TITLE="ICTU Kwaliteitsaanpak Softwareontwikkeling"
+KA_VERSION="2.1.0-unreleased"
+
 OUTPUT_PATH="dist"  # Folder to write the final documents to
 
 MAATREGEL_DICTIONARY="build/maatregel-dictionary.txt"
@@ -92,7 +92,7 @@ function generate-kwaliteitsaanpak
 
     # PDF generation
     # Body
-    python3 src/convert.py --log INFO DocumentDefinitions/kwaliteitsaanpak.json
+    python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsaanpak.json
     # Header
     map-refsd DocumentDefinitions/Shared/header.html "$HEADER_HTML_BUILD" $DICTIONARY
     # Create pdf
@@ -138,13 +138,13 @@ generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
 generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
 generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
 
-python3 src/convert.py --log INFO DocumentDefinitions/generiek-template.json
-python3 src/convert.py --log INFO DocumentDefinitions/detailtestplan.json
-python3 src/convert.py --log INFO DocumentDefinitions/globaal-functioneel-ontwerp.json
-python3 src/convert.py --log INFO DocumentDefinitions/high-level-design.json
-python3 src/convert.py --log INFO DocumentDefinitions/kwaliteitsplan.json
-python3 src/convert.py --log INFO DocumentDefinitions/niet-functionele-eisen.json
-python3 src/convert.py --log INFO DocumentDefinitions/softwarearchitectuurdocument.json
-python3 src/convert.py --log INFO DocumentDefinitions/projectvoorstel-voorfase.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/generiek-template.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/detailtestplan.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/globaal-functioneel-ontwerp.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/high-level-design.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsplan.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/niet-functionele-eisen.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/softwarearchitectuurdocument.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/projectvoorstel-voorfase.json
 
-python3 create-checklist.py "$KA_TITLE"
+python3 create-checklist.py "$KA_TITLE" "$KA_VERSION"

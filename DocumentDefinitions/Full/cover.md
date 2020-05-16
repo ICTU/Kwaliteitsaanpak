@@ -2,6 +2,6 @@
 
 # $KWALITEITSAANPAK$
 
-#include "Content/Versie.md"
+Versie $VERSIE$, $DATUM$
 
 ![wordcloud](/work/Content/Images/word-cloud.png "word-cloud")

@@ -2,7 +2,7 @@
 
 ### Het belang van de burger staat voorop
 
-De {{KWALITEITSAANPAK}} helpt opdrachtgevers van maatwerksoftware het belang van burgers en ambtenaren, die diensten aan burgers verlenen, voorop te zetten door:
+De $KWALITEITSAANPAK$ helpt opdrachtgevers van maatwerksoftware het belang van burgers en ambtenaren, die diensten aan burgers verlenen, voorop te zetten door:
 
 * voordat het project echt gaat bouwen goed na te denken over de mogelijke oplossingen en de kwaliteitseigenschappen die voor burgers en gebruikers van belang zijn; denk aan gebruikskwaliteit, beveiliging, privacy, performance en toegankelijkheid ({{M14}});
 * bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd te laten gaan ({{M21}}).

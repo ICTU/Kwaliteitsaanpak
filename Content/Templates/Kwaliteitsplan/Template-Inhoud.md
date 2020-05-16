@@ -78,7 +78,7 @@ Performance- en securityeisen worden via performance- en securitytests geborgd, 
 
 ### Compleetheid deliverables voorfase
 
-In aanvulling op de maatregelen met betrekking tot reviews, zie paragraaf [Documentreview](#documentreview), reviewt de kwaliteitsmanager de deliverables van de voorfase op compleetheid. Hiervoor vormt de {{KWALITEITSAANPAK}} het referentiekader.
+In aanvulling op de maatregelen met betrekking tot reviews, zie paragraaf [Documentreview](#documentreview), reviewt de kwaliteitsmanager de deliverables van de voorfase op compleetheid. Hiervoor vormt de $KWALITEITSAANPAK$ het referentiekader.
 
 # Kwaliteitsmaatregelen realisatiefase
 

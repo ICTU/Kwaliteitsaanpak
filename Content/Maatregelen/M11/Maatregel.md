@@ -8,4 +8,4 @@ Bij een verandering van de Kwaliteitsaanpak zorgt het hoofd van de afdeling ISR 
 
 ### Rationale
 
-Expliciet beheer en onderhoud van de {{TITLE}} is nodig om geleerde lessen, nieuwe inzichten uit bijvoorbeeld wetenschappelijke literatuur en nieuwe technische mogelijkheden voor meting en analyse te verwerken in de Kwaliteitsaanpak. De Kwaliteitsaanpak wordt door ICTU - en niet door een project - onderhouden, zodat deze bij meerdere projecten uniform kan worden toegepast.
+Expliciet beheer en onderhoud van de $KWALITEITSAANPAK$ is nodig om geleerde lessen, nieuwe inzichten uit bijvoorbeeld wetenschappelijke literatuur en nieuwe technische mogelijkheden voor meting en analyse te verwerken in de Kwaliteitsaanpak. De Kwaliteitsaanpak wordt door ICTU - en niet door een project - onderhouden, zodat deze bij meerdere projecten uniform kan worden toegepast.

@@ -1,7 +1,7 @@
-![ICTU](../../Content/Images/ICTU.png "ictu-logo")
+![ICTU](/work/Content/Images/ICTU.png "ictu-logo")
 
-# {{TITLE}}
+# $KWALITEITSAANPAK$
 
-#include "Content/Versie.md"
+Versie $VERSIE$, $DATUM$
 
-![wordcloud](../../Content/Images/word-cloud.png "word-cloud")
+![wordcloud](/work/Content/Images/word-cloud.png "word-cloud")

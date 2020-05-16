@@ -1,11 +1,11 @@
 #!/bin/bash
 npm i
-npm version 2.1.0-unreleased --force --no-git-tag-version --allow-same-version
-echo "Versie "$(./node_modules/.bin/extract-json package.json version)", "$(date '+%d-%m-%Y') > ./Content/Versie.md
 
 mkdir -p build
 
 KA_TITLE="ICTU Kwaliteitsaanpak Softwareontwikkeling"
+KA_VERSION="2.1.0-unreleased"
+
 OUTPUT_PATH="dist"  # Folder to write the final documents to
 
 MAATREGEL_DICTIONARY="build/maatregel-dictionary.txt"
@@ -36,15 +36,6 @@ function expand-md
     map-refsd $TMP $2 $3
 }
 
-# Create html document from MD source.
-# create-html 1:<source md> 2:<output file> 3:<css>
-function create-html
-{
-    echo "--- create-html {$2} from {$1} using style {$3}"
-    node_modules/markdown-to-html/bin/markdown "$1" -s "$3" | \
-        PYTHONIOENCODING="UTF-8" python3 post-process-html.py > $2
-}
-
 # Create main document for a template
 # create-template 1:<template document> 2:<template folder name> 3:<output file>
 function create-template
@@ -53,7 +44,7 @@ function create-template
     sed s/{{TEMPLATE-FOLDER}}/"$2"/g $1 > $3
 }
 
-# Expand MD document into folder $1, creating $2.md, with title $3 and header $4, using MD cover file $5 and MD document file $6 using dictionary file $7.
+# Expand MD document into folder $1, creating $2.md, with title $3 and header $4, and MD document file $5 using dictionary file $6.
 # expand 1:<output folder> 2:<name of document output without extension>
 #        3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
 function expand
@@ -61,15 +52,9 @@ function expand
     BUILD_PATH="build/$1"
     DICTIONARY="$BUILD_PATH/dict.txt"
     EXPANDED="$BUILD_PATH/$2.md"
-    EXPANDED_COVER="$BUILD_PATH/$2-cover.md"
-    COVER_MD="$5"
-    DOCUMENT_MD="$6"
     TITLE="$3"
     HEADER="$4"
-    HTML_BUILD="$BUILD_PATH/document.html"
-    COVER_HTML_BUILD="$BUILD_PATH/cover.html"
-    HEADER_HTML_BUILD="$BUILD_PATH/header.html"
-    PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
+    DOCUMENT_MD="$5"
 
     echo "-- generate: $2"
 
@@ -80,13 +65,12 @@ function expand
     mkdir -p $OUTPUT_PATH
 
     # Create dictionary
-    cat $7 > $DICTIONARY
-    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n{{KA-TITLE}}=$KA_TITLE\n{{KA_TITLE}}=$KA_TITLE\n{{KWALITEITSAANPAK}}=$KA_TITLE\n" >> $DICTIONARY
+    cat $6 > $DICTIONARY
+    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n" >> $DICTIONARY
     echo "--- dictionary created: $DICTIONARY"
 
     # Expand MD file
     expand-md $DOCUMENT_MD "$EXPANDED" "$DICTIONARY"
-    expand-md $COVER_MD "$EXPANDED_COVER" "$DICTIONARY"
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.
@@ -96,23 +80,19 @@ function generate-kwaliteitsaanpak
     BUILD_PATH="build/$1"
     TITLE="$3"
     HEADER="$TITLE"
-    COVER_MD="DocumentDefinitions/$1/cover.md"
-    EXPANDED_COVER="$BUILD_PATH/$2-cover.md"
-    COVER_HTML_BUILD="$BUILD_PATH/cover.html"
+    COVER_HTML_BUILD="$BUILD_PATH/ICTU-Kwaliteitsaanpak.cover.html"
     DOC_MD="DocumentDefinitions/$1/document.md"
     DICTIONARY="$BUILD_PATH/dict.txt"
     EXPANDED="$BUILD_PATH/$2.md"
-    HTML_BUILD="$BUILD_PATH/document.html"
+    HTML_BUILD="$BUILD_PATH/ICTU-Kwaliteitsaanpak.html"
     HEADER_HTML_BUILD="$BUILD_PATH/header.html"
     PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
 
-    expand $1 $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY_LINKS
+    expand $1 $2 "$TITLE" "$HEADER" $DOC_MD $MAATREGEL_DICTIONARY_LINKS
 
     # PDF generation
-    # Cover
-    create-html "$EXPANDED_COVER" "$COVER_HTML_BUILD" /work/DocumentDefinitions/Shared/cover.css
     # Body
-    create-html "$EXPANDED" "$HTML_BUILD" /work/DocumentDefinitions/Shared/document.css
+    python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsaanpak.json
     # Header
     map-refsd DocumentDefinitions/Shared/header.html "$HEADER_HTML_BUILD" $DICTIONARY
     # Create pdf
@@ -133,7 +113,6 @@ function generate-template
     HEADER="$TITLE {projectnaam} {versie}"
     TEMPLATE_TEMPLATE="DocumentDefinitions/Templates/document-template.md"
     TEMPLATE_PATH="Templates/$1"
-    COVER_MD="DocumentDefinitions/Templates/Shared/cover.md"
     BUILD_PATH="build/$TEMPLATE_PATH"
     DOC_MD="$BUILD_PATH/document.md"
     DOCX_REF="DocumentDefinitions/reference.docx"
@@ -142,13 +121,14 @@ function generate-template
     mkdir -p $BUILD_PATH
     create-template "$TEMPLATE_TEMPLATE" $1 $DOC_MD
 
-    expand $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $COVER_MD $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
+    expand $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
 }
 
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
 generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "$KA_TITLE"
+
 generate-template Template Template-Generiek "Generiek template"
 generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
@@ -158,13 +138,13 @@ generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
 generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
 generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
 
-python3 create-checklist.py "$KA_TITLE"
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/generiek-template.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/detailtestplan.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/globaal-functioneel-ontwerp.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/high-level-design.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsplan.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/niet-functionele-eisen.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/softwarearchitectuurdocument.json
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/projectvoorstel-voorfase.json
 
-python3 src/convert.py --log INFO DocumentDefinitions/generiek-template.json
-python3 src/convert.py --log INFO DocumentDefinitions/detailtestplan.json
-python3 src/convert.py --log INFO DocumentDefinitions/globaal-functioneel-ontwerp.json
-python3 src/convert.py --log INFO DocumentDefinitions/high-level-design.json
-python3 src/convert.py --log INFO DocumentDefinitions/kwaliteitsplan.json
-python3 src/convert.py --log INFO DocumentDefinitions/niet-functionele-eisen.json
-python3 src/convert.py --log INFO DocumentDefinitions/softwarearchitectuurdocument.json
-python3 src/convert.py --log INFO DocumentDefinitions/projectvoorstel-voorfase.json
+python3 create-checklist.py "$KA_TITLE" "$KA_VERSION"

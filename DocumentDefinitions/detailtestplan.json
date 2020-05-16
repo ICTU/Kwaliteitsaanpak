@@ -11,5 +11,6 @@
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": [
         "docx"
-    ]
+    ],
+    "VariablesFiles": ["DocumentDefinitions/variables.json"]
 }

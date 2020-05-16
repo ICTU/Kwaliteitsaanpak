@@ -104,7 +104,7 @@ class DocxBuilder(Builder):
         elif tag in self.FORMAT_TAGS:
             self.formatting.add(tag)
 
-    def text(self, tag: str, text: str) -> None:
+    def text(self, tag: str, text: str, attributes: Attributes) -> None:
         if tag in self.TEXT_TAGS:
             run = self.paragraph.add_run(text)
             if xmltags.BOLD in self.formatting:
@@ -116,8 +116,12 @@ class DocxBuilder(Builder):
             if xmltags.STRIKETHROUGH in self.formatting:
                 run.font.strike = True
         elif tag == xmltags.ANCHOR:
-            add_hyperlink(self.paragraph, self.link, text)
+            if self.link.startswith("#"):
+                self.paragraph.add_run(text)  # FIXME: implement internal links
+            else:
+                add_hyperlink(self.paragraph, self.link, text)
         elif tag == xmltags.IMAGE:
+            text = text[len("/work/"):]
             self.doc.add_picture(text)
 
     def end_element(self, tag: str, attributes: Attributes) -> None:
@@ -128,9 +132,6 @@ class DocxBuilder(Builder):
             self.formatting.remove(tag)
         elif tag == xmltags.MEASURE:
             self.style = None
-
-    def tail(self, tag: str, tail: str, parent: str) -> None:
-        self.text(parent, tail)
 
     def end_document(self) -> None:
         self.doc.save(self.filename)

@@ -1,4 +1,4 @@
-De {{KWALITEITSAANPAK}} heeft drie doelstellingen:
+De $KWALITEITSAANPAK$ heeft drie doelstellingen:
 
 1. Opdrachtgevers helpen bekende risico's bij softwareontwikkeling, zoals technische schuld, vertraging en defecten, zo veel mogelijk te voorkomen.
 2. ICTU helpen om software te ontwikkelen die de missie van ICTU, namelijk bijdragen aan een betere digitale overheid, ondersteunt.

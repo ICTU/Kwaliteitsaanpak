@@ -15,17 +15,22 @@ class Builder:
     def start_document(self) -> None:
         """Start the document."""
 
+    def accept_element(self, tag: str) -> bool:
+        """Return whether the builder accepts the element."""
+        return True
+
     def start_element(self, tag: str, attributes: Attributes) -> None:
         """Start element."""
 
-    def text(self, tag: str, text: str) -> None:
+    def text(self, tag: str, text: str, attributes: Attributes) -> None:
         """Element text."""
 
     def end_element(self, tag: str, attributes: Attributes) -> None:
         """End element."""
 
-    def tail(self, tag: str, tail: str) -> None:
+    def tail(self, tag: str, tail: str, parent: str, attributes: Attributes) -> None:
         """Element tail."""
+        self.text(parent, tail, attributes)
 
     def end_document(self) -> None:
         """End the document."""

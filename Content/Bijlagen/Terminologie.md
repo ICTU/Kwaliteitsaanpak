@@ -1,6 +1,6 @@
 ## Terminologie en afkortingen
 
-De onderstaande tabel bevat afkortingen en termen die voorkomen in de {{KWALITEITSAANPAK}} en bijbehorende templates.
+De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEITSAANPAK$ en bijbehorende templates.
 
 | Term/afkorting             | Toelichting                                                                                                                                                                                            |
 |:---------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

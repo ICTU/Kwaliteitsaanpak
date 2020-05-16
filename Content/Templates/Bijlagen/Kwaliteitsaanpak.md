@@ -1,4 +1,4 @@
-## De {{KWALITEITSAANPAK}}
+## De $KWALITEITSAANPAK$
 
 #include "Content/Inleiding-tekst.md"
 

@@ -15,7 +15,7 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
   - Add 2 files to the folder
     - Definitie.md - brief one paragraph definition of the guideline
     - Maatregel.md - guideline title, description, and rationale
-- Add the maatregel to the document structure definition in ./Content/DocumentDefinitions/Full/document.md
+- Add the maatregel to the document structure definition in ./DocumentDefinitions/Kwaliteitsaanpak/document.md
 
 ## Document definitions
 

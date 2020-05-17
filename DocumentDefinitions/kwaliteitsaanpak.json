@@ -1,13 +1,17 @@
 {
-    "InputFile": "build/Full/ICTU-Kwaliteitsaanpak.md",
-    "OutputPath": "build/Full/",
-    "BuildPath": "build/Full/",
+    "InputFile": "build/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
+    "BuildPath": "build/Kwaliteitsaanpak/",
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "DocumentType": "Kwaliteitsaanpak",
     "IncludeFrontPage": true,
-    "IncludeMarkdownSource": false,
     "IncludeTableOfContents": false,
-    "OutputFormats": [
-        "html"
-    ],
-    "VariablesFiles": ["DocumentDefinitions/variables.json"]}
+    "OutputFormats": {
+        "html": {
+            "OutputPath": "build/Kwaliteitsaanpak/"
+        },
+        "xlsx": {
+            "OutputPath": "dist/"
+        }
+    },
+    "VariablesFiles": ["DocumentDefinitions/variables.json"]
+}

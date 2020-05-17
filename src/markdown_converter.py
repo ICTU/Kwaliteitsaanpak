@@ -25,6 +25,7 @@ class MarkdownConverter:
         self.in_measure = False
         self.current_section_level = 0
         self.current_list_tags = []
+        self.list_counter = []  # List item counters per list level
         self.table = None
         self.variables = variables
 
@@ -38,9 +39,11 @@ class MarkdownConverter:
 
     def start_document(self, settings: Settings) -> None:
         """Start the document."""
-        title = settings.get("Title")
-        title_attribute = {xmltags.DOCUMENT_TITLE: title} if title else {}
-        self.builder.start(xmltags.DOCUMENT, title_attribute)
+        document_attributes = {}
+        for setting, tag in (("Title", xmltags.DOCUMENT_TITLE), ("Version", xmltags.DOCUMENT_VERSION)):
+            if attribute_value := settings.get(setting):
+                document_attributes[tag] = attribute_value
+        self.builder.start(xmltags.DOCUMENT, document_attributes)
         if settings["IncludeFrontPage"]:
             self.create_frontpage(settings)
         self.create_header(settings)
@@ -68,7 +71,7 @@ class MarkdownConverter:
                 self.add_element(xmltags.PARAGRAPH)
             elif document_type == "Kwaliteitsaanpak":
                 with self.element(xmltags.PARAGRAPH):
-                    self.builder.data(f"Versie {settings['Versie']}, {settings['Datum']}")
+                    self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
             self.add_element(
                 xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"})
             self.add_element(xmltags.PAGEBREAK)
@@ -160,25 +163,30 @@ class MarkdownConverter:
         """Process a bullet or numbered list."""
         self.start_lists(tag, list_level)
         self.end_lists(list_level)
-        with self.element(xmltags.LIST_ITEM):
+        self.list_counter[list_level - 1] += 1
+        number = str(self.list_counter[list_level - 1])
+        attributes = {xmltags.LIST_ITEM_NUMBER: number} if tag == xmltags.NUMBERED_LIST else {}
+        with self.element(xmltags.LIST_ITEM, attributes):
             self.process_formatted_text(line.split(" ", maxsplit=1)[1])
 
     def start_lists(self, tag: str, level: int) -> None:
         """Start (possibly nested) lists until the required level is reached."""
         while len(self.current_list_tags) < level:
             self.current_list_tags.append(tag)
+            self.list_counter.append(0)
             self.builder.start(tag, {xmltags.LIST_LEVEL: str(len(self.current_list_tags))})
 
     def end_lists(self, level: int = 0) -> None:
         """End (possibly nested) lists until the required level is reached."""
         while len(self.current_list_tags) > level:
+            self.list_counter.pop()
             self.builder.end(self.current_list_tags.pop())
 
     def process_table_row(self, line: str) -> None:
         """Process table row."""
         if cells := self.get_table_cells(line):
             if self.table is None:
-                self.process_table_header(cells)
+                self.table = Table(cells)
             else:
                 self.process_table_cells(cells)
 
@@ -193,6 +201,8 @@ class MarkdownConverter:
             self.process_table_alignment(cells)
         else:
             self.table.rows.append(cells)
+            self.table.column_widths = [
+                max(current_width, len(cell)) for current_width, cell in zip(self.table.column_widths, cells)]
 
     def process_table_alignment(self, cells: List[str]) -> None:
         """Process the alignment row of the Markdown table."""
@@ -206,17 +216,17 @@ class MarkdownConverter:
                 alignment = "left"
             self.table.column_alignment.append(alignment)
 
-    def process_table_header(self, cells: List[str]) -> None:
-        """Process the table header."""
-        self.table = Table(cells)
-
     def end_table(self) -> None:
         """Flush the table."""
 
-        def table_row(tag: str, cells):
+        def table_row(tag: str, cells, row_index: int) -> None:
             with self.element(tag):
-                for cell, alignment in zip(cells, self.table.column_alignment):
-                    with self.element(xmltags.TABLE_CELL, {xmltags.TABLE_CELL_ALIGNMENT: alignment}):
+                for column_index, (cell, alignment, width) in enumerate(
+                        zip(cells, self.table.column_alignment, self.table.column_widths)):
+                    attributes = {
+                        xmltags.TABLE_CELL_ALIGNMENT: alignment, xmltags.TABLE_CELL_COLUMN: str(column_index),
+                        xmltags.TABLE_CELL_ROW: str(row_index), xmltags.TABLE_CELL_WIDTH: str(width)}
+                    with self.element(xmltags.TABLE_CELL, attributes):
                         self.process_formatted_text(cell)
 
         if self.table is None:
@@ -224,9 +234,9 @@ class MarkdownConverter:
         table_attributes = {
             xmltags.TABLE_COLUMNS: str(len(self.table.header_cells)), xmltags.TABLE_ROWS: str(len(self.table.rows))}
         with self.element(xmltags.TABLE, table_attributes):
-            table_row(xmltags.TABLE_HEADER_ROW, self.table.header_cells)
-            for row in self.table.rows:
-                table_row(xmltags.TABLE_ROW, row)
+            table_row(xmltags.TABLE_HEADER_ROW, self.table.header_cells, 0)
+            for row_index, row in enumerate(self.table.rows):
+                table_row(xmltags.TABLE_ROW, row, row_index + 1)
         self.table = None
 
     def process_formatted_text(self, line: str) -> None:

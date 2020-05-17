@@ -1,15 +1,15 @@
 {
     "InputFile": "build/Templates/Projectvoorstel-Voorfase/Template-Projectvoorstel-Voorfase.md",
-    "OutputPath": "dist/",
     "BuildPath": "build/Templates/Projectvoorstel-Voorfase/",
     "Title": "Projectvoorstel Voorfase",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
     "IncludeFrontPage": true,
-    "IncludeMarkdownSource": false,
     "IncludeTableOfContents": true,
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
-    "OutputFormats": [
-        "docx"
-    ],
+    "OutputFormats": {
+        "docx": {
+            "OutputPath": "dist/"
+        }
+    },
     "VariablesFiles": ["DocumentDefinitions/variables.json"]}

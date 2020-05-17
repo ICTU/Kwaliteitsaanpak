@@ -11,6 +11,7 @@ class Builder:
     """Abstract builder."""
     def __init__(self, filename: pathlib.Path) -> None:
         self.filename = filename
+        self.tag_path = []
 
     def start_document(self) -> None:
         """Start the document."""
@@ -21,12 +22,14 @@ class Builder:
 
     def start_element(self, tag: str, attributes: Attributes) -> None:
         """Start element."""
+        self.tag_path.append(tag)
 
     def text(self, tag: str, text: str, attributes: Attributes) -> None:
         """Element text."""
 
     def end_element(self, tag: str, attributes: Attributes) -> None:
         """End element."""
+        self.tag_path.pop()
 
     def tail(self, tag: str, tail: str, parent: str, attributes: Attributes) -> None:
         """Element tail."""

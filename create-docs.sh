@@ -1,5 +1,6 @@
 #!/bin/bash
-npm i
+
+# npm i
 
 mkdir -p build
 
@@ -127,24 +128,28 @@ function generate-template
 python3 create-dictionary.py > $MAATREGEL_DICTIONARY
 python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
-generate-kwaliteitsaanpak Full ICTU-Kwaliteitsaanpak "$KA_TITLE"
+generate-kwaliteitsaanpak Kwaliteitsaanpak ICTU-Kwaliteitsaanpak "$KA_TITLE"
 
 generate-template Template Template-Generiek "Generiek template"
-generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
-generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
-generate-template HLD Template-High-Level-Design "High-Level Design"
-generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
-generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
-generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
-generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
-
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/generiek-template.json
-python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/detailtestplan.json
-python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/globaal-functioneel-ontwerp.json
-python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/high-level-design.json
-python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsplan.json
-python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/niet-functionele-eisen.json
-python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/softwarearchitectuurdocument.json
-python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/projectvoorstel-voorfase.json
 
-python3 create-checklist.py "$KA_TITLE" "$KA_VERSION"
+generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/detailtestplan.json
+
+generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/globaal-functioneel-ontwerp.json
+
+generate-template HLD Template-High-Level-Design "High-Level Design"
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/high-level-design.json
+
+generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsplan.json
+
+generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/niet-functionele-eisen.json
+
+generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/softwarearchitectuurdocument.json
+
+generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
+python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/projectvoorstel-voorfase.json

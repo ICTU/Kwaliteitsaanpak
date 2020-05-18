@@ -1,6 +1,7 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Template/",
+    "OutputPath": "dist",
     "Title": "{Documentnaam}",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
@@ -10,7 +11,7 @@
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "dist/Template-Generiek.docx"
+            "OutputFile": "Template-Generiek.docx"
         }
     },
-    "VariablesFiles": ["DocumentDefinitions/variables.json"]}
+    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

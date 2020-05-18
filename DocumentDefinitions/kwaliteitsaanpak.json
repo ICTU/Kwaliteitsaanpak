@@ -1,17 +1,18 @@
 {
     "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
     "BuildPath": "build/Kwaliteitsaanpak/",
+    "OutputPath": "dist",
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "DocumentType": "Kwaliteitsaanpak",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": false,
     "OutputFormats": {
-        "html": {
-            "OutputPath": "build/Kwaliteitsaanpak/"
+        "pdf": {
+            "OutputFile": "ICTU-Kwaliteitsaanpak.pdf"
         },
         "xlsx": {
-            "OutputFile": "dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx"
+            "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx"
         }
     },
-    "VariablesFiles": ["DocumentDefinitions/variables.json"]
+    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]
 }

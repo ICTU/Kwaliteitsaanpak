@@ -1,6 +1,7 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/HLD/",
+    "OutputPath": "dist",
     "Title": "High-Level Design",
     "Subtitle": "{Productnaam}",
     "DocumentType": "Template",
@@ -10,7 +11,7 @@
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "dist/Template-High-Level-Design.docx"
+            "OutputFile": "Template-High-Level-Design.docx"
         }
     },
-    "VariablesFiles": ["DocumentDefinitions/variables.json"]}
+    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

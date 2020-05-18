@@ -1,4 +1,4 @@
-## M21: Het project selecteert medewerkers op basis van kwaliteit
+## $M21$
 
 #include "Content/Maatregelen/M21/Definitie.md"
 

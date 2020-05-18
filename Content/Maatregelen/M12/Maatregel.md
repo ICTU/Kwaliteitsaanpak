@@ -1,8 +1,8 @@
-## M12: ICTU publiceert nieuwe versies van de Kwaliteitsaanpak en normen periodiek en op een vaste locatie
+## $M12$
 
 #include "Content/Maatregelen/M12/Definitie.md"
 
-De {{TITLE}} is te vinden op de ICTU-website ([https://www.ictu.nl/kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak)) en, inclusief templates en self-assessment checklist, op het ICTU Portaal (Sharepoint). Publicatie van een nieuwe versie wordt aangekondigd via een e-mail naar belanghebbenden en de 'Zeepkist', een terugkerende informatiebijeenkomst van de afdeling ISR.
+De $KWALITEITSAANPAK$ is te vinden op de ICTU-website ([https://www.ictu.nl/kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak)) en, inclusief templates en self-assessment checklist, op het ICTU Portaal (Sharepoint). Publicatie van een nieuwe versie wordt aangekondigd via een e-mail naar belanghebbenden en de 'Zeepkist', een terugkerende informatiebijeenkomst van de afdeling ISR.
 
 ### Rationale
 

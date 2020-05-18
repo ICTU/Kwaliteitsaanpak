@@ -1,4 +1,4 @@
-## M04: Het project borgt de correcte werking van het product met geautomatiseerde regressietests
+## $M04$
 
 #include "Content/Maatregelen/M04/Definitie.md"
 
@@ -12,4 +12,4 @@ Handmatig uitgevoerde regressietests zijn arbeidsintensief, foutgevoelig en afha
 
 Zie ook:
 
-* {{M07}}
+* [$M07$](#m07)

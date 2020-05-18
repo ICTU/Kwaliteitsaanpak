@@ -1,101 +1,30 @@
 #!/bin/bash
 
-# npm i
-
 mkdir -p build
+mkdir -p dist
 
 KA_TITLE="ICTU Kwaliteitsaanpak Softwareontwikkeling"
 KA_VERSION="2.1.0-unreleased"
 
 OUTPUT_PATH="dist"  # Folder to write the final documents to
 
-MAATREGEL_DICTIONARY="build/maatregel-dictionary.txt"
-MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
-
-# Map symbolic references, like title and Maatregelen, to their mapped content from a dictionary file
-# map-refs 1:<source file> 2:<output file> 3:<dictionary file>
-function map-refsd
-{
-    echo "--- map references in {$1} using {$3} to create {$2}"
-    python3 map.py $1 $3 > $2
-}
-
-# Expand MD file
-# expand-md 1:<source md file> 2:<output file> 3:<dictionary file>
-function expand-md
-{
-    echo "--- expand {$1} into {$2} using dictionary {$3}"
-
-    JSON="$2.json"
-    TMP="$2.tmp"
-
-    echo "---- creating temporary build config {$JSON}"
-    echo "{\"build\" : \"$TMP\", \"files\" : [\"$1\"] }" > $JSON
-    echo "---- importing MD files in {$1} creating {$TMP}"
-    node node_modules/markdown-include/bin/cli.js $JSON
-
-    map-refsd $TMP $2 $3
-}
-
-# Create main document for a template
-# create-template 1:<template document> 2:<template folder name> 3:<output file>
-function create-template
-{
-    echo "--- creating template {$3} from {$1} refering to {$2}"
-    sed s/{{TEMPLATE-FOLDER}}/"$2"/g $1 > $3
-}
-
-# Expand MD document into folder $1, creating $2.md, with title $3 and header $4, and MD document file $5 using dictionary file $6.
-# expand 1:<output folder> 2:<name of document output without extension>
-#        3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
-function expand
-{
-    BUILD_PATH="build/$1"
-    DICTIONARY="$BUILD_PATH/dict.txt"
-    EXPANDED="$BUILD_PATH/$2.md"
-    TITLE="$3"
-    HEADER="$4"
-    DOCUMENT_MD="$5"
-
-    echo "-- generate: $2"
-
-    # Create directories
-    echo "--- build path: $BUILD_PATH"
-    mkdir -p $BUILD_PATH
-    echo "--- output path: $OUTPUT_PATH"
-    mkdir -p $OUTPUT_PATH
-
-    # Create dictionary
-    cat $6 > $DICTIONARY
-    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n" >> $DICTIONARY
-    echo "--- dictionary created: $DICTIONARY"
-
-    # Expand MD file
-    expand-md $DOCUMENT_MD "$EXPANDED" "$DICTIONARY"
-}
-
 # Generate into folder $1 the document $2.pdf, titled $3.
 # generate-kwaliteitsaanpak 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
 function generate-kwaliteitsaanpak
 {
     BUILD_PATH="build/$1"
-    TITLE="$3"
-    HEADER="$TITLE"
+    HEADER="$3"
     COVER_HTML_BUILD="$BUILD_PATH/ICTU-Kwaliteitsaanpak.cover.html"
-    DOC_MD="DocumentDefinitions/$1/document.md"
-    DICTIONARY="$BUILD_PATH/dict.txt"
-    EXPANDED="$BUILD_PATH/$2.md"
+    DOC_MD="DocumentDefinitions/$1/ICTU-Kwaliteitsaanpak.md"
     HTML_BUILD="$BUILD_PATH/ICTU-Kwaliteitsaanpak.html"
     HEADER_HTML_BUILD="$BUILD_PATH/header.html"
     PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
-
-    expand $1 $2 "$TITLE" "$HEADER" $DOC_MD $MAATREGEL_DICTIONARY_LINKS
 
     # PDF generation
     # Body
     python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsaanpak.json
     # Header
-    map-refsd DocumentDefinitions/Shared/header.html "$HEADER_HTML_BUILD" $DICTIONARY
+    python -c "import sys; print(open('DocumentDefinitions/Shared/header.html').read() % sys.argv[1])" "$KA_TITLE" > $HEADER_HTML_BUILD
     # Create pdf
     docker-compose run wkhtmltopdf -c "wkhtmltopdf \
         --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
@@ -106,50 +35,20 @@ function generate-kwaliteitsaanpak
         $HTML_BUILD $PDF_OUTPUT"
 }
 
-# Generate into folder Templates/$1 the template document $2.pdf, titled $3.
-# generate-template 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
-function generate-template
-{
-    TITLE="$3"
-    HEADER="$TITLE {projectnaam} {versie}"
-    TEMPLATE_TEMPLATE="DocumentDefinitions/Templates/document-template.md"
-    TEMPLATE_PATH="Templates/$1"
-    BUILD_PATH="build/$TEMPLATE_PATH"
-    DOC_MD="$BUILD_PATH/document.md"
-    DOCX_REF="DocumentDefinitions/reference.docx"
-
-    echo "--- template build path: $BUILD_PATH"
-    mkdir -p $BUILD_PATH
-    create-template "$TEMPLATE_TEMPLATE" $1 $DOC_MD
-
-    expand $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
-}
-
-python3 create-dictionary.py > $MAATREGEL_DICTIONARY
-python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
-
 generate-kwaliteitsaanpak Kwaliteitsaanpak ICTU-Kwaliteitsaanpak "$KA_TITLE"
 
-generate-template Template Template-Generiek "Generiek template"
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/generiek-template.json
 
-generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/detailtestplan.json
 
-generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/globaal-functioneel-ontwerp.json
 
-generate-template HLD Template-High-Level-Design "High-Level Design"
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/high-level-design.json
 
-generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsplan.json
 
-generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/niet-functionele-eisen.json
 
-generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/softwarearchitectuurdocument.json
 
-generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/projectvoorstel-voorfase.json

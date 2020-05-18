@@ -1,4 +1,4 @@
-## M01: Het project levert in elke fase vastgestelde informatie over het product op
+## $M01$
 
 #include "Content/Maatregelen/M01/Definitie.md"
 
@@ -79,7 +79,7 @@ De deploymentdocumentatie bevat informatie over de eisen die een applicatie stel
 Het kwaliteitsplan beschrijft welke kwaliteitsmaatregelen het project treft om de niet-functionele eisen te realiseren.
 
 **Vrijgaveadvies**
-Voor elke major release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook {{M26}} en {{M16}}. Indien er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.
+Voor elke major release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Indien er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.
 
 **Overzicht**
 De onderstaande tabel bevat de hierboven genoemde producten en geeft aan in welke fase ze van belang zijn en worden opgeleverd, ook als ze zijn opgesteld door externe auteurs.
@@ -129,4 +129,4 @@ In een PIA legt de vragende organisatie vast wat de privacy-gevoeligheid is van 
 
 Zie ook:
 
-* {{M14}}
+* [$M14$](#m14)

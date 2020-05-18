@@ -1,4 +1,4 @@
-## M16: Het project gebruikt tools voor vastgestelde taken
+## $M16$
 
 #include "Content/Maatregelen/M16/Definitie.md"
 

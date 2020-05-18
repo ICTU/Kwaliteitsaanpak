@@ -1,15 +1,16 @@
 {
-    "InputFile": "build/Templates/SAD/Template-Software-architectuurdocument.md",
+    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/SAD/",
     "Title": "Software-architectuurdocument",
     "Subtitle": "{Productnaam}",
     "DocumentType": "Template",
+    "TemplateFolder": "SAD",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputPath": "dist/"
+            "OutputFile": "dist/Template-Software-architectuurdocument.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/variables.json"]

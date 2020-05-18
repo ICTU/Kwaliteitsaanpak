@@ -12,7 +12,7 @@ Hieronder volgt een aantal ontwerpprincipes die binnen software engineering als 
 * **Low coupling, high cohesion**: Modules zijn zo onafhankelijk van elkaar als mogelijk (low coupling); de interne onderdelen van een module hebben juist een grote samenhang (high cohesion). Low coupling zorgt ervoor dat modules individueel gewijzigd kunnen worden zonder negatieve effecten op de rest van de applicatie, vergelijkbaar met Abstractie. High coupling verhoogt de eenvoud en de onderhoudbaarheid van de applicatie.
 * **Separation of concerns**: Elke module heeft precies één taak of verantwoordelijkheid ("concern").
 
-NB. De term "module" hierboven is generiek bedoeld en duidt op alle vormen waarin delen van de software kunnen worden gebundeld, zoals componenten, klassen en methoden.
+De term "module" hierboven is generiek bedoeld en duidt op alle vormen waarin delen van de software kunnen worden gebundeld, zoals componenten, klassen en methoden.
 
 ## Gelaagde applicatiearchitectuur
 

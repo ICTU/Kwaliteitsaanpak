@@ -1,15 +1,16 @@
 {
-    "InputFile": "build/Templates/GFO/Template-Globaal-Functioneel-Ontwerp.md",
+    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/GFO/",
     "Title": "Globaal Functioneel Ontwerp",
     "Subtitle": "{Productnaam}",
     "DocumentType": "Template",
+    "TemplateFolder": "GFO",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputPath": "dist/"
+            "OutputFile": "dist/Template-Globaal-Functioneel-Ontwerp.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/variables.json"]}

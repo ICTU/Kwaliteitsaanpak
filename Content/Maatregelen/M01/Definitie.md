@@ -1,2 +1,2 @@
-@{{{M01-no-link}}
+@{**$M01$**
  Voor een goede start of afronding van elke projectfase is specifieke informatie nodig. De voorfase levert inzicht in de functionele en niet-functionele eisen, doelarchitectuur, testplannen, operationele risico's, en benodigde kwaliteitsmaatregelen. Deze informatie wordt tijdens de realisatiefase waar nodig bijgewerkt. De realisatiefase levert één of meerdere werkende versies van de software met regressietests, aangevuld met een vrijgaveadvies, release notes en installatiedocumentatie.}@

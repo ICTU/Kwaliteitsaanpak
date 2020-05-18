@@ -1,15 +1,16 @@
 {
-    "InputFile": "build/Templates/Template/Template-Generiek.md",
+    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Template/",
     "Title": "{Documentnaam}",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
+    "TemplateFolder": "Template",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputPath": "dist/"
+            "OutputFile": "dist/Template-Generiek.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/variables.json"]}

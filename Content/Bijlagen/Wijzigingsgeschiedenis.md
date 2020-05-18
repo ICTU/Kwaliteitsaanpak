@@ -4,6 +4,7 @@
 
 * Generiek template toegevoegd dat als basis kan dienen voor documenten waarvoor nog geen specifiek template is.
 * Paragrafen 1.2, 1.5 en 1.6 van het kwaliteitsplantemplate uitgebreid met standaard teksten.
+* M30 ontbrak in de bijlage met het overzicht van alle maatregelen.
 
 ### Versie 2.0.0, 29 april 2020
 

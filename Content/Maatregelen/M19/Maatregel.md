@@ -1,4 +1,4 @@
-## M19: ICTU biedt projecten een afgeschermde digitale omgeving
+## $M19$
 
 #include "Content/Maatregelen/M19/Definitie.md"
 

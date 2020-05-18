@@ -1,15 +1,16 @@
 {
-    "InputFile": "build/Templates/HLD/Template-High-Level-Design.md",
+    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/HLD/",
     "Title": "High-Level Design",
     "Subtitle": "{Productnaam}",
     "DocumentType": "Template",
+    "TemplateFolder": "HLD",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputPath": "dist/"
+            "OutputFile": "dist/Template-High-Level-Design.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/variables.json"]}

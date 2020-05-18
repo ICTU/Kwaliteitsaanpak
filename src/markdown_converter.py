@@ -269,7 +269,8 @@ class MarkdownConverter:
                     format_found = True
                     self.flush(seen)
                     seen = ""
-                    self.add_element(xmltags.ANCHOR, match.group(1), {xmltags.ANCHOR_LINK: match.group(2)})
+                    with self.element(xmltags.ANCHOR, {xmltags.ANCHOR_LINK: match.group(2)}):
+                        self.process_formatted_text(match.group(1))
                     line = line[len(match.group(0)):]
                 elif match := re.match(markdown_syntax.VARIABLE_USE_PATTERN, line):
                     format_found = True

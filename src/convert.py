@@ -48,8 +48,7 @@ def main(settings_filename: str, version: str) -> None:
         variables.update(cast(Variables, read_json(variable_file)))
     variables["VERSIE"] = settings["Version"] = version
     variables["DATUM"] = settings["Date"] = datetime.date.today().strftime('%d-%m-%Y')
-    logging.info(
-        "Converting with settings:\n%s\nand variables:\n%s", pprint.pformat(settings), pprint.pformat(variables))
+    logging.info("Converting with settings:\n%s", pprint.pformat(settings))
     markdown = read_markdown(settings)
     xml = MarkdownConverter(variables).convert(markdown, settings)
     write_xml(xml, settings)

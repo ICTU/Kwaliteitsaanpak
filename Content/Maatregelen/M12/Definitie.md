@@ -1,2 +1,2 @@
-@{{{M12-no-link}}
+@{**$M12$**
 ICTU publiceert periodiek een nieuwe versie van de Kwaliteitsaanpak en/of de kwaliteitsnormen op een vaste, bekende locatie.}@

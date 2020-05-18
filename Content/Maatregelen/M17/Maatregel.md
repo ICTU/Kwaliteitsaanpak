@@ -1,4 +1,4 @@
-## M17: ICTU zorgt dat een aantal vastgestelde tools snel beschikbaar is voor een project
+## $M17$
 
 #include "Content/Maatregelen/M17/Definitie.md"
 
@@ -18,4 +18,4 @@ Snelle beschikbaarheid van tools betekent dat projecten snel kunnen beginnen. De
 
 Zie ook:
 
-* {{M16}}
+* [$M16$](#m16)

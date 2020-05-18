@@ -1,4 +1,4 @@
-## M27: Het project sluit projectfasen en zichzelf expliciet af
+## $M27$
 
 #include "Content/Maatregelen/M27/Definitie.md"
 

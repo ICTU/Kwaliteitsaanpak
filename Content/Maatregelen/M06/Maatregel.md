@@ -1,4 +1,4 @@
-## M06: Het project meet kwaliteitsnormen geautomatiseerd en frequent
+## $M06$
 
 #include "Content/Maatregelen/M06/Definitie.md"
 
@@ -12,4 +12,4 @@ Vaak meten maakt een vrijwel actueel inzicht op elk moment mogelijk. Projectlede
 
 Zie ook:
 
-* {{M10}}
+* [$M10$](#m10)

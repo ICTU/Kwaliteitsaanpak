@@ -1,4 +1,4 @@
-## M05: Het project hanteert een iteratief en incrementeel ontwikkelproces
+## $M05$
 
 #include "Content/Maatregelen/M05/Definitie.md"
 
@@ -20,5 +20,5 @@ De incrementele oplevering levert vrijwel iedere iteratie toegevoegde waarde en 
 Zie ook:
 
 * [$M01$](#m01)
-* {{M02}}
-* {{M16}}
+* [$M02$](#m02)
+* [$M16$](#m16)

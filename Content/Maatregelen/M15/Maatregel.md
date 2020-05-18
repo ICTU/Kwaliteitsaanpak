@@ -1,4 +1,4 @@
-## M15: ICTU geeft de voorkeur aan open source tools
+## $M15$
 
 #include "Content/Maatregelen/M15/Definitie.md"
 

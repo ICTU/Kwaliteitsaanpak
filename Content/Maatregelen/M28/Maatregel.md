@@ -1,4 +1,4 @@
-## M28: Het project voert periodiek een self-assessment uit ten aanzien van de Kwaliteitsaanpak
+## $M28$
 
 #include "Content/Maatregelen/M28/Definitie.md"
 

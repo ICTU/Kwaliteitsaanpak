@@ -9,32 +9,18 @@ KA_VERSION="2.1.0-unreleased"
 
 OUTPUT_PATH="dist"  # Folder to write the final documents to
 
-MAATREGEL_DICTIONARY="build/maatregel-dictionary.txt"
-MAATREGEL_DICTIONARY_LINKS="build/maatregel-dictionary-linked.txt"
-
-# Map symbolic references, like title and Maatregelen, to their mapped content from a dictionary file
-# map-refs 1:<source file> 2:<output file> 3:<dictionary file>
-function map-refsd
-{
-    echo "--- map references in {$1} using {$3} to create {$2}"
-    python3 map.py $1 $3 > $2
-}
-
 # Expand MD file
-# expand-md 1:<source md file> 2:<output file> 3:<dictionary file>
+# expand-md 1:<source md file> 2:<output file>
 function expand-md
 {
-    echo "--- expand {$1} into {$2} using dictionary {$3}"
+    echo "--- expand {$1} into {$2}"
 
     JSON="$2.json"
-    TMP="$2.tmp"
 
     echo "---- creating temporary build config {$JSON}"
-    echo "{\"build\" : \"$TMP\", \"files\" : [\"$1\"] }" > $JSON
-    echo "---- importing MD files in {$1} creating {$TMP}"
+    echo "{\"build\" : \"$2\", \"files\" : [\"$1\"] }" > $JSON
+    echo "---- importing MD files in {$1} creating {$2}"
     node node_modules/markdown-include/bin/cli.js $JSON
-
-    map-refsd $TMP $2 $3
 }
 
 # Create main document for a template
@@ -45,17 +31,14 @@ function create-template
     sed s/{{TEMPLATE-FOLDER}}/"$2"/g $1 > $3
 }
 
-# Expand MD document into folder $1, creating $2.md, with title $3 and header $4, and MD document file $5 using dictionary file $6.
-# expand 1:<output folder> 2:<name of document output without extension>
-#        3:<document title> 4:<document header> 5:<cover md> 6:<document md> 7:<dictionary file>
+# Expand MD document into folder $1, creating $2.md, and MD document file $3.
+# expand 1:<output folder> 2:<name of document output without extension> 3:<document md>
 function expand
 {
     BUILD_PATH="build/$1"
     DICTIONARY="$BUILD_PATH/dict.txt"
     EXPANDED="$BUILD_PATH/$2.md"
-    TITLE="$3"
-    HEADER="$4"
-    DOCUMENT_MD="$5"
+    DOCUMENT_MD="$3"
 
     echo "-- generate: $2"
 
@@ -65,13 +48,8 @@ function expand
     echo "--- output path: $OUTPUT_PATH"
     mkdir -p $OUTPUT_PATH
 
-    # Create dictionary
-    cat $6 > $DICTIONARY
-    echo -e "{{TITLE}}=$TITLE\n{{HEADER}}=$HEADER\n" >> $DICTIONARY
-    echo "--- dictionary created: $DICTIONARY"
-
     # Expand MD file
-    expand-md $DOCUMENT_MD "$EXPANDED" "$DICTIONARY"
+    expand-md $DOCUMENT_MD "$EXPANDED"
 }
 
 # Generate into folder $1 the document $2.pdf, titled $3.
@@ -89,13 +67,13 @@ function generate-kwaliteitsaanpak
     HEADER_HTML_BUILD="$BUILD_PATH/header.html"
     PDF_OUTPUT="$OUTPUT_PATH/$2.pdf"
 
-    expand $1 $2 "$TITLE" "$HEADER" $DOC_MD $MAATREGEL_DICTIONARY_LINKS
+    expand $1 $2 $DOC_MD
 
     # PDF generation
     # Body
     python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsaanpak.json
     # Header
-    map-refsd DocumentDefinitions/Shared/header.html "$HEADER_HTML_BUILD" $DICTIONARY
+    python -c "import sys; print(open('DocumentDefinitions/Shared/header.html').read() % sys.argv[1])" "$HEADER" > $HEADER_HTML_BUILD
     # Create pdf
     docker-compose run wkhtmltopdf -c "wkhtmltopdf \
         --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
@@ -116,17 +94,13 @@ function generate-template
     TEMPLATE_PATH="Templates/$1"
     BUILD_PATH="build/$TEMPLATE_PATH"
     DOC_MD="$BUILD_PATH/document.md"
-    DOCX_REF="DocumentDefinitions/reference.docx"
 
     echo "--- template build path: $BUILD_PATH"
     mkdir -p $BUILD_PATH
     create-template "$TEMPLATE_TEMPLATE" $1 $DOC_MD
 
-    expand $TEMPLATE_PATH $2 "$TITLE" "$HEADER" $DOC_MD $MAATREGEL_DICTIONARY $DOCX_REF
+    expand $TEMPLATE_PATH $2 $DOC_MD
 }
-
-python3 create-dictionary.py > $MAATREGEL_DICTIONARY
-python3 create-dictionary.py --link > $MAATREGEL_DICTIONARY_LINKS
 
 generate-kwaliteitsaanpak Kwaliteitsaanpak ICTU-Kwaliteitsaanpak "$KA_TITLE"
 

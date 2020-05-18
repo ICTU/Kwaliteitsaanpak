@@ -1,4 +1,4 @@
-## M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren
+## $M07$
 
 #include "Content/Maatregelen/M07/Definitie.md"
 
@@ -30,4 +30,4 @@ Software incrementeel opleveren vereist dat de software frequent gebouwd, getest
 
 Zie ook:
 
-* {{M05}}
+* [$M05$](#m05)

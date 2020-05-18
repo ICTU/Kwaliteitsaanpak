@@ -1,4 +1,4 @@
-## M11: ICTU beheert, onderhoudt en implementeert de Kwaliteitsaanpak en kwaliteitsnormen
+## $M11$
 
 #include "Content/Maatregelen/M11/Definitie.md"
 

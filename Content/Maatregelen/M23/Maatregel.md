@@ -1,4 +1,4 @@
-## M23: Het project zorgt voor de aanwezigheid van ervaring met de Kwaliteitsaanpak
+## $M23$
 
 #include "Content/Maatregelen/M23/Definitie.md"
 

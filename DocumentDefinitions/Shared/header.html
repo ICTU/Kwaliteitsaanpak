@@ -21,15 +21,15 @@
                     }
                 }
                 // Set the header and the page number so that the page number is on the outside
-                const title = "{{HEADER}}";
+                const title = "%s";
                 const page = vars["page"];
-                document.getElementById("left").textContent = page % 2 == 0 ? page : title;
-                document.getElementById("right").textContent = page % 2 == 0 ? title : page;
+                document.getElementById("left").textContent = page %% 2 == 0 ? page : title;
+                document.getElementById("right").textContent = page %% 2 == 0 ? title : page;
             }
         </script>
     </head>
     <body style="border:0; margin: 0; font-family: 'Muli'; font-size: 10pt; color: #6F6F6F" onload="subst()">
-        <table width="100%">
+        <table width="100%%">
             <tr>
                 <td id="left" style="text-align: left"></td>
                 <td id="right" style="text-align: right"></td>

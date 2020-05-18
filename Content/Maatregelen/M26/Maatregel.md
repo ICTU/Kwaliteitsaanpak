@@ -1,4 +1,4 @@
-## M26: Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen
+## $M26$
 
 #include "Content/Maatregelen/M26/Definitie.md"
 
@@ -18,5 +18,5 @@ Door het inschakelen van actuele, specifieke expertise wordt de kans vergroot da
 
 Zie ook:
 
-* {{M05}}
-* {{M16}}
+* [$M05$](#m05)
+* [$M16$](#m16)

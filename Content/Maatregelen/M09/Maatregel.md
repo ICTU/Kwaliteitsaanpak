@@ -1,4 +1,4 @@
-## M09: Het project implementeert nieuwe versies van de Kwaliteitsaanpak binnen de gestelde termijn
+## $M09$
 
 #include "Content/Maatregelen/M09/Definitie.md"
 
@@ -16,5 +16,5 @@ Omdat implementatie van maatregelen in een project tijd kost is de self-assessme
 
 Zie ook:
 
-* {{M12}} voor het tot stand komen van de gestelde termijnen.
-* {{M28}}
+* [$M12$](#m12) voor het tot stand komen van de gestelde termijnen.
+* [$M28$](#m28)

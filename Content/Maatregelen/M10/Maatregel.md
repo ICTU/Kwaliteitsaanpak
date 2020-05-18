@@ -1,4 +1,4 @@
-## M10: Het project kent een wekelijks projectoverleg
+## $M10$
 
 #include "Content/Maatregelen/M10/Definitie.md"
 
@@ -31,4 +31,4 @@ Het doel van het periodiek projectoverleg is alle directe betrokkenen, breder da
 
 Zie ook:
 
-* {{M30}}
+* [$M30$](#m30)

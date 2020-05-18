@@ -1,4 +1,4 @@
-## M14: Het project is gesplitst in een voorfase en een realisatiefase
+## $M14$
 
 #include "Content/Maatregelen/M14/Definitie.md"
 

@@ -6,7 +6,7 @@ De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende het gehele p
 
 ### Wekelijks projectoverleg
 
-Het project houdt een wekelijks intern projectoverleg (IPO) waarin planning, voortgang, kwaliteitsrapportage, acties, risico's en overige relevante zaken worden besproken ({{M10}}). Het doel is om informatie uit te wisselen binnen het project, belemmeringen voor de voortgang die het team niet zelf kan oplossen te melden en eventueel te besluiten over escalaties buiten het project.
+Het project houdt een wekelijks intern projectoverleg (IPO) waarin planning, voortgang, kwaliteitsrapportage, acties, risico's en overige relevante zaken worden besproken ($M10$). Het doel is om informatie uit te wisselen binnen het project, belemmeringen voor de voortgang die het team niet zelf kan oplossen te melden en eventueel te besluiten over escalaties buiten het project.
 
 De IPO-agenda bevat minimaal: mededelingen, kwaliteit, voortgang, risico's, acties en rondvraag. Aanwezig zijn in ieder geval de projectleider, de software delivery manager, de kwaliteitsmanager, de Scrum master en een vertegenwoordiger uit elk projectteam.
 
@@ -22,7 +22,7 @@ Het project houdt een risicolog bij. De risicolog wordt digitaal bijgehouden doo
 
 ### Werkwijze
 
-Voor de realisatiefase wordt de agile ontwikkelmethode Scrum gebruikt ({{M05}}). Voor de beheerfase wordt gebruik gemaakt van de DevOps-principes. Afwijkingen hierop worden alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
+Voor de realisatiefase wordt de agile ontwikkelmethode Scrum gebruikt ($M05$). Voor de beheerfase wordt gebruik gemaakt van de DevOps-principes. Afwijkingen hierop worden alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
 
 De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsdoelstellingen niet tijdig worden behaald:
 

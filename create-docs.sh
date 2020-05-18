@@ -84,12 +84,10 @@ function generate-kwaliteitsaanpak
         $HTML_BUILD $PDF_OUTPUT"
 }
 
-# Generate into folder Templates/$1 the template document $2.pdf, titled $3.
-# generate-template 1:<output folder> 2:<name of document output without PDF extension> 3:<document title>
+# Generate into folder Templates/$1 the template document $2.pdf
+# generate-template 1:<output folder> 2:<name of document output without PDF extension>
 function generate-template
 {
-    TITLE="$3"
-    HEADER="$TITLE {projectnaam} {versie}"
     TEMPLATE_TEMPLATE="DocumentDefinitions/Templates/document-template.md"
     TEMPLATE_PATH="Templates/$1"
     BUILD_PATH="build/$TEMPLATE_PATH"
@@ -104,26 +102,26 @@ function generate-template
 
 generate-kwaliteitsaanpak Kwaliteitsaanpak ICTU-Kwaliteitsaanpak "$KA_TITLE"
 
-generate-template Template Template-Generiek "Generiek template"
+generate-template Template Template-Generiek
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/generiek-template.json
 
-generate-template Detailtestplan Template-Detailtestplan "Detailtestplan"
+generate-template Detailtestplan Template-Detailtestplan
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/detailtestplan.json
 
-generate-template GFO Template-Globaal-Functioneel-Ontwerp "Globaal Functioneel Ontwerp"
+generate-template GFO Template-Globaal-Functioneel-Ontwerp
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/globaal-functioneel-ontwerp.json
 
-generate-template HLD Template-High-Level-Design "High-Level Design"
+generate-template HLD Template-High-Level-Design
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/high-level-design.json
 
-generate-template Kwaliteitsplan Template-Kwaliteitsplan "Kwaliteitsplan"
+generate-template Kwaliteitsplan Template-Kwaliteitsplan
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/kwaliteitsplan.json
 
-generate-template NFE Template-Niet-Functionele-Eisen "Niet-Functionele Eisen"
+generate-template NFE Template-Niet-Functionele-Eisen
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/niet-functionele-eisen.json
 
-generate-template SAD Template-Software-architectuurdocument "Software-architectuurdocument"
+generate-template SAD Template-Software-architectuurdocument
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/softwarearchitectuurdocument.json
 
-generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase "Projectvoorstel Voorfase"
+generate-template Projectvoorstel-Voorfase Template-Projectvoorstel-Voorfase
 python3 src/convert.py --log INFO --version $KA_VERSION DocumentDefinitions/projectvoorstel-voorfase.json

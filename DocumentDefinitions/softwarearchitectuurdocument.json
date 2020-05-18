@@ -1,6 +1,7 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/SAD/",
+    "OutputPath": "dist",
     "Title": "Software-architectuurdocument",
     "Subtitle": "{Productnaam}",
     "DocumentType": "Template",
@@ -10,8 +11,8 @@
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "dist/Template-Software-architectuurdocument.docx"
+            "OutputFile": "Template-Software-architectuurdocument.docx"
         }
     },
-    "VariablesFiles": ["DocumentDefinitions/variables.json"]
+    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]
 }

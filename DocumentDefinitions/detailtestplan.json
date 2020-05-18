@@ -1,6 +1,7 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Detailtestplan/",
+    "OutputPath": "dist",
     "Title": "Detailtestplan",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
@@ -10,8 +11,8 @@
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "dist/Template-Detailtestplan.docx"
+            "OutputFile": "Template-Detailtestplan.docx"
         }
     },
-    "VariablesFiles": ["DocumentDefinitions/variables.json"]
+    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]
 }

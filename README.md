@@ -27,12 +27,11 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
   - cover.md - cover material (front page)
   - cover.css - styling
 - Shared material such as headers, footers, and stylesheets are in the ./DocumentDefinitions/Shared folder
-- The script instructions for building a new template have to be added to ./create-docs.sh
 
 ## Generating the documentation (pdf, docx, and xlsx)
 
 - Make sure you have Docker and Docker-compose.
 - Clone this repository
 - Run "docker-compose up ka"
-  - The document patch version is updated in create-docs.sh
+  - The document patch version is updated in docker-compose.yml
   - The pdf, docx and xlsx versions of the documents are created in the dist folder

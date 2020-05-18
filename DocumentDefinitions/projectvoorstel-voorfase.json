@@ -1,6 +1,7 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Projectvoorstel-Voorfase/",
+    "OutputPath": "dist",
     "Title": "Projectvoorstel Voorfase",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
@@ -10,7 +11,7 @@
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "dist/Template-Projectvoorstel-Voorfase.docx"
+            "OutputFile": "Template-Projectvoorstel-Voorfase.docx"
         }
     },
-    "VariablesFiles": ["DocumentDefinitions/variables.json"]}
+    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

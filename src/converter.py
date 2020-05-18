@@ -2,7 +2,7 @@
 
 from xml.etree.ElementTree import Element, ElementTree
 
-from markdown_builder import Builder
+from builder import Builder
 import xmltags
 
 

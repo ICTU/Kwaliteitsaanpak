@@ -1,5 +1,5 @@
 {
-    "InputFile": "build/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
+    "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
     "BuildPath": "build/Kwaliteitsaanpak/",
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "DocumentType": "Kwaliteitsaanpak",
@@ -10,7 +10,7 @@
             "OutputPath": "build/Kwaliteitsaanpak/"
         },
         "xlsx": {
-            "OutputPath": "dist/"
+            "OutputFile": "dist/ICTU-Kwaliteitsaanpak-Checklist.xlsx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/variables.json"]

@@ -1,15 +1,16 @@
 {
-    "InputFile": "build/Templates/Detailtestplan/Template-Detailtestplan.md",
+    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Detailtestplan/",
     "Title": "Detailtestplan",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
+    "TemplateFolder": "Detailtestplan",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputPath": "dist/"
+            "OutputFile": "dist/Template-Detailtestplan.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/variables.json"]

@@ -2,6 +2,7 @@
 
 import contextlib
 import logging
+import pathlib
 import re
 import sys
 from typing import Dict, List
@@ -29,13 +30,24 @@ class MarkdownConverter:
         self.table = None
         self.variables = variables
 
-    def convert(self, markdown: List[str], settings: Settings) -> ElementTree:
+    def convert(self, settings: Settings) -> ElementTree:
         """Convert the markdown to XML."""
         self.start_document(settings)
-        for line in markdown:
-            self.process_line(line, settings)
+        self.convert_markdown_file(pathlib.Path(settings["InputFile"]), settings)
         self.end_document()
         return ElementTree(self.builder.close())
+
+    def convert_markdown_file(self, markdown_filename: pathlib.Path, settings: Settings) -> None:
+        """Convert markdown file to XML."""
+        with open(markdown_filename) as markdown_file:
+            for line in markdown_file.readlines():
+                if line.startswith("#include"):
+                    filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
+                    filename = filename.replace(
+                        "{{TEMPLATE-FOLDER}}", settings.get("TemplateFolder", "TemplateFolder missing in setings"))
+                    self.convert_markdown_file(pathlib.Path(filename), settings)
+                else:
+                    self.process_line(line, settings)
 
     def start_document(self, settings: Settings) -> None:
         """Start the document."""

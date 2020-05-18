@@ -1,7 +1,11 @@
 #include "Content/Inleiding.md"
+
 #include "Content/Manifest.md"
+
 #include "Content/Doelstellingen.md"
+
 #include "Content/Begrippenkader.md"
+
 #include "Content/Leeswijzer.md"
 
 # Producten
@@ -65,9 +69,15 @@
 # Bijlagen
 
 #include "Content/Bijlagen/Manifest-Maatregelen.md"
+
 #include "Content/Bijlagen/Terminologie.md"
+
 #include "Content/Bijlagen/Bronnen.md"
+
 #include "Content/Bijlagen/Overzicht-Maatregelen.md"
+
 #include "Content/Bijlagen/Risico.md"
+
 #include "Content/Bijlagen/NPR5326.md"
+
 #include "Content/Bijlagen/Wijzigingsgeschiedenis.md"

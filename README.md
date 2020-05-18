@@ -15,13 +15,14 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
   - Add 2 files to the folder
     - Definitie.md - brief one paragraph definition of the guideline
     - Maatregel.md - guideline title, description, and rationale
-- Add the maatregel to the document structure definition in ./DocumentDefinitions/Kwaliteitsaanpak/document.md
+- Add the maatregel to the document structure definition in ./DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md
 
 ## Document definitions
 
 - Each document definition is stored inside a subfolder of ./DocumentDefinitions
 - A document definition is composed of a number of files:
-  - document.md - list of guidelines composing a document
+  - document.json - meta data about the document
+  - document.md - content of the document
   - document.css - styling
   - cover.md - cover material (front page)
   - cover.css - styling

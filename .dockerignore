@@ -1,12 +1,15 @@
+.circleci
 .dockerignore
 .DS_Store
 .git
+.gitattributes
+.github
+.gitignore
 .idea
 .vscode
 LICENSE
 README.md
 build
 dist
-node_modules
-Dockerfile
+Dockerfile*
 venv

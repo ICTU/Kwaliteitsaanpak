@@ -26,17 +26,12 @@ def read_json(json_filename: str) -> JSON:
         return json.load(json_file)
 
 
-def read_markdown(settings: Settings) -> List[str]:
-    """Read the Markdown file and return the contents."""
-    markdown_filename = pathlib.Path(settings["InputFile"])
-    with open(markdown_filename) as markdown_file:
-        return markdown_file.readlines()
-
-
 def write_xml(xml: ElementTree, settings: Settings) -> None:
     """Write the XML to the file specified in the settings."""
     markdown_filename = pathlib.Path(settings["InputFile"])
-    xml_filename = pathlib.Path(settings["BuildPath"]) / markdown_filename.with_suffix(".xml").name
+    build_path = pathlib.Path(settings["BuildPath"])
+    build_path.mkdir(parents=True, exist_ok=True)
+    xml_filename =  build_path / markdown_filename.with_suffix(".xml").name
     xml.write(xml_filename, encoding="utf-8")
 
 
@@ -49,8 +44,7 @@ def main(settings_filename: str, version: str) -> None:
     variables["VERSIE"] = settings["Version"] = version
     variables["DATUM"] = settings["Date"] = datetime.date.today().strftime('%d-%m-%Y')
     logging.info("Converting with settings:\n%s", pprint.pformat(settings))
-    markdown = read_markdown(settings)
-    xml = MarkdownConverter(variables).convert(markdown, settings)
+    xml = MarkdownConverter(variables).convert(settings)
     write_xml(xml, settings)
     converter = Converter(xml)
     if "md" in settings["OutputFormats"]:
@@ -59,8 +53,7 @@ def main(settings_filename: str, version: str) -> None:
         markdown_builder = MarkdownBuilder(markdown_output_filename)
         converter.convert(markdown_builder)
     if "docx" in settings["OutputFormats"]:
-        output_path = pathlib.Path(settings["OutputFormats"]["docx"]["OutputPath"])
-        docx_output_filename = output_path / pathlib.Path(settings["InputFile"]).with_suffix(".docx").name
+        docx_output_filename = pathlib.Path(settings["OutputFormats"]["docx"]["OutputFile"])
         docx_builder = DocxBuilder(docx_output_filename, pathlib.Path(settings["DocxReferenceFile"]))
         converter.convert(docx_builder)
     if "html" in settings["OutputFormats"]:
@@ -72,9 +65,8 @@ def main(settings_filename: str, version: str) -> None:
         html_cover_builder = HTMLCoverBuilder(html_cover_filename)
         converter.convert(html_cover_builder)
     if "xlsx" in settings["OutputFormats"]:
-        output_path = pathlib.Path(settings["OutputFormats"]["xlsx"]["OutputPath"])
-        xlsx_filename = output_path / pathlib.Path(settings["InputFile"]).with_suffix(".xlsx").name
-        xlsx_builder = XlsxBuilder(xlsx_filename)
+        xlsx_output_filename = pathlib.Path(settings["OutputFormats"]["xlsx"]["OutputFile"])
+        xlsx_builder = XlsxBuilder(xlsx_output_filename)
         converter.convert(xlsx_builder)
 
 

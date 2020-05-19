@@ -44,7 +44,8 @@ class MarkdownConverter:
                 if line.startswith("#include"):
                     filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
                     filename = filename.replace(
-                        "{{TEMPLATE-FOLDER}}", settings.get("TemplateFolder", "TemplateFolder missing in setings"))
+                        "{{TEMPLATE-FOLDER}}", settings.get("TemplateFolder", "TemplateFolder missing in setings")
+                    )
                     self.convert_markdown_file(pathlib.Path(filename), settings)
                 else:
                     self.process_line(line, settings)
@@ -85,7 +86,8 @@ class MarkdownConverter:
                 with self.element(xmltags.PARAGRAPH):
                     self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
             self.add_element(
-                xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"})
+                xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"}
+            )
             self.add_element(xmltags.PAGEBREAK)
 
     def create_header(self, settings: Settings) -> None:
@@ -120,14 +122,14 @@ class MarkdownConverter:
                 logging.error("Trying to start measure '%s' but '%s' was not ended", stripped_line, self.in_measure)
                 sys.exit(1)
             self.builder.start(xmltags.MEASURE)
-            stripped_line = stripped_line[len(markdown_syntax.MEASURE_START):]
+            stripped_line = stripped_line[len(markdown_syntax.MEASURE_START) :]
             self.in_measure = stripped_line
         if stripped_line.endswith(markdown_syntax.MEASURE_END):
             if not self.in_measure:
                 logging.error("Trying to end measure '%s' but measure was not started", stripped_line)
                 sys.exit(1)
             ending_measure = True
-            stripped_line = stripped_line[:-len(markdown_syntax.MEASURE_END)]
+            stripped_line = stripped_line[: -len(markdown_syntax.MEASURE_END)]
         if match := re.match(markdown_syntax.HEADING_PATTERN, stripped_line):
             self.process_heading(heading=match.group(2), level=len(match.group(1)))
         elif match := re.match(markdown_syntax.BULLET_LIST_PATTERN, stripped_line):
@@ -158,10 +160,10 @@ class MarkdownConverter:
             while self.current_section_level < level - 1:
                 self.current_section_level += 1
                 self.builder.start(
-                    xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)})
+                    xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)}
+                )
         self.current_section_level = level
-        self.builder.start(
-            xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)})
+        self.builder.start(xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)})
         with self.element(xmltags.HEADING):
             self.process_formatted_text(heading)
 
@@ -214,7 +216,8 @@ class MarkdownConverter:
         else:
             self.table.rows.append(cells)
             self.table.column_widths = [
-                max(current_width, len(cell)) for current_width, cell in zip(self.table.column_widths, cells)]
+                max(current_width, len(cell)) for current_width, cell in zip(self.table.column_widths, cells)
+            ]
 
     def process_table_alignment(self, cells: List[str]) -> None:
         """Process the alignment row of the Markdown table."""
@@ -234,17 +237,23 @@ class MarkdownConverter:
         def table_row(tag: str, cells, row_index: int) -> None:
             with self.element(tag):
                 for column_index, (cell, alignment, width) in enumerate(
-                        zip(cells, self.table.column_alignment, self.table.column_widths)):
+                    zip(cells, self.table.column_alignment, self.table.column_widths)
+                ):
                     attributes = {
-                        xmltags.TABLE_CELL_ALIGNMENT: alignment, xmltags.TABLE_CELL_COLUMN: str(column_index),
-                        xmltags.TABLE_CELL_ROW: str(row_index), xmltags.TABLE_CELL_WIDTH: str(width)}
+                        xmltags.TABLE_CELL_ALIGNMENT: alignment,
+                        xmltags.TABLE_CELL_COLUMN: str(column_index),
+                        xmltags.TABLE_CELL_ROW: str(row_index),
+                        xmltags.TABLE_CELL_WIDTH: str(width),
+                    }
                     with self.element(xmltags.TABLE_CELL, attributes):
                         self.process_formatted_text(cell)
 
         if self.table is None:
             return
         table_attributes = {
-            xmltags.TABLE_COLUMNS: str(len(self.table.header_cells)), xmltags.TABLE_ROWS: str(len(self.table.rows))}
+            xmltags.TABLE_COLUMNS: str(len(self.table.header_cells)),
+            xmltags.TABLE_ROWS: str(len(self.table.rows)),
+        }
         with self.element(xmltags.TABLE, table_attributes):
             table_row(xmltags.TABLE_HEADER_ROW, self.table.header_cells, 0)
             for row_index, row in enumerate(self.table.rows):
@@ -260,18 +269,19 @@ class MarkdownConverter:
             (markdown_syntax.INSTRUCTION_START, markdown_syntax.INSTRUCTION_END, xmltags.INSTRUCTION),
             (markdown_syntax.ITALIC_START, markdown_syntax.ITALIC_END, xmltags.ITALIC),
             (markdown_syntax.ITALIC_ALTERNATIVE_START, markdown_syntax.ITALIC_ALTERNATIVE_END, xmltags.ITALIC),
-            (markdown_syntax.STRIKETROUGH_START, markdown_syntax.STRIKETROUGH_END, xmltags.STRIKETHROUGH)]
+            (markdown_syntax.STRIKETROUGH_START, markdown_syntax.STRIKETROUGH_END, xmltags.STRIKETHROUGH),
+        ]
         while line:
             format_found = False
             for md_start, md_end, xml_tag in formats:
-                if line.startswith(md_start) and md_end in line[len(md_start):]:
+                if line.startswith(md_start) and md_end in line[len(md_start) :]:
                     format_found = True
                     self.flush(seen)
                     seen = ""
                     with self.element(xml_tag):
                         if xml_tag == xmltags.INSTRUCTION:
                             self.builder.data(md_start)
-                        formatted_text, line = line[len(md_start):].split(md_end, maxsplit=1)
+                        formatted_text, line = line[len(md_start) :].split(md_end, maxsplit=1)
                         self.process_formatted_text(formatted_text)
                         if xml_tag == xmltags.INSTRUCTION:
                             self.builder.data(md_end)
@@ -283,13 +293,13 @@ class MarkdownConverter:
                     seen = ""
                     with self.element(xmltags.ANCHOR, {xmltags.ANCHOR_LINK: match.group(2)}):
                         self.process_formatted_text(match.group(1))
-                    line = line[len(match.group(0)):]
+                    line = line[len(match.group(0)) :]
                 elif match := re.match(markdown_syntax.VARIABLE_USE_PATTERN, line):
                     format_found = True
                     self.flush(seen)
                     seen = ""
                     self.builder.data(self.variables[match.group(1)])
-                    line = line[len(match.group(0)):]
+                    line = line[len(match.group(0)) :]
 
             if not format_found:
                 seen += line[0] if line else ""

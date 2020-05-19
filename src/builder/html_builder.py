@@ -3,9 +3,9 @@
 import pathlib
 from xml.etree.ElementTree import ElementTree, TreeBuilder
 
-from builder import Attributes, Builder
-import html_tags
-from utils import slugify
+from .builder import Attributes, Builder
+from . import html_tags
+from .utils import slugify
 import xmltags
 
 
@@ -15,12 +15,12 @@ class HTMLBuilder(Builder):
     FORMAT = {
         xmltags.BOLD: html_tags.BOLD,
         xmltags.ITALIC: html_tags.ITALIC,
-        xmltags.STRIKETHROUGH: html_tags.STRIKETROUGH
+        xmltags.STRIKETHROUGH: html_tags.STRIKETROUGH,
     }
     LIST = {
         xmltags.BULLET_LIST: html_tags.UNORDERED_LIST,
         xmltags.NUMBERED_LIST: html_tags.ORDERED_LIST,
-        xmltags.LIST_ITEM: html_tags.LIST_ITEM
+        xmltags.LIST_ITEM: html_tags.LIST_ITEM,
     }
     STYLESHEET = "/work/DocumentDefinitions/Shared/document.css"
 
@@ -46,10 +46,8 @@ class HTMLBuilder(Builder):
             self.builder.data(self.filename.name)
             self.builder.end(html_tags.TITLE)
             self.builder.start(
-                html_tags.LINK,
-                {
-                    html_tags.LINK_REL: "stylesheet",
-                    html_tags.LINK_HREF: self.STYLESHEET})
+                html_tags.LINK, {html_tags.LINK_REL: "stylesheet", html_tags.LINK_HREF: self.STYLESHEET,},
+            )
             self.builder.end(html_tags.LINK)
             self.builder.end(html_tags.HEAD)
             self.builder.start(html_tags.BODY)
@@ -76,7 +74,9 @@ class HTMLBuilder(Builder):
             alignment = attributes[xmltags.TABLE_CELL_ALIGNMENT]
             self.builder.start(self.table_cell_html_tag, {html_tags.STYLE: f"text-align:{alignment}"})
         elif tag == xmltags.ANCHOR:
-            self.builder.start(html_tags.ANCHOR, {html_tags.ANCHOR_LINK: attributes[xmltags.ANCHOR_LINK]})
+            self.builder.start(
+                html_tags.ANCHOR, {html_tags.ANCHOR_LINK: attributes[xmltags.ANCHOR_LINK]},
+            )
         elif tag == xmltags.MEASURE:
             self.builder.start(html_tags.PARAGRAPH, {html_tags.CLASS: "maatregel"})
             self.in_measure = True
@@ -153,7 +153,9 @@ class HTMLCoverBuilder(HTMLBuilder):
 
     def text(self, tag: str, text: str, attributes: Attributes) -> None:
         if tag == xmltags.IMAGE:
-            self.builder.start(html_tags.IMAGE, {html_tags.IMAGE_SOURCE: text, html_tags.TITLE: attributes["title"]})
+            self.builder.start(
+                html_tags.IMAGE, {html_tags.IMAGE_SOURCE: text, html_tags.TITLE: attributes["title"]},
+            )
             self.builder.end(html_tags.IMAGE)
         elif tag == xmltags.TITLE:
             h1 = html_tags.HEADING + "1"

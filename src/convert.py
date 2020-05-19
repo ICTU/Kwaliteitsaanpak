@@ -15,9 +15,7 @@ from xml.etree.ElementTree import ElementTree
 
 from cli import parse_cli_arguments
 from converter import Converter
-from docx_builder import DocxBuilder
-from html_builder import HTMLBuilder, HTMLCoverBuilder
-from xlsx_builder import XlsxBuilder
+from builder import DocxBuilder, HTMLBuilder, HTMLCoverBuilder, XlsxBuilder
 from markdown_converter import MarkdownConverter
 from custom_types import JSON, Settings, Variables
 
@@ -42,7 +40,7 @@ def convert(settings_filename: str, version: str) -> None:
     for variable_file in settings["VariablesFiles"]:
         variables.update(cast(Variables, read_json(variable_file)))
     variables["VERSIE"] = settings["Version"] = version
-    variables["DATUM"] = settings["Date"] = datetime.date.today().strftime('%d-%m-%Y')
+    variables["DATUM"] = settings["Date"] = datetime.date.today().strftime("%d-%m-%Y")
     logging.info("Converting with settings:\n%s", pprint.pformat(settings))
     output_path = pathlib.Path(settings["OutputPath"])
     output_path.mkdir(parents=True, exist_ok=True)

@@ -8,6 +8,7 @@ import xmltags
 
 class Converter:
     """Convert the XML to a destination format using a document builder."""
+
     def __init__(self, xml: ElementTree) -> None:
         self.root = xml.getroot()
 

@@ -9,6 +9,7 @@ Attributes = Dict[str, str]
 
 class Builder:
     """Abstract builder."""
+
     def __init__(self, filename: pathlib.Path) -> None:
         self.filename = filename
         self.tag_path = []

@@ -5,6 +5,7 @@ from typing import List
 
 class Table:
     """Abstract table class."""
+
     def __init__(self, header_cells: List[str]):
         self.header_cells = header_cells
         self.column_alignment = []  # alignment per column

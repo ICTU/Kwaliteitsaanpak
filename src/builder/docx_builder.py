@@ -6,9 +6,9 @@ from docx import Document
 from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
 from typing import Dict
 
-from builder import Attributes, Builder
-from hyperlink import add_hyperlink
-from table_of_contents import add_table_of_contents
+from .builder import Attributes, Builder
+from .hyperlink import add_hyperlink
+from .table_of_contents import add_table_of_contents
 import xmltags
 
 
@@ -18,8 +18,14 @@ class DocxBuilder(Builder):
     SCHEMA = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
     FORMAT_TAGS = (xmltags.INSTRUCTION, xmltags.BOLD, xmltags.ITALIC, xmltags.STRIKETHROUGH)
     TEXT_TAGS = (
-        xmltags.PARAGRAPH, xmltags.LIST_ITEM, xmltags.MEASURE, xmltags.HEADING, xmltags.TABLE_CELL, xmltags.HEADER,
-        xmltags.TITLE) + FORMAT_TAGS
+        xmltags.PARAGRAPH,
+        xmltags.LIST_ITEM,
+        xmltags.MEASURE,
+        xmltags.HEADING,
+        xmltags.TABLE_CELL,
+        xmltags.HEADER,
+        xmltags.TITLE,
+    ) + FORMAT_TAGS
 
     def __init__(self, filename: pathlib.Path, docx_reference_filename: pathlib.Path) -> None:
         super().__init__(filename)
@@ -81,12 +87,14 @@ class DocxBuilder(Builder):
             self.column_index = 0
         elif tag == xmltags.TABLE_CELL:
             cell = self.row.cells[self.column_index]
-            cell._tc.tcPr.tcW.type = 'auto'
+            cell._tc.tcPr.tcW.type = "auto"
             self.paragraph = cell.paragraphs[0]
             if alignment_attr := attributes.get(xmltags.TABLE_CELL_ALIGNMENT):
                 alignment = dict(
-                    left=WD_PARAGRAPH_ALIGNMENT.LEFT, right=WD_PARAGRAPH_ALIGNMENT.RIGHT,
-                    center=WD_PARAGRAPH_ALIGNMENT.CENTER)[alignment_attr]
+                    left=WD_PARAGRAPH_ALIGNMENT.LEFT,
+                    right=WD_PARAGRAPH_ALIGNMENT.RIGHT,
+                    center=WD_PARAGRAPH_ALIGNMENT.CENTER,
+                )[alignment_attr]
                 self.paragraph.paragraph_format.alignment = alignment
             self.column_index += 1
         elif tag == xmltags.ANCHOR:
@@ -121,7 +129,7 @@ class DocxBuilder(Builder):
             else:
                 add_hyperlink(self.paragraph, self.link, text)
         elif tag == xmltags.IMAGE:
-            text = text[len("/work/"):]
+            text = text[len("/work/") :]
             self.doc.add_picture(text)
 
     def end_element(self, tag: str, attributes: Attributes) -> None:

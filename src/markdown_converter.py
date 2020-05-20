@@ -5,13 +5,13 @@ import logging
 import pathlib
 import re
 import sys
-from typing import Dict, List
+from typing import cast, List, Optional, Set
 from xml.etree.ElementTree import ElementTree, TreeBuilder
 
-from custom_types import Settings, Variables
 import markdown_syntax
-from table import Table
 import xmltags
+from custom_types import Settings, TreeBuilderAttributes, Variables
+from markdown_table import Table
 
 
 class MarkdownConverter:
@@ -22,12 +22,11 @@ class MarkdownConverter:
 
     def __init__(self, variables: Variables) -> None:
         self.builder = TreeBuilder()
-        self.in_appendices = False
-        self.in_measure = False
+        self.context: Set[str] = set()  # Current context, e.g. are we in a measure, or in the appendices
         self.current_section_level = 0
-        self.current_list_tags = []
-        self.list_counter = []  # List item counters per list level
-        self.table = None
+        self.current_list_tags: List[str] = []
+        self.list_counter: List[int] = []  # List item counters per list level
+        self.table: Optional[Table] = None
         self.variables = variables
 
     def convert(self, settings: Settings) -> ElementTree:
@@ -48,14 +47,14 @@ class MarkdownConverter:
                     )
                     self.convert_markdown_file(pathlib.Path(filename), settings)
                 else:
-                    self.process_line(line, settings)
+                    self.process_line(line)
 
     def start_document(self, settings: Settings) -> None:
         """Start the document."""
-        document_attributes = {}
+        document_attributes: TreeBuilderAttributes = {}
         for setting, tag in (("Title", xmltags.DOCUMENT_TITLE), ("Version", xmltags.DOCUMENT_VERSION)):
             if attribute_value := settings.get(setting):
-                document_attributes[tag] = attribute_value
+                document_attributes[tag] = str(attribute_value)
         self.builder.start(xmltags.DOCUMENT, document_attributes)
         if settings["IncludeFrontPage"]:
             self.create_frontpage(settings)
@@ -110,32 +109,33 @@ class MarkdownConverter:
         self.add_element(xmltags.TABLE_OF_CONTENTS, attributes={xmltags.TABLE_OF_CONTENTS_HEADING: "Inhoudsopgave"})
         self.add_element(xmltags.PAGEBREAK)
 
-    def process_line(self, line: str, settings: Settings) -> None:
+    def process_line(self, line: str) -> None:
         """Process a line of Markdown."""
-        if not (stripped_line := line.strip()):
+        if not (stripped_line := line.strip()):  # pylint: disable=superfluous-parens
             self.end_lists()
             self.end_table()
             return  # Empty line, nothing further to do
         ending_measure = False
         if stripped_line.startswith(markdown_syntax.MEASURE_START):
-            if self.in_measure:
-                logging.error("Trying to start measure '%s' but '%s' was not ended", stripped_line, self.in_measure)
+            if xmltags.MEASURE in self.context:
+                logging.error("Trying to start measure '%s' but previous measure was not ended", stripped_line)
                 sys.exit(1)
-            self.builder.start(xmltags.MEASURE)
+            self.context.add(xmltags.MEASURE)
+            self.builder.start(xmltags.MEASURE, {})
             stripped_line = stripped_line[len(markdown_syntax.MEASURE_START) :]
-            self.in_measure = stripped_line
         if stripped_line.endswith(markdown_syntax.MEASURE_END):
-            if not self.in_measure:
+            if xmltags.MEASURE not in self.context:
                 logging.error("Trying to end measure '%s' but measure was not started", stripped_line)
                 sys.exit(1)
             ending_measure = True
             stripped_line = stripped_line[: -len(markdown_syntax.MEASURE_END)]
         if match := re.match(markdown_syntax.HEADING_PATTERN, stripped_line):
+            match = cast(re.Match, match)
             self.process_heading(heading=match.group(2), level=len(match.group(1)))
-        elif match := re.match(markdown_syntax.BULLET_LIST_PATTERN, stripped_line):
+        elif re.match(markdown_syntax.BULLET_LIST_PATTERN, stripped_line):
             list_level = {"*": 1, "+": 2, "-": 3}[stripped_line[0]]
             self.process_list(stripped_line, xmltags.BULLET_LIST, list_level)
-        elif match := re.match(markdown_syntax.NUMBERED_LIST_PATTERN, stripped_line):
+        elif re.match(markdown_syntax.NUMBERED_LIST_PATTERN, stripped_line):
             list_level = 1 if line[0].isdigit() else (3 if stripped_line[0].isdigit() else 2)
             self.process_list(stripped_line, xmltags.NUMBERED_LIST, list_level)
         elif stripped_line[0] == markdown_syntax.TABLE_MARKER:
@@ -143,15 +143,17 @@ class MarkdownConverter:
         else:
             with self.element(xmltags.PARAGRAPH):
                 self.process_formatted_text(stripped_line)
-        if self.in_measure and ending_measure:
-            self.in_measure = False
+        if xmltags.MEASURE in self.context and ending_measure:
+            self.context.remove(xmltags.MEASURE)
             self.builder.end(xmltags.MEASURE)
 
     def process_heading(self, heading: str, level: int) -> None:
         """Process a heading."""
         if level == self.APPENDIX_LEVEL and heading == self.APPENDIX_HEADING:
-            self.in_appendices = True
-        is_appendix = {xmltags.SECTION_IS_APPENDIX: "y"} if self.in_appendices else {}
+            self.context.add(self.APPENDIX_HEADING)
+        is_appendix: TreeBuilderAttributes = {
+            xmltags.SECTION_IS_APPENDIX: "y"
+        } if self.APPENDIX_HEADING in self.context else {}
         if self.current_section_level >= level:
             while self.current_section_level >= level:
                 self.builder.end(xmltags.SECTION)
@@ -159,9 +161,11 @@ class MarkdownConverter:
         elif self.current_section_level < level - 1:
             while self.current_section_level < level - 1:
                 self.current_section_level += 1
-                self.builder.start(
-                    xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)}
-                )
+                attributes: TreeBuilderAttributes = {
+                    xmltags.SECTION_LEVEL: str(self.current_section_level),
+                    **is_appendix,
+                }
+                self.builder.start(xmltags.SECTION, attributes)
         self.current_section_level = level
         self.builder.start(xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)})
         with self.element(xmltags.HEADING):
@@ -179,7 +183,7 @@ class MarkdownConverter:
         self.end_lists(list_level)
         self.list_counter[list_level - 1] += 1
         number = str(self.list_counter[list_level - 1])
-        attributes = {xmltags.LIST_ITEM_NUMBER: number} if tag == xmltags.NUMBERED_LIST else {}
+        attributes: TreeBuilderAttributes = {xmltags.LIST_ITEM_NUMBER: number} if tag == xmltags.NUMBERED_LIST else {}
         with self.element(xmltags.LIST_ITEM, attributes):
             self.process_formatted_text(line.split(" ", maxsplit=1)[1])
 
@@ -198,48 +202,22 @@ class MarkdownConverter:
 
     def process_table_row(self, line: str) -> None:
         """Process table row."""
-        if cells := self.get_table_cells(line):
+        if cells := Table.get_table_cells(line):
             if self.table is None:
                 self.table = Table(cells)
             else:
-                self.process_table_cells(cells)
-
-    def get_table_cells(self, line: str) -> List[str]:
-        """Return the table cells."""
-        line = line.strip().strip(markdown_syntax.TABLE_MARKER)
-        return [cell.strip() for cell in line.split(markdown_syntax.TABLE_MARKER)]
-
-    def process_table_cells(self, cells: List[str]) -> None:
-        """Process the table cells."""
-        if "---" in cells[0] and len(self.table.rows) == 0:
-            self.process_table_alignment(cells)
-        else:
-            self.table.rows.append(cells)
-            self.table.column_widths = [
-                max(current_width, len(cell)) for current_width, cell in zip(self.table.column_widths, cells)
-            ]
-
-    def process_table_alignment(self, cells: List[str]) -> None:
-        """Process the alignment row of the Markdown table."""
-        alignment_marker = markdown_syntax.CELL_ALIGNMENT_MARKER
-        for cell in cells:
-            if cell.startswith(alignment_marker) and cell.endswith(alignment_marker):
-                alignment = "center"
-            elif cell.endswith(alignment_marker):
-                alignment = "right"
-            else:
-                alignment = "left"
-            self.table.column_alignment.append(alignment)
+                self.table.process_table_cells(cells)
 
     def end_table(self) -> None:
         """Flush the table."""
 
         def table_row(tag: str, cells, row_index: int) -> None:
+            assert self.table is not None
             with self.element(tag):
                 for column_index, (cell, alignment, width) in enumerate(
                     zip(cells, self.table.column_alignment, self.table.column_widths)
                 ):
-                    attributes = {
+                    attributes: TreeBuilderAttributes = {
                         xmltags.TABLE_CELL_ALIGNMENT: alignment,
                         xmltags.TABLE_CELL_COLUMN: str(column_index),
                         xmltags.TABLE_CELL_ROW: str(row_index),
@@ -250,7 +228,7 @@ class MarkdownConverter:
 
         if self.table is None:
             return
-        table_attributes = {
+        table_attributes: TreeBuilderAttributes = {
             xmltags.TABLE_COLUMNS: str(len(self.table.header_cells)),
             xmltags.TABLE_ROWS: str(len(self.table.rows)),
         }
@@ -291,13 +269,15 @@ class MarkdownConverter:
                     format_found = True
                     self.flush(seen)
                     seen = ""
+                    match = cast(re.Match, match)
                     with self.element(xmltags.ANCHOR, {xmltags.ANCHOR_LINK: match.group(2)}):
                         self.process_formatted_text(match.group(1))
                     line = line[len(match.group(0)) :]
-                elif match := re.match(markdown_syntax.VARIABLE_USE_PATTERN, line):
+                elif (match := re.match(markdown_syntax.VARIABLE_USE_PATTERN, line)) is not None:
                     format_found = True
                     self.flush(seen)
                     seen = ""
+                    match = cast(re.Match, match)
                     self.builder.data(self.variables[match.group(1)])
                     line = line[len(match.group(0)) :]
 
@@ -313,13 +293,13 @@ class MarkdownConverter:
         self.end_sections()
         self.builder.end(xmltags.DOCUMENT)
 
-    def add_element(self, tag: str, text: str = "", attributes: Dict[str, str] = None) -> None:
+    def add_element(self, tag: str, text: str = "", attributes: TreeBuilderAttributes = None) -> None:
         """Add an element with text."""
         with self.element(tag, attributes):
             self.flush(text)
 
     @contextlib.contextmanager
-    def element(self, tag: str, attributes: Dict[str, str] = None):
+    def element(self, tag: str, attributes: TreeBuilderAttributes = None):
         """Return a context manager."""
         element = self.builder.start(tag, attributes or {})
         try:

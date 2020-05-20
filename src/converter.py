@@ -1,9 +1,10 @@
 """Converter."""
 
 from xml.etree.ElementTree import Element, ElementTree
+from typing import cast
 
 from builder import Builder
-import xmltags
+from custom_types import TreeBuilderAttributes
 
 
 class Converter:
@@ -22,11 +23,13 @@ class Converter:
         """Recursively convert the element using the builder."""
         if not builder.accept_element(element.tag):
             return
-        builder.start_element(element.tag, element.attrib)
+        attributes = cast(TreeBuilderAttributes, element.attrib)
+        builder.start_element(element.tag, attributes)
         if element.text:
-            builder.text(element.tag, element.text, element.attrib)
+            builder.text(element.tag, element.text, attributes)
         for child_element in element:
             self.convert_element(child_element, builder, element)
-        builder.end_element(element.tag, element.attrib)
+        builder.end_element(element.tag, attributes)
         if element.tail:
-            builder.tail(element.tag, element.tail, parent.tag if parent else None, element.attrib)
+            assert parent
+            builder.tail(element.tag, element.tail, parent.tag, attributes)

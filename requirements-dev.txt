@@ -1,1 +1,4 @@
-mypy==0.720
+black==19.10b0
+mypy==0.761
+pylint==2.5.2 
+vulture==1.4

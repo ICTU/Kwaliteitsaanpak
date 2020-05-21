@@ -2,7 +2,7 @@
 
 import unittest
 import xml.etree.ElementTree
-from unittest.mock import call, Mock
+from unittest.mock import Mock
 
 from converter import Converter
 from builder import Builder
@@ -42,4 +42,3 @@ class ConverterTestCase(unittest.TestCase):
         tree = xml.etree.ElementTree.ElementTree(xml.etree.ElementTree.XML("<document><skip>Text</skip></document>"))
         Converter(tree).convert(self.builder)
         self.builder.start_element.assert_called_once_with("document", {})
-

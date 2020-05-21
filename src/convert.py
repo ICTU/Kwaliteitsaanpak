@@ -67,8 +67,8 @@ def convert_pdf(
     html_cover_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".cover.html").name
     html_cover_builder = HTMLCoverBuilder(html_cover_filename)
     converter.convert(html_cover_builder)
-    with open("DocumentDefinitions/Shared/header.html") as header_templete_file:
-        header_contents = header_templete_file.read() % variables["KWALITEITSAANPAK"]
+    with open("DocumentDefinitions/Shared/header.html") as header_template_file:
+        header_contents = header_template_file.read() % variables["KWALITEITSAANPAK"]
     header_filename = build_path / "header.html"
     with open(header_filename, "w") as header_file:
         header_file.write(header_contents)

@@ -53,8 +53,7 @@ class MarkdownConverter:
         """Start the document."""
         document_attributes: TreeBuilderAttributes = {}
         for setting, tag in (("Title", xmltags.DOCUMENT_TITLE), ("Version", xmltags.DOCUMENT_VERSION)):
-            if attribute_value := settings.get(setting):
-                document_attributes[tag] = str(attribute_value)
+            document_attributes[tag] = str(settings[setting])
         self.builder.start(xmltags.DOCUMENT, document_attributes)
         if settings["IncludeFrontPage"]:
             self.create_frontpage(settings)
@@ -84,6 +83,8 @@ class MarkdownConverter:
             elif document_type == "Kwaliteitsaanpak":
                 with self.element(xmltags.PARAGRAPH):
                     self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
+            else:
+                raise ValueError(f"Unknown document type '{document_type}' in the settings")
             self.add_element(
                 xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"}
             )
@@ -202,11 +203,11 @@ class MarkdownConverter:
 
     def process_table_row(self, line: str) -> None:
         """Process table row."""
-        if cells := Table.get_table_cells(line):
-            if self.table is None:
-                self.table = Table(cells)
-            else:
-                self.table.process_table_cells(cells)
+        cells = Table.get_table_cells(line)
+        if self.table is None:
+            self.table = Table(cells)
+        else:
+            self.table.process_table_cells(cells)
 
     def end_table(self) -> None:
         """Flush the table."""

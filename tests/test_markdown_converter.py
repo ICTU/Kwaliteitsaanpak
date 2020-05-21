@@ -2,7 +2,7 @@
 
 import logging
 import unittest
-from unittest.mock import patch, mock_open, MagicMock
+from unittest.mock import patch, mock_open
 
 import xmltags
 from custom_types import Settings, Variables
@@ -151,6 +151,7 @@ class MarkdownTest(MarkdownConverterTestCase):
 
     @patch("markdown_converter.open", mock_open(read_data="|text\n\n"))
     def test_table_marker_without_columns(self):
+        """Test an incomplete table."""
         table = self.xml().find(xmltags.TABLE)
         self.assertEqual(("0", "1"), (table.attrib[xmltags.TABLE_ROWS], table.attrib[xmltags.TABLE_COLUMNS]))
         self.assertEqual("text", table.find(xmltags.TABLE_HEADER_ROW).find(xmltags.TABLE_CELL).text)
@@ -181,5 +182,6 @@ class MarkdownTest(MarkdownConverterTestCase):
 
     @patch("markdown_converter.open", new_callable=mock_open, read_data="#include 'file'")
     def test_include(self, mocked_open):
+        """Test that Markdown files can be included."""
         mocked_open.side_effect = (mocked_open.return_value, mock_open(read_data="included\n").return_value)
         self.assertEqual("included", self.xml().find(xmltags.PARAGRAPH).text)

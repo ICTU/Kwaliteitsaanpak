@@ -75,6 +75,8 @@ class MarkdownConverter:
                         self.add_element(xmltags.BOLD, settings["Subtitle"])
                 self.add_element(xmltags.PARAGRAPH)
                 with self.element(xmltags.PARAGRAPH):
+                    self.process_formatted_text("Rubriceringsniveau {Rubriceringsniveau}")
+                with self.element(xmltags.PARAGRAPH):
                     self.builder.data("Versie ")
                     self.add_element(xmltags.INSTRUCTION, "{Versienummer}")
                     self.builder.data(", ")
@@ -86,8 +88,7 @@ class MarkdownConverter:
             else:
                 raise ValueError(f"Unknown document type '{document_type}' in the settings")
             self.add_element(
-                xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"}
-            )
+                xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"})
             self.add_element(xmltags.PAGEBREAK)
 
     def create_header(self, settings: Settings) -> None:

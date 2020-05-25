@@ -4,7 +4,7 @@ Deze Kwaliteitsaanpak heeft betrekking op de ICTU-projecten waarin software ontw
 
 De bijlage [Terminologie en afkortingen](#terminologie-en-afkortingen) bevat een lijst met veel gebruikte begrippen en afkortingen. Een aantal begrippen speelt echter een zodanig prominente rol bij het begrip en het gebruik van de Kwaliteitsaanpak, dat ze hieronder nader zijn toegelicht.
 
-Een **informatiesysteem** is "een samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en programmatuur alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie" (bron: VIR, NORA).
+Een **informatiesysteem** is "een samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en programmatuur alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie" (bron: VIR 2007, NORA).
 
 **Software** is de verzameling instructies die bepalen wat een computer uitvoert en is uiteindelijk wat de gebruiker ziet, ervaart en waarmee hij interacteert. In de dagelijkse praktijk en communicatie van ICTU wordt "programmatuur", uit de vorige definitie, aangeduid met "software".
 

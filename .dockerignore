@@ -6,7 +6,10 @@
 .github
 .gitignore
 .idea
+.mypy_cache
+.pylintrc
 .vscode
+.vulture_white_list.py
 LICENSE
 README.md
 build

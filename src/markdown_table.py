@@ -10,7 +10,7 @@ class Table:
 
     def __init__(self, header_cells: List[str]):
         self.header_cells = header_cells
-        self.column_alignment: List[str] = []  # alignment per column
+        self.column_alignment: List[str] = ["left" for _ in self.header_cells]  # alignment per column
         self.column_widths = [len(cell) for cell in header_cells]
         self.rows: List[List[str]] = []
 
@@ -27,6 +27,7 @@ class Table:
     def __process_table_alignment(self, cells: List[str]) -> None:
         """Process the alignment row of the Markdown table."""
         alignment_marker = markdown_syntax.CELL_ALIGNMENT_MARKER
+        self.column_alignment = []
         for cell in cells:
             if cell.startswith(alignment_marker) and cell.endswith(alignment_marker):
                 alignment = "center"

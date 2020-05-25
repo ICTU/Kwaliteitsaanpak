@@ -139,7 +139,7 @@ De mate waarin een product of systeem informatie en gegevens beschermt zodat per
 
 ## BIO- en SSD-eisen
 
-De overheid is gebonden aan kaderstelling op het gebied van informatiebeveiliging, zoals de Baseline Informatiebeveiliging Overheid (BIO). Handvatten zoals Secure Software Development (SSD) van het Centrum Informatiebeveiliging en Privacybescherming dienen als leidraad voor het veilig ontwikkelen van software die het voldoen aan de BIO ondersteunt. De BIO is een toepassing van de NEN-ISO/IEC 27001:2017 en de NEN-ISO/IEC 27002:2017 op het domein van de Nederlandse overheid. Voor de Rijksoverheid zijn in die toepassing het Voorschrift Informatiebeveiliging Rijksdienst (VIR) en het Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie (VIR-BI) verwerkt.
+De overheid is gebonden aan kaderstelling op het gebied van informatiebeveiliging, zoals de Baseline Informatiebeveiliging Overheid (BIO). Handvatten zoals Secure Software Development (SSD) van het Centrum Informatiebeveiliging en Privacybescherming dienen als leidraad voor het veilig ontwikkelen van software die het voldoen aan de BIO ondersteunt. De BIO is een toepassing van de NEN-ISO/IEC 27001:2017 en de NEN-ISO/IEC 27002:2017 op het domein van de Nederlandse overheid. Voor de Rijksoverheid zijn in die toepassing het Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) en het Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013) verwerkt.
 
 BIO en SSD bevatten ook een aantal maatregelen ten aanzien van software en/of de infrastructurele componenten waar deze software gebruik van maakt. Deze maatregelen zijn hieronder als eisen opgenomen.
 

@@ -1,0 +1,17 @@
+{
+    "InputFile": "DocumentDefinitions/Templates/document-template.md",
+    "BuildPath": "build/Templates/Projectvoorstel-Realisatiefase/",
+    "OutputPath": "dist",
+    "Title": "Projectvoorstel Realisatiefase",
+    "Subtitle": "{Projectnaam}",
+    "DocumentType": "Template",
+    "TemplateFolder": "Projectvoorstel-Realisatiefase",
+    "IncludeFrontPage": true,
+    "IncludeTableOfContents": true,
+    "DocxReferenceFile": "DocumentDefinitions/reference.docx",
+    "OutputFormats": {
+        "docx": {
+            "OutputFile": "Template-Projectvoorstel-Realisatiefase.docx"
+        }
+    },
+    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

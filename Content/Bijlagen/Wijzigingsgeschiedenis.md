@@ -2,11 +2,26 @@
 
 ### Versie 2.1.0-unreleased, 27 mei 2020
 
-* Generiek template toegevoegd dat als basis kan dienen voor documenten waarvoor nog geen specifiek template is.
-* Paragrafen 1.2, 1.5 en 1.6 van het kwaliteitsplantemplate uitgebreid met standaard teksten.
+#### Kwaliteitsaanpak
+
 * M30 ontbrak in de bijlage met het overzicht van alle maatregelen.
-* Rubriceringsmogelijkheid conform Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013 ) toegevoegd aan templates.
-* Rubriceringsniveau, rubriceringsduur en totaal aantal bladzijden toegevoegd aan templates conform VIRBI 2014, bijlage 1, eis 6J.
+
+#### Alle templates
+
+* Rubriceringsmogelijkheid conform Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013 ) toegevoegd.
+* Rubriceringsniveau, rubriceringsduur en totaal aantal bladzijden conform VIRBI 2014, bijlage 1, eis 6J toegevoegd.
+
+#### Generiek template
+
+* Generiek template toegevoegd dat als basis kan dienen voor documenten waarvoor nog geen specifiek template is.
+
+#### Kwaliteitsplantemplate
+
+* Paragrafen 1.2, 1.5 en 1.6 uitgebreid met standaard teksten.
+* Stakeholder management vervangen door het bescheidener identificeren van belanghebbenden en belangen.
+
+#### NFE-template
+
 * Link naar Nederlandse vertaling van WCAG 2.1 toegevoegd aan het NFE-template.
 
 ### Versie 2.0.0, 29 april 2020

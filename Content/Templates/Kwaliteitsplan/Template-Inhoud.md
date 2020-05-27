@@ -54,11 +54,11 @@ Het doel van de voorfase is tweeledig: het voorbereiden van de realisatiefase, z
 
 Dit kwaliteitsplan wordt opgesteld tijdens de voorfase, maar is tevens al deels van toepassing, in ieder geval aan het eind van de voorfase. Voor de voorfase gelden de onderstaande kwaliteitsmaatregelen.
 
-## Stakeholder management
+## Belanghebbenden
 
-De kwaliteit van de deliverables wordt mede bepaald door de verwachtingen van de belanghebbenden (stakeholders). Het is van belang dat alle belanghebbenden zijn geïdentificeerd en hun verwachtingen zijn vastgelegd, geanalyseerd en vertaald naar de eisen voor het te implementeren systeem. De eisen aan het te ontwikkelend systeem worden vastgelegd in een programma van eisen (PvE).
+De kwaliteit van de deliverables wordt mede bepaald door de verwachtingen van de belanghebbenden. Het is van belang dat alle belanghebbenden zijn geïdentificeerd en hun verwachtingen zijn vastgelegd, geanalyseerd en vertaald naar de eisen voor het te implementeren systeem. De belanghebbenden worden geïdentificeerd in het projectvoorstel voor de voorfase. De eisen aan het te ontwikkelen systeem worden vastgelegd in Backlog en NFE-document.
 
-Het PvE is het startpunt van de opdrachtgever en kan gedurende de vervolgfases in overeenstemming met de opdrachtnemer aangepast worden. De product owner vertegenwoordigt gedurende de vervolgfasen de geïdentificeerde belanghebbenden.
+De tijdens de voorfase geïdentificeerde eisen vormen het startpunt van de opdrachtgever en kunnen gedurende de vervolgfases in overeenstemming met de opdrachtnemer aangepast worden. De product owner vertegenwoordigt gedurende de vervolgfasen de geïdentificeerde belanghebbenden.
 
 ## Eisenbeheer
 

@@ -2,6 +2,8 @@
 
 ### Aanleiding
 
+{Relevante voorgeschiedenis}
+
 Hierbij bieden wij u ons projectvoorstel aan voor {project}, hierna verder te noemen: de “Opdracht”. Dit voorstel is opgesteld naar aanleiding van onze {gesprekken/mailwisseling/andere contacten}.
 
 Dit voorstel heeft een geldigheidsduur van 30 kalenderdagen, ingaande op de datum van ontvangst.
@@ -10,7 +12,7 @@ Indien akkoord gelieve u dit voorstel inclusief de projectovereenkomst te voorzi
 
 ### Uw vraag
 
-{omschrijving vraag}
+{Omschrijving vraag}
 
 Bij de uitvoering van softwareontwikkelprojecten hanteert ICTU de $KWALITEITSAANPAK$. Conform deze aanpak zijn projecten gesplitst in een voorbereidende fase, "voorfase" genoemd, en een realisatiefase, waarin de software wordt ontwikkeld.
 

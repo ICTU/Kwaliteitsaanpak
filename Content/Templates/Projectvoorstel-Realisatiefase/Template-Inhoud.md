@@ -4,7 +4,7 @@ Het succes van deze opdracht, en van het eventueel later uit te voeren realisati
 
 Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak. Dit vertaalt zich concreet in:
 
-* Eén team met medewerkers van {opdrachtgever/partijen} en ICTU werkt minimaal {aantal} dagdelen per week op locatie van {locatie} aan de software.
+* Eén team met medewerkers van {opdrachtgever/partijen} en ICTU werkt minimaal {aantal} {dagen/dagdelen} per week op locatie van {locatie} aan de software.
 * Er is een product owner door {opdrachtgever} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
 
 De realisatiefase wordt uitgevoerd in iteraties, "sprints" genaamd, van {twee of drie} weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de status van de software.
@@ -19,11 +19,11 @@ Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off g
 
 ## Projectteam
 
-{opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} dagdelen per week door alle partijen op één locatie bij {locatie} wordt samengewerkt. {partij} stelt hiervoor ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Indien op locatie ICTU wordt gewerkt: Om deze binnen ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen. De huidige versie van het voorschrift is opgenomen in de bijlagen.}
+{Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen op één locatie bij {locatie} wordt samengewerkt. {partij} stelt hiervoor ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Indien op locatie ICTU wordt gewerkt: Om deze binnen ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen. De huidige versie van het voorschrift is opgenomen in de bijlagen.}
 
 ## Oplevering software
 
-De realisatiefase is op basis van timeboxes ingericht. Aan het einde van elke timebox is de door de product owner geselecteerde functionaliteit verwerkt in de software. Indien er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
+De realisatiefase is op basis van sprints ingericht. Tijdens elke sprint verwerkt het projectteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Indien er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
 
 ## Kwaliteitsbeheersing
 
@@ -33,8 +33,7 @@ ICTU richt een geautomatiseerd kwaliteitssysteem in dat de kwaliteit van de soft
 
 Betrokkenheid van inhoudsdeskundigen van {opdrachtgever/partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
 
-* ...
-* Actief bijdragen aan demo's;
+* Actief bijdragen aan workshops en demo's;
 * Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden.
 
 Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoering van dit projectvoorstel (één persoon kan eventueel meer dan één rol vervullen):
@@ -42,14 +41,13 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 
 | Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                          |
 |:----------------------------------------------|:-------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| Expert informatiebeveiliging                  | {aantal} dagen           | Opstellen BIA, TVA en IB-plan, reviewen {documenten}                                                                           |
-| Privacy-expert                                | {aantal} dagen           | Opstellen PIA, reviewen {documenten}                                                                                           |
-| Infrastructuurarchitect                       | {aantal} dagen           | Opstellen infrastructuurarchitectuur (high level design, HLD), reviewen SAD, NFE en IB-plan                                    |
-| Architect                                     | {aantal} dagen           | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur                                |
-| Testmanager                                   | {aantal} dagen           | Opstellen PRA, mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie                                            |
+| Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, TVA en IB-plan                                                                            |
+| Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                           |
+| Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur (high level design, HLD) |
+| Architect                                     | {aantal} dagen           | Bewaken en onderhouden van de softwarearchitectuur |
 | Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                                |
-| Product owner                                 | {aantal} dagen           | Inhoudelijk sturing / prioritering, opstellen backlog, NFE, minimal viable product, reviewen GFO en prototype                  |
-| Projectleider (Opdrachtgever)                 | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan kick-off en eventuele workshops |
+| Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden backlog |
+| Projectleider (Opdrachtgever)                 | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan demo's en eventuele workshops |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                    |
 
 # Planning en doorlooptijd

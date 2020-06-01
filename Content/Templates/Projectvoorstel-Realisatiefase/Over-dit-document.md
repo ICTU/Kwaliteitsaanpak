@@ -2,6 +2,8 @@
 
 ### Aanleiding
 
+{Relevante voorgeschiedenis}
+
 Hierbij bieden wij u ons projectvoorstel aan voor {project}, hierna verder te noemen: de “Opdracht”. Dit voorstel is opgesteld naar aanleiding van de voorfase {voorfaseproject}.
 
 Dit voorstel heeft een geldigheidsduur van 30 kalenderdagen, ingaande op de datum van ontvangst.
@@ -10,7 +12,7 @@ Indien akkoord gelieve u dit voorstel inclusief de projectovereenkomst te voorzi
 
 ### Uw vraag
 
-{omschrijving vraag}
+{Omschrijving vraag}
 
 Bij de uitvoering van softwareontwikkelprojecten hanteert ICTU de $KWALITEITSAANPAK$. Conform deze aanpak zijn projecten gesplitst in een voorbereidende fase, "voorfase" genoemd, en een realisatiefase, waarin de software wordt ontwikkeld.
 
@@ -26,7 +28,7 @@ Tijdens de voorfase {voorfaseproject} zijn de volgende activiteiten uitgevoerd:
 
 ### Aanbod
 
-Om tot {projectresultaat} te komen, ontwikkelt ICTU in samenwerking met {partijen} {de software}; zie voor verdere uitwerking de volgende paragraaf. De softwatr komen tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU de softwareontwikkeling uitvoert; zie hiervoor het hoofdstuk “Werkwijze”.
+Om tot {projectresultaat} te komen, ontwikkelt ICTU in samenwerking met {partijen} {de software}; zie voor verdere uitwerking de volgende paragraaf. De software komt tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU de softwareontwikkeling uitvoert; zie hiervoor het hoofdstuk “Werkwijze”.
 
 ICTU voert de realisatiefase uit in nauwe samenwerking met {samenwerkende partijen}, waarbij ICTU zo goed mogelijk gebruik maakt van de bij {partijen} aanwezige kennis en producten. Dit vraagt dus, naast de inspanning van ICTU, ook significante inzet van medewerkers van {partijen}.
 
@@ -34,41 +36,34 @@ ICTU voert de realisatiefase uit in nauwe samenwerking met {samenwerkende partij
 
 Voor uitvoering van de realisatiefase en het opleveren van de software geldt als voorwaarden dat de beheerpartij bekend en aangesloten is en dat de benodigde capaciteit aanwezig is voor het opstellen van de verschillende producten.
 
-===
+De te {ontwikkelen en/of onderhouden} software {beschrijving software}.
 
-In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, zoals PSA en PIA, indien beschikbaar}:
+ICTU levert de volgende producten op:
 
-{Onderstaande tabel geeft de gangbare producten weer, verwijder of vul aan wat er voor de situatie van toepassing is.}
-
-| Onderdeel voorfase                              | Inhoudelijk verantwoordelijk | Penvoerder   | Review en meewerken aan |
-|:------------------------------------------------|:-----------------------------|:-------------|:------------------------|
-| Plan van aanpak voorfase                        | ICTU                         | ICTU         | {reviewers}             |
-| Voorbereiden kick-off                           | ICTU                         | ICTU         | {reviewers}             |
-| Projectstartarchitectuur (PSA)                  | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Softwarearchitectuurdocument (SAD)              | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Infrastructuurarchitectuur (IA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| High Level Design (HLD)                         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Product risico analyse (PRA)                    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Master testplan (op basis van PRA)              | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Testplan softwarerealisatie                     | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Business Impact Analyse (BIA)                   | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Threat & Vulnerability Assessment (TVA)         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Informatiebeveiligingsplan  (IB-plan)           | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Privacy Impact Assessment (PIA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Integraal Kwaliteitsplan                        | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Niet-Functionele Eisen (NFE)                    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Globaal Functioneel Ontwerp (GFO)               | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Geprioriteerde Backlog met user stories         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Vastgesteld minimal viable product              | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Prototype                                       | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Voorstel realisatiefase                         | ICTU                         | ICTU         | {reviewers}             |
-| Plan van aanpak realisatiefase                  | ICTU                         | ICTU         | {reviewers}             |
-| Tussentijdse rapportage t.b.v. go/no-go besluit | {verantwoordelijke}          | ICTU         | {reviewers}             |
-
-De penvoerder van het product is de uitvoerende partij die verantwoordelijk is voor het opleveren van het product tijdens de voorfase; de inhoudelijk verantwoordelijke bepaalt de uiteindelijke inhoud. Zie de $KWALITEITSAANPAK$ voor een nadere toelichting op de documentatie.
-
-{Een aantal documenten is bij voorkeur al beschikbaar bij de start van de voorfase. De andere documentatie is afhankelijk van deze documenten, dus mochten de benodigde documenten niet aanwezig zijn, dan heeft dat impact op de planning. Controleer de bovenstaande tabel en de planning.}
+1. Werkende software met de functionaliteiten zoals hierboven beschreven. 
+1. Per release:
+    1. een vrijgaveadvies,
+    1. een overzicht van de wijzigingen in de release ("release notes"),
+    1. een bijgewerkte installatiehandleiding,
+    1. een bijgewerkt software-architectuurdocument (SAD),
+    1. de broncode,
+    1. een set van automatische regressietesten (ART),
+    1. een beschrijving van de logische testgevallen,
+    1. een actuele versie van de kwaliteitsrapportage.
+    1. eventueel bijgewerkte andere documentatie zoals business impact analyse (BIA), privacy impact analyse (PIA), functionele en niet-functionele eisen, testplannen, informatiebeveiligingsplan en kwaliteitsplan.
 
 ### Scope
 
-Binnen de scope van de opdracht vallen de producten, genoemd in de voorgaande tabel, waarvan ICTU de penvoerder is en de organisatie van werksessies ten behoeve van het opstellen van deze producten. Deze producten bevatten ook de beschrijving van de koppelvlakken met de noodzakelijke, aanpalende bronsystemen; buiten de scope van deze opdracht vallen de beschrijvingen van de aanpalende bronsystemen zelf.
+Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {de software}, inclusief: 
+
+* Ontwikkel, test- en demo-omgevingen,
+* Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (Checkmarx, OWASP dependency checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
+* Backlog management tools (Jira en/of Azure DevOps),
+* Beveiligings- en performancetesten in de ICTU-testomgevingen.
+
+Buiten de scope van de opdracht valt:
+ 
+* Acceptatie- en productieomgevingen en de installatie van de software op acceptatie- en productieomgevingen,
+* Beveiligings- en performancetesten in acceptactie- en productieomgevingen,
+* Keten- en integratietesten met aanpalende systemen,
+* Testen met (geanonimiseerde) productiedata.

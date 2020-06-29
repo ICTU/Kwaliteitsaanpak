@@ -40,7 +40,7 @@ De te {ontwikkelen en/of onderhouden} software {beschrijving software}.
 
 ICTU levert de volgende producten op:
 
-1. Werkende software met de functionaliteiten zoals hierboven beschreven. 
+1. Werkende software met de functionaliteiten zoals hierboven beschreven.
 1. Per release:
     1. een vrijgaveadvies,
     1. een overzicht van de wijzigingen in de release ("release notes"),
@@ -54,7 +54,7 @@ ICTU levert de volgende producten op:
 
 ### Scope
 
-Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {de software}, inclusief: 
+Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {de software}, inclusief:
 
 * Ontwikkel, test- en demo-omgevingen,
 * Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (Checkmarx, OWASP dependency checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
@@ -62,8 +62,8 @@ Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {
 * Beveiligings- en performancetesten in de ICTU-testomgevingen.
 
 Buiten de scope van de opdracht valt:
- 
+
 * Acceptatie- en productieomgevingen en de installatie van de software op acceptatie- en productieomgevingen,
-* Beveiligings- en performancetesten in acceptactie- en productieomgevingen,
+* Beveiligings- en performancetesten in acceptatie- en productieomgevingen,
 * Keten- en integratietesten met aanpalende systemen,
 * Testen met (geanonimiseerde) productiedata.

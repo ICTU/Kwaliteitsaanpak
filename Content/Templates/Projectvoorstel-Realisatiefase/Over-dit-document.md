@@ -19,12 +19,12 @@ Bij de uitvoering van softwareontwikkelprojecten hanteert ICTU de $KWALITEITSAAN
 Tijdens de voorfase {voorfaseproject} zijn de volgende activiteiten uitgevoerd:
 
 1. Vaststellen of het mogelijk is en, zo ja, onder welke condities en randvoorwaarden om productierijpe software op te leveren voor de gevraagde functionaliteiten. Hierbij is gekeken naar:
-    1. techniek (zoals platform, voortbrengingsproces software en koppelingen),
-    2. scope,
-    3. planning,
-    4. samenwerking,
-    5. risico’s.
-2. Voorbereiden van een eventuele start van de realisatie, zodat het ontwikkelteam van een voldoende uitgewerkte backlog is voorzien bij de start.
+    a. techniek (zoals platform, voortbrengingsproces software en koppelingen),
+    a. scope,
+    a. planning,
+    a. samenwerking,
+    a. risico’s.
+1. Voorbereiden van een eventuele start van de realisatie, zodat het ontwikkelteam van een voldoende uitgewerkte backlog is voorzien bij de start.
 
 ### Aanbod
 
@@ -42,15 +42,15 @@ ICTU levert de volgende producten op:
 
 1. Werkende software met de functionaliteiten zoals hierboven beschreven.
 1. Per release:
-    1. een vrijgaveadvies,
-    1. een overzicht van de wijzigingen in de release ("release notes"),
-    1. een bijgewerkte installatiehandleiding,
-    1. een bijgewerkt software-architectuurdocument (SAD),
-    1. de broncode,
-    1. een set van automatische regressietesten (ART),
-    1. een beschrijving van de logische testgevallen,
-    1. een actuele versie van de kwaliteitsrapportage.
-    1. eventueel bijgewerkte andere documentatie zoals business impact analyse (BIA), privacy impact analyse (PIA), functionele en niet-functionele eisen, testplannen, informatiebeveiligingsplan en kwaliteitsplan.
+    a. een vrijgaveadvies,
+    a. een overzicht van de wijzigingen in de release ("release notes"),
+    a. een bijgewerkte installatiehandleiding,
+    a. een bijgewerkt software-architectuurdocument (SAD),
+    a. de broncode,
+    a. een set van automatische regressietesten (ART),
+    a. een beschrijving van de logische testgevallen,
+    a. een actuele versie van de kwaliteitsrapportage.
+    a. eventueel bijgewerkte andere documentatie zoals business impact analyse (BIA), privacy impact analyse (PIA), functionele en niet-functionele eisen, testplannen, informatiebeveiligingsplan en kwaliteitsplan.
 
 ### Scope
 

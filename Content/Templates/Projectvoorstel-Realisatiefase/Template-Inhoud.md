@@ -39,16 +39,17 @@ Betrokkenheid van inhoudsdeskundigen van {opdrachtgever/partijen} is randvoorwaa
 Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoering van dit projectvoorstel (één persoon kan eventueel meer dan één rol vervullen):
 {selecteer de juiste rollen en vul aan, vul ook de juiste verantwoordelijkheden in, onderstaande is een eerste opzet met zoveel mogelijk rollen}
 
-| Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                          |
-|:----------------------------------------------|:-------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, TVA en IB-plan                                                                            |
-| Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                           |
-| Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur (high level design, HLD) |
-| Architect                                     | {aantal} dagen           | Bewaken en onderhouden van de softwarearchitectuur |
-| Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                                |
-| Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden backlog |
+| Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                        |
+|:----------------------------------------------|:-------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
+| Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, TVA en IB-plan                                                                                   |
+| Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                                   |
+| Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur (high level design, HLD)                                                   |
+| Architect                                     | {aantal} dagen           | Bewaken en onderhouden van de softwarearchitectuur                                                                           |
+| Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                              |
+| Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden backlog                                                         |
 | Projectleider (Opdrachtgever)                 | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan demo's en eventuele workshops |
-| Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                    |
+| Technisch beheerder beheerpartij              | {aantal} dagen           | Installeren software op acceptatieomgeving, aanleveren specificaties productie-omgeving                                      |
+| Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                  |
 
 # Planning en doorlooptijd
 
@@ -102,21 +103,21 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoo
 
 {Selecteer de rollen die nodig zijn en vul ze aan. Vul de juiste verantwoordelijkheden in. De onderstaande tabel is een eerste opzet met veel voorkomende rollen.}
 
-| Rol                                    | Verwachte inzet | Verantwoordelijkheden                                                                                                                                                                       |
-|:---------------------------------------|:----------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Software-architect/senior ontwikkelaar | {x} uur         | Penvoerder SAD, reviewen {documenten}                                                                                                                                                       |
-| Functioneel ontwerper                  | {x} uur         | Penvoerder GFO, reviewen {documenten}                                                                                                                                                       |
-| Database administrator                 | {x} uur         | Opstellen logisch datamodel en fysiek database ontwerp, reviewen {documenten}                                                                                                               |
-| UX-designer                            | {x} uur         | Opstellen UX-richtlijnen, maken prototype, reviewen {documenten}                                                                                                                            |
-| Informatiebeveiligingsexpert           | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                              |
-| Privacy expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                              |
-| Testmanager                            | {x} uur         | Penvoerder testplan softwarerealisatie, reviewen {documenten}                                                                                                                               |
-| Kwaliteitsmanager                      | {x} uur         | Penvoerder kwaliteitsplan, reviewen {documenten}                                                                                                                                            |
-| Software Delivery Manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het team, inhoudelijke rapportage                               |
-| Projectleider                          | {x} uur         | Voorbereiden en plannen kick-off, opstellen projectvoorstel en voorstel/overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
-| Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                                                                                    |
-| Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is                                                                  |
-| Totaal                                 | {x} uur         |                                                                                                                                                                                             |
+| Rol                                    | Verwachte inzet | Verantwoordelijkheden                                                                                                       |
+|:---------------------------------------|:----------------|:----------------------------------------------------------------------------------------------------------------------------|
+| Software-architect/senior ontwikkelaar | {x} uur         | Onderhouden SAD, bewaken architectuurkeuzes, ontwerpen, ontwikkelen en testen van de software                               |
+| Ontwikkelaar                           | {x} uur         | Ontwerpen, ontwikkelen en testen van de software                                                                            |
+| Tester                                 | {x} uur         | Opstellen logische testgevallen, ontwikkelen en uitvoeren fysieke testgevallen, opstellen testrapportages en vrijgaveadvies |
+| Functioneel ontwerper                  | {x} uur         | Onderhouden GFO, ondersteunen product owner bij opstellen en uitwerken van de user stories                                  |
+| Database administrator                 | {x} uur         | Onderhouden logisch datamodel en fysiek database ontwerp, ontwikkelen migratiescripts, database tuning                      |
+| UX-designer                            | {x} uur         | Onderhouden UX-richtlijnen, maken prototypes, toetsen prototypes met gebruikers                                             |
+| Informatiebeveiligingsexpert           | {x} uur         | Onderhouden IB-plan, toetsen IB-maatregelen                                                                                 |
+| Kwaliteitsmanager                      | {x} uur         | Inrichten, onderhouden en bewaken kwaliteitsrapportage                                                                      |
+| Software Delivery Manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het team, inhoudelijke rapportage                    |
+| Projectleider                          | {x} uur         | Bewaken overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
+| Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                    |
+| Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is  |
+| Totaal                                 | {x} uur         |                                                                                                                             |
 
 ## Kosten
 

@@ -60,7 +60,7 @@ De kwaliteit van de deliverables wordt mede bepaald door de verwachtingen van de
 
 De tijdens de voorfase geïdentificeerde eisen vormen het startpunt van de opdrachtgever en kunnen gedurende de vervolgfases in overeenstemming met de opdrachtnemer aangepast worden. De product owner vertegenwoordigt gedurende de vervolgfasen de geïdentificeerde belanghebbenden.
 
-## Eisenbeheer
+## Verwerking eisen
 
 ### Functionele eisen
 

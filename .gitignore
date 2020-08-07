@@ -1,3 +1,6 @@
+# Input files to be processed
+input 
+
 # Logs
 logs
 *.log

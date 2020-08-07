@@ -27,7 +27,7 @@ Elk Jira-type maakt gebruik van een standaard workflow. Omdat de kwaliteitsrappo
 Het op te leveren systeem is beschreven in documenten zoals projectstartarchitectuur (PSA) en globaal functioneel ontwerp (GFO). De actuele situatie van het systeem kan anders zijn in situatie waarin gefaseerd het gewenste systeem wordt opgeleverd of waarin het systeem door de agile-manier van werken reeds vooruitloopt op het GFO. Om de actuele situatie te beschrijven wordt gebruik gemaakt van de Jira-typen _Systeemfunctie_ en _Use Cases_. Tevens zijn de hierbij behorende logische testgevallen beschreven.
 
 **Systeemfunctie**
-Het te ontworpen systeem wordt door het team, meestal door een functioneel ontwerper, vastgelegd in Jira door een issue aan te maken van het type _Systeemfunctie_. Een systeemfunctie is de vastlegging van het globaal functioneel ontwerp of delen ervan. Een goedgekeurde versie van het GFO bevat de gewenste situatie van een specifiek release en zal als attachment in het issue bijgevoegd worden.
+Het te ontwerpen systeem wordt door het team, meestal door een functioneel ontwerper, vastgelegd in Jira door een issue aan te maken van het type _Systeemfunctie_. Een systeemfunctie is de vastlegging van het globaal functioneel ontwerp of delen ervan. Een goedgekeurde versie van het GFO bevat de gewenste situatie van een specifiek release en zal als attachment in het issue bijgevoegd worden.
 
 Een systeemfunctie is beschreven door één of meerdere use cases. Gezamenlijk beschrijven de use cases op elk gewenst moment de actuele situatie van de betreffende systeemfunctie.
 

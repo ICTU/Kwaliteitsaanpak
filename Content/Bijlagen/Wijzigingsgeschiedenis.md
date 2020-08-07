@@ -1,15 +1,17 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.1.0-unreleased, 27 mei 2020
+### Versie 2.1.0-unreleased, 7 augustus 2020
 
 #### Kwaliteitsaanpak
 
 * M30 ontbrak in de bijlage met het overzicht van alle maatregelen.
+* Link naar Kwaliteitsaanpak op ICTU website toegevoegd.
 
 #### Alle templates
 
 * Rubriceringsmogelijkheid conform Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013 ) toegevoegd.
 * Rubriceringsniveau, rubriceringsduur en totaal aantal bladzijden conform VIRBI 2014, bijlage 1, eis 6J toegevoegd.
+* Link naar Kwaliteitsaanpak op ICTU website toegevoegd in de bijlage over de Kwaliteitsaanpak
 
 #### Generiek template
 

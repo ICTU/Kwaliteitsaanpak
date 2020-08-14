@@ -7,11 +7,11 @@ Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak.
 * Eén team met medewerkers van {opdrachtgever/partijen} en ICTU werkt minimaal {aantal} {dagen/dagdelen} per week op locatie van {locatie} aan de software.
 * Er is een product owner door {opdrachtgever} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
 
-De realisatiefase wordt uitgevoerd in iteraties, "sprints" genaamd, van {twee of drie} weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de status van de software.
+De realisatiefase wordt uitgevoerd in iteraties, "sprints" genaamd, van {twee of drie} weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de gemaakte wijzigingen aan de software.
 
 ## Plan van aanpak realisatiefase
 
-Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de realisatiefase en het voorbereiden en plannen van een kick-off. In het (beknopte) plan van aanpak realisatiedase wordt aandacht besteed aan de exacte invulling van de realisatiefase.
+Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de realisatiefase en het voorbereiden en plannen van een kick-off. In het (beknopte) plan van aanpak realisatiefase wordt aandacht besteed aan de exacte invulling van de realisatiefase.
 
 ## Kick-off
 
@@ -21,13 +21,17 @@ Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off g
 
 {Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen op één locatie bij {locatie} wordt samengewerkt. {partij} stelt hiervoor ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Indien op locatie ICTU wordt gewerkt: Om deze binnen ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen. De huidige versie van het voorschrift is opgenomen in de bijlagen.}
 
+## Projectbesturing
+
+{Beschrijf kort de governancestructuur: stuurgroep, rapportage- en escalatielijnen}
+
 ## Oplevering software
 
 De realisatiefase is op basis van sprints ingericht. Tijdens elke sprint verwerkt het projectteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Indien er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
 
 ## Kwaliteitsbeheersing
 
-ICTU richt een geautomatiseerd kwaliteitssysteem in dat de kwaliteit van de software en het ontwikkelproces bewaakt. De ICTU-kwaliteitsmanager richt dit kwaliteitssysteem in en bewaakt de metingen.
+ICTU richt een geautomatiseerd kwaliteitssysteem (Quality-time) in dat de kwaliteit van de software en het ontwikkelproces bewaakt. De ICTU-kwaliteitsmanager configureert de metrieken in dit kwaliteitssysteem in en bewaakt de metingen.
 
 ## Inzet {opdrachtgever/partijen}
 
@@ -51,6 +55,10 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 | Technisch beheerder beheerpartij              | {aantal} dagen           | Installeren software op acceptatieomgeving, aanleveren specificaties productie-omgeving                                      |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                  |
 
+## Afstemming met gerelateerde projecten
+
+{Beschrijf de afstemming met gerelateerde projecten indien van toepassing}
+
 # Planning en doorlooptijd
 
 De start van het project vindt uiterlijk {aantal} weken na ondertekening van dit projectvoorstel plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het team samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
@@ -71,7 +79,7 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 
 # Randvoorwaarden
 
-Voor de uitvoering van de voorfase gelden de volgende randvoorwaarden:
+Voor de uitvoering van de realisatiefase gelden de volgende randvoorwaarden:
 
 | Nr           | Randvoorwaarde                                                                                                           |
 |:-------------|:-------------------------------------------------------------------------------------------------------------------------|
@@ -88,12 +96,12 @@ De onderstaande projectrisico’s, die het succes van de realisatiefase kunnen b
 
 {Deze tabel dient op basis van het concrete project en voorstel aangepast te worden.}
 
-| Projectrisico                                                                                                                                | Maatregel                                                                                                                                                                               |
-|:---------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Verwachtingen over dit project tussen verschillende partijen ({partijen}, ICTU) kunnen niet waargemaakt worden, waardoor vertraging ontstaat | Wekelijks projectoverleg, samenwerken door middel van werkgroepen en fysiek bij elkaar komen, kick-off met alle betrokkenen waarbij {opdrachtgever} het doel van de voorfase uiteenzet. |
-| Scope-uitbreiding, gebrek aan focus                                                                                                          | Scope voorfase bewaken, alleen de scope uitbreiden als dit noodzakelijk is voor {doel}                                                                                                  |
-| Onvoldoende bemensing door vakanties                                                                                                         | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert.                                                                                                    |
-| {risico}                                                                                                                                     | {maatregel}                                                                                                                                                                             |
+| Projectrisico                                                                                                                                | Maatregel                                                                                                                                                                      |
+|:---------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Verwachtingen over dit project tussen verschillende partijen ({partijen}, ICTU) kunnen niet waargemaakt worden, waardoor vertraging ontstaat | Wekelijks projectoverleg, samenwerken door middel van werkgroepen en fysiek bij elkaar komen, kick-off met alle betrokkenen waarbij {opdrachtgever} de productvisie uiteenzet. |
+| Scope-uitbreiding, gebrek aan focus                                                                                                          | Scope bewaken, alleen de scope uitbreiden als dit noodzakelijk is voor {doel}                                                                                                  |
+| Onvoldoende bemensing door vakanties                                                                                                         | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert.                                                                                           |
+| {risico}                                                                                                                                     | {maatregel}                                                                                                                                                                    |
 
 # Begroting
 
@@ -106,6 +114,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoo
 | Rol                                    | Verwachte inzet | Verantwoordelijkheden                                                                                                       |
 |:---------------------------------------|:----------------|:----------------------------------------------------------------------------------------------------------------------------|
 | Software-architect/senior ontwikkelaar | {x} uur         | Onderhouden SAD, bewaken architectuurkeuzes, ontwerpen, ontwikkelen en testen van de software                               |
+| Scrummaster                            | {x} uur         | Bewaken Scrumproces, faciliteren Scrumevents                                                                                |
 | Ontwikkelaar                           | {x} uur         | Ontwerpen, ontwikkelen en testen van de software                                                                            |
 | Tester                                 | {x} uur         | Opstellen logische testgevallen, ontwikkelen en uitvoeren fysieke testgevallen, opstellen testrapportages en vrijgaveadvies |
 | Functioneel ontwerper                  | {x} uur         | Onderhouden GFO, ondersteunen product owner bij opstellen en uitwerken van de user stories                                  |

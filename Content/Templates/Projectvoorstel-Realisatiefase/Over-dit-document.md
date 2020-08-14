@@ -30,13 +30,13 @@ Tijdens de voorfase {voorfaseproject} zijn de volgende activiteiten uitgevoerd:
 
 Om tot {projectresultaat} te komen, ontwikkelt ICTU in samenwerking met {partijen} {de software}; zie voor verdere uitwerking de volgende paragraaf. De software komt tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU de softwareontwikkeling uitvoert; zie hiervoor het hoofdstuk “Werkwijze”.
 
-ICTU voert de realisatiefase uit in nauwe samenwerking met {samenwerkende partijen}, waarbij ICTU zo goed mogelijk gebruik maakt van de bij {partijen} aanwezige kennis en producten. Dit vraagt dus, naast de inspanning van ICTU, ook significante inzet van medewerkers van {partijen}.
+ICTU voert de realisatiefase uit in nauwe samenwerking met {samenwerkende partijen}, waarbij ICTU zo goed mogelijk gebruik maakt van de bij {partijen} aanwezige kennis en producten. Dit vraagt dus, naast de inspanning van ICTU, ook significante inzet van medewerkers van {partijen}; zie hiervoor het hoofdstuk "Werkwijze".
 
 ### Producten
 
 Voor uitvoering van de realisatiefase en het opleveren van de software geldt als voorwaarden dat de beheerpartij bekend en aangesloten is en dat de benodigde capaciteit aanwezig is voor het opstellen van de verschillende producten.
 
-De te {ontwikkelen en/of onderhouden} software {beschrijving software}.
+De te {ontwikkelen en/of onderhouden} software {beschrijving functionaliteit in hoofdlijnen van de software}.
 
 ICTU levert de volgende producten op:
 
@@ -49,7 +49,7 @@ ICTU levert de volgende producten op:
     a. de broncode,
     a. een set van automatische regressietesten (ART),
     a. een beschrijving van de logische testgevallen,
-    a. een actuele versie van de kwaliteitsrapportage.
+    a. een actuele versie van de kwaliteitsrapportage,
     a. eventueel bijgewerkte andere documentatie zoals business impact analyse (BIA), privacy impact analyse (PIA), functionele en niet-functionele eisen, testplannen, informatiebeveiligingsplan en kwaliteitsplan.
 
 ### Scope
@@ -57,7 +57,7 @@ ICTU levert de volgende producten op:
 Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {de software}, inclusief:
 
 * Ontwikkel, test- en demo-omgevingen,
-* Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (Checkmarx, OWASP dependency checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
+* Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Azure DevOps, GitLab en/of Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (Checkmarx, OWASP Dependency Checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
 * Backlog management tools (Jira en/of Azure DevOps),
 * Beveiligings- en performancetesten in de ICTU-testomgevingen.
 

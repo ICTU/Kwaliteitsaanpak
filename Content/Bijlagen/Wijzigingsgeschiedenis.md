@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.1.0-unreleased, 7 augustus 2020
+### Versie 2.1.0-unreleased, 2 september 2020
 
 #### Kwaliteitsaanpak
 
@@ -12,6 +12,10 @@
 * Rubriceringsmogelijkheid conform Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013 ) toegevoegd.
 * Rubriceringsniveau, rubriceringsduur en totaal aantal bladzijden conform VIRBI 2014, bijlage 1, eis 6J toegevoegd.
 * Link naar Kwaliteitsaanpak op ICTU website toegevoegd in de bijlage over de Kwaliteitsaanpak
+
+#### Template Projectvoorstel Realisatiefase
+
+* Projectvoorstel Realisatiefase template toegevoegd dat als basis kan dienen voor een projectvoorstel voor het uitvoeren van een realisatiefase aansluitend aan een voorfase.
 
 #### Generiek template
 
@@ -70,7 +74,7 @@
 
 * M01: Op te leveren producten: Niet alle producten hoeven door het project te worden gemaakt.
 * M02: Continu voldoen aan kwaliteitsnormen: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
-* M13: Gebruik van ISO-25010: Verduidelijkt dat het om het toepassen van ISO-25010 in projecten gaat en verplaatsen naar hoofdstuk Producten.
+* M13: Gebruik van NEN-ISO/IEC 25010: Verduidelijkt dat het om het toepassen van NEN-ISO/IEC 25010 in projecten gaat en verplaatsen naar hoofdstuk Producten.
 * M19: Afgeschermde digitale omgeving: De titel van de maatregel verduidelijkt naar "afgeschermde digitale omgeving".
 * M25: De inhoud is verplaatst naar M01: Op te leveren producten, M25 zelf is vervallen.
 * M28: Self-assessment: Maatregel met betrekking tot self-assessment toegevoegd.

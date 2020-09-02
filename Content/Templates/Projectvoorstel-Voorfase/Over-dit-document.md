@@ -2,6 +2,8 @@
 
 ### Aanleiding
 
+{Relevante voorgeschiedenis}
+
 Hierbij bieden wij u ons projectvoorstel aan voor {project}, hierna verder te noemen: de “Opdracht”. Dit voorstel is opgesteld naar aanleiding van onze {gesprekken/mailwisseling/andere contacten}.
 
 Dit voorstel heeft een geldigheidsduur van 30 kalenderdagen, ingaande op de datum van ontvangst.
@@ -10,19 +12,19 @@ Indien akkoord gelieve u dit voorstel inclusief de projectovereenkomst te voorzi
 
 ### Uw vraag
 
-{omschrijving vraag}
+{Omschrijving vraag}
 
 Bij de uitvoering van softwareontwikkelprojecten hanteert ICTU de $KWALITEITSAANPAK$. Conform deze aanpak zijn projecten gesplitst in een voorbereidende fase, "voorfase" genoemd, en een realisatiefase, waarin de software wordt ontwikkeld.
 
 De voorfase heeft de volgende doelen:
 
 1. Vaststellen of het mogelijk is en, zo ja, onder welke condities en randvoorwaarden om productierijpe software op te leveren voor de gevraagde functionaliteiten. Hierbij wordt gekeken naar:
-    1. techniek (zoals platform, voortbrengingsproces software en koppelingen),
-    2. scope,
-    3. planning,
-    4. samenwerking,
-    5. risico’s.
-2. Voorbereiden van een eventuele start van de realisatie, zodat het ontwikkelteam van een voldoende uitgewerkte backlog is voorzien bij de start.
+    a. techniek (zoals platform, voortbrengingsproces software en koppelingen),
+    a. scope,
+    a. planning,
+    a. samenwerking,
+    a. risico’s.
+1. Voorbereiden van een eventuele start van de realisatie, zodat het ontwikkelteam van een voldoende uitgewerkte backlog is voorzien bij de start.
 
 ### Aanbod
 

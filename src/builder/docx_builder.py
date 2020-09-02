@@ -138,7 +138,11 @@ class DocxBuilder(Builder):
                 run.font.strike = True
         elif tag == xmltags.ANCHOR:
             assert self.paragraph
-            link = str(attributes[xmltags.ANCHOR_LINK])
+            try:
+                link = str(attributes[xmltags.ANCHOR_LINK])
+            except KeyError:
+                print(tag, text, attributes)
+                raise
             if link.startswith("#"):
                 self.paragraph.add_run(text)  # Implement internal links some day
             else:

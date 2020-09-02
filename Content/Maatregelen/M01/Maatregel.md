@@ -12,7 +12,7 @@ Bronnen van de opdrachtgever zoals procesbeschrijvingen, een programma van eisen
 **Niet-functionele eisen**
 Niet-functionele eisen specificeren criteria om het functioneren van de software te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Voor de beschrijving en onderverdeling van niet-functionele eisen gebruikt ICTU:
 
-* ISO/IEC-25010,
+* NEN-ISO/IEC 25010,
 * Wet beveiliging netwerk- en informatiesystemen (Wbni),
 * Baseline Informatiebeveiliging Overheid (BIO),
 * methode Grip op SDD (Secure Software Development) van het Centrum Informatiebeveiliging en Privacybescherming (CIP),

@@ -2,19 +2,19 @@
 
 Dit projectvoorstel is een vervolg op de voorfase {voorfaseproject}. De documenten die in die voorfase zijn gerealiseerd en die uitgangspunt zijn voor de realisatiefase zijn:
 
-- Projectstartarchitectuur (PSA), versie {versie},
-- Softwarearchitectuurdocument (SAD), versie {versie},
-- High Level Design (HLD), versie {versie},
-- Master testplan, versie {versie},
-- Testplan softwarerealisatie, versie {versie},
-- Informatiebeveiligingsplan (IB-plan), versie {versie},
-- Integraal Kwaliteitsplan, versie {versie},
-- Niet-Functionele Eisen (NFE), versie {versie},
-- Globaal Functioneel Ontwerp (GFO), versie {versie},
-- Geprioriteerde Backlog met user stories, versie {versie},
-- Vastgesteld minimal viable product, versie {versie},
-- Prototype, versie {versie},
-- Plan van aanpak realisatiefase, versie {versie},
-- Tussentijdse rapportage t.b.v. go/no-go besluit, versie {versie}.
+* Projectstartarchitectuur (PSA), versie {versie},
+* Softwarearchitectuurdocument (SAD), versie {versie},
+* High Level Design (HLD), versie {versie},
+* Master testplan, versie {versie},
+* Testplan softwarerealisatie, versie {versie},
+* Informatiebeveiligingsplan (IB-plan), versie {versie},
+* Integraal Kwaliteitsplan, versie {versie},
+* Niet-Functionele Eisen (NFE), versie {versie},
+* Globaal Functioneel Ontwerp (GFO), versie {versie},
+* Geprioriteerde Backlog met user stories, versie {versie},
+* Vastgesteld minimal viable product, versie {versie},
+* Prototype, versie {versie},
+* Plan van aanpak realisatiefase, versie {versie},
+* Tussentijdse rapportage t.b.v. go/no-go besluit, versie {versie}.
 
 {Beschrijf ook een eventuele relatie met andere documenten die niet afkomstig zijn uit de voorfase}

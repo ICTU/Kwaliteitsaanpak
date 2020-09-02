@@ -4,7 +4,7 @@
 
 {Relevante voorgeschiedenis}
 
-Hierbij bieden wij u ons projectvoorstel aan voor {project}, hierna verder te noemen: de “Opdracht”. Dit voorstel is opgesteld naar aanleiding van de voorfase {voorfaseproject}.
+Hierbij bieden wij u ons projectvoorstel aan voor de realisatiefase van {project}, hierna verder te noemen: de “Opdracht”. Dit voorstel is opgesteld naar aanleiding van de voorfase {voorfaseproject}.
 
 Dit voorstel heeft een geldigheidsduur van 30 kalenderdagen, ingaande op de datum van ontvangst.
 
@@ -24,7 +24,7 @@ Tijdens de voorfase {voorfaseproject} zijn de volgende activiteiten uitgevoerd:
     a. planning,
     a. samenwerking,
     a. risico’s.
-1. Voorbereiden van een eventuele start van de realisatie, zodat het ontwikkelteam van een voldoende uitgewerkte backlog is voorzien bij de start.
+1. Voorbereiden van een eventuele start van de realisatie, zodat het ontwikkelteam direct bij de start is voorzien van ontwerp- en architectuurinformatie, de van toepassing zijnde kaders en een voldoende uitgewerkte backlog.
 
 ### Aanbod
 
@@ -46,11 +46,12 @@ ICTU levert de volgende producten op:
     a. een overzicht van de wijzigingen in de release ("release notes"),
     a. een bijgewerkte installatiehandleiding,
     a. een bijgewerkt software-architectuurdocument (SAD),
+    a. een bijgewerkt globaal functioneel ontwerp (GFO),
     a. de broncode,
     a. een set van automatische regressietesten (ART),
     a. een beschrijving van de logische testgevallen,
     a. een actuele versie van de kwaliteitsrapportage,
-    a. eventueel bijgewerkte andere documentatie zoals business impact analyse (BIA), privacy impact analyse (PIA), functionele en niet-functionele eisen, testplannen, informatiebeveiligingsplan en kwaliteitsplan.
+    a. eventueel bijgewerkte andere documentatie waarvoor ICTU verantwoordelijk en/of penvoerder is, zoals testplannen en kwaliteitsplan.
 
 ### Scope
 
@@ -65,5 +66,6 @@ Buiten de scope van de opdracht valt:
 
 * Acceptatie- en productieomgevingen en de installatie van de software op acceptatie- en productieomgevingen,
 * Beveiligings- en performancetesten in acceptatie- en productieomgevingen,
-* Keten- en integratietesten met aanpalende systemen,
-* Testen met (geanonimiseerde) productiedata.
+* Keten- en integratietesten met aanpalende systemen in acceptatie- en productieomgevingen,
+* Testen met (geanonimiseerde) productiedata,
+* Beheeractiviteiten door ICTU.

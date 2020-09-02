@@ -1,21 +1,23 @@
 # Werkwijze
 
-Het succes van deze opdracht, en van het eventueel later uit te voeren realisatietraject, is sterk afhankelijk van de beschikbaarheid en inzet van alle betrokkenen. Deze betrokkenheid dient daarom voor aanvang van het project expliciet te worden geborgd door de betrokken organisaties. Dit zal door de projectleider ICTU en {opdrachtgever} gemonitord worden.
+Het succes van het uit te voeren realisatietraject is sterk afhankelijk van de beschikbaarheid en inzet van alle betrokkenen. Deze betrokkenheid dient daarom voor aanvang van het project expliciet te worden geborgd door de betrokken organisaties. Dit zal door de projectleider ICTU en {opdrachtgever} gemonitord worden.
 
-Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak. Dit vertaalt zich concreet in:
+Tijdens dit project wordt agile gewerkt volgens de Scrum-aanpak. Dit vertaalt zich concreet in:
 
 * Eén team met medewerkers van {opdrachtgever/partijen} en ICTU werkt minimaal {aantal} {dagen/dagdelen} per week op locatie van {locatie} aan de software.
 * Er is een product owner door {opdrachtgever} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
 
-De realisatiefase wordt uitgevoerd in iteraties, "sprints" genaamd, van {twee of drie} weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de gemaakte wijzigingen aan de software.
+De realisatiefase wordt uitgevoerd in iteraties, "sprints" genaamd, van {twee of drie} weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de gemaakte wijzigingen aan de software en een retrospective van de sprint.
 
 ## Plan van aanpak realisatiefase
 
-Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de realisatiefase en het voorbereiden en plannen van een kick-off. In het (beknopte) plan van aanpak realisatiefase wordt aandacht besteed aan de exacte invulling van de realisatiefase.
+Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de realisatiefase en het voorbereiden en plannen van een kick-off. In het plan van aanpak realisatiefase wordt aandacht besteed aan de exacte invulling van de realisatiefase.
+
+{Als het plan van aanpak heel beknopt is kan eventueel ook volstaan worden met een uitwerking in deze paragraaf}
 
 ## Kick-off
 
-Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off georganiseerd met alle projectmedewerkers, beoogde stuurgroepleden en de opdrachtgever. Na opdrachtverstrekking zal de projectleider van ICTU de kick-off plannen.
+Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off georganiseerd met alle projectmedewerkers, beoogde stuurgroepleden en de opdrachtgever. In de kick-off komen, naast een kennismaking, eventuele acties aan bod die nog uitgevoerd moeten worden voordat daadwerkelijk met de realisatiefase kan worden begonnen. {Als er al dergelijke acties bekend zijn, voeg ze eventueel hier in.} Ook worden de risico’s geïdentificeerd die van toepassing zijn op de realisatiefase en het verdere verloop van het project. Na opdrachtverstrekking zal de projectleider van ICTU de kick-off plannen.
 
 ## Projectteam
 
@@ -31,20 +33,23 @@ De realisatiefase is op basis van sprints ingericht. Tijdens elke sprint verwerk
 
 ## Kwaliteitsbeheersing
 
-ICTU richt een geautomatiseerd kwaliteitssysteem (Quality-time) in dat de kwaliteit van de software en het ontwikkelproces bewaakt. De ICTU-kwaliteitsmanager configureert de metrieken in dit kwaliteitssysteem in en bewaakt de metingen.
+De kwaliteitsbeheersing is door ICTU beschreven in het Kwaliteitsplan. Eén van de kwaliteitsmaatregelen is dat ICTU een geautomatiseerd kwaliteitssysteem (Quality-time) inricht dat de kwaliteit van de software en het ontwikkelproces bewaakt. De ICTU-kwaliteitsmanager configureert de metrieken in dit kwaliteitssysteem in en bewaakt de metingen.
 
 ## Inzet {opdrachtgever/partijen}
 
 Betrokkenheid van inhoudsdeskundigen van {opdrachtgever/partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
 
 * Actief bijdragen aan workshops en demo's;
-* Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden.
+* Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden;
+* Opstellen, onderhouden en/of reviewen van documenten namens opdrachtgever.
 
 Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoering van dit projectvoorstel (één persoon kan eventueel meer dan één rol vervullen):
 {selecteer de juiste rollen en vul aan, vul ook de juiste verantwoordelijkheden in, onderstaande is een eerste opzet met zoveel mogelijk rollen}
 
 | Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                        |
 |:----------------------------------------------|:-------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
+| Business analist                              | {aantal} dagen           | Epics opstellen voor de product backlog, eventueel uitgewerkt in user stories                                                |
+| Testmanager                                   | {aantal} dagen           | Testen van nieuwe softwarereleases voordat deze voor gebruik worden vrijgegeven                                              |
 | Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, TVA en IB-plan                                                                                   |
 | Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                                   |
 | Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur (high level design, HLD)                                                   |
@@ -94,6 +99,8 @@ Voor de uitvoering van de realisatiefase gelden de volgende randvoorwaarden:
 
 De onderstaande projectrisico’s, die het succes van de realisatiefase kunnen belemmeren, zijn reeds onderkend; daarbij zijn per risico de maatregelen benoemd.
 
+De risico’s worden door ICTU bijgehouden in het risicolog. De risico’s en de mitigerende maatregelen worden in de realisatiefase bewaakt en waar nodig geactualiseerd.
+
 {Deze tabel dient op basis van het concrete project en voorstel aangepast te worden.}
 
 | Projectrisico                                                                                                                                | Maatregel                                                                                                                                                                      |
@@ -132,11 +139,12 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoo
 
 Dit resulteert in de volgende kosten:
 
-| Kostenpost       |       Bedrag |
-|:-----------------|-------------:|
-| Personeelskosten | € {bedrag},- |
-| Onvoorzien (10%) | € {bedrag},- |
-| Totaal           | € {bedrag},- |
+| Kostenpost                                                                   |       Bedrag |
+|:-----------------------------------------------------------------------------|-------------:|
+| Personeelskosten                                                             | € {bedrag},- |
+| Engineering tools, ontwikkel- en testomgevingen, en technische ondersteuning | € {bedrag},- |
+| Onvoorzien (10%)                                                             | € {bedrag},- |
+| Totaal                                                                       | € {bedrag},- |
 
 {Controleer de hieronder opgenomen tarieven.}
 

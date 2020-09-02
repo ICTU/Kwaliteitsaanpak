@@ -1,8 +1,8 @@
 ## Over dit document
 
-Dit document beschrijft de niet-functionele eisen aan {systeem}. Basis voor de niet-functionele eisen zijn de kwaliteitsattributen zoals gedefinieerd in de standaard ISO/IEC-25010:2011. Deze standaard onderscheidt een "Product Quality model" en een "Quality-in-Use model". Dit document richt zich op het Product Quality model.
+Dit document beschrijft de niet-functionele eisen aan {systeem}. Basis voor de niet-functionele eisen zijn de kwaliteitsattributen zoals gedefinieerd in de standaard NEN-ISO/IEC 25010. Deze standaard onderscheidt een "Product Quality model" en een "Quality-in-Use model". Dit document richt zich op het Product Quality model.
 
-ISO/IEC-25010:2011 definieert de kwaliteitseigenschappen voor een softwareproduct. Deze zijn onderverdeeld in acht hoofdeigenschappen: Functionele geschiktheid, Efficiëntie, Uitwisselbaarheid, Bruikbaarheid, Betrouwbaarheid, Beveiligbaarheid, Onderhoudbaarheid en Overdraagbaarheid.
+NEN-ISO/IEC 25010 definieert de kwaliteitseigenschappen voor een softwareproduct. Deze zijn onderverdeeld in acht hoofdeigenschappen: Functionele geschiktheid, Efficiëntie, Uitwisselbaarheid, Bruikbaarheid, Betrouwbaarheid, Beveiligbaarheid, Onderhoudbaarheid en Overdraagbaarheid.
 
 Deze hoofdeigenschappen zijn nog te globaal en te abstract om de gewenste kenmerken van een softwareproduct hanteerbaar, realiseerbaar en testbaar te maken; een hoofdeigenschap wordt dan ook weer onderverdeeld in eigenschappen. Deze eigenschappen vormen de basis voor de structurering van de niet-functionele eisen.
 

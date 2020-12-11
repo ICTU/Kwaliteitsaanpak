@@ -21,7 +21,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
 
     def __init__(self, filename: pathlib.Path) -> None:
         super().__init__(filename)
-        filename.unlink(missing_ok=True)  # type: ignore
+        filename.unlink(missing_ok=True)
         self.workbook = xlsxwriter.Workbook(filename)
         self.formats = self.__create_formats(self.workbook)
         self.checklist = self.workbook.add_worksheet("Self-assessment checklist")
@@ -56,7 +56,9 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             if self.last_level_1_section_heading:
                 self.row += 1
                 self.checklist.merge_range(
-                    "A{row}:D{row}".format(row=self.row), self.last_level_1_section_heading, self.formats["header"],
+                    "A{row}:D{row}".format(row=self.row),
+                    self.last_level_1_section_heading,
+                    self.formats["header"],
                 )
                 self.last_level_1_section_heading = ""
         elif self.measure_text:

@@ -73,6 +73,7 @@ def convert_pdf(
     with open(header_filename, "w") as header_file:
         header_file.write(header_contents)
     wkhtmltopdf = f"""docker-compose run wkhtmltopdf -c "wkhtmltopdf \
+        --enable-local-file-access \
         --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html {header_filename} --header-spacing 10 \
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \

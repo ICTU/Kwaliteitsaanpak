@@ -37,7 +37,7 @@ class DocxBuilder(Builder):
 
     def __init__(self, filename: pathlib.Path, docx_reference_filename: pathlib.Path) -> None:
         super().__init__(filename)
-        filename.unlink(missing_ok=True)  # type: ignore
+        filename.unlink(missing_ok=True)
         shutil.copy(docx_reference_filename, filename)
         self.doc = Document(filename)
         self.paragraph: Optional[Paragraph] = None  # The current paragraph

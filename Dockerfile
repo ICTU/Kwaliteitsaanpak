@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
 
 RUN lxml_run_time_deps='libxml2-dev libxslt-dev' \
   && apt-get update \
@@ -8,6 +8,6 @@ RUN lxml_run_time_deps='libxml2-dev libxslt-dev' \
   && rm -rf /var/lib/apt/lists/*
 
 ADD ./requirements.txt /tmp/requirements.txt
-RUN pip3 install -r /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
 
 WORKDIR /work

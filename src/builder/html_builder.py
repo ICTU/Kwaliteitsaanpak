@@ -48,7 +48,8 @@ class HTMLBuilder(Builder):
             self.builder.data(self.filename.name)
             self.builder.end(html_tags.TITLE)
             self.builder.start(
-                html_tags.LINK, {html_tags.LINK_REL: "stylesheet", html_tags.LINK_HREF: self.STYLESHEET},
+                html_tags.LINK,
+                {html_tags.LINK_REL: "stylesheet", html_tags.LINK_HREF: self.STYLESHEET},
             )
             self.builder.end(html_tags.LINK)
             self.builder.end(html_tags.HEAD)
@@ -78,7 +79,8 @@ class HTMLBuilder(Builder):
             self.builder.start(self.table_cell_html_tag, {html_tags.STYLE: f"text-align:{alignment}"})
         elif tag == xmltags.ANCHOR:
             self.builder.start(
-                html_tags.ANCHOR, {html_tags.ANCHOR_LINK: attributes[xmltags.ANCHOR_LINK]},
+                html_tags.ANCHOR,
+                {html_tags.ANCHOR_LINK: attributes[xmltags.ANCHOR_LINK]},
             )
         elif tag == xmltags.MEASURE:
             self.builder.start(html_tags.PARAGRAPH, {html_tags.CLASS: "maatregel"})
@@ -89,9 +91,9 @@ class HTMLBuilder(Builder):
             if self.heading_level[-1] > 1 and not self.in_keep_together_div:
                 self.builder.start(html_tags.DIV, {html_tags.CLASS: "keep-together"})
                 self.in_keep_together_div = True
-            heading_attributes: TreeBuilderAttributes = {
-                html_tags.CLASS: self.heading_class[-1]
-            } if self.heading_class[-1] else {}
+            heading_attributes: TreeBuilderAttributes = (
+                {html_tags.CLASS: self.heading_class[-1]} if self.heading_class[-1] else {}
+            )
             heading_attributes["id"] = slugify(text)
             self.builder.start(html_tags.HEADING + str(self.heading_level[-1]), heading_attributes)
         if tag not in (xmltags.IMAGE, xmltags.HEADER, xmltags.TITLE):
@@ -168,7 +170,8 @@ class HTMLCoverBuilder(HTMLBuilder):
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
         if tag == xmltags.IMAGE:
             self.builder.start(
-                html_tags.IMAGE, {html_tags.IMAGE_SOURCE: text, html_tags.TITLE: attributes["title"]},
+                html_tags.IMAGE,
+                {html_tags.IMAGE_SOURCE: text, html_tags.TITLE: attributes["title"]},
             )
             self.builder.end(html_tags.IMAGE)
         elif tag == xmltags.TITLE:

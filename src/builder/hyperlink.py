@@ -21,7 +21,8 @@ def add_hyperlink(paragraph, url, text, style="Hyperlink"):
     # Create the w:hyperlink tag and add needed values
     hyperlink = docx.oxml.shared.OxmlElement("w:hyperlink")
     hyperlink.set(
-        docx.oxml.shared.qn("r:id"), r_id,
+        docx.oxml.shared.qn("r:id"),
+        r_id,
     )
 
     # Create a w:r element

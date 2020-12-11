@@ -88,7 +88,8 @@ class MarkdownConverter:
             else:
                 raise ValueError(f"Unknown document type '{document_type}' in the settings")
             self.add_element(
-                xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"})
+                xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"}
+            )
             self.add_element(xmltags.PAGEBREAK)
 
     def create_header(self, settings: Settings) -> None:
@@ -153,9 +154,9 @@ class MarkdownConverter:
         """Process a heading."""
         if level == self.APPENDIX_LEVEL and heading == self.APPENDIX_HEADING:
             self.context.add(self.APPENDIX_HEADING)
-        is_appendix: TreeBuilderAttributes = {
-            xmltags.SECTION_IS_APPENDIX: "y"
-        } if self.APPENDIX_HEADING in self.context else {}
+        is_appendix: TreeBuilderAttributes = (
+            {xmltags.SECTION_IS_APPENDIX: "y"} if self.APPENDIX_HEADING in self.context else {}
+        )
         if self.current_section_level >= level:
             while self.current_section_level >= level:
                 self.builder.end(xmltags.SECTION)

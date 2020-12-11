@@ -45,44 +45,6 @@ ICTU draagt er zorg voor dat de digitale processen van de opdrachtgever aansluit
 
 ICTU heeft ruim vijftien jaar ervaring met de uitvoering en implementatie van innovatieve projecten en programma’s. Daarmee heeft ICTU een unieke positie verworven binnen de overheid in een uitdagende bestuurlijke omgeving.
 
-## Facturatiegegevens
-
-In te vullen door de opdrachtgever:
-
-|                             | Factuuradres                |
-|:----------------------------|:----------------------------|
-| Departement / organisatie   | ……………………………………………………………………… |
-| Ter attentie van            | ……………………………………………………………………… |
-| Postadres                   | ……………………………………………………………………… |
-| Postcode + Vestigingsplaats | ……………………………………………………………………… |
-
-Door de opdrachtgever gewenste administratieve gegevens:
-
-|                           | Administratieve gegevens    |
-|:--------------------------|:----------------------------|
-| Departement / organisatie | ……………………………………………………………………… |
-| Projectnaam               | ……………………………………………………………………… |
-| Verplichtingennummer      | ……………………………………………………………………… |
-| Kenmerk                   | ……………………………………………………………………… |
-| Overig                    | ……………………………………………………………………… |
-
-Financieel contactpersoon bij de organisatie van de opdrachtgever:
-
-|                | Contactgegevens             |
-|:---------------|:----------------------------|
-| Naam           | ……………………………………………………………………… |
-| Afdeling       | ……………………………………………………………………… |
-| Telefoonnummer | ……………………………………………………………………… |
-| E-mail         | ……………………………………………………………………… |
-
-Contactgegevens voor de facturatie bij Stichting ICTU:
-
-|                | Contactgegevens |
-|:---------------|:----------------|
-| Afdeling       | SC Financiën    |
-| E-mail         | fa@ictu.nl      |
-| Telefoonnummer | (06) 2113 7321  |
-
 ## ICTU-voorschrift zakelijk gebruik ICT-diensten en voorzieningen
 
 Werken bij ICTU vraagt om samenwerking, flexibiliteit en vereist dat we op een vertrouwde manier met gegevens omgaan. De ICT-voorzieningen en -diensten die ICTU levert aan haar medewerkers, ondersteunen dit. ICTU beschikt over een moderne werkomgeving, waarbij medewerkers aangeboden ICT-diensten kunnen gebruiken met eigen apparatuur. De dienstverlening van ICTU staat beschreven op het Serviceplein van het ICTU-portaal.

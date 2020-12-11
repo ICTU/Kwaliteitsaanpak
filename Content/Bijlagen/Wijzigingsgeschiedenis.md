@@ -1,5 +1,11 @@
 ## Wijzigingsgeschiedenis
 
+### Versie 2.2.0, ongereleased
+
+#### Template Projectvoorstel Realisatiefase
+
+* Template veranderd in een template voor een plan van aanpak voor de realisatiefase. Gebruik voor projectvoorstellen het ICTU-brede template.
+
 ### Versie 2.1.0, 2 september 2020
 
 #### Kwaliteitsaanpak

@@ -1,17 +1,17 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
-    "BuildPath": "build/Templates/Projectvoorstel-Realisatiefase/",
+    "BuildPath": "build/Templates/PvA-Realisatiefase/",
     "OutputPath": "dist",
-    "Title": "Projectvoorstel Realisatiefase",
+    "Title": "Plan van Aanpak Realisatiefase",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
-    "TemplateFolder": "Projectvoorstel-Realisatiefase",
+    "TemplateFolder": "PvA-Realisatiefase",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Projectvoorstel-Realisatiefase.docx"
+            "OutputFile": "Template-Plan-van-Aanpak-Realisatiefase.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

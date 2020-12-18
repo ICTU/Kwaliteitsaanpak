@@ -10,6 +10,10 @@
 
 * Template veranderd in een template voor een plan van aanpak voor de realisatiefase. Gebruik voor projectvoorstellen het ICTU-brede template.
 
+#### Kwaliteitsplantemplate
+
+* Toegevoegd bij projectafsluiting dat VPN-keys, LDAP-accounts, Jira-accounts en werkstations moeten worden opgeschoond.
+
 ### Versie 2.1.0, 2 september 2020
 
 #### Kwaliteitsaanpak
@@ -21,7 +25,7 @@
 
 * Rubriceringsmogelijkheid conform Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013) toegevoegd.
 * Rubriceringsniveau, rubriceringsduur en totaal aantal bladzijden conform VIRBI 2014, bijlage 1, eis 6J toegevoegd.
-* Link naar Kwaliteitsaanpak op ICTU website toegevoegd in de bijlage over de Kwaliteitsaanpak.
+* Link naar Kwaliteitsaanpak op ICTU-website toegevoegd in de bijlage over de Kwaliteitsaanpak.
 
 #### Template Projectvoorstel Realisatiefase
 

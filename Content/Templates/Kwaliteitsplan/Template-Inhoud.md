@@ -18,7 +18,7 @@ Het project houdt een actie- en besluitenlijst bij. De actie- en besluitenlijst 
 
 ### Risicomanagement
 
-Het project houdt een risicolog bij. De risicolog wordt digitaal bijgehouden door de software delivery manager en periodiek besproken tijdens het projectoverleg. Iedere projectmedewerker kan risico's melden bij de software delivery manager. De omvang van risico's wordt ingeschat en indien nodig voorzien van een of meer maatregelen. Het kwaliteitssysteem bewaakt de actualiteit van het risicolog.
+Het project houdt een risicolog bij. De risicolog wordt digitaal bijgehouden door de software delivery manager en periodiek besproken tijdens het projectoverleg. Iedere projectmedewerker kan risico's melden bij de software delivery manager. De omvang van risico's wordt ingeschat en indien nodig voorzien van een of meer maatregelen. Het kwaliteitssysteem bewaakt de actualiteit van het risicolog.
 
 ### Werkwijze
 
@@ -38,7 +38,7 @@ Alle documenten die een deliverable van het project zijn, zoals architectuurdocu
 
 Bij elk formele release moeten de documenten geactualiseerd zijn en formeel opgeleverd worden.
 
-Elk document bevat een verantwoordingsparagraaf waarin aangeven wordt aan welke eisen (zoals opgenomen in bijvoorbeeld PSA en NFE) wordt voldaan en op welke wijze deze in het document zijn verwerkt.
+Elk document bevat een verantwoordingsparagraaf waarin aangeven wordt aan welke eisen (zoals opgenomen in bijvoorbeeld PSA en NFE) wordt voldaan en hoe deze in het document zijn verwerkt.
 
 ### Documentreview
 
@@ -136,7 +136,7 @@ Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automat
 
 ## Kwaliteit van de broncode
 
-Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het mastertestplan opgenomen. ICTU maakt gebruik van een geautomatiseerd kwaliteitssysteem, waarbij de broncode continu wordt gecheckt en gerapporteerd. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
+Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het mastertestplan opgenomen. ICTU maakt gebruik van een geautomatiseerd kwaliteitssysteem, waarbij de broncode continu wordt gecontroleerd en gerapporteerd. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
 
 De volledige lijst met mogelijke meetbare KPI’s is opgenomen in de bijlagen; de meest actuele lijst is opgenomen in de kwaliteitsrapportage van het project. Gedurende het project wordt uitgegaan van de standaard normen; afwijkingen op de standaard zijn alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
 
@@ -276,7 +276,12 @@ De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van
 | Overige documentatie                  | Sharepoint of andere samenwerkruimte | Projectteam          | 5 jaar        |
 | Final Release                         | {waar}                               | Projectteam          | 5 jaar        |
 | Performancetestscripts                | Git performanceteam                  | Performanceteam      | 5 jaar        |
-| Kwaliteitsrapportage                  | Quality-time database                | ISR Technisch beheer | 2 jaar        |
+| Kwaliteitsrapportage                  | Quality-time database                | ISD Technisch beheer | 2 jaar        |
 | Bugs, user stories en andere issues   | Jira                                 | Jirabeheerder        | 2 jaar        |
-| VM’s ontwikkelteams                   | {waar}                               | ISR Technisch beheer | 2 jaar        |
+| VM’s ontwikkelteams                   | {waar}                               | ISD Technisch beheer | 2 jaar        |
 | {Projectspecifieke producten}         | {waar}                               | {wie}                | {termijn}     |
+
+Bij projectafsluiting zorgt de projectleider verder dat volgende acties worden uitgevoerd:
+
+* ISD Technische beheer trekt credentials van projectmedewerkers zoals VPN-keys en LDAP-accounts in,
+* projectmedewerkers verwijderen broncode, testscript en documentatie van hun werkstations.

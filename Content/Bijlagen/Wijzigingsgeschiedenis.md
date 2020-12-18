@@ -2,6 +2,10 @@
 
 ### Versie 2.2.0, ongereleased
 
+#### Template Projectvoorstel Voorfase
+
+* Template veranderd in een template voor een plan van aanpak voor de voorfase. Gebruik voor projectvoorstellen het ICTU-brede template.
+
 #### Template Projectvoorstel Realisatiefase
 
 * Template veranderd in een template voor een plan van aanpak voor de realisatiefase. Gebruik voor projectvoorstellen het ICTU-brede template.

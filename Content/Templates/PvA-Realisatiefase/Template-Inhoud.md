@@ -1,27 +1,66 @@
+# Projectresultaat 
+
+De te {ontwikkelen en/of onderhouden} software {beschrijving functionaliteit in hoofdlijnen van de software}.
+De software komt tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU de softwareontwikkeling uitvoert; zie hiervoor het hoofdstuk “Werkwijze”.
+
+## Producten
+
+ICTU levert de volgende producten op:
+
+1. Werkende software met de functionaliteiten zoals hierboven beschreven.
+1. Per release:
+    a. een vrijgaveadvies,
+    a. een overzicht van de wijzigingen in de release ("release notes"),
+    a. een bijgewerkte installatiehandleiding,
+    a. een bijgewerkt software-architectuurdocument (SAD),
+    a. een bijgewerkt globaal functioneel ontwerp (GFO),
+    a. de broncode, inclusief unit testen,
+    a. een set van automatische regressietesten (ART),
+    a. een beschrijving van de logische testgevallen,
+    a. een actuele versie van de kwaliteitsrapportage,
+    a. {eventueel bijgewerkte andere documentatie waarvoor ICTU verantwoordelijk en/of penvoerder is, zoals testplannen en kwaliteitsplan}.
+   
+## Scope
+
+Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {de software}, inclusief:
+
+* Ontwikkel, test- en demo-omgevingen,
+* Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Azure DevOps, GitLab en/of Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (Checkmarx, OWASP Dependency Checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
+* Backlog management tools (Jira en/of Azure DevOps),
+* Beveiligings- en performancetesten in de ICTU-testomgevingen.
+
+Buiten de scope van de opdracht valt:
+
+* Acceptatie- en productieomgevingen en de installatie van de software op acceptatie- en productieomgevingen,
+* Beveiligings- en performancetesten in acceptatie- en productieomgevingen,
+* Keten- en integratietesten met aanpalende systemen in acceptatie- en productieomgevingen,
+* Testen met (geanonimiseerde) productiedata,
+* Beheeractiviteiten door ICTU.
+
 # Werkwijze
 
 Het succes van het uit te voeren realisatietraject is sterk afhankelijk van de beschikbaarheid en inzet van alle betrokkenen. Deze betrokkenheid dient daarom voor aanvang van het project expliciet te worden geborgd door de betrokken organisaties. Dit zal door de projectleider ICTU en {opdrachtgever} gemonitord worden.
 
-Tijdens dit project wordt agile gewerkt volgens de Scrum-aanpak. Dit vertaalt zich concreet in:
+## Scrum-aanpak
 
-* Eén team met medewerkers van {opdrachtgever/partijen} en ICTU werkt minimaal {aantal} {dagen/dagdelen} per week op locatie van {locatie} aan de software.
-* Er is een product owner door {opdrachtgever} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
+Tijdens dit project wordt agile gewerkt volgens de Scrum-aanpak. ICTU propageert de kernwaarden van Scrum. Dit vertaalt zich concreet in:
 
-De realisatiefase wordt uitgevoerd in iteraties, "sprints" genaamd, van {twee of drie} weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de gemaakte wijzigingen aan de software en een retrospective van de sprint.
+* Een Scrumteam, bestaande uit een product owner, door {opdrachtgever} aangesteld, die de uiteindelijke inhoudelijke keuzes maakt, en een ontwikkelteam, inclusief Scrummaster, door ICTU aangesteld.
+* Een proces met sprints van {twee of drie} weken waarin de Scrumactiviteiten sprint planning, sprint refinement, daily Scrum, sprint demonstratie/review en retrospective plaatsvinden.
+* Een definition of ready en een definition of done voor respectievelijk het beginnen en afronden van werk.
+* Een product backlog en een sprint backlog.
 
-## Plan van aanpak realisatiefase
+## Werving ontwikkelteam
 
-Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de realisatiefase en het voorbereiden en plannen van een kick-off. In het plan van aanpak realisatiefase wordt aandacht besteed aan de exacte invulling van de realisatiefase.
-
-{Als het plan van aanpak heel beknopt is kan eventueel ook volstaan worden met een uitwerking in deze paragraaf}
+Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de realisatiefase. {Beschrijf eventueel de te werven functies}
 
 ## Kick-off
 
-Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off georganiseerd met alle projectmedewerkers, beoogde stuurgroepleden en de opdrachtgever. In de kick-off komen, naast een kennismaking, eventuele acties aan bod die nog uitgevoerd moeten worden voordat daadwerkelijk met de realisatiefase kan worden begonnen. {Als er al dergelijke acties bekend zijn, voeg ze eventueel hier in.} Ook worden de risico’s geïdentificeerd die van toepassing zijn op de realisatiefase en het verdere verloop van het project. Na opdrachtverstrekking zal de projectleider van ICTU de kick-off plannen.
+Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off georganiseerd met alle projectmedewerkers, beoogde stuurgroepleden en de opdrachtgever. In de kick-off komen, naast een kennismaking, eventuele acties aan bod die nog uitgevoerd moeten worden voordat daadwerkelijk met de realisatiefase kan worden begonnen. {Als er al dergelijke acties bekend zijn, voeg ze eventueel hier in.} Ook worden de risico’s geïdentificeerd die van toepassing zijn op de realisatiefase en het verdere verloop van het project. Na opdrachtverstrekking zal de projectleider van ICTU de kick-off voorbereiden en plannen.
 
 ## Projectteam
 
-{Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen op één locatie bij {locatie} wordt samengewerkt. {partij} stelt hiervoor ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Indien op locatie ICTU wordt gewerkt: Om deze binnen ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen. De huidige versie van het voorschrift is opgenomen in de bijlagen.}
+{Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
 
 ## Projectbesturing
 
@@ -29,7 +68,7 @@ Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off g
 
 ## Oplevering software
 
-De realisatiefase is op basis van sprints ingericht. Tijdens elke sprint verwerkt het projectteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Indien er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
+De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het projectteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Als er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
 
 ## Kwaliteitsbeheersing
 
@@ -44,25 +83,26 @@ Betrokkenheid van inhoudsdeskundigen van {opdrachtgever/partijen} is randvoorwaa
 * Opstellen, onderhouden en/of reviewen van documenten namens opdrachtgever.
 
 Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoering van dit projectvoorstel (één persoon kan eventueel meer dan één rol vervullen):
-{selecteer de juiste rollen en vul aan, vul ook de juiste verantwoordelijkheden in, onderstaande is een eerste opzet met zoveel mogelijk rollen}
+
+{Selecteer de juiste rollen en vul aan, vul ook de juiste verantwoordelijkheden in, onderstaande is een eerste opzet met zoveel mogelijk rollen}
 
 | Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                        |
 |:----------------------------------------------|:-------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
-| Business analist                              | {aantal} dagen           | Epics opstellen voor de product backlog, eventueel uitgewerkt in user stories                                                |
-| Testmanager                                   | {aantal} dagen           | Testen van nieuwe softwarereleases voordat deze voor gebruik worden vrijgegeven                                              |
-| Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, TVA en IB-plan                                                                                   |
-| Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                                   |
-| Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur (high level design, HLD)                                                   |
-| Architect                                     | {aantal} dagen           | Bewaken en onderhouden van de softwarearchitectuur                                                                           |
-| Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                              |
-| Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden backlog                                                         |
 | Projectleider (Opdrachtgever)                 | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan demo's en eventuele workshops |
+| Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden backlog                                                         |
+| Business analist                              | {aantal} dagen           | Epics opstellen voor de product backlog, eventueel uitgewerkt in user stories                                                |
+| Architect                                     | {aantal} dagen           | Bewaken en onderhouden van de softwarearchitectuur                                                                           |
+| Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur, opstellen high level design (HLD)                                           |
+| Testmanager                                   | {aantal} dagen           | Testen van nieuwe softwarereleases voordat deze voor gebruik worden vrijgegeven                                              |
+| Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, opstellen TVA en IB-plan                                                                            |
+| Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                                   |
+| Diverse inhoudelijk deskundigen               | {aantal} dagen           | Inbrengen domeinexpertise en vertegenwoordiging van (eind)gebruikers en belanghebbenden                                         |
 | Technisch beheerder beheerpartij              | {aantal} dagen           | Installeren software op acceptatieomgeving, aanleveren specificaties productie-omgeving                                      |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                  |
 
 ## Afstemming met gerelateerde projecten
 
-{Beschrijf de afstemming met gerelateerde projecten indien van toepassing}
+{Beschrijf de afstemming met gerelateerde projecten, indien van toepassing}
 
 # Planning en doorlooptijd
 
@@ -74,13 +114,16 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 
 {Hieronder een voorbeeld van een planning}
 
-| Onderdeel                            | wk 1 | wk 2 | wk 3 | wk 4 | wk 5 | wk 6 | wk 7 | wk 8 |
-|:-------------------------------------|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
-| Kick-off                             | {X}  |      |      |      |      |      |      |      |
-| Realisatie software sprint 1         |      | {X}  | {X}  |      |      |      |      |      |
-| Realisatie software sprint 2         |      |      |      | {X}  | {X}  |      |      |      |
-| Realisatie software sprint 3         |      |      |      |      |      | {X}  | {X}  |      |
-| Afronden en afsluiten realisatiefase |      |      |      |      |      |      |      | {X}  |
+| Onderdeel/week                       | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 | 12 |
+|:-------------------------------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+| Samenstellen team                    | X  | X  | X  |    |    |    |    |    |    |    |    |    |
+| Voorbereiden en plannen kick-off     |    | X  | X  |    |    |    |    |    |    |    |    |    |
+| Kick-off                             |    |    |    | X  |    |    |    |    |    |    |    |    |
+| Inrichten ontwikkelstraat sprint 0   |    |    |    | X  | X  |    |    |    |    |    |    |    |
+| Realisatie producten sprint 1        |    |    |    |    |    | X  | X  |    |    |    |    |    |
+| Realisatie producten sprint 2        |    |    |    |    |    |    |    | X  | X  |    |    |    |
+| Realisatie producten sprint 3        |    |    |    |    |    |    |    |    |    | X  | X  |    |
+| Afronden en afsluiten realisatiefase |    |    |    |    |    |    |    |    |    |    |    | X  |
 
 # Randvoorwaarden
 
@@ -110,9 +153,7 @@ De risico’s worden door ICTU bijgehouden in het risicolog. De risico’s en de
 | Onvoldoende bemensing door vakanties                                                                                                         | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert.                                                                                           |
 | {risico}                                                                                                                                     | {maatregel}                                                                                                                                                                    |
 
-# Begroting
-
-## Verwachte inzet ICTU
+# Verwachte inzet ICTU
 
 Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoorstel:
 
@@ -134,24 +175,3 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoo
 | Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                    |
 | Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is  |
 | Totaal                                 | {x} uur         |                                                                                                                             |
-
-## Kosten
-
-Dit resulteert in de volgende kosten:
-
-| Kostenpost                                                                   |       Bedrag |
-|:-----------------------------------------------------------------------------|-------------:|
-| Personeelskosten                                                             | € {bedrag},- |
-| Engineering tools, ontwikkel- en testomgevingen, en technische ondersteuning | € {bedrag},- |
-| Onvoorzien (10%)                                                             | € {bedrag},- |
-| Totaal                                                                       | € {bedrag},- |
-
-{Controleer de hieronder opgenomen tarieven.}
-
-Bovenstaande begroting is inclusief BTW. Voor dit projectvoorstel wordt uitgegaan van een gemiddeld bruto tarief van € 155,-. De werkelijke kosten worden bekend als de projectmedewerkers bekend zijn. Wanneer overschrijding van het budget dreigt (bijvoorbeeld vanwege substantieel hogere tarieven), wordt dit tijdig met de opdrachtgever besproken.
-
-ICTU werkt op basis van bevoorschotting. Opdrachtgever wordt dan ook verzocht om het budget van € {bedrag},- voorafgaand per kwartaal aan de door ICTU uit te voeren Opdracht beschikbaar te stellen.
-
-ICTU verricht de Opdracht tegen vergoeding van de daadwerkelijk gemaakte kosten. Dit betekent dat na afronding van de opdracht ICTU een eventueel resterend deel van het bevoorschotte bedrag aan Opdrachtgever retourneert.
-
-Meer informatie over ICTU’s kostprijsmodel kunt u vinden in de bijlage "Werken met ICTU: informatie voor opdrachtgevers”. Met het invullen en retourneren van bijlage “Facturatiegegevens” bevordert u een soepele financiële afwikkeling.

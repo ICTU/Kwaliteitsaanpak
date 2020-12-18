@@ -10,6 +10,8 @@ services:
   wkhtmltopdf:
     build:
       context: .
+      args:
+        ARCH: ${ARCH:-amd64}
       dockerfile: Dockerfile.wkhtmltopdf
     working_dir: /work
     volumes:

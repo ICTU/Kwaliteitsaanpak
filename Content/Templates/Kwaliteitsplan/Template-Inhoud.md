@@ -268,7 +268,7 @@ Deze paragraaf bevat maatregelen voor functionele en niet-functionele eisen, die
 
 # Kwaliteitsmaatregelen projectafsluiting
 
-De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van een project worden uitgevoerd. De projectleider is verantwoordelijk voor het archiveren.
+De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van een project worden uitgevoerd. De software delivery manager is verantwoordelijk voor het archiveren.
 
 | Wat                                   | Waar staat het                       | Wie archiveert het   | Bewaartermijn |
 |:--------------------------------------|:-------------------------------------|:---------------------|:--------------|
@@ -281,7 +281,7 @@ De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van
 | VM’s ontwikkelteams                   | {waar}                               | ISD                  | 2 jaar        |
 | {Projectspecifieke producten}         | {waar}                               | {wie}                | {termijn}     |
 
-Bij projectafsluiting zorgt de projectleider verder dat volgende acties worden uitgevoerd:
+Bij projectafsluiting zorgt de software delivery manager verder dat volgende acties worden uitgevoerd:
 
 * ISD Technische beheer trekt credentials van projectmedewerkers zoals VPN-keys en LDAP-accounts in,
 * projectmedewerkers verwijderen broncode, testscript en documentatie van hun werkstations.

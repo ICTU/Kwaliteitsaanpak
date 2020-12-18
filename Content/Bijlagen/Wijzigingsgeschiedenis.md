@@ -18,6 +18,7 @@
 #### Kwaliteitsplantemplate
 
 * Toegevoegd bij projectafsluiting dat VPN-keys, LDAP-accounts, Jira-accounts en werkstations moeten worden opgeschoond.
+* Bij projectafsluiting de verantwoordelijke rol aangepast naar software delivery manager, conform Maatregel 27 in de Kwaliteitsaanpak.
 
 ### Versie 2.1.0, 2 september 2020
 

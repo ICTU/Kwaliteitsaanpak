@@ -4,4 +4,4 @@ Dit plan van aanpak is in eerste instantie bestemd voor de opdrachtgever van {op
 
 ICTU voert de realisatiefase uit in nauwe samenwerking met {samenwerkende partijen}, waarbij ICTU zo goed mogelijk gebruik maakt van de bij {partijen} aanwezige kennis en producten. Dit vraagt, naast de inspanning van ICTU, ook significante inzet van medewerkers van {partijen}; zie hiervoor het hoofdstuk "Werkwijze".
 
-Voor uitvoering van de realisatiefase en het opleveren van de software geldt verder dat de beheerpartij bekend en aangesloten is en dat ook hier de benodigde capaciteit aanwezig is voor het opstellen van de verschillende producten.
+{Als de beheerpartij bij start van de realisatiefase nog niet bekend is, vormt dat waarschijnlijk een aanzienlijk risico voor het project. Benoem hier dat deze onbekende partij wel degelijk tot de doelgroep van dit document behoort. Verwijs naar het hoofdstuk "Werkwijze" voor de getroffen maatregelen om de late keuze voor een beheerpartij zoveel mogelijk te ondervangen. Verwijs naar gemaakte aannames rond zaken als productieplatform, releaseprocessen en beheerfunctionaliteit.}

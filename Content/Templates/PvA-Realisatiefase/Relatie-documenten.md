@@ -10,7 +10,6 @@ De realisatiefase is een vervolg op de voorfase {voorfaseproject}. De documenten
 * High Level Design (HLD), versie {versie},
 * Master testplan, versie {versie},
 * Testplan softwarerealisatie, versie {versie},
-* Threat and Vulnerability Assessment (TVA), versie {versie},
 * Informatiebeveiligingsplan (IB-plan), versie {versie},
 * Kwaliteitsplan, versie {versie},
 * Niet-Functionele Eisen (NFE), versie {versie},

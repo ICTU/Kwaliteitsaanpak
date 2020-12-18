@@ -34,3 +34,5 @@ Rubricering conform [VIRBI 2013, art. 4](https://wetten.overheid.nl/BWBR0033507/
 ##### Template versie
 
 Versie $VERSIE$, $DATUM$
+
+Verbeterpunten t.a.v. deze template graag melden via [GitHub](https://github.com/ICTU/Kwaliteitsaanpak/issues).

@@ -3,8 +3,6 @@
 De te {ontwikkelen en/of onderhouden} software {beschrijving functionaliteit in hoofdlijnen van de software}.
 De software komt tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU de softwareontwikkeling uitvoert; zie hiervoor het hoofdstuk “Werkwijze”.
 
-Voor uitvoering van de realisatiefase en het opleveren van de software geldt als voorwaarden dat de beheerpartij bekend en aangesloten is en dat de benodigde capaciteit aanwezig is voor het opstellen van de verschillende producten.
-
 ## Producten
 
 ICTU levert de volgende producten op:
@@ -16,11 +14,11 @@ ICTU levert de volgende producten op:
     a. een bijgewerkte installatiehandleiding,
     a. een bijgewerkt software-architectuurdocument (SAD),
     a. een bijgewerkt globaal functioneel ontwerp (GFO),
-    a. de broncode,
+    a. de broncode, inclusief unit testen,
     a. een set van automatische regressietesten (ART),
     a. een beschrijving van de logische testgevallen,
     a. een actuele versie van de kwaliteitsrapportage,
-    a. eventueel bijgewerkte andere documentatie waarvoor ICTU verantwoordelijk en/of penvoerder is, zoals testplannen en kwaliteitsplan.
+    a. {eventueel bijgewerkte andere documentatie waarvoor ICTU verantwoordelijk en/of penvoerder is, zoals testplannen en kwaliteitsplan}.
    
 ## Scope
 
@@ -47,11 +45,9 @@ Het succes van het uit te voeren realisatietraject is sterk afhankelijk van de b
 
 Tijdens dit project wordt agile gewerkt volgens de Scrum-aanpak. ICTU propageert de kernwaarden van Scrum. Dit vertaalt zich concreet in:
 
-* Een Scrumteam, bestaande uit
-  * Een product owner, door {opdrachtgever} aangesteld, die de uiteindelijke inhoudelijke keuzes maakt,
-  * Een ontwikkelteam, inclusief Scrummaster, door ICTU aangesteld.
+* Een Scrumteam, bestaande uit een product owner, door {opdrachtgever} aangesteld, die de uiteindelijke inhoudelijke keuzes maakt, en een ontwikkelteam, inclusief Scrummaster, door ICTU aangesteld.
 * Een proces met sprints van {twee of drie} weken waarin de Scrumactiviteiten sprint planning, sprint refinement, daily Scrum, sprint demonstratie/review en retrospective plaatsvinden.
-* Een definition of ready en een definition of done voor respectievelijk het oppakken en afronden van werk.
+* Een definition of ready en een definition of done voor respectievelijk het beginnen en afronden van werk.
 * Een product backlog en een sprint backlog.
 
 ## Werving ontwikkelteam
@@ -64,7 +60,7 @@ Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off g
 
 ## Projectteam
 
-{Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Indien op locatie ICTU wordt gewerkt: Om deze binnen ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
+{Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
 
 ## Projectbesturing
 
@@ -96,11 +92,11 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 | Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden backlog                                                         |
 | Business analist                              | {aantal} dagen           | Epics opstellen voor de product backlog, eventueel uitgewerkt in user stories                                                |
 | Architect                                     | {aantal} dagen           | Bewaken en onderhouden van de softwarearchitectuur                                                                           |
-| Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur (high level design, HLD)                                                   |
+| Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur, opstellen high level design (HLD)                                           |
 | Testmanager                                   | {aantal} dagen           | Testen van nieuwe softwarereleases voordat deze voor gebruik worden vrijgegeven                                              |
-| Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, TVA en IB-plan                                                                                   |
+| Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, opstellen TVA en IB-plan                                                                            |
 | Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                                   |
-| Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                              |
+| Diverse inhoudelijk deskundigen               | {aantal} dagen           | Inbrengen domeinexpertise en vertegenwoordiging van (eind)gebruikers en belanghebbenden                                         |
 | Technisch beheerder beheerpartij              | {aantal} dagen           | Installeren software op acceptatieomgeving, aanleveren specificaties productie-omgeving                                      |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                  |
 

@@ -28,7 +28,7 @@ De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsdoelst
 
 1. De kwaliteitsmanager bespreekt de situatie met de software delivery manager;
 2. Indien 1. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de ICTU-projectleider;
-3. Indien 2. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar het afdelingshoofd ISR (ICTU Software Realisatie).
+3. Indien 2. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar het hoofd van de afdeling ICTU Software Expertise (ISE).
 
 ## Projectdocumenten
 
@@ -275,10 +275,10 @@ De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van
 | Broncode, testscripts en documentatie | Git                                  | Projectteam          | 5 jaar        |
 | Overige documentatie                  | Sharepoint of andere samenwerkruimte | Projectteam          | 5 jaar        |
 | Final Release                         | {waar}                               | Projectteam          | 5 jaar        |
-| Performancetestscripts                | Git performanceteam                  | Performanceteam      | 5 jaar        |
-| Kwaliteitsrapportage                  | Quality-time database                | ISD Technisch beheer | 2 jaar        |
-| Bugs, user stories en andere issues   | Jira                                 | Jirabeheerder        | 2 jaar        |
-| VM’s ontwikkelteams                   | {waar}                               | ISD Technisch beheer | 2 jaar        |
+| Performancetestscripts                | Git performanceteam                  | Projectteam          | 5 jaar        |
+| Kwaliteitsrapportage                  | Quality-time database                | ISD                  | 2 jaar        |
+| Bugs, user stories en andere issues   | Jira                                 | ISD                  | 2 jaar        |
+| VM’s ontwikkelteams                   | {waar}                               | ISD                  | 2 jaar        |
 | {Projectspecifieke producten}         | {waar}                               | {wie}                | {termijn}     |
 
 Bij projectafsluiting zorgt de projectleider verder dat volgende acties worden uitgevoerd:

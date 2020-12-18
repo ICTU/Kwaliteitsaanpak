@@ -6,6 +6,7 @@
 
 * Afdeling ICTU Software Realisatie vervangen door de afdelingen ICTU Software Diensten en/of ICTU Software Expertise.
 * ICTU ondersteunt alleen nog Quality-time als kwaliteitssysteem; HQ verwijderd.
+* Leeswijzer uitgebreid met uitleg over beschrijvend en voorschrijvend karakter van de Kwaliteitsaanpak.
 
 #### Template Projectvoorstel Voorfase
 

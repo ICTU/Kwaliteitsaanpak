@@ -170,7 +170,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoo
 | UX-designer                            | {x} uur         | Onderhouden UX-richtlijnen, maken prototypes, toetsen prototypes met gebruikers                                             |
 | Informatiebeveiligingsexpert           | {x} uur         | Onderhouden IB-plan, toetsen IB-maatregelen                                                                                 |
 | Kwaliteitsmanager                      | {x} uur         | Inrichten, onderhouden en bewaken kwaliteitsrapportage                                                                      |
-| Software Delivery Manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het team, inhoudelijke rapportage                    |
+| Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het team, inhoudelijke rapportage                    |
 | Projectleider                          | {x} uur         | Bewaken overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
 | Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                    |
 | Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is  |

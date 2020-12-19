@@ -9,7 +9,7 @@ Bij dit IPO is de aanwezigheid van de volgende rollen vereist:
 * projectleider,
 * software delivery manager,
 * kwaliteitsmanager,
-* Scrum master,
+* Scrummaster,
 * vertegenwoordiger uit elk projectteam.
 
 Nadere toelichting op de agenda:

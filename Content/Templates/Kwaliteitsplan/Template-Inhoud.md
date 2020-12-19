@@ -82,7 +82,7 @@ In aanvulling op de maatregelen met betrekking tot reviews, zie paragraaf [Docum
 
 # Kwaliteitsmaatregelen realisatiefase
 
-De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende realisatiefasen.
+De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende de realisatiefase.
 
 ## Entry- en exitcriteria
 
@@ -95,13 +95,13 @@ Het project definieert en hanteert een Definition of Ready (DoR) voor user stori
 De Definition Of Ready van het project bevat de volgende criteria ({vul aan en pas aan}):
 
 1. De beschrijving voldoet aan het user story formaat “als <rol> wil ik <actie> zodat <reden>”;
-2. De annotaties en screenshots/prototype zijn gereed;
-3. Afhankelijkheden met derden zijn in kaart (bijvoorbeeld: een koppelvlakbeschrijving is beschikbaar);
-4. De story is ingeschat door het team;
-5. De story is goedgekeurd door de product owner;
-6. De story is goedgekeurd door de reviewer binnen het team;
-7. Het verwachte aantal logische testgevallen is ingevuld;
-8. Er is ingeschat of de user story een performance risico, een beveiligingsrisico en/of een infrastructuurwijziging met zich meebrengt.
+1. De annotaties en screenshots/prototype zijn gereed;
+1. Afhankelijkheden met derden zijn in kaart (bijvoorbeeld: een koppelvlakbeschrijving is beschikbaar);
+1. De story is ingeschat door het team;
+1. De story is goedgekeurd door de product owner;
+1. De story is goedgekeurd door de reviewer binnen het team;
+1. Het verwachte aantal logische testgevallen is ingevuld;
+1. Er is ingeschat of de user story een performance risico, een beveiligingsrisico en/of een infrastructuurwijziging met zich meebrengt.
 
 ### Definition of Done
 
@@ -109,14 +109,15 @@ Het project definieert en hanteert een Definition of Done (DoD) voor user storie
 
 De Definition Of Done van het project bevat de volgende criteria ({vul aan en pas aan}):
 
+1. De broncode voldoet aan de codeerstandaard,
 1. Nieuwe testgevallen zijn gereviewd en geaccordeerd door reviewer,
-2. Functionele testen zijn succesvol afgerond,
-3. De dekkingsgraad van de functionele testen is minstens 80% (maar meer indien mogelijk),
-4. Integratietesten zijn succesvol afgerond,
-5. Performancetesten zijn succesvol afgerond,
-6. Toegankelijkheidstesten zijn succesvol afgerond,
-7. Het GFO is bijgewerkt,
-8. De demo van de user story is voorbereid.
+1. Functionele testen zijn succesvol afgerond,
+1. De dekkingsgraad van de functionele testen is minstens 80% (maar meer indien mogelijk),
+1. Integratietesten zijn succesvol afgerond,
+1. Performancetesten zijn succesvol afgerond,
+1. Toegankelijkheidstesten zijn succesvol afgerond,
+1. Het GFO is bijgewerkt,
+1. De demo van de user story is voorbereid.
 
 ### Vrijgaveadvies
 
@@ -135,6 +136,15 @@ Het vrijgaveadvies beschrijft ({vul aan en pas aan}):
 Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automatisch metrieken worden verzameld en samengesteld. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden diverse malen per dag bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. In de bijlagen een overzicht van de mogelijke metrieken en de daarbij horende standaard instelling; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
 
 ## Kwaliteit van de broncode
+
+{Het project bepaalt bij aanvang van de realisatiefase of, en zo ja welke, codeerstandaard zal worden gehanteerd (ICTU hanteert geen ICTU-brede codeerstandaard). Het project bepaalt daarbij ook hoe de codeerstandaard gecontroleerd zal worden: via tools en/of broncodereviews.}
+
+Het project hanteert de volgende codeerstandaarden:
+
+| Programmeertaal     | Codeerstandaard     | Controle         |
+|:--------------------|:--------------------|:-----------------|
+| {programmeertaal A} | {codeerstandaard A} | {broncodereview} |
+| {programmeertaal B} | {codeerstandaard B} | {tool B}         |
 
 Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het mastertestplan opgenomen. ICTU maakt gebruik van een geautomatiseerd kwaliteitssysteem, waarbij de broncode continu wordt gecontroleerd en gerapporteerd. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
 

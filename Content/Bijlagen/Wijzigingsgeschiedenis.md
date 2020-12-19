@@ -7,6 +7,7 @@
 * Afdeling ICTU Software Realisatie vervangen door de afdelingen ICTU Software Diensten en/of ICTU Software Expertise.
 * ICTU ondersteunt alleen nog Quality-time als kwaliteitssysteem; HQ verwijderd.
 * Leeswijzer uitgebreid met uitleg over beschrijvend en voorschrijvend karakter van de Kwaliteitsaanpak.
+* De maatregel "Het project is gesplitst in een voorfase en een realisatiefase" (M14) hernoemd naar "Het project bereidt samen met opdrachtgever en belanghebbenden de realisatie voor".
 
 #### Template Projectvoorstel Voorfase
 
@@ -67,13 +68,12 @@
 * Nieuwe maatregel toegevoegd voor het starten van projecten: "ICTU zorgt dat een project verantwoord kan starten" (M29).
 * Nieuwe maatregel toegevoegd voor risicomanagement: "Projecten identificeren, mitigeren en bewaken risico's" (M30).
 * Termen aangepast: 'projectverantwoordelijke' is vervangen door 'projectleider', 'projectenorganisatie' en 'projectorganisatie' door 'ICTU' en 'realiserend team' door 'projectteam'.
-* De beschrijving van de rollen van Software Delivery Manager en Kwaliteitsmanager aangescherpt.
+* De beschrijving van de rollen van software delivery manager en kwaliteitsmanager aangescherpt.
 * Waar relevant bij de rationale van maatregelen verwezen naar overeenkomende risicobeheersmaatregelen uit de NPR 5326.
 * Referenties aan de Baseline Informatiebeveiliging Rijksdienst (BIR) omgezet naar de Baseline Informatiebeveiliging Overheid (BIO).
 * Referenties aan tools geactualiseerd.
 * Tekstuele en stilistische verbeteringen.
 * Actielijst toegevoegd aan self-assessment spreadsheet.
-* De beschrijving van de rollen van Software Delivery Manager en Kwaliteitsmanager aangescherpt.
 * Generatie van documenttemplates is onderdeel van de Kwaliteitsaanpak.
 
 ### Versie 1.3.1, 1 mei 2019

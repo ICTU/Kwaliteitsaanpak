@@ -77,6 +77,7 @@ def convert_pdf(
         --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html {header_filename} --header-spacing 10 \
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
+        --title '{settings["Title"]}' \
         cover {html_cover_filename} \
         toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
         {html_filename} {pdf_filename}" """

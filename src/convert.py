@@ -61,6 +61,7 @@ def convert_pdf(
 ) -> None:
     """Convert the xml to pdf."""
     pdf_filename = output_path / settings["OutputFormats"]["pdf"]["OutputFile"]
+    pdf_build_filename = build_path / pathlib.Path(settings["OutputFormats"]["pdf"]["OutputFile"])
     html_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".html").name
     html_builder = HTMLBuilder(html_filename)
     converter.convert(html_builder)
@@ -80,8 +81,9 @@ def convert_pdf(
         --title '{settings["Title"]}' \
         cover {html_cover_filename} \
         toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-        {html_filename} {pdf_filename}" """
+        {html_filename} {pdf_build_filename}" """
     os.system(wkhtmltopdf)
+    os.system(f'gs -o {pdf_filename} -sDEVICE=pdfwrite -dPrinted=false -f {pdf_build_filename} src/pdfmark.txt')
 
 
 def convert_docx(converter, output_path: pathlib.Path, settings: Settings) -> None:

@@ -7,6 +7,8 @@
 * Afdeling ICTU Software Realisatie vervangen door de afdelingen ICTU Software Diensten en/of ICTU Software Expertise.
 * ICTU ondersteunt alleen nog Quality-time als kwaliteitssysteem; HQ verwijderd.
 * Leeswijzer uitgebreid met uitleg over beschrijvend en voorschrijvend karakter van de Kwaliteitsaanpak.
+* Nieuwe maatregel "Het project beschikt over vastgestelde informatie" (M31) toegevoegd die beschrijft welke informatie de opdrachtgever aan een project beschikbaar stelt.
+* Bij maatregel "Het project levert in elke fase vastgestelde informatie over het product op" (M01) toegevoegd wie verantwoordelijk is voor welke informatie.
 * De maatregel "Het project is gesplitst in een voorfase en een realisatiefase" (M14) hernoemd naar "Het project bereidt samen met opdrachtgever en belanghebbenden de realisatie voor".
 
 #### Template Projectvoorstel Voorfase
@@ -28,7 +30,7 @@
 #### Kwaliteitsaanpak
 
 * M30 ontbrak in de bijlage met het overzicht van alle maatregelen.
-* Link naar Kwaliteitsaanpak op ICTU website toegevoegd.
+* Link naar Kwaliteitsaanpak op ICTU-website toegevoegd.
 
 #### Alle templates
 

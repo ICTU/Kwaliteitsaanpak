@@ -53,3 +53,5 @@ Hieronder zijn alle maatregeldefinities uit deze Kwaliteitsaanpak opgenomen, op 
 #include "Content/Maatregelen/M29/Definitie.md"
 
 #include "Content/Maatregelen/M30/Definitie.md"
+
+#include "Content/Maatregelen/M31/Definitie.md"

@@ -11,20 +11,20 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Onderdeel voorfase                              | Inhoudelijk verantwoordelijk | Penvoerder   | Review en meewerken aan |
 |:------------------------------------------------|:-----------------------------|:-------------|:------------------------|
 | Projectstartarchitectuur (PSA)                  | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Business Impact Analyse (BIA)                   | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Privacy Impact Assessment (PIA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Globaal Functioneel Ontwerp (GFO)               | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Business impact analyse (BIA)                   | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Privacy impact assessment (PIA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Globaal functioneel ontwerp (GFO)               | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Softwarearchitectuurdocument (SAD)              | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Infrastructuurarchitectuur (IA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| High Level Design (HLD)                         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| High level design (HLD)                         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Product risico analyse (PRA)                    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Master testplan (op basis van PRA)              | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Mastertestplan (op basis van PRA)               | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Testplan softwarerealisatie                     | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Threat & Vulnerability Assessment (TVA)         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Threat & vulnerability assessment (TVA)         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Informatiebeveiligingsplan  (IB-plan)           | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Niet-Functionele Eisen (NFE)                    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Niet-functionele eisen (NFE)                    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Kwaliteitsplan                                  | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Geprioriteerde Backlog met user stories         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Geprioriteerde backlog met user stories         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Vastgesteld minimal viable product              | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Prototype                                       | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Voorstel realisatiefase                         | ICTU                         | ICTU         | {reviewers}             |

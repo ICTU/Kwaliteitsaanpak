@@ -1,0 +1,43 @@
+## $M31$
+
+#include "Content/Maatregelen/M31/Definitie.md"
+
+De opdrachtgever zorgt dat het project vanaf de start van de voorfase beschikt over:
+
+1. Projectstartarchitectuur,
+2. Business impact analyse,
+3. Privacy impact analyse.
+
+Als de benodigde informatie niet gereed is bij de start van de voorfase dan maken opdrachtgever en ICTU nadere afspraken over de manier waarop de benodigde informatie nog tijdens de voorfase beschikbaar komt voor het project.
+
+**Projectstartarchitectuur**
+Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. Een PSA bevat in ieder geval de volgende onderwerpen:
+
+* Een beschrijving van de doelen en ambities waaraan het project bijdraagt en invulling geeft. Dus niet de projectdoelen en -ambitie.
+* Een afbakening van het project en de context van de voorziening/oplossing die het project gaat realiseren gezien als een 'black box'. Denk o.a. ook aan relaties met andere projecten en generieke en specifieke diensten (services).
+* De belangrijkste functies van de door het project te realiseren voorziening, informatiestromen en koppelvlakken.
+* Een beschrijving van de belangrijkste belanghebbenden en/of betrokken ketenpartijen.
+* Een concretisering van kaders en randvoorwaarden die van toepassing zijn.
+* Beleidsuitgangspunten (drijfveren en doelen), zowel voor het specifieke project als algemeen voor de organisatie en visie (oplossingsrichting).
+* Standaarden en normen (open standaarden van het Forum Standaardisatie en domeinspecifieke standaarden).
+
+Zie [http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)](http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)).
+
+**Business impact analyse**
+In een business impact analyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
+
+**Privacy impact analyse**
+In een privacy impact analyse (PIA) legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan overdragen.
+
+Indien een PIA niet nodig is, is een verklaring daaromtrent vereist.
+
+### Rationale
+
+De genoemde producten hebben tot doel om de benodigde omvang, kosten en doorlooptijd van de voorfase te kunnen schatten. De projectstartarchitectuur vormt input voor de tijdens de voorfase te ontwikkelen producten zoals functionele en niet-functionele eisen, functioneel ontwerp en softwarearchitectuur. Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te selecteren beveiligingsmaatregelen. 
+
+### Referenties
+
+Zie ook:
+
+* [$M01$](#m01)
+* [$M26$](#m26)

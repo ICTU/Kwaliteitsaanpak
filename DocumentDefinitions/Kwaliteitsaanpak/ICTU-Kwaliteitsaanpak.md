@@ -10,6 +10,8 @@
 
 # Producten
 
+#include "Content/Maatregelen/M31/Maatregel.md"
+
 #include "Content/Maatregelen/M01/Maatregel.md"
 
 #include "Content/Maatregelen/M02/Maatregel.md"

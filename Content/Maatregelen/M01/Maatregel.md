@@ -18,7 +18,7 @@ Niet-functionele eisen specificeren criteria om het functioneren van de software
 * methode Grip op SDD (Secure Software Development) van het Centrum Informatiebeveiliging en Privacybescherming (CIP),
 * Algemene verordening gegevensbescherming (AVG),
 * ISO 9241-210:2019 Ergonomics of human-system interaction - Part 210: Human-centred design for interactive systems,
-* hoofdstuk 9 van de Europese Standaard EN 301 549 - dit is gelijk aan de Web Content Accessibility Guidelines versie 2.1, niveau A en AA.
+* hoofdstuk 9 van de Europese Standaard EN 301 549 — dit is gelijk aan de Web Content Accessibility Guidelines versie 2.1, niveau A en AA.
 
 De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties. Bepaalde niet-functionele eisen kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door deze eisen expliciet in de voorfase te benoemen, wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.
 
@@ -79,34 +79,34 @@ De deploymentdocumentatie bevat informatie over de eisen die een applicatie stel
 Het kwaliteitsplan beschrijft welke kwaliteitsmaatregelen het project treft om de niet-functionele eisen te realiseren.
 
 **Vrijgaveadvies**
-Voor elke major release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Indien er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.
+Voor elke major release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat tenminste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Indien er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.
 
 **Overzicht**
 De onderstaande tabel bevat de hierboven genoemde producten en geeft aan in welke fase ze van belang zijn en worden opgeleverd, ook als ze zijn opgesteld door externe auteurs.
 
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom 'Realisatiefase') en wordt de kwaliteit van de bestaande softwareproducten getoetst. Dit onderzoek, dat bij ICTU een "due diligence" heet, is onderdeel van de voorfase en wordt uitgevoerd door vertegenwoordigers van ICTU en medewerkers van het desbetreffende project, in samenwerking met vertegenwoordigers van de opdrachtgever.
 
-| Product                                       | Voorfase | Voorfase met onderzoek | Realisatiefase |
-|----------------------------------------------------------------------------------------|---|---|---|
-| BIA (Business impact analysis)¹                                                        | ✔ | ✔ | ✔ |
-| PIA (Privacy impact analysis)²                                                         | ✔ | ✔ | ✔ |
-| Beschrijving van functionele eisen                                                     | ✔ | ✔ | ✔ |
-| Beschrijving van niet-functionele eisen                                                | ✔ | ✔ | ✔ |
-| Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)            | ✔ | ✔ | ✔ |
-| Testdocumentatie: testplannen                                                          | ✔ | ✔ | ✔ |
-| Testdocumentatie: testgevallen, rapportages                                            |   |   | ✔ |
-| Informatiebeveiligingsplan                                                             | ✔ | ✔ | ✔ |
-| Projectplan                                                                            | ✔ | ✔ |   |
-| Kwaliteitsplan                                                                         | ✔ | ✔ | ✔ |
-| Deploybare versie van de software                                                      |   |   | ✔ |
-| Broncode, inclusief de benodigdheden voor het bouwen van de software                   |   |   | ✔ |
-| Regressietests, inclusief de benodigdheden voor het uitvoeren van de regressietesten   |   |   | ✔ |
-| Vrijgaveadvies                                                                         |   |   | ✔ |
-| Release notes                                                                          |   |   | ✔ |
-| Deploymentdocumentatie                                                                 |   |   | ✔ |
-| Uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                  |   | ✔ |   |
-| Transitieplan voor af te bouwen, te onderhouden en/of te herbouwen softwareproducten   |   | ✔ |   |
-| Plan voor aflossen technische schuld, indien van toepassing                            |   | ✔ |   |
+| Product                                                                             | Voorfase | Realisatiefase |
+|---------------------------------------------------------------------------------------------------------|---|---|
+| BIA (Business impact analysis)¹                                                                         | ✔ | ✔ |
+| PIA (Privacy impact analysis)²                                                                          | ✔ | ✔ |
+| Beschrijving van functionele eisen                                                                      | ✔ | ✔ |
+| Beschrijving van niet-functionele eisen                                                                 | ✔ | ✔ |
+| Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)                             | ✔ | ✔ |
+| Testdocumentatie: testplannen                                                                           | ✔ | ✔ |
+| Testdocumentatie: testgevallen, rapportages                                                             |   | ✔ |
+| Informatiebeveiligingsplan                                                                              | ✔ | ✔ |
+| Projectplan                                                                                             | ✔ |   |
+| Kwaliteitsplan                                                                                          | ✔ | ✔ |
+| Deploybare versie van de software                                                                       |   | ✔ |
+| Broncode, inclusief de benodigdheden voor het bouwen van de software                                    |   | ✔ |
+| Regressietests, inclusief de benodigdheden voor het uitvoeren van de regressietesten                    |   | ✔ |
+| Vrijgaveadvies                                                                                          |   | ✔ |
+| Release notes                                                                                           |   | ✔ |
+| Deploymentdocumentatie                                                                                  |   | ✔ |
+| Bij due diligence: uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                | ✔ |   |
+| Bij due diligence: transitieplan voor af te bouwen, te onderhouden en/of te herbouwen softwareproducten | ✔ |   |
+| Bij due diligence: plan voor aflossen technische schuld, indien van toepassing                          | ✔ |   |
 
 ¹) De opdrachtgever stelt bij voorkeur een BIA en PIA voorafgaand aan een voorbereidende fase beschikbaar. Indien dat niet mogelijk is worden deze analyses gedurende de voorbereidende fase onder verantwoordelijkheid van de opdrachtgever uitgevoerd.
 ²) Indien een PIA niet nodig is, is een verklaring daaromtrent vereist.

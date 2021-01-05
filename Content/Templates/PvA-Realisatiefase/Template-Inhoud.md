@@ -82,7 +82,7 @@ Betrokkenheid van inhoudsdeskundigen van {opdrachtgever/partijen} is randvoorwaa
 * Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden;
 * Opstellen, onderhouden en/of reviewen van documenten namens opdrachtgever.
 
-Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoering van dit projectvoorstel (één persoon kan eventueel meer dan één rol vervullen):
+Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoering van dit plan van aanpak (één persoon kan eventueel meer dan één rol vervullen):
 
 {Selecteer de juiste rollen en vul aan, vul ook de juiste verantwoordelijkheden in, onderstaande is een eerste opzet met zoveel mogelijk rollen}
 
@@ -106,9 +106,9 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 
 # Planning en doorlooptijd
 
-De start van het project vindt uiterlijk {aantal} weken na ondertekening van dit projectvoorstel plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het team samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
+De start van het project vindt uiterlijk {aantal} weken na ondertekening van het projectvoorstel plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het team samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
 
-De verwachte doorlooptijd van de uitvoering van dit projectvoorstel is {aantal} weken.
+De verwachte doorlooptijd van de uitvoering van dit plan van aanpak is {aantal} weken.
 
 Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct na de “go” op het projectvoorstel afgestemd worden. Mogelijk wordt hierdoor de doorlooptijd langer. Op dat moment wordt ook de verdere invulling van de planning en de sprints afgestemd.
 
@@ -155,7 +155,7 @@ De risico’s worden door ICTU bijgehouden in het risicolog. De risico’s en de
 
 # Verwachte inzet ICTU
 
-Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit projectvoorstel:
+Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van aanpak:
 
 {Selecteer de rollen die nodig zijn en vul ze aan. Vul de juiste verantwoordelijkheden in. De onderstaande tabel is een eerste opzet met veel voorkomende rollen.}
 

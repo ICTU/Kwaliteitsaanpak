@@ -175,3 +175,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 | Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                    |
 | Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is  |
 | Totaal                                 | {x} uur         |                                                                                                                             |
+
+{In de projectovereenkomst moet in de begroting met onderstaande opmerkingen rekening worden gehouden.}
+
+{Voor de begroting wordt uitgegaan van een gemiddeld bruto tarief van € 155,-. De werkelijke kosten worden bekend als de projectmedewerkers bekend zijn. Wanneer overschrijding van het budget dreigt (bijvoorbeeld vanwege substantieel hogere tarieven), wordt dit tijdig met de opdrachtgever besproken.}

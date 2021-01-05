@@ -71,7 +71,7 @@ Voor een goede start wordt er, bij aanvang van de voorfase, een kick-off georgan
 
 ## Oplevering producten
 
-De voorfase is op basis van sprints ingericht. Aan het einde van elke sprint zijn alle tot dan toe opgedane inzichten verwerkt in de producten. Indien er na afronding van de voorfase nieuwe inzichten ontstaan, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
+De voorfase is op basis van sprints ingericht. Aan het einde van elke sprint zijn alle tot dan toe opgedane inzichten verwerkt in de producten. Na de laatste sprint levert ICTU het geheel op aan de opdrachtgever.
 
 ## Kwaliteitsbeheersing
 
@@ -98,11 +98,11 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 
 | Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                          |
 |:----------------------------------------------|:-------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
-| Expert informatiebeveiliging                  | {aantal} dagen           | Uitvoeren TVA, opstellen BIA en IB-plan, reviewen {documenten}                                                                           |
+| Expert informatiebeveiliging                  | {aantal} dagen           | Uitvoeren TVA, opstellen BIA en IB-plan, reviewen {documenten}                                                                 |
 | Privacy-expert                                | {aantal} dagen           | Opstellen PIA, reviewen {documenten}                                                                                           |
-| Infrastructuurarchitect                       | {aantal} dagen           | Opstellen infrastructuurarchitectuur en high level design (HLD), reviewen SAD, NFE en IB-plan                                    |
+| Infrastructuurarchitect                       | {aantal} dagen           | Opstellen infrastructuurarchitectuur en high level design (HLD), reviewen SAD, NFE en IB-plan                                  |
 | Architect                                     | {aantal} dagen           | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur                                |
-| Testmanager                                   | {aantal} dagen           | Uitvoeren PRA, opstellen mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie |
+| Testmanager                                   | {aantal} dagen           | Uitvoeren PRA, opstellen mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie                                  |
 | Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                                |
 | Product owner                                 | {aantal} dagen           | Inhoudelijk sturing / prioritering, opstellen backlog, NFE, minimal viable product, reviewen GFO en prototype                  |
 | Projectleider (Opdrachtgever)                 | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan kick-off en eventuele workshops |

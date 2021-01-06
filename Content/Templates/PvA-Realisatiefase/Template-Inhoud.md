@@ -106,11 +106,11 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 
 # Planning en doorlooptijd
 
-De start van het project vindt uiterlijk {aantal} weken na ondertekening van het projectvoorstel plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het team samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
+De start van het project vindt uiterlijk {aantal} weken na ondertekening van het voorstel inclusief projectovereenkomst plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het team samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
 
 De verwachte doorlooptijd van de uitvoering van dit plan van aanpak is {aantal} weken.
 
-Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct na de “go” op het projectvoorstel afgestemd worden. Mogelijk wordt hierdoor de doorlooptijd langer. Op dat moment wordt ook de verdere invulling van de planning en de sprints afgestemd.
+Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct na de “go” op het voorstel inclusief projectovereenkomst afgestemd worden. Mogelijk wordt hierdoor de doorlooptijd langer. Op dat moment wordt ook de verdere invulling van de planning en de sprints afgestemd.
 
 {Hieronder een voorbeeld van een planning}
 

@@ -16,7 +16,8 @@ ICTU adviseert en ondersteunt hiervoor de volgende tools:
 8. Kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
 9. Kwetsbaarheden in externe software: OWASP Dependency Checker,
 10. Kwetsbaarheden in software: Checkmarx en OWASP (Open Web Application Security Project) ZAP (Zed Attack Proxy),
-11. Toegankelijkheid: Axe.
+11. Performancetesten en performancetestrapportages: JMeter en Performancetestrunner,    
+12. Toegankelijkheid: Axe.
 
 ### Rationale
 

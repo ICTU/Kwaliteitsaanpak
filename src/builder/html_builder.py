@@ -82,6 +82,17 @@ class HTMLBuilder(Builder):
                 html_tags.ANCHOR,
                 {html_tags.ANCHOR_LINK: attributes[xmltags.ANCHOR_LINK]},
             )
+        elif tag == xmltags.IMAGE:
+            self.builder.start(
+                html_tags.IMAGE,
+                {
+                    html_tags.STYLE: "max-width: 100%",
+                    html_tags.IMAGE_ALT: attributes.get("alt", ""),
+                    html_tags.IMAGE_SOURCE: attributes["src"],
+                    html_tags.TITLE: attributes["title"]
+                }
+            )
+            self.builder.end(html_tags.IMAGE)
         elif tag == xmltags.MEASURE:
             self.builder.start(html_tags.PARAGRAPH, {html_tags.CLASS: "maatregel"})
             self.in_measure = True
@@ -168,13 +179,7 @@ class HTMLCoverBuilder(HTMLBuilder):
         return not self.frontpage_done
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
-        if tag == xmltags.IMAGE:
-            self.builder.start(
-                html_tags.IMAGE,
-                {html_tags.IMAGE_SOURCE: text, html_tags.TITLE: attributes["title"]},
-            )
-            self.builder.end(html_tags.IMAGE)
-        elif tag == xmltags.TITLE:
+        if tag == xmltags.TITLE:
             heading1 = html_tags.HEADING + "1"
             self.builder.start(heading1, {})
             self.builder.data(text)

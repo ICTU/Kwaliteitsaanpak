@@ -66,7 +66,10 @@ class MarkdownConverter:
         """Create a front page."""
         document_type = settings["DocumentType"]
         with self.element(xmltags.FRONTPAGE):
-            self.add_element(xmltags.IMAGE, "/work/Content/Images/ICTU.png", attributes={xmltags.TITLE: "ictu-logo"})
+            self.add_element(
+                xmltags.IMAGE,
+                attributes={xmltags.IMAGE_SRC: "/work/Content/Images/ICTU.png", xmltags.IMAGE_TITLE: "ICTU logo"}
+            )
             with self.element(xmltags.TITLE):
                 self.process_formatted_text(settings["Title"])
             if document_type == "Template":
@@ -88,7 +91,8 @@ class MarkdownConverter:
             else:
                 raise ValueError(f"Unknown document type '{document_type}' in the settings")
             self.add_element(
-                xmltags.IMAGE, "/work/Content/Images/word-cloud.png", attributes={xmltags.TITLE: "word-cloud"}
+                xmltags.IMAGE,
+                attributes={xmltags.IMAGE_SRC: "/work/Content/Images/word-cloud.png", xmltags.IMAGE_TITLE: "Word cloud"}
             )
             self.add_element(xmltags.PAGEBREAK)
 
@@ -125,7 +129,7 @@ class MarkdownConverter:
                 sys.exit(1)
             self.context.add(xmltags.MEASURE)
             self.builder.start(xmltags.MEASURE, {})
-            stripped_line = stripped_line[len(markdown_syntax.MEASURE_START) :]
+            stripped_line = stripped_line[len(markdown_syntax.MEASURE_START):]
         if stripped_line.endswith(markdown_syntax.MEASURE_END):
             if xmltags.MEASURE not in self.context:
                 logging.error("Trying to end measure '%s' but measure was not started", stripped_line)
@@ -218,7 +222,7 @@ class MarkdownConverter:
             assert self.table is not None
             with self.element(tag):
                 for column_index, (cell, alignment, width) in enumerate(
-                    zip(cells, self.table.column_alignment, self.table.column_widths)
+                        zip(cells, self.table.column_alignment, self.table.column_widths)
                 ):
                     attributes: TreeBuilderAttributes = {
                         xmltags.TABLE_CELL_ALIGNMENT: alignment,
@@ -255,14 +259,14 @@ class MarkdownConverter:
         while line:
             format_found = False
             for md_start, md_end, xml_tag in formats:
-                if line.startswith(md_start) and md_end in line[len(md_start) :]:
+                if line.startswith(md_start) and md_end in line[len(md_start):]:
                     format_found = True
                     self.flush(seen)
                     seen = ""
                     with self.element(xml_tag):
                         if xml_tag == xmltags.INSTRUCTION:
                             self.builder.data(md_start)
-                        formatted_text, line = line[len(md_start) :].split(md_end, maxsplit=1)
+                        formatted_text, line = line[len(md_start):].split(md_end, maxsplit=1)
                         self.process_formatted_text(formatted_text)
                         if xml_tag == xmltags.INSTRUCTION:
                             self.builder.data(md_end)
@@ -275,14 +279,28 @@ class MarkdownConverter:
                     match = cast(re.Match, match)
                     with self.element(xmltags.ANCHOR, {xmltags.ANCHOR_LINK: match.group(2)}):
                         self.process_formatted_text(match.group(1))
-                    line = line[len(match.group(0)) :]
+                    line = line[len(match.group(0)):]
                 elif (match := re.match(markdown_syntax.VARIABLE_USE_PATTERN, line)) is not None:
                     format_found = True
                     self.flush(seen)
                     seen = ""
                     match = cast(re.Match, match)
                     self.builder.data(self.variables[match.group(1)])
-                    line = line[len(match.group(0)) :]
+                    line = line[len(match.group(0)):]
+                elif match := re.match(markdown_syntax.IMAGE_PATTERN, line):
+                    format_found = True
+                    self.flush(seen)
+                    seen = ""
+                    match = cast(re.Match, match)
+                    self.add_element(
+                        xmltags.IMAGE,
+                        attributes={
+                            xmltags.IMAGE_ALT: match.group(1),
+                            xmltags.IMAGE_SRC: match.group(2),
+                            xmltags.IMAGE_TITLE: match.group(3)
+                        }
+                    )
+                    line = line[len(match.group(0)):]
 
             if not format_found:
                 seen += line[0] if line else ""

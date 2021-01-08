@@ -1,7 +1,7 @@
-![ICTU](/work/Content/Images/ICTU.png "ictu-logo")
+![ICTU logo](/work/Content/Images/ICTU.png "ICTU logo")
 
 # $KWALITEITSAANPAK$
 
 Versie $VERSIE$, $DATUM$
 
-![wordcloud](/work/Content/Images/word-cloud.png "word-cloud")
+![Word cloud](/work/Content/Images/word-cloud.png "Word cloud")

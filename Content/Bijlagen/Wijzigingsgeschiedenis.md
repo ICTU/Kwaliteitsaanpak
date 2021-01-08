@@ -8,7 +8,7 @@
 * ICTU ondersteunt alleen nog Quality-time als kwaliteitssysteem; HQ verwijderd.
 * Leeswijzer uitgebreid met uitleg over beschrijvend en voorschrijvend karakter van de Kwaliteitsaanpak.
 * Nieuwe maatregel "Het project beschikt over vastgestelde informatie" (M31) toegevoegd die beschrijft welke informatie de opdrachtgever aan een project beschikbaar stelt.
-* Bij maatregel "Het project levert in elke fase vastgestelde informatie over het product op" (M01) toegevoegd wie verantwoordelijk is voor welke informatie.
+* Bij maatregel "Het project levert in elke fase vastgestelde informatie over het product op" (M01) met een plaatje de relaties tussen de voorfase producten toegelicht.
 * De maatregel "Het project is gesplitst in een voorfase en een realisatiefase" (M14) hernoemd naar "Het project bereidt samen met opdrachtgever en belanghebbenden de realisatie voor".
 * Bij maatregel "Het project gebruikt tools voor vastgestelde taken" (M16) performancetesttools toegevoegd.
 * Bij maatregel "Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen" (M26) beter toegelicht onder welke voorwaarden de beveiligingstesten alleen door de opdrachtgever kunnen worden uitgevoerd.

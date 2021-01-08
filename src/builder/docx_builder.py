@@ -86,6 +86,8 @@ class DocxBuilder(Builder):
         elif tag == xmltags.TABLE_OF_CONTENTS:
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
+        elif tag == xmltags.IMAGE:
+            self.doc.add_picture(attributes["src"][len("/work/"):])
 
     def _add_list_item(self) -> None:
         """Add a list item."""
@@ -147,9 +149,6 @@ class DocxBuilder(Builder):
                 self.paragraph.add_run(text)  # Implement internal links some day
             else:
                 add_hyperlink(self.paragraph, link, text)
-        elif tag == xmltags.IMAGE:
-            text = text[len("/work/") :]
-            self.doc.add_picture(text)
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().end_element(tag, attributes)

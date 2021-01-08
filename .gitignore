@@ -78,8 +78,9 @@ venv
 # Mypy
 .mypy_cache
 
-# Temp Excel files
+# Temp MS Office files
 ~$*.xlsx
+~$*.pptx
 
 # Final deliverables
 dist

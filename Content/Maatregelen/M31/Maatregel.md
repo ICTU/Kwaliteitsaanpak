@@ -21,19 +21,24 @@ Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkeli
 * Beleidsuitgangspunten (drijfveren en doelen), zowel voor het specifieke project als algemeen voor de organisatie en visie (oplossingsrichting).
 * Standaarden en normen (open standaarden van het Forum Standaardisatie en domeinspecifieke standaarden).
 
-Zie [http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)](http://www.noraonline.nl/wiki/PSA_(Project_Startarchitectuur)).
+Zie [http://www.noraonline.nl/wiki/PSA](http://www.noraonline.nl/wiki/PSA).
 
 **Business impact analyse**
 In een business impact analyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
 
 **Privacy impact analyse**
-In een privacy impact analyse (PIA) legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan overdragen.
+In een privacy impact analyse (PIA) legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. De rechtmatigheid van de verwerking wordt beoordeeld. En de PIA stelt grenzen aan de gegevens die mogen worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan overdragen.
 
 Indien een PIA niet nodig is, is een verklaring daaromtrent vereist.
 
+**Aanvullende informatie**
+Waar mogelijk stelt de opdrachtgever ook andere relevante informatie ter beschikking aan het project zoals een eventueel programma van eisen, procesbeschrijvingen van te ondersteunen bedrijfsprocessen, documentatie van te koppelen systemen, documentatie van de te gebruiken voorzieningen voor bijvoorbeeld authenticatie en autorisatie, beveiligingsbeleid, beheeracceptatiecriteria en verder te hanteren kaders en richtlijnen.
+
 ### Rationale
 
-De genoemde producten hebben tot doel om de benodigde omvang, kosten en doorlooptijd van de voorfase te kunnen schatten. De projectstartarchitectuur vormt input voor de tijdens de voorfase te ontwikkelen producten zoals functionele en niet-functionele eisen, functioneel ontwerp en softwarearchitectuur. Een BIA en eventuele PIA zijn richtinggevend voor de in de voorbereidingsfase te selecteren beveiligingsmaatregelen. 
+De genoemde producten hebben tot doel om de benodigde omvang, kosten en doorlooptijd van de voorfase te kunnen schatten. De projectstartarchitectuur vormt input voor de tijdens de voorfase te ontwikkelen producten zoals functionele en niet-functionele eisen, functioneel ontwerp en softwarearchitectuur. Een BIA en eventuele PIA zijn richtinggevend voor de in de voorfase te selecteren beveiligingsmaatregelen. 
+
+Als deze producten er niet zijn, dan moeten ze alsnog worden gemaakt. Dat vereist grote betrokkenheid van de organisatie van de opdrachtgever, en duurt in de regel lang. De aanwezigheid en compleetheid van deze producten is dus belangrijke informatie voor de raming van de voorfase.
 
 ### Referenties
 

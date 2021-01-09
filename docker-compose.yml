@@ -6,7 +6,7 @@ services:
     volumes:
       - ${PWD}:${PWD}
       - /var/run/docker.sock:/var/run/docker.sock
-    command: bash -c "python3 src/convert.py --log INFO --version 2.1.0 DocumentDefinitions/*.json"
+    command: bash -c "python3 src/convert.py --log INFO --version 2.2.0-unreleased DocumentDefinitions/*.json"
   wkhtmltopdf:
     build:
       context: .

@@ -2,12 +2,12 @@
 
 #include "Content/Maatregelen/M01/Definitie.md"
 
-ICTU levert, samen met de opdrachtgever, beheerpartij en andere meewerkende partijen, de volgende informatie op:
+Opdrachtgever, ICTU, beheerpartij en andere meewerkende partijen, leveren samen de volgende informatie op:
 
 **Functionele eisen**
-De beschrijving van functionele eisen bestaat uit een geprioriteerde backlog met epics en/of user stories, eventueel aangevuld met use cases. De beschrijving bevat tevens eisen voor ondersteuning van beheerfuncties, die door de beoogd beheerder gesteld worden, en voor logging, inclusief de globale inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen.
+De beschrijving van functionele eisen bestaat uit epics en/of user stories, eventueel aangevuld met use cases. De beschrijving bevat tevens eisen voor ondersteuning van beheerfuncties, die door de beoogd beheerder gesteld worden, en voor logging, inclusief de globale inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen.
 
-Bronnen van de opdrachtgever zoals procesbeschrijvingen, een programma van eisen en projectstartarchitectuur vormen het startpunt voor de functionele eisen. Tijdens het project worden use cases in samenwerking met de product owner vertaald naar user stories.
+Bronnen van de opdrachtgever zoals de projectstartarchitectuur, een programma van eisen en procesbeschrijvingen vormen het startpunt voor de functionele eisen. Tijdens het project worden use cases in samenwerking met de product owner vertaald naar user stories.
 
 **Niet-functionele eisen**
 Niet-functionele eisen specificeren criteria om het functioneren van de software te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Voor de beschrijving en onderverdeling van niet-functionele eisen gebruikt ICTU:
@@ -27,7 +27,7 @@ Overheidsorganisaties moeten een [toegankelijkheidsverklaring](https://www.digit
 Bronnen van de opdrachtgever zoals procesbeschrijvingen, privacy impact analysis (PIA), beheeracceptatiecriteria, beveiligingsbeleid en projectstartarchitectuur vormen het startpunt voor de niet-functionele eisen.
 
 **Product backlog**
-De product backlog is een overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:
+De product backlog is een geprioriteerd overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:
 
 * *Wat* er gemaakt moet worden,
 * *Waarom*,
@@ -40,11 +40,11 @@ Zie [http://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog](http:
 **Ontwerp en architectuur**
 De ontwerp- en architectuurdocumentatie beschrijft de opzet van de te bouwen software in de context waarbinnen het moet opereren en de ontwerpkeuzes en -principes die zijn gevolgd. Die documentatie laat tevens zien hoe de software aan de gestelde functionele en niet-functionele eisen voldoet.
 
-Ontwerp- en architectuurinformatie kan haar plaats vinden in verschillende documenten en producten, zoals een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) en een prototype en/of interactieontwerp.
+Het project legt ontwerp- en architectuurinformatie vast in verschillende documenten en producten, zoals een softwarearchitectuurdocument (SAD), een infrastructuurarchitectuur (IA), een globaal functioneel ontwerp (GFO) en een prototype en/of interactieontwerp.
 
 Het softwarearchitectuurdocument verschaft een compleet overzicht van en rationale voor de architectuur van de te ontwikkelen software, waarbij diverse relevante views diverse aspecten van de software belichten. Zie bijvoorbeeld [http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf](http://www.win.tue.nl/~wstomv/edu/2ip30/references/Kruchten-4+1-view.pdf); andere manieren van architectuurbeschrijving zijn ook toegestaan.
 
-De infrastructuurarchitectuur beschrijft de topologie van de implementatie-omgeving waaronder protocollen, beveiligingsniveaus en services. Deze architectuur biedt een logische afbeelding van eisen naar implementatie-omgeving en geeft onderbouwing voor gemaakte keuzes.
+De infrastructuurarchitectuur beschrijft de topologie van de implementatie-omgeving waaronder protocollen, beveiligingsniveaus en services. Deze architectuur biedt een logische afbeelding van de eisen naar de implementatie-omgeving en geeft onderbouwing voor de gemaakte keuzes.
 
 Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illustreert waar men uiteindelijk met de toepassing naar toe wil. Het maakt ideeën tastbaar en creëert een eerste indruk van structuur, ontwerp en functionaliteit.
 
@@ -64,12 +64,12 @@ Het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) bevat 
 De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTP-header en -request-configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de 'Server'-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer.
 
 **Kwaliteitsplan**
-Het kwaliteitsplan beschrijft welke kwaliteitsmaatregelen het project treft om de niet-functionele eisen te realiseren.
+Het kwaliteitsplan beschrijft de standaard kwaliteitsmaatregelen die ICTU-projecten treffen om goede kwaliteit software te realiseren. Als er bijzondere of hoge niet-functionele eisen zijn, beschrijft het kwaliteitsplan ook de extra projectspecifieke kwaliteitsmaatregelen die het project treft om deze eisen te realiseren.
 
 **Vrijgaveadvies**
-Voor elke major release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat tenminste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Als er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.
+Voor elke release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat tenminste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Als er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.
 
-**Samenhang voorfase producten**
+**Samenhang voorfaseproducten**
 
 ![Projectstartarchitectuur, business impact analyse en privacy impact analyse zijn input voor de voorfase. Functionele eisen, niet-functionele eisen, informatiebeveiligingsplan, backlog, ontwerp en architectuur, kwaliteitsplan en testplannen zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De projectstartarchitectuur vormt input voor functionele eisen en niet-functionele eisen. De business impact analyse vormt input voor de niet-functionele eisen en informatiebeveiligingsplan. De privacy impact analyse vormt input voor de niet-functionele eisen en het informatiebeveiligingsplan. De functionele eisen vormen input voor de backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.](/work/Content/Images/relaties-tussen-producten.png "Relaties tussen producten")
 
@@ -92,7 +92,7 @@ Als tijdens een project bestaande software dient te worden afgebouwd, onderhoude
 | Kwaliteitsplan                                                                                          | ✔ | ✔ |
 | Deploybare versie van de software                                                                       |   | ✔ |
 | Broncode, inclusief de benodigdheden voor het bouwen van de software                                    |   | ✔ |
-| Regressietests, inclusief de benodigdheden voor het uitvoeren van de regressietesten                    |   | ✔ |
+| Regressietests, inclusief de benodigdheden voor het uitvoeren van de tests                              |   | ✔ |
 | Vrijgaveadvies                                                                                          |   | ✔ |
 | Release notes                                                                                           |   | ✔ |
 | Deploymentdocumentatie                                                                                  |   | ✔ |
@@ -102,9 +102,9 @@ Als tijdens een project bestaande software dient te worden afgebouwd, onderhoude
 
 **Verantwoordelijkheden**
 
-De opdrachtgever is primair verantwoordelijk voor het beschhrijven van de functionele en niet-functionele eisen, het mastertestplan en het informatiebeveiligingsplan. 
+De opdrachtgever is primair verantwoordelijk voor het beschrijven van de functionele en niet-functionele eisen, de geprioriteerde backlog, het mastertestplan en het informatiebeveiligingsplan. 
 
-ICTU is primair verantwoordelijk voor softwarearchitectuurdocumentatie, globaal functioneel ontwerp, prototype, detailtestplannen en testrapportages voor bouwtesten, plan van aanpak, kwaliteitsplan, deploybare versie van de software, broncode, regressietesten, vrijgaveadvies, release notes en deploymentdocumentatie. Als er een due diligence plaatsvindt, levert ICTU de onderzoeksresultaten en maakt een transitieplan, en indien van toepassing, een plan voor het aflossen van technische schuld.
+ICTU is primair verantwoordelijk voor softwarearchitectuurdocumentatie, globaal functioneel ontwerp, prototype, detailtestplannen en testrapportages voor bouwtesten, plan van aanpak, kwaliteitsplan, deploybare versie van de software, broncode, regressietests, vrijgaveadvies, release notes en deploymentdocumentatie. Als er een due diligence plaatsvindt, levert ICTU de onderzoeksresultaten en maakt een transitieplan, en indien van toepassing, een plan voor het aflossen van technische schuld.
 
 De beheerpartij is primair verantwoordelijk voor de infrastructuurarchitectuur en -ontwerp en detailtestplannen en testrapportages voor infrastructuurtesten. 
 
@@ -114,7 +114,7 @@ Het uniformeren van op te leveren producten biedt voordelen voor planning (het i
 
 De voorgeschreven producten stellen de beheerpartij in staat om de opgeleverde software uit te rollen, te beheren en eventueel te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.
 
-De genoemde producten uit de voorbereidingsfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen, zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.
+De genoemde producten uit de voorfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen, zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.
 
 ### Referenties
 

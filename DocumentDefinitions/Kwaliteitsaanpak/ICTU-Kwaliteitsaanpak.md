@@ -52,7 +52,7 @@
 
 #include "Content/Maatregelen/M27/Maatregel.md"
 
-# Projectorganisatie (ICTU)
+# Organisatie
 
 #include "Content/Maatregelen/M29/Maatregel.md"
 

@@ -189,7 +189,7 @@ Bij de ontwikkeling van de programmatuur worden de volgende richtlijnen in acht 
 
 * [OWASP Top-10](https://owasp.org/www-project-top-ten/),
 * [NCSC ICT-beveiligingsrichtlijnen voor webapplicaties](https://www.ncsc.nl/documenten/publicaties/2019/mei/01/ict-beveiligingsrichtlijnen-voor-webapplicaties).
-* [Baseline Informatiebeveiliging Overheid (BIO)](https://bio-overheid.nl/media/1400/70463-rapport-bio-versie-104_digi.pdf).
+* [Baseline Informatiebeveiliging Overheid (BIO)](https://bio-overheid.nl/media/1572/bio-versie-104zv_def.pdf).
 * [Software Development (SSD) van het Centrum Informatiebeveiliging en Privacybescherming](https://www.cip-overheid.nl/media/1101/grip-op-ssd-het-proces-v20.pdf)
 
 ## Overzicht van gebruikte certificaten

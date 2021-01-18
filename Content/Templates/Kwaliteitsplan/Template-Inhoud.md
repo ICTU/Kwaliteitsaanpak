@@ -233,7 +233,7 @@ Elke beveiligingstest resulteert in een beveiligingstestrapportage met daarin de
 
 Het ICTU-kwaliteitssysteem rapporteert of gevonden beveiligingsissues niet te lang open staan.
 
-NB. De beveiliging van de software in de acceptatie- en productieomgeving kan niet door ICTU getest worden. Deze test moet de opdrachtgever of de beheerpartij uitvoeren.
+Merk op: de beveiliging van de software in de acceptatie- en productieomgeving kan niet door ICTU getest worden. Deze test moet de opdrachtgever of de beheerpartij uitvoeren.
 
 ## Toegankelijkheidstesten
 

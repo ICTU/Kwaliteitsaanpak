@@ -12,11 +12,11 @@ De $KWALITEITSAANPAK$ helpt opdrachtgevers van maatwerksoftware het belang van b
 We delen wat we goed kunnen door:
 
 * geleerde lessen te verwerken in deze Kwaliteitsaanpak ([$M11$](#m11)), die te delen tussen projecten en te publiceren via [https://www.ictu.nl/kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak) ([$M12$](#m12));
-* de tools die we ontwikkelen ter ondersteuning van softwareontwikkelprojecten zoveel mogelijk als open source beschikbaar te stellen ([$M15$](#m15)).
+* de tools die we ontwikkelen ter ondersteuning van softwareontwikkelprojecten zoveel mogelijk als open source beschikbaar te stellen ([$M18$](#m18)).
 
 We gebruiken wat anderen beter doen door:
 
-* open source tools te gebruiken ([$M15$](#m15));
+* open source tools te gebruiken ([$M18$](#m18));
 * bewezen tools te kiezen ([$M16$](#m16)) en beschikbaar te stellen aan projecten in een digitale werkomgeving ([$M19$](#m19)) en het gebruik ervan te ondersteunen ([$M18$](#m18));
 * ons werk periodiek op informatiebeveiliging te laten controleren ([$M26$](#m26));
 * door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd, te laten gaan ([$M21$](#m21)).

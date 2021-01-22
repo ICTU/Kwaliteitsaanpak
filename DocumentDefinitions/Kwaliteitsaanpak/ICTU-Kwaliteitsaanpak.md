@@ -60,8 +60,6 @@
 
 #include "Content/Maatregelen/M18/Maatregel.md"
 
-#include "Content/Maatregelen/M15/Maatregel.md"
-
 #include "Content/Maatregelen/M11/Maatregel.md"
 
 #include "Content/Maatregelen/M12/Maatregel.md"

@@ -17,7 +17,7 @@ We delen wat we goed kunnen door:
 We gebruiken wat anderen beter doen door:
 
 * open source tools te gebruiken ([$M15$](#m15));
-* bewezen tools te kiezen ([$M16$](#m16)) en beschikbaar te stellen aan projecten ([$M17$](#m17)) in een digitale werkomgeving ([$M19$](#m19)) en het gebruik ervan te ondersteunen ([$M18$](#m18));
+* bewezen tools te kiezen ([$M16$](#m16)) en beschikbaar te stellen aan projecten in een digitale werkomgeving ([$M19$](#m19)) en het gebruik ervan te ondersteunen ([$M18$](#m18));
 * ons werk periodiek op informatiebeveiliging te laten controleren ([$M26$](#m26));
 * door bij de inzet van medewerkers kwaliteit boven andere aspecten, zoals beschikbaarheid, prijs en doorlooptijd, te laten gaan ([$M21$](#m21)).
 

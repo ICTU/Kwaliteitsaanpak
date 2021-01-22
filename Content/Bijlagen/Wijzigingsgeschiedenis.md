@@ -11,6 +11,7 @@
 * Bij maatregel "Het project levert in elke fase vastgestelde informatie over het product op" (M01) met een plaatje de relaties tussen de voorfase producten toegelicht.
 * De maatregel "Het project is gesplitst in een voorfase en een realisatiefase" (M14) hernoemd naar "Het project bereidt samen met opdrachtgever en belanghebbenden de realisatie voor".
 * Bij maatregel "Het project gebruikt tools voor vastgestelde taken" (M16) performancetesttools toegevoegd.
+* Maatregel "ICTU zorgt dat een aantal vastgestelde tools snel beschikbaar is voor een project" (M17) verwijderd omdat projecten deze tools ofwel via de kantoorautomatisering van ICTU kunnen gebruiken of zelf kunnen draaien in de afgeschermde digitale omgeving zoals beschreven bij M19. 
 * Bij maatregel "Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen" (M26) beter toegelicht onder welke voorwaarden de beveiligingstesten alleen door de opdrachtgever kunnen worden uitgevoerd.
 * Bijlage "Risico's van softwareontwikkeling" verwijderd vanwege de overlap met de bijlage "Relatie met NEN NPR 5326".
 

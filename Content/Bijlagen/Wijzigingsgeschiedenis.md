@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.2.0, ongereleased
+### Versie 2.2.0, 27 januari 2021
 
 #### Kwaliteitsaanpak
 

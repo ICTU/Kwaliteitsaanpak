@@ -24,7 +24,6 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
   - document.json - meta data about the document
   - document.md - content of the document
   - document.css - styling
-  - cover.md - cover material (front page)
   - cover.css - styling
 - Shared material such as headers, footers, and stylesheets are in the ./DocumentDefinitions/Shared folder
 

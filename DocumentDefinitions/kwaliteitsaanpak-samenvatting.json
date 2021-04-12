@@ -1,17 +1,15 @@
 {
-    "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
+    "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak-samenvatting.md",
     "BuildPath": "build/Kwaliteitsaanpak/",
     "OutputPath": "dist",
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
+    "Subtitle": "Samenvatting",
     "DocumentType": "Kwaliteitsaanpak",
     "IncludeFrontPage": true,
-    "IncludeTableOfContents": true,
+    "IncludeTableOfContents": false,
     "OutputFormats": {
         "pdf": {
-            "OutputFile": "ICTU-Kwaliteitsaanpak.pdf"
-        },
-        "xlsx": {
-            "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx"
+            "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.pdf"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]

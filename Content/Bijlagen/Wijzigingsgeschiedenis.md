@@ -1,5 +1,9 @@
 ## Wijzigingsgeschiedenis
 
+### Versie 2.3.0, nog uit te brengen
+
+* Een samenvatting van de Kwaliteitsaanpak als los document toegevoegd. 
+
 ### Versie 2.2.0, 27 januari 2021
 
 #### Kwaliteitsaanpak

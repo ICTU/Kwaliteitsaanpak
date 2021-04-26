@@ -1,18 +1,4 @@
-.circleci
-.dockerignore
-.DS_Store
-.git
-.gitattributes
-.github
-.gitignore
-.idea
-.mypy_cache
-.pylintrc
-.vscode
-.vulture_white_list.py
-LICENSE
-README.md
-build
-dist
-Dockerfile*
-venv
+# Ignore everything except the Fonts, needed for the wkhtml image, and dependencies, needed for the ka image.
+*
+!Fonts
+!requirements.txt

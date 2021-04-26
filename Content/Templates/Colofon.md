@@ -1,4 +1,6 @@
-##### Rubricering
+##### Colofon
+
+###### Rubricering
 
 Rubricering conform [VIRBI 2013, art. 4](https://wetten.overheid.nl/BWBR0033507/2013-06-01#Artikel4).
 
@@ -8,13 +10,20 @@ Rubricering conform [VIRBI 2013, art. 4](https://wetten.overheid.nl/BWBR0033507/
 |:---------------------|:-------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 | {Rubriceringsniveau} | {Rubriceringsduur} | {Vaststeller van de rubricering: minister, staatssecretaris, secretaris-generaal of een door de secretaris-generaal aangewezen rubriceringsambtenaar} |
 
-##### Revisiehistorie
+###### Revisiehistorie
 
 | Versie   | Auteur | Datum   | Status               | Opmerkingen   |
 |:---------|:-------|:--------|:---------------------|:--------------|
 | {versie} | {naam} | {datum} | {concept/definitief} | {opmerkingen} |
 
-##### Vereiste goedkeuringen
+###### Reviewers
+
+| Functie/rol                     | Naam   | Datum   |  Versie  |
+|:--------------------------------|:-------|:--------|:--------:|
+| Kwaliteitsmanager opdrachtgever | {naam} | {datum} | {versie} |
+| Kwaliteitsmanager ICTU          | {naam} | {datum} | {versie} |
+
+###### Vereiste goedkeuringen
 
 | Functie/rol                 | Naam   | Datum   |  Versie  |
 |:----------------------------|:-------|:--------|:--------:|
@@ -22,7 +31,7 @@ Rubricering conform [VIRBI 2013, art. 4](https://wetten.overheid.nl/BWBR0033507/
 | Projectleider opdrachtgever | {naam} | {datum} | {versie} |
 | Product owner               | {naam} | {datum} | {versie} |
 
-##### Verzendlijst huidige versie
+###### Verzendlijst huidige versie
 
 | Naam   | Organisatie     | Functie/rol               |
 |:-------|:----------------|:--------------------------|
@@ -31,7 +40,7 @@ Rubricering conform [VIRBI 2013, art. 4](https://wetten.overheid.nl/BWBR0033507/
 | {naam} | ICTU            | Projectleider             |
 | {naam} | ICTU            | Software delivery manager |
 
-##### Template versie
+###### Template versie
 
 Versie $VERSIE$, $DATUM$
 

@@ -1,4 +1,4 @@
-#include "Content/Templates/Historie.md"
+#include "Content/Templates/Colofon.md"
 
 # Inleiding
 

@@ -2,7 +2,13 @@
 
 ### Versie 2.3.0, nog uit te brengen
 
+#### Samenvatting Kwaliteitsaanpak
+
 * Een samenvatting van de Kwaliteitsaanpak als los document toegevoegd. 
+
+#### Alle templates
+
+* Lijst van reviewers toegevoegd aan colofon.
 
 ### Versie 2.2.0, 27 januari 2021
 

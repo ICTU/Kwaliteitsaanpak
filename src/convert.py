@@ -73,6 +73,7 @@ def convert_pdf(
     header_filename = build_path / "header.html"
     with open(header_filename, "w") as header_file:
         header_file.write(header_contents)
+    toc_options = "toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl" if settings["IncludeTableOfContents"] else ""
     wkhtmltopdf = f"""docker-compose run wkhtmltopdf -c "wkhtmltopdf \
         --enable-local-file-access \
         --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
@@ -80,8 +81,7 @@ def convert_pdf(
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
         --title '{settings["Title"]}' \
         cover {html_cover_filename} \
-        toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl \
-        {html_filename} {pdf_build_filename}" """
+        {toc_options} {html_filename} {pdf_build_filename}" """
     os.system(wkhtmltopdf)
     os.system(f'gs -o {pdf_filename} -sDEVICE=pdfwrite -dPrinted=false -f {pdf_build_filename} src/pdfmark.txt')
 

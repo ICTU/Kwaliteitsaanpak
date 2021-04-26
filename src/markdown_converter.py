@@ -86,6 +86,9 @@ class MarkdownConverter:
                     self.add_element(xmltags.INSTRUCTION, "{Datum}")
                 self.add_element(xmltags.PARAGRAPH)
             elif document_type == "Kwaliteitsaanpak":
+                if settings.get("Subtitle"):
+                    with self.element(xmltags.PARAGRAPH):
+                        self.add_element(xmltags.BOLD, settings["Subtitle"])
                 with self.element(xmltags.PARAGRAPH):
                     self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
             else:

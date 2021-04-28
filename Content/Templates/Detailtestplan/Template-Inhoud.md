@@ -100,7 +100,6 @@ Tijdens het testen worden de onderstaande tools gebruikt:
 * **Axe:** Axe is een testtool voor de Web Content Accessibility Guidelines.
 * **Selenium:** Web UI driver library, wordt gebruikt om de browser aan te sturen vanuit de ART.
 * **Jenkins:** Jenkins is een Continuous Integration (CI) server die wordt gebruikt om de ART uit te voeren.
-* **BIRT:** Een rapportagetool waarmee kwaliteits- en managementrapportages gegenereerd worden.
 * {Andere tools}
 
 ## Testdata
@@ -125,7 +124,7 @@ Dit hoofdstuk beschrijft de testrapportages en andere testartifacten die het pro
 
 De resultaten van de testuitvoer worden gedeeld met de projectleider in de vorm van de volgende interne testrapportages:
 
-* **ART-resultaten:** Zichtbaar in Jenkins als resultaat van de Jenkins job. BIRT-resultaten worden automatisch gegenereerd, hierin is een gedetailleerd overzicht van de testruns, logische testgevallen, testklassen en testmethodes zichtbaar.
+* **ART-resultaten:** Zichtbaar in Jenkins als resultaat van de Jenkins job.
 * **Performancetestrapport:** Op wekelijkse basis, met hierin een overzicht van de testresultaten van de performancetest, de performancetrend, een analyse en eventueel advies.
 * **Securitytestrapport:** De securitytesten worden uitgevoerd door een gespecialiseerde organisatie. Deze organisatie stelt ook het securityeindrapport op. Hierin staat een overzicht van de kwetsbaarheden die zijn ontdekt tijdens het testen, en een advies hoe deze te aan te pakken.
 * **Toegankelijkheidstestrapport:** In dit rapport is vastgelegd in welke mate de software aan de toegankelijkheidseisen voldoet, waaronder de wettelijk verplichte Web Content Accessibility Guidelines.

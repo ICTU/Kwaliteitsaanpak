@@ -2,6 +2,10 @@
 
 ### Versie 2.3.0, nog uit te brengen
 
+#### Kwaliteitsaanpak
+
+* Verwijzingen naar BIRT en de Releasemanager verwijderd uit de maatregel "Het project gebruikt tools voor vastgestelde taken" (M16) omdat deze tools niet meer ondersteund worden.
+
 #### Samenvatting Kwaliteitsaanpak
 
 * Een samenvatting van de Kwaliteitsaanpak als los document toegevoegd. 
@@ -12,12 +16,16 @@
 * Leeswijzer uitgebreid met een beschrijving van de (standaard) bijlagen van de templates.
 * Hoofdstuk "Managementsamenvatting" toegevoegd.
 
+#### Template Detailtestplan
+
+* Verwijzingen naar BIRT en de Releasemanager verwijderd. 
+
 #### Template Globaal Functioneel Ontwerp
 
 * Template aangepast naar het gebruik van use cases om de functionaliteit te beschrijven.
 * Kaders die niet relevant waren voor een GFO verwijderd.
 
-#### Kwaliteitsplantemplate
+#### Template Kwaliteitsplan
 
 * Het kwaliteitsplantemplate sprak van een verantwoordingsparagraaf in alle documenten, maar deze paragraaf zat niet in de andere templates. Deze verantwoordingsparagrafen waren bedoeld om de eisen traceerbaar te maken. Omdat niet alle projecten dit nodig hebben, en er andere manieren in gebruik zijn om eisen traceerbaar te maken (bijvoorbeeld een losse administratie in Confluence) is de tekst over verantwoordingsparagrafen vervangen door een optionele paragraaf over tracering van eisen die nader kan worden ingevuld.
 * Uit de bijlage "Gebruik van Jira" is de paragraaf "Velden in Jira" verwijderd omdat deze out-of-date en incompleet was en bovendien niet ging over velden in Jira, maar over metrieken die met behulp van de informatie in Jira gemeten kunnen worden. In plaats van deze paragraaf verwijst het kwaliteitsplantemplate naar de lijst op GitHub van metrieken die Quality-time kan meten.
@@ -25,11 +33,11 @@
 * Uit de bijlage "Gebruik van Jira" is het issue type "Custom issue" verwijderd omdat custom issues optioneel zijn en in de praktijk te weinig worden toegepast om apart te beschrijven.
 * Het hoofdstuk "Kwaliteitsmaatregelen projectafsluiting" bevatte een lijst van activiteiten voor de software delivery manager. Die activiteiten zijn verplaatst naar het template plan van aanpak realisatiefase. De kwaliteitsmaatregelen bij projectafsluiting zijn beperkt tot een controle door de kwaliteitsmanager van de uitvoering van die activiteiten.
 
-#### Template plan van aanpak voorfase
+#### Template Plan van Aanpak Voorfase
 
 * Paragraaf over projectafsluiting toegevoegd.
 
-#### Template plan van aanpak realisatiefase
+#### Template Plan van Aanpak Realisatiefase
 
 * Paragraaf over projectafsluiting en bijlage met activiteiten voor projectafsluiting toegevoegd.
 
@@ -57,7 +65,7 @@
 
 * Template veranderd in een template voor een plan van aanpak voor de realisatiefase. Gebruik voor projectvoorstellen het ICTU-brede template.
 
-#### Kwaliteitsplantemplate
+#### Template Kwaliteitsplan
 
 * Toegevoegd bij projectafsluiting dat VPN-keys, LDAP-accounts, Jira-accounts en werkstations moeten worden opgeschoond.
 * Bij projectafsluiting de verantwoordelijke rol aangepast naar software delivery manager, conform Maatregel 27 in de Kwaliteitsaanpak.
@@ -84,12 +92,12 @@
 
 * Generiek template toegevoegd dat als basis kan dienen voor documenten waarvoor nog geen specifiek template is.
 
-#### Kwaliteitsplantemplate
+#### Template Kwaliteitsplan
 
 * Paragrafen 1.2, 1.5 en 1.6 uitgebreid met standaard teksten.
 * Stakeholder management vervangen door het bescheidener identificeren van belanghebbenden en belangen.
 
-#### NFE-template
+#### Template Niet-Functionele Eisen
 
 * Link naar Nederlandse vertaling van WCAG 2.1 toegevoegd aan het NFE-template.
 

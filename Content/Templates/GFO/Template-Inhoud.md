@@ -8,7 +8,7 @@ Dit hoofdstuk beschrijft de werking van {de applicatie} op hoofdlijnen. Het besc
 
 ## Specifieke functies
 
-{Beschrijf de functionele werking van de applicatie op hoofdlijnen en geef de belangrijkste actoren weer. Maak onderscheid tussen menselijke actoren en systeemactoren.}
+{Beschrijf de functionele werking van de applicatie op hoofdlijnen en geef de belangrijkste actoren weer. Maak onderscheid tussen menselijke actoren en systeemactoren. Gebruik de hier beschreven functies als basis voor de paragraafindeling in hoofdstuk 2.}
 
 ## Generieke functies
 
@@ -39,7 +39,13 @@ Dit hoofdstuk beschrijft de use cases die {de applicatie} ondersteunt. Per use c
 * Primaire scenario: Beschrijving van de interactie tussen actor en systeem waarmee het doel bereikt wordt.
 * Opmerkingen: Eventuele toevoegingen en openstaande punten.
 
-## {UC01} - {naam}
+De use cases zijn gegroepeerd naar de functies zoals beschreven in hoofdstuk 1.
+
+## {F1} - {naam functie 1}
+
+Deze paragraaf bevat de use cases behorende bij functie "{functie}". 
+
+### {UC1.1} - {naam use case 1.1}
 
 | Aspect            | Beschrijving  |
 |:------------------|---------------|
@@ -50,6 +56,10 @@ Dit hoofdstuk beschrijft de use cases die {de applicatie} ondersteunt. Per use c
 | Primaire scenario | {Wat zijn de stappen in het belangrijkste scenario van de use case} |
 | Opmerkingen       | {Eventuele toevoegingen en openstaande punten} |
 
-## {UC02} - {naam}
+### {UC1.2} - {naam use case 1.2}
 
-{Kopieer voorgaande paragraaf om meer use cases toe te voegen.}
+{Kopieer voorgaande subparagraaf om meer use cases toe te voegen.}
+
+## {F2} - {naam functie 2}
+
+{Kopieer voorgaande paragraaf om meer functies toe te voegen.}

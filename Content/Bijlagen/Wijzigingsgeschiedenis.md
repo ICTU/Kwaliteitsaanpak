@@ -19,6 +19,8 @@
 #### Kwaliteitsplantemplate
 
 * Het kwaliteitsplantemplate sprak van een verantwoordingsparagraaf in alle documenten, maar deze paragraaf zat niet in de andere templates. Deze verantwoordingsparagrafen waren bedoeld om de eisen traceerbaar te maken. Omdat niet alle projecten dit nodig hebben, en er andere manieren in gebruik zijn om eisen traceerbaar te maken (bijvoorbeeld een losse administratie in Confluence) is de tekst over verantwoordingsparagrafen vervangen door een optionele paragraaf over tracering van eisen die nader kan worden ingevuld.
+* Uit de bijlage "Gebruik van Jira" de paragraaf "Velden in Jira" verwijderd omdat deze out-of-date en incompleet was en bovendien niet ging over velden in Jira, maar over metrieken die met behulp van de informatie in Jira gemeten kunnen worden. In plaats van deze paragraaf verwijst het kwaliteitsplan template naar de lijst op GitHub van metrieken die Quality-time kan meten.
+* Uit de bijlage "Gebruik van Jira" de issue types "Sprint bug" en "Custom issue" verwijderd omdat we bugs die tijdens sprints worden gevonden niet vastleggen in Jira en omdat custom issues optioneel zijn en in de praktijk te weinig worden toegepast om apart te beschrijven.
 
 ### Versie 2.2.0, 27 januari 2021
 

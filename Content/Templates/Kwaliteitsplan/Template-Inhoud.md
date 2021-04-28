@@ -135,7 +135,7 @@ Het vrijgaveadvies beschrijft ({vul aan en pas aan}):
 
 ## ICTU-kwaliteitssysteem
 
-Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automatisch metrieken worden verzameld en samengesteld. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden diverse malen per dag bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. In de bijlagen een overzicht van de mogelijke metrieken en de daarbij horende standaard instelling; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
+Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automatisch metrieken worden verzameld en samengesteld. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden meerdere keer per uur bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. Zie het [overzicht van mogelijke metrieken](https://github.com/ICTU/quality-time/blob/master/docs/METRICS_AND_SOURCES.md) en de daarbij horende standaard normen; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
 
 ## Kwaliteit van de broncode
 

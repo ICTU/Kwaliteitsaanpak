@@ -1,10 +1,7 @@
 ## Relatie met andere documenten
 
-Dit document beschrijft de functionele user stories. De architectuur, die ten grondslag ligt aan de oplossing, staat beschreven in de projectstartarchitectuur (PSA). De beschrijving van de architectuur van de oplossing staat in het software-architectuurdocument (SAD).
+De eisen en wensen die ten grondslag liggen aan dit globaal functioneel ontwerp zijn beschreven als functionele eisen in de vorm van een product backlog met epics en user stories {documentreferentie of link naar Jira}, als niet-functionele eisen in de vorm van een NFE-document {documentreferentie}, en in het informatiebeveiligingsplan {documentreferentie}.
 
-In verschillende documenten zijn eisen en wensen opgenomen die ten grondslag liggen aan dit globaal functioneel ontwerp. Deze zijn opgenomen in de volgende documenten:
+De architectuur, die ten grondslag ligt aan de oplossing, staat beschreven in de projectstartarchitectuur {documentreferentie}. De beschrijving van de architectuur van de oplossing staat in het software-architectuurdocument {documentreferentie}.
 
-* Informatiebeveiligingsplan (bevat eisen en wensen en mogelijk maatregelen tegen informatiebeveiligingsrisico’s) {documentreferentie},
-* Projectstartarchitectuur {documentreferentie},
-* Software-architectuurdocument {documentreferentie},
-* Niet-functionele eisen (deze kunnen leiden tot functionele user stories), {documentreferentie}.
+Het GFO zelf vormt input voor de testplannen {documentreferentie}.

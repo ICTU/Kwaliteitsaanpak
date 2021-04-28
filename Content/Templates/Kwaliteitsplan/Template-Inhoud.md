@@ -38,8 +38,6 @@ Alle documenten die een deliverable van het project zijn, zoals architectuurdocu
 
 Bij elk formele release moeten de documenten geactualiseerd zijn en formeel opgeleverd worden.
 
-Elk document bevat een verantwoordingsparagraaf waarin aangeven wordt aan welke eisen (zoals opgenomen in bijvoorbeeld PSA en NFE) wordt voldaan en hoe deze in het document zijn verwerkt.
-
 ### Documentreview
 
 Alle deliverables worden gereviewd. De auteur van een deliverable zorgt, in overleg met de software delivery manager, dat de juiste reviewers benoemd zijn; hiertoe behoort in ieder geval de kwaliteitsmanager. De auteur van het document zorgt voor een correct versiebeheer van het document.
@@ -79,6 +77,10 @@ Performance- en securityeisen worden via performance- en securitytests geborgd, 
 ### Compleetheid deliverables voorfase
 
 In aanvulling op de maatregelen met betrekking tot reviews, zie paragraaf [Documentreview](#documentreview), reviewt de kwaliteitsmanager de deliverables van de voorfase op compleetheid. Hiervoor vormt de $KWALITEITSAANPAK$ het referentiekader.
+
+### {Tracering eisen}
+
+{Als de eisen traceerbaar moeten zijn vanuit de Backlog/NFE-document/Informatiebeveiligingsplan via GFO en SAD naar broncode, beschrijf dan hier de wijze waarop de eisen uniek identificeerbaar zijn gemaakt, hoe de relaties tussen eisen en ontwerp(beslissingen) worden bijgehouden en hoe de relaties tussen ontwerp(beslissingen) en code worden bijgehouden. Beschrijf hier ook wie deze relaties op welke momenten verifieert en hoe de verificatie wordt gedocumenteerd.} 
 
 # Kwaliteitsmaatregelen realisatiefase
 

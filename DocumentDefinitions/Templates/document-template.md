@@ -1,5 +1,9 @@
 #include "Content/Templates/Colofon.md"
 
+# Managementsamenvatting
+
+#include "Content/Templates/{{TEMPLATE-FOLDER}}/Managementsamenvatting.md"
+
 # Inleiding
 
 #include "Content/Templates/{{TEMPLATE-FOLDER}}/Over-dit-document.md"

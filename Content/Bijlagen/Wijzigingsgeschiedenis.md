@@ -9,6 +9,16 @@
 #### Alle templates
 
 * Lijst van reviewers toegevoegd aan colofon.
+* Leeswijzer uitgebreid met een beschrijving van de (standaard) bijlagen van de templates.
+
+#### Template Globaal Functioneel Ontwerp
+
+* Template aangepast naar het gebruik van use cases om de functionaliteit te beschrijven.
+* Kaders die niet relevant waren voor een GFO verwijderd.
+
+#### Kwaliteitsplantemplate
+
+* Het kwaliteitsplantemplate sprak van een verantwoordingsparagraaf in alle documenten, maar deze paragraaf zat niet in de andere templates. Deze verantwoordingsparagrafen waren bedoeld om de eisen traceerbaar te maken. Omdat niet alle projecten dit nodig hebben, en er andere manieren in gebruik zijn om eisen traceerbaar te maken (bijvoorbeeld een losse administratie in Confluence) is de tekst over verantwoordingsparagrafen vervangen door een optionele paragraaf over tracering van eisen die nader kan worden ingevuld.
 
 ### Versie 2.2.0, 27 januari 2021
 

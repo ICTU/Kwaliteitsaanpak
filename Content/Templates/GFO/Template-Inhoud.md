@@ -1,72 +1,55 @@
-# Functionele specificaties
+# Werking op hoofdlijnen
 
-De functionele specificaties zijn in de vorm van epics en user stories beschreven. Een user story is een korte beschrijving ("story") van wat een gebruiker ("user") wil. Een epic is een sprint-overstijgend, samenhangend geheel van user stories, dat als geheel waarde oplevert.
+Dit hoofdstuk beschrijft de werking van {de applicatie} op hoofdlijnen. Het beschrijft de context waarin de applicatie zal opereren, de functionele werking op hoofdlijnen, generieke functies die het systeem biedt, de belangrijkste informatie die het systeem bevat, en de klantreizen.
 
-## Actoren
+## Context
 
-Een actor is een 'gebruiker' van het systeem; dit kunnen menselijke gebruikers zijn, maar ook andere systemen. Hierbij bestaat een onderscheid tussen interne en externe actoren.
+{Beschrijf de omgeving en het landschap waarin de applicatie gaat functioneren. Geef een schematische voorstelling van de applicatie in het applicatielandschap van de opdrachtgever, inclusief koppelingen met aanpalende systemen zoals basisregistraties.}
 
-| Actor   | Verantwoordelijkheid   | Intern of extern? |
-|:--------|:-----------------------|:------------------|
-| {actor} | {verantwoordelijkheid} | {intern/extern}   |
+## Specifieke functies
 
-## Overzicht van epics
+{Beschrijf de functionele werking van de applicatie op hoofdlijnen en geef de belangrijkste actoren weer. Maak onderscheid tussen menselijke actoren en systeemactoren.}
 
-Deze paragraaf geeft een overzicht van alle epics die voorzien zijn in het systeem. De epics zijn geclassificeerd als wel of niet onderdeel van het minimum viable product (MVP).
+## Generieke functies
 
-| Epic ID   | Naam   | MVP?     |
-|:----------|:-------|:---------|
-| {epic ID} | {naam} | {ja/nee} |
+{Beschrijf generieke functies die in meerdere use cases terugkomen. Denk aan functies voor authenticatie en autorisatie, gegevensvalidatie, notificaties en logging.}
 
-## Gegevens binnen epics en user stories
+## Logisch gegevensmodel
 
-Epics zijn volgens een vast formaat beschreven. De onderstaande tabel toont de gegevens die over een epic worden opgenomen.
+{Beschrijf het logische gegevensmodel.}
 
-| Epic            | *epic naam*               |
-|:----------------|:--------------------------|
-| Doel            | *doel van de epic*        |
-| *user story ID* | *titel van de user story* |
-| *user story ID* | *titel van de user story* |
+## Klantreizen
 
-De user stories beschrijven alle beoogde functionaliteit van het systeem. De lijst met user stories bevat vooralsnog alleen een identificatienummer en een titel.
+{Beschrijf aan de hand van persona's hoe gebruikers bij de applicatie uitkomen, hoe ze door het systeem reizen, en wat ze na interactie met het de applicatie doen. Overweeg een los hoofdstuk met de klantreizen als deze omvangrijk zijn.}
 
-User stories worden opgesteld volgens een vast formaat. De onderstaande tabel toont de gegevens die over een user story worden opgenomen.
+# Use cases
 
-| User story ID         | *Een unieke identificatie van de user story*                                                                                                                     |
-|:----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| User story titel      | *Korte aanduiding van de user story*                                                                                                                             |
-| Beschrijving          | *Beschrijving van het doel in vast formaat: als __ROL__ wil ik __ACTIE__ zodat __REDEN__. De reden is de rationale die duidelijk maakt wat de businesswaarde is* |
-| Screenshot prototype  | *Opnemen of verwijzen naar een screenshot of schets of een beschikbaar prototype*                                                                                |
-| Acceptatiecriteria    | *Acceptatiecriteria voor de betreffende user story, die niet al onderdeel zijn van de NFE*                                                                       |
-| Afhankelijkheden¹     | *Hier worden afhankelijkheden bedoeld die niet evident zijn, zoals bijvoorbeeld een koppeling 'e-herkenning'*                                                    |
-| Performancerisico’s¹  | *Wanneer sprake is van omstandigheden die de performance nadelig kunnen beïnvloeden, zoals grote aantallen gebruikers of transacties*                            |
-| Beveiligingsrisico’s¹ | *Wanneer sprake is van specifieke potentiële beveiligingsproblemen*                                                                                              |
+{Gebruik voor de beschrijving van use cases in de voorfase een methode als de “casual” variant van Cockburn ("Writing effective use cases", 2001). In de realisatiefase en/of voor overdracht naar een andere partij kan de “fully dressed” variant (of een andere methode voor uitgebreidere beschrijvingen) worden toegepast. Doe dit gezien de onderhoudslast alleen als de opdrachtgever en/of ontvangende partij daar expliciet om vraagt.}
 
-¹) Indien van toepassing
+{Leg bij een update in de realisatiefase vast welke use cases zijn gerealiseerd, eventueel met de rationale en met een verwijzing naar de ontwerpbesluiten (in het SAD) die daarvoor zijn genomen.}
 
-# Epics
+Dit hoofdstuk beschrijft de use cases die {de applicatie} ondersteunt. Per use case worden de volgende aspecten benoemd:
 
-Dit hoofstuk beschrijft alle epics en de bijbehorende user stories. De epics en user stories zijn geclassificeerd volgens MosCoW-prioritering, deze is als volgt:
+* Id: Unieke identificatie van de use case.
+* Naam: Korte aanduiding van de use case.
+* Doel: Het resultaat dat de (belangrijkste) actor wil bereiken door middel van de use case.
+* Actor(en): Een actor is een persoon of een systeem; de actor gebruikt {applicatie} om zijn of haar doel te bereiken door middel van de use case.
+* Precondities: Wat moet er waar zijn om de use case te kunnen starten?
+* Trigger: Wat start de use case?
+* Primaire scenario: Beschrijving van de interactie tussen actor en systeem waarmee het doel bereikt wordt.
+* Opmerkingen: Eventuele toevoegingen en openstaande punten.
 
-* **Must have (M)**: deze epics en user stories moeten in het eindresultaat terugkomen, zonder deze epics en user stories is het product niet bruikbaar;
-* **Should have (S)**: deze epics en user stories zijn zeer gewenst, maar zonder is het product wel bruikbaar;
-* **Could have (C)**: deze epics en user stories zullen alleen aan bod komen als er tijd genoeg is;
-* **Would have (W)**: deze epics en user stories zullen waarschijnlijk in dit project niet aan bod komen maar kunnen in de toekomst, bij een vervolgproject, interessant zijn. Ze worden daarom ook wel eens aangeduid als "won't have".
+## {UC01} - {naam}
 
-Alle "must haves" bij elkaar worden gezien als de scope van het minimum viable product.
+| Aspect            | Beschrijving  |
+|:------------------|---------------|
+| Doel              | {Wat wil de (belangrijkste) actor bereiken?} |
+| Actor(en)         | {Wie interacteren met het systeem?} |
+| Precondities      | {Wat moet er waar zijn om de use case te kunnen starten?} |
+| Trigger           | {Wat start de use case?} |
+| Primaire scenario | {Wat zijn de stappen in het belangrijkste scenario van de use case} |
+| Opmerkingen       | {Eventuele toevoegingen en openstaande punten} |
 
-## {Epic 1}
+## {UC02} - {naam}
 
-| Epic            | {epic naam}               | Prioriteit |
-|:----------------|:--------------------------|:-----------|
-| Doel            | {doel van de epic}        | {M/C/S/W}  |
-| {user story ID} | {titel van de user story} | {M/C/S/W}  |
-| {user story ID} | {titel van de user story} | {M/C/S/W}  |
-
-## {Epic 2}
-
-| Epic            | {epic naam}               | Prioriteit |
-|:----------------|:--------------------------|:-----------|
-| Doel            | {doel van de epic}        | {M/C/S/W}  |
-| {user story ID} | {titel van de user story} | {M/C/S/W}  |
-| {user story ID} | {titel van de user story} | {M/C/S/W}  |
+{Kopieer voorgaande paragraaf om meer use cases toe te voegen.}

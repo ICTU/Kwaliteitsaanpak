@@ -1,5 +1,9 @@
 ## Over dit document
 
-Dit globaal functioneel ontwerp (GFO) beschrijft de functionele specificaties van {applicatie}, die de eisen van de belanghebbenden vertegenwoordigen.
+Dit globaal functioneel ontwerp (GFO) beschrijft op hoofdlijnen de functionele werking van {de applicatie}. Het GFO geeft inzicht in de manier waarop {gebruikers} {de applicatie} gebruiken en hoe {de applicatie} samenwerkt met andere applicaties in het applicatielandschap van {de opdrachtgever}. Het document bevat een globale beschrijving van wíe met de applicatie wát kan doen, in de vorm van use cases.
 
-Dit document beschrijft op hoofdlijnen wat het systeem moet doen, in de vorm van user stories. Het beschrijft niet de details van de interactie tussen de gebruikers en het systeem. Die details worden tijdens realisatie uitgewerkt in de inhoud van user stories. Dit document beschrijft niet hoe het systeem de eisen realiseert. Ook dit wordt tijdens de realisatie verder uitgewerkt.
+{Verwijder één van de volgende twee paragrafen:}
+
+Bij elke release levert ICTU een versie van het GFO dat is aangepast aan wat daadwerkelijk is gebouwd. Daartoe geeft het document per use case weer of deze al is gerealiseerd. Ook bevat het GFO de tijdens de realisatiefase genomen of aangepaste ontwerpbesluiten.
+
+Het GFO wordt tijdens de realisatiefase niet onderhouden. Bij overdracht van het onderhoud naar een andere partij zal ICTU in opdracht van de opdrachtgever en in overleg met de ontvangende partij een actueel GFO maken.

@@ -137,6 +137,8 @@ Het vrijgaveadvies beschrijft ({vul aan en pas aan}):
 
 Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automatisch metrieken worden verzameld en samengesteld. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden meerdere keer per uur bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. Zie het [overzicht van mogelijke metrieken](https://github.com/ICTU/quality-time/blob/master/docs/METRICS_AND_SOURCES.md) en de daarbij horende standaard normen; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
 
+De actuele kwaliteitsrapportage wordt dagelijks besproken tijdens team stand-up meetings en wekelijks in het intern projectoverleg (IPO). De kwaliteitsmanager onderhoudt en bewaakt de kwaliteitsrapportage. 
+
 ## Kwaliteit van de broncode
 
 {Het project bepaalt bij aanvang van de realisatiefase of, en zo ja welke, codeerstandaard zal worden gehanteerd (ICTU hanteert geen ICTU-brede codeerstandaard). Het project bepaalt daarbij ook hoe de codeerstandaard gecontroleerd zal worden: via tools en/of broncodereviews.}
@@ -149,8 +151,6 @@ Het project hanteert de volgende codeerstandaarden:
 | {programmeertaal B} | {codeerstandaard B} | {tool B}         |
 
 Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het mastertestplan opgenomen. ICTU maakt gebruik van een geautomatiseerd kwaliteitssysteem, waarbij de broncode continu wordt gecontroleerd en gerapporteerd. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
-
-De volledige lijst met mogelijke meetbare KPI’s is opgenomen in de bijlagen; de meest actuele lijst is opgenomen in de kwaliteitsrapportage van het project. Gedurende het project wordt uitgegaan van de standaard normen; afwijkingen op de standaard zijn alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
 
 De keuze van programmeertalen en andere technologie staat beschreven in het SAD.
 
@@ -189,7 +189,7 @@ Broncode, zowel van productiesoftware als van geautomatiseerde tests, wordt in e
 
 Gedurende de realisatiefase worden de use cases in samenwerking met de product owner vertaald naar user stories. Per user story worden één of meer logische testgevallen opgesteld; per logisch testgeval worden één of meer fysieke testgevallen opgesteld. De user stories, logische testgevallen en fysieke testgevallen zijn expliciet aan elkaar gekoppeld. User stories en logische testgevallen worden vastgelegd in Jira; zie de bijlagen voor de te gebruiken typen en relaties. Afwijkingen op deze standaard aanpak zijn alleen toegestaan met goedkeuring van de kwaliteitsmanager.
 
-Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor de realisatie- en beheerfase worden uitgevoerd. Documenten die input leveren voor het MTP zijn de documenten die in de voorfase worden opgeleverd, zoals PSA, NFE, SAD en GFO. Een product risicoanalyse (PRA) is uitgevoerd en is de basis voor de vaststelling van de diepgang waarmee de gedefinieerde testsoorten uitgevoerd moeten worden.
+Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor de realisatie- en beheerfase worden uitgevoerd. Het MTP wordt gebaseerd op in ieder geval PSA, NFE, SAD en GFO. Daarnaast is een product risicoanalyse (PRA) is uitgevoerd als basis voor de vaststelling van de diepgang waarmee de gedefinieerde testsoorten uitgevoerd moeten worden.
 
 ## Unit tests
 
@@ -221,7 +221,7 @@ Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen 
 
 De eisen aan de beveiliging worden in de documenten projectstartarchitectuur en niet-functionele eisen gedefinieerd. De in te richten testen dienen aan te tonen dat de gestelde beveiligingseisen wordt voldaan.
 
-De geautomatiseerde broncodereviews en rapportages uit het ICTU-kwaliteitssysteem bevatten diverse KPI’s voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van Checkmarx, OWASP dependency checker, OWASP ZAP en OpenVAS.
+De geautomatiseerde broncodereviews en rapportages uit het ICTU-kwaliteitssysteem bevatten diverse metrieken voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van Checkmarx, OWASP dependency checker, OWASP ZAP en OpenVAS.
 
 Om de beveiliging van de software te testen kan deze met enige regelmaat getest worden door een externe partij. Het MTP beschrijft de gekozen aanpak.
 
@@ -280,20 +280,4 @@ Deze paragraaf bevat maatregelen voor functionele en niet-functionele eisen, die
 
 # Kwaliteitsmaatregelen projectafsluiting
 
-De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van een project worden uitgevoerd. De software delivery manager is verantwoordelijk voor het archiveren.
-
-| Wat                                   | Waar staat het                       | Wie archiveert het   | Bewaartermijn |
-|:--------------------------------------|:-------------------------------------|:---------------------|:--------------|
-| Broncode, testscripts en documentatie | Git                                  | Projectteam          | 5 jaar        |
-| Overige documentatie                  | Sharepoint of andere samenwerkruimte | Projectteam          | 5 jaar        |
-| Final Release                         | {waar}                               | Projectteam          | 5 jaar        |
-| Performancetestscripts                | Git performanceteam                  | Projectteam          | 5 jaar        |
-| Kwaliteitsrapportage                  | Quality-time database                | ISD                  | 2 jaar        |
-| Bugs, user stories en andere issues   | Jira                                 | ISD                  | 2 jaar        |
-| VM’s ontwikkelteams                   | {waar}                               | ISD                  | 2 jaar        |
-| {Projectspecifieke producten}         | {waar}                               | {wie}                | {termijn}     |
-
-Bij projectafsluiting zorgt de software delivery manager verder dat volgende acties worden uitgevoerd:
-
-* ISD Technische beheer trekt credentials van projectmedewerkers zoals VPN-keys en LDAP-accounts in,
-* projectmedewerkers verwijderen broncode, testscript en documentatie van hun werkstations.
+De kwaliteitsmanager controleert of de projectafsluiting conform de afspraken daarover in het plan van aanpak van de voorfase en/of de realisatiefase is uitgevoerd.

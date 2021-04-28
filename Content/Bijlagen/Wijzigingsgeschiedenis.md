@@ -10,6 +10,7 @@
 
 * Lijst van reviewers toegevoegd aan colofon.
 * Leeswijzer uitgebreid met een beschrijving van de (standaard) bijlagen van de templates.
+* Hoofdstuk "Managementsamenvatting" toegevoegd.
 
 #### Template Globaal Functioneel Ontwerp
 

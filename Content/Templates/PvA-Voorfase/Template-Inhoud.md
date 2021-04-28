@@ -108,6 +108,10 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 | Projectleider (Opdrachtgever)                 | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan kick-off en eventuele workshops |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                    |
 
+## Projectafsluiting
+
+Omdat ICTU tijdens het project de documenten regelmatig oplevert is er geen speciale eindoplevering nodig. ICTU archiveert de documenten op Sharepoint met een bewaartermijn van vijf jaar.
+
 # Planning
 
 {Verwijs naar dit hoofdstuk in hoofdstuk 5 van het voorstel inclusief POK}

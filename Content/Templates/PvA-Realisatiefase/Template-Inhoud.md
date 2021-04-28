@@ -104,6 +104,10 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 
 {Beschrijf de afstemming met gerelateerde projecten, indien van toepassing}
 
+## Projectafsluiting 
+
+Omdat ICTU tijdens het project de software, inclusief documentatie, regelmatig oplevert is er geen speciale eindoplevering nodig. ICTU archiveert de projectartifacten zoals beschreven in de bijlage "Projectafsluiting".
+
 # Planning en doorlooptijd
 
 De start van het project vindt uiterlijk {aantal} weken na ondertekening van het voorstel inclusief projectovereenkomst plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het team samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.

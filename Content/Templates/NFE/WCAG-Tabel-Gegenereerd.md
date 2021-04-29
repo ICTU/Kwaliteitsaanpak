@@ -1,69 +1,69 @@
-| Item | Level | Description |
-| :--- | :--- | :--- |
-| Principle 1 | | [Perceivable](https://www.w3.org/TR/WCAG21/#perceivable) |
-| Guideline 1.1 | | [Text Alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives) |
-| Success criterium 1.1.1 | A | [Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content) |
-| Guideline 1.2 | | [Time-based Media](https://www.w3.org/TR/WCAG21/#time-based-media) |
-| Success criterium 1.2.1 | A | [Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded) |
-| Success criterium 1.2.2 | A | [Captions (Prerecorded)](https://www.w3.org/TR/WCAG21/#captions-prerecorded) |
-| Success criterium 1.2.3 | A | [Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded) |
-| Success criterium 1.2.4 | AA | [Captions (Live)](https://www.w3.org/TR/WCAG21/#captions-live) |
-| Success criterium 1.2.5 | AA | [Audio Description (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-description-prerecorded) |
-| Guideline 1.3 | | [Adaptable](https://www.w3.org/TR/WCAG21/#adaptable) |
-| Success criterium 1.3.1 | A | [Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) |
-| Success criterium 1.3.2 | A | [Meaningful Sequence](https://www.w3.org/TR/WCAG21/#meaningful-sequence) |
-| Success criterium 1.3.3 | A | [Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics) |
-| Success criterium 1.3.4 | AA | [Orientation](https://www.w3.org/TR/WCAG21/#orientation) |
-| Success criterium 1.3.5 | AA | [Identify Input Purpose](https://www.w3.org/TR/WCAG21/#identify-input-purpose) |
-| Guideline 1.4 | | [Distinguishable](https://www.w3.org/TR/WCAG21/#distinguishable) |
-| Success criterium 1.4.1 | A | [Use of Color](https://www.w3.org/TR/WCAG21/#use-of-color) |
-| Success criterium 1.4.2 | A | [Audio Control](https://www.w3.org/TR/WCAG21/#audio-control) |
-| Success criterium 1.4.3 | AA | [Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) |
-| Success criterium 1.4.4 | AA | [Resize text](https://www.w3.org/TR/WCAG21/#resize-text) |
-| Success criterium 1.4.5 | AA | [Images of Text](https://www.w3.org/TR/WCAG21/#images-of-text) |
-| Success criterium 1.4.10 | AA | [Reflow](https://www.w3.org/TR/WCAG21/#reflow) |
-| Success criterium 1.4.11 | AA | [Non-text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) |
-| Success criterium 1.4.12 | AA | [Text Spacing](https://www.w3.org/TR/WCAG21/#text-spacing) |
-| Success criterium 1.4.13 | AA | [Content on Hover or Focus](https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus) |
-| Principle 2 | | [Operable](https://www.w3.org/TR/WCAG21/#operable) |
-| Guideline 2.1 | | [Keyboard Accessible](https://www.w3.org/TR/WCAG21/#keyboard-accessible) |
-| Success criterium 2.1.1 | A | [Keyboard](https://www.w3.org/TR/WCAG21/#keyboard) |
-| Success criterium 2.1.2 | A | [No Keyboard Trap](https://www.w3.org/TR/WCAG21/#no-keyboard-trap) |
-| Success criterium 2.1.4 | A | [Character Key Shortcuts](https://www.w3.org/TR/WCAG21/#character-key-shortcuts) |
-| Guideline 2.2 | | [Enough Time](https://www.w3.org/TR/WCAG21/#enough-time) |
-| Success criterium 2.2.1 | A | [Timing Adjustable](https://www.w3.org/TR/WCAG21/#timing-adjustable) |
-| Success criterium 2.2.2 | A | [Pause, Stop, Hide](https://www.w3.org/TR/WCAG21/#pause-stop-hide) |
-| Guideline 2.3 | | [Seizures and Physical Reactions](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions) |
-| Success criterium 2.3.1 | A | [Three Flashes or Below Threshold](https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold) |
-| Guideline 2.4 | | [Navigable](https://www.w3.org/TR/WCAG21/#navigable) |
-| Success criterium 2.4.1 | A | [Bypass Blocks](https://www.w3.org/TR/WCAG21/#bypass-blocks) |
-| Success criterium 2.4.2 | A | [Page Titled](https://www.w3.org/TR/WCAG21/#page-titled) |
-| Success criterium 2.4.3 | A | [Focus Order](https://www.w3.org/TR/WCAG21/#focus-order) |
-| Success criterium 2.4.4 | A | [Link Purpose (In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context) |
-| Success criterium 2.4.5 | AA | [Multiple Ways](https://www.w3.org/TR/WCAG21/#multiple-ways) |
-| Success criterium 2.4.6 | AA | [Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels) |
-| Success criterium 2.4.7 | AA | [Focus Visible](https://www.w3.org/TR/WCAG21/#focus-visible) |
-| Guideline 2.5 | | [Input Modalities](https://www.w3.org/TR/WCAG21/#input-modalities) |
-| Success criterium 2.5.1 | A | [Pointer Gestures](https://www.w3.org/TR/WCAG21/#pointer-gestures) |
-| Success criterium 2.5.2 | A | [Pointer Cancellation](https://www.w3.org/TR/WCAG21/#pointer-cancellation) |
-| Success criterium 2.5.3 | A | [Label in Name](https://www.w3.org/TR/WCAG21/#label-in-name) |
-| Success criterium 2.5.4 | A | [Motion Actuation](https://www.w3.org/TR/WCAG21/#motion-actuation) |
-| Principle 3 | | [Understandable](https://www.w3.org/TR/WCAG21/#understandable) |
-| Guideline 3.1 | | [Readable](https://www.w3.org/TR/WCAG21/#readable) |
-| Success criterium 3.1.1 | A | [Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page) |
-| Success criterium 3.1.2 | AA | [Language of Parts](https://www.w3.org/TR/WCAG21/#language-of-parts) |
-| Guideline 3.2 | | [Predictable](https://www.w3.org/TR/WCAG21/#predictable) |
-| Success criterium 3.2.1 | A | [On Focus](https://www.w3.org/TR/WCAG21/#on-focus) |
-| Success criterium 3.2.2 | A | [On Input](https://www.w3.org/TR/WCAG21/#on-input) |
-| Success criterium 3.2.3 | AA | [Consistent Navigation](https://www.w3.org/TR/WCAG21/#consistent-navigation) |
-| Success criterium 3.2.4 | AA | [Consistent Identification](https://www.w3.org/TR/WCAG21/#consistent-identification) |
-| Guideline 3.3 | | [Input Assistance](https://www.w3.org/TR/WCAG21/#input-assistance) |
-| Success criterium 3.3.1 | A | [Error Identification](https://www.w3.org/TR/WCAG21/#error-identification) |
-| Success criterium 3.3.2 | A | [Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) |
-| Success criterium 3.3.3 | AA | [Error Suggestion](https://www.w3.org/TR/WCAG21/#error-suggestion) |
-| Success criterium 3.3.4 | AA | [Error Prevention (Legal, Financial, Data)](https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data) |
-| Principle 4 | | [Robust](https://www.w3.org/TR/WCAG21/#robust) |
-| Guideline 4.1 | | [Compatible](https://www.w3.org/TR/WCAG21/#compatible) |
-| Success criterium 4.1.1 | A | [Parsing](https://www.w3.org/TR/WCAG21/#parsing) |
-| Success criterium 4.1.2 | A | [Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value) |
-| Success criterium 4.1.3 | AA | [Status Messages](https://www.w3.org/TR/WCAG21/#status-messages) |
+| Item | Omschrijving | Niveau | Axe-core 4.2.0 regels |
+| :--- | :--- | :--- | :--- |
+| Principe 1 | [Perceivable](https://www.w3.org/TR/WCAG21/#perceivable) | | |
+| Richtlijn 1.1 | [Text Alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives) | | |
+| Succes criterium 1.1.1 | [Non-text Content](https://www.w3.org/TR/WCAG21/#non-text-content) | A | [area-alt](https://dequeuniversity.com/rules/axe/4.2/area-alt?application=axeAPI), [aria-meter-name](https://dequeuniversity.com/rules/axe/4.2/aria-meter-name?application=axeAPI), [aria-progressbar-name](https://dequeuniversity.com/rules/axe/4.2/aria-progressbar-name?application=axeAPI), [image-alt](https://dequeuniversity.com/rules/axe/4.2/image-alt?application=axeAPI), [input-image-alt](https://dequeuniversity.com/rules/axe/4.2/input-image-alt?application=axeAPI), [object-alt](https://dequeuniversity.com/rules/axe/4.2/object-alt?application=axeAPI), [role-img-alt](https://dequeuniversity.com/rules/axe/4.2/role-img-alt?application=axeAPI), [svg-img-alt](https://dequeuniversity.com/rules/axe/4.2/svg-img-alt?application=axeAPI) |
+| Richtlijn 1.2 | [Time-based Media](https://www.w3.org/TR/WCAG21/#time-based-media) | | |
+| Succes criterium 1.2.1 | [Audio-only and Video-only (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded) | A | [audio-caption](https://dequeuniversity.com/rules/axe/4.2/audio-caption?application=axeAPI) |
+| Succes criterium 1.2.2 | [Captions (Prerecorded)](https://www.w3.org/TR/WCAG21/#captions-prerecorded) | A | [video-caption](https://dequeuniversity.com/rules/axe/4.2/video-caption?application=axeAPI) |
+| Succes criterium 1.2.3 | [Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded) | A | geen |
+| Succes criterium 1.2.4 | [Captions (Live)](https://www.w3.org/TR/WCAG21/#captions-live) | AA | geen |
+| Succes criterium 1.2.5 | [Audio Description (Prerecorded)](https://www.w3.org/TR/WCAG21/#audio-description-prerecorded) | AA | geen |
+| Richtlijn 1.3 | [Adaptable](https://www.w3.org/TR/WCAG21/#adaptable) | | |
+| Succes criterium 1.3.1 | [Info and Relationships](https://www.w3.org/TR/WCAG21/#info-and-relationships) | A | [aria-hidden-focus](https://dequeuniversity.com/rules/axe/4.2/aria-hidden-focus?application=axeAPI), [aria-required-children](https://dequeuniversity.com/rules/axe/4.2/aria-required-children?application=axeAPI), [aria-required-parent](https://dequeuniversity.com/rules/axe/4.2/aria-required-parent?application=axeAPI), [definition-list](https://dequeuniversity.com/rules/axe/4.2/definition-list?application=axeAPI), [dlitem](https://dequeuniversity.com/rules/axe/4.2/dlitem?application=axeAPI), [empty-table-header](https://dequeuniversity.com/rules/axe/4.2/empty-table-header?application=axeAPI), [label](https://dequeuniversity.com/rules/axe/4.2/label?application=axeAPI), [list](https://dequeuniversity.com/rules/axe/4.2/list?application=axeAPI), [listitem](https://dequeuniversity.com/rules/axe/4.2/listitem?application=axeAPI), [p-as-heading](https://dequeuniversity.com/rules/axe/4.2/p-as-heading?application=axeAPI), [select-name](https://dequeuniversity.com/rules/axe/4.2/select-name?application=axeAPI), [table-fake-caption](https://dequeuniversity.com/rules/axe/4.2/table-fake-caption?application=axeAPI), [td-has-header](https://dequeuniversity.com/rules/axe/4.2/td-has-header?application=axeAPI), [td-headers-attr](https://dequeuniversity.com/rules/axe/4.2/td-headers-attr?application=axeAPI), [th-has-data-cells](https://dequeuniversity.com/rules/axe/4.2/th-has-data-cells?application=axeAPI) |
+| Succes criterium 1.3.2 | [Meaningful Sequence](https://www.w3.org/TR/WCAG21/#meaningful-sequence) | A | geen |
+| Succes criterium 1.3.3 | [Sensory Characteristics](https://www.w3.org/TR/WCAG21/#sensory-characteristics) | A | geen |
+| Succes criterium 1.3.4 | [Orientation](https://www.w3.org/TR/WCAG21/#orientation) | AA | [css-orientation-lock](https://dequeuniversity.com/rules/axe/4.2/css-orientation-lock?application=axeAPI) |
+| Succes criterium 1.3.5 | [Identify Input Purpose](https://www.w3.org/TR/WCAG21/#identify-input-purpose) | AA | [autocomplete-valid](https://dequeuniversity.com/rules/axe/4.2/autocomplete-valid?application=axeAPI) |
+| Richtlijn 1.4 | [Distinguishable](https://www.w3.org/TR/WCAG21/#distinguishable) | | |
+| Succes criterium 1.4.1 | [Use of Color](https://www.w3.org/TR/WCAG21/#use-of-color) | A | [link-in-text-block](https://dequeuniversity.com/rules/axe/4.2/link-in-text-block?application=axeAPI) |
+| Succes criterium 1.4.2 | [Audio Control](https://www.w3.org/TR/WCAG21/#audio-control) | A | [no-autoplay-audio](https://dequeuniversity.com/rules/axe/4.2/no-autoplay-audio?application=axeAPI) |
+| Succes criterium 1.4.3 | [Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum) | AA | [color-contrast](https://dequeuniversity.com/rules/axe/4.2/color-contrast?application=axeAPI) |
+| Succes criterium 1.4.4 | [Resize text](https://www.w3.org/TR/WCAG21/#resize-text) | AA | geen |
+| Succes criterium 1.4.5 | [Images of Text](https://www.w3.org/TR/WCAG21/#images-of-text) | AA | geen |
+| Succes criterium 1.4.10 | [Reflow](https://www.w3.org/TR/WCAG21/#reflow) | AA | geen |
+| Succes criterium 1.4.11 | [Non-text Contrast](https://www.w3.org/TR/WCAG21/#non-text-contrast) | AA | geen |
+| Succes criterium 1.4.12 | [Text Spacing](https://www.w3.org/TR/WCAG21/#text-spacing) | AA | [avoid-inline-spacing](https://dequeuniversity.com/rules/axe/4.2/avoid-inline-spacing?application=axeAPI) |
+| Succes criterium 1.4.13 | [Content on Hover or Focus](https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus) | AA | geen |
+| Principe 2 | [Operable](https://www.w3.org/TR/WCAG21/#operable) | | |
+| Richtlijn 2.1 | [Keyboard Accessible](https://www.w3.org/TR/WCAG21/#keyboard-accessible) | | |
+| Succes criterium 2.1.1 | [Keyboard](https://www.w3.org/TR/WCAG21/#keyboard) | A | [frame-focusable-content](https://dequeuniversity.com/rules/axe/4.2/frame-focusable-content?application=axeAPI), [scrollable-region-focusable](https://dequeuniversity.com/rules/axe/4.2/scrollable-region-focusable?application=axeAPI), [server-side-image-map](https://dequeuniversity.com/rules/axe/4.2/server-side-image-map?application=axeAPI) |
+| Succes criterium 2.1.2 | [No Keyboard Trap](https://www.w3.org/TR/WCAG21/#no-keyboard-trap) | A | geen |
+| Succes criterium 2.1.4 | [Character Key Shortcuts](https://www.w3.org/TR/WCAG21/#character-key-shortcuts) | A | geen |
+| Richtlijn 2.2 | [Enough Time](https://www.w3.org/TR/WCAG21/#enough-time) | | |
+| Succes criterium 2.2.1 | [Timing Adjustable](https://www.w3.org/TR/WCAG21/#timing-adjustable) | A | [meta-refresh](https://dequeuniversity.com/rules/axe/4.2/meta-refresh?application=axeAPI) |
+| Succes criterium 2.2.2 | [Pause, Stop, Hide](https://www.w3.org/TR/WCAG21/#pause-stop-hide) | A | [blink](https://dequeuniversity.com/rules/axe/4.2/blink?application=axeAPI), [marquee](https://dequeuniversity.com/rules/axe/4.2/marquee?application=axeAPI) |
+| Richtlijn 2.3 | [Seizures and Physical Reactions](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions) | | |
+| Succes criterium 2.3.1 | [Three Flashes or Below Threshold](https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold) | A | geen |
+| Richtlijn 2.4 | [Navigable](https://www.w3.org/TR/WCAG21/#navigable) | | |
+| Succes criterium 2.4.1 | [Bypass Blocks](https://www.w3.org/TR/WCAG21/#bypass-blocks) | A | [bypass](https://dequeuniversity.com/rules/axe/4.2/bypass?application=axeAPI), [frame-title](https://dequeuniversity.com/rules/axe/4.2/frame-title?application=axeAPI) |
+| Succes criterium 2.4.2 | [Page Titled](https://www.w3.org/TR/WCAG21/#page-titled) | A | [document-title](https://dequeuniversity.com/rules/axe/4.2/document-title?application=axeAPI) |
+| Succes criterium 2.4.3 | [Focus Order](https://www.w3.org/TR/WCAG21/#focus-order) | A | geen |
+| Succes criterium 2.4.4 | [Link Purpose (In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context) | A | [area-alt](https://dequeuniversity.com/rules/axe/4.2/area-alt?application=axeAPI), [link-name](https://dequeuniversity.com/rules/axe/4.2/link-name?application=axeAPI) |
+| Succes criterium 2.4.5 | [Multiple Ways](https://www.w3.org/TR/WCAG21/#multiple-ways) | AA | geen |
+| Succes criterium 2.4.6 | [Headings and Labels](https://www.w3.org/TR/WCAG21/#headings-and-labels) | AA | geen |
+| Succes criterium 2.4.7 | [Focus Visible](https://www.w3.org/TR/WCAG21/#focus-visible) | AA | geen |
+| Richtlijn 2.5 | [Input Modalities](https://www.w3.org/TR/WCAG21/#input-modalities) | | |
+| Succes criterium 2.5.1 | [Pointer Gestures](https://www.w3.org/TR/WCAG21/#pointer-gestures) | A | geen |
+| Succes criterium 2.5.2 | [Pointer Cancellation](https://www.w3.org/TR/WCAG21/#pointer-cancellation) | A | geen |
+| Succes criterium 2.5.3 | [Label in Name](https://www.w3.org/TR/WCAG21/#label-in-name) | A | [label-content-name-mismatch](https://dequeuniversity.com/rules/axe/4.2/label-content-name-mismatch?application=axeAPI) |
+| Succes criterium 2.5.4 | [Motion Actuation](https://www.w3.org/TR/WCAG21/#motion-actuation) | A | geen |
+| Principe 3 | [Understandable](https://www.w3.org/TR/WCAG21/#understandable) | | |
+| Richtlijn 3.1 | [Readable](https://www.w3.org/TR/WCAG21/#readable) | | |
+| Succes criterium 3.1.1 | [Language of Page](https://www.w3.org/TR/WCAG21/#language-of-page) | A | [html-has-lang](https://dequeuniversity.com/rules/axe/4.2/html-has-lang?application=axeAPI), [html-lang-valid](https://dequeuniversity.com/rules/axe/4.2/html-lang-valid?application=axeAPI), [html-xml-lang-mismatch](https://dequeuniversity.com/rules/axe/4.2/html-xml-lang-mismatch?application=axeAPI) |
+| Succes criterium 3.1.2 | [Language of Parts](https://www.w3.org/TR/WCAG21/#language-of-parts) | AA | [valid-lang](https://dequeuniversity.com/rules/axe/4.2/valid-lang?application=axeAPI) |
+| Richtlijn 3.2 | [Predictable](https://www.w3.org/TR/WCAG21/#predictable) | | |
+| Succes criterium 3.2.1 | [On Focus](https://www.w3.org/TR/WCAG21/#on-focus) | A | geen |
+| Succes criterium 3.2.2 | [On Input](https://www.w3.org/TR/WCAG21/#on-input) | A | geen |
+| Succes criterium 3.2.3 | [Consistent Navigation](https://www.w3.org/TR/WCAG21/#consistent-navigation) | AA | geen |
+| Succes criterium 3.2.4 | [Consistent Identification](https://www.w3.org/TR/WCAG21/#consistent-identification) | AA | geen |
+| Richtlijn 3.3 | [Input Assistance](https://www.w3.org/TR/WCAG21/#input-assistance) | | |
+| Succes criterium 3.3.1 | [Error Identification](https://www.w3.org/TR/WCAG21/#error-identification) | A | geen |
+| Succes criterium 3.3.2 | [Labels or Instructions](https://www.w3.org/TR/WCAG21/#labels-or-instructions) | A | [form-field-multiple-labels](https://dequeuniversity.com/rules/axe/4.2/form-field-multiple-labels?application=axeAPI) |
+| Succes criterium 3.3.3 | [Error Suggestion](https://www.w3.org/TR/WCAG21/#error-suggestion) | AA | geen |
+| Succes criterium 3.3.4 | [Error Prevention (Legal, Financial, Data)](https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data) | AA | geen |
+| Principe 4 | [Robust](https://www.w3.org/TR/WCAG21/#robust) | | |
+| Richtlijn 4.1 | [Compatible](https://www.w3.org/TR/WCAG21/#compatible) | | |
+| Succes criterium 4.1.1 | [Parsing](https://www.w3.org/TR/WCAG21/#parsing) | A | [duplicate-id-active](https://dequeuniversity.com/rules/axe/4.2/duplicate-id-active?application=axeAPI), [duplicate-id-aria](https://dequeuniversity.com/rules/axe/4.2/duplicate-id-aria?application=axeAPI), [duplicate-id](https://dequeuniversity.com/rules/axe/4.2/duplicate-id?application=axeAPI) |
+| Succes criterium 4.1.2 | [Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value) | A | [area-alt](https://dequeuniversity.com/rules/axe/4.2/area-alt?application=axeAPI), [aria-allowed-attr](https://dequeuniversity.com/rules/axe/4.2/aria-allowed-attr?application=axeAPI), [aria-command-name](https://dequeuniversity.com/rules/axe/4.2/aria-command-name?application=axeAPI), [aria-hidden-body](https://dequeuniversity.com/rules/axe/4.2/aria-hidden-body?application=axeAPI), [aria-hidden-focus](https://dequeuniversity.com/rules/axe/4.2/aria-hidden-focus?application=axeAPI), [aria-input-field-name](https://dequeuniversity.com/rules/axe/4.2/aria-input-field-name?application=axeAPI), [aria-required-attr](https://dequeuniversity.com/rules/axe/4.2/aria-required-attr?application=axeAPI), [aria-roledescription](https://dequeuniversity.com/rules/axe/4.2/aria-roledescription?application=axeAPI), [aria-roles](https://dequeuniversity.com/rules/axe/4.2/aria-roles?application=axeAPI), [aria-toggle-field-name](https://dequeuniversity.com/rules/axe/4.2/aria-toggle-field-name?application=axeAPI), [aria-tooltip-name](https://dequeuniversity.com/rules/axe/4.2/aria-tooltip-name?application=axeAPI), [aria-valid-attr-value](https://dequeuniversity.com/rules/axe/4.2/aria-valid-attr-value?application=axeAPI), [aria-valid-attr](https://dequeuniversity.com/rules/axe/4.2/aria-valid-attr?application=axeAPI), [button-name](https://dequeuniversity.com/rules/axe/4.2/button-name?application=axeAPI), [frame-title](https://dequeuniversity.com/rules/axe/4.2/frame-title?application=axeAPI), [input-button-name](https://dequeuniversity.com/rules/axe/4.2/input-button-name?application=axeAPI), [label](https://dequeuniversity.com/rules/axe/4.2/label?application=axeAPI), [link-name](https://dequeuniversity.com/rules/axe/4.2/link-name?application=axeAPI), [nested-interactive](https://dequeuniversity.com/rules/axe/4.2/nested-interactive?application=axeAPI), [select-name](https://dequeuniversity.com/rules/axe/4.2/select-name?application=axeAPI) |
+| Succes criterium 4.1.3 | [Status Messages](https://www.w3.org/TR/WCAG21/#status-messages) | AA | geen |

@@ -28,7 +28,7 @@
 
 #### Template Niet-Functionele Eisen
 
-* Tabel met de WCAG 2.1 succescriteria, niveau A en AA, toegevoegd.
+* Tabel met de WCAG 2.1 succescriteria, niveau A en AA, toegevoegd. Per succescriterium geeft de tabel aan of Axe-core, en zo ja met welke regels, het succescriterium geautomatiseerd kan controleren.
 
 #### Template Kwaliteitsplan
 

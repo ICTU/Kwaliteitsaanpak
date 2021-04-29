@@ -100,10 +100,14 @@ De mate waarin het systeem gebruikt kan worden door mensen met de meest uiteenlo
 
 Als standaard voor toegankelijkheid hanteert de Nederlandse overheid, en dus ICTU, de WCAG 2.1 (Web Content Accessibility Guidelines); zie [https://www.w3.org/TR/WCAG21/](https://www.w3.org/TR/WCAG21/) (Engels) en [https://www.w3.org/Translations/WCAG21-nl/](https://www.w3.org/Translations/WCAG21-nl/) (Nederlands). Conform de EN 301 549, hanteert ICTU de succescriteria voor Level A en AA als eisen.
 
-| Nr.  | Eis                                                                                     | Prio   | Rationale               | Bewijs   |
-|:-----|:----------------------------------------------------------------------------------------|:-------|:------------------------|:---------|
-| 1    | Waar van toepassing voldoet de applicatie aan de richtlijnen uit WCAG2.1, Level A en AA | {prio} | Wettelijke verplichting | {bewijs} |
-| {nr} | {eis}                                                                                   | {prio} | {rationale}             | {bewijs} |
+| Nr.  | Eis                                                                                        | Prio   | Rationale               | Bewijs   |
+|:-----|:-------------------------------------------------------------------------------------------|:-------|:------------------------|:---------|
+| 1    | Waar van toepassing voldoet de applicatie aan de succescriteria uit WCAG2.1, Level A en AA | {prio} | Wettelijke verplichting | {bewijs} |
+
+
+Onderstaande tabel bevat de WCAG2.1 Level A en AA-succescriteria.
+
+#include "Content/Templates/NFE/WCAG-Tabel-Gegenereerd.md"
 
 # Betrouwbaarheid
 

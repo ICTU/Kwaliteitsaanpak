@@ -1,4 +1,4 @@
-# Ignore everything except the Fonts, needed for the wkhtml image, and dependencies, needed for the ka image.
+# Ignore everything except the fonts, needed for the wkhtml image, and dependencies, needed for the ka image.
 *
-!Fonts
+!thirdparty/fonts
 !requirements.txt

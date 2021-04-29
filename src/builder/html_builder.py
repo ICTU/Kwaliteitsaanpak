@@ -89,8 +89,8 @@ class HTMLBuilder(Builder):
                     html_tags.STYLE: "max-width: 100%",
                     html_tags.IMAGE_ALT: attributes.get("alt", ""),
                     html_tags.IMAGE_SOURCE: attributes["src"],
-                    html_tags.TITLE: attributes["title"]
-                }
+                    html_tags.TITLE: attributes["title"],
+                },
             )
             self.builder.end(html_tags.IMAGE)
         elif tag == xmltags.MEASURE:

@@ -87,7 +87,7 @@ class DocxBuilder(Builder):
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
         elif tag == xmltags.IMAGE:
-            self.doc.add_picture(attributes["src"][len("/work/"):])
+            self.doc.add_picture(attributes["src"][len("/work/") :])
 
     def _add_list_item(self) -> None:
         """Add a list item."""

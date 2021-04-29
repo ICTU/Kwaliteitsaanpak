@@ -178,7 +178,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         self.checklist.freeze_panes(self.MEASURE_START_ROW, self.STATUS_COLUMN)
 
     def __write_assessment_choices(self) -> None:
-        """ Write the assessment choices, colors and data validation in the status column. """
+        """Write the assessment choices, colors and data validation in the status column."""
         assessment_choices = ["voldoet", "voldoet deels", "voldoet niet", "niet van toepassing"]
         for choice in assessment_choices:
             self.checklist.conditional_format(
@@ -197,7 +197,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         )
 
     def __create_action_list(self) -> None:
-        """ Create a worksheet with room for actions from the self-assessment. """
+        """Create a worksheet with room for actions from the self-assessment."""
         action_list = self.workbook.add_worksheet("Self-assessment verbeteracties")
         action_list.merge_range(
             "A1:D1",

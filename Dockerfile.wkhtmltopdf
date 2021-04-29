@@ -9,7 +9,7 @@ RUN wget --quiet https://github.com/wkhtmltopdf/packaging/releases/download/0.12
     && dpkg -i wkhtmltox_0.12.6-1.buster_${ARCH}.deb \
     && rm -f wkhtmltox_0.12.6-1.buster_${ARCH}.deb
 
-ADD ./Fonts/muli /usr/share/fonts/truetype/muli
+ADD ./thirdparty/fonts/muli /usr/share/fonts/truetype/muli
 RUN fc-cache -fv
 
 ENTRYPOINT ["/bin/bash"]

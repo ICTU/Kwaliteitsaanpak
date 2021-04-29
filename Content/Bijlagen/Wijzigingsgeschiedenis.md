@@ -25,6 +25,10 @@
 * Template aangepast naar het gebruik van use cases om de functionaliteit te beschrijven.
 * Kaders die niet relevant waren voor een GFO verwijderd.
 
+#### Template Niet-Functionele Eisen
+
+* Tabel met de WCAG 2.1 succescriteria, niveau A en AA, toegevoegd.
+
 #### Template Kwaliteitsplan
 
 * Het kwaliteitsplantemplate sprak van een verantwoordingsparagraaf in alle documenten, maar deze paragraaf zat niet in de andere templates. Deze verantwoordingsparagrafen waren bedoeld om de eisen traceerbaar te maken. Omdat niet alle projecten dit nodig hebben, en er andere manieren in gebruik zijn om eisen traceerbaar te maken (bijvoorbeeld een losse administratie in Confluence) is de tekst over verantwoordingsparagrafen vervangen door een optionele paragraaf over tracering van eisen die nader kan worden ingevuld.

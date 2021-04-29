@@ -1,7 +1,5 @@
 #include "Content/Inleiding.md"
 
-#include "Content/Manifest.md"
-
 #include "Content/Doelstellingen.md"
 
 #include "Content/Begrippenkader.md"
@@ -65,8 +63,6 @@
 #include "Content/Maatregelen/M12/Maatregel.md"
 
 # Bijlagen
-
-#include "Content/Bijlagen/Manifest-Maatregelen.md"
 
 #include "Content/Bijlagen/Terminologie.md"
 

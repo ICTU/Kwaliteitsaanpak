@@ -5,6 +5,7 @@
 #### Kwaliteitsaanpak
 
 * Verwijzingen naar BIRT en de Releasemanager verwijderd uit de maatregel "Het project gebruikt tools voor vastgestelde taken" (M16) omdat deze tools niet meer ondersteund worden.
+* Manifest verwijderd omdat de inhoud grotendeels terugkomt op andere plekken in de Kwaliteitsaanpak.
 
 #### Samenvatting Kwaliteitsaanpak
 

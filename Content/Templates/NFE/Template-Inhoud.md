@@ -98,14 +98,13 @@ De mate waarin een gebruikersinterface het de gebruiker mogelijk maakt om een pl
 
 De mate waarin het systeem gebruikt kan worden door mensen met de meest uiteenlopende eigenschappen en mogelijkheden om een gespecificeerd doel te bereiken in een gespecificeerde gebruikscontext.
 
-Als standaard voor toegankelijkheid hanteert de Nederlandse overheid, en dus ICTU, de WCAG 2.1 (Web Content Accessibility Guidelines); zie [https://www.w3.org/TR/WCAG21/](https://www.w3.org/TR/WCAG21/) (Engels) en [https://www.w3.org/Translations/WCAG21-nl/](https://www.w3.org/Translations/WCAG21-nl/) (Nederlands). Conform de EN 301 549, hanteert ICTU de succescriteria voor Level A en AA als eisen.
+Als standaard voor toegankelijkheid hanteert de Nederlandse overheid, en dus ICTU, de WCAG 2.1 (Web Content Accessibility Guidelines); zie [https://www.w3.org/TR/WCAG21/](https://www.w3.org/TR/WCAG21/) (Engels) en [https://www.w3.org/Translations/WCAG21-nl/](https://www.w3.org/Translations/WCAG21-nl/) (Nederlands). Conform de EN 301 549, hanteert ICTU de succescriteria voor niveau A en AA als eisen.
 
-| Nr.  | Eis                                                                                        | Prio   | Rationale               | Bewijs   |
-|:-----|:-------------------------------------------------------------------------------------------|:-------|:------------------------|:---------|
-| 1    | Waar van toepassing voldoet de applicatie aan de succescriteria uit WCAG2.1, Level A en AA | {prio} | Wettelijke verplichting | {bewijs} |
+| Nr.  | Eis                                                                 | Prio   | Rationale               | Bewijs              |
+|:-----|:--------------------------------------------------------------------|:-------|:------------------------|:--------------------|
+| 1    | De applicatie voldoet aan de WCAG2.1 succescriteria, niveau A en AA | {prio} | Wettelijke verplichting | Axe-core rapportage |
 
-
-Onderstaande tabel bevat de WCAG2.1 Level A en AA-succescriteria.
+Onderstaande tabel bevat de WCAG2.1 niveau A en AA-succescriteria. Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren. {Geef aan of de succescriteria die Axe-core niet geautomatiseerd kan controleren wel of niet met de hand zullen worden gecontroleerd.}
 
 #include "Content/Templates/NFE/WCAG-Tabel-Gegenereerd.md"
 

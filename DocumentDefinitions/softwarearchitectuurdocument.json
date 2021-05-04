@@ -3,7 +3,7 @@
     "BuildPath": "build/Templates/SAD/",
     "OutputPath": "dist",
     "Title": "Software-architectuurdocument",
-    "Subtitle": "{Productnaam}",
+    "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "TemplateFolder": "SAD",
     "IncludeFrontPage": true,

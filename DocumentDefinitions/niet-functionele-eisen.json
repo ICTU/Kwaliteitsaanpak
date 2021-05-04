@@ -3,7 +3,7 @@
     "BuildPath": "build/Templates/NFE/",
     "OutputPath": "dist",
     "Title": "Niet-Functionele Eisen",
-    "Subtitle": "{Productnaam}",
+    "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "TemplateFolder": "NFE",
     "IncludeFrontPage": true,

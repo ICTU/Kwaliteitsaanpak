@@ -3,7 +3,7 @@
     "BuildPath": "build/Templates/GFO/",
     "OutputPath": "dist",
     "Title": "Globaal Functioneel Ontwerp",
-    "Subtitle": "{Productnaam}",
+    "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "TemplateFolder": "GFO",
     "IncludeFrontPage": true,

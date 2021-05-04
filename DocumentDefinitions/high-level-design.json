@@ -3,7 +3,7 @@
     "BuildPath": "build/Templates/HLD/",
     "OutputPath": "dist",
     "Title": "High-Level Design",
-    "Subtitle": "{Productnaam}",
+    "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "TemplateFolder": "HLD",
     "IncludeFrontPage": true,

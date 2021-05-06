@@ -1,18 +1,30 @@
+# Context
+
+Dit hoofdstuk beschrijft de context waarin {de applicatie} zal opereren aan de hand van de organisaties en mensen die {de applicatie} gebruiken, de processen die de applicatie ondersteunt en het applicatielandschap waarbinnen {de applicatie} functioneert.
+
+## Betrokken organisaties en gebruikers
+
+{Beschrijf kort de organisatie(s) en/of (groepen van) mensen die de applicatie gebruiken. Als de applicatie primair door andere systemen wordt gebruikt, beschrijf die dan ook.}
+
+## Ondersteunde processen
+
+{Beschrijf de (bedrijfs)processen die de applicatie ondersteunt. Overweeg daarvoor business- of proces use cases te gebruiken.}
+
+## Applicatielandschap
+
+{Beschrijf het applicatielandschap waarin de applicatie gaat functioneren. Geef daarbij een schematische voorstelling van de applicatie in het applicatielandschap, inclusief koppelingen met aanpalende systemen zoals basisregistraties.}
+
 # Werking op hoofdlijnen
 
-Dit hoofdstuk beschrijft de werking van {de applicatie} op hoofdlijnen. Het beschrijft de context waarin de applicatie zal opereren, de functionele werking op hoofdlijnen, generieke functies die het systeem biedt, de belangrijkste informatie die het systeem bevat, en de klantreizen.
+Dit hoofdstuk beschrijft de werking van {de applicatie} op hoofdlijnen. Het beschrijft de hoofdfuncties die het systeem biedt, de ondersteunende functies, de belangrijkste informatie die het systeem bevat, en de klantreizen.
 
-## Context
+## Hoofdfuncties
 
-{Beschrijf de omgeving en het landschap waarin de applicatie gaat functioneren. Geef een schematische voorstelling van de applicatie in het applicatielandschap van de opdrachtgever, inclusief koppelingen met aanpalende systemen zoals basisregistraties.}
+{Beschrijf de functionele werking van de applicatie op hoofdlijnen en geef per functie de belangrijke actoren weer. Maak onderscheid tussen menselijke actoren en systeemactoren. Gebruik de hier beschreven functies als basis voor de paragraafindeling in hoofdstuk 3.}
 
-## Specifieke functies
+## Ondersteunende functies
 
-{Beschrijf de functionele werking van de applicatie op hoofdlijnen en geef de belangrijkste actoren weer. Maak onderscheid tussen menselijke actoren en systeemactoren. Gebruik de hier beschreven functies als basis voor de paragraafindeling in hoofdstuk 3.}
-
-## Generieke functies
-
-{Beschrijf generieke functies die in meerdere use cases terugkomen. Denk aan functies voor authenticatie en autorisatie, gegevensvalidatie, notificaties en logging.}
+{Beschrijf de belangrijke ondersteunende functies die in meerdere (hoofd)functies terugkomen. Denk aan functies voor authenticatie en autorisatie, gegevensvalidatie, notificaties en logging. Gebruik onder andere de niet-functionele eisen om te bepalen welke ondersteunende functies belangrijk zijn om te beschrijven.}
 
 ## Gegevensverzamelingen
 
@@ -20,7 +32,7 @@ Dit hoofdstuk beschrijft de werking van {de applicatie} op hoofdlijnen. Het besc
 
 ## Klantreizen
 
-{Beschrijf aan de hand van persona's hoe gebruikers bij de applicatie uitkomen, hoe ze door het systeem reizen, en wat ze na interactie met het de applicatie doen. Overweeg een los hoofdstuk met de klantreizen als deze omvangrijk zijn.}
+{Beschrijf aan de hand van persona's hoe de gebruikers (menselijke actoren) bij de applicatie uitkomen, hoe ze door het systeem reizen, en wat ze na interactie met het de applicatie doen. Overweeg een los hoofdstuk met de klantreizen als deze omvangrijk zijn. Laat deze paragraaf weg als de belangrijkste actoren andere systemen zijn.}
 
 # Use cases
 

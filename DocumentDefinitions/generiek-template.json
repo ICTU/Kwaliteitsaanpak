@@ -8,10 +8,10 @@
     "TemplateFolder": "Template",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
-    "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Generiek.docx"
+            "OutputFile": "Template-Generiek.docx",
+            "ReferenceFile": "DocumentDefinitions/reference.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

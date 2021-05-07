@@ -8,10 +8,10 @@
     "TemplateFolder": "HLD",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
-    "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-High-Level-Design.docx"
+            "OutputFile": "Template-High-Level-Design.docx",
+            "ReferenceFile": "DocumentDefinitions/reference.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

@@ -8,10 +8,10 @@
     "TemplateFolder": "PvA-Realisatiefase",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
-    "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Plan-van-Aanpak-Realisatiefase.docx"
+            "OutputFile": "Template-Plan-van-Aanpak-Realisatiefase.docx",
+            "ReferenceFile": "DocumentDefinitions/reference.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

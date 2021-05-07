@@ -8,10 +8,10 @@
     "TemplateFolder": "GFO",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
-    "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Globaal-Functioneel-Ontwerp.docx"
+            "OutputFile": "Template-Globaal-Functioneel-Ontwerp.docx",
+            "ReferenceFile": "DocumentDefinitions/reference.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

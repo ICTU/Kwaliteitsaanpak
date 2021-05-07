@@ -91,7 +91,7 @@ def convert_pdf(
 def convert_docx(converter, output_path: pathlib.Path, settings: Settings) -> None:
     """Convert the xml to docx."""
     docx_output_filename = output_path / settings["OutputFormats"]["docx"]["OutputFile"]
-    docx_builder = DocxBuilder(docx_output_filename, pathlib.Path(settings["DocxReferenceFile"]))
+    docx_builder = DocxBuilder(docx_output_filename, pathlib.Path(settings["OutputFormats"]["docx"]["ReferenceFile"]))
     converter.convert(docx_builder)
 
 

@@ -8,10 +8,10 @@
     "TemplateFolder": "NFE",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
-    "DocxReferenceFile": "DocumentDefinitions/reference.docx",
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Niet-Functionele-Eisen.docx"
+            "OutputFile": "Template-Niet-Functionele-Eisen.docx",
+            "ReferenceFile": "DocumentDefinitions/reference.docx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

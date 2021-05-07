@@ -104,7 +104,7 @@ Als standaard voor toegankelijkheid hanteert de Nederlandse overheid, en dus ICT
 |:-----|:--------------------------------------------------------------------|:-------|:------------------------|:--------------------|
 | 1    | De applicatie voldoet aan de WCAG2.1 succescriteria, niveau A en AA | {prio} | Wettelijke verplichting | Axe-core rapportage |
 
-Onderstaande tabel bevat de WCAG2.1 niveau A en AA-succescriteria. Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren. {Geef aan of de succescriteria die Axe-core niet geautomatiseerd kan controleren wel of niet met de hand zullen worden gecontroleerd.}
+Onderstaande tabel bevat de WCAG2.1 succescriteria. {Verwijder de AAA-succescriteria indien gewenst.} Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren. {Geef aan of de succescriteria die Axe-core niet geautomatiseerd kan controleren wel of niet met de hand zullen worden gecontroleerd.}
 
 #include "Content/Templates/NFE/WCAG-Tabel-Gegenereerd.md"
 

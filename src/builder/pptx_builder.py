@@ -37,12 +37,15 @@ class PptxBuilder(Builder):
             title_placeholder.text_frame.paragraphs[0].font.size = Pt(60)
         elif tag == xmltags.PARAGRAPH and self.in_element(xmltags.FRONTPAGE):
             self.current_slide.shapes[1].text = text
-        elif self.in_element(xmltags.MEASURE) and tag == xmltags.BOLD and not self.in_appendix():
-            slide_layout = self.presentation.slide_layouts[self.MEASURE_SLIDE]
-            self.current_slide = self.presentation.slides.add_slide(slide_layout)
-            title = self.current_slide.shapes.title
-            title.text = text
-            title.text_frame.paragraphs[0].font.size = Pt(24)
+        elif self.in_element(xmltags.MEASURE) and not self.in_appendix():
+            if tag == xmltags.BOLD:
+                slide_layout = self.presentation.slide_layouts[self.MEASURE_SLIDE]
+                self.current_slide = self.presentation.slides.add_slide(slide_layout)
+                title = self.current_slide.shapes.title
+                title.text = text
+                title.text_frame.paragraphs[0].font.size = Pt(24)
+            else:
+                self.current_slide.shapes[1].text = text
 
     def in_appendix(self) -> bool:
         """Return whether the current section is an appendix."""

@@ -100,7 +100,7 @@ def convert_docx(converter, output_path: pathlib.Path, settings: Settings) -> No
 def convert_pptx(converter, output_path, settings: Settings) -> None:
     """Convert the xml to pptx."""
     pptx_output_filename = output_path / settings["OutputFormats"]["pptx"]["OutputFile"]
-    pptx_builder = PptxBuilder(pptx_output_filename)
+    pptx_builder = PptxBuilder(pptx_output_filename, pathlib.Path(settings["OutputFormats"]["pptx"]["ReferenceFile"]))
     converter.convert(pptx_builder)
 
 

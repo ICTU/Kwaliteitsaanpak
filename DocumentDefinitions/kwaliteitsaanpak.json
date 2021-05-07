@@ -12,6 +12,9 @@
         },
         "xlsx": {
             "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx"
+        },
+        "pptx": {
+            "OutputFile": "ICTU-Kwaliteitsaanpak.pptx"
         }
     },
     "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]

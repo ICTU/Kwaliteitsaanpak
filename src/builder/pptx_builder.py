@@ -16,6 +16,7 @@ class PptxBuilder(Builder):
 
     # Slide layouts. These are specific for the reference file
     TITLE_SLIDE = 0
+    MEASURE_SLIDE = 2
 
     def __init__(self, filename: pathlib.Path, pptx_reference_filename: pathlib.Path) -> None:
         super().__init__(filename)
@@ -33,7 +34,13 @@ class PptxBuilder(Builder):
             title_placeholder.text_frame.paragraphs[0].font.size = Pt(60)
         elif tag == xmltags.PARAGRAPH and self.in_element(xmltags.FRONTPAGE):
             self.current_slide.shapes[1].text = text
-
+        elif self.in_element(xmltags.MEASURE) and tag == xmltags.BOLD:
+            if self.in_element(xmltags.SECTION, {xmltags.SECTION_IS_APPENDIX: "y"}):
+                return
+            slide_layout = self.presentation.slide_layouts[self.MEASURE_SLIDE]
+            self.current_slide = self.presentation.slides.add_slide(slide_layout)
+            title_placeholder = self.current_slide.shapes.title
+            title_placeholder.text = text
 
     def end_document(self) -> None:
         """Override to save the presentation."""

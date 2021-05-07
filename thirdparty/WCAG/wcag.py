@@ -42,8 +42,6 @@ for principle in wcag["principles"]:
     for guideline in principle["guidelines"]:
         lines.append(f"| Richtlijn {guideline['num']} | {item_url(guideline)} | | |")
         for sc in guideline["successcriteria"]:
-            if sc["level"] == "AAA":
-                continue
             tag = f"wcag{sc['num'].replace('.', '')}"
             if applicable_rules := [rule for rule in rules if tag in rule["tags"]]:
                 rule_ids = ", ".join(sorted([url(rule["ruleId"], rule["helpUrl"]) for rule in applicable_rules]))

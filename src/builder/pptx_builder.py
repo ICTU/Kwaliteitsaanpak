@@ -4,6 +4,7 @@ import pathlib
 import shutil
 
 from pptx import Presentation
+from pptx.enum.shapes import MSO_SHAPE
 from pptx.util import Inches, Pt
 
 import xmltags
@@ -16,7 +17,7 @@ class PptxBuilder(Builder):
 
     # Slide layouts. These are specific for the reference file
     TITLE_SLIDE = 0
-    MEASURE_SLIDE = 1
+    MEASURE_SLIDE = 4
 
     def __init__(self, filename: pathlib.Path, pptx_reference_filename: pathlib.Path) -> None:
         super().__init__(filename)
@@ -45,7 +46,9 @@ class PptxBuilder(Builder):
                 title.text = text
                 title.text_frame.paragraphs[0].font.size = Pt(24)
             else:
-                self.current_slide.shapes[1].text = text
+                text_box = self.current_slide.shapes.add_textbox(Inches(0.7), Inches(1.6), Inches(12), Inches(6))
+                text_box.text_frame.word_wrap = True
+                text_box.text = text
 
     def in_appendix(self) -> bool:
         """Return whether the current section is an appendix."""

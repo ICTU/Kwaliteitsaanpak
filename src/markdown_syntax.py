@@ -1,9 +1,11 @@
 """Markdown syntax."""
 
+BEGIN_PATTERN = r"^<!-- begin: ([^ ]+) -->"
 BOLD_START = BOLD_END = "**"
 BOLD_ALTERNATIVE_START = BOLD_ALTERNATIVE_END = "__"
 BULLET_LIST_PATTERN = r"^[\*\+\-] "
 CELL_ALIGNMENT_MARKER = ":"
+END_PATTERN = r"^<!-- end: ([^ ]+) -->"
 HEADING_PATTERN = r"^(#+) (.*)"
 IMAGE_PATTERN = r'^!\[([^\]]+)\]\(([^ ]+) "([^\)]+)"\)'
 INSTRUCTION_START = "{"

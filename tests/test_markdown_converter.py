@@ -1,6 +1,5 @@
 """Markdown converter unit tests."""
 
-import logging
 import unittest
 from unittest.mock import patch, mock_open
 
@@ -161,24 +160,12 @@ class MarkdownTest(MarkdownConverterTestCase):
         """Test that a variable is replaced with its value."""
         self.assertEqual("Replace variable.", self.xml().find(xmltags.PARAGRAPH).text)
 
-    @patch("markdown_converter.open", mock_open(read_data="@{Measure}@"))
+    @patch(
+        "markdown_converter.open", mock_open(read_data="<!-- begin: measure -->\nMeasure\n<!-- end: measure -->\n")
+    )
     def test_measure(self):
         """Test measure."""
         self.assertEqual("Measure", self.xml().find(xmltags.MEASURE).find(xmltags.PARAGRAPH).text)
-
-    @patch("markdown_converter.open", mock_open(read_data="@{Measure\n@{"))
-    def test_measure_nested(self):
-        """Test that nested measures are not allowed."""
-        logging.disable(logging.CRITICAL)
-        self.assertRaises(SystemExit, self.xml)
-        logging.disable(logging.NOTSET)
-
-    @patch("markdown_converter.open", mock_open(read_data="Measure}@"))
-    def test_measure_closed(self):
-        """Test that nested measures are not allowed."""
-        logging.disable(logging.CRITICAL)
-        self.assertRaises(SystemExit, self.xml)
-        logging.disable(logging.NOTSET)
 
     @patch("markdown_converter.open", new_callable=mock_open, read_data="#include 'file'")
     def test_include(self, mocked_open):

@@ -1,10 +1,8 @@
 """Markdown converter."""
 
 import contextlib
-import logging
 import pathlib
 import re
-import sys
 from typing import cast, List, Optional, Set
 from xml.etree.ElementTree import ElementTree, TreeBuilder
 
@@ -43,7 +41,7 @@ class MarkdownConverter:
                 if line.startswith("#include"):
                     filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
                     filename = filename.replace(
-                        "{{TEMPLATE-FOLDER}}", settings.get("TemplateFolder", "TemplateFolder missing in setings")
+                        "{{TEMPLATE-FOLDER}}", settings.get("TemplateFolder", "TemplateFolder missing in settings")
                     )
                     self.convert_markdown_file(pathlib.Path(filename), settings)
                 else:
@@ -128,22 +126,11 @@ class MarkdownConverter:
             self.end_lists()
             self.end_table()
             return  # Empty line, nothing further to do
-        ending_measure = False
-        if stripped_line.startswith(markdown_syntax.MEASURE_START):
-            if xmltags.MEASURE in self.context:
-                logging.error("Trying to start measure '%s' but previous measure was not ended", stripped_line)
-                sys.exit(1)
-            self.context.add(xmltags.MEASURE)
-            self.builder.start(xmltags.MEASURE, {})
-            stripped_line = stripped_line[len(markdown_syntax.MEASURE_START) :]
-        if stripped_line.endswith(markdown_syntax.MEASURE_END):
-            if xmltags.MEASURE not in self.context:
-                logging.error("Trying to end measure '%s' but measure was not started", stripped_line)
-                sys.exit(1)
-            ending_measure = True
-            stripped_line = stripped_line[: -len(markdown_syntax.MEASURE_END)]
-        if match := re.match(markdown_syntax.HEADING_PATTERN, stripped_line):
-            match = cast(re.Match, match)
+        if match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
+            self.builder.start(match.group(1), {})
+        elif match := re.match(markdown_syntax.END_PATTERN, stripped_line):
+            self.builder.end(match.group(1))
+        elif match := re.match(markdown_syntax.HEADING_PATTERN, stripped_line):
             self.process_heading(heading=match.group(2), level=len(match.group(1)))
         elif re.match(markdown_syntax.BULLET_LIST_PATTERN, stripped_line):
             list_level = {"*": 1, "+": 2, "-": 3}[stripped_line[0]]
@@ -156,9 +143,6 @@ class MarkdownConverter:
         else:
             with self.element(xmltags.PARAGRAPH):
                 self.process_formatted_text(stripped_line)
-        if xmltags.MEASURE in self.context and ending_measure:
-            self.context.remove(xmltags.MEASURE)
-            self.builder.end(xmltags.MEASURE)
 
     def process_heading(self, heading: str, level: int) -> None:
         """Process a heading."""

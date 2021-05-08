@@ -4,7 +4,6 @@ import pathlib
 import shutil
 
 from pptx import Presentation
-from pptx.enum.shapes import MSO_SHAPE
 from pptx.util import Inches, Pt
 
 import xmltags
@@ -18,6 +17,7 @@ class PptxBuilder(Builder):
     # Slide layouts. These are specific for the reference file
     TITLE_SLIDE = 0
     MEASURE_SLIDE = 4
+    CHAPTER_SLIDE = 16
 
     def __init__(self, filename: pathlib.Path, pptx_reference_filename: pathlib.Path) -> None:
         super().__init__(filename)
@@ -28,6 +28,7 @@ class PptxBuilder(Builder):
         measure_master_slide = self.presentation.slide_master.slide_layouts[self.MEASURE_SLIDE]
         measure_master_slide.placeholders[0].width = Inches(10)
         self.current_slide = None
+        self.chapter_heading = None
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
         if tag == xmltags.TITLE:
@@ -39,6 +40,12 @@ class PptxBuilder(Builder):
         elif tag == xmltags.PARAGRAPH and self.in_element(xmltags.FRONTPAGE):
             self.current_slide.shapes[1].text = text
         elif self.in_element(xmltags.MEASURE) and not self.in_appendix():
+            if self.chapter_heading:
+                slide_layout = self.presentation.slide_layouts[self.CHAPTER_SLIDE]
+                self.current_slide = self.presentation.slides.add_slide(slide_layout)
+                title_placeholder = self.current_slide.shapes.title
+                title_placeholder.text = self.chapter_heading
+                self.chapter_heading = None
             if tag == xmltags.BOLD:
                 slide_layout = self.presentation.slide_layouts[self.MEASURE_SLIDE]
                 self.current_slide = self.presentation.slides.add_slide(slide_layout)
@@ -49,6 +56,8 @@ class PptxBuilder(Builder):
                 text_box = self.current_slide.shapes.add_textbox(Inches(0.7), Inches(1.6), Inches(12), Inches(6))
                 text_box.text_frame.word_wrap = True
                 text_box.text = text
+        elif tag == xmltags.HEADING and self.in_element(xmltags.SECTION, dict(level="1")) and not self.in_element(xmltags.SECTION, dict(level="2")):
+            self.chapter_heading = text
 
     def in_appendix(self) -> bool:
         """Return whether the current section is an appendix."""

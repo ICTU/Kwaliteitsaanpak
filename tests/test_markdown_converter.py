@@ -1,6 +1,5 @@
 """Markdown converter unit tests."""
 
-import logging
 import unittest
 from unittest.mock import patch, mock_open
 
@@ -161,7 +160,9 @@ class MarkdownTest(MarkdownConverterTestCase):
         """Test that a variable is replaced with its value."""
         self.assertEqual("Replace variable.", self.xml().find(xmltags.PARAGRAPH).text)
 
-    @patch("markdown_converter.open", mock_open(read_data="<!-- begin: measure -->\nMeasure\n<!-- end: measure -->\n"))
+    @patch(
+        "markdown_converter.open", mock_open(read_data="<!-- begin: measure -->\nMeasure\n<!-- end: measure -->\n")
+    )
     def test_measure(self):
         """Test measure."""
         self.assertEqual("Measure", self.xml().find(xmltags.MEASURE).find(xmltags.PARAGRAPH).text)

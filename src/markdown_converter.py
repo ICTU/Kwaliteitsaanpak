@@ -127,13 +127,10 @@ class MarkdownConverter:
             self.end_table()
             return  # Empty line, nothing further to do
         if match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
-            match = cast(re.Match, match)
             self.builder.start(match.group(1), {})
         elif match := re.match(markdown_syntax.END_PATTERN, stripped_line):
-            match = cast(re.Match, match)
             self.builder.end(match.group(1))
         elif match := re.match(markdown_syntax.HEADING_PATTERN, stripped_line):
-            match = cast(re.Match, match)
             self.process_heading(heading=match.group(2), level=len(match.group(1)))
         elif re.match(markdown_syntax.BULLET_LIST_PATTERN, stripped_line):
             list_level = {"*": 1, "+": 2, "-": 3}[stripped_line[0]]

@@ -32,32 +32,28 @@ class PptxBuilder(Builder):
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
         if tag == xmltags.TITLE:
-            slide_layout = self.presentation.slide_layouts[self.TITLE_SLIDE]
-            self.current_slide = self.presentation.slides.add_slide(slide_layout)
-            title_placeholder = self.current_slide.shapes.title
-            title_placeholder.text = text
-            title_placeholder.text_frame.paragraphs[0].font.size = Pt(60)
+            self.add_slide(self.TITLE_SLIDE, text)
+            self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(60)
         elif tag == xmltags.PARAGRAPH and self.in_element(xmltags.FRONTPAGE):
             self.current_slide.shapes[1].text = text
         elif self.in_element(xmltags.MEASURE) and not self.in_appendix():
             if self.chapter_heading:
-                slide_layout = self.presentation.slide_layouts[self.CHAPTER_SLIDE]
-                self.current_slide = self.presentation.slides.add_slide(slide_layout)
-                title_placeholder = self.current_slide.shapes.title
-                title_placeholder.text = self.chapter_heading
+                self.add_slide(self.CHAPTER_SLIDE, self.chapter_heading)
                 self.chapter_heading = None
             if tag == xmltags.BOLD:
-                slide_layout = self.presentation.slide_layouts[self.MEASURE_SLIDE]
-                self.current_slide = self.presentation.slides.add_slide(slide_layout)
-                title = self.current_slide.shapes.title
-                title.text = text
-                title.text_frame.paragraphs[0].font.size = Pt(24)
+                self.add_slide(self.MEASURE_SLIDE, text)
+                self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(24)
             else:
                 text_box = self.current_slide.shapes.add_textbox(Inches(0.7), Inches(1.6), Inches(12), Inches(6))
                 text_box.text_frame.word_wrap = True
                 text_box.text = text
         elif tag == xmltags.HEADING and self.in_element(xmltags.SECTION, dict(level="1")) and not self.in_element(xmltags.SECTION, dict(level="2")):
             self.chapter_heading = text
+
+    def add_slide(self, slide_layout_index: int, title: str) -> None:
+        slide_layout = self.presentation.slide_layouts[slide_layout_index]
+        self.current_slide = self.presentation.slides.add_slide(slide_layout)
+        self.current_slide.shapes.title.text = title
 
     def in_appendix(self) -> bool:
         """Return whether the current section is an appendix."""

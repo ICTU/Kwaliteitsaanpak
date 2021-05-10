@@ -13,7 +13,7 @@ from xml.etree.ElementTree import ElementTree
 
 from cli import parse_cli_arguments
 from converter import Converter
-from builder import DocxBuilder, HTMLBuilder, HTMLCoverBuilder, XlsxBuilder
+from builder import DocxBuilder, HTMLBuilder, HTMLCoverBuilder, PptxBuilder, XlsxBuilder
 from markdown_converter import MarkdownConverter
 from custom_types import JSON, Settings, Variables
 
@@ -52,6 +52,8 @@ def convert(settings_filename: str, version: str) -> None:
         convert_docx(converter, output_path, settings)
     if "pdf" in settings["OutputFormats"]:
         convert_pdf(converter, build_path, output_path, settings, variables)
+    if "pptx" in settings["OutputFormats"]:
+        convert_pptx(converter, output_path, settings)
     if "xlsx" in settings["OutputFormats"]:
         convert_xlsx(converter, output_path, settings)
 
@@ -93,6 +95,13 @@ def convert_docx(converter, output_path: pathlib.Path, settings: Settings) -> No
     docx_output_filename = output_path / settings["OutputFormats"]["docx"]["OutputFile"]
     docx_builder = DocxBuilder(docx_output_filename, pathlib.Path(settings["OutputFormats"]["docx"]["ReferenceFile"]))
     converter.convert(docx_builder)
+
+
+def convert_pptx(converter, output_path, settings: Settings) -> None:
+    """Convert the xml to pptx."""
+    pptx_output_filename = output_path / settings["OutputFormats"]["pptx"]["OutputFile"]
+    pptx_builder = PptxBuilder(pptx_output_filename, pathlib.Path(settings["OutputFormats"]["pptx"]["ReferenceFile"]))
+    converter.convert(pptx_builder)
 
 
 def convert_xlsx(converter, output_path, settings: Settings) -> None:

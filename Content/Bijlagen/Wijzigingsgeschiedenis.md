@@ -11,6 +11,10 @@
 
 * Een samenvatting van de Kwaliteitsaanpak als los document toegevoegd. 
 
+#### Presentatie Kwaliteitsaanpak
+
+* Een presentatie van de Kwaliteitsaanpak als los document toegevoegd.
+
 #### Alle templates
 
 * Lijst van reviewers toegevoegd aan colofon.

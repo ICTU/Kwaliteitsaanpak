@@ -20,7 +20,7 @@ Dit hoofdstuk beschrijft de werking van {de applicatie} op hoofdlijnen. Het besc
 
 ## Hoofdfuncties
 
-{Beschrijf de functionele werking van de applicatie op hoofdlijnen en geef per functie de belangrijke actoren weer. Maak onderscheid tussen menselijke actoren en systeemactoren. Gebruik de hier beschreven functies als basis voor de paragraafindeling in hoofdstuk 3.}
+{Beschrijf de functionele werking van de applicatie op hoofdlijnen en geef per functie de belangrijke actoren weer. Maak onderscheid tussen menselijke actoren en systeemactoren. Gebruik de hier beschreven functies als basis voor de paragraafindeling in het volgende hoofdstuk.}
 
 ## Ondersteunende functies
 

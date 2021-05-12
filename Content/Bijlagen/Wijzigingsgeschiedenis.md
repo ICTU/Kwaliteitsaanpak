@@ -50,6 +50,10 @@
 
 * Paragraaf over projectafsluiting en bijlage met activiteiten voor projectafsluiting toegevoegd.
 
+#### Alle documenten
+
+* Vervang 'privacy impact analyse' door 'privacy impact assessment' en 'business impact analyse' door 'business impact analysis' zodat beide termen consequent op dezelfde manier geschreven worden.
+
 ### Versie 2.2.0, 27 januari 2021
 
 #### Kwaliteitsaanpak

@@ -5,8 +5,8 @@
 De opdrachtgever zorgt dat het project vanaf de start van de voorfase beschikt over:
 
 1. Projectstartarchitectuur,
-2. Business impact analyse,
-3. Privacy impact analyse.
+2. Business impact analysis,
+3. Privacy impact assessment.
 
 Als de benodigde informatie niet gereed is bij de start van de voorfase dan maken opdrachtgever en ICTU nadere afspraken over de manier waarop de benodigde informatie nog tijdens de voorfase beschikbaar komt voor het project.
 
@@ -23,11 +23,11 @@ Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkeli
 
 Zie [http://www.noraonline.nl/wiki/PSA](http://www.noraonline.nl/wiki/PSA).
 
-**Business impact analyse**
-In een business impact analyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
+**Business impact analysis**
+In een business impact analysis (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting. Alleen de organisatie zelf kan hierover een uitspraak doen.
 
-**Privacy impact analyse**
-In een privacy impact analyse (PIA) legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. De rechtmatigheid van de verwerking wordt beoordeeld. En de PIA stelt grenzen aan de gegevens die mogen worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan overdragen.
+**Privacy impact assessment**
+In een privacy impact assessment (PIA) legt de vragende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. De rechtmatigheid van de verwerking wordt beoordeeld. En de PIA stelt grenzen aan de gegevens die mogen worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan overdragen.
 
 Indien een PIA niet nodig is, is een verklaring daaromtrent vereist.
 

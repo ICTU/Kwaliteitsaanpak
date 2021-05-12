@@ -11,7 +11,7 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Onderdeel voorfase                              | Inhoudelijk verantwoordelijk | Penvoerder   | Review en meewerken aan |
 |:------------------------------------------------|:-----------------------------|:-------------|:------------------------|
 | Projectstartarchitectuur (PSA)                  | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Business impact analyse (BIA)                   | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Business impact analysis (BIA)                  | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Privacy impact assessment (PIA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Globaal functioneel ontwerp (GFO)               | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Softwarearchitectuurdocument (SAD)              | {verantwoordelijke}          | ICTU         | {reviewers}             |

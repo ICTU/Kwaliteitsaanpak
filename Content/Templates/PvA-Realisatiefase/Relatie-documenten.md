@@ -3,7 +3,7 @@
 De realisatiefase is een vervolg op de voorfase {voorfaseproject}. De documenten die in die voorfase zijn gerealiseerd en die uitgangspunt zijn voor dit plan van aanpak zijn:
 
 * Projectstartarchitectuur (PSA), versie {versie},
-* Business impact analyse (BIA), versie {versie},
+* Business impact analysis (BIA), versie {versie},
 * Privacy impact assessment (PIA), versie {versie},
 * Softwarearchitectuurdocument (SAD), versie {versie},
 * Infrastructuurarchitectuur (IA), versie {versie},

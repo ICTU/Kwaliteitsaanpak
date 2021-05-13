@@ -81,7 +81,7 @@ In situaties waarin het niet op voorhand duidelijk is wat de correcte reactie va
 
 ### Use cases
 
-{Beschrijf hier alleen de architecturally-significant use cases.}
+{Beschrijf hier alleen de architecturally-significant use cases. Verwijs voor de uitwerking van deze use cases en de overige use cases naar het GFO. Gebruik hier dezelfde ids en namen voor de use cases als in het GFO.}
 
 # Informatiearchitectuur
 

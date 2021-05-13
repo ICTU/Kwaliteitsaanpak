@@ -4,15 +4,15 @@ Dit hoofdstuk beschrijft de context waarin {de applicatie} zal opereren aan de h
 
 ## Betrokken organisaties en gebruikers
 
-{Beschrijf kort de organisatie(s) en/of (groepen van) mensen die de applicatie gebruiken. Als de applicatie primair door andere systemen wordt gebruikt, beschrijf die dan ook.}
+{Beschrijf kort de organisatie(s) en/of (groepen van) mensen die de applicatie gebruiken. Als de applicatie primair door andere systemen wordt gebruikt, beschrijf die dan ook. Verwijs eventueel naar andere documenten, zoals bijvoorbeeld de PSA, voor meer informatie.}
 
 ## Ondersteunde processen
 
-{Beschrijf de (bedrijfs)processen die de applicatie ondersteunt. Overweeg daarvoor business- of proces use cases te gebruiken.}
+{Beschrijf de (bedrijfs)processen die de applicatie ondersteunt. Overweeg daarvoor business- of proces use cases te gebruiken. Verwijs eventueel naar andere documenten, zoals bijvoorbeeld de PSA, voor meer informatie.}
 
 ## Applicatielandschap
 
-{Beschrijf het applicatielandschap waarin de applicatie gaat functioneren. Geef daarbij een schematische voorstelling van de applicatie in het applicatielandschap, inclusief koppelingen met aanpalende systemen zoals basisregistraties.}
+{Beschrijf het applicatielandschap waarin de applicatie gaat functioneren. Geef daarbij een schematische voorstelling van de applicatie in het applicatielandschap, inclusief koppelingen met aanpalende systemen zoals basisregistraties. Verwijs eventueel naar andere documenten, zoals bijvoorbeeld het SAD, voor meer informatie.}
 
 # Werking op hoofdlijnen
 

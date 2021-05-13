@@ -6,3 +6,4 @@
 | K04        | ISO 9241-210:2019 Ergonomics of human-system interaction - Part 210: Human-centred design for interactive systems |
 | K05        | WCAG2.1 (Web Content Accessibility Guidelines) voor eisen met betrekking tot toegankelijkheid |
 | K06        | NEN-ISO/IEC 25010:2011 voor het specificeren van productkwaliteit |
+| K07        | NORA - Referentiearchitectuur voor de Nederlandse Overheid |

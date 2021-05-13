@@ -168,21 +168,21 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 
 {Selecteer de rollen die nodig zijn en vul ze aan. Vul de juiste verantwoordelijkheden in. De onderstaande tabel is een eerste opzet met veel voorkomende rollen.}
 
-| Rol                                    | Verwachte inzet | Verantwoordelijkheden                                                                                                                                                                       |
-|:---------------------------------------|:----------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Software-architect/senior ontwikkelaar | {x} uur         | Penvoerder SAD, reviewen {documenten}                                                                                                                                                       |
-| Functioneel ontwerper                  | {x} uur         | Penvoerder GFO, reviewen {documenten}                                                                                                                                                       |
-| Database administrator                 | {x} uur         | Opstellen logisch datamodel en fysiek database ontwerp, reviewen {documenten}                                                                                                               |
-| UX-designer                            | {x} uur         | Opstellen UX-richtlijnen, maken prototype, reviewen {documenten}                                                                                                                            |
-| Informatiebeveiligingsexpert           | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                              |
-| Privacy expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                              |
-| Testmanager                            | {x} uur         | Penvoerder testplan softwarerealisatie, reviewen {documenten}                                                                                                                               |
-| Kwaliteitsmanager                      | {x} uur         | Penvoerder kwaliteitsplan, reviewen {documenten}                                                                                                                                            |
-| Software delivery manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het team, inhoudelijke rapportage                               |
+| Rol                                    | Verwachte inzet | Verantwoordelijkheden |
+|:---------------------------------------|:----------------|:----------------------|
+| Software-architect/senior ontwikkelaar | {x} uur         | Penvoerder SAD, reviewen {documenten} |
+| Functioneel ontwerper                  | {x} uur         | Penvoerder GFO, reviewen {documenten} |
+| Database administrator                 | {x} uur         | Opstellen logisch datamodel en fysiek database ontwerp, reviewen {documenten} |
+| UX-designer                            | {x} uur         | Gebruikersonderzoek, opstellen UX-richtlijnen, maken prototype {of wireframe/mockup}, reviewen {documenten} |
+| Informatiebeveiligingsexpert           | {x} uur         | Penvoerder {documenten}, reviewen {documenten} |
+| Privacy expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten} |
+| Testmanager                            | {x} uur         | Penvoerder testplan softwarerealisatie, reviewen {documenten} |
+| Kwaliteitsmanager                      | {x} uur         | Penvoerder kwaliteitsplan, reviewen {documenten} |
+| Software delivery manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het team, inhoudelijke rapportage |
 | Projectleider                          | {x} uur         | Voorbereiden en plannen kick-off, opstellen plan van aanpak en voorstel inclusief projectovereenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
-| Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                                                                                    |
-| Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is                                                                  |
-| Totaal                                 | {x} uur         |                                                                                                                                                                                             |
+| Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie |
+| Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is |
+| **Totaal**                             | **{x} uur**     | |
 
 {In de projectovereenkomst moet in de begroting met onderstaande opmerkingen rekening worden gehouden.}
 

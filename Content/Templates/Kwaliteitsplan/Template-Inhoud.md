@@ -50,6 +50,8 @@ De opstellers verwerken het commentaar. Vervolgens sturen de opstellers een toel
 
 Het doel van de voorfase is tweeledig: het voorbereiden van de realisatiefase, zodat ICTU verantwoord een projectovereenkomst kan opstellen voor de realisatiefase, en het identificeren van risico’s die van toepassing zijn op de realisatiefase en het verdere verloop van het project.
 
+De opdrachtgever zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analysis en privacy impact assessment. Waar nodig werkt de opdrachtgever de informatie bij tijdens de voorfase en realisatiefase.
+
 Dit kwaliteitsplan wordt opgesteld tijdens de voorfase, maar is tevens al deels van toepassing, in ieder geval aan het eind van de voorfase. Voor de voorfase gelden de onderstaande kwaliteitsmaatregelen.
 
 ## Belanghebbenden
@@ -69,6 +71,8 @@ Het programma van eisen en de projectstartarchitectuur, beide opgesteld door de 
 Niet-functionele eisen aan het te ontwikkelen systeem worden vastgelegd op basis van de projectstartarchitectuur en aan de hand van de NEN-ISO/IEC 25010-standaard in een NFE-document. De ISO-25010-kwaliteitsattributen worden door de belanghebbenden geprioriteerd in een of meer workshops (PRA – zie ook testen). Voor de kwaliteitsattributen worden SMART-eisen geformuleerd.
 
 Informatiebeveiliging is een essentieel en integraal onderdeel van de werkzaamheden. De eisen worden in een afzonderlijk informatiebeveiligingsplan opgesteld. De software zal zodanig worden voortgebracht dat deze de BIO-compliance van de opdrachtgever niet zal hinderen.
+
+Gebruikskwaliteit (usability) is ingebed in de standaard werkwijze van ICTU voor de realisatie van maatwerksoftware. Dit aspect wordt geborgd door opname in het plan van aanpak, het ontwerp en de testplannen.
 
 Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.1, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
 
@@ -219,7 +223,7 @@ Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen 
 
 ## Security-testen
 
-De eisen aan de beveiliging worden in de documenten projectstartarchitectuur en niet-functionele eisen gedefinieerd. De in te richten testen dienen aan te tonen dat de gestelde beveiligingseisen wordt voldaan.
+De eisen aan de beveiliging worden in de documenten projectstartarchitectuur en niet-functionele eisen gedefinieerd. De in te richten testen dienen aan te tonen dat aan de gestelde beveiligingseisen wordt voldaan.
 
 De geautomatiseerde broncodereviews en rapportages uit het ICTU-kwaliteitssysteem bevatten diverse metrieken voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van Checkmarx, OWASP dependency checker, OWASP ZAP en OpenVAS.
 
@@ -239,15 +243,15 @@ Merk op: de beveiliging van de software in de acceptatie- en productieomgeving k
 
 ## Toegankelijkheidstesten
 
-Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Het ICTU-kwaliteitssysteem rapporteert over de toegankelijkheidsrapportage van Axe. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.1-richtlijnen die niet geautomatiseerd kunnen worden getest.
+Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Het ICTU-kwaliteitssysteem rapporteert over de toegankelijkheidsrapportage van Axe. Daarnaast worden handmatige toegankelijkheidstesten uitgevoerd, door deskundige leden van het ontwikkelteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.1-richtlijnen die niet geautomatiseerd kunnen worden getest.
 
 ## Usability-testen
 
 {Verwijder deze paragraaf indien usability-testen niet van toepassing zijn}
 
-Om de usability van de software te testen worden usability-testen uitgevoerd. Hiervoor zijn twee opties: ofwel het project laat minimaal eenmaal per jaar een usabilitylabtest uitvoeren, of het project voert minimaal eenmaal per drie sprints een guerilla usabilitytest uit. Het MTP beschrijft de gekozen aanpak.
+Om de usability van de software te testen worden usability-testen uitgevoerd, door deskundige leden van het ontwikkelteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak.
 
-Issues die voortkomen uit usabilitytests worden opgenomen in Jira met het label "usability_bevinding".
+Issues die voortkomen uit usability-testen worden opgenomen in Jira met het label "usability_bevinding".
 
 ## Technische schuld
 

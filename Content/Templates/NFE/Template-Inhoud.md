@@ -110,6 +110,18 @@ Merk op dat de [Axe-core regels die als "experimenteel" zijn gemarkeerd](https:/
 
 #include "Content/Templates/NFE/WCAG-Tabel-Gegenereerd.md"
 
+## Taal en leesbaarheid
+
+Naast de aan NEN-ISO/IEC 25010 ontleende hoofdeigenschap bruikbaarheid zijn voor de gebruikskwaliteit van {de applicatie} van belang:
+
+* Taal: welke talen dienen te worden ondersteund.
+* Leesbaarheid: teksten moeten makkelijk te lezen zijn. Korte zinnen hebben de voorkeur. Hoe gemakkelijker de zin en de woorden, hoe beter de leesbaarheid.
+
+| Nr.  | Eis                                           | Prio   | Rationale               | Bewijs              |
+|:-----|:----------------------------------------------|:-------|:------------------------|:--------------------|
+| 1    | De applicatie gebruikt maximaal taalniveau B1 | {prio} | [Aanbevolen richtlijn](https://www.communicatierijk.nl/vakkennis/rijkswebsites/aanbevolen-richtlijnen/taalniveau-b1) | {bewijs}            |
+| 2    | De applicatie ondersteunt {ondersteunde talen} | {prio} | {rationale}            | {bewijs}            |
+
 # Betrouwbaarheid
 
 De mate waarin een systeem, product of component gespecificeerde functies uitvoert onder gespecificeerde condities gedurende een gespecificeerde hoeveelheid tijd.

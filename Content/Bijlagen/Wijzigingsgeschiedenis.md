@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 2.3.0, nog uit te brengen
+### Versie 2.3.0, 14 mei 2021
 
 #### Kwaliteitsaanpak
 

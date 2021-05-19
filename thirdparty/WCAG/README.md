@@ -11,6 +11,7 @@ Het script `wcag.py`:
 Hoe te runnen: 
 
 ```console
+$ npm install
 $ python3 wcag.py
 ```
 

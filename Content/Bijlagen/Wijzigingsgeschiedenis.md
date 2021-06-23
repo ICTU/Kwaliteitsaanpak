@@ -1,5 +1,11 @@
 ## Wijzigingsgeschiedenis
 
+### Nog te releasen
+
+#### Template Kwaliteitsplan
+
+* Bijlage met periodieke (kwaliteits)controles toegevoegd.
+
 ### Versie 2.3.0, 14 mei 2021
 
 #### Kwaliteitsaanpak

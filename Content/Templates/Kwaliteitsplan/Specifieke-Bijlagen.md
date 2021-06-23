@@ -75,7 +75,9 @@ Indien de bug opgelost gaat worden, zal er een Jira link van het type _Is realiz
 
 ## Periodieke controles
 
-Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de software en het softwareproces geautomatiseerd te meten is dit niet altijd mogelijk of kosteneffectief. Daarom voert het project periodiek onderstaande controles handmatig uit.
+Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de software en het softwareproces geautomatiseerd te meten is dit niet altijd mogelijk of kosteneffectief. Daarom voert de kwaliteitsmanager periodiek onderstaande controles handmatig uit.
+
+{Pas onderstaande lijst van controles aan waar relevant. Voeg indien releant kolommen toe voor frequentie, uitvoerder, datum laatste controle, status, vervolgacties, datum volgende controle, etc.}
 
 | Onderwerp | Referentie | Controle | 
 |:----------|:-----------|:---------|
@@ -100,8 +102,7 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 | Projectspecifieke kwaliteitsmaatregelen | Kwaliteitsplan §5.16 | Projectspecifieke maatregelen zijn uitgevoerd zoals afgesproken | 
 | Projectafsluiting | Kwaliteitsplan §6 | Projectafsluiting is conform de afspraken uitgevoerd | 
 | Gebruik van Jira | Kwaliteitsplan bijlage D | Jira wordt gebruikt zoals afgesproken |
-| Actualiteit kwaliteitsplan | | Het kwaliteitsplan is actueel |
 | Actualiteit kwaliteitsplan | | De kwaliteitsrapportage bevat een metriek voor de actualiteit van het kwaliteitsplan |
-| Volledigheid kwaliteitsrapportage | | De kwaliteitsrapportage bevat een metriek voor de volledigheid van de kwaliteitsrapportage |
+| Actualiteit kwaliteitsplan | | Het kwaliteitsplan is actueel |
 | Nieuwe teamleden | | Nieuwe teamleden zijn op de hoogte van de Kwaliteitsaanpak, het kwaliteitssysteem en het kwaliteitsplan |
 | Vertrokken teamleden | | Alle rechten in tools (GitLab, GitHub, Trello, Sharepoint, VPN, Jira, Whatsapp, Signal, Slack, etc.) van vertrokken teamleden zijn ingetrokken |

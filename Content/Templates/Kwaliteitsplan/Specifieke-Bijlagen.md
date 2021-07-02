@@ -93,7 +93,7 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 | Versiebeheer van documenten | Kwaliteitsplan §3.2.1 | Documenten zijn met de juiste meta-informatie op de afgesproken plaats en wijze opgeslagen | 
 | Review van documenten | Kwaliteitsplan §3.3.2 | Documenten zijn op de afgesproken wijze gereviewd | 
 | Definition of Ready | Kwaliteitsplan §5.1.1 | Teams hebben en gebruiken een DoR | 
-| Definition of Done | Kwaliteitsplan §5.1.2 | Trams hebben en gebruiken een DoD | 
+| Definition of Done | Kwaliteitsplan §5.1.2 | Teams hebben en gebruiken een DoD | 
 | Vrijgaveadvies | Kwaliteitsplan §5.1.3 | Het vrijgaveadvies bevat de afgesproken onderdelen | 
 | Kwaliteit broncode | Kwaliteitsplan §5.3 | Onderdrukte SonarQube-waarschuwingen zijn afgestemd en (nog steeds) terecht | 
 | Kwaliteit broncode | Kwaliteitsplan §5.3 | De kwaliteit van de broncode voldoet bij een steekproefsgewijze, handmatige inspectie aan de eisen | 
@@ -103,6 +103,5 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 | Projectafsluiting | Kwaliteitsplan §6 | Projectafsluiting is conform de afspraken uitgevoerd | 
 | Gebruik van Jira | Kwaliteitsplan bijlage D | Jira wordt gebruikt zoals afgesproken |
 | Actualiteit kwaliteitsplan | | De kwaliteitsrapportage bevat een metriek voor de actualiteit van het kwaliteitsplan |
-| Actualiteit kwaliteitsplan | | Het kwaliteitsplan is actueel |
 | Nieuwe teamleden | | Nieuwe teamleden zijn op de hoogte van de Kwaliteitsaanpak, het kwaliteitssysteem en het kwaliteitsplan |
 | Vertrokken teamleden | | Alle rechten in tools (GitLab, GitHub, Trello, Sharepoint, VPN, Jira, Whatsapp, Signal, Slack, etc.) van vertrokken teamleden zijn ingetrokken |

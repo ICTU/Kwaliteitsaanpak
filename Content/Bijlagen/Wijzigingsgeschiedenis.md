@@ -6,6 +6,10 @@
 
 * Bijlage met periodieke (kwaliteits)controles toegevoegd.
 
+#### Template Niet-Functionele Eisen
+
+* Axe-core bijgewerkt naar versie 4.3 in de tabel met de WCAG 2.1 succescriteria. 
+
 ### Versie 2.3.0, 14 mei 2021
 
 #### Kwaliteitsaanpak

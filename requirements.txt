@@ -2,4 +2,4 @@ docker-compose==1.29.2
 pip==21.2.3
 python-docx==0.8.11
 python-pptx==0.6.19
-XlsxWriter==2.0.0
+XlsxWriter==3.0.1

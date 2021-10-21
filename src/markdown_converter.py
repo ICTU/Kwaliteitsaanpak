@@ -127,7 +127,11 @@ class MarkdownConverter:
             self.end_table()
             return  # Empty line, nothing further to do
         if match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
-            self.builder.start(match.group(1), {})
+            attributes = {}
+            if attribute := match.group(2):
+                key, value = attribute.split("=")
+                attributes[key] = value
+            self.builder.start(match.group(1), attributes)
         elif match := re.match(markdown_syntax.END_PATTERN, stripped_line):
             self.builder.end(match.group(1))
         elif match := re.match(markdown_syntax.HEADING_PATTERN, stripped_line):

@@ -82,7 +82,8 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             if tag == xmltags.BOLD:
                 self.measure_row = self.row
                 self.measure_id, measure_title = text.split(":")
-                self.__write_measure(self.measure_id, measure_title.strip())
+                has_submeasures = self.in_element(xmltags.MEASURE, dict(composite="true"))
+                self.__write_measure(self.measure_id, measure_title.strip(), has_submeasures=has_submeasures)
             self.measure_text.append(text)
         elif self.measure_text:
             if (
@@ -106,11 +107,15 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
     def __write_measure(self, measure_id, measure_text, submeasure: bool = False, has_submeasures: bool = False) -> None:
         """Write a measure row."""
         measure_format_key = "submeasure" if submeasure else "measure"
-        status_format_key = "substatus" if submeasure else "status"
         self.checklist.write(self.row, self.MEASURE_ID_COLUMN, measure_id, self.formats[measure_format_key])
         self.checklist.write(self.row, self.MEASURE_COLUMN, measure_text, self.formats[measure_format_key])
-        self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
-        self.__write_assessment_choices(self.row, self.STATUS_COLUMN)
+        if has_submeasures:
+            self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[measure_format_key])
+            self.checklist.write_comment(self.row, self.STATUS_COLUMN, "Bepaal a.u.b de status per submaatregel")
+        else:
+            status_format_key = "substatus" if submeasure else "status"
+            self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
+            self.__write_assessment_choices(self.row, self.STATUS_COLUMN)
         self.checklist.write(self.row, self.EXPLANATION_COLUMN, "", self.formats["explanation"])
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:

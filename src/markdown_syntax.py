@@ -1,6 +1,6 @@
 """Markdown syntax."""
 
-BEGIN_PATTERN = r"^<!-- begin: ([^ ]+) -->"
+BEGIN_PATTERN = r"^<!-- begin: ([^ ]+)\s?([^ ]*) -->"
 BOLD_START = BOLD_END = "**"
 BOLD_ALTERNATIVE_START = BOLD_ALTERNATIVE_END = "__"
 BULLET_LIST_PATTERN = r"^[\*\+\-] "

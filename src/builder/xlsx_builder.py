@@ -16,7 +16,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
     """Self-assessment builder."""
 
     MEASURE_ID_COLUMN, MEASURE_COLUMN, STATUS_COLUMN, EXPLANATION_COLUMN = range(4)
-    HEADER_ROW = 1
+    HEADER_ROW = 3
     MEASURE_START_ROW = HEADER_ROW + 1
 
     def __init__(self, filename: pathlib.Path) -> None:
@@ -37,6 +37,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         status_format_options = dict(bg_color="#FED32D", text_wrap=True)
         return {
             "header": workbook.add_format(dict(text_wrap=True, font_size=14, bold=True, bg_color="#B3D6C9")),
+            "instructions": workbook.add_format(dict(text_wrap=True, font_size=13, bg_color="#B3D6C9")),
             "measure": workbook.add_format(measure_format_options),
             "submeasure": workbook.add_format(dict(align="vjustify", indent=1, **measure_format_options)),
             "explanation": workbook.add_format(dict(bg_color="#FFFFA5", text_wrap=True)),
@@ -162,25 +163,33 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             self.formats["header"],
         )
         self.checklist.set_row(0, 30)
+        self.checklist.merge_range(
+            "A2:D2",
+            "Bij maatregelen die primair door een project moeten worden toegepast geeft Status aan in hoevere het "
+            "project dat doet. Bij maatregelen die primair door ICTU moeten worden toegepast geeft de status aan in "
+            "hoeverre ICTU dat doet, gezien vanuit het perspectief van het project.",
+            self.formats["instructions"]
+        )
+        self.checklist.set_row(1, 40)
+        self.checklist.merge_range(
+            "A3:D3",
+            "Gebruik 'niet van toepassing' alleen voor maatregelen die permanent niet van toepassing zijn. "
+            "Bijvoorbeeld, als er geen due dilligence wordt uitgevoerd is zijn M01.16 en M01.17 niet van toepassing. "
+            "Gebruik 'voldoet niet' als een maatregel nog niet is toegepast, maar wel gepland is. Bijvoorbeeld, als "
+            "de performancetesten nog moeten worden opgezet is de status van M07.5 'voldoet niet'.",
+            self.formats["instructions"],
+        )
+        self.checklist.set_row(2, 40)
         self.checklist.set_row(self.HEADER_ROW, 30)
         for column, (header, width) in enumerate(
             [("Maatregel", 12), ("Omschrijving", 70), ("Status", 20), ("Toelichting", 70)]
         ):
             self.checklist.write(self.HEADER_ROW, column, header, self.formats["header"])
             self.checklist.set_column("{0}:{0}".format("ABCD"[column]), width)
-        self.checklist.write_comment(
-            self.HEADER_ROW,
-            2,
-            "Bij maatregelen die primair door een project moeten worden toegepast geeft Status aan in "
-            "hoevere het project dat doet. Bij maatregelen die primair door ICTU "
-            "moeten worden toegepast geeft de status aan in hoeverre ICTU dat "
-            "doet, gezien vanuit het perspectief van het project.",
-            dict(x_scale=3, y_scale=3),
-        )
 
     def __finish_checklist(self) -> None:
         """Wrap up the checklist."""
-        self.checklist.freeze_panes(self.MEASURE_START_ROW, self.STATUS_COLUMN)
+        self.checklist.freeze_panes(self.MEASURE_START_ROW, 0)
 
     def __write_assessment_choices(self, row: int, column: int) -> None:
         """Write the assessment choices, colors and data validation in the status column."""

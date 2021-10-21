@@ -82,7 +82,8 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             if tag == xmltags.BOLD:
                 self.measure_row = self.row
                 self.measure_id, measure_title = text.split(":")
-                self.__write_measure(self.measure_id, measure_title.strip())
+                has_submeasures = self.in_element(xmltags.MEASURE, dict(composite="true"))
+                self.__write_measure(self.measure_id, measure_title.strip(), has_submeasures=has_submeasures)
             self.measure_text.append(text)
         elif self.measure_text:
             if (
@@ -103,13 +104,18 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
                 text += " " * (int(attributes[xmltags.TABLE_CELL_WIDTH]) - len(text))
             self.measure_text.append(text)
 
-    def __write_measure(self, measure_id, measure_text, submeasure: bool = False) -> None:
+    def __write_measure(self, measure_id, measure_text, submeasure: bool = False, has_submeasures: bool = False) -> None:
         """Write a measure row."""
         measure_format_key = "submeasure" if submeasure else "measure"
-        status_format_key = "substatus" if submeasure else "status"
         self.checklist.write(self.row, self.MEASURE_ID_COLUMN, measure_id, self.formats[measure_format_key])
         self.checklist.write(self.row, self.MEASURE_COLUMN, measure_text, self.formats[measure_format_key])
-        self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
+        if has_submeasures:
+            self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[measure_format_key])
+            self.checklist.write_comment(self.row, self.STATUS_COLUMN, "Bepaal a.u.b de status per submaatregel")
+        else:
+            status_format_key = "substatus" if submeasure else "status"
+            self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
+            self.__write_assessment_choices(self.row, self.STATUS_COLUMN)
         self.checklist.write(self.row, self.EXPLANATION_COLUMN, "", self.formats["explanation"])
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
@@ -174,27 +180,17 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
 
     def __finish_checklist(self) -> None:
         """Wrap up the checklist."""
-        self.__write_assessment_choices()
         self.checklist.freeze_panes(self.MEASURE_START_ROW, self.STATUS_COLUMN)
 
-    def __write_assessment_choices(self) -> None:
+    def __write_assessment_choices(self, row: int, column: int) -> None:
         """Write the assessment choices, colors and data validation in the status column."""
         assessment_choices = ["voldoet", "voldoet deels", "voldoet niet", "niet van toepassing"]
         for choice in assessment_choices:
             self.checklist.conditional_format(
-                self.MEASURE_START_ROW,
-                self.STATUS_COLUMN,
-                self.row + self.MEASURE_START_ROW - 1,
-                self.STATUS_COLUMN,
+                row, column, row, column,
                 {"type": "cell", "criteria": "==", "value": '"{0}"'.format(choice), "format": self.formats[choice]},
             )
-        self.checklist.data_validation(
-            self.MEASURE_START_ROW,
-            self.STATUS_COLUMN,
-            self.row + self.MEASURE_START_ROW - 1,
-            self.STATUS_COLUMN,
-            dict(validate="list", source=assessment_choices),
-        )
+        self.checklist.data_validation(row, column, row, column, dict(validate="list", source=assessment_choices))
 
     def __create_action_list(self) -> None:
         """Create a worksheet with room for actions from the self-assessment."""

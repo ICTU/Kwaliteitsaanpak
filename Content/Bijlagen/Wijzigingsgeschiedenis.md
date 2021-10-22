@@ -10,6 +10,11 @@
 
 * Axe-core bijgewerkt naar versie 4.3 in de tabel met de WCAG 2.1 succescriteria. 
 
+#### Self-assessment checklist
+
+* Invulinstructie uitgebreid.
+* Duidelijk gemaakt dat als maatregelen submaatregelen hebben alleen de status van submaatregelen hoeft te worden ingevuld.
+
 ### Versie 2.3.0, 14 mei 2021
 
 #### Kwaliteitsaanpak

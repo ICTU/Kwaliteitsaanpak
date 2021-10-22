@@ -16,7 +16,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
     """Self-assessment builder."""
 
     MEASURE_ID_COLUMN, MEASURE_COLUMN, STATUS_COLUMN, EXPLANATION_COLUMN = range(4)
-    HEADER_ROW = 3
+    HEADER_ROW = 4
     MEASURE_START_ROW = HEADER_ROW + 1
 
     def __init__(self, filename: pathlib.Path) -> None:
@@ -165,21 +165,28 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         self.checklist.set_row(0, 30)
         self.checklist.merge_range(
             "A2:D2",
-            "Bij maatregelen die primair door een project moeten worden toegepast geeft Status aan in hoevere het "
-            "project dat doet. Bij maatregelen die primair door ICTU moeten worden toegepast geeft de status aan in "
-            "hoeverre ICTU dat doet, gezien vanuit het perspectief van het project.",
+            "Gebruik de 'Status' kolom om aan te geven in hoeverre een maatregel uit de Kwaliteitsaanpak is toegepast. "
+            "Bij maatregelen met submaatregelen hoeft alleen de status van de submaatregelen te worden ingevuld.",
             self.formats["instructions"]
         )
         self.checklist.set_row(1, 40)
         self.checklist.merge_range(
             "A3:D3",
+            "Bij maatregelen die primair door een project moeten worden toegepast geeft de status aan in hoevere het "
+            "project dat doet. Bij maatregelen die primair door ICTU moeten worden toegepast geeft de status aan in "
+            "hoeverre ICTU dat doet, gezien vanuit het perspectief van het project.",
+            self.formats["instructions"]
+        )
+        self.checklist.set_row(2, 40)
+        self.checklist.merge_range(
+            "A4:D4",
             "Gebruik 'niet van toepassing' alleen voor maatregelen die permanent niet van toepassing zijn. "
-            "Bijvoorbeeld, als er geen due dilligence wordt uitgevoerd is zijn M01.16 en M01.17 niet van toepassing. "
-            "Gebruik 'voldoet niet' als een maatregel nog niet is toegepast, maar wel gepland is. Bijvoorbeeld, als "
+            "Bijvoorbeeld, als er geen due diligence wordt uitgevoerd is zijn M01.16 en M01.17 niet van toepassing. "
+            "Gebruik 'voldoet niet' als een maatregel nog niet is toegepast, maar wel nodig is. Bijvoorbeeld, als "
             "de performancetesten nog moeten worden opgezet is de status van M07.5 'voldoet niet'.",
             self.formats["instructions"],
         )
-        self.checklist.set_row(2, 40)
+        self.checklist.set_row(3, 40)
         self.checklist.set_row(self.HEADER_ROW, 30)
         for column, (header, width) in enumerate(
             [("Maatregel", 12), ("Omschrijving", 70), ("Status", 20), ("Toelichting", 70)]

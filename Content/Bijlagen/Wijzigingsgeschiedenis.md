@@ -2,13 +2,18 @@
 
 ### Nog te releasen
 
+#### Kwaliteitsaanpak
+
+* De titel van maatregel "Het project levert in elke fase vastgestelde informatie over het product op" (M01) veranderd in "Het project levert in elke fase vastgestelde producten en informatie op" zodat de titel beter past bij de scope van de maatregel.
+* Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01) de lopende tekst en de tabel consistent gemaakt.
+
 #### Template Kwaliteitsplan
 
 * Bijlage met periodieke (kwaliteits)controles toegevoegd.
 
 #### Template Niet-Functionele Eisen
 
-* Axe-core bijgewerkt naar versie 4.3 in de tabel met de WCAG 2.1 succescriteria. 
+* Axe-core bijgewerkt naar versie 4.3 in de tabel met de WCAG 2.1 succescriteria.
 
 #### Self-assessment checklist
 
@@ -24,7 +29,7 @@
 
 #### Samenvatting Kwaliteitsaanpak
 
-* Een samenvatting van de Kwaliteitsaanpak als los document toegevoegd. 
+* Een samenvatting van de Kwaliteitsaanpak als los document toegevoegd.
 
 #### Presentatie Kwaliteitsaanpak
 
@@ -38,7 +43,7 @@
 
 #### Template Detailtestplan
 
-* Verwijzingen naar BIRT en de Releasemanager verwijderd. 
+* Verwijzingen naar BIRT en de Releasemanager verwijderd.
 
 #### Template Globaal Functioneel Ontwerp
 
@@ -81,7 +86,7 @@
 * De maatregel "Het project is gesplitst in een voorfase en een realisatiefase" (M14) hernoemd naar "Het project bereidt samen met opdrachtgever en belanghebbenden de realisatie voor".
 * De maatregel "ICTU geeft de voorkeur aan open source tools" (M15) is verwijderd. De inhoud van M15 is verplaatst naar "ICTU biedt ondersteuning voor verplicht gestelde tools" (M18). Reden is dat de voorkeur voor open source geen apart uitvoerbare maatregel is, maar deel uitmaakt van de ondersteuning van projecten met tools.
 * Bij maatregel "Het project gebruikt tools voor vastgestelde taken" (M16) performancetesttools toegevoegd.
-* Maatregel "ICTU zorgt dat een aantal vastgestelde tools snel beschikbaar is voor een project" (M17) verwijderd omdat projecten deze tools ofwel via de kantoorautomatisering van ICTU kunnen gebruiken of zelf kunnen draaien in de afgeschermde digitale omgeving zoals beschreven bij M19. 
+* Maatregel "ICTU zorgt dat een aantal vastgestelde tools snel beschikbaar is voor een project" (M17) verwijderd omdat projecten deze tools ofwel via de kantoorautomatisering van ICTU kunnen gebruiken of zelf kunnen draaien in de afgeschermde digitale omgeving zoals beschreven bij M19.
 * Bij maatregel "Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen" (M26) beter toegelicht onder welke voorwaarden de beveiligingstesten alleen door de opdrachtgever kunnen worden uitgevoerd.
 * Bijlage "Risico's van softwareontwikkeling" verwijderd vanwege de overlap met de bijlage "Relatie met NEN NPR 5326".
 

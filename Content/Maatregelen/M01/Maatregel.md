@@ -84,6 +84,8 @@ Voor elke release stelt het project release notes op; een overzicht van de wijzi
 **Vrijgaveadvies**
 Voor elke release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat tenminste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Als er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.
 
+ICTU en opdrachtgever maken afspraken over de opzet van het vrijgaveadvies en de verantwoordelijkheden van betrokken partijen bij de totstandkoming ervan, waaronder ook de beheerpartij.
+
 **Due diligence**
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom 'Realisatiefase') en wordt de kwaliteit van de bestaande softwareproducten getoetst. Dit onderzoek, dat bij ICTU een "due diligence" heet, is onderdeel van de voorfase en wordt uitgevoerd door vertegenwoordigers van ICTU en medewerkers van het desbetreffende project, samen met vertegenwoordigers van de opdrachtgever.
 

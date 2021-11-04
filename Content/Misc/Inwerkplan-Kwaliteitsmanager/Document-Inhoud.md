@@ -34,7 +34,7 @@ Je hebt toegang tot:
 ## $KWALITEITSAANPAK$
 
 Leerdoelen kwaliteitsaanpak:
-* Je weet waar je de [publieke versie van de kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak) kunt vinden en waat je de [interne versie van de kwaliteitsaanpak inclusief templates](https://ictubeheer.sharepoint.com/:f:/r/teams/Organisatie_SoftwareExpertise/Open/ICTU%20Kwaliteitsaanpak%20Softwareontwikkeling?csf=1&web=1&e=v7lK2Z) kunt vinden.
+* Je weet waar je de [publieke versie van de kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak) kunt vinden en waar je de [interne versie van de kwaliteitsaanpak inclusief templates](https://ictubeheer.sharepoint.com/:f:/r/teams/Organisatie_SoftwareExpertise/Open/ICTU%20Kwaliteitsaanpak%20Softwareontwikkeling?csf=1&web=1&e=v7lK2Z) kunt vinden.
 * Je weet welke maatregelen de kwaliteitsaanpak bevat en waarom
 * Je weet wat de relatie is tussen de kwaliteitsaanpak en de missie van ICTU
 

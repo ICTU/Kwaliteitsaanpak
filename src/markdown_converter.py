@@ -41,7 +41,7 @@ class MarkdownConverter:
                 if line.startswith("#include"):
                     filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
                     filename = filename.replace(
-                        "{{TEMPLATE-FOLDER}}", settings.get("TemplateFolder", "TemplateFolder missing in settings")
+                        "{{DOCUMENT-FOLDER}}", settings.get("DocumentFolder", "DocumentFolder missing in settings")
                     )
                     self.convert_markdown_file(pathlib.Path(filename), settings)
                 else:
@@ -89,6 +89,8 @@ class MarkdownConverter:
                         self.add_element(xmltags.BOLD, settings["Subtitle"])
                 with self.element(xmltags.PARAGRAPH):
                     self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
+            elif document_type == "Document":
+                pass
             else:
                 raise ValueError(f"Unknown document type '{document_type}' in the settings")
             self.add_element(

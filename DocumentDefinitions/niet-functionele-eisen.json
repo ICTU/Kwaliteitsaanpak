@@ -5,7 +5,7 @@
     "Title": "Niet-Functionele Eisen",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
-    "TemplateFolder": "NFE",
+    "DocumentFolder": "NFE",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "OutputFormats": {

@@ -5,7 +5,7 @@
     "Title": "{Documentnaam}",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
-    "TemplateFolder": "Template",
+    "DocumentFolder": "Template",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "OutputFormats": {

@@ -5,7 +5,7 @@
     "Title": "Detailtestplan",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
-    "TemplateFolder": "Detailtestplan",
+    "DocumentFolder": "Detailtestplan",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "OutputFormats": {

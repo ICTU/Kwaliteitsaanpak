@@ -1,0 +1,16 @@
+{
+    "InputFile": "DocumentDefinitions/Misc/document-template.md",
+    "BuildPath": "build/Misc/Inwerkplan-Kwaliteitsmanager/",
+    "OutputPath": "dist",
+    "Title": "Inwerkplan Kwaliteitsmanager",
+    "DocumentType": "Document",
+    "DocumentFolder": "Inwerkplan-Kwaliteitsmanager",
+    "IncludeFrontPage": true,
+    "IncludeTableOfContents": true,
+    "OutputFormats": {
+        "docx": {
+            "OutputFile": "Inwerkplan-Kwaliteitsmanager.docx",
+            "ReferenceFile": "DocumentDefinitions/reference.docx"
+        }
+    },
+    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]}

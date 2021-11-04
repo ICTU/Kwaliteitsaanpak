@@ -5,7 +5,7 @@
     "Title": "High-Level Design",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
-    "TemplateFolder": "HLD",
+    "DocumentFolder": "HLD",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "OutputFormats": {

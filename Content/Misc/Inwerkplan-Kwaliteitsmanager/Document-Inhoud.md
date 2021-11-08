@@ -115,6 +115,7 @@ Leerdoelen (week 2):
 * Je weet welke organisaties naast de opdrachtgever en ICTU bij het project zijn betrokken
 * Je weet welke governancestructuur er is afgesproken (stuurgroep, projectleidersoverleg, rapportages, e.d.)
 * Je weet wie welke rol speelt bij de opdrachtgever, ICTU en andere betrokken organisaties
+* Je weet wie welke rol speelt binnen het/de Scrumteam(s) in je project
 * Je hebt kennisgemaakt met de kwaliteitsmanager aan de kant van de opdrachtgever
 
 ## Proces
@@ -139,10 +140,10 @@ Leerdoelen diensten (week 3):
 
 Leerdoelen self-assessment (week 4):
 * Je weet waar je de recente self-assessments van je project kunt vinden
-* Je weet wat de uitkomsten zijn van de recente zelf-assessments zijn
+* Je weet wat de uitkomsten zijn van de recente self-assessments zijn
 * Je weet welke acties er zijn afgesproken n.a.v. de recent self-assessments en hoe de voortgang ervan wordt bewaakt
 
-Leerdoelen audits (week 4):
+Leerdoelen externe onderzoeken/audits, zoals securitytesten en onderhoudbaarheidstoetsen (week 4):
 * Je kunt oude auditrapportages vinden
 * Je kent de inhoud van recente auditrapportages
 * Je weet welke acties er zijn afgesproken n.a.v. de recent audits en hoe de voortgang ervan wordt bewaakt

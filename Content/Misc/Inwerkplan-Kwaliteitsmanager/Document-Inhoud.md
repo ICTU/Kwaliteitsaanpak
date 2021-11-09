@@ -1,5 +1,7 @@
 # Wat je moet weten over ICTU
 
+Dit hoofdstuk bevat leerdoelen over ICTU als organisatie binnen het Nederlandse overheidslandschap en voorzieningen die ICTU biedt aan al haar medewerkers. Dit hoofdstuk is daarmee niet specifiek voor de rol van kwaliteitsmanager, maar voor de volledigheid toch hier opgenomen.
+
 ## ICTU-organisatie
 
 Leerdoelen (week 1):
@@ -18,12 +20,12 @@ Leerdoelen (week 1):
 * Je weet hoe je hulp kunt vragen van de [Service Desk](https://ictubeheer.sharepoint.com/teams/Organisatie_ServicedeskenFacilitairezaken) bij het gebruik van de ICTU-voorzieningen
 
 Je hebt toegang tot (week 1):
-* [Sharepoint](https://ictubeheer.sharepoint.com)
-* [MS Teams](https://teams.microsoft.com)
-* [Email en agenda](http://webmail.ictu.nl)
-* [Yammer](https://www.yammer.com) (ook bereikbaar via MS Teams)
-* [Topdesk](https://topdesk.ictu.nl) voor het reserveren van vergaderzalen, parkeerplaatsen en andere diensten
+* [MS Outlook](http://webmail.ictu.nl) voor e-mail en agenda
 * [Timetell](https://timetell.ictu.nl) voor het registreren van uren
+* [Sharepoint](https://ictubeheer.sharepoint.com) voor het delen van documenten
+* [MS Teams](https://teams.microsoft.com) voor online vergaderen en teamconversaties (chat)
+* [Topdesk](https://topdesk.ictu.nl) voor het reserveren van vergaderzalen, parkeerplaatsen en andere diensten
+* [Yammer](https://www.yammer.com) voor niet-urgente communicatie en organisatiebrede conversaties (ook bereikbaar via MS Teams)
 
 # Wat je moet weten over softwareontwikkeling bij ICTU
 
@@ -114,8 +116,8 @@ Leerdoelen (week 1):
 Leerdoelen (week 2):
 * Je weet welke organisaties naast de opdrachtgever en ICTU bij het project zijn betrokken
 * Je weet welke governancestructuur er is afgesproken (stuurgroep, projectleidersoverleg, rapportages, e.d.)
-* Je weet wie welke rol speelt bij de opdrachtgever, ICTU en andere betrokken organisaties
-* Je weet wie welke rol speelt binnen het/de Scrumteam(s) in je project
+* Je weet wie welke rol speelt bij de opdrachtgever, ICTU en andere betrokken organisaties (projectleider, product owner, software delivery manager, e.d.)
+* Je weet wie welke rol speelt binnen het/de Scrumteam(s) in je project (ontwikkelaar, tester, devops-engineer, ontwerper, etc.)
 * Je hebt kennisgemaakt met de kwaliteitsmanager aan de kant van de opdrachtgever
 
 ## Proces
@@ -178,5 +180,5 @@ Acties (week 3):
 # Wat je moet weten over je eigen rol
 
 Leerdoelen (week 2):
-* Je kent de taken en verantwoordelijkheden van een kwaliteitsmanager (zie kwaliteitsplantemplate en kwaliteitsplan van je eigen project)
-* Je weet welke specifieke afspraken zijn gemaakt over je taken en verantwoordelijkheden binnen je project
+* Je kent de taken en verantwoordelijkheden van een kwaliteitsmanager (zie templates Kwaliteitsplan, Plan van Aanpak Voorfase en Plan van Aanpak Realisatiefase)
+* Je weet welke specifieke afspraken zijn gemaakt over je taken en verantwoordelijkheden binnen je project (zie Kwaliteitsplan van je eigen project)

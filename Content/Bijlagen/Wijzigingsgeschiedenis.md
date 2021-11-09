@@ -20,6 +20,10 @@
 * Invulinstructie uitgebreid.
 * Duidelijk gemaakt dat als maatregelen submaatregelen hebben alleen de status van submaatregelen hoeft te worden ingevuld.
 
+#### Inwerkplan Kwaliteitsmanager
+
+* Inwerkplan voor de rol van kwaliteitsmanager toegevoegd.
+
 ### Versie 2.3.0, 14 mei 2021
 
 #### Kwaliteitsaanpak

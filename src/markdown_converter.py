@@ -90,7 +90,8 @@ class MarkdownConverter:
                 with self.element(xmltags.PARAGRAPH):
                     self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
             elif document_type == "Document":
-                pass
+                with self.element(xmltags.PARAGRAPH):
+                    self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
             else:
                 raise ValueError(f"Unknown document type '{document_type}' in the settings")
             self.add_element(

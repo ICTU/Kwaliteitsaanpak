@@ -93,12 +93,13 @@ Leerdoelen (week 2):
 * Je kunt metrieken en bronnen configureren
 * Je kunt issues toevoegen aan metrieken
 * Je kunt technische schuld administreren
+* Je kunt tijdreizen in Quality-time (vooral relevant als je voor je project periodieke kwaliteitsrapportage gaat maken)
 
 ### Over het ontwikkelplatform
 
 Leerdoelen (week 3):
-* Je weet dat er twee generaties ontwikkelplatform zijn, te weten "Eco1" en "Eco2"
 * Je kent de [functies](https://ictubeheer.sharepoint.com/teams/Organisatie_SoftwareDiensten/SitePages/ECO2.aspx) van het Ecosysteem
+* Je weet dat er twee generaties ontwikkelplatform zijn, te weten "Eco1" en "Eco2", en kent de belangrijkste verschillen
 * Je weet wie de product owner van het Ecosysteem is
 * Je weet hoe je problemen met het ecosysteem kunt [melden aan ISD](https://jira.ictu-sd.nl/jira/secure/CreateIssueDetails!init.jspa?pid=11709&issuetype=10100)
 * Je weet hoe je je Ecosysteem VPN-key kan verlengen
@@ -110,11 +111,11 @@ Leerdoelen (week 3):
 Leerdoelen (week 1):
 * Je begrijpt wat de doelstelling van de opdrachtgever met het project is, c.q. je weet welk probleem het project moet oplossen
 * Je weet wie de beoogde gebruikers zijn en wie er verder belanghebbende zijn bij het projectresultaat
+* Je weet welke organisaties naast de opdrachtgever en ICTU bij het project zijn betrokken
 
 ## Projectorganisatie
 
 Leerdoelen (week 2):
-* Je weet welke organisaties naast de opdrachtgever en ICTU bij het project zijn betrokken
 * Je weet welke governancestructuur er is afgesproken (stuurgroep, projectleidersoverleg, rapportages, e.d.)
 * Je weet wie welke rol speelt bij de opdrachtgever, ICTU en andere betrokken organisaties (projectleider, product owner, software delivery manager, e.d.)
 * Je weet wie welke rol speelt binnen het/de Scrumteam(s) in je project (ontwikkelaar, tester, devops-engineer, ontwerper, etc.)
@@ -129,6 +130,12 @@ Acties (week 1):
 Acties (zodra mogelijk):
 * Je bent uitgenodigd voor en neemt deel aan de demo's van het team
 * Je hebt deelgenomen aan een refinement, sprintplanning en retrospective
+
+Leerdoelen Quality-time kwaliteitsrapportage (week 1):
+* Je weet uit welke onderdelen (subjects) de rapportage is opgebouwd en waarom
+* Je weet welke metrieken en bronnen er zijn
+* Bij afwijkende normen weet je waarom er wordt afgeweken van de default norm
+* Je weet welke technische schuld is vastgelegd en waarom en welke acties daarover zijn afgesproken in je project
 
 Leerdoelen periodieke kwaliteitsrapportage (indien van toepassing, zodra mogelijk):
 * Je kunt de periodieke kwaliteitsrapportage maken en verspreiden
@@ -148,7 +155,7 @@ Leerdoelen self-assessment (week 4):
 Leerdoelen externe onderzoeken/audits, zoals securitytesten en onderhoudbaarheidstoetsen (week 4):
 * Je kunt oude auditrapportages vinden
 * Je kent de inhoud van recente auditrapportages
-* Je weet welke acties er zijn afgesproken n.a.v. de recent audits en hoe de voortgang ervan wordt bewaakt
+* Je weet welke acties er zijn afgesproken n.a.v. de recente audits en hoe de voortgang ervan wordt bewaakt
 * Je weet welke audits gepland zijn
 
 ## Product
@@ -162,6 +169,9 @@ Leerdoelen (week 3):
 ## Tools
 
 Acties (week 3):
+* Je bent lid van de mailgroep van je project (indien van toepassing)
+* Je hebt toegang tot het MS Teams-team van je project
+* Je hebt toegang tot de Sharepoint teamsite van je project
 * Je hebt toegang tot de ontwikkelomgeving (VLAN) van je project, d.w.z. dat je beschikt over een VPN-key die daartoe toegang geeft
 * Je hebt toegang tot het versiebeheersysteem van je project (GitLab of Azure DevOps)
 * Je hebt toegang tot de build server van je project (GitLab CI, Azure DevOps of Jenkins)

@@ -2,9 +2,9 @@ version: '3'
 services:
   ka:
     build: .
-    working_dir: ${PWD}
+    working_dir: /work
     volumes:
-      - ${PWD}:${PWD}
+      - ./:/work
       - /var/run/docker.sock:/var/run/docker.sock
     command: bash -c "python3 src/convert.py --log INFO --version 2.4.0-rc.1 DocumentDefinitions/*.json"
   wkhtmltopdf:
@@ -15,5 +15,5 @@ services:
       dockerfile: Dockerfile.wkhtmltopdf
     working_dir: /work
     volumes:
-      - ${PWD}:/work
+      - ./:/work
     entrypoint: bash

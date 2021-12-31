@@ -101,13 +101,13 @@ Het project definieert en hanteert een Definition of Ready (DoR) voor user stori
 De Definition Of Ready van het project bevat de volgende criteria ({vul aan en pas aan}):
 
 1. De beschrijving voldoet aan het user story formaat “als <rol> wil ik <actie> zodat <reden>”;
-1. De annotaties en screenshots/prototype zijn gereed;
-1. Afhankelijkheden met derden zijn in kaart (bijvoorbeeld: een koppelvlakbeschrijving is beschikbaar);
-1. De story is ingeschat door het team;
-1. De story is goedgekeurd door de product owner;
-1. De story is goedgekeurd door de reviewer binnen het team;
-1. Het verwachte aantal logische testgevallen is ingevuld;
-1. Er is ingeschat of de user story een performance risico, een beveiligingsrisico en/of een infrastructuurwijziging met zich meebrengt.
+2. De annotaties en screenshots/prototype zijn gereed;
+3. Afhankelijkheden met derden zijn in kaart (bijvoorbeeld: een koppelvlakbeschrijving is beschikbaar);
+4. De story is ingeschat door het team;
+5. De story is goedgekeurd door de product owner;
+6. De story is goedgekeurd door de reviewer binnen het team;
+7. Het verwachte aantal logische testgevallen is ingevuld;
+8. Er is ingeschat of de user story een performance risico, een beveiligingsrisico en/of een infrastructuurwijziging met zich meebrengt.
 
 ### Definition of Done
 
@@ -136,6 +136,10 @@ Het vrijgaveadvies beschrijft ({vul aan en pas aan}):
 3. Afwijkingen kwaliteitsrapportage,
 4. Overige risico's,
 5. Het advies van ICTU wat betreft ingebruikname van de release.
+
+### Release notes
+
+Voor elke release stelt het project release notes op, een overzicht van de wijzigingen in de release. De release notes worden opgesteld door {rol} namens ICTU.
 
 ## ICTU-kwaliteitssysteem
 
@@ -217,7 +221,14 @@ Het uitgangspunt is dat zoveel mogelijk van de software die ICTU maakt, geautoma
 
 ## Performance-testen
 
-Om de performance van de software te borgen kunnen performance-testen uitgevoerd worden. Het MTP beschrijft de gekozen aanpak.
+Om de performance van de software te borgen kunnen performance-testen uitgevoerd worden. Het MTP beschrijft de gekozen aanpak; de eisen zijn vastgelegd in het NFE-document.
+
+ICTU voert drie soorten performance-testen uit in de eigen testomgeving, die inzicht geven in de volgende facetten:
+1.	snelheid van handelingen en voldoen aan eisen (loadtest)
+2.	stabiliteit op langere termijn (duurtest)
+3.	schaalbaarheid en maximale belastbaarheid (stresstest).
+
+De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient de opdrachtgever zelf te laten testen.
 
 Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen uitgevoerd in de ontwikkelomgeving van ICTU. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het ontwikkelteam. Issues die voortkomen uit performance-testen worden opgenomen in Jira met het label "performance_bevinding".
 

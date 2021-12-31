@@ -6,6 +6,6 @@ jobs:
     steps:
       - checkout
       - run:
-          docker-compose up
+          docker compose up
       - store_artifacts:
           path: dist

@@ -78,14 +78,14 @@ def convert_pdf(
     toc_options = (
         "toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl" if settings["IncludeTableOfContents"] else ""
     )
-    wkhtmltopdf = f"""docker-compose run wkhtmltopdf -c "wkhtmltopdf \
+    wkhtmltopdf = f"""wkhtmltopdf \
         --enable-local-file-access \
         --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html {header_filename} --header-spacing 10 \
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
         --title '{settings["Title"]}' \
         cover {html_cover_filename} \
-        {toc_options} {html_filename} {pdf_build_filename}" """
+        {toc_options} {html_filename} {pdf_build_filename}"""
     os.system(wkhtmltopdf)
     os.system(f"gs -o {pdf_filename} -sDEVICE=pdfwrite -dPrinted=false -f {pdf_build_filename} src/pdfmark.txt")
 

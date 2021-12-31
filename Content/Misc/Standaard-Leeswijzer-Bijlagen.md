@@ -1,1 +1,0 @@
-Bijlage A bevat afkortingen en termen die voorkomen in de $KWALITEITSAANPAK$ en bijbehorende templates. Bijlage B verwijst naar regelmatig gebruikte bronnen. Bijlage C bevat een beknopte samenvatting van de $KWALITEITSAANPAK$.

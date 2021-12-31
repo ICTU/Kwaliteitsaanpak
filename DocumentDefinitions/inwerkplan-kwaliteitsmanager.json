@@ -1,15 +1,16 @@
 {
-    "InputFile": "DocumentDefinitions/Misc/document-template.md",
-    "BuildPath": "build/Misc/Inwerkplan-Kwaliteitsmanager/",
+    "InputFile": "DocumentDefinitions/Templates/document-template.md",
+    "BuildPath": "build/Templates/Inwerkplan-Kwaliteitsmanager/",
     "OutputPath": "dist",
     "Title": "Inwerkplan Kwaliteitsmanager",
-    "DocumentType": "Document",
+    "Subtitle": "{Projectnaam/-namen}",
+    "DocumentType": "Template",
     "DocumentFolder": "Inwerkplan-Kwaliteitsmanager",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Inwerkplan-Kwaliteitsmanager.docx",
+            "OutputFile": "Template-Inwerkplan-Kwaliteitsmanager.docx",
             "ReferenceFile": "DocumentDefinitions/reference.docx"
         }
     },

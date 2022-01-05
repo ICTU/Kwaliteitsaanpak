@@ -5,15 +5,30 @@
 #### Kwaliteitsaanpak
 
 * De titel van maatregel "Het project levert in elke fase vastgestelde informatie over het product op" (M01) veranderd in "Het project levert in elke fase vastgestelde producten en informatie op" zodat de titel beter past bij de scope van de maatregel.
-* Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01) de lopende tekst en de tabel consistent gemaakt.
+* Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): de tabel uitgebreid met product backlog, en de lopende tekst aangevuld en aangepast opdat deze consistent is met de tabel.
+* Mij maatregel "Het project zorgt dat het product continu aan de kwaliteitsnormen voldoet" (M02): "Ook zorgt het project dat de performance van de software regelmatig wordt getest." toegevoegd. 
 
 #### Template Kwaliteitsplan
 
 * Bijlage met periodieke (kwaliteits)controles toegevoegd.
+* Beschrijvingen van release notes en performancetest toegevoegd.
 
 #### Template Niet-Functionele Eisen
 
 * Axe-core bijgewerkt naar versie 4.3 in de tabel met de WCAG 2.1 succescriteria.
+
+#### Template Plan van Aanpak Realisatiefase
+
+* UX: aanpassing producten uit de voorfase; verantwoordelijkheden van rol UX-designer aangevuld.
+* toelichting op te maken afspraken voor: release notes, vrijgaveadvies, beveiligingstest, performancetest.
+
+#### Template Plan van Aanpak Voorfase
+
+* UX: te realiseren producten toegevoegd: interactie-ontwerp (UX), wireframe, mockup, prototype, animatie.
+
+#### Template Generiek
+
+* Definities toegevoegd: release notes en vrijgaveadvies.
 
 #### Self-assessment checklist
 

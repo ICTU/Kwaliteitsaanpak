@@ -10,7 +10,7 @@ ICTU levert de volgende producten op:
 1. Werkende software met de functionaliteiten zoals hierboven beschreven.
 1. Per release:
     a. een vrijgaveadvies,
-    a. een overzicht van de wijzigingen in de release ("release notes"),
+    a. de release notes,
     a. een bijgewerkte installatiehandleiding,
     a. een bijgewerkt software-architectuurdocument (SAD),
     a. een bijgewerkt globaal functioneel ontwerp (GFO),
@@ -27,12 +27,12 @@ Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {
 * Ontwikkel, test- en demo-omgevingen,
 * Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Azure DevOps, GitLab en/of Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (Checkmarx, OWASP Dependency Checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
 * Backlog management tools (Jira en/of Azure DevOps),
-* Beveiligings- en performancetesten in de ICTU-testomgevingen.
+* Beveiligings- en performancetesten in de ICTU-testomgevingen. ICTU voert deze tests uit voordat een nieuwe versie van de software wordt opgeleverd. {Beschrijf hier eventuele andere afspraken met opdrachtgever}.
 
 Buiten de scope van de opdracht valt:
 
 * Acceptatie- en productieomgevingen en de installatie van de software op acceptatie- en productieomgevingen,
-* Beveiligings- en performancetesten in acceptatie- en productieomgevingen,
+* Beveiligings- en performancetesten in acceptatie- en productieomgevingen, die onder verantwoordelijkheid van de opdrachtgever worden uitgevoerd,
 * Keten- en integratietesten met aanpalende systemen in acceptatie- en productieomgevingen,
 * Testen met (geanonimiseerde) productiedata,
 * Beheeractiviteiten door ICTU.
@@ -69,6 +69,7 @@ Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off g
 ## Oplevering software
 
 De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het projectteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Als er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
+{Beschrijf hier de afspraken tussen ICTU en {opdrachtgever} over de opzet van vrijgaveadvies, release notes en goedkeuringsproces.}
 
 ## Kwaliteitsbeheersing
 
@@ -171,7 +172,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 | Tester                                 | {x} uur         | Opstellen logische testgevallen, ontwikkelen en uitvoeren fysieke testgevallen, opstellen testrapportages en vrijgaveadvies |
 | Functioneel ontwerper                  | {x} uur         | Onderhouden GFO, ondersteunen product owner bij opstellen en uitwerken van de user stories                                  |
 | Database administrator                 | {x} uur         | Onderhouden logisch datamodel en fysiek database ontwerp, ontwikkelen migratiescripts, database tuning                      |
-| UX-designer                            | {x} uur         | Gebruikersonderzoek, onderhouden UX-richtlijnen, maken en onderhouden prototypes, toetsen prototypes met gebruikers |
+| UX-designer                            | {x} uur         | Gebruikersonderzoek, onderhouden UX-richtlijnen, maken en onderhouden prototype {of wireframe/mockup/animatie}, toetsen prototypes met gebruikers |
 | Informatiebeveiligingsexpert           | {x} uur         | Onderhouden IB-plan, toetsen IB-maatregelen                                                                                 |
 | Kwaliteitsmanager                      | {x} uur         | Inrichten, onderhouden en bewaken kwaliteitsrapportage                                                                      |
 | Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het team, inhoudelijke rapportage                    |
@@ -183,3 +184,13 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 {In de projectovereenkomst moet in de begroting met onderstaande opmerkingen rekening worden gehouden.}
 
 {Voor de begroting wordt uitgegaan van een gemiddeld bruto tarief van € 155,-. De werkelijke kosten worden bekend als de projectmedewerkers bekend zijn. Wanneer overschrijding van het budget dreigt (bijvoorbeeld vanwege substantieel hogere tarieven), wordt dit tijdig met de opdrachtgever besproken.}
+
+Naast kosten voor de inzet van ICTU-medewerkers worden de volgende kosten voor door ICTU te benutten diensten verwacht:
+
+ | Dienst                           | Verwachte kosten | Toelichting                                                                                        |
+|:----------------------------------|:-----------------| :--------------------------------------------------------------------------------------------------|
+| Performancetests                  |                  |                                                                                                    |
+| Securitytests                     |                  |                                                                                                    |
+| Onderhoudbaarheidstoetsen         |                  |                                                                                                    |
+| Usabilitytests                    |                  |                                                                                                    |
+| Toegankelijkheidstests            |                  |                                                                                                    |

@@ -14,6 +14,7 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Business impact analysis (BIA)                  | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Privacy impact assessment (PIA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Globaal functioneel ontwerp (GFO)               | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Interactie-ontwerp (UX)                         | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Softwarearchitectuurdocument (SAD)              | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Infrastructuurarchitectuur (IA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | High level design (HLD)                         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
@@ -26,7 +27,7 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Kwaliteitsplan                                  | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Geprioriteerde backlog met user stories         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Vastgesteld minimal viable product              | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Prototype                                       | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Wireframe, mockup, prototype, animatie          | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Voorstel realisatiefase                         | ICTU                         | ICTU         | {reviewers}             |
 | Plan van aanpak realisatiefase                  | ICTU                         | ICTU         | {reviewers}             |
 | Tussentijdse rapportage t.b.v. go/no-go besluit | {verantwoordelijke}          | ICTU         | {reviewers}             |
@@ -51,7 +52,7 @@ Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak.
 * Nieuwe tussentijdse versies van documenten worden kortcyclisch opgeleverd, elke {termijn}.
 * Alle tussentijdse versies worden gereviewd door {reviewers} binnen de afgesproken termijn (maximaal {aantal} werkdagen).
 
-De voorfase wordt uitgevoerd in iteraties, "sprints" genaamd, van twee weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de status van de producten. In de planningssessie wordt onder andere nagegaan in hoeverre een product in de komende sprint kan worden opgepakt; dit hangt af van de voortgang van andere producten waarvan het betreffende product afhankelijk is. Rondom de thema’s {functionaliteit, architectuur, techniek en veiligheid} organiseert ICTU werksessies.
+De voorfase wordt uitgevoerd in iteraties, "sprints" genaamd, van twee weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de status van de producten. In de planningssessie wordt onder andere nagegaan in hoeverre een product in de komende sprint kan worden opgepakt; dit hangt af van de voortgang van andere producten waarvan het betreffende product afhankelijk is. Rondom de thema’s {functionaliteit, (gebruiks)kwaliteit, architectuur, techniek en veiligheid} organiseert ICTU werksessies.
 
 ## Werving team
 
@@ -173,7 +174,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 | Software-architect/senior ontwikkelaar | {x} uur         | Penvoerder SAD, reviewen {documenten} |
 | Functioneel ontwerper                  | {x} uur         | Penvoerder GFO, reviewen {documenten} |
 | Database administrator                 | {x} uur         | Opstellen logisch datamodel en fysiek database ontwerp, reviewen {documenten} |
-| UX-designer                            | {x} uur         | Gebruikersonderzoek, opstellen UX-richtlijnen, maken prototype {of wireframe/mockup}, reviewen {documenten} |
+| UX-designer                            | {x} uur         | Gebruikersonderzoek, opstellen UX-richtlijnen, maken prototype {of wireframe/mockup/animatie}, reviewen {documenten} |
 | Informatiebeveiligingsexpert           | {x} uur         | Penvoerder {documenten}, reviewen {documenten} |
 | Privacy expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten} |
 | Testmanager                            | {x} uur         | Penvoerder testplan softwarerealisatie, reviewen {documenten} |

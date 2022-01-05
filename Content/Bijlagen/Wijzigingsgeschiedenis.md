@@ -20,7 +20,8 @@
 #### Template Plan van Aanpak Realisatiefase
 
 * UX: aanpassing producten uit de voorfase; verantwoordelijkheden van rol UX-designer aangevuld.
-* toelichting op te maken afspraken voor: release notes, vrijgaveadvies, beveiligingstest, performancetest.
+* Toelichting op te maken afspraken voor: release notes, vrijgaveadvies, beveiligingstest, performancetest.
+* In hoofdstuk Verwachte inzet ICTU een tabel toegevoegd met te verwachten kosten voor door ICTU te benutten diensten.
 
 #### Template Plan van Aanpak Voorfase
 

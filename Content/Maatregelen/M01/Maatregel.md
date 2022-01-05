@@ -79,7 +79,7 @@ ICTU levert de regressietests, inclusief configuratiebestanden en scripts nodig 
 De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTP-header en -request-configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de 'Server'-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer.
 
 **Release notes**
-Voor elke release stelt het project release notes op; een overzicht van de wijzigingen in de release. ICTU en opdrachtgever maken afspraken over de opzet van de release notes.
+Voor elke release stelt het project release notes op: een overzicht van de wijzigingen in de release. ICTU en opdrachtgever maken afspraken over de opzet van de release notes.
 
 **Vrijgaveadvies**
 Voor elke release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat tenminste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Als er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.

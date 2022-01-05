@@ -14,9 +14,10 @@ De realisatiefase is een vervolg op de voorfase {voorfaseproject}. De documenten
 * Kwaliteitsplan, versie {versie},
 * Niet-functionele eisen (NFE), versie {versie},
 * Globaal functioneel ontwerp (GFO), versie {versie},
+* Interactie-ontwerp (UX), versie {versie},
 * Geprioriteerde backlog met user stories, versie {versie},
 * Vastgesteld minimal viable product, versie {versie},
-* Prototype, versie {versie},
+* Wireframe, mockup, prototype, animatie, versie {versie},
 * Tussentijdse rapportage t.b.v. go/no-go besluit, versie {versie}.
 
 {Beschrijf ook een eventuele relatie met andere documenten die niet afkomstig zijn uit de voorfase}

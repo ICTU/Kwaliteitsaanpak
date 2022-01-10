@@ -1,6 +1,6 @@
 ## Relatie met andere documenten
 
-Input voor dit kwaliteitsplan, en dan met name paragraaf 4.16, zijn de volgende documenten:
+Input voor dit kwaliteitsplan, en dan met name paragraaf 5.16, zijn de volgende documenten:
 
 | Titel                                  |  Versie  |
 |:---------------------------------------|:--------:|

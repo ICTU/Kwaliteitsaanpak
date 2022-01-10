@@ -69,7 +69,7 @@ Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off g
 ## Oplevering software
 
 De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het projectteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Als er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
-{Beschrijf hier de afspraken tussen ICTU en {opdrachtgever} over de opzet van vrijgaveadvies, release notes en goedkeuringsproces.}
+{Beschrijf hier de afspraken tussen ICTU en opdrachtgever over de opzet van vrijgaveadvies, release notes en goedkeuringsproces.}
 
 ## Kwaliteitsbeheersing
 

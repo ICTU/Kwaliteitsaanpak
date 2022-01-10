@@ -224,9 +224,9 @@ Het uitgangspunt is dat zoveel mogelijk van de software die ICTU maakt, geautoma
 Om de performance van de software te borgen kunnen performance-testen uitgevoerd worden. Het MTP beschrijft de gekozen aanpak; de eisen zijn vastgelegd in het NFE-document.
 
 ICTU voert drie soorten performance-testen uit in de eigen testomgeving, die inzicht geven in de volgende facetten:
-1.	snelheid van handelingen en voldoen aan eisen (loadtest)
-2.	stabiliteit op langere termijn (duurtest)
-3.	schaalbaarheid en maximale belastbaarheid (stresstest).
+1. snelheid van handelingen en voldoen aan eisen (loadtest)
+2. stabiliteit op langere termijn (duurtest)
+3. schaalbaarheid en maximale belastbaarheid (stresstest).
 
 De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient de opdrachtgever zelf te laten testen.
 

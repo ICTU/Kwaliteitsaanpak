@@ -5,7 +5,7 @@
     "Title": "Software-architectuurdocument",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
-    "TemplateFolder": "SAD",
+    "DocumentFolder": "SAD",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "OutputFormats": {

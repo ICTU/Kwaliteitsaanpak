@@ -41,7 +41,7 @@ class MarkdownConverter:
                 if line.startswith("#include"):
                     filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
                     filename = filename.replace(
-                        "{{TEMPLATE-FOLDER}}", settings.get("TemplateFolder", "TemplateFolder missing in settings")
+                        "{{DOCUMENT-FOLDER}}", settings.get("DocumentFolder", "DocumentFolder missing in settings")
                     )
                     self.convert_markdown_file(pathlib.Path(filename), settings)
                 else:

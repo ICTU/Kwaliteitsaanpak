@@ -5,7 +5,7 @@
     "Title": "Globaal Functioneel Ontwerp",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
-    "TemplateFolder": "GFO",
+    "DocumentFolder": "GFO",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "OutputFormats": {

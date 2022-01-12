@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Nog te releasen
+### Versie 2.4.0, 12 januari 2022
 
 #### Kwaliteitsaanpak
 

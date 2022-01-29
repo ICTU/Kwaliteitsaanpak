@@ -40,9 +40,9 @@ class PptxBuilder(Builder):
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
         if tag == xmltags.TITLE:
             self.add_slide(self.TITLE_SLIDE, text)
-            self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(60)
+            self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(60)  # type: ignore
         elif tag == xmltags.PARAGRAPH and (self.in_element(xmltags.FRONTPAGE) or self.in_element(xmltags.SLIDE)):
-            self.current_slide.shapes[1].text = text
+            self.current_slide.shapes[1].text = text  # type: ignore
             self.remove_bullet(paragraph_index=0)
         elif self.in_element(xmltags.MEASURE) and not self.in_appendix():
             if self.chapter_heading:
@@ -50,10 +50,10 @@ class PptxBuilder(Builder):
                 self.chapter_heading = ""
             if tag == xmltags.BOLD:
                 self.add_slide(self.CONTENT_SLIDE, text)
-                self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(24)
+                self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(24)  # type: ignore
             else:
                 self.add_text_box()
-                self.current_slide.shapes[1].text = text
+                self.current_slide.shapes[1].text = text  # type: ignore
         elif (
             tag == xmltags.HEADING
             and self.in_element(xmltags.SECTION, dict(level="1"))
@@ -61,16 +61,19 @@ class PptxBuilder(Builder):
         ):
             self.chapter_heading = text
         elif tag == xmltags.LIST_ITEM and self.in_element(xmltags.SLIDE):
-            text_frame = self.current_slide.shapes[1].text_frame
-            p = text_frame.add_paragraph() if self.current_slide.shapes[1].text.strip() else text_frame.paragraphs[0]
-            p.level = 0
-            p.text = text
+            text_frame = self.current_slide.shapes[1].text_frame  # type: ignore
+            if self.current_slide.shapes[1].text.strip():  # type: ignore
+                paragraph = text_frame.add_paragraph()
+            else:
+                paragraph = text_frame.paragraphs[0]
+            paragraph.level = 0
+            paragraph.text = text
 
     def add_slide(self, slide_layout_index: int, title: str) -> None:
         """Add a new slide with the given title to the presentation."""
         slide_layout = self.presentation.slide_layouts[slide_layout_index]
         self.current_slide = self.presentation.slides.add_slide(slide_layout)
-        self.current_slide.shapes.title.text = title
+        self.current_slide.shapes.title.text = title  # type: ignore
 
     def add_text_box(self):
         """Add a text box to the current slide."""
@@ -80,7 +83,8 @@ class PptxBuilder(Builder):
     def remove_bullet(self, paragraph_index: int):
         """Remove bullets from the paragraph."""
         no_bullet = etree.Element("{http://schemas.openxmlformats.org/drawingml/2006/main}buNone")
-        self.current_slide.shapes[1].text_frame.paragraphs[paragraph_index]._pPr.insert(0, no_bullet)
+        # pylint: disable=protected-access
+        self.current_slide.shapes[1].text_frame.paragraphs[paragraph_index]._pPr.insert(0, no_bullet)  # type: ignore
 
     def in_appendix(self) -> bool:
         """Return whether the current section is an appendix."""

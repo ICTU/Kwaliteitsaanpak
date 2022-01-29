@@ -20,7 +20,7 @@ from custom_types import JSON, Settings, Variables
 
 def read_json(json_filename: str) -> JSON:
     """Read JSON from the specified filename."""
-    with open(json_filename) as json_file:
+    with open(json_filename, encoding="utf-8") as json_file:
         return JSON(json.load(json_file))
 
 
@@ -70,23 +70,22 @@ def convert_pdf(
     html_cover_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".cover.html").name
     html_cover_builder = HTMLCoverBuilder(html_cover_filename)
     converter.convert(html_cover_builder)
-    with open("DocumentDefinitions/Shared/header.html") as header_template_file:
+    with open("DocumentDefinitions/Shared/header.html", encoding="utf-8") as header_template_file:
         header_contents = header_template_file.read() % variables["KWALITEITSAANPAK"]
     header_filename = build_path / "header.html"
-    with open(header_filename, "w") as header_file:
+    with open(header_filename, mode="w", encoding="utf-8") as header_file:
         header_file.write(header_contents)
-    toc_options = (
-        "toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl" if settings["IncludeTableOfContents"] else ""
-    )
-    wkhtmltopdf = f"""wkhtmltopdf \
+    os.system(
+        f"""wkhtmltopdf \
         --enable-local-file-access \
         --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
         --header-html {header_filename} --header-spacing 10 \
         --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
         --title '{settings["Title"]}' \
         cover {html_cover_filename} \
-        {toc_options} {html_filename} {pdf_build_filename}"""
-    os.system(wkhtmltopdf)
+        {"toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl" if settings["IncludeTableOfContents"] else ""} \
+        {html_filename} {pdf_build_filename}"""
+    )
     os.system(f"gs -o {pdf_filename} -sDEVICE=pdfwrite -dPrinted=false -f {pdf_build_filename} src/pdfmark.txt")
 
 

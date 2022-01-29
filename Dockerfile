@@ -1,4 +1,4 @@
-FROM python:3.10.1-buster
+FROM python:3.10.2-buster
 
 RUN apt-get update \
   && apt-get -y upgrade \

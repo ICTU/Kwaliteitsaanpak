@@ -20,6 +20,14 @@
                 {
                     "from": "Content/Images/relaties-tussen-producten.png",
                     "to": "build/Kwaliteitsaanpak/relaties-tussen-producten.png"
+                },
+                {
+                    "from": "Content/Images/ICTU.png",
+                    "to": "build/Kwaliteitsaanpak/ICTU.png"
+                },
+                {
+                    "from": "Content/Images/word-cloud.png",
+                    "to": "build/Kwaliteitsaanpak/word-cloud.png"
                 }
             ]
         },
@@ -33,6 +41,14 @@
                 {
                     "from": "Content/Images/relaties-tussen-producten.png",
                     "to": "dist/relaties-tussen-producten.png"
+                },
+                {
+                    "from": "Content/Images/ICTU.png",
+                    "to": "dist/ICTU.png"
+                },
+                {
+                    "from": "Content/Images/word-cloud.png",
+                    "to": "dist/word-cloud.png"
                 }
             ]
         },

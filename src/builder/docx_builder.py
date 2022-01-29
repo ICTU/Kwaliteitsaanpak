@@ -35,11 +35,14 @@ class DocxBuilder(Builder):
         xmltags.STRIKETHROUGH,
     )
 
-    def __init__(self, filename: pathlib.Path, docx_reference_filename: pathlib.Path) -> None:
+    def __init__(
+        self, filename: pathlib.Path, docx_reference_filename: pathlib.Path, images_folder: pathlib.Path
+    ) -> None:
         super().__init__(filename)
         filename.unlink(missing_ok=True)
         shutil.copy(docx_reference_filename, filename)
         self.doc = Document(filename)
+        self.images_folder = images_folder
         self.paragraph: Optional[Paragraph] = None  # The current paragraph
         self.current_list_style: List[str] = []  # Stack of list styles
         self.previous_list_item: List[Optional[Paragraph]] = []  # Stack of previous list items
@@ -87,7 +90,7 @@ class DocxBuilder(Builder):
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
         elif tag == xmltags.IMAGE:
-            self.doc.add_picture(attributes["src"][len("/work/") :])
+            self.doc.add_picture(str(self.images_folder / str(attributes["src"])))
 
     def _add_list_item(self) -> None:
         """Add a list item."""

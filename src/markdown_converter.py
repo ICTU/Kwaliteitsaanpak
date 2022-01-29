@@ -66,7 +66,7 @@ class MarkdownConverter:
         with self.element(xmltags.FRONTPAGE):
             self.add_element(
                 xmltags.IMAGE,
-                attributes={xmltags.IMAGE_SRC: "/work/Content/Images/ICTU.png", xmltags.IMAGE_TITLE: "ICTU logo"},
+                attributes={xmltags.IMAGE_SRC: "ICTU.png", xmltags.IMAGE_TITLE: "ICTU logo"},
             )
             with self.element(xmltags.TITLE):
                 self.process_formatted_text(settings["Title"])
@@ -94,7 +94,7 @@ class MarkdownConverter:
             self.add_element(
                 xmltags.IMAGE,
                 attributes={
-                    xmltags.IMAGE_SRC: "/work/Content/Images/word-cloud.png",
+                    xmltags.IMAGE_SRC: "word-cloud.png",
                     xmltags.IMAGE_TITLE: "Word cloud",
                 },
             )

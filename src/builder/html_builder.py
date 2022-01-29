@@ -35,9 +35,7 @@ class HTMLBuilder(Builder):
         self.table_cell_html_tag: Optional[str] = None
         self.in_keep_together_div = False
         self.in_measure = False
-
-    def accept_element(self, tag: str) -> bool:
-        return tag != xmltags.FRONTPAGE
+        self.frontpage_done = False
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:  # pylint:disable=too-many-branches
         if tag == xmltags.DOCUMENT:
@@ -99,6 +97,11 @@ class HTMLBuilder(Builder):
             self.in_measure = True
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
+        if tag == xmltags.TITLE:
+            title = html_tags.PARAGRAPH
+            self.builder.start(title, {html_tags.CLASS: "title"})
+            self.builder.data(text)
+            self.builder.end(title)
         if tag == xmltags.HEADING:
             if self.heading_level[-1] > 1 and not self.in_keep_together_div:
                 self.builder.start(html_tags.DIV, {html_tags.CLASS: "keep-together"})
@@ -115,6 +118,8 @@ class HTMLBuilder(Builder):
         if tag == xmltags.DOCUMENT:
             self.builder.end(html_tags.BODY)
             self.builder.end(html_tags.HTML)
+        elif tag == xmltags.FRONTPAGE:
+            self.frontpage_done = True
         elif tag == xmltags.PARAGRAPH:
             self.end_paragraph()
         elif tag in self.LIST:
@@ -167,26 +172,15 @@ class HTMLBuilder(Builder):
         tree.write(str(self.filename), "unicode", method="html")
 
 
+class HTMLContentBuilder(HTMLBuilder):
+    """HTML document content builder."""
+
+    def accept_element(self, tag: str) -> bool:
+        return tag != xmltags.FRONTPAGE
+
+
 class HTMLCoverBuilder(HTMLBuilder):
     """HTML cover builder."""
 
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(*args, **kwargs)
-        self.frontpage_done = False
-
     def accept_element(self, tag: str) -> bool:
         return not self.frontpage_done
-
-    def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
-        if tag == xmltags.TITLE:
-            title = html_tags.PARAGRAPH
-            self.builder.start(title, {html_tags.CLASS: "title"})
-            self.builder.data(text)
-            self.builder.end(title)
-        else:
-            super().text(tag, text, attributes)
-
-    def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
-        super().end_element(tag, attributes)
-        if tag == xmltags.FRONTPAGE:
-            self.frontpage_done = True

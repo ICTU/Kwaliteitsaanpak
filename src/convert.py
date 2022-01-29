@@ -14,7 +14,7 @@ from xml.etree.ElementTree import ElementTree
 
 from cli import parse_cli_arguments
 from converter import Converter
-from builder import DocxBuilder, HTMLBuilder, HTMLCoverBuilder, PptxBuilder, XlsxBuilder
+from builder import DocxBuilder, HTMLBuilder, HTMLContentBuilder, HTMLCoverBuilder, PptxBuilder, XlsxBuilder
 from markdown_converter import MarkdownConverter
 from custom_types import JSON, Settings, Variables
 
@@ -61,16 +61,16 @@ def write_xml(xml: ElementTree, settings: Settings) -> None:
     xml.write(str(xml_filename), encoding="utf-8")
 
 
-def copy_files(settings: Settings, format: str) -> None:
+def copy_files(settings: Settings, output_format: str) -> None:
     """Copy specified source files (e.g. CSS files) to the specified destinations."""
-    for file_to_copy in settings["OutputFormats"][format].get("CopyFiles", []):
+    for file_to_copy in settings["OutputFormats"][output_format].get("CopyFiles", []):
         shutil.copy(pathlib.Path(file_to_copy["from"]), pathlib.Path(file_to_copy["to"]))
 
 
 def convert_html(converter, settings: Settings) -> None:
     """Convert the XML to HTML."""
     html_filename = get_output_path(settings) / settings["OutputFormats"]["html"]["OutputFile"]
-    html_builder = HTMLBuilder(html_filename, "")
+    html_builder = HTMLBuilder(html_filename, pathlib.Path(""))
     converter.convert(html_builder)
 
 
@@ -80,7 +80,7 @@ def convert_pdf(converter, build_path: pathlib.Path, settings: Settings, variabl
     pdf_filename = get_output_filepath(settings, "pdf")
     pdf_build_filename = build_path / pathlib.Path(settings["OutputFormats"]["pdf"]["OutputFile"])
     html_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".html").name
-    html_builder = HTMLBuilder(html_filename, build_path)
+    html_builder = HTMLContentBuilder(html_filename, build_path)
     converter.convert(html_builder)
     html_cover_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".cover.html").name
     html_cover_builder = HTMLCoverBuilder(html_cover_filename, build_path)
@@ -110,7 +110,11 @@ def convert_pdf(converter, build_path: pathlib.Path, settings: Settings, variabl
 def convert_docx(converter, build_path: pathlib.Path, settings: Settings) -> None:
     """Convert the XML to docx."""
     docx_build_filename = build_path / settings["OutputFormats"]["docx"]["OutputFile"]
-    docx_builder = DocxBuilder(docx_build_filename, pathlib.Path(settings["OutputFormats"]["docx"]["ReferenceFile"]))
+    docx_builder = DocxBuilder(
+        docx_build_filename,
+        pathlib.Path(settings["OutputFormats"]["docx"]["ReferenceFile"]),
+        pathlib.Path("Content/Images"),
+    )
     converter.convert(docx_builder)
     copy_output(docx_build_filename, settings, "docx")
 
@@ -157,9 +161,9 @@ def get_path(settings: Settings, pathname: str) -> pathlib.Path:
     return path
 
 
-def get_output_filepath(settings: Settings, format: str) -> pathlib.Path:
+def get_output_filepath(settings: Settings, output_format: str) -> pathlib.Path:
     """Return the output filepath for the specified format. Create intermediate folders if necessary."""
-    return get_output_path(settings) / settings["OutputFormats"][format]["OutputFile"]
+    return get_output_path(settings) / pathlib.Path(settings["OutputFormats"][output_format]["OutputFile"])
 
 
 def main(settings_filenames: List[str], version: str) -> None:

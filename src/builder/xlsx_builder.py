@@ -57,7 +57,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             if self.last_level_1_section_heading:
                 self.row += 1
                 self.checklist.merge_range(
-                    "A{row}:D{row}".format(row=self.row),
+                    f"A{self.row}:D{self.row}",
                     self.last_level_1_section_heading,
                     self.formats["header"],
                 )
@@ -105,7 +105,9 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
                 text += " " * (int(attributes[xmltags.TABLE_CELL_WIDTH]) - len(text))
             self.measure_text.append(text)
 
-    def __write_measure(self, measure_id, measure_text, submeasure: bool = False, has_submeasures: bool = False) -> None:
+    def __write_measure(
+        self, measure_id, measure_text, submeasure: bool = False, has_submeasures: bool = False
+    ) -> None:
         """Write a measure row."""
         measure_format_key = "submeasure" if submeasure else "measure"
         self.checklist.write(self.row, self.MEASURE_ID_COLUMN, measure_id, self.formats[measure_format_key])
@@ -156,10 +158,8 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
     def __create_checklist(self, version: str) -> None:
         self.checklist.merge_range(
             "A1:D1",
-            "Onderstaande checklist kan gebruikt worden voor het uitvoeren van een assessment tegen de "
-            "ICTU Kwaliteitsaanpak Softwareontwikkeling versie {0}, {1}.".format(
-                version, datetime.date.today().strftime("%d-%m-%Y")
-            ),
+            "Onderstaande checklist kan gebruikt worden voor het uitvoeren van een assessment tegen de ICTU "
+            f"Kwaliteitsaanpak Softwareontwikkeling versie {version}, {datetime.date.today().strftime('%d-%m-%Y')}.",
             self.formats["header"],
         )
         self.checklist.set_row(0, 30)
@@ -167,7 +167,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             "A2:D2",
             "Gebruik de 'Status' kolom om aan te geven in hoeverre een maatregel uit de Kwaliteitsaanpak is toegepast. "
             "Bij maatregelen met submaatregelen hoeft alleen de status van de submaatregelen te worden ingevuld.",
-            self.formats["instructions"]
+            self.formats["instructions"],
         )
         self.checklist.set_row(1, 40)
         self.checklist.merge_range(
@@ -175,7 +175,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             "Bij maatregelen die primair door een project moeten worden toegepast geeft de status aan in hoevere het "
             "project dat doet. Bij maatregelen die primair door ICTU moeten worden toegepast geeft de status aan in "
             "hoeverre ICTU dat doet, gezien vanuit het perspectief van het project.",
-            self.formats["instructions"]
+            self.formats["instructions"],
         )
         self.checklist.set_row(2, 40)
         self.checklist.merge_range(
@@ -192,7 +192,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             [("Maatregel", 12), ("Omschrijving", 70), ("Status", 20), ("Toelichting", 70)]
         ):
             self.checklist.write(self.HEADER_ROW, column, header, self.formats["header"])
-            self.checklist.set_column("{0}:{0}".format("ABCD"[column]), width)
+            self.checklist.set_column(f"{'ABCD'[column]}:{'ABCD'[column]}", width)
 
     def __finish_checklist(self) -> None:
         """Wrap up the checklist."""
@@ -203,8 +203,11 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         assessment_choices = ["voldoet", "voldoet deels", "voldoet niet", "niet van toepassing"]
         for choice in assessment_choices:
             self.checklist.conditional_format(
-                row, column, row, column,
-                {"type": "cell", "criteria": "==", "value": '"{0}"'.format(choice), "format": self.formats[choice]},
+                row,
+                column,
+                row,
+                column,
+                {"type": "cell", "criteria": "==", "value": f'"{choice}"', "format": self.formats[choice]},
             )
         self.checklist.data_validation(row, column, row, column, dict(validate="list", source=assessment_choices))
 
@@ -220,4 +223,4 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         action_list.set_row(1, 30)
         for column, (header, width) in enumerate([("Datum", 12), ("Actie", 70), ("Status", 20), ("Toelichting", 70)]):
             action_list.write(1, column, header, self.formats["header"])
-            action_list.set_column("{0}:{0}".format("ABCD"[column]), width)
+            action_list.set_column(f"{'ABCD'[column]}:{'ABCD'[column]}", width)

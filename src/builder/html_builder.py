@@ -38,7 +38,7 @@ class HTMLBuilder(Builder):
     def accept_element(self, tag: str) -> bool:
         return tag != xmltags.FRONTPAGE
 
-    def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
+    def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:  # pylint:disable=too-many-branches
         if tag == xmltags.DOCUMENT:
             self.builder.start(html_tags.HTML, {})
             self.builder.start(html_tags.HEAD, {})

@@ -47,7 +47,7 @@ class DocxBuilder(Builder):
         self.row: Optional[Row] = None
         self.column_index = 0
 
-    def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
+    def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:  # pylint:disable=too-many-branches
         # pylint: disable=protected-access
         super().start_element(tag, attributes)
         if tag == xmltags.PARAGRAPH:

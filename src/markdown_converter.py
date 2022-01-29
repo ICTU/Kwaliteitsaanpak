@@ -36,7 +36,7 @@ class MarkdownConverter:
 
     def convert_markdown_file(self, markdown_filename: pathlib.Path, settings: Settings) -> None:
         """Convert markdown file to XML."""
-        with open(markdown_filename) as markdown_file:
+        with open(markdown_filename, encoding="utf-8") as markdown_file:
             for line in markdown_file.readlines():
                 if line.startswith("#include"):
                     filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
@@ -127,7 +127,7 @@ class MarkdownConverter:
             self.end_table()
             return  # Empty line, nothing further to do
         if match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
-            attributes = {}
+            attributes: dict[bytes | str, bytes | str] = {}
             if attribute := match.group(2):
                 key, value = attribute.split("=")
                 attributes[key] = value

@@ -11,7 +11,30 @@
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "pdf": {
-            "OutputFile": "ICTU-Kwaliteitsaanpak.pdf"
+            "OutputFile": "ICTU-Kwaliteitsaanpak.pdf",
+            "CopyFiles": [
+                {
+                    "from": "DocumentDefinitions/Shared/document.css",
+                    "to": "build/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.css"
+                },
+                {
+                    "from": "Content/Images/relaties-tussen-producten.png",
+                    "to": "build/Kwaliteitsaanpak/relaties-tussen-producten.png"
+                }
+            ]
+        },
+        "html": {
+            "OutputFile": "ICTU-Kwaliteitsaanpak.html",
+            "CopyFiles": [
+                {
+                    "from": "DocumentDefinitions/Shared/document.css",
+                    "to": "dist/ICTU-Kwaliteitsaanpak.css"
+                },
+                {
+                    "from": "Content/Images/relaties-tussen-producten.png",
+                    "to": "dist/relaties-tussen-producten.png"
+                }
+            ]
         },
         "xlsx": {
             "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx"

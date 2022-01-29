@@ -19,19 +19,6 @@ from markdown_converter import MarkdownConverter
 from custom_types import JSON, Settings, Variables
 
 
-def read_json(json_filename: str) -> JSON:
-    """Read JSON from the specified filename."""
-    with open(json_filename, encoding="utf-8") as json_file:
-        return JSON(json.load(json_file))
-
-
-def write_xml(xml: ElementTree, settings: Settings) -> None:
-    """Write the XML to the file specified in the settings."""
-    markdown_filename = pathlib.Path(str(settings["InputFile"]))
-    xml_filename = pathlib.Path(str(settings["BuildPath"])) / markdown_filename.with_suffix(".xml").name
-    xml.write(str(xml_filename), encoding="utf-8")
-
-
 def convert(settings_filename: str, version: str) -> None:
     """Convert the input document to the specified output formats."""
     # pylint: disable=unsubscriptable-object,unsupported-assignment-operation
@@ -50,22 +37,53 @@ def convert(settings_filename: str, version: str) -> None:
     if "docx" in settings["OutputFormats"]:
         convert_docx(converter, build_path, settings)
     if "pdf" in settings["OutputFormats"]:
+        copy_files(settings, "pdf")
         convert_pdf(converter, build_path, settings, variables)
     if "pptx" in settings["OutputFormats"]:
         convert_pptx(converter, build_path, settings)
     if "xlsx" in settings["OutputFormats"]:
         convert_xlsx(converter, build_path, settings)
+    if "html" in settings["OutputFormats"]:
+        copy_files(settings, "html")
+        convert_html(converter, build_path, settings)
 
 
-def convert_pdf(
-    converter, build_path: pathlib.Path, settings: Settings, variables: Variables
-) -> None:
-    """Convert the xml to pdf."""
+def read_json(json_filename: str) -> JSON:
+    """Read JSON from the specified filename."""
+    with open(json_filename, encoding="utf-8") as json_file:
+        return JSON(json.load(json_file))
+
+
+def write_xml(xml: ElementTree, settings: Settings) -> None:
+    """Write the XML to the file specified in the settings."""
+    markdown_filename = pathlib.Path(str(settings["InputFile"]))
+    xml_filename = get_build_path(settings) / markdown_filename.with_suffix(".xml").name
+    xml.write(str(xml_filename), encoding="utf-8")
+
+
+def copy_files(settings: Settings, format: str) -> None:
+    """Copy specified source files (e.g. CSS files) to the specified destinations."""
+    for file_to_copy in settings["OutputFormats"][format].get("CopyFiles", []):
+        shutil.copy(pathlib.Path(file_to_copy["from"]), pathlib.Path(file_to_copy["to"]))
+
+
+def convert_html(converter, settings: Settings) -> None:
+    """Convert the XML to HTML."""
+    html_filename = get_output_path(settings) / settings["OutputFormats"]["html"]["OutputFile"]
+    html_builder = HTMLBuilder(html_filename, "")
+    converter.convert(html_builder)
+
+
+def convert_pdf(converter, build_path: pathlib.Path, settings: Settings, variables: Variables) -> None:
+    """Convert the XML to PDF."""
+    build_path = get_build_path(settings)
+    pdf_filename = get_output_filepath(settings, "pdf")
+    pdf_build_filename = build_path / pathlib.Path(settings["OutputFormats"]["pdf"]["OutputFile"])
     html_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".html").name
-    html_builder = HTMLBuilder(html_filename)
+    html_builder = HTMLBuilder(html_filename, build_path)
     converter.convert(html_builder)
     html_cover_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".cover.html").name
-    html_cover_builder = HTMLCoverBuilder(html_cover_filename)
+    html_cover_builder = HTMLCoverBuilder(html_cover_filename, build_path)
     converter.convert(html_cover_builder)
     with open("DocumentDefinitions/Shared/header.html", encoding="utf-8") as header_template_file:
         header_contents = header_template_file.read() % variables["KWALITEITSAANPAK"]
@@ -90,7 +108,7 @@ def convert_pdf(
 
 
 def convert_docx(converter, build_path: pathlib.Path, settings: Settings) -> None:
-    """Convert the xml to docx."""
+    """Convert the XML to docx."""
     docx_build_filename = build_path / settings["OutputFormats"]["docx"]["OutputFile"]
     docx_builder = DocxBuilder(docx_build_filename, pathlib.Path(settings["OutputFormats"]["docx"]["ReferenceFile"]))
     converter.convert(docx_builder)
@@ -98,7 +116,7 @@ def convert_docx(converter, build_path: pathlib.Path, settings: Settings) -> Non
 
 
 def convert_pptx(converter, build_path: pathlib.Path, settings: Settings) -> None:
-    """Convert the xml to pptx."""
+    """Convert the XML to pptx."""
     pptx_build_filename = build_path / settings["OutputFormats"]["pptx"]["OutputFile"]
     pptx_builder = PptxBuilder(pptx_build_filename, pathlib.Path(settings["OutputFormats"]["pptx"]["ReferenceFile"]))
     converter.convert(pptx_builder)
@@ -106,7 +124,7 @@ def convert_pptx(converter, build_path: pathlib.Path, settings: Settings) -> Non
 
 
 def convert_xlsx(converter, build_path: pathlib.Path, settings: Settings) -> None:
-    """Convert the xml to xlsx."""
+    """Convert the XML to xlsx."""
     xlsx_build_filename = build_path / settings["OutputFormats"]["xlsx"]["OutputFile"]
     xlsx_builder = XlsxBuilder(xlsx_build_filename)
     converter.convert(xlsx_builder)
@@ -120,6 +138,28 @@ def copy_output(build_filename: pathlib.Path, settings: Settings, output_format:
         output_path.mkdir(parents=True, exist_ok=True)
         output_filename = output_path / settings["OutputFormats"][output_format]["OutputFile"]
         shutil.copy(build_filename, output_filename)
+
+
+def get_build_path(settings: Settings) -> pathlib.Path:
+    """Return, and create if necessary, the build path from the settings."""
+    return get_path(settings, "BuildPath")
+
+
+def get_output_path(settings: Settings) -> pathlib.Path:
+    """Return, and create if necessary, the output path from the settings."""
+    return get_path(settings, "OutputPath")
+
+
+def get_path(settings: Settings, pathname: str) -> pathlib.Path:
+    """Return, and create if necessary, the specified path from the settings."""
+    path = pathlib.Path(settings[pathname])
+    path.mkdir(parents=True, exist_ok=True)
+    return path
+
+
+def get_output_filepath(settings: Settings, format: str) -> pathlib.Path:
+    """Return the output filepath for the specified format. Create intermediate folders if necessary."""
+    return get_output_path(settings) / settings["OutputFormats"][format]["OutputFile"]
 
 
 def main(settings_filenames: List[str], version: str) -> None:

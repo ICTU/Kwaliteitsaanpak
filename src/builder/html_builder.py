@@ -24,10 +24,11 @@ class HTMLBuilder(Builder):
         xmltags.NUMBERED_LIST: html_tags.ORDERED_LIST,
         xmltags.LIST_ITEM: html_tags.LIST_ITEM,
     }
-    STYLESHEET = "/work/DocumentDefinitions/Shared/document.css"
+    STYLESHEET = "ICTU-Kwaliteitsaanpak.css"
 
-    def __init__(self, filename: pathlib.Path) -> None:
+    def __init__(self, filename: pathlib.Path, stylesheet_path: pathlib.Path) -> None:
         super().__init__(filename)
+        self.stylesheet_path = stylesheet_path
         self.builder = TreeBuilder()
         self.heading_class: List[str] = []  # Heading class stack
         self.heading_level: List[int] = []  # Heading level stack
@@ -169,8 +170,6 @@ class HTMLBuilder(Builder):
 class HTMLCoverBuilder(HTMLBuilder):
     """HTML cover builder."""
 
-    STYLESHEET = "/work/DocumentDefinitions/Shared/cover.css"
-
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.frontpage_done = False
@@ -180,10 +179,10 @@ class HTMLCoverBuilder(HTMLBuilder):
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
         if tag == xmltags.TITLE:
-            heading1 = html_tags.HEADING + "1"
-            self.builder.start(heading1, {})
+            title = html_tags.PARAGRAPH
+            self.builder.start(title, {html_tags.CLASS: "title"})
             self.builder.data(text)
-            self.builder.end(heading1)
+            self.builder.end(title)
         else:
             super().text(tag, text, attributes)
 

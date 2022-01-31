@@ -1,5 +1,6 @@
 """HTML builder."""
 
+from email.mime import image
 import pathlib
 from typing import List, Optional
 from xml.etree.ElementTree import ElementTree, TreeBuilder
@@ -39,12 +40,12 @@ class HTMLBuilder(Builder):
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:  # pylint:disable=too-many-branches
         if tag == xmltags.DOCUMENT:
-            self.builder.start(html_tags.HTML, {})
+            self.builder.start(html_tags.HTML, {html_tags.LANGUAGE: "nl"})
             self.builder.start(html_tags.HEAD, {})
             self.builder.start(html_tags.META, {html_tags.META_CHARSET: "UTF-8"})
             self.builder.end(html_tags.META)
             self.builder.start(html_tags.TITLE, {})
-            self.builder.data(self.filename.name)
+            self.builder.data(f"{attributes['title']} versie {attributes['version']}")
             self.builder.end(html_tags.TITLE)
             self.builder.start(
                 html_tags.LINK,
@@ -82,15 +83,15 @@ class HTMLBuilder(Builder):
                 {html_tags.ANCHOR_LINK: attributes[xmltags.ANCHOR_LINK]},
             )
         elif tag == xmltags.IMAGE:
-            self.builder.start(
-                html_tags.IMAGE,
-                {
-                    html_tags.STYLE: "max-width: 100%",
-                    html_tags.IMAGE_ALT: attributes.get("alt", ""),
-                    html_tags.IMAGE_SOURCE: attributes["src"],
-                    html_tags.TITLE: attributes["title"],
-                },
-            )
+            image_attributes = {
+                html_tags.STYLE: "max-width: 100%",
+                html_tags.IMAGE_SOURCE: attributes["src"],
+            }
+            title = attributes.get("title", "")
+            alt = attributes.get("alt", "")
+            if image_alt := f"{title}{': ' if title and alt else ''}{alt}":
+                image_attributes[html_tags.IMAGE_ALT] = image_alt
+            self.builder.start(html_tags.IMAGE, image_attributes)
             self.builder.end(html_tags.IMAGE)
         elif tag == xmltags.MEASURE:
             self.builder.start(html_tags.PARAGRAPH, {html_tags.CLASS: "maatregel"})
@@ -109,7 +110,8 @@ class HTMLBuilder(Builder):
             heading_attributes: TreeBuilderAttributes = (
                 {html_tags.CLASS: self.heading_class[-1]} if self.heading_class[-1] else {}
             )
-            heading_attributes["id"] = slugify(text)
+            if self.heading_level[-1] <= 2:
+                heading_attributes["id"] = slugify(text)
             self.builder.start(html_tags.HEADING + str(self.heading_level[-1]), heading_attributes)
         if tag not in (xmltags.IMAGE, xmltags.HEADER, xmltags.TITLE):
             self.builder.data(text)

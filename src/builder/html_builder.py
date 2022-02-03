@@ -1,6 +1,5 @@
 """HTML builder."""
 
-from email.mime import image
 import pathlib
 from typing import List, Optional
 from xml.etree.ElementTree import ElementTree, TreeBuilder
@@ -89,8 +88,7 @@ class HTMLBuilder(Builder):
             }
             title = attributes.get("title", "")
             alt = attributes.get("alt", "")
-            if image_alt := f"{title}{': ' if title and alt else ''}{alt}":
-                image_attributes[html_tags.IMAGE_ALT] = image_alt
+            image_attributes[html_tags.IMAGE_ALT] = f"{title}{': ' if title and alt else ''}{alt}"
             self.builder.start(html_tags.IMAGE, image_attributes)
             self.builder.end(html_tags.IMAGE)
         elif tag == xmltags.MEASURE:

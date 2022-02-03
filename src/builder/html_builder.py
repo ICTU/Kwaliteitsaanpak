@@ -169,7 +169,9 @@ class HTMLBuilder(Builder):
 
     def end_document(self) -> None:
         tree = ElementTree(self.builder.close())
-        tree.write(str(self.filename), "unicode", method="html")
+        with open(self.filename, mode="w", encoding="utf-8") as html_file:
+            html_file.write("<!DOCTYPE html>\n")
+            tree.write(html_file, "unicode", method="html")
 
 
 class HTMLContentBuilder(HTMLBuilder):

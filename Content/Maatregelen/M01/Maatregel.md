@@ -15,13 +15,13 @@ Bronnen van de opdrachtgever zoals de projectstartarchitectuur, een programma va
 **Beschrijving van niet-functionele eisen**
 Niet-functionele eisen specificeren criteria om het functioneren van de software te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Voor de beschrijving en onderverdeling van niet-functionele eisen gebruikt ICTU:
 
-- NEN-ISO/IEC 25010,
-- Wet beveiliging netwerk- en informatiesystemen (Wbni),
-- Baseline Informatiebeveiliging Overheid (BIO),
-- methode Grip op SDD (Secure Software Development) van het Centrum Informatiebeveiliging en Privacybescherming (CIP),
-- Algemene verordening gegevensbescherming (AVG),
-- ISO 9241-210:2019 Ergonomics of human-system interaction - Part 210: Human-centred design for interactive systems,
-- hoofdstuk 9 van de Europese Standaard EN 301 549 — dit is gelijk aan de Web Content Accessibility Guidelines versie 2.1, niveau A en AA.
+* NEN-ISO/IEC 25010,
+* Wet beveiliging netwerk- en informatiesystemen (Wbni),
+* Baseline Informatiebeveiliging Overheid (BIO),
+* methode Grip op SDD (Secure Software Development) van het Centrum Informatiebeveiliging en Privacybescherming (CIP),
+* Algemene verordening gegevensbescherming (AVG),
+* ISO 9241-210:2019 Ergonomics of human-system interaction - Part 210: Human-centred design for interactive systems,
+* hoofdstuk 9 van de Europese Standaard EN 301 549 — dit is gelijk aan de Web Content Accessibility Guidelines versie 2.1, niveau A en AA.
 
 De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan de door de beoogd beheerder gewenste ondersteuning van beheerfuncties. Bepaalde niet-functionele eisen kunnen aanleiding zijn tot het treffen van beveiligingsmaatregelen. Door deze eisen expliciet in de voorfase te benoemen, wordt voorkomen dat de bijbehorende beveiligingsmaatregelen achteraf moeten worden toegevoegd.
 
@@ -32,9 +32,9 @@ Bronnen van de opdrachtgever zoals procesbeschrijvingen, privacy impact assessme
 **Product backlog**
 De product backlog is een geprioriteerd overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:
 
-- _Wat_ er gemaakt moet worden,
-- _Waarom_,
-- en voor _wie_.
+* _Wat_ er gemaakt moet worden,
+* _Waarom_,
+* en voor _wie_.
 
 De product owner is verantwoordelijk voor de inhoud en bepaalt de prioritering van de eisen. Er staan ook ruwe schattingen bij van de waarde voor de organisatie en van de ontwikkelkosten.
 
@@ -141,5 +141,5 @@ De genoemde producten uit de voorfase hebben tot doel om enerzijds de omvang, ko
 
 Zie ook:
 
-- [$M14$](#m14)
-- [$M31$](#m31)
+* [$M14$](#m14)
+* [$M31$](#m31)

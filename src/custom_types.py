@@ -1,9 +1,9 @@
 """Types."""
 
-from typing import Any, Dict, NewType, Union
+from typing import Any, NewType
 
 
-JSON = NewType("JSON", Dict[str, Any])
-Settings = NewType("Settings", Dict[str, Any])
-TreeBuilderAttributes = Dict[Union[bytes, str], Union[bytes, str]]
-Variables = NewType("Variables", Dict[str, Any])
+JSON = NewType("JSON", dict[str, Any])
+Settings = NewType("Settings", dict[str, Any])
+TreeBuilderAttributes = dict[bytes | str, bytes | str]
+Variables = NewType("Variables", dict[str, Any])

@@ -1,7 +1,6 @@
 """Abstract document builder class."""
 
 import pathlib
-from typing import List, Tuple
 
 from custom_types import TreeBuilderAttributes
 
@@ -13,7 +12,7 @@ class Builder:
 
     def __init__(self, filename: pathlib.Path) -> None:
         self.filename = filename
-        self._stack: List[Tuple[str, TreeBuilderAttributes]] = []
+        self._stack: list[tuple[str, TreeBuilderAttributes]] = []
 
     def start_document(self) -> None:
         """Start the document."""

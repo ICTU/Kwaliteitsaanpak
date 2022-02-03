@@ -26,15 +26,18 @@ Elk Jira-type maakt gebruik van een standaard workflow. Omdat de kwaliteitsrappo
 
 Het op te leveren systeem is beschreven in documenten zoals projectstartarchitectuur (PSA) en globaal functioneel ontwerp (GFO). De actuele situatie van het systeem kan anders zijn in situatie waarin gefaseerd het gewenste systeem wordt opgeleverd of waarin het systeem door de agile manier van werken reeds vooruitloopt op het GFO. Om de actuele situatie te beschrijven wordt gebruik gemaakt van de Jira-typen _Systeemfunctie_ en _Use Cases_. Tevens zijn de hierbij behorende logische testgevallen beschreven.
 
-**Systeemfunctie**
+#### Systeemfunctie
+
 Het te ontwerpen systeem wordt door het team, meestal door een functioneel ontwerper, vastgelegd in Jira door een issue aan te maken van het type _Systeemfunctie_. Een systeemfunctie is de vastlegging van het globaal functioneel ontwerp of delen ervan. Een goedgekeurde versie van het GFO bevat de gewenste situatie van een specifiek release en zal als attachment in het issue bijgevoegd worden.
 
 Een systeemfunctie is beschreven door één of meerdere use cases. Gezamenlijk beschrijven de use cases op elk gewenst moment de actuele situatie van de betreffende systeemfunctie.
 
-**Use cases**
+#### Use cases
+
 De te realiseren functionaliteit wordt met behulp van de user stories geïmplementeerd. De delen van de systeemfuncties die gerealiseerd zijn, worden met use cases door het team vastgelegd (meestal een functioneel ontwerper) door issues aan te maken van het type _Use Case_. De verzameling use cases bevatten de functionele as-is situatie van het systeem en worden middels een Jira link van het type Relates to aan de systeemfunctie gekoppeld. Een use case kan aan slechts één systeemfunctie gekoppeld worden.
 
-**Logische testgevallen**
+#### Logische testgevallen
+
 Logische testgevallen worden door de teams (normaal gesproken de tester) vastgelegd in Jira door een issue te maken van het type _Logical Test Case_ (LTC). Het logisch testgeval wordt middels een Jira link van het type _Tests_ gekoppeld aan zowel de use case als de user story die hiermee getest wordt. Een LTC heeft betrekking op slechts één use case, maar kan op meerdere stories betrekking hebben.
 
 Het logische testgeval zelf wordt beschreven volgens het Given/When/Then formaat. De Jira-issue heeft hiervoor drie velden:
@@ -48,20 +51,23 @@ Logische testgevallen worden als geautomatiseerd (Automated), handmatig (Manual)
 
 Gedurende de realisatie sprints worden user stories uitgevoerd. Omdat stories slechts een klein deel van gewenste functionaliteiten bevatten (om story punten niet te hoog te laten zijn), worden epics als containers gedefinieerd. Indien een story wordt opgepakt door het team worden sub-taken gedefinieerd door middel van het Jira type Technical Task. Wanneer gedurende de ontwikkeling issues vastgelegd moeten worden, kan dit met behulp van het type _Custom Issue_.
 
-**Epic**
+#### Epic
+
 Epics zijn ‘brokken’ functionaliteit die door de user stories worden geïmplementeerd. Ze worden door de teams (meestal de functioneel ontwerper) vastgelegd in Jira door een issue te maken van het type _Epic_. Een epic wordt middels een Jira link van het type _Realizes_ aan de use case gekoppeld waarvoor functionaliteiten worden geïmplementeerd. Een epic mag op slechts één use case betrekking hebben.
 
-**User story**
+#### User story
 User stories worden door de teams (meestal de product owner of een functioneel ontwerper) vastgelegd in Jira door een issue te maken van het type _Story_. Een story wordt middels een Jira link van het type Changes aan de use case gekoppeld waarvoor functionaliteiten worden geïmplementeerd, en middels het veld Epic link aan de epic die gerealiseerd wordt. De story mag op slechts één use case betrekking hebben.
 
 De user story zelf wordt beschreven in het formaat: "Als <rol> wil ik <actie> zodat <rationale die duidelijk maakt wat de business waarde is>". Voorbeelden zijn: "Als medewerker van ICTU wil ik een parkeerplaats voor een bezoeker kunnen reserveren zodat deze niet op zoek hoeft naar een parkeerplaats" of "Als aankomend medewerker in de kinderopvang wil ik mijn VOG registreren in het register voor medewerkers in de kinderopvang omdat ik anders niet mag werken in de kinderopvang". De tekst van de user story dienst in het description veld van het issue te worden vastgelegd zodat de user story tekst goed in de rapportages komt.
 
 Bij elke user story kan worden vastgelegd wat het risico van de verandering is op verschillende aspecten zoals planning, performance en security. Dit maakt het mogelijk om user stories te filteren op, bijvoorbeeld, hoog risico voor security en die lijst als input voor een securitytest te gebruiken.
 
-**Technical tasks**
+#### Technical tasks
+
 Gedurende de realisatie van een user story worden door het team diverse activiteiten uitgevoerd. Om de sprint voortgang eenvoudiger te kunnen monitoren, wordt gebruik gemaakt van sub-taken binnen een user story. Deze kunnen automatisch aangemaakt worden (aanvragen via Jira team), of handmatig door het team vastgelegd worden (meestal door de scrum master) door _Create Sub-task_ type _Technical Task_. Een technical task heeft het formaat <werkwoord> <onderwerp>. Voorbeelden zijn: Opstellen logische testgevallen, Review testgevallen, Ontwikkelen <module>, Uitvoeren handmatige testen, Ontwikkelen ART, Controleren kwaliteitsrapportages, Bijwerken use cases, Check code kwaliteit en testcoverage, etc.
 
-**Bugs**
+#### Bugs
+
 Bugs zijn afwijkingen tussen verwacht gedrag en actuele situatie die is gedetecteerd. Het kunnen bugs zijn die gevonden worden tijdens acceptatietesten of productieverstoringen. De bugs worden vastgelegd door Jira issues aan te maken van het type _Bug_.
 
 De bug moet bij registreren alle informatie bevatten die nodig is om de geconstateerde afwijking, gebruikte omgeving en situatie te beschrijven, de prioriteit i.r.t. impact en urgentie, specifieke labels die gebruikt worden in de kwaliteitsrapportage om type bugs te kunnen onderkennen (bijvoorbeeld Security, Performance), en de referentie naar het gebruikte testgeval i.g.v. testen.
@@ -79,28 +85,28 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 
 {Pas onderstaande lijst van controles aan waar relevant. Voeg indien releant kolommen toe voor frequentie, uitvoerder, datum laatste controle, status, vervolgacties, datum volgende controle, etc.}
 
-| Onderwerp | Referentie | Controle | 
+| Onderwerp | Referentie | Controle |
 |:----------|:-----------|:---------|
-| Verwerking niet-functionele eisen | M01 | Actuele NFE's zijn verwerkt in SAD en kwaliteitsplan | 
-| Verwerking informatiebeveiligingsplan | M01 | Actuele beveiligingsmaatregelen zijn verwerkt in SAD, GFO en kwaliteitsplan | 
+| Verwerking niet-functionele eisen | M01 | Actuele NFE's zijn verwerkt in SAD en kwaliteitsplan |
+| Verwerking informatiebeveiligingsplan | M01 | Actuele beveiligingsmaatregelen zijn verwerkt in SAD, GFO en kwaliteitsplan |
 | Traceerbaarheid functionele eisen | M03 | Functionele functionele eisen zijn traceerbaar naar logische en fysieke testgevallen |
-| Traceerbaarheid niet-functionele eisen | M03 | Niet-functionele eisen zijn traceerbaar naar SAD, MTP en detailtestplannen | 
+| Traceerbaarheid niet-functionele eisen | M03 | Niet-functionele eisen zijn traceerbaar naar SAD, MTP en detailtestplannen |
 | Implementatie nieuwe versie Kwaliteitsaanpak | M09 | De meest recente versie van de Kwaliteitsaanpak is geïmplementeerd in het project |
 | Gebruik tools | M16 | Het project gebruikt de geadviseerde tools |
 | Actualiteit tools | M16 | Het project gebruikt actuele versies van tools |
 | Uitvoering self-assessment | M28 | Het project heeft recent een self-assessment uitgevoerd |
 | Actualiteit self-assessment | M28 | De kwaliteitsrapportage bevat een metriek voor de actualiteit van de self-assessment |
-| Versiebeheer van documenten | Kwaliteitsplan §3.2.1 | Documenten zijn met de juiste meta-informatie op de afgesproken plaats en wijze opgeslagen | 
-| Review van documenten | Kwaliteitsplan §3.3.2 | Documenten zijn op de afgesproken wijze gereviewd | 
-| Definition of Ready | Kwaliteitsplan §5.1.1 | Teams hebben en gebruiken een DoR | 
-| Definition of Done | Kwaliteitsplan §5.1.2 | Teams hebben en gebruiken een DoD | 
-| Vrijgaveadvies | Kwaliteitsplan §5.1.3 | Het vrijgaveadvies bevat de afgesproken onderdelen | 
-| Kwaliteit broncode | Kwaliteitsplan §5.3 | Onderdrukte SonarQube-waarschuwingen zijn afgestemd en (nog steeds) terecht | 
-| Kwaliteit broncode | Kwaliteitsplan §5.3 | De kwaliteit van de broncode voldoet bij een steekproefsgewijze, handmatige inspectie aan de eisen | 
-| Beveiliging broncode | Kwaliteitsplan §5.10 | Onderdrukte beveiligingsbevindingen uit de OWASP Dependency Check en Checkmarx zijn afgestemd en (nog steeds) terecht | 
-| Beveiligingstesten | Kwaliteitsplan §5.10 | Beveiligingsissues uit securitytesten zijn opgenomen in Jira en volgens de oplostermijnen opgelost | 
-| Projectspecifieke kwaliteitsmaatregelen | Kwaliteitsplan §5.16 | Projectspecifieke maatregelen zijn uitgevoerd zoals afgesproken | 
-| Projectafsluiting | Kwaliteitsplan §6 | Projectafsluiting is conform de afspraken uitgevoerd | 
+| Versiebeheer van documenten | Kwaliteitsplan §3.2.1 | Documenten zijn met de juiste meta-informatie op de afgesproken plaats en wijze opgeslagen |
+| Review van documenten | Kwaliteitsplan §3.3.2 | Documenten zijn op de afgesproken wijze gereviewd |
+| Definition of Ready | Kwaliteitsplan §5.1.1 | Teams hebben en gebruiken een DoR |
+| Definition of Done | Kwaliteitsplan §5.1.2 | Teams hebben en gebruiken een DoD |
+| Vrijgaveadvies | Kwaliteitsplan §5.1.3 | Het vrijgaveadvies bevat de afgesproken onderdelen |
+| Kwaliteit broncode | Kwaliteitsplan §5.3 | Onderdrukte SonarQube-waarschuwingen zijn afgestemd en (nog steeds) terecht |
+| Kwaliteit broncode | Kwaliteitsplan §5.3 | De kwaliteit van de broncode voldoet bij een steekproefsgewijze, handmatige inspectie aan de eisen |
+| Beveiliging broncode | Kwaliteitsplan §5.10 | Onderdrukte beveiligingsbevindingen uit de OWASP Dependency Check en Checkmarx zijn afgestemd en (nog steeds) terecht |
+| Beveiligingstesten | Kwaliteitsplan §5.10 | Beveiligingsissues uit securitytesten zijn opgenomen in Jira en volgens de oplostermijnen opgelost |
+| Projectspecifieke kwaliteitsmaatregelen | Kwaliteitsplan §5.16 | Projectspecifieke maatregelen zijn uitgevoerd zoals afgesproken |
+| Projectafsluiting | Kwaliteitsplan §6 | Projectafsluiting is conform de afspraken uitgevoerd |
 | Gebruik van Jira | Kwaliteitsplan bijlage D | Jira wordt gebruikt zoals afgesproken |
 | Actualiteit kwaliteitsplan | | De kwaliteitsrapportage bevat een metriek voor de actualiteit van het kwaliteitsplan |
 | Nieuwe teamleden | | Nieuwe teamleden zijn op de hoogte van de Kwaliteitsaanpak, het kwaliteitssysteem en het kwaliteitsplan |

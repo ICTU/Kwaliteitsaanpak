@@ -1,9 +1,6 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/NFE/",
-    "OutputPaths": [
-        "dist"
-    ],
     "Title": "Niet-Functionele Eisen",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
@@ -13,6 +10,9 @@
     "OutputFormats": {
         "docx": {
             "OutputFile": "Template-Niet-Functionele-Eisen.docx",
+            "OutputPaths": [
+                "dist"
+            ],
             "ReferenceFile": "DocumentDefinitions/reference.docx"
         }
     },

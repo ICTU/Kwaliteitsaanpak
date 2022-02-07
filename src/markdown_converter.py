@@ -66,7 +66,7 @@ class MarkdownConverter:
         with self.element(xmltags.FRONTPAGE):
             self.add_element(
                 xmltags.IMAGE,
-                attributes={xmltags.IMAGE_SRC: "/work/Content/Images/ICTU.png", xmltags.IMAGE_TITLE: "ICTU logo"},
+                attributes={xmltags.IMAGE_SRC: "ICTU.png", xmltags.IMAGE_TITLE: "ICTU logo"},
             )
             with self.element(xmltags.TITLE):
                 self.process_formatted_text(settings["Title"])
@@ -91,13 +91,7 @@ class MarkdownConverter:
                     self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
             else:
                 raise ValueError(f"Unknown document type '{document_type}' in the settings")
-            self.add_element(
-                xmltags.IMAGE,
-                attributes={
-                    xmltags.IMAGE_SRC: "/work/Content/Images/word-cloud.png",
-                    xmltags.IMAGE_TITLE: "Word cloud",
-                },
-            )
+            self.add_element(xmltags.IMAGE, attributes={xmltags.IMAGE_SRC: "word-cloud.png"})
             self.add_element(xmltags.PAGEBREAK)
 
     def create_header(self, settings: Settings) -> None:

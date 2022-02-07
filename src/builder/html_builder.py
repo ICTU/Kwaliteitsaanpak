@@ -24,28 +24,27 @@ class HTMLBuilder(Builder):
         xmltags.NUMBERED_LIST: html_tags.ORDERED_LIST,
         xmltags.LIST_ITEM: html_tags.LIST_ITEM,
     }
-    STYLESHEET = "/work/DocumentDefinitions/Shared/document.css"
+    STYLESHEET = "ICTU-Kwaliteitsaanpak.css"
 
-    def __init__(self, filename: pathlib.Path) -> None:
+    def __init__(self, filename: pathlib.Path, stylesheet_path: pathlib.Path) -> None:
         super().__init__(filename)
+        self.stylesheet_path = stylesheet_path
         self.builder = TreeBuilder()
         self.heading_class: List[str] = []  # Heading class stack
         self.heading_level: List[int] = []  # Heading level stack
         self.table_cell_html_tag: Optional[str] = None
         self.in_keep_together_div = False
         self.in_measure = False
-
-    def accept_element(self, tag: str) -> bool:
-        return tag != xmltags.FRONTPAGE
+        self.frontpage_done = False
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:  # pylint:disable=too-many-branches
         if tag == xmltags.DOCUMENT:
-            self.builder.start(html_tags.HTML, {})
+            self.builder.start(html_tags.HTML, {html_tags.LANGUAGE: "nl"})
             self.builder.start(html_tags.HEAD, {})
             self.builder.start(html_tags.META, {html_tags.META_CHARSET: "UTF-8"})
             self.builder.end(html_tags.META)
             self.builder.start(html_tags.TITLE, {})
-            self.builder.data(self.filename.name)
+            self.builder.data(f"{attributes['title']} versie {attributes['version']}")
             self.builder.end(html_tags.TITLE)
             self.builder.start(
                 html_tags.LINK,
@@ -83,21 +82,25 @@ class HTMLBuilder(Builder):
                 {html_tags.ANCHOR_LINK: attributes[xmltags.ANCHOR_LINK]},
             )
         elif tag == xmltags.IMAGE:
-            self.builder.start(
-                html_tags.IMAGE,
-                {
-                    html_tags.STYLE: "max-width: 100%",
-                    html_tags.IMAGE_ALT: attributes.get("alt", ""),
-                    html_tags.IMAGE_SOURCE: attributes["src"],
-                    html_tags.TITLE: attributes["title"],
-                },
-            )
+            image_attributes = {
+                html_tags.STYLE: "max-width: 100%",
+                html_tags.IMAGE_SOURCE: attributes["src"],
+            }
+            title = attributes.get("title", "")
+            alt = attributes.get("alt", "")
+            image_attributes[html_tags.IMAGE_ALT] = f"{title}{': ' if title and alt else ''}{alt}"
+            self.builder.start(html_tags.IMAGE, image_attributes)
             self.builder.end(html_tags.IMAGE)
         elif tag == xmltags.MEASURE:
             self.builder.start(html_tags.PARAGRAPH, {html_tags.CLASS: "maatregel"})
             self.in_measure = True
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
+        if tag == xmltags.TITLE:
+            title = html_tags.PARAGRAPH
+            self.builder.start(title, {html_tags.CLASS: "title"})
+            self.builder.data(text)
+            self.builder.end(title)
         if tag == xmltags.HEADING:
             if self.heading_level[-1] > 1 and not self.in_keep_together_div:
                 self.builder.start(html_tags.DIV, {html_tags.CLASS: "keep-together"})
@@ -105,7 +108,8 @@ class HTMLBuilder(Builder):
             heading_attributes: TreeBuilderAttributes = (
                 {html_tags.CLASS: self.heading_class[-1]} if self.heading_class[-1] else {}
             )
-            heading_attributes["id"] = slugify(text)
+            if self.heading_level[-1] <= 2:
+                heading_attributes["id"] = slugify(text)
             self.builder.start(html_tags.HEADING + str(self.heading_level[-1]), heading_attributes)
         if tag not in (xmltags.IMAGE, xmltags.HEADER, xmltags.TITLE):
             self.builder.data(text)
@@ -114,6 +118,8 @@ class HTMLBuilder(Builder):
         if tag == xmltags.DOCUMENT:
             self.builder.end(html_tags.BODY)
             self.builder.end(html_tags.HTML)
+        elif tag == xmltags.FRONTPAGE:
+            self.frontpage_done = True
         elif tag == xmltags.PARAGRAPH:
             self.end_paragraph()
         elif tag in self.LIST:
@@ -163,31 +169,20 @@ class HTMLBuilder(Builder):
 
     def end_document(self) -> None:
         tree = ElementTree(self.builder.close())
-        tree.write(str(self.filename), "unicode", method="html")
+        with open(self.filename, mode="w", encoding="utf-8") as html_file:
+            html_file.write("<!DOCTYPE html>\n")
+            tree.write(html_file, "unicode", method="html")
+
+
+class HTMLContentBuilder(HTMLBuilder):
+    """HTML document content builder."""
+
+    def accept_element(self, tag: str) -> bool:
+        return tag != xmltags.FRONTPAGE
 
 
 class HTMLCoverBuilder(HTMLBuilder):
     """HTML cover builder."""
 
-    STYLESHEET = "/work/DocumentDefinitions/Shared/cover.css"
-
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(*args, **kwargs)
-        self.frontpage_done = False
-
     def accept_element(self, tag: str) -> bool:
         return not self.frontpage_done
-
-    def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
-        if tag == xmltags.TITLE:
-            heading1 = html_tags.HEADING + "1"
-            self.builder.start(heading1, {})
-            self.builder.data(text)
-            self.builder.end(heading1)
-        else:
-            super().text(tag, text, attributes)
-
-    def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
-        super().end_element(tag, attributes)
-        if tag == xmltags.FRONTPAGE:
-            self.frontpage_done = True

@@ -1,9 +1,6 @@
 {
     "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak-samenvatting.md",
     "BuildPath": "build/Kwaliteitsaanpak/",
-    "OutputPaths": [
-        "dist"
-    ],
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "Subtitle": "Samenvatting",
     "DocumentType": "Kwaliteitsaanpak",
@@ -11,7 +8,30 @@
     "IncludeTableOfContents": false,
     "OutputFormats": {
         "pdf": {
-            "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.pdf"
+            "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.pdf",
+            "OutputPaths": [
+                "dist"
+            ],
+            "CopyFiles": [
+                {
+                    "from": "DocumentDefinitions/Shared/document.css",
+                    "to": [
+                        "build/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.css"
+                    ]
+                },
+                {
+                    "from": "Content/Images/ICTU.png",
+                    "to": [
+                        "build/Kwaliteitsaanpak/ICTU.png"
+                    ]
+                },
+                {
+                    "from": "Content/Images/word-cloud.png",
+                    "to": [
+                        "build/Kwaliteitsaanpak/word-cloud.png"
+                    ]
+                }
+            ]
         }
     },
     "VariablesFiles": [

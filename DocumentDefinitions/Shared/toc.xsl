@@ -12,7 +12,7 @@
         <title>Inhoudsopgave</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <style>
-          @import url("/work/DocumentDefinitions/Shared/cover.css");
+          @import url("/work/DocumentDefinitions/Shared/document.css");
           div {
             border-bottom: 1px solid #AFAFAF;
           }
@@ -44,12 +44,12 @@
             line-height: 175%;
           }
           ul ul ul {display: none;}  /* Don't display subsubsections, works recursively */
-          li {list-style: none;}  /* No bullets */
+          li {list-style: none !important;}  /* No bullets */
           a {text-decoration:none; color: inherit;}  /* Don't render links blue/underlined */
         </style>
       </head>
       <body>
-        <h2>Inhoudsopgave</h2>
+        <h2 class="toc">Inhoudsopgave</h2>
         <ul><xsl:apply-templates select="outline:item/outline:item"/></ul>
       </body>
     </html>

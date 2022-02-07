@@ -1,9 +1,6 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/PvA-Voorfase/",
-    "OutputPaths": [
-        "dist"
-    ],
     "Title": "Plan van Aanpak Voorfase",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
@@ -13,6 +10,9 @@
     "OutputFormats": {
         "docx": {
             "OutputFile": "Template-Plan-van-Aanpak-Voorfase.docx",
+            "OutputPaths": [
+                "dist"
+            ],
             "ReferenceFile": "DocumentDefinitions/reference.docx"
         }
     },

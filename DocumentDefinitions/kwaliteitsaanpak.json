@@ -1,23 +1,71 @@
 {
     "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
     "BuildPath": "build/Kwaliteitsaanpak/",
-    "OutputPaths": [
-        "dist",
-        "docs"
-    ],
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "DocumentType": "Kwaliteitsaanpak",
     "IncludeFrontPage": true,
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "pdf": {
-            "OutputFile": "ICTU-Kwaliteitsaanpak.pdf"
+            "OutputFile": "ICTU-Kwaliteitsaanpak.pdf",
+            "OutputPaths": [
+                "dist"
+            ],
+            "CopyFiles": [
+                {
+                    "from": "DocumentDefinitions/Shared/document.css",
+                    "to": ["build/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.css"]
+                },
+                {
+                    "from": "Content/Images/relaties-tussen-producten.png",
+                    "to": ["build/Kwaliteitsaanpak/relaties-tussen-producten.png"]
+                },
+                {
+                    "from": "Content/Images/ICTU.png",
+                    "to": ["build/Kwaliteitsaanpak/ICTU.png"]
+                },
+                {
+                    "from": "Content/Images/word-cloud.png",
+                    "to": ["build/Kwaliteitsaanpak/word-cloud.png"]
+                }
+            ]
+        },
+        "html": {
+            "OutputFile": "ICTU-Kwaliteitsaanpak.html",
+            "OutputPaths": [
+                "dist",
+                "docs"
+            ],
+            "CopyFiles": [
+                {
+                    "from": "DocumentDefinitions/Shared/document.css",
+                    "to": ["dist/ICTU-Kwaliteitsaanpak.css", "docs/ICTU-Kwaliteitsaanpak.css"]
+                },
+                {
+                    "from": "Content/Images/relaties-tussen-producten.png",
+                    "to": ["dist/relaties-tussen-producten.png", "docs/relaties-tussen-producten.png"]
+                },
+                {
+                    "from": "Content/Images/ICTU.png",
+                    "to": ["dist/ICTU.png", "docs/ICTU.png"]
+                },
+                {
+                    "from": "Content/Images/word-cloud.png",
+                    "to": ["dist/word-cloud.png", "docs/word-cloud.png"]
+                }
+            ]
         },
         "xlsx": {
-            "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx"
+            "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx",
+            "OutputPaths": [
+                "dist"
+            ]
         },
         "pptx": {
             "OutputFile": "ICTU-Kwaliteitsaanpak.pptx",
+            "OutputPaths": [
+                "dist"
+            ],
             "ReferenceFile": "DocumentDefinitions/reference.pptx"
         }
     },

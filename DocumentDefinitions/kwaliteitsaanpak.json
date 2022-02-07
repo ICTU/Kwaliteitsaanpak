@@ -1,7 +1,10 @@
 {
     "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
     "BuildPath": "build/Kwaliteitsaanpak/",
-    "OutputPath": "dist",
+    "OutputPaths": [
+        "dist",
+        "docs"
+    ],
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "DocumentType": "Kwaliteitsaanpak",
     "IncludeFrontPage": true,
@@ -18,5 +21,7 @@
             "ReferenceFile": "DocumentDefinitions/reference.pptx"
         }
     },
-    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]
+    "VariablesFiles": [
+        "DocumentDefinitions/Shared/variables.json"
+    ]
 }

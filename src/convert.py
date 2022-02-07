@@ -67,17 +67,17 @@ def copy_files(settings: Settings, output_format: str) -> None:
         shutil.copy(pathlib.Path(file_to_copy["from"]), pathlib.Path(file_to_copy["to"]))
 
 
-def convert_html(converter, settings: Settings) -> None:
+def convert_html(converter, build_path: pathlib.Path, settings: Settings) -> None:
     """Convert the XML to HTML."""
-    html_filename = get_output_path(settings) / settings["OutputFormats"]["html"]["OutputFile"]
-    html_builder = HTMLBuilder(html_filename, pathlib.Path(""))
+    html_build_filename = build_path / settings["OutputFormats"]["html"]["OutputFile"]
+    html_builder = HTMLBuilder(html_build_filename, pathlib.Path(""))
     converter.convert(html_builder)
+    copy_output(html_build_filename, settings, "html")
 
 
 def convert_pdf(converter, build_path: pathlib.Path, settings: Settings, variables: Variables) -> None:
     """Convert the XML to PDF."""
     build_path = get_build_path(settings)
-    pdf_filename = get_output_filepath(settings, "pdf")
     pdf_build_filename = build_path / pathlib.Path(settings["OutputFormats"]["pdf"]["OutputFile"])
     html_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".html").name
     html_builder = HTMLContentBuilder(html_filename, build_path)
@@ -149,21 +149,11 @@ def get_build_path(settings: Settings) -> pathlib.Path:
     return get_path(settings, "BuildPath")
 
 
-def get_output_path(settings: Settings) -> pathlib.Path:
-    """Return, and create if necessary, the output path from the settings."""
-    return get_path(settings, "OutputPath")
-
-
 def get_path(settings: Settings, pathname: str) -> pathlib.Path:
     """Return, and create if necessary, the specified path from the settings."""
     path = pathlib.Path(settings[pathname])
     path.mkdir(parents=True, exist_ok=True)
     return path
-
-
-def get_output_filepath(settings: Settings, output_format: str) -> pathlib.Path:
-    """Return the output filepath for the specified format. Create intermediate folders if necessary."""
-    return get_output_path(settings) / pathlib.Path(settings["OutputFormats"][output_format]["OutputFile"])
 
 
 def main(settings_filenames: List[str], version: str) -> None:

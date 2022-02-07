@@ -1,7 +1,9 @@
 {
     "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak-samenvatting.md",
     "BuildPath": "build/Kwaliteitsaanpak/",
-    "OutputPath": "dist",
+    "OutputPaths": [
+        "dist"
+    ],
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "Subtitle": "Samenvatting",
     "DocumentType": "Kwaliteitsaanpak",
@@ -12,5 +14,7 @@
             "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.pdf"
         }
     },
-    "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]
+    "VariablesFiles": [
+        "DocumentDefinitions/Shared/variables.json"
+    ]
 }

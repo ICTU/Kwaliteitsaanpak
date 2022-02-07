@@ -64,7 +64,10 @@ def write_xml(xml: ElementTree, settings: Settings) -> None:
 def copy_files(settings: Settings, output_format: str) -> None:
     """Copy specified source files (e.g. CSS files) to the specified destinations."""
     for file_to_copy in settings["OutputFormats"][output_format].get("CopyFiles", []):
-        shutil.copy(pathlib.Path(file_to_copy["from"]), pathlib.Path(file_to_copy["to"]))
+        source_path = pathlib.Path(file_to_copy["from"])
+        destination_paths = [pathlib.Path(path) for path in file_to_copy["to"]]
+        for destination_path in destination_paths:
+            shutil.copy(source_path, destination_path)
 
 
 def convert_html(converter, build_path: pathlib.Path, settings: Settings) -> None:
@@ -137,10 +140,11 @@ def convert_xlsx(converter, build_path: pathlib.Path, settings: Settings) -> Non
 
 def copy_output(build_filename: pathlib.Path, settings: Settings, output_format: str):
     """Copy the build file to the output paths."""
-    output_paths = [pathlib.Path(output_path) for output_path in settings["OutputPaths"]]
+    output_settings = settings["OutputFormats"][output_format]
+    output_paths = [pathlib.Path(output_path) for output_path in output_settings["OutputPaths"]]
     for output_path in output_paths:
         output_path.mkdir(parents=True, exist_ok=True)
-        output_filename = output_path / settings["OutputFormats"][output_format]["OutputFile"]
+        output_filename = output_path / output_settings["OutputFile"]
         shutil.copy(build_filename, output_filename)
 
 

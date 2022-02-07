@@ -1,9 +1,6 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Kwaliteitsplan/",
-    "OutputPaths": [
-        "dist"
-    ],
     "Title": "Kwaliteitsplan",
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
@@ -13,6 +10,9 @@
     "OutputFormats": {
         "docx": {
             "OutputFile": "Template-Kwaliteitsplan.docx",
+            "OutputPaths": [
+                "dist"
+            ],
             "ReferenceFile": "DocumentDefinitions/reference.docx"
         }
     },

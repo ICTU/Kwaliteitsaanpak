@@ -20,7 +20,7 @@ Niet alle testen en controles kunnen altijd geautomatiseerd worden uitgevoerd. D
 
 De afdeling ICTU Software Diensten (ISD) voorziet in tools en ondersteuning, zodat projecten deze pipeline kunnen toepassen. Projecten zijn verantwoordelijk voor de correcte werking van de pipeline.
 
-ICTU gebruikt Jenkins, GitLab CI of Azure DevOps als tool voor de implementatie van de continuous delivery pipeline. ISD biedt de projecten een voorziening om releases van het totale product van het total product veilig op te leveren aan opdrachtgevers en beheerpartijen.
+ICTU gebruikt Jenkins, GitLab CI of Azure DevOps als tool voor de implementatie van de continuous delivery pipeline. ISD biedt de projecten een voorziening om releases van het totale product veilig op te leveren aan opdrachtgevers en beheerpartijen.
 
 ### Rationale
 

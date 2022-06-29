@@ -94,6 +94,14 @@ De deploymentdocumentatie bevat informatie over de eisen die een applicatie stel
 
 Voor elke release stelt het project release notes op: een overzicht van de wijzigingen in de release. ICTU en opdrachtgever maken afspraken over de opzet van de release notes.
 
+### Software Bill of Materials
+
+Voor elke release stelt het project een "software bill of materials" op: een overzicht van de gebruikte libraries, frameworks, componenten en andere software(deel)producten  in de release.
+
+Software draagt inherent het risico in zich van verborgen fouten.
+Deze fouten kunnen mogelijk misbruikt worden, waar door (beveiligings)problemen ontstaan. 
+Met dit overzicht heeft de opdrachtgever of diens beheerpartij belangrijke informatie in handen, die geraadpleegd kan worden wanneer fouten in software bekend wordt.
+
 ### Vrijgaveadvies
 
 Voor elke release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat tenminste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Als er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschreven voorziene impact.
@@ -117,7 +125,7 @@ Bovenstaande figuur laat de belangrijkste relaties zien tussen de verschillende 
 De onderstaande tabel bevat de hierboven genoemde producten. Het ✔ geeft aan in welke fase ze van belang zijn en worden opgeleverd, ook als ze zijn opgesteld door externe auteurs.
 
 | Product                                                                                                 | Voorfase | Realisatiefase |
-| ------------------------------------------------------------------------------------------------------- | -------- | -------------- |
+|---------------------------------------------------------------------------------------------------------|----------|----------------|
 | Plan van aanpak                                                                                         | ✔        | ✔              |
 | Beschrijving van functionele eisen                                                                      | ✔        | ✔              |
 | Beschrijving van niet-functionele eisen                                                                 | ✔        | ✔              |
@@ -131,6 +139,7 @@ De onderstaande tabel bevat de hierboven genoemde producten. Het ✔ geeft aan i
 | Broncode, inclusief de benodigdheden voor het bouwen van de software                                    |          | ✔              |
 | Regressietests, inclusief de benodigdheden voor het uitvoeren van de tests                              |          | ✔              |
 | Deploymentdocumentatie                                                                                  |          | ✔              |
+| Software Bill of Materials                                                                              |          | ✔              |
 | Release notes                                                                                           |          | ✔              |
 | Vrijgaveadvies                                                                                          |          | ✔              |
 | Bij due diligence: uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                | ✔        |                |

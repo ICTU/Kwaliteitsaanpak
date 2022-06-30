@@ -94,13 +94,14 @@ De deploymentdocumentatie bevat informatie over de eisen die een applicatie stel
 
 Voor elke release stelt het project release notes op: een overzicht van de wijzigingen in de release. ICTU en opdrachtgever maken afspraken over de opzet van de release notes.
 
-### Software Bill of Materials
+### Software bill of materials
 
 Voor elke release stelt het project een "software bill of materials" op: een overzicht van de gebruikte libraries, frameworks, componenten en andere software(deel)producten  in de release.
 
 Software draagt inherent het risico in zich van verborgen fouten.
-Deze fouten kunnen mogelijk misbruikt worden, waar door (beveiligings)problemen ontstaan. 
-Met dit overzicht heeft de opdrachtgever of diens beheerpartij belangrijke informatie in handen, die geraadpleegd kan worden wanneer fouten in software bekend wordt.
+Deze fouten kunnen mogelijk misbruikt worden, waardoor (beveiligings)problemen ontstaan. 
+
+Met dit overzicht heeft de opdrachtgever of diens beheerpartij informatie over de gebruikte software(deel)producten, die geraadpleegd kan worden wanneer fouten in software bekend wordt, zodat een risico-inschatting gemaakt kan worden en eventueel actie kan worden ondernomen.
 
 ### Vrijgaveadvies
 
@@ -139,7 +140,7 @@ De onderstaande tabel bevat de hierboven genoemde producten. Het ✔ geeft aan i
 | Broncode, inclusief de benodigdheden voor het bouwen van de software                                    |          | ✔              |
 | Regressietests, inclusief de benodigdheden voor het uitvoeren van de tests                              |          | ✔              |
 | Deploymentdocumentatie                                                                                  |          | ✔              |
-| Software Bill of Materials                                                                              |          | ✔              |
+| Software bill of materials                                                                             |          | ✔              |
 | Release notes                                                                                           |          | ✔              |
 | Vrijgaveadvies                                                                                          |          | ✔              |
 | Bij due diligence: uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                | ✔        |                |

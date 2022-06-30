@@ -96,7 +96,7 @@ Voor elke release stelt het project release notes op: een overzicht van de wijzi
 
 ### Software bill of materials
 
-Voor elke release stelt het project een "software bill of materials" op: een overzicht van de gebruikte libraries, frameworks, componenten en andere software(deel)producten  in de release.
+Voor elke release stelt het project een "software bill of materials" op: een overzicht van de gebruikte libraries, frameworks, componenten en andere software(deel)producten in de release.
 
 Software draagt inherent het risico in zich van verborgen fouten.
 Deze fouten kunnen mogelijk misbruikt worden, waardoor (beveiligings)problemen ontstaan. 

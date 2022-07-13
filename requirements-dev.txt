@@ -1,5 +1,5 @@
 black==22.6.0
-coverage==6.4.1
+coverage==6.4.2
 mypy==0.961
 pylint==2.14.4
 vulture==2.5

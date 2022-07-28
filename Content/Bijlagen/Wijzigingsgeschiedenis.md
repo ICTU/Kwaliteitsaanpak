@@ -14,7 +14,7 @@
 
 * De titel van maatregel "Het project levert in elke fase vastgestelde informatie over het product op" (M01) veranderd in "Het project levert in elke fase vastgestelde producten en informatie op" zodat de titel beter past bij de scope van de maatregel.
 * Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): de tabel uitgebreid met product backlog, en de lopende tekst aangevuld en aangepast opdat deze consistent is met de tabel.
-* Mij maatregel "Het project zorgt dat het product continu aan de kwaliteitsnormen voldoet" (M02): "Ook zorgt het project dat de performance van de software regelmatig wordt getest." toegevoegd.
+* Bij maatregel "Het project zorgt dat het product continu aan de kwaliteitsnormen voldoet" (M02): "Ook zorgt het project dat de performance van de software regelmatig wordt getest." toegevoegd.
 
 #### Template Kwaliteitsplan
 

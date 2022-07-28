@@ -1,6 +1,7 @@
 <!-- begin: measure composite=true -->
 **$M16$**
 ICTU stelt het gebruik van tools verplicht voor:
+
 1. backlog management en agile werken,
 2. inrichten en uitvoeren van een continuous delivery pipeline,
 3. monitoren van de kwaliteit van broncode,

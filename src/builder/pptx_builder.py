@@ -52,8 +52,13 @@ class PptxBuilder(Builder):
                 self.add_slide(self.CONTENT_SLIDE, text)
                 self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(24)  # type: ignore
             else:
-                self.add_text_box()
-                self.current_slide.shapes[1].text = text  # type: ignore
+                if len(self.current_slide.shapes) == 1:
+                    self.add_text_box()
+                    self.current_slide.shapes[1].text = text  # type: ignore
+                else:
+                    paragraph = self.current_slide.shapes[1].text_frame.add_paragraph()
+                    paragraph.text = text
+                    paragraph.font.size = Pt(20)
         elif (
             tag == xmltags.HEADING
             and self.in_element(xmltags.SECTION, dict(level="1"))

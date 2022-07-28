@@ -106,19 +106,6 @@ th {
     background-color: #83D0F5;
 }
 
-/*
-td:not(:empty) {
-    background-color: #83D0F5;
-    text-align: center;
-}
-
-td:nth-child(1) {
-    background-color: #83D0F5 !important;
-    text-align: left !important;
-    font-weight: normal !important;
-}
-*/
-
 ol {
     list-style-type: none;
     counter-reset: ol-item;
@@ -128,13 +115,17 @@ ol {
 }
 
 ol > li:before {
-    content: counters(ol-item, ".") " ";
+    counter-increment: ol-item;
+    content: counter(ol-item) ". ";
     margin-left: -3em;
     position: absolute;
 }
 
+ol ol > li:before {
+    content: counters(item, ".") " ";  /* Use nested counters when ol's are nested */
+}
+
 ol > li {
-    counter-increment: ol-item;
     margin: 0;
     margin-top: 0.1em;
 }

@@ -92,7 +92,7 @@ class HTMLBuilder(Builder):
             self.builder.start(html_tags.IMAGE, image_attributes)
             self.builder.end(html_tags.IMAGE)
         elif tag == xmltags.MEASURE:
-            self.builder.start(html_tags.PARAGRAPH, {html_tags.CLASS: "maatregel"})
+            self.builder.start(html_tags.DIV, {html_tags.CLASS: "maatregel"})
             self.in_measure = True
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
@@ -146,7 +146,7 @@ class HTMLBuilder(Builder):
         elif tag == xmltags.ANCHOR:
             self.builder.end(html_tags.ANCHOR)
         elif tag == xmltags.MEASURE:
-            self.builder.end(html_tags.PARAGRAPH)
+            self.builder.end(html_tags.DIV)
             self.in_measure = False
 
     def end_paragraph(self) -> None:

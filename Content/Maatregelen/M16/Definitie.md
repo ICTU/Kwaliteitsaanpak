@@ -12,6 +12,7 @@ ICTU stelt het gebruik van tools verplicht voor:
 8. controleren van de configuratie op aanwezigheid van bekende kwetsbaarheden,
 9. controleren van door de applicatie gebruikte versies van externe software op aanwezigheid van bekende kwetsbaarheden,
 10. controleren van de software op aanwezigheid van kwetsbare constructies,
-11. testen van performance en schaalbaarheid en
-12. testen op toegankelijkheid van de applicatie.
+11. testen van performance en schaalbaarheid,
+12. testen op toegankelijkheid van de applicatie en
+13) produceren van een "software bill of materials" (SBoM).
 <!-- end: measure -->

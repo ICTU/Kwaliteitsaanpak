@@ -90,6 +90,10 @@ ICTU levert de regressietests, inclusief configuratiebestanden en scripts nodig 
 
 De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTP-header en -request-configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de 'Server'-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer.
 
+### Software bill of materials
+
+Voor elke release stelt het project een "software bill of materials" op: een overzicht van de gebruikte libraries, frameworks, componenten en andere software(deel)producten in de release. Software draagt inherent het risico in zich van verborgen fouten. Deze fouten kunnen mogelijk misbruikt worden, waardoor (beveiligings)problemen ontstaan. Met dit overzicht heeft de opdrachtgever of diens beheerpartij informatie over de gebruikte software(deel)producten, die geraadpleegd kan worden wanneer fouten in software bekend wordt, zodat een risico-inschatting gemaakt kan worden en eventueel actie kan worden ondernomen.
+
 ### Release notes
 
 Voor elke release stelt het project release notes op: een overzicht van de wijzigingen in de release. ICTU en opdrachtgever maken afspraken over de opzet van de release notes.
@@ -117,7 +121,7 @@ Bovenstaande figuur laat de belangrijkste relaties zien tussen de verschillende 
 De onderstaande tabel bevat de hierboven genoemde producten. Het ✔ geeft aan in welke fase ze van belang zijn en worden opgeleverd, ook als ze zijn opgesteld door externe auteurs.
 
 | Product                                                                                                 | Voorfase | Realisatiefase |
-| ------------------------------------------------------------------------------------------------------- | -------- | -------------- |
+|---------------------------------------------------------------------------------------------------------|----------|----------------|
 | Plan van aanpak                                                                                         | ✔        | ✔              |
 | Beschrijving van functionele eisen                                                                      | ✔        | ✔              |
 | Beschrijving van niet-functionele eisen                                                                 | ✔        | ✔              |
@@ -131,6 +135,7 @@ De onderstaande tabel bevat de hierboven genoemde producten. Het ✔ geeft aan i
 | Broncode, inclusief de benodigdheden voor het bouwen van de software                                    |          | ✔              |
 | Regressietests, inclusief de benodigdheden voor het uitvoeren van de tests                              |          | ✔              |
 | Deploymentdocumentatie                                                                                  |          | ✔              |
+| Software bill of materials                                                                              |          | ✔              |
 | Release notes                                                                                           |          | ✔              |
 | Vrijgaveadvies                                                                                          |          | ✔              |
 | Bij due diligence: uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                | ✔        |                |

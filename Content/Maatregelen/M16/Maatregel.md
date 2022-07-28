@@ -17,7 +17,8 @@ ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Project
 9. Kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency Checker,
 10. Kwetsbaarheden in software: GitLab SAST (Static Application Security Testing), SonarQube en/of OWASP ZAP (Zed Attack Proxy),
 11. Performancetesten en performancetestrapportages: JMeter en Performancetestrunner,
-12. Toegankelijkheid: Axe.
+12. Toegankelijkheid: Axe, en
+13. Software bill of materials: tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren.
 
 ### Rationale
 

@@ -6,16 +6,18 @@ Onder het ondersteunen van "agile werken" vallen het opvoeren van eisen, het opv
 
 ICTU adviseert en ondersteunt hiervoor de volgende tools:
 
-1. Agile werken: Azure DevOps en Jira,
-2. Continuous delivery pipeline: Jenkins, GitLab CI en Azure DevOps,
+1. Backlogmanagement en agile werken: Azure DevOps en Jira,
+2. Continuous delivery pipeline: Jenkins, GitLab CI/CD (Continuous Integration, Delivery, and Deployment) en Azure DevOps,
 3. Kwaliteit van broncode: SonarQube,
 4. Versiebeheer: GitLab en Azure DevOps,
-5. Kwaliteitsrapportages: Quality-time,
-5. Kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
-7. Kwetsbaarheden in externe software: OWASP Dependency Checker,
-8. Kwetsbaarheden in software: Checkmarx en OWASP (Open Web Application Security Project) ZAP (Zed Attack Proxy),
-9. Performancetesten en performancetestrapportages: JMeter en Performancetestrunner,
-10. Toegankelijkheid: Axe.
+5. Release van software: Releaseserver in het ontwikkelplatform,
+6. Testrapportages: JUnit, Robot Framework en TestNG,
+7. Kwaliteitsrapportages: Quality-time,
+8. Kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
+9. Kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency Checker,
+10. Kwetsbaarheden in software: GitLab SAST (Static Application Security Testing), SonarQube en OWASP ZAP (Zed Attack Proxy),
+11. Performancetesten en performancetestrapportages: JMeter en Performancetestrunner,
+12. Toegankelijkheid: Axe.
 
 ### Rationale
 

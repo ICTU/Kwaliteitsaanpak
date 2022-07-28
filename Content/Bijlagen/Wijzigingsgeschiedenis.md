@@ -5,6 +5,7 @@
 #### Kwaliteitsaanpak
 
 * HTML-versie van de Kwaliteitsaanpak toegevoegd als toegankelijk alternatief voor de PDF-versie.
+* Bij maatregel "Het project gebruikt tools voor vastgestelde taken" (M16): de lijst van verplichte tools en ondersteunde tools gelijk getrokken en de genoemde tools bijgewerkt.
 
 ### Versie 2.4.0, 12 januari 2022
 

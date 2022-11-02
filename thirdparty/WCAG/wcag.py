@@ -33,6 +33,7 @@ def node(script):
 axe_core_version = node("console.log(require('axe-core').version)")
 rules_text = node("axe = require('axe-core'); console.log(axe.getRules())")
 rules_text = re.sub(r"([a-zA-Z]+): ", r'"\1": ', rules_text)
+rules_text = re.sub(r": undefined", r": []", rules_text)
 rules = ast.literal_eval(rules_text)
 
 # Read the WCAG success criteria

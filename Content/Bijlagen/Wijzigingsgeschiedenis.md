@@ -5,9 +5,14 @@
 #### Kwaliteitsaanpak
 
 * HTML-versie van de Kwaliteitsaanpak toegevoegd als toegankelijk alternatief voor de PDF-versie.
+* Op meerdere plekken in de Kwaliteitsaanpak de gebruikte rollen aangescherpt of verbeterd door bijvoorbeeld ICTU te vervangen door projectteam of projectleider door software delivery manager.
 * Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): software bill of materials toegevoegd als op te leveren informatie.
 * Bij maatregel "Het project gebruikt tools voor vastgestelde taken" (M16): de lijst van verplichte tools en ondersteunde tools gelijk getrokken, de genoemde tools bijgewerkt en software bill of materials toegevoegd als taak.
 * Bij maatregel "Het project voert periodiek een self-assessment uit ten aanzien van de Kwaliteitsaanpak" (M28): de rol van de kwaliteitsmanager bij het uitvoeren van de self-assessment toegevoegd.
+
+#### Template Niet-Functionele Eisen
+
+* Axe-core bijgewerkt naar versie 4.6 in de tabel met de WCAG 2.1 succescriteria.
 
 ### Versie 2.4.0, 12 januari 2022
 

@@ -16,7 +16,8 @@ Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende rollen
 
 * Projectleider: de verantwoordelijke voor uitvoering van het project,
 * Software delivery manager: organiseert het ontwikkelen en opleveren van software conform de vastgestelde eisen en de Kwaliteitsaanpak, rapporteert aan de projectleider,
-* Kwaliteitsmanager: controleert en borgt de kwaliteit van software conform de vastgestelde kwaliteitseisen en de Kwaliteitsaanpak, rapporteert aan de projectleider.
+* Kwaliteitsmanager: controleert en borgt de kwaliteit van software conform de vastgestelde kwaliteitseisen en de Kwaliteitsaanpak, rapporteert aan de projectleider,
+* Projectteam: alle medewerkers werkzaam binnen het project die rapporteren aan de projectleider. De softwareontwikkeling binnen het projectteam gebeurt door één of meer Scrumteams, bestaande uit een product owner, ontwikkelaars en een Scrummaster. De product owner is altijd een medewerker van de opdrachtgevende organisatie.
 
 Projecten bij ICTU die software ontwikkelen en/of onderhouden volgens deze Kwaliteitsaanpak, kunnen ondersteuning krijgen van de afdelingen ICTU Software Diensten (ISD) en ICTU Software Expertise (ISE). ISD levert ontwikkel- en testomgevingen, tools en ondersteunende diensten. ISE levert expertise in de vorm van software delivery managers, kwaliteitsmanagers en software-ontwikkelaars. ISE onderhoudt tevens deze Kwaliteitsaanpak. ISD en ISE zijn niet verantwoordelijk voor de projectuitvoering, maar voor het bieden van expertise en diensten om projecten in staat te stellen efficiënt en effectief volgens de Kwaliteitsaanpak te werken.
 

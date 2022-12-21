@@ -4,7 +4,7 @@
 
 Tijdens de voorfase wordt het voldoen aan de kwaliteitsnormen met behulp van reviews gecontroleerd. Als onderdeel van het op te stellen kwaliteitsplan wordt tijdens de voorfase bepaald hoe het project de kwaliteit tijdens realisatie gaat controleren; voor producten die niet geautomatiseerd kunnen worden gecontroleerd, beschrijft het kwaliteitsplan een alternatieve aanpak. Als bijvoorbeeld door de gekozen technologie geen ondersteuning van het kwaliteitssysteem mogelijk is, kunnen periodieke, handmatige controles als alternatief ingezet worden.
 
-Tijdens de realisatiefase wordt de kwaliteit diverse malen per uur gemeten door een geautomatiseerd kwaliteitssysteem, genaamd Quality-time. Het projectteam kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie, indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het team.
+Tijdens de realisatiefase wordt de kwaliteit diverse malen per uur gemeten door een geautomatiseerd kwaliteitssysteem, genaamd Quality-time. Het projectteam kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie, indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het projectteam.
 
 Kwaliteitseigenschappen van de software die niet (volledig) geautomatiseerd kunnen worden gemeten, worden tijdens de realisatiefase periodiek handmatig geëvalueerd. Minimaal betreft dit de beveiliging van de software, zie [$M26$](#m26). Ook zorgt het project dat de performance van de software regelmatig wordt getest. Voor kwaliteitsaspecten als toegankelijkheid en gebruikskwaliteit organiseert het projectteam handmatige testen en/of evaluaties in een vorm en met een frequentie die aansluit bij de aard van de applicatie en de door de opdrachtgever gestelde eisen. De kwaliteitsmanager houdt in het kwaliteitssysteem bij wanneer de laatste test of evaluatie is uitgevoerd en wanneer het tijd is voor de volgende.
 
@@ -14,6 +14,7 @@ Indien de kwaliteitsdoelstellingen langdurig of niet tijdig worden behaald, heef
 
 1. De kwaliteitsmanager bespreekt de situatie met de software delivery manager.
 2. Indien dat niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de projectleider.
+3. Indien 2. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar het hoofd van de afdeling ICTU Software Expertise (ISE).
 
 De specifieke kwaliteitsnormen voor producten zijn in deze versie van de Kwaliteitsaanpak niet opgenomen.
 

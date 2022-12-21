@@ -1,4 +1,4 @@
-# Projectresultaat 
+# Projectresultaat
 
 De te {ontwikkelen en/of onderhouden} software {beschrijving functionaliteit in hoofdlijnen van de software}.
 De software komt tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU de softwareontwikkeling uitvoert; zie hiervoor het hoofdstuk “Werkwijze”.
@@ -19,7 +19,7 @@ ICTU levert de volgende producten op:
     a. een beschrijving van de logische testgevallen,
     a. een actuele versie van de kwaliteitsrapportage,
     a. {eventueel bijgewerkte andere documentatie waarvoor ICTU verantwoordelijk en/of penvoerder is, zoals testplannen en kwaliteitsplan}.
-   
+
 ## Scope
 
 Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {de software}, inclusief:
@@ -52,7 +52,7 @@ Tijdens dit project wordt agile gewerkt volgens de Scrum-aanpak. ICTU propageert
 
 ## Werving ontwikkelteam
 
-Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de realisatiefase. {Beschrijf eventueel de te werven functies}
+Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het projectteam voor de realisatiefase. {Beschrijf eventueel de te werven functies}
 
 ## Kick-off
 
@@ -105,13 +105,13 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 
 {Beschrijf de afstemming met gerelateerde projecten, indien van toepassing}
 
-## Projectafsluiting 
+## Projectafsluiting
 
 Omdat ICTU tijdens het project de software, inclusief documentatie, regelmatig oplevert is er geen speciale eindoplevering nodig. ICTU archiveert de projectartifacten zoals beschreven in de bijlage "Projectafsluiting".
 
 # Planning en doorlooptijd
 
-De start van het project vindt uiterlijk {aantal} weken na ondertekening van het voorstel inclusief projectovereenkomst plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het team samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
+De start van het project vindt uiterlijk {aantal} weken na ondertekening van het voorstel inclusief projectovereenkomst plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het projectteam samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
 
 De verwachte doorlooptijd van de uitvoering van dit plan van aanpak is {aantal} weken.
 
@@ -121,7 +121,7 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 
 | Onderdeel/week                       | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 | 12 |
 |:-------------------------------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| Samenstellen team                    | X  | X  | X  |    |    |    |    |    |    |    |    |    |
+| Samenstellen projectteam             | X  | X  | X  |    |    |    |    |    |    |    |    |    |
 | Voorbereiden en plannen kick-off     |    | X  | X  |    |    |    |    |    |    |    |    |    |
 | Kick-off                             |    |    |    | X  |    |    |    |    |    |    |    |    |
 | Inrichten ontwikkelstraat sprint 0   |    |    |    | X  | X  |    |    |    |    |    |    |    |
@@ -175,7 +175,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 | UX-designer                            | {x} uur         | Gebruikersonderzoek, onderhouden UX-richtlijnen, maken en onderhouden prototype {of wireframe/mockup/animatie}, toetsen prototypes met gebruikers |
 | Informatiebeveiligingsexpert           | {x} uur         | Onderhouden IB-plan, toetsen IB-maatregelen                                                                                 |
 | Kwaliteitsmanager                      | {x} uur         | Inrichten, onderhouden en bewaken kwaliteitsrapportage                                                                      |
-| Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het team, inhoudelijke rapportage                    |
+| Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het projectteam, inhoudelijke rapportage                    |
 | Projectleider                          | {x} uur         | Bewaken overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
 | Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                    |
 | Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is  |

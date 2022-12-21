@@ -15,5 +15,5 @@ De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van
 
 Bij projectafsluiting zorgt de software delivery manager verder dat volgende acties worden uitgevoerd:
 
-* ISD Technische beheer trekt credentials van projectmedewerkers zoals VPN-keys en LDAP-accounts in,
+* ISD trekt credentials van projectmedewerkers zoals VPN-keys en LDAP-accounts in,
 * projectmedewerkers verwijderen broncode, testscript en documentatie van hun werkstations.

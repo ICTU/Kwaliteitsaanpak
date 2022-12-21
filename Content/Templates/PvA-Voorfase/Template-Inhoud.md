@@ -46,7 +46,7 @@ Het succes van deze voorfase, en van het eventueel later uit te voeren realisati
 
 Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak. Dit vertaalt zich concreet in:
 
-* Eén team met medewerkers van {opdrachtgever/partijen} en ICTU werkt minimaal {aantal} dagdelen per week aan de gedefinieerde documenten.
+* Eén projectteam met medewerkers van {opdrachtgever/partijen} en ICTU werkt minimaal {aantal} dagdelen per week aan de gedefinieerde documenten.
 * Er is een product owner door {opdrachtgever} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
 * Voor elk product is een inhoudelijk verantwoordelijke, een penvoerder/schrijver en één of meer reviewers. Alle partijen werken constructief samen. Reviews zijn gericht op kwaliteitsverbeteringen. Waar nodig schrijven reviewers mee aan de documenten.
 * Nieuwe tussentijdse versies van documenten worden kortcyclisch opgeleverd, elke {termijn}.
@@ -54,15 +54,15 @@ Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak.
 
 De voorfase wordt uitgevoerd in iteraties, "sprints" genaamd, van twee weken. Iedere sprint hanteert hierbij eenzelfde tijdschema, start met een planningssessie en eindigt met een demonstratie van de status van de producten. In de planningssessie wordt onder andere nagegaan in hoeverre een product in de komende sprint kan worden opgepakt; dit hangt af van de voortgang van andere producten waarvan het betreffende product afhankelijk is. Rondom de thema’s {functionaliteit, (gebruiks)kwaliteit, architectuur, techniek en veiligheid} organiseert ICTU werksessies.
 
-## Werving team
+## Werving projectteam
 
-Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het team voor de voorfase. {Beschrijf eventueel de te werven functies}
+Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het projectteam voor de voorfase. {Beschrijf eventueel de te werven functies}
 
 ## Kick-off
 
 Voor een goede start wordt er, bij aanvang van de voorfase, een kick-off georganiseerd met alle projectmedewerkers, beoogde stuurgroepleden en de opdrachtgever. Na opdrachtverstrekking zal de projectleider van ICTU de kick-off plannen.
 
-## Projectteam
+## Samenwerking
 
 {Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
 
@@ -117,7 +117,7 @@ Omdat ICTU tijdens het project de documenten regelmatig oplevert is er geen spec
 
 {Verwijs naar dit hoofdstuk in hoofdstuk 5 van het voorstel inclusief POK}
 
-De start van het project vindt uiterlijk {aantal} weken na ondertekening van het eveneens verstuurde voorstel inclusief projectovereenkomst plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het team samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
+De start van het project vindt uiterlijk {aantal} weken na ondertekening van het eveneens verstuurde voorstel inclusief projectovereenkomst plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het projectteam samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
 
 De verwachte doorlooptijd van de uitvoering van deze voorfase is {aantal} weken.
 
@@ -127,7 +127,7 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 
 | Onderdeel/week                       | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 |
 |:-------------------------------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| Samenstellen team                    | X  | X  | X  |    |    |    |    |    |    |    |
+| Samenstellen projecrteam             | X  | X  | X  |    |    |    |    |    |    |    |
 | Voorbereiden en plannen kick-off     |    | X  | X  |    |    |    |    |    |    |    |
 | Kick-off                             |    |    |    | X  |    |    |    |    |    |    |
 | Realisatie producten sprint 1        |    |    |    | X  | X  |    |    |    |    |    |
@@ -179,7 +179,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 | Privacy expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten} |
 | Testmanager                            | {x} uur         | Penvoerder testplan softwarerealisatie, reviewen {documenten} |
 | Kwaliteitsmanager                      | {x} uur         | Penvoerder kwaliteitsplan, reviewen {documenten} |
-| Software delivery manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het team, inhoudelijke rapportage |
+| Software delivery manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het projectteam, inhoudelijke rapportage |
 | Projectleider                          | {x} uur         | Voorbereiden en plannen kick-off, opstellen plan van aanpak en voorstel inclusief projectovereenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
 | Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie |
 | Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is |

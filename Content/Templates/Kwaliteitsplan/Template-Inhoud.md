@@ -6,7 +6,7 @@ De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende het gehele p
 
 ### Wekelijks projectoverleg
 
-Het project houdt een wekelijks intern projectoverleg (IPO) waarin planning, voortgang, kwaliteitsrapportage, acties, risico's en overige relevante zaken worden besproken ($M10$). Het doel is om informatie uit te wisselen binnen het project, belemmeringen voor de voortgang die het projectteam niet zelf kan oplossen te melden en eventueel te besluiten over escalaties buiten het project.
+Het project houdt een wekelijks intern projectoverleg (IPO) waarin planning, voortgang, kwaliteitsrapportage, acties, risico's en overige relevante zaken worden besproken ($M10$). Het doel is om informatie uit te wisselen binnen het project, belemmeringen voor de voortgang die het Scrumteam niet zelf kan oplossen te melden en eventueel te besluiten over escalaties buiten het project.
 
 De IPO-agenda bevat minimaal: mededelingen, kwaliteit, voortgang, risico's, acties en rondvraag. Aanwezig zijn in ieder geval de projectleider, de software delivery manager, de kwaliteitsmanager, de Scrummaster en een vertegenwoordiger uit elk Scrumteam.
 
@@ -103,9 +103,9 @@ De Definition Of Ready van het project bevat de volgende criteria ({vul aan en p
 1. De beschrijving voldoet aan het user story formaat “als <rol> wil ik <actie> zodat <reden>”;
 2. De annotaties en screenshots/prototype zijn gereed;
 3. Afhankelijkheden met derden zijn in kaart (bijvoorbeeld: een koppelvlakbeschrijving is beschikbaar);
-4. De story is ingeschat door het team;
+4. De story is ingeschat door het Scrumteam;
 5. De story is goedgekeurd door de product owner;
-6. De story is goedgekeurd door de reviewer binnen het team;
+6. De story is goedgekeurd door de reviewer binnen het Scrumteam;
 7. Het verwachte aantal logische testgevallen is ingevuld;
 8. Er is ingeschat of de user story een performance risico, een beveiligingsrisico en/of een infrastructuurwijziging met zich meebrengt.
 
@@ -145,7 +145,7 @@ Voor elke release stelt het project release notes op, een overzicht van de wijzi
 
 Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automatisch metrieken worden verzameld en samengesteld. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden meerdere keer per uur bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. Zie het [overzicht van mogelijke metrieken](https://github.com/ICTU/quality-time/blob/master/docs/METRICS_AND_SOURCES.md) en de daarbij horende standaard normen; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
 
-De actuele kwaliteitsrapportage wordt dagelijks besproken tijdens team stand-up meetings en wekelijks in het intern projectoverleg (IPO). De kwaliteitsmanager onderhoudt en bewaakt de kwaliteitsrapportage.
+De actuele kwaliteitsrapportage wordt dagelijks besproken tijdens Scrumteam stand-up meetings en wekelijks in het intern projectoverleg (IPO). De kwaliteitsmanager onderhoudt en bewaakt de kwaliteitsrapportage.
 
 ## Kwaliteit van de broncode
 
@@ -201,13 +201,13 @@ Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor
 
 ## Unit tests
 
-Om de correcte werking van de software te borgen, schrijft het team unit tests. De unit tests draaien als onderdeel van de geautomatiseerde pijplijn en de broncodedekking van de unit tests wordt gemeten. Het ICTU-kwaliteitssysteem rapporteert over het aantal unit tests, het al dan niet slagen van de unit tests en broncodedekking van de unit tests.
+Om de correcte werking van de software te borgen, schrijft het Scrumteam unit tests. De unit tests draaien als onderdeel van de geautomatiseerde pijplijn en de broncodedekking van de unit tests wordt gemeten. Het ICTU-kwaliteitssysteem rapporteert over het aantal unit tests, het al dan niet slagen van de unit tests en broncodedekking van de unit tests.
 
 De default normen voor broncodedekking met unit tests zijn 90% line coverage en 80% branch coverage. De norm geldt niet voor gegenereerde code, code van derde-partijen die ICTU zelf niet onderhoudt en triviale code zoals getters/setters/framework boilerplate-code.
 
 ## Systeemtesten
 
-Om de correcte werking van de software te borgen maakt het team systeemtesten. Deze bestaan uit een combinatie van handmatige eenmalige testen, handmatige regressietesten en automatische regressietesten. De automatische regressietesten draaien als onderdeel van de geautomatiseerde pijplijn en de broncode dekking van de automatische regressietesten wordt gemeten. Het ICTU-kwaliteitssysteem rapporteert over het aantal handmatige regressietesten, de hoeveelheid tijd die het kost de handmatige regressietesten uit te voeren en de laatste datum dat ze zijn uitgevoerd. Het ICTU-kwaliteitssysteem rapporteert ook over het aantal automatische regressietesten, of ze al dan niet falen en de broncodedekking van de geautomatiseerde regressietesten.
+Om de correcte werking van de software te borgen maakt het Scrumteam systeemtesten. Deze bestaan uit een combinatie van handmatige eenmalige testen, handmatige regressietesten en automatische regressietesten. De automatische regressietesten draaien als onderdeel van de geautomatiseerde pijplijn en de broncode dekking van de automatische regressietesten wordt gemeten. Het ICTU-kwaliteitssysteem rapporteert over het aantal handmatige regressietesten, de hoeveelheid tijd die het kost de handmatige regressietesten uit te voeren en de laatste datum dat ze zijn uitgevoerd. Het ICTU-kwaliteitssysteem rapporteert ook over het aantal automatische regressietesten, of ze al dan niet falen en de broncodedekking van de geautomatiseerde regressietesten.
 
 De default normen voor broncodedekking met geautomatiseerde regressietesten zijn 80% line coverage en 70% branch coverage. De norm geldt niet voor gegenereerde code, code van derde-partijen die ICTU zelf niet onderhoudt en triviale code zoals getters/setters/framework boiler plate code.
 
@@ -230,7 +230,7 @@ ICTU voert drie soorten performance-testen uit in de eigen testomgeving, die inz
 
 De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient de opdrachtgever zelf te laten testen.
 
-Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen uitgevoerd in de ontwikkelomgeving van ICTU. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het ontwikkelteam. Issues die voortkomen uit performance-testen worden opgenomen in Jira met het label "performance_bevinding".
+Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen uitgevoerd in de ontwikkelomgeving van ICTU. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het Scrumteam. Issues die voortkomen uit performance-testen worden opgenomen in Jira met het label "performance_bevinding".
 
 ## Security-testen
 
@@ -254,13 +254,13 @@ Merk op: de beveiliging van de software in de acceptatie- en productieomgeving k
 
 ## Toegankelijkheidstesten
 
-Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Het ICTU-kwaliteitssysteem rapporteert over de toegankelijkheidsrapportage van Axe. Daarnaast worden handmatige toegankelijkheidstesten uitgevoerd, door deskundige leden van het ontwikkelteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.1-richtlijnen die niet geautomatiseerd kunnen worden getest.
+Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Het ICTU-kwaliteitssysteem rapporteert over de toegankelijkheidsrapportage van Axe. Daarnaast worden handmatige toegankelijkheidstesten uitgevoerd, door deskundige leden van het Scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.1-richtlijnen die niet geautomatiseerd kunnen worden getest.
 
 ## Usability-testen
 
 {Verwijder deze paragraaf indien usability-testen niet van toepassing zijn}
 
-Om de usability van de software te testen worden usability-testen uitgevoerd, door deskundige leden van het ontwikkelteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak.
+Om de usability van de software te testen worden usability-testen uitgevoerd, door deskundige leden van het Scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak.
 
 Issues die voortkomen uit usability-testen worden opgenomen in Jira met het label "usability_bevinding".
 
@@ -268,7 +268,7 @@ Issues die voortkomen uit usability-testen worden opgenomen in Jira met het labe
 
 Technische schuld zijn eigenschappen van de software die de lange-termijninzetbaarheid en onderhoudbaarheid van de software bedreigen; denk hierbij aan hoge complexiteit, lage testdekking, ontbrekende testsoorten en ontbrekende documentatie.
 
-Als het ontwikkelteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in het kwaliteitssysteem als zodanig om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het team, in overleg met de software delivery manager en de Scrummaster, om de omvang van de technische schuld in te schatten in user-storypunten. Vervolgens wordt een plan gemaakt om de technische schuld in een beheerst tempo - de ontwikkeling/onderhoud van de software moet wel doorgang vinden - weg te werken. Uitgangspunt is ongeveer 10% van de user-storypunten die het team normaal in een sprint realiseert; dit kan in principe zonder overleg met de opdrachtgever, omdat het leveren van kwaliteit onderdeel van het werk is.
+Als het Scrumteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in het kwaliteitssysteem als zodanig om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het Scrumteam, in overleg met de software delivery manager en de Scrummaster, om de omvang van de technische schuld in te schatten in user-storypunten. Vervolgens wordt een plan gemaakt om de technische schuld in een beheerst tempo - de ontwikkeling/onderhoud van de software moet wel doorgang vinden - weg te werken. Uitgangspunt is ongeveer 10% van de user-storypunten die het Scrumteam normaal in een sprint realiseert; dit kan in principe zonder overleg met de opdrachtgever, omdat het leveren van kwaliteit onderdeel van het werk is.
 
 ## Beheer
 

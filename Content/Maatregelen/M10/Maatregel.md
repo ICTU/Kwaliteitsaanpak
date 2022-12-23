@@ -16,7 +16,7 @@ Nadere toelichting op de agenda:
 
 * Mededelingen: betrokkenen proactief informeren over voor het project relevante ontwikkelingen.
 * Actie- en besluitenlijst: de software delivery manager houdt de actie- en besluitenlijst bij.
-* Personele zaken: bespreking van samenwerking binnen het projectteam, in- en uitstroom, op- en afschalen.
+* Personele zaken: bespreking van samenwerking binnen het project, in- en uitstroom, op- en afschalen.
 * Planning en voortgang: bespreking van voortgang ten opzichte van voorspelling en daaraan gerelateerde afwijkingen en knelpunten, leidend tot acties.
 * Kwaliteit en architectuur: bespreking van kwaliteit, bijvoorbeeld naar aanleiding van de self-assessment, architectuur voor borging van inhoudelijke koers, eventuele afwijkingen en benodigde acties.
 * Risico's en aandachtspunten: de software delivery manager houdt het risicolog bij.
@@ -25,7 +25,7 @@ Het kwaliteitssysteem bewaakt de actualiteit van de actie- en besluitenlijst en 
 
 ### Rationale
 
-Het doel van het periodiek projectoverleg is alle directe betrokkenen, breder dan de projectteams, op hetzelfde informatieniveau te brengen en te houden. Directe betrokkenen zijn alle medewerkers die geen onderdeel uitmaken van de projectteams, maar wel verantwoordelijkheid dragen voor het projectsucces.
+Het doel van het periodiek projectoverleg is alle betrokkenen op hetzelfde informatieniveau te brengen en te houden. Het overleg is intern om vrijuit te kunnen praten over personele zaken en risico's voor het project.
 
 ### Referenties
 

@@ -45,22 +45,22 @@ Het succes van het uit te voeren realisatietraject is sterk afhankelijk van de b
 
 Tijdens dit project wordt agile gewerkt volgens de Scrum-aanpak. ICTU propageert de kernwaarden van Scrum. Dit vertaalt zich concreet in:
 
-* Een Scrumteam, bestaande uit een product owner, door {opdrachtgever} aangesteld, die de uiteindelijke inhoudelijke keuzes maakt, en een ontwikkelteam, inclusief Scrummaster, door ICTU aangesteld.
+* Een Scrumteam, bestaande uit een product owner, door {opdrachtgever} aangesteld, die de uiteindelijke inhoudelijke keuzes maakt, en ontwikkelaars (zoals programmeurs, testers en ontwerpers) en een Scrummaster, door ICTU aangesteld.
 * Een proces met sprints van {twee of drie} weken waarin de Scrumactiviteiten sprint planning, sprint refinement, daily Scrum, sprint demonstratie/review en retrospective plaatsvinden.
 * Een definition of ready en een definition of done voor respectievelijk het beginnen en afronden van werk.
 * Een product backlog en een sprint backlog.
 
-## Werving ontwikkelteam
+## Werving
 
-Direct na de opdrachtverstrekking start ICTU met de werving en samenstelling van het projectteam voor de realisatiefase. {Beschrijf eventueel de te werven functies}
+Direct na de opdrachtverstrekking start ICTU met de samenstelling van het Scrumteam voor de realisatiefase. {Beschrijf de eventueel te werven functies}
 
 ## Kick-off
 
 Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off georganiseerd met alle projectmedewerkers, beoogde stuurgroepleden en de opdrachtgever. In de kick-off komen, naast een kennismaking, eventuele acties aan bod die nog uitgevoerd moeten worden voordat daadwerkelijk met de realisatiefase kan worden begonnen. {Als er al dergelijke acties bekend zijn, voeg ze eventueel hier in.} Ook worden de risico’s geïdentificeerd die van toepassing zijn op de realisatiefase en het verdere verloop van het project. Na opdrachtverstrekking zal de projectleider van ICTU de kick-off voorbereiden en plannen.
 
-## Projectteam
+## Samenwerking
 
-{Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een projectteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
+{Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een Scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
 
 ## Projectbesturing
 
@@ -68,7 +68,7 @@ Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off g
 
 ## Oplevering software
 
-De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het projectteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Als er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
+De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het Scrumteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Als er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgever} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
 {Beschrijf hier de afspraken tussen ICTU en opdrachtgever over de opzet van vrijgaveadvies, release notes en goedkeuringsproces.}
 
 ## Kwaliteitsbeheersing
@@ -111,7 +111,7 @@ Omdat ICTU tijdens het project de software, inclusief documentatie, regelmatig o
 
 # Planning en doorlooptijd
 
-De start van het project vindt uiterlijk {aantal} weken na ondertekening van het voorstel inclusief projectovereenkomst plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het projectteam samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
+De start van het project vindt uiterlijk {aantal} weken na ondertekening van het voorstel inclusief projectovereenkomst plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het Scrumteam samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
 
 De verwachte doorlooptijd van de uitvoering van dit plan van aanpak is {aantal} weken.
 
@@ -121,7 +121,7 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 
 | Onderdeel/week                       | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 | 12 |
 |:-------------------------------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| Samenstellen projectteam             | X  | X  | X  |    |    |    |    |    |    |    |    |    |
+| Samenstellen Scrumteam               | X  | X  | X  |    |    |    |    |    |    |    |    |    |
 | Voorbereiden en plannen kick-off     |    | X  | X  |    |    |    |    |    |    |    |    |    |
 | Kick-off                             |    |    |    | X  |    |    |    |    |    |    |    |    |
 | Inrichten ontwikkelstraat sprint 0   |    |    |    | X  | X  |    |    |    |    |    |    |    |
@@ -147,7 +147,7 @@ Voor de uitvoering van de realisatiefase gelden de volgende randvoorwaarden:
 
 De onderstaande projectrisico’s, die het succes van de realisatiefase kunnen belemmeren, zijn reeds onderkend; daarbij zijn per risico de maatregelen benoemd.
 
-De risico’s worden door ICTU bijgehouden in het risicolog. De risico’s en de mitigerende maatregelen worden in de realisatiefase bewaakt en waar nodig geactualiseerd.
+De risico’s worden door het project bijgehouden in het risicolog. De risico’s en de mitigerende maatregelen worden in de realisatiefase bewaakt en waar nodig geactualiseerd.
 
 {Deze tabel dient op basis van het concrete project en voorstel aangepast te worden.}
 
@@ -175,7 +175,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 | UX-designer                            | {x} uur         | Gebruikersonderzoek, onderhouden UX-richtlijnen, maken en onderhouden prototype {of wireframe/mockup/animatie}, toetsen prototypes met gebruikers |
 | Informatiebeveiligingsexpert           | {x} uur         | Onderhouden IB-plan, toetsen IB-maatregelen                                                                                 |
 | Kwaliteitsmanager                      | {x} uur         | Inrichten, onderhouden en bewaken kwaliteitsrapportage                                                                      |
-| Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het projectteam, inhoudelijke rapportage                    |
+| Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het Scrumteam, inhoudelijke rapportage                    |
 | Projectleider                          | {x} uur         | Bewaken overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
 | Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                    |
 | Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is  |

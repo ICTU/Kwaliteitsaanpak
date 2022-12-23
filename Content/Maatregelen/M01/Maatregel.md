@@ -60,7 +60,7 @@ Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illust
 
 De testplannen bestaan uit een mastertestplan (MTP), gemaakt op basis van een productrisicoanalyse (PRA), en detailtestplannen. Het doel van een mastertestplan is om betrokkenen bij het testproces te informeren over de strategie, aanpak, activiteiten, inclusief de onderlinge relaties en afhankelijkheden, en de op te leveren producten met betrekking tot het testtraject. Het mastertestplan beschrijft deze strategie, aanpak, activiteiten en eindproducten, die in de detailtestplannen verder worden gedetailleerd.
 
-Opdrachtgever is verantwoordelijk voor het mastertestplan. Het projectteam maakt een detailtestplan voor de testsoorten die tijdens de realisatiefase door het projectteam worden uitgevoerd. Voor testen die onder verantwoordelijkheid van ICTU door een derde partij worden uitgevoerd, denk aan penetratietesten en evaluaties van gebruikskwaliteit, worden aparte detailtestplannen gemaakt.
+Opdrachtgever is verantwoordelijk voor het mastertestplan. Het project maakt een detailtestplan voor de testsoorten die tijdens de realisatiefase door het project worden uitgevoerd. Voor testen die onder verantwoordelijkheid van ICTU door een derde partij worden uitgevoerd, denk aan penetratietesten en evaluaties van gebruikskwaliteit, worden aparte detailtestplannen gemaakt.
 
 Logische testgevallen worden vastgelegd en gekoppeld met use cases en user stories. Fysieke testgevallen worden vastgelegd in het formaat van de gebruikte tooling en gekoppeld met de logische testgevallen. Op basis hiervan worden testrapportages gegenereerd die laten zien dat alle use cases en user stories zijn getest en dat die tests zijn geslaagd.
 
@@ -76,15 +76,15 @@ Het kwaliteitsplan beschrijft de standaard kwaliteitsmaatregelen die ICTU-projec
 
 ### Deploybare versie van de software
 
-Het projectteam levert deploybare versies van de software in een formaat dat is afgestemd met de beheerpartij.
+Het project levert deploybare versies van de software in een formaat dat is afgestemd met de beheerpartij.
 
 ### Broncode, inclusief de benodigdheden voor het bouwen van de software
 
-Het projectteam levert de broncode, inclusief configuratiebestanden en buildscripts, nodig voor het bouwen van de software.
+Het project levert de broncode, inclusief configuratiebestanden en buildscripts, nodig voor het bouwen van de software.
 
 ### Regressietests, inclusief de benodigdheden voor het uitvoeren van de tests
 
-Het projectteam levert de regressietests, inclusief configuratiebestanden en scripts nodig voor het uitvoeren van de tests.
+Het project levert de regressietests, inclusief configuratiebestanden en scripts nodig voor het uitvoeren van de tests.
 
 ### Deploymentdocumentatie
 
@@ -108,7 +108,7 @@ Software delivery manager en opdrachtgever maken afspraken over de opzet van het
 
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom 'Realisatiefase') en wordt de kwaliteit van de bestaande softwareproducten getoetst. Dit onderzoek, dat bij ICTU een "due diligence" heet, is onderdeel van de voorfase en wordt uitgevoerd door vertegenwoordigers van ICTU en medewerkers van het desbetreffende project, samen met vertegenwoordigers van de opdrachtgever.
 
-De uitkomsten van het onderzoek bestaan uit een rapportage met tenminste de bevindingen, risico's voor opdrachtgever en ICTU, en mitigerende maatregelen. Daarnaast maakt het projectteam een transitieplan dat de activiteiten beschrijft die nodig zijn om de software af te bouwen of te herbouwen en te onderhouden. Als er significante technische schuld aanwezig is de bestaande software maakt het projectteam een plan voor het aflossen van deze schuld.
+De uitkomsten van het onderzoek bestaan uit een rapportage met tenminste de bevindingen, risico's voor opdrachtgever en ICTU, en mitigerende maatregelen. Daarnaast maakt het project een transitieplan dat de activiteiten beschrijft die nodig zijn om de software af te bouwen of te herbouwen en te onderhouden. Als er significante technische schuld aanwezig is de bestaande software maakt het project een plan voor het aflossen van deze schuld.
 
 ### Samenhang voorfaseproducten
 

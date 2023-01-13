@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M04/Definitie.md"
 
-ICTU stimuleert het gebruik van geautomatiseerde regressietests en hanteert een norm voor de dekking van regressietests.
+Het project hanteert een norm voor de dekking van regressietests en bewaakt deze.
 
 ### Rationale
 

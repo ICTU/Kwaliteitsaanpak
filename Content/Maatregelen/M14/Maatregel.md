@@ -4,7 +4,7 @@
 
 Bij voorkeur zijn dezelfde deskundigen in zowel de voorfase als in de realisatiefase betrokken.
 
-In de realisatiefase wordt het Scrumteam aangestuurd door een product owner van de opdrachtgever. Bij aanvang van de voorfase is deze beoogde product owner bekend en werkt deze ook mee in de voorfase.
+In de realisatiefase wordt de prioriteit van werk van het Scrumteam bepaald door een product owner van de opdrachtgever. Bij aanvang van de voorfase is deze beoogde product owner bekend en werkt deze ook mee in de voorfase.
 
 ### Rationale
 

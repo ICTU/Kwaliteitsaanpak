@@ -30,7 +30,7 @@ Een projectvoorstel bevat ten minste de volgende onderdelen:
 * een beschrijving van de deliverables van het project;
 * een beschrijving van de aanpak van het project;
 * een beschrijving van de planning van het project, inclusief doorlooptijd, aantal sprints, lengte van sprints, eventuele voorbereidingstijd, sprint 0, overdrachtsfase, en nazorg;
-* een beschrijving van het team/de teams en de rollen in het team, door welke organisatie deze rollen worden ingevuld, hoeveel tijd dat kost en welke eisen aan competenties en/of ervaring worden gesteld;
+* een beschrijving van de rollen in het project, door welke organisatie deze rollen worden ingevuld, hoeveel tijd dat kost en welke eisen aan competenties en/of ervaring worden gesteld;
 * een beschrijving van het projectmanagement en de governance op het project, inclusief opdrachtgever (organisatie, naam en functie) en product owner (organisatie, naam en functie) en overzicht rapportages;
 * een beschrijving van het kwaliteitsmanagement op het project;
 * een beschrijving van het risicomanagement op het project;

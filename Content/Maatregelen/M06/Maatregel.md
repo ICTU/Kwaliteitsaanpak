@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M06/Definitie.md"
 
-ICTU faciliteert dit met mensen en middelen. Het kwaliteitssysteem van ICTU meet het voldoen aan de normen meermaals per uur. De daaruit voortvloeiende kwaliteitsrapportage wordt besproken tijdens stand-ups en/of tijdens het projectoverleg.
+ICTU faciliteert dit met mensen en middelen. Het kwaliteitssysteem van ICTU meet het voldoen aan de normen meermaals per uur. De daaruit voortvloeiende kwaliteitsrapportage wordt besproken tijdens de Daily Scrum en/of tijdens het projectoverleg.
 
 ### Rationale
 

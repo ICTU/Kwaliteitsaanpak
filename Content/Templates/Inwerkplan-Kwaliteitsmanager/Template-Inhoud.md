@@ -125,10 +125,10 @@ Leerdoelen (week 2):
 
 Acties (week 1):
 * Je bent uitgenodigd voor en neemt deel aan het periodieke IPO (Intern Project Overleg)
-* Je bent uitgenodigd voor en neemt deel aan de standups van het team
+* Je bent uitgenodigd voor en neemt deel aan de Daily Scrum van het Scrumteam
 
 Acties (zodra mogelijk):
-* Je bent uitgenodigd voor en neemt deel aan de demo's van het team
+* Je bent uitgenodigd voor en neemt deel aan de demo's van het Scrumteam
 * Je hebt deelgenomen aan een refinement, sprintplanning en retrospective
 
 Leerdoelen Quality-time kwaliteitsrapportage (week 1):

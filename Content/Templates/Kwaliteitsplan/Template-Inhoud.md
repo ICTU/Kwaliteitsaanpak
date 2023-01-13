@@ -24,7 +24,7 @@ Het project houdt een risicolog bij. De risicolog wordt digitaal bijgehouden doo
 
 Voor de realisatiefase wordt de agile ontwikkelmethode Scrum gebruikt ($M05$). Voor de beheerfase wordt gebruik gemaakt van de DevOps-principes. Afwijkingen hierop worden alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
 
-De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsdoelstellingen niet tijdig worden behaald:
+De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen niet tijdig worden behaald:
 
 1. De kwaliteitsmanager bespreekt de situatie met de software delivery manager;
 2. Indien 1. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de ICTU-projectleider;

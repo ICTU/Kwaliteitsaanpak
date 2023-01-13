@@ -14,7 +14,7 @@ Dit hoofdstuk beschrijft welke projecten, systemen, componenten, releases, use c
 
 Dit hoofdstuk beschrijft hoe de testen conform de teststrategie, beschreven in het Mastertestplan, concreet worden aangepakt.
 
-{De Kwaliteitsaanpak schrijft voor dat er in de voorfase een Mastertestplan (door de opdrachtgever) is opgesteld. Mocht deze niet zijn opgesteld, dan zal dit detailtestplan minimaal aan de door ICTU gestelde kwaliteitseisen moeten voldoen.}
+{De Kwaliteitsaanpak schrijft voor dat er in de voorfase een Mastertestplan (door de opdrachtgever) is opgesteld. Mocht dit niet zijn opgesteld, dan zal het detailtestplan minimaal aan de door ICTU gestelde kwaliteitsnormen moeten voldoen.}
 
 ## Soorten testen
 

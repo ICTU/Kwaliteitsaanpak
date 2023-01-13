@@ -2,6 +2,8 @@
 
 #include "Content/Maatregelen/M02/Definitie.md"
 
+De kwaliteitsnormen voor het project zijn beschreven in de niet-functionele eisen, het informatiebeveiligingsplan, het kwaliteitsplan en deze Kwaliteitsaanpak, zie [$M01$](#m01).
+
 Tijdens de voorfase wordt het voldoen aan de kwaliteitsnormen met behulp van reviews gecontroleerd. Als onderdeel van het op te stellen kwaliteitsplan wordt tijdens de voorfase bepaald hoe het project de kwaliteit tijdens realisatie gaat controleren; voor producten die niet geautomatiseerd kunnen worden gecontroleerd, beschrijft het kwaliteitsplan een alternatieve aanpak. Als bijvoorbeeld door de gekozen technologie geen ondersteuning van het kwaliteitssysteem mogelijk is, kunnen periodieke, handmatige controles als alternatief ingezet worden.
 
 Tijdens de realisatiefase wordt de kwaliteit diverse malen per uur gemeten door een geautomatiseerd kwaliteitssysteem, genaamd Quality-time. Het Scrumteam kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie, indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het Scrumteam.
@@ -10,13 +12,11 @@ Kwaliteitseigenschappen van de software die niet (volledig) geautomatiseerd kunn
 
 Documenten, die onderdeel uitmaken van het op te leveren projectresultaat, zijn zo veel mogelijk geactualiseerd; eventuele achterstand wordt planmatig weggewerkt. De kwaliteitscontrole van documenten gebeurt op basis van reviews. De auteur van een document en de software delivery manager zorgen dat de juiste reviewers benoemd zijn; hiertoe behoort in ieder geval de kwaliteitsmanager. De auteur van het document zorgt voor een correct versiebeheer van het document. De auteur koppelt aan de reviewers terug of en hoe het ontvangen commentaar is verwerkt in de volgende versie van het betreffende document.
 
-Als de kwaliteitsdoelstellingen langdurig niet worden behaald heeft de kwaliteitsmanager de volgende escalatielijn:
+Als de kwaliteitsnormen langdurig niet worden behaald heeft de kwaliteitsmanager de volgende escalatielijn:
 
 1. De kwaliteitsmanager bespreekt de situatie met de software delivery manager.
 2. Indien dat niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de projectleider.
 3. Indien 2. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar het hoofd van de afdeling ICTU Software Expertise (ISE).
-
-De specifieke kwaliteitsnormen voor producten zijn in deze versie van de Kwaliteitsaanpak niet opgenomen.
 
 ### Rationale
 

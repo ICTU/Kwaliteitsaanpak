@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M06/Definitie.md"
 
-ICTU faciliteert dit met mensen en middelen. Het kwaliteitssysteem van ICTU meet het voldoen aan de normen meermaals per uur. De daaruit voortvloeiende kwaliteitsrapportage wordt besproken tijdens de *daily scrum* en/of tijdens het projectoverleg.
+ICTU faciliteert dit met mensen en middelen. Quality-time, het kwaliteitssysteem van ICTU meet het voldoen aan de normen meermaals per uur. De daaruit voortvloeiende kwaliteitsrapportage wordt besproken tijdens de *daily scrum* en/of tijdens het projectoverleg.
 
 ### Rationale
 

@@ -4,7 +4,7 @@
 
 ## Ontwerpprincipes
 
-Hieronder volgt een aantal ontwerpprincipes die binnen software engineering als best practice gelden. Sommige principes, zoals "Abstractie", worden afgedwongen door het gebruik van de gangbare API’s en standaardcomponenten; andere principes spelen een rol bij het ontwerp en de implementatie van de applicatie en worden expliciet getoetst door de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software en continu geëvalueerd door het kwaliteitssysteem.
+Hieronder volgt een aantal ontwerpprincipes die binnen software engineering als best practice gelden. Sommige principes, zoals "Abstractie", worden afgedwongen door het gebruik van de gangbare API’s en standaardcomponenten; andere principes spelen een rol bij het ontwerp en de implementatie van de applicatie en worden expliciet getoetst door de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software en continu geëvalueerd door Quality-time, het kwaliteitssysteem van ICTU.
 
 * **Eenvoud**: Software die simpel en begrijpelijk is, is beter onderhoudbaar, overdraagbaar en uitbreidbaar. Dit is een principe waaruit andere voortvloeien.
 * **Modulariteit**: Software is op alle detailniveaus opgesplitst in zelfstandige modules (componenten), zodat de modules afzonderlijk aangepast en getest kunnen worden.

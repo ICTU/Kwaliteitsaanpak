@@ -9,7 +9,7 @@ ICTU gebruikt hiervoor Scrum, een raamwerk voor agile productontwikkeling. ICTU 
 3. Definition of Ready en Definition of Done,
 4. Product backlog en sprint backlog.
 
-Vast onderdeel van de Definition of Done is dat producten actueel en onderling consistent zijn en voldoen aan de door ICTU vastgestelde kwaliteitsnormen.
+Bij een DevOps-werkwijze zijn deployment en operationeel beheer geïntegreerd in de Scrum-processen van het DevOps-team.
 
 ### Rationale
 

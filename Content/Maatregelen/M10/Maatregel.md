@@ -4,14 +4,6 @@
 
 Het periodiek projectoverleg heet bij ICTU het "Intern Projectoverleg" of "IPO".
 
-Bij dit IPO is de aanwezigheid van de volgende rollen vereist:
-
-* projectleider,
-* software delivery manager,
-* kwaliteitsmanager,
-* Scrummaster,
-* vertegenwoordiger uit elk Scrumteam.
-
 Nadere toelichting op de agenda:
 
 * Mededelingen: betrokkenen proactief informeren over voor het project relevante ontwikkelingen.
@@ -21,7 +13,7 @@ Nadere toelichting op de agenda:
 * Kwaliteit en architectuur: bespreking van kwaliteit, bijvoorbeeld naar aanleiding van de self-assessment, architectuur voor borging van inhoudelijke koers, eventuele afwijkingen en benodigde acties.
 * Risico's en aandachtspunten: de software delivery manager houdt het risicolog bij.
 
-Het kwaliteitssysteem bewaakt de actualiteit van de actie- en besluitenlijst en het risicolog.
+Quality-time, het kwaliteitssysteem van ICTU, bewaakt de actualiteit van de actie- en besluitenlijst en het risicolog.
 
 ### Rationale
 

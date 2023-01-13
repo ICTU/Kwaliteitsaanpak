@@ -16,9 +16,16 @@ ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Project
 8. Kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
 9. Kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency Checker,
 10. Kwetsbaarheden in software: GitLab SAST (Static Application Security Testing), SonarQube en/of OWASP ZAP (Zed Attack Proxy),
-11. Performancetesten en performancetestrapportages: JMeter en Performancetestrunner,
-12. Toegankelijkheid: Axe, en
-13. Software bill of materials: tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren.
+11. Kwetsbaarheden in container images: Trivy,
+12. Performancetesten en performancetestrapportages: JMeter en Performancetestrunner,
+12. Toegankelijkheid: Axe,
+14. Software bill of materials: tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren, en
+15. Artifact repository: Nexus of Harbour.
+
+Bij een DevOps-werkwijze aan te vullen met:
+
+16. Uitrollen in de productieomgeving: Ansible, en
+17. Registratie van incidenten bij gebruik en beheer: Jira.
 
 ### Rationale
 

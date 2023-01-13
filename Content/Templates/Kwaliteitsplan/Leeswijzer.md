@@ -4,4 +4,4 @@ Hoofdstuk 3 beschrijft de kwaliteitsmaatregelen die ICTU treft tijdens alles fas
 
 #include "Content/Templates/Standaard-Leeswijzer-Bijlagen.md"
 
-Bijlage D beschrijft hoe ICTU Jira toepast binnen softwareontwikkelprojecten. Bijlage E bevat een lijst met periodieke controles die de kwaliteitsmanager tijdens het project periodiek uitvoert om de uitvoering van kwaliteitsmaatregelen te waarborgen. 
+Bijlage D beschrijft hoe ICTU Jira toepast binnen softwareontwikkelprojecten. Bijlage E bevat een lijst met handmatige controles die de kwaliteitsmanager tijdens het project periodiek uitvoert om de uitvoering van kwaliteitsmaatregelen te waarborgen.

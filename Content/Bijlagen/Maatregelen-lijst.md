@@ -14,8 +14,6 @@
 
 #include "Content/Maatregelen/M08/Definitie.md"
 
-#include "Content/Maatregelen/M09/Definitie.md"
-
 #include "Content/Maatregelen/M10/Definitie.md"
 
 #include "Content/Maatregelen/M11/Definitie.md"

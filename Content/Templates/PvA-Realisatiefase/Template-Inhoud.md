@@ -3,9 +3,9 @@
 De te {ontwikkelen en/of onderhouden} software {beschrijving functionaliteit in hoofdlijnen van de software}.
 De software komt tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU de softwareontwikkeling uitvoert; zie hiervoor het hoofdstuk “Werkwijze”.
 
-## Producten
+## Producten {bij DevOps: en diensten}
 
-ICTU levert de volgende producten op:
+ICTU levert de volgende producten {bij DevOps: en diensten} op:
 
 1. Werkende software met de functionaliteiten zoals hierboven beschreven.
 1. Per release:
@@ -20,16 +20,21 @@ ICTU levert de volgende producten op:
     a. een actuele versie van de kwaliteitsrapportage,
     a. {eventueel bijgewerkte andere documentatie waarvoor ICTU verantwoordelijk en/of penvoerder is, zoals testplannen en kwaliteitsplan}.
 
+{Bij DevOps: Het DevOps-team voert operationele beheertaken uit, conform overeengekomen kwaliteitsniveaus (quality of services). Hiertoe maakt het project beheerafspraken met de opdrachtgever en de beheerorganisatie en legt deze vast in een dossier afspraken en procedures (DAP). Het vastleggen en rapporteren van informatie over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten kan hiervan deel uitmaken. De afspraken zijn afgestemd op het beheerplan van de beheerorganisatie, waarin is beschreven hoe de verschillende vormen van beheer van de applicaties en de infrastructuur worden uitgevoerd.}
+
+{Bij DevOps: beschrijf wanneer en hoe de dienstverlening eindigt of verlengt wordt. Bijvoorbeeld, geef aan wat de minimale hoeveelheid aan ontwikkel- en onderhoudwerk is waarbij ICTU nog een geschikte partij is om het operationeel beheer uit te voeren.}
+
 ## Scope
 
 Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {de software}, inclusief:
 
 * Ontwikkel, test- en demo-omgevingen,
 * Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Azure DevOps, GitLab en/of Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (SonarQube, OWASP Dependency Checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
+* {Bij DevOps:}	Uitrollen in de productieomgeving (Ansible), container registry (Harbor), performance monitoring (APM), security monitoring ({vul aan met concreet product}), controle van kwetsbaarheden in frameworks ({vul aan met concreet product}), controle van images van containers (Trivy), registratie van incidenten bij gebruik en beheer (Topdesk of Jira).
 * Backlog management tools (Jira en/of Azure DevOps),
 * Beveiligings- en performancetesten in de ICTU-testomgevingen. ICTU voert deze tests uit voordat een nieuwe versie van de software wordt opgeleverd. {Beschrijf hier eventuele andere afspraken met opdrachtgever}.
 
-Buiten de scope van de opdracht valt:
+{Tenzij DevOps:} Buiten de scope van de opdracht valt:
 
 * Acceptatie- en productieomgevingen en de installatie van de software op acceptatie- en productieomgevingen,
 * Beveiligings- en performancetesten in acceptatie- en productieomgevingen, die onder verantwoordelijkheid van de opdrachtgever worden uitgevoerd,
@@ -49,6 +54,20 @@ Tijdens dit project wordt agile gewerkt volgens de Scrum-aanpak. ICTU propageert
 * Een proces met sprints van {twee of drie} weken waarin de Scrumactiviteiten sprint planning, sprint refinement, *daily scrum*, sprint demonstratie/review en retrospective plaatsvinden.
 * Een definition of ready en een definition of done voor respectievelijk het beginnen en afronden van werk.
 * Een product backlog en een sprint backlog.
+
+## DevOps-werkwijze
+
+{Verwijder deze paragraaf indien niet van toepassing}
+
+Tijdens het project wordt DevOps toegepast. Dit vertaalt zich concreet in:
+
+* Het na elke sprint in productie brengen van de nieuwe release.
+* Het monitoren van de software tijdens het gebruik en het afhandelen van monitoring-alerts.
+* Het oplossen van incidenten.
+* Het ondersteunen van functioneel beheerders.
+* Rapporteren over de beheerafspraken.
+* Het maken van backups en restoren indien nodig.
+* {Vul aan en pas aan waar nodig}
 
 ## Werving
 
@@ -73,7 +92,7 @@ De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het
 
 ## Kwaliteitsbeheersing
 
-De kwaliteitsbeheersing is door ICTU beschreven in het Kwaliteitsplan. Eén van de kwaliteitsmaatregelen is dat ICTU een geautomatiseerd kwaliteitssysteem (Quality-time) inricht dat de kwaliteit van de software en het ontwikkelproces bewaakt. De ICTU-kwaliteitsmanager configureert de metrieken in dit kwaliteitssysteem in en bewaakt de metingen.
+De kwaliteitsbeheersing is door ICTU beschreven in het Kwaliteitsplan. Eén van de kwaliteitsmaatregelen is dat ICTU een geautomatiseerd kwaliteitssysteem (Quality-time) inricht dat de kwaliteit van de software en het ontwikkelproces bewaakt. De ICTU-kwaliteitsmanager configureert de metrieken in Quality-time en bewaakt de metingen.
 
 ## Inzet {opdrachtgever/partijen}
 
@@ -98,7 +117,9 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 | Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, opstellen TVA en IB-plan                                                                            |
 | Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                                   |
 | Diverse inhoudelijk deskundigen               | {aantal} dagen           | Inbrengen domeinexpertise en vertegenwoordiging van (eind)gebruikers en belanghebbenden                                         |
-| Technisch beheerder beheerpartij              | {aantal} dagen           | Installeren software op acceptatieomgeving, aanleveren specificaties productie-omgeving                                      |
+| Technisch beheerder beheerpartij              | {aantal} dagen           | Leveren en beheer acceptatie- en productieomgeving |
+| Functioneel beheerder                         | {aantal} dagen           | Functioneel beheer |
+| Servicedeskmedewerker                         | {aantal} dagen           | Gebruikersondersteuning en incidentbeheer |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                  |
 
 ## Afstemming met gerelateerde projecten
@@ -138,7 +159,7 @@ Voor de uitvoering van de realisatiefase gelden de volgende randvoorwaarden:
 |:-------------|:-------------------------------------------------------------------------------------------------------------------------|
 | R01          | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd.                         |
 | R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de functionaliteit van de software.              |
-| R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
+| R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever}, {beheerpartij} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
 | R04          | De voorfaseproducten {producten} zijn beschikbaar voor aanvang van de realisatiefase.                                    |
 | R05          | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar.                                                       |
 | {volgnummer} | {randvoorwaarde}                                                                                                         |
@@ -156,6 +177,7 @@ De risico’s worden door het project bijgehouden in het risicolog. De risico’
 | Verwachtingen over dit project tussen verschillende partijen ({partijen}, ICTU) kunnen niet waargemaakt worden, waardoor vertraging ontstaat | Wekelijks projectoverleg, samenwerken door middel van werkgroepen en fysiek bij elkaar komen, kick-off met alle betrokkenen waarbij {opdrachtgever} de productvisie uiteenzet. |
 | Scope-uitbreiding, gebrek aan focus                                                                                                          | Scope bewaken, alleen de scope uitbreiden als dit noodzakelijk is voor {doel}                                                                                                  |
 | Onvoldoende bemensing door vakanties                                                                                                         | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert.                                                                                           |
+| {Bij DevOps werkwijze} Onduidelijkheid over de verdeling van verantwoordelijkheden tussen DevOps-team en beheerorganisatie (incident management, backup & restore, etc.) | Afspraken over onderlinge samenwerking vastleggen in een dossier afspraken en procedures (DAP). |
 | {risico}                                                                                                                                     | {maatregel}                                                                                                                                                                    |
 
 # Verwachte inzet ICTU
@@ -169,6 +191,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 | Software-architect/senior ontwikkelaar | {x} uur         | Onderhouden SAD, bewaken architectuurkeuzes, ontwerpen, ontwikkelen en testen van de software                               |
 | Scrummaster                            | {x} uur         | Bewaken Scrumproces, faciliteren Scrumevents                                                                                |
 | Ontwikkelaar                           | {x} uur         | Ontwerpen, ontwikkelen en testen van de software                                                                            |
+| DevOps-engineer                        | {x} uur         | Ontwerpen, ontwikkelen en testen van de software, daarnaast uitvoeren beheeractiviteiten, waaronder het oplossen van incidenten                                                                            |
 | Tester                                 | {x} uur         | Opstellen logische testgevallen, ontwikkelen en uitvoeren fysieke testgevallen, opstellen testrapportages en vrijgaveadvies |
 | Functioneel ontwerper                  | {x} uur         | Onderhouden GFO, ondersteunen product owner bij opstellen en uitwerken van de user stories                                  |
 | Database administrator                 | {x} uur         | Onderhouden logisch datamodel en fysiek database ontwerp, ontwikkelen migratiescripts, database tuning                      |
@@ -183,7 +206,7 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 
 {In de projectovereenkomst moet in de begroting met onderstaande opmerkingen rekening worden gehouden.}
 
-{Voor de begroting wordt uitgegaan van een gemiddeld bruto tarief van € 155,-. De werkelijke kosten worden bekend als de projectmedewerkers bekend zijn. Wanneer overschrijding van het budget dreigt (bijvoorbeeld vanwege substantieel hogere tarieven), wordt dit tijdig met de opdrachtgever besproken.}
+{Voor de begroting wordt uitgegaan van een gemiddeld bruto tarief. De werkelijke kosten worden bekend als de projectmedewerkers bekend zijn. Wanneer overschrijding van het budget dreigt (bijvoorbeeld vanwege substantieel hogere tarieven), wordt dit tijdig met de opdrachtgever besproken.}
 
 Naast kosten voor de inzet van ICTU-medewerkers worden de volgende kosten voor door ICTU te benutten diensten verwacht:
 

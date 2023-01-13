@@ -106,7 +106,8 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 | Testmanager                                   | {aantal} dagen           | Uitvoeren PRA, opstellen mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie                                  |
 | Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                                |
 | Product owner                                 | {aantal} dagen           | Inhoudelijk sturing / prioritering, opstellen backlog, NFE, minimal viable product, reviewen GFO en prototype                  |
-| Projectleider (Opdrachtgever)                 | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan kick-off en eventuele workshops |
+| Projectleider (Opdrachtgever)                 | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleiders van opdrachtnemer, deelname aan kick-off en eventuele workshops |
+| Projectleider (Beheerpartij)                  | {aantal} dagen           | Opstellen plan van aanpak realisatiefase voor het inrichten van technisch en operationeel beheer, deelname aan kick-off en eventuele workshops |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                    |
 
 ## Projectafsluiting
@@ -145,7 +146,7 @@ Voor de uitvoering van de voorfase gelden de volgende randvoorwaarden:
 |:-------------|:-------------------------------------------------------------------------------------------------------------------------|
 | R01          | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd.                         |
 | R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.                      |
-| R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
+| R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever}, {beheerpartij} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
 | R04          | De producten {producten} zijn beschikbaar voor aanvang van de voorfase.                                                  |
 | R05          | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar.                                                       |
 | {volgnummer} | {randvoorwaarde}                                                                                                         |
@@ -187,6 +188,6 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 
 {In de projectovereenkomst moet in de begroting met onderstaande opmerkingen rekening worden gehouden.}
 
-{Voor de begroting wordt uitgegaan van een gemiddeld bruto tarief van € 155,-. De werkelijke kosten worden bekend als de projectmedewerkers bekend zijn. Wanneer overschrijding van het budget dreigt (bijvoorbeeld vanwege substantieel hogere tarieven), wordt dit tijdig met de opdrachtgever besproken.}
+{Voor de begroting wordt uitgegaan van een gemiddeld bruto tarief. De werkelijke kosten worden bekend als de projectmedewerkers bekend zijn. Wanneer overschrijding van het budget dreigt (bijvoorbeeld vanwege substantieel hogere tarieven), wordt dit tijdig met de opdrachtgever besproken.}
 
 {Er moet budget gereserveerd worden voor het werven van externe medewerkers voor de voorfase en voor een eventuele overgangsfase tussen voorfase en realisatie. Dit laatste voor het geval er nog geen opdracht is en de opdrachtgever nog niet betaalt, terwijl ICTU wel kosten maakt (bijvoorbeeld voor het vasthouden van ingehuurde deskundigen voor de realisatiefase).}

@@ -5,7 +5,8 @@ ICTU hanteert voor het ontwikkelen van maatwerksoftware de $KWALITEITSAANPAK$. D
 * Het bewaken van de kwaliteit van de broncode op aspecten als complexiteit en omvang
 * Het uitvoeren van verschillende testvormen zoals unit testen, systeemtesten, performancetesten, securitytesten, toegankelijkheidstesten, en usabilitytesten
 * Het zichtbaar maken en managen van technische schuld
-  
+* {Bij toepassing van DevOps:} Het bewaken van de kwaliteit van de applicatie in de operatie op aspecten als performance en resource gebruik
+
 Omdat de opdrachtgever specifieke eisen stelt aan de kwaliteitsaspecten {kwaliteitsaspecten} zullen de volgende extra kwaliteitsmaatregelen worden getroffen om deze eisen te borgen:
 * {Projectspecifieke kwaliteitsmaatregel 1}
 * {Projectspecifieke kwaliteitsmaatregel 2}

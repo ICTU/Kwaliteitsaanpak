@@ -14,11 +14,11 @@ De kwaliteitsmanager controleert of deze overleggen plaatsvinden.
 
 ### Actie- en besluitenlijst
 
-Het project houdt een actie- en besluitenlijst bij. De actie- en besluitenlijst wordt digitaal bijgehouden door de software delivery manager en wordt tijdens het wekelijks projectoverleg besproken. Het kwaliteitssysteem bewaakt de actualiteit van de actie- en besluitenlijst.
+Het project houdt een actie- en besluitenlijst bij. De actie- en besluitenlijst wordt digitaal bijgehouden door de software delivery manager en wordt tijdens het wekelijks projectoverleg besproken. Quality-time, het kwaliteitssysteme van ICTU, bewaakt de actualiteit van de actie- en besluitenlijst.
 
 ### Risicomanagement
 
-Het project houdt een risicolog bij. De risicolog wordt digitaal bijgehouden door de software delivery manager en periodiek besproken tijdens het projectoverleg. Iedere projectmedewerker kan risico's melden bij de software delivery manager. De omvang van risico's wordt ingeschat en indien nodig voorzien van een of meer maatregelen. Het kwaliteitssysteem bewaakt de actualiteit van het risicolog.
+Het project houdt een risicolog bij. De risicolog wordt digitaal bijgehouden door de software delivery manager en periodiek besproken tijdens het projectoverleg. Iedere projectmedewerker kan risico's melden bij de software delivery manager. De omvang van risico's wordt ingeschat en indien nodig voorzien van een of meer maatregelen. Quality-time bewaakt de actualiteit van het risicolog.
 
 ### Werkwijze
 
@@ -29,6 +29,8 @@ De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen
 1. De kwaliteitsmanager bespreekt de situatie met de software delivery manager;
 2. Indien 1. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de ICTU-projectleider;
 3. Indien 2. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar het hoofd van de afdeling ICTU Software Expertise (ISE).
+
+Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden het kwaliteitsplan en/of het kwaliteitssysteem uitgebreid met nieuwe maatregelen en metrieken om de problemen in de toekomst te signaleren en te voorkomen. Dat gebeurt ook proactief, bijvoorbeeld naar aanleiding van ervaringen in andere projecten of als er nieuwe tools beschikbaar komen. De projectleiders van opdrachtgever, de beheerpartij en ICTU zorgen er gezamenlijk voor dat de gewenste uitbreidingen worden gerealiseerd.
 
 ## Projectdocumenten
 
@@ -70,13 +72,13 @@ Het programma van eisen en de projectstartarchitectuur, beide opgesteld door de 
 
 Niet-functionele eisen aan het te ontwikkelen systeem worden vastgelegd op basis van de projectstartarchitectuur en aan de hand van de NEN-ISO/IEC 25010-standaard in een NFE-document. De ISO-25010-kwaliteitsattributen worden door de belanghebbenden geprioriteerd in een of meer workshops (PRA – zie ook testen). Voor de kwaliteitsattributen worden SMART-eisen geformuleerd.
 
-Informatiebeveiliging is een essentieel en integraal onderdeel van de werkzaamheden. De eisen worden in een afzonderlijk informatiebeveiligingsplan opgesteld. De software zal zodanig worden voortgebracht dat deze de BIO-compliance van de opdrachtgever niet zal hinderen.
+Niet-functionele eisen voor onderstaande kwaliteitsattributen worden als volgt verwerkt:
 
-Gebruikskwaliteit (usability) is ingebed in de standaard werkwijze van ICTU voor de realisatie van maatwerksoftware. Dit aspect wordt geborgd door opname in het plan van aanpak, het ontwerp en de testplannen.
-
-Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.1, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
-
-Performance- en securityeisen worden via performance- en securitytests geborgd, zie de kwaliteitsmaatregelen in paragraaf [Testen](#testen). Voor de borging van andere niet-functionele eisen moeten projectspecifieke maatregelen getroffen worden. Deze worden in dit kwaliteitsplan opgenomen.
+- De informatiebeveiligingseisen worden in een afzonderlijk informatiebeveiligingsplan vastgelegd. De software zal zodanig worden voortgebracht en {in geval van DevOps:} beheerd dat deze de BIO-compliance van de opdrachtgever niet zal hinderen.
+- Gebruikskwaliteit (usability) is ingebed in de standaard werkwijze van ICTU voor de realisatie van maatwerksoftware. Dit aspect wordt geborgd door opname in het plan van aanpak, het ontwerp en de testplannen.
+- Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.1, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
+- Performance- en securityeisen worden via performance- en securitytests geborgd, zie de kwaliteitsmaatregelen in paragraaf [Testen](#testen). Voor de borging van andere niet-functionele eisen moeten projectspecifieke maatregelen getroffen worden. Deze worden in dit kwaliteitsplan opgenomen.
+- {In het geval van DevOps:} Eisen aan het operationeel beheer worden vastgelegd als beheerafspraken in het plan van aanpak voor de realisatiefase en geborgd door te rapporteren over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten.
 
 ### Compleetheid deliverables voorfase
 
@@ -122,7 +124,7 @@ De Definition Of Done van het project bevat de volgende criteria ({vul aan en pa
 1. Integratietesten zijn succesvol afgerond,
 1. Performancetesten zijn succesvol afgerond,
 1. Toegankelijkheidstesten zijn succesvol afgerond,
-1. Het GFO is bijgewerkt,
+1. Relevante documentatie, zoals GFO en deploymentdocument, is bijgewerkt,
 1. De demo van de user story is voorbereid.
 
 ### Vrijgaveadvies
@@ -143,9 +145,13 @@ Voor elke release stelt het project release notes op, een overzicht van de wijzi
 
 ## ICTU-kwaliteitssysteem
 
-Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automatisch metrieken worden verzameld en samengesteld. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden meerdere keer per uur bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. Zie het [overzicht van mogelijke metrieken](https://github.com/ICTU/quality-time/blob/master/docs/METRICS_AND_SOURCES.md) en de daarbij horende standaard normen; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
+Gedurende de realisatiefase beruikt ICTU Quality-time, het kwaliteitssysteem van ICTU, om automatisch metrieken te meten. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden meerdere keer per uur bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. Zie het [overzicht van mogelijke metrieken](https://quality-time.readthedocs.io/en/latest/reference.html#metrics) en de daarbij horende standaard normen; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
+
+{In het geval van DevOps:} Het project gebruikt {monitoringapplicatie} om het gedrag en de kwaliteit van de applicatie in de operationale situatie te bewaken.
 
 De actuele kwaliteitsrapportage wordt dagelijks besproken tijdens de *daily scrum* en wekelijks in het intern projectoverleg (IPO). De kwaliteitsmanager onderhoudt en bewaakt de kwaliteitsrapportage.
+
+Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de software en het softwareproces geautomatiseerd te meten is dit niet altijd mogelijk of kosteneffectief. Daarom voert het project self-assessments uit en doet de kwaliteitsmanager periodiek ook handmatige controles. Zie bijlage E.
 
 ## Kwaliteit van de broncode
 
@@ -158,21 +164,21 @@ Het project hanteert de volgende codeerstandaarden:
 | {programmeertaal A} | {codeerstandaard A} | {broncodereview} |
 | {programmeertaal B} | {codeerstandaard B} | {tool B}         |
 
-Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het mastertestplan opgenomen. ICTU maakt gebruik van een geautomatiseerd kwaliteitssysteem, waarbij de broncode continu wordt gecontroleerd en gerapporteerd. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
+Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het mastertestplan opgenomen. Quality-time bewaakt continue de kwaliteit van de broncode. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
 
 De keuze van programmeertalen en andere technologie staat beschreven in het SAD.
 
 ### Complexiteit van broncode limiteren
 
-Om de onderhoudbaarheid van de software te bevorderen dienen methoden en klassen niet te complex te zijn. Het uitgangspunt is dat de cyclomatische complexiteit van individuele methoden, zoals berekend door SonarQube, niet groter is dan 10. De norm is dat 0% van de methoden een te hoge cyclomatische complexiteit hebben. Het ICTU-kwaliteitssysteem bewaakt de complexiteit van de broncode.
+Om de onderhoudbaarheid van de software te bevorderen dienen methoden en klassen niet te complex te zijn. Het uitgangspunt is dat de cyclomatische complexiteit van individuele methoden, zoals berekend door SonarQube, niet groter is dan 10. De norm is dat 0% van de methoden een te hoge cyclomatische complexiteit hebben. Quality-time bewaakt de complexiteit van de broncode.
 
 ### Duplicatie van broncode beperken
 
-Om de onderhoudbaarheid van de software te bevorderen dient er zo min mogelijk duplicatie van broncode aanwezig te zijn. Het uitgangspunt is dat SonarQube met de standaard instellingen 0% duplicatie rapporteert. Het ICTU-kwaliteitssysteem bewaakt de duplicatie in broncode.
+Om de onderhoudbaarheid van de software te bevorderen dient er zo min mogelijk duplicatie van broncode aanwezig te zijn. Het uitgangspunt is dat SonarQube met de standaard instellingen 0% duplicatie rapporteert. Quality-time bewaakt de duplicatie in broncode.
 
 ### Omvang van het systeem beperken
 
-Om de onderhoudbaarheid van de software te bevorderen dient de totale omvang beperkt te blijven, gemeten in mensjaren herbouwtijd. De SIG/TüVIT-standaard geeft een maximale herbouwtijd en vertaalt deze in een maximum omvang van de software gemeten in regels code. Die maximale omvang verschilt per programmeertaal. Het ICTU-kwaliteitssysteem bewaakt de totale omvang van het systeem.
+Om de onderhoudbaarheid van de software te bevorderen dient de totale omvang beperkt te blijven, gemeten in mensjaren herbouwtijd. De SIG/TüVIT-standaard geeft een maximale herbouwtijd en vertaalt deze in een maximum omvang van de software gemeten in regels code. Die maximale omvang verschilt per programmeertaal. Quality-time bewaakt de totale omvang van het systeem.
 
 Voor dit project gelden de volgende normen:
 
@@ -183,15 +189,15 @@ Voor dit project gelden de volgende normen:
 
 ### Omvang van methoden beperken
 
-Om de onderhoudbaarheid van de software te bevorderen dienen methoden niet te groot te zijn. ICTU stelt de norm op maximaal 20 non-comment source statements (NCSS) per methode, zoals gemeten door SonarQube. In het systeem als geheel mag maximaal 0% (afgerond) van de methoden deze norm overschrijden. Het ICTU-kwaliteitssysteem bewaakt de omvang van methoden.
+Om de onderhoudbaarheid van de software te bevorderen dienen methoden niet te groot te zijn. ICTU stelt de norm op maximaal 20 non-comment source statements (NCSS) per methode, zoals gemeten door SonarQube. In het systeem als geheel mag maximaal 0% (afgerond) van de methoden deze norm overschrijden. Quality-time bewaakt de omvang van methoden.
 
 ### Omvang van unit interfaces beperken
 
-Om de onderhoudbaarheid van de software te bevorderen, dienen methoden niet te veel parameters te hebben. ICTU stelt de norm op maximaal vijf parameters per methode, zoals gemeten door SonarQube. In het systeem als geheel mag maximaal 0% (afgerond) van de methoden deze norm overschrijden. Het ICTU-kwaliteitssysteem bewaakt de omvang van unit interfaces.
+Om de onderhoudbaarheid van de software te bevorderen, dienen methoden niet te veel parameters te hebben. ICTU stelt de norm op maximaal vijf parameters per methode, zoals gemeten door SonarQube. In het systeem als geheel mag maximaal 0% (afgerond) van de methoden deze norm overschrijden. Het Quality-time bewaakt de omvang van unit interfaces.
 
 ## Versiebeheer broncode
 
-Broncode, zowel van productiesoftware als van geautomatiseerde tests, wordt in een versiebeheersysteem geplaatst. Alleen projectmedewerkers hebben toegang tot de broncode. Het ICTU-kwaliteitssysteem bewaakt of branches worden gemerged met de default branch (meestal *master* of *develop* genoemd).
+Broncode, zowel van productiesoftware als van geautomatiseerde tests, wordt in een versiebeheersysteem geplaatst. Alleen projectmedewerkers hebben toegang tot de broncode. Quality-time bewaakt of branches worden gemerged met de default branch (meestal *main* of *develop* genoemd).
 
 ## Testen
 
@@ -201,42 +207,44 @@ Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor
 
 ## Unit tests
 
-Om de correcte werking van de software te borgen, schrijven ontwikkelaars unit tests. De unit tests draaien als onderdeel van de geautomatiseerde pijplijn en de broncodedekking van de unit tests wordt gemeten. Het ICTU-kwaliteitssysteem rapporteert over het aantal unit tests, het al dan niet slagen van de unit tests en broncodedekking van de unit tests.
+Om de correcte werking van de software te borgen, schrijven ontwikkelaars unit tests. De unit tests draaien als onderdeel van de geautomatiseerde pijplijn en de broncodedekking van de unit tests wordt gemeten. Quality-time rapporteert over het aantal unit tests, het al dan niet slagen van de unit tests en broncodedekking van de unit tests.
 
 De default normen voor broncodedekking met unit tests zijn 90% line coverage en 80% branch coverage. De norm geldt niet voor gegenereerde code, code van derde-partijen die ICTU zelf niet onderhoudt en triviale code zoals getters/setters/framework boilerplate-code.
 
 ## Systeemtesten
 
-Om de correcte werking van de software te borgen maken de ontwikkelaars systeemtesten. Deze bestaan uit een combinatie van handmatige eenmalige testen, handmatige regressietesten en automatische regressietesten. De automatische regressietesten draaien als onderdeel van de geautomatiseerde pijplijn en de broncode dekking van de automatische regressietesten wordt gemeten. Het ICTU-kwaliteitssysteem rapporteert over het aantal handmatige regressietesten, de hoeveelheid tijd die het kost de handmatige regressietesten uit te voeren en de laatste datum dat ze zijn uitgevoerd. Het ICTU-kwaliteitssysteem rapporteert ook over het aantal automatische regressietesten, of ze al dan niet falen en de broncodedekking van de geautomatiseerde regressietesten.
+Om de correcte werking van de software te borgen maken de ontwikkelaars systeemtesten. Deze bestaan uit een combinatie van handmatige eenmalige testen, handmatige regressietesten en automatische regressietesten. De automatische regressietesten draaien als onderdeel van de geautomatiseerde pijplijn en de broncode dekking van de automatische regressietesten wordt gemeten. Quality-time rapporteert over het aantal handmatige regressietesten, de hoeveelheid tijd die het kost de handmatige regressietesten uit te voeren en de laatste datum dat ze zijn uitgevoerd. Het Quality-time rapporteert ook over het aantal automatische regressietesten, of ze al dan niet falen en de broncodedekking van de geautomatiseerde regressietesten.
 
 De default normen voor broncodedekking met geautomatiseerde regressietesten zijn 80% line coverage en 70% branch coverage. De norm geldt niet voor gegenereerde code, code van derde-partijen die ICTU zelf niet onderhoudt en triviale code zoals getters/setters/framework boiler plate code.
 
 ## Unit tests en systeemtesten gecombineerd
 
-Het ICTU-kwaliteitssysteem kan ook de geaggregeerde broncodedekking van unit tests en automatische regressietesten samen rapporteren. In dat geval zijn de default normen voor geaggregeerde broncodedekking 90% line coverage en 85% branch coverage.
+Quality-time kan ook de geaggregeerde broncodedekking van unit tests en automatische regressietesten samen rapporteren. In dat geval zijn de default normen voor geaggregeerde broncodedekking 90% line coverage en 85% branch coverage.
 
 Het is, ook als de geaggregeerde dekking gemeten wordt, nog steeds handig te weten welke code de automatische regressietesten (ART) en unit tests elk voor zich raken. Het is aan het project te beslissen welke norm nuttig is ART-dekking en unittest-dekking en of daar überhaupt normen voor nodig zijn.
 
 Het uitgangspunt is dat zoveel mogelijk van de software die ICTU maakt, geautomatiseerd getest wordt en dat daarbij bewuste keuzes zijn gemaakt over de code die niet geautomatiseerd wordt getest. Om die keuzes goed te kunnen maken is het belangrijk dat het deel van de code, dat niet wordt geraakt door geautomatiseerde testen, relatief klein is; daardoor blijft de benodigde hoeveelheid handmatig testwerk beperkt en de risico's van handmatig testen beperkt.
 
-## Performance-testen
+## Performancetesten
 
-Om de performance van de software te borgen kunnen performance-testen uitgevoerd worden. Het MTP beschrijft de gekozen aanpak; de eisen zijn vastgelegd in het NFE-document.
+Om de performance van de software te borgen voert het project performancetesten uit. Het MTP beschrijft de gekozen aanpak; de performance-eisen zijn vastgelegd in het NFE-document.
 
-ICTU voert drie soorten performance-testen uit in de eigen testomgeving, die inzicht geven in de volgende facetten:
+ICTU voert drie soorten performancetesten uit, die inzicht geven in de volgende facetten:
 1. snelheid van handelingen en voldoen aan eisen (loadtest)
 2. stabiliteit op langere termijn (duurtest)
 3. schaalbaarheid en maximale belastbaarheid (stresstest).
 
-De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient de opdrachtgever zelf te laten testen.
+Deze performancetesten worden uitgevoerd in de {performancetestomgeving}. De loadtest draait dagelijks. De duurtest en stresstest draaien wekelijks.
 
-Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen uitgevoerd in de ontwikkelomgeving van ICTU. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het Scrumteam. Issues die voortkomen uit performance-testen worden opgenomen in Jira met het label "performance_bevinding".
+Quality-time rapporteert over de geautomatiseerde performancetesten. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het Scrumteam. Issues die voortkomen uit performancetesten worden opgenomen in Jira met het label "performance_bevinding".
+
+{Als het project geen DevOps doet:} De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient de opdrachtgever zelf te laten testen.
 
 ## Security-testen
 
 De eisen aan de beveiliging worden in de documenten projectstartarchitectuur en niet-functionele eisen gedefinieerd. De in te richten testen dienen aan te tonen dat aan de gestelde beveiligingseisen wordt voldaan.
 
-De geautomatiseerde broncodereviews en rapportages uit het ICTU-kwaliteitssysteem bevatten diverse metrieken voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van SonarQube, OWASP dependency checker, OWASP ZAP en OpenVAS.
+De geautomatiseerde broncodereviews en rapportages uit Quality-time bevatten diverse metrieken voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van SonarQube, OWASP dependency checker, OWASP ZAP en OpenVAS.
 
 Om de beveiliging van de software te testen kan deze met enige regelmaat getest worden door een externe partij. Het MTP beschrijft de gekozen aanpak.
 
@@ -248,13 +256,13 @@ Elke beveiligingstest resulteert in een beveiligingstestrapportage met daarin de
 | Midden (gemiddeld risico en/of gemiddelde impact) | Voor de eerstvolgende major productierelease        | Voor de eerste productierelease                    |
 | Laag (laag risico en lage impact)                 | In overleg met de product owner                     | In overleg met de product owner                    |
 
-Het ICTU-kwaliteitssysteem rapporteert of gevonden beveiligingsissues niet te lang open staan.
+Quality-time rapporteert of gevonden beveiligingsissues niet te lang open staan.
 
-Merk op: de beveiliging van de software in de acceptatie- en productieomgeving kan niet door ICTU getest worden. Deze test moet de opdrachtgever of de beheerpartij uitvoeren.
+{Als het project geen DevOps doet:} Merk op: de beveiliging van de software in de acceptatie- en productieomgeving kan niet door ICTU getest worden. Deze test moet de opdrachtgever of de beheerpartij uitvoeren.
 
 ## Toegankelijkheidstesten
 
-Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Het ICTU-kwaliteitssysteem rapporteert over de toegankelijkheidsrapportage van Axe. Daarnaast worden handmatige toegankelijkheidstesten uitgevoerd, door deskundige leden van het Scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.1-richtlijnen die niet geautomatiseerd kunnen worden getest.
+Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Quality-time rapporteert over de toegankelijkheidsrapportage van Axe. Daarnaast worden handmatige toegankelijkheidstesten uitgevoerd, door deskundige leden van het Scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.1-richtlijnen die niet geautomatiseerd kunnen worden getest.
 
 ## Usability-testen
 
@@ -268,11 +276,11 @@ Issues die voortkomen uit usability-testen worden opgenomen in Jira met het labe
 
 Technische schuld zijn eigenschappen van de software die de lange-termijninzetbaarheid en onderhoudbaarheid van de software bedreigen; denk hierbij aan hoge complexiteit, lage testdekking, ontbrekende testsoorten en ontbrekende documentatie.
 
-Als het Scrumteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in het kwaliteitssysteem als zodanig om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het Scrumteam, in overleg met de software delivery manager, om de omvang van de technische schuld in te schatten in user-storypunten. Vervolgens wordt een plan gemaakt om de technische schuld in een beheerst tempo - de ontwikkeling/onderhoud van de software moet wel doorgang vinden - weg te werken. Uitgangspunt is ongeveer 10% van de user-storypunten die het Scrumteam normaal in een sprint realiseert; dit kan in principe zonder overleg met de opdrachtgever, omdat het leveren van kwaliteit onderdeel van het werk is.
+Als het Scrumteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in Quality-time als zodanig om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het Scrumteam, in overleg met de software delivery manager, om de omvang van de technische schuld in te schatten in user-storypunten. Vervolgens wordt een plan gemaakt om de technische schuld in een beheerst tempo - de ontwikkeling/onderhoud van de software moet wel doorgang vinden - weg te werken. Uitgangspunt is ongeveer 10% van de user-storypunten die het Scrumteam normaal in een sprint realiseert; dit kan in principe zonder overleg met de opdrachtgever, omdat het leveren van kwaliteit onderdeel van het werk is.
 
 ## Beheer
 
-Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementatie- en beheerplan opgesteld. Hierin worden de kaders aangegeven op welke wijze het beheer ingericht, geïmplementeerd en beheerd wordt. Hierbij gaat de voorkeur uit naar beheer op basis van de principes van de DevOps-werkwijze.
+Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementatie- en beheerplan opgesteld. Hierin worden de kaders aangegeven op welke wijze het beheer ingericht, geïmplementeerd en uitgevoerd wordt. Hierbij gaat de voorkeur uit naar beheer op basis van de principes van de DevOps-werkwijze.
 
 {Dit kwaliteitsplan moet bijgewerkt worden indien meer informatie beschikbaar is over de werkwijze ten aanzien van implementatie en beheer.}
 

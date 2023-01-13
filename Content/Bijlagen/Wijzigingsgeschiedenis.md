@@ -8,6 +8,7 @@
 * Op meerdere plekken in de Kwaliteitsaanpak de gebruikte rollen aangescherpt of verbeterd door bijvoorbeeld ICTU te vervangen door project, team door Scrumteam en projectleider door software delivery manager.
 * Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): software bill of materials toegevoegd als op te leveren informatie en toegevoegd dat al het werk van het Scrumteam via de product backlog loopt.
 * Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): de due diligence activiteiten afgesplitst naar een nieuwe maatregel "Het project onderzoekt de kwaliteit van over te nemen software" (M32).
+* De maatregel "Het project implementeert nieuwe versies van de Kwaliteitsaanpak binnen de gestelde termijn" (M09) is vervallen en gecombineerd met maatregel "Het project voert periodiek een self-assessment uit ten aanzien van de Kwaliteitsaanpak" (M28).
 * Bij maatregel "Het project gebruikt tools voor vastgestelde taken" (M16): de lijst van verplichte tools en ondersteunde tools gelijk getrokken, de genoemde tools bijgewerkt en software bill of materials toegevoegd als taak.
 * Bij maatregel "Het project voert periodiek een self-assessment uit ten aanzien van de Kwaliteitsaanpak" (M28): de rol van de kwaliteitsmanager bij het uitvoeren van de self-assessment toegevoegd.
 * Nieuwe maatregel "ICTU organiseert periodiek een gezamenlijke self-assessment ten aanzien van de Kwaliteitsaanpak" (M33) toegevoegd.
@@ -17,13 +18,9 @@
 * De term 'standup' vervangen door de officiële term '*daily scrum*'.
 * De Scrumrollen toegevoegd aan de bijlage 'Terminologie'.
 
-#### Alle templates
-
-* Verwijzingen naar Checkmarx vervangen door verwijzingen naar SonarQube.
-
 #### Template Niet-Functionele Eisen
 
-* Axe-core bijgewerkt naar versie 4.6 in de tabel met de WCAG 2.1 succescriteria.
+* Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.1 succescriteria.
 * Template neutraal gemaakt (ICTU logo's verwijderd) omdat dit document een verantwoordelijkheid van de opdrachtgever is.
 
 #### Template High Level Design
@@ -36,7 +33,12 @@
 
 #### Alle templates
 
+* Verwijzingen naar Checkmarx vervangen door verwijzingen naar SonarQube.
 * Beheerpartijrollen toegevoegd aan colofon.
+
+#### Alle documenten
+
+* Checkmarx vervangen door SonarQube.
 
 ### Versie 2.4.0, 12 januari 2022
 

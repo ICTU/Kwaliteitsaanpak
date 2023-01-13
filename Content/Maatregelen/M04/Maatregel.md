@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M04/Definitie.md"
 
-Het project hanteert een norm voor de dekking van regressietests en bewaakt deze.
+Het project hanteert een norm voor de dekking van regressietests, legt deze vast in Quality-time en bewaakt deze.
 
 ### Rationale
 

@@ -44,8 +44,6 @@
 
 #include "Content/Maatregelen/M16/Maatregel.md"
 
-#include "Content/Maatregelen/M09/Maatregel.md"
-
 #include "Content/Maatregelen/M28/Maatregel.md"
 
 #include "Content/Maatregelen/M30/Maatregel.md"

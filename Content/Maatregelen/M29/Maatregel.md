@@ -5,7 +5,7 @@
 Voordat ICTU een project verantwoord kan starten en het door de afdeling ICTU Software Diensten (ISD) ondersteund kan worden, moet aan een aantal randvoorwaarden zijn voldaan:
 
 1. Het project ontwikkelt en/of onderhoudt maatwerksoftware volgens deze Kwaliteitsaanpak.
-2. De opdrachtgever heeft kennisgenomen van en commiteert zich aan de Kwaliteitsaanpak.
+2. De opdrachtgever heeft kennisgenomen van en committeert zich aan de Kwaliteitsaanpak.
 3. Er is adequaat projectmanagement en -governance ingericht, zowel aan opdrachtgeverszijde als aan ICTU-zijde.
 4. De omvang, de snelheid van opschaling, en de behoefte aan ondersteuning van het project is zodanig dat dit samengaat met ongestoorde dienstverlening aan de lopende projecten.
 5. Er is een ICTU-projectleider verantwoordelijk voor projectuitvoering, projectresultaat en de geleverde kwaliteit.
@@ -14,7 +14,7 @@ Voordat ICTU een project verantwoord kan starten en het door de afdeling ICTU So
 8. Het project doorloopt voorfase en realisatiefase volgens de Kwaliteitsaanpak.
 9. De dienstverlening met betrekking tot het ecosysteem is afgestemd tussen project en de afdeling ISD en is onderdeel van het aanbod van ICTU aan de opdrachtgever.
 
-Voorafgaand aan de start van een project organiseert ICTU een "Doordacht-van-Start-sessie", waarin aandacht besteed wordt aan de bovengenoemde punten. Indien een dergelijke sessie onverhoopt niet is voorzien voor het project, vindt de toetsing op een alternatief moment plaats. In alle gevallen heeft de toets plaatsgevonden voordat de opdrachtgever een definitief projectvoorstel ontvangt.
+Voorafgaand aan de start van een project organiseert ICTU in de regel een "Doordacht-van-Start-sessie", waarin aandacht besteed wordt aan de bovengenoemde punten.
 
 Projectvoorstellen van ICTU voor projecten die door ISD worden ondersteund, hebben ten minste de onderstaande stappen doorlopen. N.B: Input voor een projectvoorstel bestaat niet alleen uit schriftelijke communicatie, maar ook uit gesprekken met opdrachtgever en andere belanghebbenden.
 

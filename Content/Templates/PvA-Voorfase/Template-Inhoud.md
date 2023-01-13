@@ -56,7 +56,7 @@ De voorfase wordt uitgevoerd in iteraties, "sprints" genaamd, van twee weken. Ie
 
 ## Werving
 
-Direct na de opdrachtverstrekking start ICTU met de samenstelling van het Scrumteam voor de voorfase. {Beschrijf de eventueel te werven functies}
+Direct na de opdrachtverstrekking start ICTU met de bemensing van het project ten behoeve van de voorfase. {Beschrijf de eventueel te werven functies}
 
 ## Kick-off
 
@@ -64,7 +64,7 @@ Voor een goede start wordt er, bij aanvang van de voorfase, een kick-off georgan
 
 ## Samenwerking
 
-{Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een Scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop of werkstation. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops of werkstations voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
+{Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een Scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
 
 ## Projectbesturing
 
@@ -117,7 +117,7 @@ Omdat ICTU tijdens het project de documenten regelmatig oplevert is er geen spec
 
 {Verwijs naar dit hoofdstuk in hoofdstuk 5 van het voorstel inclusief POK}
 
-De start van het project vindt uiterlijk {aantal} weken na ondertekening van het eveneens verstuurde voorstel inclusief projectovereenkomst plaats. In deze periode stellen zowel ICTU als {opdrachtgever} het Scrumteam samen. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
+De start van het project vindt uiterlijk {aantal} weken na ondertekening van het eveneens verstuurde voorstel inclusief projectovereenkomst plaats. In deze periode bemensen zowel ICTU als {opdrachtgever} het project. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
 
 De verwachte doorlooptijd van de uitvoering van deze voorfase is {aantal} weken.
 
@@ -127,7 +127,7 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 
 | Onderdeel/week                       | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 |
 |:-------------------------------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| Samenstellen Scrumteam               | X  | X  | X  |    |    |    |    |    |    |    |
+| Bemensen project                     | X  | X  | X  |    |    |    |    |    |    |    |
 | Voorbereiden en plannen kick-off     |    | X  | X  |    |    |    |    |    |    |    |
 | Kick-off                             |    |    |    | X  |    |    |    |    |    |    |
 | Realisatie producten sprint 1        |    |    |    | X  | X  |    |    |    |    |    |

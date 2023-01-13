@@ -10,7 +10,7 @@ Kwaliteitseigenschappen van de software die niet (volledig) geautomatiseerd kunn
 
 Documenten, die onderdeel uitmaken van het op te leveren projectresultaat, zijn zo veel mogelijk geactualiseerd; eventuele achterstand wordt planmatig weggewerkt. De kwaliteitscontrole van documenten gebeurt op basis van reviews. De auteur van een document en de software delivery manager zorgen dat de juiste reviewers benoemd zijn; hiertoe behoort in ieder geval de kwaliteitsmanager. De auteur van het document zorgt voor een correct versiebeheer van het document. De auteur koppelt aan de reviewers terug of en hoe het ontvangen commentaar is verwerkt in de volgende versie van het betreffende document.
 
-Indien de kwaliteitsdoelstellingen langdurig of niet tijdig worden behaald, heeft de kwaliteitsmanager de volgende escalatielijn:
+Als de kwaliteitsdoelstellingen langdurig niet worden behaald heeft de kwaliteitsmanager de volgende escalatielijn:
 
 1. De kwaliteitsmanager bespreekt de situatie met de software delivery manager.
 2. Indien dat niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de projectleider.

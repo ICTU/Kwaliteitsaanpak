@@ -145,7 +145,7 @@ Voor elke release stelt het project release notes op, een overzicht van de wijzi
 
 Gedurende de realisatiefase hanteert ICTU een kwaliteitssysteem, waarbij automatisch metrieken worden verzameld en samengesteld. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden meerdere keer per uur bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. Zie het [overzicht van mogelijke metrieken](https://github.com/ICTU/quality-time/blob/master/docs/METRICS_AND_SOURCES.md) en de daarbij horende standaard normen; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
 
-De actuele kwaliteitsrapportage wordt dagelijks besproken tijdens Scrumteam stand-up meetings en wekelijks in het intern projectoverleg (IPO). De kwaliteitsmanager onderhoudt en bewaakt de kwaliteitsrapportage.
+De actuele kwaliteitsrapportage wordt dagelijks besproken tijdens de Daily Scrum en wekelijks in het intern projectoverleg (IPO). De kwaliteitsmanager onderhoudt en bewaakt de kwaliteitsrapportage.
 
 ## Kwaliteit van de broncode
 

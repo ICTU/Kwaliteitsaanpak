@@ -43,10 +43,3 @@ Waar mogelijk stelt de opdrachtgever ook andere relevante informatie ter beschik
 De genoemde producten hebben tot doel om de benodigde omvang, kosten en doorlooptijd van de voorfase te kunnen schatten. De projectstartarchitectuur vormt input voor de tijdens de voorfase te ontwikkelen producten zoals functionele en niet-functionele eisen, functioneel ontwerp en softwarearchitectuur. Een BIA en eventuele PIA zijn richtinggevend voor de in de voorfase te selecteren beveiligingsmaatregelen.
 
 Als deze producten er niet zijn, dan moeten ze alsnog worden gemaakt. Dat vereist grote betrokkenheid van de organisatie van de opdrachtgever, en duurt in de regel lang. De aanwezigheid en compleetheid van deze producten is dus belangrijke informatie voor de raming van de voorfase.
-
-### Referenties
-
-Zie ook:
-
-* [$M01$](#m01)
-* [$M26$](#m26)

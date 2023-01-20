@@ -26,9 +26,3 @@ Het kwaliteitssysteem bewaakt de actualiteit van de actie- en besluitenlijst en 
 ### Rationale
 
 Het doel van het periodiek projectoverleg is alle betrokkenen op hetzelfde informatieniveau te brengen en te houden. Het overleg is intern om vrijuit te kunnen praten over personele zaken en risico's voor het project.
-
-### Referenties
-
-Zie ook:
-
-* [$M30$](#m30)

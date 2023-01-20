@@ -10,6 +10,7 @@
 * Bij maatregel "Het project gebruikt tools voor vastgestelde taken" (M16): de lijst van verplichte tools en ondersteunde tools gelijk getrokken, de genoemde tools bijgewerkt en software bill of materials toegevoegd als taak.
 * Bij maatregel "Het project voert periodiek een self-assessment uit ten aanzien van de Kwaliteitsaanpak" (M28): de rol van de kwaliteitsmanager bij het uitvoeren van de self-assessment toegevoegd.
 * De term 'standup' vervangen door de officiële term 'Daily Scrum'.
+* Kruisverwijzingen tussen maatregelen verwijderd om de onderhoudbaarheid van de tekst te vergroten.
 
 #### Template Niet-Functionele Eisen
 

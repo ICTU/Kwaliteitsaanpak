@@ -15,10 +15,3 @@ De kwaliteitsmanager van het project bewaakt de opvolging van de kritische bevei
 ### Rationale
 
 Door het inschakelen van actuele, specifieke expertise wordt de kans vergroot dat eventuele kwetsbaarheden in de gerealiseerde software tijdig herkend worden.
-
-### Referenties
-
-Zie ook:
-
-* [$M05$](#m05)
-* [$M16$](#m16)

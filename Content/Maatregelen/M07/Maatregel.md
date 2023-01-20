@@ -25,9 +25,3 @@ ICTU gebruikt Jenkins, GitLab CI of Azure DevOps als tool voor de implementatie 
 ### Rationale
 
 Software incrementeel opleveren vereist dat de software frequent gebouwd, getest en opgeleverd kan worden. Om dit efficiënt en foutvrij te doen, dient het proces van bouwen, testen en opleveren geautomatiseerd te zijn; een continuous delivery pipeline faciliteert dit.
-
-### Referenties
-
-Zie ook:
-
-* [$M05$](#m05)

@@ -21,11 +21,3 @@ Als de kwaliteitsnormen langdurig niet worden behaald heeft de kwaliteitsmanager
 ### Rationale
 
 Het zo snel mogelijk en continu voldoen aan de kwaliteitsnormen beperkt toekomstige hersteltijd. Het dwingt tevens een systematische kwaliteitscontrole af.
-
-### Referenties
-
-Zie ook:
-
-* [$M08$](#m08)
-* [$M14$](#m14)
-* [$M26$](#m26)

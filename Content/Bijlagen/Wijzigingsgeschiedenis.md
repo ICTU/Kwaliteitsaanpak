@@ -12,9 +12,10 @@
 * Bij maatregel "Het project voert periodiek een self-assessment uit ten aanzien van de Kwaliteitsaanpak" (M28): de rol van de kwaliteitsmanager bij het uitvoeren van de self-assessment toegevoegd.
 * Nieuwe maatregel "ICTU organiseert periodiek een gezamenlijke self-assessment ten aanzien van de Kwaliteitsaanpak" (M33) toegevoegd.
 * Nieuwe maatregel "Het project draagt software beheerst over" (M34) toegevoegd.
-* De term 'standup' vervangen door de officiële term 'Daily Scrum'.
 * Kruisverwijzingen tussen maatregelen verwijderd om de onderhoudbaarheid van de tekst te vergroten.
 * Versioneringsstrategie voor de Kwaliteitsaanpak toegegoegd aan de leeswijzer.
+* De term 'standup' vervangen door de officiële term '*daily scrum*'.
+* De Scrumrollen toegevoegd aan de bijlage 'Terminologie'.
 
 #### Alle templates
 

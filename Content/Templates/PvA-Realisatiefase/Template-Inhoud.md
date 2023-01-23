@@ -46,7 +46,7 @@ Het succes van het uit te voeren realisatietraject is sterk afhankelijk van de b
 Tijdens dit project wordt agile gewerkt volgens de Scrum-aanpak. ICTU propageert de kernwaarden van Scrum. Dit vertaalt zich concreet in:
 
 * Een Scrumteam, bestaande uit een product owner, door {opdrachtgever} aangesteld, die de uiteindelijke inhoudelijke keuzes maakt, en ontwikkelaars (zoals programmeurs, testers en ontwerpers) en een Scrummaster, door ICTU aangesteld.
-* Een proces met sprints van {twee of drie} weken waarin de Scrumactiviteiten sprint planning, sprint refinement, daily Scrum, sprint demonstratie/review en retrospective plaatsvinden.
+* Een proces met sprints van {twee of drie} weken waarin de Scrumactiviteiten sprint planning, sprint refinement, *daily scrum*, sprint demonstratie/review en retrospective plaatsvinden.
 * Een definition of ready en een definition of done voor respectievelijk het beginnen en afronden van werk.
 * Een product backlog en een sprint backlog.
 

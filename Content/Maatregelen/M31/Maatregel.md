@@ -22,7 +22,7 @@ Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkeli
 * Beleidsuitgangspunten (drijfveren en doelen), zowel voor het specifieke project als algemeen voor de organisatie en visie (oplossingsrichting).
 * Standaarden en normen (open standaarden van het Forum Standaardisatie en domeinspecifieke standaarden).
 
-Zie [http://www.noraonline.nl/wiki/PSA](http://www.noraonline.nl/wiki/PSA).
+Zie [https://www.noraonline.nl/wiki/PSA](https://www.noraonline.nl/wiki/PSA).
 
 ### Business impact analysis
 

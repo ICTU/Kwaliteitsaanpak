@@ -20,7 +20,7 @@ Leerdoelen (week 1):
 * Je weet hoe je hulp kunt vragen van de [Service Desk](https://ictubeheer.sharepoint.com/teams/Organisatie_ServicedeskenFacilitairezaken) bij het gebruik van de ICTU-voorzieningen
 
 Je hebt toegang tot (week 1):
-* [MS Outlook](http://webmail.ictu.nl) voor e-mail en agenda
+* [MS Outlook](https://webmail.ictu.nl) voor e-mail en agenda
 * [Timetell](https://timetell.ictu.nl) voor het registreren van uren
 * [Sharepoint](https://ictubeheer.sharepoint.com) voor het delen van documenten
 * [MS Teams](https://teams.microsoft.com) voor online vergaderen en teamconversaties (chat)
@@ -175,13 +175,13 @@ Acties (week 3):
 * Je hebt toegang tot de ontwikkelomgeving (VLAN) van je project, d.w.z. dat je beschikt over een VPN-key die daartoe toegang geeft
 * Je hebt toegang tot het versiebeheersysteem van je project (GitLab of Azure DevOps)
 * Je hebt toegang tot de build server van je project (GitLab CI, Azure DevOps of Jenkins)
-* Je hebt toegang tot je project in [Jira](http://jira.ictu-sd.nl/jira/)
+* Je hebt toegang tot je project in [Jira](https://jira.ictu-sd.nl/jira/)
 * Je hebt toegang tot de securityrapportages in de build pipeline (OWASP Dependency Check, OWASP ZAP, OpenVAS)
 * Je hebt toegang tot de toegankelijksrapportage (Axe) in de build pipeline
 * Je hebt toegang tot de testrapportages in de build pipeline (Robot Framework, JUnit, Cypress, etc.)
 * Je hebt toegang tot de SonarQube van je project
-* Je hebt toegang tot de Quality-time van je project (zie [overzicht kwaliteitsrapportages](http://quality-time.reports.isd.ictu))
-* Je hebt toegang tot de performancerapportage van je project (zie [overzicht performancetestrapportages in Eco1](http://performance.reports.isd.ictu) en [overzicht performancetestrapportages in Eco2](http://reports.pc.iesprd.ictu-sr.nl))
+* Je hebt toegang tot de Quality-time van je project
+* Je hebt toegang tot de performancerapportage van je project (zie [overzicht performancetestrapportages](https://reports.pc.iesprd.ictu-sr.nl))
 * Je hebt toegang tot de actie- en besluitenlijst van je project (in Trello of MS Planner)
 * Je hebt toegang tot het risicolog van je project
 * Je beschikt over een urencode voor je project in [Timetell](https://timetell.ictu.nl)

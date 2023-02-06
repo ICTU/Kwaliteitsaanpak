@@ -14,6 +14,7 @@
 * Nieuwe maatregel "Het project draagt software beheerst over" (M34) toegevoegd.
 * De term 'standup' vervangen door de officiële term 'Daily Scrum'.
 * Kruisverwijzingen tussen maatregelen verwijderd om de onderhoudbaarheid van de tekst te vergroten.
+* Versioneringsstrategie voor de Kwaliteitsaanpak toegegoegd aan de leeswijzer.
 
 #### Alle templates
 

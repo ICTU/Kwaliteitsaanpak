@@ -47,3 +47,5 @@
 #include "Content/Maatregelen/M30/Definitie.md"
 
 #include "Content/Maatregelen/M31/Definitie.md"
+
+#include "Content/Maatregelen/M34/Definitie.md"

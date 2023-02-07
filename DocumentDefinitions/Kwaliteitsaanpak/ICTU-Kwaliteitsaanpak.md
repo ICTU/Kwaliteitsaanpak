@@ -48,6 +48,8 @@
 
 #include "Content/Maatregelen/M30/Maatregel.md"
 
+#include "Content/Maatregelen/M34/Maatregel.md"
+
 #include "Content/Maatregelen/M27/Maatregel.md"
 
 # Organisatie

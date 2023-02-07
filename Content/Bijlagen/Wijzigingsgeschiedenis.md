@@ -9,6 +9,7 @@
 * Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): software bill of materials toegevoegd als op te leveren informatie.
 * Bij maatregel "Het project gebruikt tools voor vastgestelde taken" (M16): de lijst van verplichte tools en ondersteunde tools gelijk getrokken, de genoemde tools bijgewerkt en software bill of materials toegevoegd als taak.
 * Bij maatregel "Het project voert periodiek een self-assessment uit ten aanzien van de Kwaliteitsaanpak" (M28): de rol van de kwaliteitsmanager bij het uitvoeren van de self-assessment toegevoegd.
+* Nieuwe maatregel "ICTU organiseert periodiek een gezamenlijke self-assessment ten aanzien van de Kwaliteitsaanpak" (M33) toegevoegd.
 * Nieuwe maatregel "Het project draagt software beheerst over" (M34) toegevoegd.
 * De term 'standup' vervangen door de officiële term 'Daily Scrum'.
 * Kruisverwijzingen tussen maatregelen verwijderd om de onderhoudbaarheid van de tekst te vergroten.

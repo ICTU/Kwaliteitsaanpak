@@ -5,15 +5,15 @@
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "DocumentFolder": "HLD",
-    "IncludeFrontPage": true,
+    "FrontPage": "Neutral",
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-High-Level-Design.docx",
+            "OutputFile": "Neutraal-Template-High-Level-Design.docx",
              "OutputPaths": [
                 "dist"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference.docx"
+            "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"
         }
     },
     "VariablesFiles": [

@@ -5,15 +5,15 @@
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
     "DocumentFolder": "Template",
-    "IncludeFrontPage": true,
+    "FrontPage": "ICTU",
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Generiek.docx",
+            "OutputFile": "ICTU-Template-Generiek.docx",
             "OutputPaths": [
                 "dist"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference.docx"
+            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

@@ -3,7 +3,7 @@
     "BuildPath": "build/Kwaliteitsaanpak/",
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "DocumentType": "Kwaliteitsaanpak",
-    "IncludeFrontPage": true,
+    "FrontPage": "ICTU",
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "pdf": {
@@ -67,7 +67,7 @@
             "OutputPaths": [
                 "dist"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference.pptx"
+            "ReferenceFile": "DocumentDefinitions/reference-ictu.pptx"
         }
     },
     "VariablesFiles": [

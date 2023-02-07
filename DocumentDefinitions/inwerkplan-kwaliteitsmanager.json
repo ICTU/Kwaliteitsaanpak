@@ -5,15 +5,15 @@
     "Subtitle": "{Projectnaam/-namen}",
     "DocumentType": "Template",
     "DocumentFolder": "Inwerkplan-Kwaliteitsmanager",
-    "IncludeFrontPage": true,
+    "FrontPage": "ICTU",
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Inwerkplan-Kwaliteitsmanager.docx",
+            "OutputFile": "ICTU-Template-Inwerkplan-Kwaliteitsmanager.docx",
             "OutputPaths": [
                 "dist"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference.docx"
+            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

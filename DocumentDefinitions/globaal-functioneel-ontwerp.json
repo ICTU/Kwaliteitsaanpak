@@ -5,15 +5,15 @@
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "DocumentFolder": "GFO",
-    "IncludeFrontPage": true,
+    "FrontPage": "ICTU",
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Globaal-Functioneel-Ontwerp.docx",
+            "OutputFile": "ICTU-Template-Globaal-Functioneel-Ontwerp.docx",
             "OutputPaths": [
                 "dist"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference.docx"
+            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

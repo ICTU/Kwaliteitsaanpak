@@ -90,7 +90,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             if (
                 tag == xmltags.LIST_ITEM
                 and xmltags.LIST_ITEM_NUMBER in attributes
-                and self.measure_id in ("M05", "M07", "M16", "M31", "M34")
+                and self.measure_id in ("M01", "M05", "M07", "M16", "M31", "M32", "M34")
             ):
                 self.row += 1
                 self.__write_measure("", f"{str(attributes[xmltags.LIST_ITEM_NUMBER])}. {text}", submeasure=True)
@@ -114,7 +114,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         self.checklist.write(self.row, self.MEASURE_COLUMN, measure_text, self.formats[measure_format_key])
         if has_submeasures:
             self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[measure_format_key])
-            self.checklist.write_comment(self.row, self.STATUS_COLUMN, "Bepaal a.u.b de status per submaatregel")
+            self.checklist.write_comment(self.row, self.STATUS_COLUMN, "Bepaal a.u.b. de status per submaatregel")
         else:
             status_format_key = "substatus" if submeasure else "status"
             self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
@@ -125,7 +125,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         super().end_element(tag, attributes)
         if tag == xmltags.DOCUMENT:
             self.__finish_checklist()
-        elif tag == xmltags.SECTION and self.measure_text:
+        elif tag == xmltags.SECTION and self.measure_text and self.nr_elements(xmltags.SECTION) == 1:
             self.checklist.write_comment(
                 self.measure_row,
                 self.MEASURE_COLUMN,
@@ -181,7 +181,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         self.checklist.merge_range(
             "A4:D4",
             "Gebruik 'niet van toepassing' alleen voor maatregelen die permanent niet van toepassing zijn. "
-            "Bijvoorbeeld, als er geen due diligence wordt uitgevoerd is zijn M01.16 en M01.17 niet van toepassing. "
+            "Bijvoorbeeld, als er geen due diligence wordt uitgevoerd is M32 niet van toepassing. "
             "Gebruik 'voldoet niet' als een maatregel nog niet is toegepast, maar wel nodig is. Bijvoorbeeld, als "
             "de performancetesten nog moeten worden opgezet is de status van M07.5 'voldoet niet'.",
             self.formats["instructions"],

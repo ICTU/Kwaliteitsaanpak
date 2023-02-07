@@ -4,6 +4,22 @@
 
 Opdrachtgever, ICTU, beheerpartij en andere meewerkende partijen, leveren samen de volgende informatie op:
 
+1. Plan van aanpak
+2. Beschrijving van functionele eisen
+3. Beschrijving van niet-functionele eisen
+4. Product backlog
+5. Ontwerp- en architectuurdocumentatie
+6. Testdocumentatie: testplannen
+7. Testdocumentatie: testgevallen, rapportages
+8. Kwaliteitsplan
+9. Deploybare versie van de software
+10. Broncode, inclusief de benodigdheden voor het bouwen van de software
+11. Regressietests, inclusief de benodigdheden voor het uitvoeren van de tests
+12. Deploymentdocumentatie
+13. Software bill of materials
+14. Release notes
+15. Vrijgaveadvies
+
 ### Plan van aanpak
 
 Het plan van aanpak voor de voorfase en het plan van aanpak voor de realisatiefase beschrijven de in deze fasen te realiseren producten, en de planning, werkwijze en verantwoordelijkheden voor de totstandkoming van die producten.
@@ -104,12 +120,6 @@ Voor elke release stelt het project een vrijgaveadvies op. Het vrijgaveadvies be
 
 Software delivery manager en opdrachtgever maken afspraken over de opzet van het vrijgaveadvies en de verantwoordelijkheden van betrokken partijen bij de totstandkoming ervan, waaronder ook de beheerpartij.
 
-### Due diligence
-
-Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de compleetheid en consistentie van de bestaande softwareproducten aan de hand van de onderstaande tabel (inclusief de deliverables in de kolom 'Realisatiefase') en wordt de kwaliteit van de bestaande softwareproducten getoetst. Dit onderzoek, dat bij ICTU een "due diligence" heet, is onderdeel van de voorfase en wordt uitgevoerd door vertegenwoordigers van ICTU en medewerkers van het desbetreffende project, samen met vertegenwoordigers van de opdrachtgever.
-
-De uitkomsten van het onderzoek bestaan uit een rapportage met tenminste de bevindingen, risico's voor opdrachtgever en ICTU, en mitigerende maatregelen. Daarnaast maakt het project een transitieplan dat de activiteiten beschrijft die nodig zijn om de software af te bouwen of te herbouwen en te onderhouden. Als er significante technische schuld aanwezig is de bestaande software maakt het project een plan voor het aflossen van deze schuld.
-
 ### Samenhang voorfaseproducten
 
 ![Projectstartarchitectuur (PSA), business impact analysis (BIA) en privacy impact assessment (PIA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), backlog (BL), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De projectstartarchitectuur vormt input voor functionele eisen en niet-functionele eisen. De business impact analyse vormt input voor de niet-functionele eisen en informatiebeveiligingsplan. De privacy impact analyse vormt input voor de niet-functionele eisen en het informatiebeveiligingsplan. De functionele eisen vormen input voor de backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.](relaties-tussen-producten.png "Relaties tussen producten")
@@ -138,15 +148,14 @@ De onderstaande tabel bevat de hierboven genoemde producten. Het ✔ geeft aan i
 | Software bill of materials                                                                              |          | ✔              |
 | Release notes                                                                                           |          | ✔              |
 | Vrijgaveadvies                                                                                          |          | ✔              |
-| Bij due diligence: uitkomsten onderzoek (bevindingen, risico's, mitigerende maatregelen)                | ✔        |                |
-| Bij due diligence: transitieplan voor af te bouwen, te onderhouden en/of te herbouwen softwareproducten | ✔        |                |
-| Bij due diligence: plan voor aflossen technische schuld, indien van toepassing                          | ✔        |                |
 
 ### Verantwoordelijkheden
 
 De opdrachtgever is primair verantwoordelijk voor het beschrijven van de functionele en niet-functionele eisen, de geprioriteerde backlog, het mastertestplan en het informatiebeveiligingsplan.
 
-ICTU is primair verantwoordelijk voor plan van aanpak, softwarearchitectuurdocumentatie, globaal functioneel ontwerp, prototype, detailtestplannen en testrapportages voor bouwtesten, kwaliteitsplan, deploybare versie van de software, broncode, regressietests, deploymentdocumentatie, release notes en vrijgaveadvies. Als er een due diligence plaatsvindt, levert ICTU de onderzoeksresultaten en maakt een transitieplan, en indien van toepassing, een plan voor het aflossen van technische schuld.
+ICTU is primair verantwoordelijk voor plan van aanpak, softwarearchitectuurdocumentatie, globaal functioneel ontwerp, prototype, detailtestplannen en testrapportages voor bouwtesten, kwaliteitsplan, deploybare versie van de software, broncode, regressietests, deploymentdocumentatie, release notes en vrijgaveadvies.
+
+Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de kwaliteit van deze software, zie [$M32$](#m32). In dat geval levert het project ook de onderzoeksresultaten daarvan en maakt een transitieplan, en indien van toepassing, een plan voor het aflossen van technische schuld.
 
 De beheerpartij is primair verantwoordelijk voor de infrastructuurarchitectuur en -ontwerp en detailtestplannen en testrapportages voor infrastructuurtesten.
 

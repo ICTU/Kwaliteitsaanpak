@@ -12,6 +12,8 @@
 
 #include "Content/Maatregelen/M01/Maatregel.md"
 
+#include "Content/Maatregelen/M32/Maatregel.md"
+
 #include "Content/Maatregelen/M02/Maatregel.md"
 
 #include "Content/Maatregelen/M03/Maatregel.md"

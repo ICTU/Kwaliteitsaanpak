@@ -64,6 +64,8 @@
 
 #include "Content/Maatregelen/M12/Maatregel.md"
 
+#include "Content/Maatregelen/M33/Maatregel.md"
+
 # Bijlagen
 
 #include "Content/Bijlagen/Terminologie.md"

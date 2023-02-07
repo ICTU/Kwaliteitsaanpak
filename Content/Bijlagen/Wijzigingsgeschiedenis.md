@@ -14,6 +14,10 @@
 * De term 'standup' vervangen door de officiële term 'Daily Scrum'.
 * Kruisverwijzingen tussen maatregelen verwijderd om de onderhoudbaarheid van de tekst te vergroten.
 
+#### Alle templates
+
+* Verwijzingen naar Checkmarx vervangen door verwijzingen naar SonarQube.
+
 #### Template Niet-Functionele Eisen
 
 * Axe-core bijgewerkt naar versie 4.6 in de tabel met de WCAG 2.1 succescriteria.

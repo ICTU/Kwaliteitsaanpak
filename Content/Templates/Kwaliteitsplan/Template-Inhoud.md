@@ -236,7 +236,7 @@ Het ICTU-kwaliteitssysteem rapporteert over geautomatiseerde performance-testen 
 
 De eisen aan de beveiliging worden in de documenten projectstartarchitectuur en niet-functionele eisen gedefinieerd. De in te richten testen dienen aan te tonen dat aan de gestelde beveiligingseisen wordt voldaan.
 
-De geautomatiseerde broncodereviews en rapportages uit het ICTU-kwaliteitssysteem bevatten diverse metrieken voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van Checkmarx, OWASP dependency checker, OWASP ZAP en OpenVAS.
+De geautomatiseerde broncodereviews en rapportages uit het ICTU-kwaliteitssysteem bevatten diverse metrieken voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van SonarQube, OWASP dependency checker, OWASP ZAP en OpenVAS.
 
 Om de beveiliging van de software te testen kan deze met enige regelmaat getest worden door een externe partij. Het MTP beschrijft de gekozen aanpak.
 

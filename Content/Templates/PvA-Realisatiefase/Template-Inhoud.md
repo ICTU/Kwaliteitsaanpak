@@ -25,7 +25,7 @@ ICTU levert de volgende producten op:
 Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {de software}, inclusief:
 
 * Ontwikkel, test- en demo-omgevingen,
-* Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Azure DevOps, GitLab en/of Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (Checkmarx, OWASP Dependency Checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
+* Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Azure DevOps, GitLab en/of Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (SonarQube, OWASP Dependency Checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
 * Backlog management tools (Jira en/of Azure DevOps),
 * Beveiligings- en performancetesten in de ICTU-testomgevingen. ICTU voert deze tests uit voordat een nieuwe versie van de software wordt opgeleverd. {Beschrijf hier eventuele andere afspraken met opdrachtgever}.
 

@@ -5,15 +5,15 @@
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
     "DocumentFolder": "PvA-Realisatiefase",
-    "IncludeFrontPage": true,
+    "FrontPage": "ICTU",
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Plan-van-Aanpak-Realisatiefase.docx",
+            "OutputFile": "ICTU-Template-Plan-van-Aanpak-Realisatiefase.docx",
             "OutputPaths": [
                 "dist"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference.docx"
+            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

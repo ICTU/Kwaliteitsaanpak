@@ -5,15 +5,15 @@
     "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
     "DocumentFolder": "Kwaliteitsplan",
-    "IncludeFrontPage": true,
+    "FrontPage": "ICTU",
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Kwaliteitsplan.docx",
+            "OutputFile": "ICTU-Template-Kwaliteitsplan.docx",
             "OutputPaths": [
                 "dist"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference.docx"
+            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

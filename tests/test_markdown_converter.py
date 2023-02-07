@@ -17,7 +17,7 @@ class MarkdownConverterTestCase(unittest.TestCase):
     def setUp(self):
         self.settings = Settings(
             {
-                "IncludeFrontPage": False,
+                "FrontPage": "",
                 "DocumentType": "Kwaliteitsaanpak",
                 "Title": "Title",
                 "Subtitle": "Subtitle",
@@ -43,24 +43,24 @@ class EmptyMarkdownTest(MarkdownConverterTestCase):
 
     def test_frontpage_kwaliteitsaanpak(self):
         """Test the front page of the Kwaliteitsaanpak."""
-        self.settings["IncludeFrontPage"] = True
+        self.settings["FrontPage"] = "ICTU"
         self.assertIsNotNone(self.xml().find(xmltags.FRONTPAGE))
 
     def test_frontpage_template(self):
         """Test the front page of templates."""
         self.settings["DocumentType"] = "Template"
-        self.settings["IncludeFrontPage"] = True
+        self.settings["FrontPage"] = "ICTU"
         self.assertIsNotNone(self.xml().find(xmltags.FRONTPAGE))
 
     def test_frontpage_unknown_document_type(self):
         """Test that an unknown document type raises an exception."""
         self.settings["DocumentType"] = "Wrong type"
-        self.settings["IncludeFrontPage"] = True
+        self.settings["FrontPage"] = "ICTU"
         self.assertRaises(ValueError, MarkdownConverter(Variables({})).convert, self.settings)
 
     def test_frontpage_title(self):
         """Test the front page title."""
-        self.settings["IncludeFrontPage"] = True
+        self.settings["FrontPage"] = "ICTU"
         self.assertEqual(self.settings["Title"], self.xml().find(xmltags.FRONTPAGE).find(xmltags.TITLE).text)
 
     def test_toc(self):

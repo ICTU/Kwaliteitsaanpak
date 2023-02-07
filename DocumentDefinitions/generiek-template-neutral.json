@@ -1,19 +1,19 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
-    "BuildPath": "build/Templates/SAD/",
-    "Title": "Software-architectuurdocument",
-    "Subtitle": "{Productnaam, versie}",
+    "BuildPath": "build/Templates/Template/",
+    "Title": "{Documentnaam}",
+    "Subtitle": "{Projectnaam}",
     "DocumentType": "Template",
-    "DocumentFolder": "SAD",
-    "FrontPage": "ICTU",
+    "DocumentFolder": "Template",
+    "FrontPage": "Neutral",
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "ICTU-Template-Software-architectuurdocument.docx",
+            "OutputFile": "Neutraal-Template-Generiek.docx",
             "OutputPaths": [
                 "dist"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+            "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"
         }
     },
     "VariablesFiles": [

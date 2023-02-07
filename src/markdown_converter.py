@@ -53,8 +53,7 @@ class MarkdownConverter:
         for setting, tag in (("Title", xmltags.DOCUMENT_TITLE), ("Version", xmltags.DOCUMENT_VERSION)):
             document_attributes[tag] = str(settings[setting])
         self.builder.start(xmltags.DOCUMENT, document_attributes)
-        if settings["IncludeFrontPage"]:
-            self.create_frontpage(settings)
+        self.create_frontpage(settings)
         self.create_header(settings)
         self.create_footer()
         if settings["IncludeTableOfContents"]:
@@ -62,12 +61,15 @@ class MarkdownConverter:
 
     def create_frontpage(self, settings: Settings) -> None:
         """Create a front page."""
+        if not settings.get("FrontPage"):
+            return
         document_type = settings["DocumentType"]
         with self.element(xmltags.FRONTPAGE):
-            self.add_element(
-                xmltags.IMAGE,
-                attributes={xmltags.IMAGE_SRC: "ICTU.png", xmltags.IMAGE_TITLE: "ICTU logo"},
-            )
+            if settings["FrontPage"] == "ICTU":
+                self.add_element(
+                    xmltags.IMAGE,
+                    attributes={xmltags.IMAGE_SRC: "ICTU.png", xmltags.IMAGE_TITLE: "ICTU logo"},
+                )
             with self.element(xmltags.TITLE):
                 self.process_formatted_text(settings["Title"])
             if document_type == "Template":
@@ -91,7 +93,8 @@ class MarkdownConverter:
                     self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
             else:
                 raise ValueError(f"Unknown document type '{document_type}' in the settings")
-            self.add_element(xmltags.IMAGE, attributes={xmltags.IMAGE_SRC: "word-cloud.png"})
+            if settings["FrontPage"] == "ICTU":
+                self.add_element(xmltags.IMAGE, attributes={xmltags.IMAGE_SRC: "word-cloud.png"})
             self.add_element(xmltags.PAGEBREAK)
 
     def create_header(self, settings: Settings) -> None:

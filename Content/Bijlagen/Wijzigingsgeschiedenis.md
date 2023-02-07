@@ -22,6 +22,19 @@
 #### Template Niet-Functionele Eisen
 
 * Axe-core bijgewerkt naar versie 4.6 in de tabel met de WCAG 2.1 succescriteria.
+* Template neutraal gemaakt (ICTU logo's verwijderd) omdat dit document een verantwoordelijkheid van de opdrachtgever is.
+
+#### Template High Level Design
+
+* Template neutraal gemaakt (ICTU logo's verwijderd) omdat dit document een verantwoordelijkheid van de opdrachtgever is.
+
+#### Template Generiek
+
+* Een neutrale versie van het generieke template toegevoegd.
+
+#### Alle templates
+
+* Beheerpartijrollen toegevoegd aan colofon.
 
 ### Versie 2.4.0, 12 januari 2022
 

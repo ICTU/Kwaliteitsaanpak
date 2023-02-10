@@ -2,23 +2,21 @@
 
 #include "Content/Maatregelen/M01/Definitie.md"
 
-Opdrachtgever, ICTU, beheerpartij en andere meewerkende partijen, leveren samen de onderaande informatie op. Voor een aantal documenten zijn als onderdeel van de Kwaliteitsaanpak templates beschikbaar. Ook kan gebruik worden gemaakt van bestaande templates uit bijvoorbeeld de NORA. Zie [$M29$](#m29).
+Opdrachtgever, ICTU, beheerpartij en andere meewerkende partijen leveren de onderstaande informatie op. Voor een aantal documenten zijn als onderdeel van de Kwaliteitsaanpak templates beschikbaar. Ook kan gebruik worden gemaakt van bestaande templates uit bijvoorbeeld de NORA. Zie [$M29$](#m29).
 
 1. Plan van aanpak
-2. Beschrijving van functionele eisen
-3. Beschrijving van niet-functionele eisen
-4. Product backlog
-5. Ontwerp- en architectuurdocumentatie
-6. Testdocumentatie: testplannen
-7. Testdocumentatie: testgevallen, rapportages
-8. Kwaliteitsplan
-9. Deploybare versie van de software
-10. Broncode, inclusief de benodigdheden voor het bouwen van de software
-11. Regressietests, inclusief de benodigdheden voor het uitvoeren van de tests
-12. Deploymentdocumentatie
-13. Software bill of materials
-14. Release notes
-15. Vrijgaveadvies
+1. Beschrijving van functionele eisen
+1. Beschrijving van niet-functionele eisen
+1. Product backlog
+1. Ontwerp- en architectuurdocumentatie
+1. Testdocumentatie: testplannen
+1. Testdocumentatie: testgevallen, rapportages
+1. Kwaliteitsplan
+1. Deploybare versie van de software
+1. Documentatie voor deployment en operationeel beheer
+1. Software bill of materials
+1. Release notes
+1. Vrijgaveadvies
 
 ### Plan van aanpak
 
@@ -100,17 +98,11 @@ Als er bijzondere of hoge niet-functionele eisen zijn, beschrijft het kwaliteits
 
 Het project levert deploybare versies van de software in een formaat dat is afgestemd met de beheerpartij.
 
-### Broncode, inclusief de benodigdheden voor het bouwen van de software
-
-Het project levert de broncode, inclusief configuratiebestanden en buildscripts, nodig voor het bouwen van de software.
-
-### Regressietests, inclusief de benodigdheden voor het uitvoeren van de tests
-
-Het project levert de regressietests, inclusief configuratiebestanden en scripts nodig voor het uitvoeren van de tests.
-
-### Deploymentdocumentatie
+### Documentatie voor deployment en operationeel beheer
 
 De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTP-header en -request-configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de 'Server'-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer.
+
+De documentatie voor operationeel beheer bevat tenminste informatie over: back-up/recovery, procedures bij calamiteiten, regelmatig terugkerende beheeractiviteiten, opstart- en afsluitprocedures.
 
 ### Software bill of materials
 
@@ -148,9 +140,7 @@ De onderstaande tabel bevat de hierboven genoemde producten. Het ✔ geeft aan i
 | Informatiebeveiligingsplan                                                                              | ✔        | ✔              |
 | Kwaliteitsplan                                                                                          | ✔        | ✔              |
 | Deploybare versie van de software                                                                       |          | ✔              |
-| Broncode, inclusief de benodigdheden voor het bouwen van de software                                    |          | ✔              |
-| Regressietests, inclusief de benodigdheden voor het uitvoeren van de tests                              |          | ✔              |
-| Deploymentdocumentatie                                                                                  |          | ✔              |
+| Documentatie voor deployment en operationeel beheer                                                                                  |          | ✔              |
 | Software bill of materials                                                                              |          | ✔              |
 | Release notes                                                                                           |          | ✔              |
 | Vrijgaveadvies                                                                                          |          | ✔              |
@@ -159,7 +149,7 @@ De onderstaande tabel bevat de hierboven genoemde producten. Het ✔ geeft aan i
 
 De opdrachtgever is primair verantwoordelijk voor het beschrijven van de functionele en niet-functionele eisen, de geprioriteerde backlog, het mastertestplan en het informatiebeveiligingsplan.
 
-ICTU is primair verantwoordelijk voor plan van aanpak, softwarearchitectuurdocumentatie, globaal functioneel ontwerp, prototype, detailtestplannen en testrapportages voor bouwtesten, kwaliteitsplan, deploybare versie van de software, broncode, regressietests, deploymentdocumentatie, release notes en vrijgaveadvies.
+ICTU is primair verantwoordelijk voor plan van aanpak, softwarearchitectuurdocumentatie, globaal functioneel ontwerp, prototype, detailtestplannen en testrapportages voor bouwtesten, kwaliteitsplan, deploybare versie van de software, documentatie voor deployment en operationeel beheer, release notes en vrijgaveadvies.
 
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de kwaliteit van deze software, zie [$M32$](#m32). In dat geval levert het project ook de onderzoeksresultaten daarvan en maakt een transitieplan, en indien van toepassing, een plan voor het aflossen van technische schuld.
 

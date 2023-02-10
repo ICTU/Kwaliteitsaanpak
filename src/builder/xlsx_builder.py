@@ -90,7 +90,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             if (
                 tag == xmltags.LIST_ITEM
                 and xmltags.LIST_ITEM_NUMBER in attributes
-                and self.measure_id in ("M01", "M05", "M07", "M16", "M31", "M32", "M34")
+                and self.measure_id in ("M01", "M02", "M05", "M07", "M16", "M31", "M32", "M34")
             ):
                 self.row += 1
                 self.__write_measure("", f"{str(attributes[xmltags.LIST_ITEM_NUMBER])}. {text}", submeasure=True)

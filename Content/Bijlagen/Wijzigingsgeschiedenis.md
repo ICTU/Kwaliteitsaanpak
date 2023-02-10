@@ -6,7 +6,7 @@
 
 * HTML-versie van de Kwaliteitsaanpak toegevoegd als toegankelijk alternatief voor de PDF-versie.
 * Op meerdere plekken in de Kwaliteitsaanpak de gebruikte rollen aangescherpt of verbeterd door bijvoorbeeld ICTU te vervangen door project, team door Scrumteam en projectleider door software delivery manager.
-* Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): software bill of materials toegevoegd als op te leveren informatie en toegevoegd dat al het werk van het Scrumteam via de product backlog loopt.
+* Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): software bill of materials toegevoegd als op te leveren informatie, toegevoegd dat al het werk van het Scrumteam via de product backlog loopt, deploymentdocumentatie verbreed tot documentatie voor deployment en operationeel beheer en broncode en regressietest verplaatst naar de nieuwe maatregel "Het project draagt software beheerst over" (M34).
 * Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): de due diligence activiteiten afgesplitst naar een nieuwe maatregel "Het project onderzoekt de kwaliteit van over te nemen software" (M32).
 * De maatregel "Het project implementeert nieuwe versies van de Kwaliteitsaanpak binnen de gestelde termijn" (M09) is vervallen en gecombineerd met maatregel "Het project voert periodiek een self-assessment uit ten aanzien van de Kwaliteitsaanpak" (M28).
 * Bij maatregel "Het project gebruikt tools voor vastgestelde taken" (M16): de lijst van verplichte tools en ondersteunde tools gelijk getrokken, de genoemde tools bijgewerkt en software bill of materials toegevoegd als taak.

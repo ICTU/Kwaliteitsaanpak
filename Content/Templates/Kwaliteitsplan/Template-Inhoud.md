@@ -288,7 +288,7 @@ Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementati
 
 {Verwijder deze paragraaf indien certificeringen niet van toepassing zijn}
 
-Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld ISO 127001 compliancy.
+Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld ISO 27001 compliancy.
 
 ## Projectspecifieke maatregelen
 

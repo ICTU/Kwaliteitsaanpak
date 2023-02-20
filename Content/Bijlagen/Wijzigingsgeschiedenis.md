@@ -34,6 +34,8 @@
 
 * In de beschrijving van het vrijgaveadvies "testresultaten" vervangen door toetsing van functionele en niet-functionele eisen.
 * Paragraaf over linters, checkers en formatters toegevoegd aan het hoofdstuk "Kwaliteitsmaatregelen realisatiefase".
+* Paragraaf over broncodereviews specifieker gemaakt.
+* De scope van de paragraaf over certificeringen uitgebreid zodat ook externe testen en toetsen eronder vallen.
 
 #### Template Generiek
 

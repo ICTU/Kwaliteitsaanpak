@@ -34,3 +34,7 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
 - Run "docker-compose up"
   - The document patch version is updated in docker-compose.yml
   - The html, pdf, docx and xlsx versions of the documents are created in the dist folder
+
+## Point of contact
+
+Point of contact for the ICTU Kwaliteitsaanpak Softwareontwikkeling and this repository are [Auke Bloembergen](https://github.com/aukebloembergen) and [Frank Niessink](https://github.com/fniessink).

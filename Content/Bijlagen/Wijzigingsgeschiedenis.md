@@ -33,6 +33,7 @@
 #### Template Kwaliteitsplan
 
 * In de beschrijving van het vrijgaveadvies "testresultaten" vervangen door toetsing van functionele en niet-functionele eisen.
+* Paragraaf over linters, checkers en formatters toegevoegd aan het hoofdstuk "Kwaliteitsmaatregelen realisatiefase".
 
 #### Template Generiek
 

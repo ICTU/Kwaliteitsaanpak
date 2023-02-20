@@ -155,6 +155,8 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 
 ## Kwaliteit van de broncode
 
+### Codeerstandaard
+
 {Het project bepaalt bij aanvang van de realisatiefase of, en zo ja welke, codeerstandaard zal worden gehanteerd (ICTU hanteert geen ICTU-brede codeerstandaard). Het project bepaalt daarbij ook hoe de codeerstandaard gecontroleerd zal worden: via tools en/of broncodereviews.}
 
 Het project hanteert de volgende codeerstandaarden:
@@ -164,9 +166,35 @@ Het project hanteert de volgende codeerstandaarden:
 | {programmeertaal A} | {codeerstandaard A} | {broncodereview} |
 | {programmeertaal B} | {codeerstandaard B} | {tool B}         |
 
-Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het mastertestplan opgenomen. Quality-time bewaakt continue de kwaliteit van de broncode. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
-
 De keuze van programmeertalen en andere technologie staat beschreven in het SAD.
+
+### Linters, formatters, checkers
+
+Het project bepaalt bij aanvang van de realisatiefase welke linters, formatters, en/of checkers ontwikkelaars in hun IDE (Integrated Development Environment) zullen opnemen en of de IDE-configuratie gedeeld zal worden in de broncode-repository.
+
+Het project hanteert de volgende tools {vul aan/pas aan}:
+
+| Programmeertaal   | Tool               | Soort        |
+|:------------------|:-------------------|:-------------|
+| DotNet            | ReSharper          | Linter       |
+| DotNet            | StyleCop           | Linter       |
+| DotNet            | Dotnet-format      | Formatter    |
+| Java              | Checkstyle         | Linter       |
+| Java              | ErrorProne         | Bug checker  |
+| Java              | Google Java Format | Formatter    |
+| JavaScript        | ESLint             | Linter       |
+| JavaScript        | JSLint             | Linter       |
+| JavaScript        | Prettier           | Formatter    |
+| Python            | Pylint             | Linter       |
+| Python            | Ruff               | Linter       |
+| Python            | Black              | Formatter    |
+| Python            | Mypy               | Type checker |
+| Diverse           | SonarLint          | Linter       |
+| {Programmeertaal} | {Tool}             | {Soort}      |
+
+### Broncodereviews
+
+Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het detailtestplan opgenomen. Quality-time bewaakt continue de kwaliteit van de broncode. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
 
 ### Complexiteit van broncode limiteren
 
@@ -282,7 +310,7 @@ Als het Scrumteam of de kwaliteitsmanager constateert dat er technische schuld i
 
 Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementatie- en beheerplan opgesteld. Hierin worden de kaders aangegeven op welke wijze het beheer ingericht, geïmplementeerd en uitgevoerd wordt. Hierbij gaat de voorkeur uit naar beheer op basis van de principes van de DevOps-werkwijze.
 
-{Dit kwaliteitsplan moet bijgewerkt worden indien meer informatie beschikbaar is over de werkwijze ten aanzien van implementatie en beheer.}
+{Werk dit kwaliteitsplan bij zodra er meer informatie beschikbaar is over de werkwijze ten aanzien van implementatie en beheer}
 
 ## Certificeringen
 

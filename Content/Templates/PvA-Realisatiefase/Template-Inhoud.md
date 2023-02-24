@@ -22,7 +22,7 @@ ICTU levert de volgende producten {bij DevOps: en diensten} op:
 
 {Bij DevOps: Het DevOps-team voert operationele beheertaken uit, conform overeengekomen kwaliteitsniveaus (quality of services). Hiertoe maakt het project beheerafspraken met de opdrachtgever en de beheerorganisatie en legt deze vast in een dossier afspraken en procedures (DAP). Het vastleggen en rapporteren van informatie over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten kan hiervan deel uitmaken. De afspraken zijn afgestemd op het beheerplan van de beheerorganisatie, waarin is beschreven hoe de verschillende vormen van beheer van de applicaties en de infrastructuur worden uitgevoerd.}
 
-{Bij DevOps: beschrijf wanneer en hoe de dienstverlening eindigt of verlengt wordt. Bijvoorbeeld, geef aan wat de minimale hoeveelheid aan ontwikkel- en onderhoudwerk is waarbij ICTU nog een geschikte partij is om het operationeel beheer uit te voeren.}
+{Bij DevOps: beschrijf wanneer en hoe de dienstverlening eindigt of verlengd wordt. Bijvoorbeeld, geef aan wat de minimale hoeveelheid aan ontwikkel- en onderhoudwerk is waarbij ICTU nog een geschikte partij is om het operationeel beheer uit te voeren.}
 
 ## Scope
 

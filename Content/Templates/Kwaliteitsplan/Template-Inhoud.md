@@ -117,7 +117,7 @@ Het project definieert en hanteert een Definition of Done (DoD) voor user storie
 
 De Definition Of Done van het project bevat de volgende criteria ({vul aan en pas aan}):
 
-1. De broncode voldoet aan de codeerstandaard,
+1. De broncode voldoet aan de codeerstandaard en is gereviewed,
 1. Nieuwe testgevallen zijn gereviewd en geaccordeerd door reviewer,
 1. Functionele testen zijn succesvol afgerond,
 1. De dekkingsgraad van de functionele testen is minstens 80% (maar meer indien mogelijk),
@@ -155,7 +155,7 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 
 ## Kwaliteit van de broncode
 
-{Het project bepaalt bij aanvang van de realisatiefase of, en zo ja welke, codeerstandaard zal worden gehanteerd (ICTU hanteert geen ICTU-brede codeerstandaard). Het project bepaalt daarbij ook hoe de codeerstandaard gecontroleerd zal worden: via tools en/of broncodereviews.}
+### Codeerstandaard
 
 Het project hanteert de volgende codeerstandaarden:
 
@@ -164,9 +164,41 @@ Het project hanteert de volgende codeerstandaarden:
 | {programmeertaal A} | {codeerstandaard A} | {broncodereview} |
 | {programmeertaal B} | {codeerstandaard B} | {tool B}         |
 
-Het project bepaalt bij aanvang van de realisatiefase of en hoe vaak broncodereviews plaatsvinden; dit wordt in het mastertestplan opgenomen. Quality-time bewaakt continue de kwaliteit van de broncode. Voor het beoordelen van de onderhoudbaarheid gebruikt ICTU onder meer de SIG/TüVIT-evaluatiecriteria voor onderhoudbare software.
-
 De keuze van programmeertalen en andere technologie staat beschreven in het SAD.
+
+### Linters, formatters, checkers
+
+Ontwikkelaars in het project gebruiken de volgende tools in hun IDE (Integrated Development Environment) {vul aan/pas aan}:
+
+| Programmeertaal   | Tool               | Soort        |
+|:------------------|:-------------------|:-------------|
+| DotNet            | ReSharper          | Linter       |
+| DotNet            | StyleCop           | Linter       |
+| DotNet            | Dotnet-format      | Formatter    |
+| Java              | Checkstyle         | Linter       |
+| Java              | ErrorProne         | Bug checker  |
+| Java              | Google Java Format | Formatter    |
+| JavaScript        | ESLint             | Linter       |
+| JavaScript        | JSLint             | Linter       |
+| JavaScript        | Prettier           | Formatter    |
+| Python            | Pylint             | Linter       |
+| Python            | Ruff               | Linter       |
+| Python            | Black              | Formatter    |
+| Python            | Mypy               | Type checker |
+| Diverse           | SonarLint          | Linter       |
+| {Programmeertaal} | {Tool}             | {Soort}      |
+
+De configuratie van de tools wordt {wel/niet} gedeeld in de broncode-repository.
+
+### Broncodereviews
+
+Het project hanteert de volgende werkwijze voor broncodereviews:
+
+- Elke pull request wordt door minimaal {X} ontwikkelaar(s) gereviewed.
+- Er zijn {Y} goedkeuringen nodig voordat een pull request mag worden gemerged.
+- Na goedkeuring wordt de pull request gemerged door de {ontwikkelaar/reviewer}.
+
+Quality-time bewaakt of de reviews hebben plaatsgevonden.
 
 ### Complexiteit van broncode limiteren
 
@@ -282,11 +314,18 @@ Als het Scrumteam of de kwaliteitsmanager constateert dat er technische schuld i
 
 Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementatie- en beheerplan opgesteld. Hierin worden de kaders aangegeven op welke wijze het beheer ingericht, geïmplementeerd en uitgevoerd wordt. Hierbij gaat de voorkeur uit naar beheer op basis van de principes van de DevOps-werkwijze.
 
-{Dit kwaliteitsplan moet bijgewerkt worden indien meer informatie beschikbaar is over de werkwijze ten aanzien van implementatie en beheer.}
+{Werk dit kwaliteitsplan bij zodra er meer informatie beschikbaar is over de werkwijze ten aanzien van implementatie en beheer}
 
-## Certificeringen
+## Externe testen, toetsen en certificeringen
 
-{Verwijder deze paragraaf indien certificeringen niet van toepassing zijn}
+De volgende externe testen, toetsen en certificeringen zijn gepland:
+
+| Aspect                  | Opdrachtnemer                               | Planning          |
+|:------------------------|:--------------------------------------------|:------------------|
+| Penetratietest          | {Leverancier uit de ICTU-mantel IT-audits } | {Sprint/Kwartaal} |
+| Onderhoudbaarheidstoets | {Leverancier uit de ICTU-mantel IT-audits } | {Sprint/Kwartaal} |
+| Toegankelijkheidstoets  | {Leverancier}                               | {Sprint/Kwartaal} |
+| {Certificering}         | {Leverancier}                               | {Sprint/Kwartaal} |
 
 Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld ISO 27001 compliancy.
 

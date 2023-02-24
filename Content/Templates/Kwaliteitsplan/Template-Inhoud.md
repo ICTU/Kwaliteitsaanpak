@@ -109,7 +109,7 @@ De Definition Of Ready van het project bevat de volgende criteria ({vul aan en p
 5. De story is goedgekeurd door de product owner;
 6. De story is goedgekeurd door de reviewer binnen het Scrumteam;
 7. Het verwachte aantal logische testgevallen is ingevuld;
-8. Er is ingeschat of de user story een performance risico, een beveiligingsrisico en/of een infrastructuurwijziging met zich meebrengt.
+8. Er is ingeschat of de user story mogelijk impact heeft op performance, beveiliging, infrastructuur of andere niet-functionele aspecten. {Zie de bijlage "Gebruik van Jira" voor meer informatie.}
 
 ### Definition of Done
 
@@ -133,7 +133,7 @@ Voor elke major release stelt het project (bijvoorbeeld de testmanager) een vrij
 
 Het vrijgaveadvies beschrijft ({vul aan en pas aan}):
 
-1. Samenvatting testresultaten,
+1. Welke functionele en niet-functionele eisen in deze release gerealiseerd zijn en hoe dit getoetst en/of getest is,
 2. Openstaande bugs,
 3. Afwijkingen kwaliteitsrapportage,
 4. Overige risico's,
@@ -193,7 +193,7 @@ Om de onderhoudbaarheid van de software te bevorderen dienen methoden niet te gr
 
 ### Omvang van unit interfaces beperken
 
-Om de onderhoudbaarheid van de software te bevorderen, dienen methoden niet te veel parameters te hebben. ICTU stelt de norm op maximaal vijf parameters per methode, zoals gemeten door SonarQube. In het systeem als geheel mag maximaal 0% (afgerond) van de methoden deze norm overschrijden. Het Quality-time bewaakt de omvang van unit interfaces.
+Om de onderhoudbaarheid van de software te bevorderen, dienen methoden niet te veel parameters te hebben. ICTU stelt de norm op maximaal vijf parameters per methode, zoals gemeten door SonarQube. In het systeem als geheel mag maximaal 0% (afgerond) van de methoden deze norm overschrijden. Quality-time bewaakt de omvang van unit interfaces.
 
 ## Versiebeheer broncode
 
@@ -213,7 +213,7 @@ De default normen voor broncodedekking met unit tests zijn 90% line coverage en 
 
 ## Systeemtesten
 
-Om de correcte werking van de software te borgen maken de ontwikkelaars systeemtesten. Deze bestaan uit een combinatie van handmatige eenmalige testen, handmatige regressietesten en automatische regressietesten. De automatische regressietesten draaien als onderdeel van de geautomatiseerde pijplijn en de broncode dekking van de automatische regressietesten wordt gemeten. Quality-time rapporteert over het aantal handmatige regressietesten, de hoeveelheid tijd die het kost de handmatige regressietesten uit te voeren en de laatste datum dat ze zijn uitgevoerd. Het Quality-time rapporteert ook over het aantal automatische regressietesten, of ze al dan niet falen en de broncodedekking van de geautomatiseerde regressietesten.
+Om de correcte werking van de software te borgen maken de ontwikkelaars systeemtesten. Deze bestaan uit een combinatie van handmatige eenmalige testen, handmatige regressietesten en automatische regressietesten. De automatische regressietesten draaien als onderdeel van de geautomatiseerde pijplijn en de broncode dekking van de automatische regressietesten wordt gemeten. Quality-time rapporteert over het aantal handmatige regressietesten, de hoeveelheid tijd die het kost de handmatige regressietesten uit te voeren en de laatste datum dat ze zijn uitgevoerd. Quality-time rapporteert ook over het aantal automatische regressietesten, of ze al dan niet falen en de broncodedekking van de geautomatiseerde regressietesten.
 
 De default normen voor broncodedekking met geautomatiseerde regressietesten zijn 80% line coverage en 70% branch coverage. De norm geldt niet voor gegenereerde code, code van derde-partijen die ICTU zelf niet onderhoudt en triviale code zoals getters/setters/framework boiler plate code.
 
@@ -294,7 +294,7 @@ Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan spe
 
 {Verwijder deze paragraaf indien er geen projectspecifieke kwaliteitsmaatregelen nodig zijn}
 
-Deze paragraaf bevat maatregelen voor functionele en niet-functionele eisen, die via de standaardmaatregelen uit de ICTU-kwaliteitsaanpak niet voldoende worden geborgd.
+Deze paragraaf bevat maatregelen voor functionele en niet-functionele eisen, die via de standaardmaatregelen uit de ICTU-kwaliteitsaanpak en in dit kwaliteitsplan niet voldoende worden geborgd.
 
 | Eis      | Omschrijving                                                           | Extra maatregelen                        | Hoe controleren         | Verificatie                                                       |
 |:---------|:-----------------------------------------------------------------------|:-----------------------------------------|:------------------------|:------------------------------------------------------------------|

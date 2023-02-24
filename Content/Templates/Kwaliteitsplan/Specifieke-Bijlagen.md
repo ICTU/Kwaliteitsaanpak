@@ -85,28 +85,29 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 
 {Pas onderstaande lijst van controles aan waar nodig. Voeg indien relevant kolommen toe voor frequentie, uitvoerder, datum laatste controle, status, vervolgacties, datum volgende controle, etc.}
 
-| Onderwerp | Referentie | Controle |
-|:----------|:-----------|:---------|
-| Verwerking informatiebeveiligingsplan | M01 | Actuele beveiligingsmaatregelen zijn verwerkt in SAD, GFO en kwaliteitsplan |
-| Traceerbaarheid functionele eisen | M03 | Functionele functionele eisen zijn traceerbaar naar logische en fysieke testgevallen |
-| Traceerbaarheid niet-functionele eisen | M03 | Niet-functionele eisen zijn traceerbaar naar SAD, MTP en detailtestplannen |
-| Implementatie nieuwe versie Kwaliteitsaanpak | M28 | De meest recente versie van de Kwaliteitsaanpak is geïmplementeerd in het project |
-| Gebruik tools | M16 | Het project gebruikt de geadviseerde tools |
-| Actualiteit tools | M16 | Het project gebruikt actuele versies van tools |
-| Uitvoering self-assessment | M28 | Het project heeft recent een self-assessment uitgevoerd waarin de verschillende maatregelen ook inhoudelijk zijn beoordeeld |
-| Actualiteit self-assessment | M28 | De kwaliteitsrapportage bevat een metriek voor de actualiteit van de self-assessment |
-| Versiebeheer van documenten | Kwaliteitsplan §3.2.1 | Documenten zijn met de juiste meta-informatie op de afgesproken plaats en wijze opgeslagen |
-| Review van documenten | Kwaliteitsplan §3.3.2 | Documenten zijn op de afgesproken wijze gereviewd |
-| Definition of Ready | Kwaliteitsplan §5.1.1 | Scrumteams hebben en gebruiken een DoR |
-| Definition of Done | Kwaliteitsplan §5.1.2 | Scrumteams hebben en gebruiken een DoD, waarin het voldoen aan de kwaliteitsnormen is opgenomen |
-| Vrijgaveadvies | Kwaliteitsplan §5.1.3 | Het vrijgaveadvies bevat de afgesproken onderdelen |
-| Kwaliteit broncode | Kwaliteitsplan §5.3 | Onderdrukte SonarQube-waarschuwingen zijn afgestemd en (nog steeds) terecht |
-| Kwaliteit broncode | Kwaliteitsplan §5.3 | De kwaliteit van de broncode voldoet bij een steekproefsgewijze, handmatige inspectie aan de eisen |
-| Beveiliging broncode | Kwaliteitsplan §5.10 | Onderdrukte beveiligingsbevindingen uit de OWASP Dependency Check en SonarQube zijn afgestemd en (nog steeds) terecht |
-| Beveiligingstesten | Kwaliteitsplan §5.10 | Beveiligingsissues uit securitytesten zijn opgenomen in Jira en volgens de oplostermijnen opgelost |
-| Projectspecifieke kwaliteitsmaatregelen | Kwaliteitsplan §5.16 | Projectspecifieke maatregelen zijn uitgevoerd zoals afgesproken |
-| Projectafsluiting | Kwaliteitsplan §6 | Projectafsluiting is conform de afspraken uitgevoerd |
-| Gebruik van Jira | Kwaliteitsplan bijlage D | Jira wordt gebruikt zoals afgesproken |
-| Actualiteit kwaliteitsplan | | De kwaliteitsrapportage bevat een metriek voor de actualiteit van het kwaliteitsplan |
-| Nieuwe teamleden | | Nieuwe teamleden zijn op de hoogte van de Kwaliteitsaanpak, het kwaliteitssysteem (Quality-time) en het kwaliteitsplan |
-| Vertrokken teamleden | | Alle rechten in tools (GitLab, GitHub, Trello, Sharepoint, VPN, Jira, Signal, Slack, etc.) van vertrokken teamleden zijn ingetrokken |
+| Onderwerp                                    | Referentie               | Controle                                                                                                                             |
+|:---------------------------------------------|:-------------------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| Verwerking informatiebeveiligingsplan        | M01                      | Actuele beveiligingsmaatregelen zijn verwerkt in SAD, GFO en kwaliteitsplan                                                          |
+| Traceerbaarheid functionele eisen            | M03                      | Functionele functionele eisen zijn traceerbaar naar logische en fysieke testgevallen                                                 |
+| Traceerbaarheid niet-functionele eisen       | M03                      | Niet-functionele eisen zijn traceerbaar naar SAD, MTP en detailtestplannen                                                           |
+| Bewijs realisatie niet-functionele eisen     | Niet-functionele eisen   | Het bewijs dat aan ICTU toegewezen niet-functionele eisen zijn gerealiseerd is actueel                                               |
+| Implementatie nieuwe versie Kwaliteitsaanpak | M28                      | De meest recente versie van de Kwaliteitsaanpak is geïmplementeerd in het project                                                    |
+| Gebruik tools                                | M16                      | Het project gebruikt de geadviseerde tools                                                                                           |
+| Actualiteit tools                            | M16                      | Het project gebruikt actuele versies van tools                                                                                       |
+| Uitvoering self-assessment                   | M28                      | Het project heeft recent een self-assessment uitgevoerd waarin de verschillende maatregelen ook inhoudelijk zijn beoordeeld          |
+| Actualiteit self-assessment                  | M28                      | De kwaliteitsrapportage bevat een metriek voor de actualiteit van de self-assessment                                                 |
+| Versiebeheer van documenten                  | Kwaliteitsplan §3.2.1    | Documenten zijn met de juiste meta-informatie op de afgesproken plaats en wijze opgeslagen                                           |
+| Review van documenten                        | Kwaliteitsplan §3.3.2    | Documenten zijn op de afgesproken wijze gereviewd                                                                                    |
+| Definition of Ready                          | Kwaliteitsplan §5.1.1    | Scrumteams hebben en gebruiken een DoR                                                                                               |
+| Definition of Done                           | Kwaliteitsplan §5.1.2    | Scrumteams hebben en gebruiken een DoD, waarin het voldoen aan de kwaliteitsnormen is opgenomen                                      |
+| Vrijgaveadvies                               | Kwaliteitsplan §5.1.3    | Het vrijgaveadvies bevat de afgesproken onderdelen                                                                                   |
+| Kwaliteit broncode                           | Kwaliteitsplan §5.3      | Onderdrukte SonarQube-waarschuwingen zijn afgestemd en (nog steeds) terecht                                                          |
+| Kwaliteit broncode                           | Kwaliteitsplan §5.3      | De kwaliteit van de broncode voldoet bij een steekproefsgewijze, handmatige inspectie aan de eisen                                   |
+| Beveiliging broncode                         | Kwaliteitsplan §5.10     | Onderdrukte beveiligingsbevindingen uit de OWASP Dependency Check en SonarQube zijn afgestemd en (nog steeds) terecht                |
+| Beveiligingstesten                           | Kwaliteitsplan §5.10     | Beveiligingsissues uit securitytesten zijn opgenomen in Jira en volgens de oplostermijnen opgelost                                   |
+| Projectspecifieke kwaliteitsmaatregelen      | Kwaliteitsplan §5.16     | Projectspecifieke maatregelen zijn uitgevoerd zoals afgesproken                                                                      |
+| Projectafsluiting                            | Kwaliteitsplan §6        | Projectafsluiting is conform de afspraken uitgevoerd                                                                                 |
+| Gebruik van Jira                             | Kwaliteitsplan bijlage D | Jira wordt gebruikt zoals afgesproken                                                                                                |
+| Actualiteit kwaliteitsplan                   |                          | De kwaliteitsrapportage bevat een metriek voor de actualiteit van het kwaliteitsplan                                                 |
+| Nieuwe teamleden                             |                          | Nieuwe teamleden zijn op de hoogte van de Kwaliteitsaanpak, het kwaliteitssysteem (Quality-time) en het kwaliteitsplan               |
+| Vertrokken teamleden                         |                          | Alle rechten in tools (GitLab, GitHub, Trello, Sharepoint, VPN, Jira, Signal, Slack, etc.) van vertrokken teamleden zijn ingetrokken |

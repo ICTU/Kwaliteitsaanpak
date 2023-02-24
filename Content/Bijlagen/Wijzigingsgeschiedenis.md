@@ -20,12 +20,19 @@
 
 #### Template Niet-Functionele Eisen
 
+* Paragraaf "Relaties met andere documenten" verder uitgewerkt.
+* In de paragraaf "Over dit document" handreiking voor het scherp formuleren van eisen toegevoegd.
 * Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.1 succescriteria.
 * Template neutraal gemaakt (ICTU logo's verwijderd) omdat dit document een verantwoordelijkheid van de opdrachtgever is.
+* Kolommen aan eisentabellen toegevoegd om eisen toe te wijzen aan systemeonderdelen en verantwoordelijke partijen.
 
 #### Template High Level Design
 
 * Template neutraal gemaakt (ICTU logo's verwijderd) omdat dit document een verantwoordelijkheid van de opdrachtgever is.
+
+#### Template Kwaliteitsplan
+
+* In de beschrijving van het vrijgaveadvies "testresultaten" vervangen door toetsing van functionele en niet-functionele eisen.
 
 #### Template Generiek
 

@@ -36,6 +36,8 @@ De penvoerder van het product is de uitvoerende partij die verantwoordelijk is v
 
 {Een aantal documenten is bij voorkeur al beschikbaar bij de start van de voorfase. De andere documentatie is afhankelijk van deze documenten, dus mochten de benodigde documenten niet aanwezig zijn, dan heeft dat impact op de planning. Controleer de bovenstaande tabel en de planning.}
 
+{Tip: Neem bovenstaand overzicht op in een separaat document en gebruik dat in de sprints van de voorfase om bij elke sprintafsluiting de status van de te realiseren producten vast te stellen.}
+
 ## Scope
 
 Binnen de scope van de opdracht vallen de producten, genoemd in de voorgaande tabel, waarvan ICTU de penvoerder is en de organisatie van werksessies ten behoeve van het opstellen van deze producten. Deze producten bevatten ook de beschrijving van de koppelvlakken met de noodzakelijke, aanpalende bronsystemen; buiten de scope van deze opdracht vallen de beschrijvingen van de aanpalende bronsystemen zelf.

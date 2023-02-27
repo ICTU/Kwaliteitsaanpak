@@ -1,0 +1,22 @@
+{
+    "InputFile": "DocumentDefinitions/Templates/document-template.md",
+    "BuildPath": "build/Templates/Compacte-Voorfase/",
+    "Title": "Compacte Voorfase",
+    "Subtitle": "{Productnaam, versie}",
+    "DocumentType": "Template",
+    "DocumentFolder": "Compacte-Voorfase",
+    "FrontPage": "ICTU",
+    "IncludeTableOfContents": true,
+    "OutputFormats": {
+        "docx": {
+            "OutputFile": "Template-Compacte-Voorfase.docx",
+            "OutputPaths": [
+                "dist"
+            ],
+            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+        }
+    },
+    "VariablesFiles": [
+        "DocumentDefinitions/Shared/variables.json"
+    ]
+}

@@ -56,7 +56,7 @@
 #### Alle documenten
 
 * Voor toepassing van de DevOps-werkwijze zijn uitzonderingen, extra maatregelen en extra rollen toegevoegd.
-* Checkmarx vervangen door SonarQube.
+* Verwijzingen naar Checkmarx vervangen door verwijzingen naar SonarQube.
 
 ### Versie 2.4.0, 12 januari 2022
 

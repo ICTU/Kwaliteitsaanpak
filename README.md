@@ -27,13 +27,26 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
   - cover.css - styling
 - Shared material such as headers, footers, and stylesheets are in the ./DocumentDefinitions/Shared folder
 
-## Generating the documentation (pdf, docx, and xlsx)
+## Generating the documentation
 
-- Make sure you have Docker and Docker-compose.
+- Make sure you have Docker
 - Clone this repository
-- Run "docker compose up"
-  - The document patch version is updated in docker-compose.yml
+- Run `docker compose up`
   - The html, pdf, docx and xlsx versions of the documents are created in the dist folder
+  - The html and pdf versions of the Kwaliteitsaanpak itself are created in the docs folder
+
+## Releasing a new version of the documentation
+
+1. Create a release branch: `git checkout -b releaseX-Y-Z`
+2. Update the version number and release date in the change log in ./Content/Bijlagen/Wijzigingsgeschiedenis.md
+3. Update the version number in ./docker-compose.yml
+4. Update the version number in docs/index.html
+5. Create a new release folder in ./docs: `mkdir docs/vX.Y.Z`
+6. Run `docker compose up` to generate the documents
+7. Copy the Kwaliteitsaanpak pdf and html version to the docs folder: `cp docs/*.png docs/vX.Y.Z; cp docs/ICTU-Kwaliteitsaanpak.* docs/vX.Y.Z`
+8. Commit the changes and push to GitHub: `git commit -a -m "Release vX.Y.Z"; git push`
+9. Review and merge the branch on GitHub
+10. Tag the release and push the tag to GitHub: `git checkout master; git pull -p; git tag vX.Y.Z; git push --tags`
 
 ## Point of contact
 

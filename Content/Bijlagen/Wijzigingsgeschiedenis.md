@@ -18,6 +18,10 @@
 * De term 'standup' vervangen door de officiële term '*daily scrum*'.
 * De Scrumrollen toegevoegd aan de bijlage 'Terminologie'.
 
+#### Samenvatting Kwaliteitsaanpak
+
+* Gebruik dezelfde volgorde van de maatregelen in de samenvatting als in de gehele Kwaliteitsaanpak.
+
 #### Template Niet-Functionele Eisen
 
 * Paragraaf "Relaties met andere documenten" verder uitgewerkt.

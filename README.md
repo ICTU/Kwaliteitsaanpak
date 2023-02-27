@@ -1,12 +1,12 @@
 # ICTU Kwaliteitsaanpak Softwareontwikkeling
 
-ICTU's Kwaliteitsaanpak is a set of guidelines used at [ICTU](https://www.ictu.nl/) for software development projects.
+[ICTU's Kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak) is a set of guidelines used at [ICTU](https://www.ictu.nl) for software development projects.
 
-This repository contains the source information and automation scripts for generating ICTU's Kwaliteitsaanpak documentation. The latest release of the Kwaliteitsaanpak is available from the ICTU website: [https://www.ictu.nl/kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak). The latest unreleased version is available via [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
+This repository contains the source information and automation scripts for generating ICTU's Kwaliteitsaanpak documentation. The Kwaliteitsaanpak itself is available via [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
 
 ## Documents
 
-The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak itself, a number of templates, and a self-assessment checklist. The sources are a collection of Markdown files and supporting material. Scripts convert the Kwaliteitsaanpak main document to pdf, the templates to docx, and the self-assessment checklist to xslx.
+The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak itself, a number of templates, and a self-assessment checklist. The sources are a collection of Markdown files and supporting material. Scripts convert the Kwaliteitsaanpak main document to html and pdf, the templates to docx, and the self-assessment checklist to xslx.
 
 ## Authoring guidelines
 
@@ -37,4 +37,4 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
 
 ## Point of contact
 
-Point of contact for the ICTU Kwaliteitsaanpak Softwareontwikkeling and this repository are [Auke Bloembergen](https://github.com/aukebloembergen) and [Frank Niessink](https://github.com/fniessink).
+Points of contact for the ICTU Kwaliteitsaanpak Softwareontwikkeling and this repository are [Auke Bloembergen](https://github.com/aukebloembergen) and [Frank Niessink](https://github.com/fniessink).

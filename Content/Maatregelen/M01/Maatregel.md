@@ -4,19 +4,25 @@
 
 Opdrachtgever, ICTU, beheerpartij en andere meewerkende partijen leveren de onderstaande informatie op. Voor een aantal documenten zijn als onderdeel van de Kwaliteitsaanpak templates beschikbaar. Ook kan gebruik worden gemaakt van bestaande templates uit bijvoorbeeld de NORA. Zie [$M29$](#m29).
 
-1. Plan van aanpak
-1. Beschrijving van functionele eisen
-1. Beschrijving van niet-functionele eisen
-1. Product backlog
-1. Ontwerp- en architectuurdocumentatie
-1. Testdocumentatie: testplannen
-1. Testdocumentatie: testgevallen, rapportages
-1. Kwaliteitsplan
-1. Deploybare versie van de software
-1. Documentatie voor deployment en operationeel beheer
-1. Software bill of materials
-1. Release notes
-1. Vrijgaveadvies
+De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het ✔ geeft aan in welke fase ze worden opgeleverd.
+
+| Product                                                                     | Voor start | Voorfase | Realisatiefase |
+|-----------------------------------------------------------------------------|------------|----------|----------------|
+| Plan van aanpak: voorfase                                                   | ✔          |          |                |
+| Beschrijving van functionele eisen                                          |            | ✔        | ✔              |
+| Beschrijving van niet-functionele eisen                                     |            | ✔        | ✔              |
+| Product backlog                                                             |            | ✔        | ✔              |
+| Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur) |            | ✔        | ✔              |
+| Testdocumentatie: testplannen                                               |            | ✔        | ✔              |
+| Informatiebeveiligingsplan                                                  |            | ✔        | ✔              |
+| Kwaliteitsplan                                                              |            | ✔        | ✔              |
+| Plan van aanpak: realisatiefase                                             |            | ✔        |                |
+| Deploybare versie van de software                                           |            |          | ✔              |
+| Testdocumentatie: testgevallen, rapportages                                 |            |          | ✔              |
+| Documentatie voor deployment en operationeel beheer                         |            |          | ✔              |
+| Software bill of materials                                                  |            |          | ✔              |
+| Release notes                                                               |            |          | ✔              |
+| Vrijgaveadvies                                                              |            |          | ✔              |
 
 ### Plan van aanpak
 
@@ -86,7 +92,7 @@ Het informatiebeveiligingsplan vormt een praktisch toepasbaar document dat uitle
 
 Het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) bevat een methode om te komen tot een systematische aanpak van informatiebeveiliging. Eén van de vereisten van het VIR 2007 is dat voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een afhankelijkheids- en kwetsbaarheidsanalyse (A&K-analyse) wordt uitgevoerd.
 
-Bij ICTU wordt daarvoor een TVA gebruikt. Hierin worden de betrouwbaarheidseisen, die aan de bedrijfsprocessen en dientengevolge aan het informatiesysteem of verantwoordelijkheidsgebied worden gesteld, worden tijdens een afhankelijkheidsanalyse geïnventariseerd. Vervolgens worden de bedreigingen geïdentificeerd en geanalyseerd. De TVA levert zodoende een deel van een traceerbare onderbouwing voor de te treffen beveiligingsmaatregelen. De TVA wordt tijdens de voorfase opgesteld op basis van de resultaten van de BIA, de eventuele PIA en de inhoud van de ontwerp- en architectuurdocumentatie.
+Bij ICTU wordt daarvoor een TVA gebruikt. Hierin worden de betrouwbaarheidseisen, die aan de bedrijfsprocessen en dientengevolge aan het informatiesysteem of verantwoordelijkheidsgebied worden gesteld, tijdens een afhankelijkheidsanalyse geïnventariseerd. Vervolgens worden de bedreigingen geïdentificeerd en geanalyseerd. De TVA levert zodoende een deel van een traceerbare onderbouwing voor de te treffen beveiligingsmaatregelen. De TVA wordt tijdens de voorfase opgesteld op basis van de resultaten van de BIA, de eventuele PIA en de inhoud van de ontwerp- en architectuurdocumentatie.
 
 ### Kwaliteitsplan
 
@@ -123,27 +129,6 @@ Software delivery manager en opdrachtgever maken afspraken over de opzet van het
 ![Projectstartarchitectuur (PSA), business impact analysis (BIA) en privacy impact assessment (PIA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), backlog (BL), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De projectstartarchitectuur vormt input voor functionele eisen en niet-functionele eisen. De business impact analyse vormt input voor de niet-functionele eisen en informatiebeveiligingsplan. De privacy impact analyse vormt input voor de niet-functionele eisen en het informatiebeveiligingsplan. De functionele eisen vormen input voor de backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.](relaties-tussen-producten.png "Relaties tussen producten")
 
 Bovenstaande figuur laat de belangrijkste relaties zien tussen de verschillende producten die de input en output van de voorfase vormen. Naast de informatiestromen zoals door de pijlen weergegeven zijn er in de praktijk nog meer verbanden tussen de producten. Zo kan de gekozen oplossing in de architectuur van invloed zijn op de maatregelen in het informatiebeveiligingsplan of leiden niet-functionele eisen tot extra functionele eisen.
-
-### Overzicht
-
-De onderstaande tabel bevat de hierboven genoemde producten. Het ✔ geeft aan in welke fase ze van belang zijn en worden opgeleverd.
-
-| Product                                                                                                 | Voorfase | Realisatiefase |
-|---------------------------------------------------------------------------------------------------------|----------|----------------|
-| Plan van aanpak                                                                                         | ✔        | ✔              |
-| Beschrijving van functionele eisen                                                                      | ✔        | ✔              |
-| Beschrijving van niet-functionele eisen                                                                 | ✔        | ✔              |
-| Product backlog                                                                                         | ✔        | ✔              |
-| Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)                             | ✔        | ✔              |
-| Testdocumentatie: testplannen                                                                           | ✔        | ✔              |
-| Testdocumentatie: testgevallen, rapportages                                                             |          | ✔              |
-| Informatiebeveiligingsplan                                                                              | ✔        | ✔              |
-| Kwaliteitsplan                                                                                          | ✔        | ✔              |
-| Deploybare versie van de software                                                                       |          | ✔              |
-| Documentatie voor deployment en operationeel beheer                                                                                  |          | ✔              |
-| Software bill of materials                                                                              |          | ✔              |
-| Release notes                                                                                           |          | ✔              |
-| Vrijgaveadvies                                                                                          |          | ✔              |
 
 ### Verantwoordelijkheden
 

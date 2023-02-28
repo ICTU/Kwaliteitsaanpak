@@ -49,6 +49,6 @@ In totaal zijn de volgende 31 eigenschappen onderkend:
 
 Dit document is als volgt tot stand gekomen:
 
-- De volgende belanghebbenden zijn betrokken bij het opstellen van de eisen door middel van een {workshop} op {datum}: {belanghebbenden}.
-- De niet-functionele eisen zijn ontleend aan bestaande documenten: zie paragraaf 2.5.
-- Daarnaast zijn de kaders uit paragraaf 2.4 verwerkt.
+* De volgende belanghebbenden zijn betrokken bij het opstellen van de eisen door middel van een {workshop} op {datum}: {belanghebbenden}.
+* De niet-functionele eisen zijn ontleend aan bestaande documenten: zie paragraaf 2.5.
+* Daarnaast zijn de kaders uit paragraaf 2.4 verwerkt.

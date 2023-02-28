@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M34/Definitie.md"
 
-Het project gebruikt NEN NPR 5325 als leidraad voor de overdracht van software aan een andere partij. De paragraafnummers hieronder verwijzen naar de betreffende paragraaf in NPR 5325.
+Het project gebruikt de Nederlandse praktijkrichtlijn NEN NPR 5325 als leidraad voor de overdracht van software aan een andere partij. De paragraafnummers hieronder verwijzen naar de betreffende paragraaf in NPR 5325.
 
 Het project zorgt, bij voorkeur altijd maar in ieder geval bij de overdracht, dat de software, documentatie en testmiddelen aantoonbaar voldoen aan onderstaande criteria.
 

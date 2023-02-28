@@ -8,7 +8,7 @@ De uitkomsten van het onderzoek bestaan uit:
 
 1. Een rapportage met tenminste de bevindingen, risico's voor opdrachtgever en ICTU, en mitigerende maatregelen,
 2. Een transitieplan dat de activiteiten beschrijft die nodig zijn om de software af te bouwen of te herbouwen en te onderhouden, en
-3. Als er significante technische schuld aanwezig is de bestaande software: een plan voor het aflossen van deze schuld.
+3. Als er significante technische schuld aanwezig is in de bestaande software: een plan voor het aflossen van deze schuld.
 
 Als kader voor het onderzoek gebruikt ICTU de NEN NPR 5325.
 

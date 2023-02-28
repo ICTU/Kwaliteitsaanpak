@@ -14,7 +14,7 @@ De kwaliteitsmanager controleert of deze overleggen plaatsvinden.
 
 ### Actie- en besluitenlijst
 
-Het project houdt een actie- en besluitenlijst bij. De actie- en besluitenlijst wordt digitaal bijgehouden door de software delivery manager en wordt tijdens het wekelijks projectoverleg besproken. Quality-time, het kwaliteitssysteme van ICTU, bewaakt de actualiteit van de actie- en besluitenlijst.
+Het project houdt een actie- en besluitenlijst bij. De actie- en besluitenlijst wordt digitaal bijgehouden door de software delivery manager en wordt tijdens het wekelijks projectoverleg besproken. Quality-time, het kwaliteitssysteem van ICTU, bewaakt de actualiteit van de actie- en besluitenlijst.
 
 ### Risicomanagement
 
@@ -30,7 +30,7 @@ De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen
 2. Indien 1. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de ICTU-projectleider;
 3. Indien 2. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar het hoofd van de afdeling ICTU Software Expertise (ISE).
 
-Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden het kwaliteitsplan en/of het kwaliteitssysteem uitgebreid met nieuwe maatregelen en metrieken om de problemen in de toekomst te signaleren en te voorkomen. Dat gebeurt ook proactief, bijvoorbeeld naar aanleiding van ervaringen in andere projecten of als er nieuwe tools beschikbaar komen. De projectleiders van opdrachtgever, de beheerpartij en ICTU zorgen er gezamenlijk voor dat de gewenste uitbreidingen worden gerealiseerd.
+Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden het kwaliteitsplan en/of Quality-time uitgebreid met nieuwe maatregelen en metrieken om de problemen in de toekomst te signaleren en te voorkomen. Dat gebeurt ook proactief, bijvoorbeeld naar aanleiding van ervaringen in andere projecten of als er nieuwe tools beschikbaar komen. De projectleiders van opdrachtgever, de beheerpartij en ICTU zorgen er gezamenlijk voor dat de gewenste uitbreidingen worden gerealiseerd.
 
 ## Projectdocumenten
 
@@ -74,11 +74,11 @@ Niet-functionele eisen aan het te ontwikkelen systeem worden vastgelegd op basis
 
 Niet-functionele eisen voor onderstaande kwaliteitsattributen worden als volgt verwerkt:
 
-- De informatiebeveiligingseisen worden in een afzonderlijk informatiebeveiligingsplan vastgelegd. De software zal zodanig worden voortgebracht en {in geval van DevOps:} beheerd dat deze de BIO-compliance van de opdrachtgever niet zal hinderen.
-- Gebruikskwaliteit (usability) is ingebed in de standaard werkwijze van ICTU voor de realisatie van maatwerksoftware. Dit aspect wordt geborgd door opname in het plan van aanpak, het ontwerp en de testplannen.
-- Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.1, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
-- Performance- en securityeisen worden via performance- en securitytests geborgd, zie de kwaliteitsmaatregelen in paragraaf [Testen](#testen). Voor de borging van andere niet-functionele eisen moeten projectspecifieke maatregelen getroffen worden. Deze worden in dit kwaliteitsplan opgenomen.
-- {In het geval van DevOps:} Eisen aan het operationeel beheer worden vastgelegd als beheerafspraken in het plan van aanpak voor de realisatiefase en geborgd door te rapporteren over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten.
+* De informatiebeveiligingseisen worden in een afzonderlijk informatiebeveiligingsplan vastgelegd. De software zal zodanig worden voortgebracht en {in geval van DevOps:} beheerd dat deze de BIO-compliance van de opdrachtgever niet zal hinderen.
+* Gebruikskwaliteit (usability) is ingebed in de standaard werkwijze van ICTU voor de realisatie van maatwerksoftware. Dit aspect wordt geborgd door opname in het plan van aanpak, het ontwerp en de testplannen.
+* Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.1, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
+* Performance- en securityeisen worden via performance- en securitytests geborgd, zie de kwaliteitsmaatregelen in paragraaf [Testen](#testen). Voor de borging van andere niet-functionele eisen moeten projectspecifieke maatregelen getroffen worden. Deze worden in dit kwaliteitsplan opgenomen.
+* {In het geval van DevOps:} Eisen aan het operationeel beheer worden vastgelegd als beheerafspraken in het plan van aanpak voor de realisatiefase en geborgd door te rapporteren over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten.
 
 ### Compleetheid deliverables voorfase
 
@@ -145,7 +145,7 @@ Voor elke release stelt het project release notes op, een overzicht van de wijzi
 
 ## ICTU-kwaliteitssysteem
 
-Gedurende de realisatiefase beruikt ICTU Quality-time, het kwaliteitssysteem van ICTU, om automatisch metrieken te meten. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden meerdere keer per uur bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. Zie het [overzicht van mogelijke metrieken](https://quality-time.readthedocs.io/en/latest/reference.html#metrics) en de daarbij horende standaard normen; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
+Gedurende de realisatiefase gebruikt ICTU Quality-time, het kwaliteitssysteem van ICTU, om automatisch metrieken te meten. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden meerdere keer per uur bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. Zie het [overzicht van mogelijke metrieken](https://quality-time.readthedocs.io/en/latest/reference.html#metrics) en de daarbij horende standaard normen; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
 
 {In het geval van DevOps:} Het project gebruikt {monitoringapplicatie} om het gedrag en de kwaliteit van de applicatie in de operationale situatie te bewaken.
 
@@ -194,9 +194,9 @@ De configuratie van de tools wordt {wel/niet} gedeeld in de broncode-repository.
 
 Het project hanteert de volgende werkwijze voor broncodereviews:
 
-- Elke pull request wordt door minimaal {X} ontwikkelaar(s) gereviewed.
-- Er zijn {Y} goedkeuringen nodig voordat een pull request mag worden gemerged.
-- Na goedkeuring wordt de pull request gemerged door de {ontwikkelaar/reviewer}.
+* Elke pull request wordt door minimaal {X} ontwikkelaar(s) gereviewed.
+* Er zijn {Y} goedkeuringen nodig voordat een pull request mag worden gemerged.
+* Na goedkeuring wordt de pull request gemerged door de {ontwikkelaar/reviewer}.
 
 Quality-time bewaakt of de reviews hebben plaatsgevonden.
 

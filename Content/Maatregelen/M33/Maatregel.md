@@ -2,8 +2,6 @@
 
 #include "Content/Maatregelen/M33/Definitie.md"
 
-Deze gezamenlijke self-assessment geeft inzicht in de huidige status van de Kwaliteitsaanpak en kan aanleiding geven tot het nemen van maatregelen om de Kwaliteitsaanpak en de ondersteuning daarvan door ICTU te verbeteren.
-
 ICTU nodigt de lopende projecten jaarlijks uit om deel te nemen aan de gezamelijke self-assessment. Deelname door projecten is vrijwillig. Voor het doen van de self-assessment stelt ICTU een ondersteunend formulier beschikbaar.
 
 De projecten identificeren aan de hand van het formulier de belangrijkste verschillen tussen Kwaliteitsaanpak en werkwijze in het project en rapporteren hierover aan ICTU.

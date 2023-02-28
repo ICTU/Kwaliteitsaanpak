@@ -31,7 +31,7 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
 
 - Make sure you have Docker and Docker-compose.
 - Clone this repository
-- Run "docker-compose up"
+- Run "docker compose up"
   - The document patch version is updated in docker-compose.yml
   - The html, pdf, docx and xlsx versions of the documents are created in the dist folder
 

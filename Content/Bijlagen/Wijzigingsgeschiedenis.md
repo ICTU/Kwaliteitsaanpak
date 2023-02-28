@@ -45,6 +45,10 @@
 
 * Een neutrale versie van het generieke template toegevoegd.
 
+#### Template Compacte Voorfase
+
+* Een template toegevoegd voor het vastleggen van de uitkomsten van een compacte voorfase. Dit template is bedoeld om functionele eisen, niet-functionele eisen, ontwerp en plan van aanpak voor de realisatiefase vast te leggen bij een project waar het maken van aparte en uitgebreidere (HLD, SAD, NFE, etc.) documenten niet nodig is. Dit zijn typisch interne ICTU-projecten met beperkte omvang.
+
 #### Alle templates
 
 * Beheerpartijrollen toegevoegd aan colofon.

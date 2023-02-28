@@ -9,7 +9,7 @@
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Template-Compacte-Voorfase.docx",
+            "OutputFile": "ICTU-Template-Compacte-Voorfase.docx",
             "OutputPaths": [
                 "dist"
             ],

@@ -28,7 +28,7 @@
 * In de paragraaf "Over dit document" handreiking voor het scherp formuleren van eisen toegevoegd.
 * Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.1 succescriteria.
 * Template neutraal gemaakt (ICTU logo's verwijderd) omdat dit document een verantwoordelijkheid van de opdrachtgever is.
-* Kolommen aan eisentabellen toegevoegd om eisen toe te wijzen aan systemeonderdelen en verantwoordelijke partijen.
+* Kolommen aan eisentabellen toegevoegd om eisen toe te wijzen aan systeemonderdelen en verantwoordelijke partijen.
 
 #### Template High Level Design
 

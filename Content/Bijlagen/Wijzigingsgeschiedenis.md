@@ -10,6 +10,10 @@
 * Referenties naar 'zeepkist' als communicatiekanaal verwijderd.
 * De link naar de toegankelijkheidsverklaring was niet correct.
 
+#### Self-assessment checklist
+
+* Een deel van de tekst van maatregel M05 was weggevallen.
+
 ### Versie 3.0.0, 28 februari 2023
 
 #### Kwaliteitsaanpak
@@ -25,7 +29,7 @@
 * Nieuwe maatregel "Het project draagt software beheerst over" (M34) toegevoegd.
 * Kruisverwijzingen tussen maatregelen verwijderd om de onderhoudbaarheid van de tekst te vergroten.
 * Versioneringsstrategie voor de Kwaliteitsaanpak toegegoegd aan de leeswijzer.
-* De term 'standup' vervangen door de officiële term '*daily scrum*'.
+* De term 'standup' vervangen door de officiële term 'daily scrum'.
 * De Scrumrollen toegevoegd aan de bijlage 'Terminologie'.
 
 #### Samenvatting Kwaliteitsaanpak

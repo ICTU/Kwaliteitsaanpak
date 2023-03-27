@@ -8,6 +8,7 @@
 * Bij M02 ontbrak (een verwijzing naar) de self-assessment als activiteit om aan de kwaliteitsnormen te voldoen.
 * De criteria uit NPR 5325 in M34 zijn niet SMART. Toegevoegd dat project en opdrachtgever de criteria voor overdracht aanscherpen.
 * Referenties naar 'zeepkist' als communicatiekanaal verwijderd.
+* De link naar de toegankelijkheidsverklaring was niet correct.
 
 ### Versie 3.0.0, 28 februari 2023
 

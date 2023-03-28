@@ -13,6 +13,8 @@ Om te zorgen dat het product continu aan de kwaliteitsnormen voldoet, voert het 
 1. Tijdens de realisatiefase: het project actualiseert en reviewt periodiek de documentatie.
 1. Indien nodig: de kwaliteitsmanager escaleert het langdurig niet halen van de kwaliteitsnormen.
 
+Daarnaast voert het project periodiek een self-assessment uit tegen de actuele versie van de Kwaliteitsaanpak, zie [$M28$](#m28).
+
 ### Voorfase: review documenten
 
 Tijdens de voorfase wordt het voldoen aan de kwaliteitsnormen met behulp van reviews gecontroleerd, normaal gesproken elke sprint. Als onderdeel van het op te stellen kwaliteitsplan wordt tijdens de voorfase bepaald hoe het project de kwaliteit tijdens realisatie gaat controleren; voor producten die niet geautomatiseerd kunnen worden gecontroleerd, beschrijft het kwaliteitsplan een alternatieve aanpak. Als bijvoorbeeld door de gekozen technologie geen ondersteuning van het kwaliteitssysteem mogelijk is, kunnen periodieke, handmatige controles als alternatief ingezet worden.

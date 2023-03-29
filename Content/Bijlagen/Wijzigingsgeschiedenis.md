@@ -1,5 +1,11 @@
 ## Wijzigingsgeschiedenis
 
+### Versie 3.0.1, 29 maart 2023
+
+#### Kwaliteitsaanpak
+
+* In M01 toegevoegd dat het ICTU-kwaliteitsplan waar nodig aansluit op het overkoepelende kwaliteitsplan van de opdrachtgever.
+
 ### Versie 3.0.0, 28 februari 2023
 
 #### Kwaliteitsaanpak

@@ -11,7 +11,7 @@
         "docx": {
             "OutputFile": "ICTU-Template-Kwaliteitsplan.docx",
             "OutputPaths": [
-                "dist"
+                "docs/wip"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }

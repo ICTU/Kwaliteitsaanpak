@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    machine: 
+    machine:
       image: ubuntu-2004:current
     parallelism: 1
     steps:
@@ -9,4 +9,4 @@ jobs:
       - run:
           docker-compose up
       - store_artifacts:
-          path: dist
+          path: docs/wip

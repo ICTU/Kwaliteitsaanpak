@@ -1,5 +1,5 @@
 # Input files to be processed
-input 
+input
 
 # Logs
 logs
@@ -83,7 +83,6 @@ venv
 ~$*.pptx
 
 # Final deliverables
-dist
 *.dtbcache
 netcoreapp3.0
 v15

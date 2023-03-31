@@ -10,7 +10,7 @@
         "pdf": {
             "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.pdf",
             "OutputPaths": [
-                "dist"
+                "docs/wip"
             ],
             "CopyFiles": [
                 {

@@ -11,7 +11,7 @@
         "docx": {
             "OutputFile": "ICTU-Template-Software-architectuurdocument.docx",
             "OutputPaths": [
-                "dist"
+                "docs/wip"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }

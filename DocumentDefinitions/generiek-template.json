@@ -11,8 +11,9 @@
         "docx": {
             "OutputFile": "ICTU-Template-Generiek.docx",
             "OutputPaths": [
-                "dist"
+                "docs/wip"
             ],
+
             "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }
     },

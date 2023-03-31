@@ -11,7 +11,7 @@
         "docx": {
             "OutputFile": "Neutraal-Template-Generiek.docx",
             "OutputPaths": [
-                "dist"
+                "docs/wip"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"
         }

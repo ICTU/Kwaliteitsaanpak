@@ -10,6 +10,7 @@
 * De criteria uit NPR 5325 in M34 zijn niet SMART. Toegevoegd dat project en opdrachtgever de criteria voor overdracht aanscherpen.
 * Referenties naar 'zeepkist' als communicatiekanaal verwijderd.
 * De link naar de toegankelijkheidsverklaring was niet correct.
+* Definitie voor 'operationeel beheer' toegevoegd aan de bijlage 'Terminologie'.
 
 #### Template Kwaliteitsplan
 

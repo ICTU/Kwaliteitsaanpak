@@ -21,8 +21,8 @@ ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Project
 13. Toegankelijkheid: Axe,
 14. Software bill of materials: tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren,
 15. Artifact repository: Nexus of Harbor,
-16. Bij een DevOps werkwijze: Uitrollen in de productieomgeving: Ansible, en
-17. Bij een DevOps werkwijze: Registratie van incidenten bij gebruik en beheer: Jira.
+16. Registratie van incidenten bij gebruik en beheer: Jira,
+17. Bij een DevOps werkwijze; uitrollen in de productieomgeving: Ansible.
 
 ### Rationale
 

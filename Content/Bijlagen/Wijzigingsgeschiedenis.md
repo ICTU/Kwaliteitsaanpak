@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 3.0.1, 29 maart 2023
+### Versie 3.0.1, 3 april 2023
 
 #### Kwaliteitsaanpak
 
@@ -9,6 +9,10 @@
 * De criteria uit NPR 5325 in M34 zijn niet SMART. Toegevoegd dat project en opdrachtgever de criteria voor overdracht aanscherpen.
 * Referenties naar 'zeepkist' als communicatiekanaal verwijderd.
 * De link naar de toegankelijkheidsverklaring was niet correct.
+
+#### Template Kwaliteitsplan
+
+* Het Jira-type "Systeemfunctie" verwijderd uit bijlage D omdat dit niet meer gebruikt wordt.
 
 #### Self-assessment checklist
 

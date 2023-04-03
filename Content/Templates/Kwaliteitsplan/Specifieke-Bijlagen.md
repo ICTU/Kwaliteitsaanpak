@@ -6,9 +6,9 @@ Gedurende de realisatiefase wordt voor de vastlegging van diverse objecten, zoal
 
 De gebruikte Jira-typen ondersteunen verschillende inzichten in het project:
 
-**Systeembeschrijving**: De te gebruiken typen geven gezamenlijk de actuele situatie weer van de te ontwikkelen of aan te passen applicatie. Informatie wordt vastgelegd over de systeemfuncties, use cases en logische testgevallen in respectievelijk de Jira-typen _Systeemfunctie_, _Use Case_ en _Logical Test Case_. Zie nadere toelichting hieronder.
+**Systeembeschrijving**: De te gebruiken typen geven gezamenlijk de actuele situatie weer van de te ontwikkelen of aan te passen applicatie. Informatie wordt vastgelegd over de use cases en logische testgevallen in respectievelijk de Jira-typen _Use Case_ en _Logical Test Case_. Zie nadere toelichting hieronder.
 
-**Realisatie-activiteiten**: De te gebruiken typen geven gezamenlijk inzicht in de realisatie-activiteiten: te plannen, onderhanden en/of afgeronde activiteiten. Informatie wordt vastgelegd over epics, stories en onderhanden taken in respectievelijk de Jira-typen _Epic_, _Story_ en _Technical Tasks_. Zie nadere toelichting hieronder.
+**Realisatie-activiteiten**: De te gebruiken typen geven gezamenlijk inzicht in de realisatie-activiteiten: te plannen, onderhanden en/of afgeronde activiteiten. Informatie wordt vastgelegd over epics, stories en onderhanden taken in respectievelijk de Jira-typen _Epic_, _Story_ en _Technical Task_. Zie nadere toelichting hieronder.
 
 **Bugs**: Bugs gevonden na oplevering in de acceptatieomgeving worden geregistreerd. Dit kunnen ook bugs zijn uit de productieomgeving die opgelost moeten worden in de applicatie. De informatie over bugs wordt vastgelegd met het Jira-type _Bug_. Zie nadere toelichting hieronder.
 
@@ -24,17 +24,11 @@ Elk Jira-type maakt gebruik van een standaard workflow. Omdat de kwaliteitsrappo
 
 ### Systeembeschrijving
 
-Het op te leveren systeem is beschreven in documenten zoals projectstartarchitectuur (PSA) en globaal functioneel ontwerp (GFO). De actuele situatie van het systeem kan anders zijn in situatie waarin gefaseerd het gewenste systeem wordt opgeleverd of waarin het systeem door de agile manier van werken reeds vooruitloopt op het GFO. Om de actuele situatie te beschrijven wordt gebruik gemaakt van de Jira-typen _Systeemfunctie_ en _Use Cases_. Tevens zijn de hierbij behorende logische testgevallen beschreven.
-
-#### Systeemfunctie
-
-Het te ontwerpen systeem wordt door het Scrumteam, meestal door een functioneel ontwerper, vastgelegd in Jira door een issue aan te maken van het type _Systeemfunctie_. Een systeemfunctie is de vastlegging van het globaal functioneel ontwerp of delen ervan. Een goedgekeurde versie van het GFO bevat de gewenste situatie van een specifiek release en zal als attachment in het issue bijgevoegd worden.
-
-Een systeemfunctie is beschreven door één of meerdere use cases. Gezamenlijk beschrijven de use cases op elk gewenst moment de actuele situatie van de betreffende systeemfunctie.
+Het op te leveren systeem is beschreven in documenten zoals globaal functioneel ontwerp (GFO) en software-architectuurdocument (SAD). De actuele situatie van het systeem kan anders zijn in situatie waarin gefaseerd het gewenste systeem wordt opgeleverd of waarin het systeem door de agile manier van werken reeds vooruitloopt op het GFO. Om de actuele situatie te beschrijven wordt gebruik gemaakt van use cases. Logische testgevallen beschrijven hoe de use cases worden getest.
 
 #### Use cases
 
-De te realiseren functionaliteit wordt met behulp van de user stories geïmplementeerd. De delen van de systeemfuncties die gerealiseerd zijn, worden met use cases door het Scrumteam vastgelegd (meestal een functioneel ontwerper) door issues aan te maken van het type _Use Case_. De verzameling use cases bevatten de functionele as-is situatie van het systeem en worden middels een Jira link van het type Relates to aan de systeemfunctie gekoppeld. Een use case kan aan slechts één systeemfunctie gekoppeld worden.
+De te realiseren functionaliteit wordt met behulp van de user stories geïmplementeerd. De delen van de systeemfuncties die gerealiseerd zijn, worden met use cases door het Scrumteam vastgelegd (meestal een functioneel ontwerper) door issues aan te maken van het type _Use Case_. De verzameling use cases beschrijft de functionele as-is situatie van het systeem.
 
 #### Logische testgevallen
 

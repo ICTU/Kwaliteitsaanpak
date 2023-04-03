@@ -10,7 +10,7 @@ De uitkomsten van het onderzoek bestaan uit:
 2. Een transitieplan dat de activiteiten beschrijft die nodig zijn om de software af te bouwen of te herbouwen en te onderhouden, en
 3. Als er significante technische schuld aanwezig is in de bestaande software: een plan voor het aflossen van deze schuld.
 
-Als kader voor het onderzoek gebruikt ICTU de NEN NPR 5325.
+Als kader voor het onderzoek gebruikt ICTU de Nederlandse praktijkrichtlijn NEN NPR 5325:2017.
 
 ### Rationale
 

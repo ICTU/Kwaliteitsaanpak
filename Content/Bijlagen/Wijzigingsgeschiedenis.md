@@ -212,7 +212,7 @@
 #### Alle templates
 
 * Rubriceringsmogelijkheid conform Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013) toegevoegd.
-* Rubriceringsniveau, rubriceringsduur en totaal aantal bladzijden conform VIRBI 2014, bijlage 1, eis 6J toegevoegd.
+* Rubriceringsniveau, rubriceringsduur en totaal aantal bladzijden conform VIRBI 2013, bijlage 1, eis 6J toegevoegd.
 * Link naar Kwaliteitsaanpak op ICTU-website toegevoegd in de bijlage over de Kwaliteitsaanpak.
 
 #### Template Projectvoorstel Realisatiefase

@@ -276,7 +276,7 @@ Quality-time rapporteert over de geautomatiseerde performancetesten. Als de vera
 
 De eisen aan de beveiliging worden in de documenten projectstartarchitectuur en niet-functionele eisen gedefinieerd. De in te richten testen dienen aan te tonen dat aan de gestelde beveiligingseisen wordt voldaan.
 
-De geautomatiseerde broncodereviews en rapportages uit Quality-time bevatten diverse metrieken voor beveiligingsaspecten, zoals de OWASP top-10-criteria. De applicatie wordt gescand met behulp van SonarQube, OWASP dependency checker, OWASP ZAP en OpenVAS.
+De geautomatiseerde broncodereviews en rapportages uit Quality-time bevatten diverse metrieken voor beveiligingsaspecten, zoals de OWASP Top-10-criteria. De applicatie wordt gescand met behulp van SonarQube, OWASP dependency checker, OWASP ZAP en OpenVAS.
 
 Om de beveiliging van de software te testen kan deze met enige regelmaat getest worden door een externe partij. Het MTP beschrijft de gekozen aanpak.
 
@@ -327,7 +327,7 @@ De volgende externe testen, toetsen en certificeringen zijn gepland:
 | Toegankelijkheidstoets  | {Leverancier}                               | {Sprint/Kwartaal} |
 | {Certificering}         | {Leverancier}                               | {Sprint/Kwartaal} |
 
-Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld ISO 27001 compliancy.
+Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld NEN-ISO/IEC 27001:2017 compliancy.
 
 ## Projectspecifieke maatregelen
 

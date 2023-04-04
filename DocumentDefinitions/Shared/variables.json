@@ -1,11 +1,10 @@
 {
     "KWALITEITSAANPAK": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "M01": "M01: Het project levert in elke fase vastgestelde producten en informatie op",
-    "M02": "M02: Het project zorgt dat het product continu aan de kwaliteitsnormen voldoet",
+    "M02": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
     "M03": "M03: Het project zorgt dat het product traceerbaar aan eisen voldoet",
     "M04": "M04: Het project borgt de correcte werking van het product met geautomatiseerde regressietests",
     "M05": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces",
-    "M06": "M06: Het project meet kwaliteitsnormen geautomatiseerd en frequent",
     "M07": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
     "M08": "M08: Het project maakt technische schuld inzichtelijk en lost deze planmatig op",
     "M10": "M10: Het project kent een wekelijks projectoverleg",

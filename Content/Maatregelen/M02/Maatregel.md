@@ -4,7 +4,7 @@
 
 De kwaliteitsnormen voor het project zijn beschreven in de niet-functionele eisen, het informatiebeveiligingsplan, het kwaliteitsplan en deze Kwaliteitsaanpak, zie [$M01$](#m01).
 
-Om te zorgen dat het product continu aan de kwaliteitsnormen voldoet, voert het project de volgende activiteiten uit:
+Om continu te bewaken dat het product aan de kwaliteitsnormen voldoet, voert het project de volgende activiteiten uit:
 
 1. Tijdens de voorfase: het project reviewt de deliverables periodiek.
 1. Tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd de kwaliteit van de software.
@@ -23,7 +23,7 @@ Tijdens de voorfase wordt het voldoen aan de kwaliteitsnormen met behulp van rev
 
 Tijdens de realisatiefase wordt de kwaliteit diverse malen per uur gemeten door Quality-time, een door ICTU ontwikkeld, open source, geautomatiseerd kwaliteitssysteem. De kwaliteitsmanager configureert de kwaliteitsrapportage in Quality-time en past waar nodig de normen aan, op basis van de projectspecifieke kwaliteitseisen.
 
-Het Scrumteam kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie, indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het Scrumteam.
+Het Scrumteam kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie, indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het Scrumteam tijdens de daily scrum en/of tijdens het projectoverleg.
 
 ### Realisatiefase DevOps: geautomatiseerde monitoring
 
@@ -47,4 +47,4 @@ Als de kwaliteitsnormen langdurig niet worden behaald heeft de kwaliteitsmanager
 
 ### Rationale
 
-Het zo snel mogelijk en continu voldoen aan de kwaliteitsnormen beperkt toekomstige hersteltijd. Het dwingt tevens een systematische kwaliteitscontrole af.
+Vaak de kwaliteitsnormen bewaken maakt een actueel inzicht mogelijk. Projectleden kunnen snel reageren op afwijkingen, die in de regel ook pas recent zijn ontstaan en dus meestal gerelateerd zijn aan huidige activiteiten. Met name afwijkingen van de normen op het vlak van informatiebeveiliging en onderhoudbaarheid komen zo snel aan het licht en kunnen dan ook snel worden beoordeeld en - indien nodig en mogelijk - opgelost.

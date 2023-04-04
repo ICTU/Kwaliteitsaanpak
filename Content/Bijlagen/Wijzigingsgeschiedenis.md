@@ -1,6 +1,6 @@
 ## Wijzigingsgeschiedenis
 
-### Versie 3.0.1, 3 april 2023
+### Versie 3.0.1, 4 april 2023
 
 #### Kwaliteitsaanpak
 

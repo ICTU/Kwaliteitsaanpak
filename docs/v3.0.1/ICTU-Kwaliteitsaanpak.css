@@ -1,0 +1,169 @@
+@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
+
+body {
+    font-size: 12pt !important;
+    color: #000 !important;
+    font-family: 'Muli', sans-serif;
+    width: 680px;
+    margin: auto;
+    counter-reset: section;
+}
+
+h1::before {
+    counter-increment: section;
+    content: counter(section) " ";
+    color: #2C64AD;
+}
+
+h1 {
+    line-height: 150%;
+    color: #2C64AD;
+    font-size: 20pt;
+    font-weight: bold;
+    page-break-before: always;
+    counter-reset: subsection;
+}
+
+p.title {
+    margin-top: 30px;
+    color: #2C64AD;
+    font-size: 42pt;
+    font-weight: bold;
+    line-height: 130%;
+}
+
+img[title='word-cloud'] {
+    width: 95%;
+    padding-top: 100px;
+}
+
+#bijlagen::before {
+    content: "";  /* The Bijlagen section has no counter */
+}
+
+h2.bijlage::before {
+    counter-increment: subsection;
+    content: counter(subsection, upper-latin) " ";
+}
+
+h2::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+}
+
+h2.toc::before {
+    content: "";  /* The table of contents title has no counter */
+}
+
+h2 {
+    margin-top: 20px;
+    color: #DB1778;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+h3 {
+    margin-top: 10px;
+    color: black;
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: -15px;  /* Remove vertical space between header and next element */
+}
+
+h4 {
+    font-size: 12pt;
+    color: #B500C7;
+    margin-bottom: -15px;  /* Remove vertical space between header and next element */
+}
+
+h4.risk {
+    background-color: #4C76BA;
+    color: white;
+    padding: 1em;
+}
+
+h5 {
+    color: black;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+tr {
+    page-break-inside: avoid;
+}
+
+th,td {
+    text-align: left;
+    vertical-align: top;
+    background-color: #E6F6FD;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10pt;
+}
+
+th {
+    background-color: #83D0F5;
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: ol-item;
+    margin: 0;
+    margin-left: 3em;
+    padding: 0;
+}
+
+ol > li:before {
+    counter-increment: ol-item;
+    content: counter(ol-item) ". ";
+    margin-left: -3em;
+    position: absolute;
+}
+
+ol ol > li:before {
+    content: counters(item, ".") " ";  /* Use nested counters when ol's are nested */
+}
+
+ol > li {
+    margin: 0;
+    margin-top: 0.1em;
+}
+
+li > ol {
+    color: black;
+    font-weight: normal;
+    margin-left: 0em;
+}
+
+ol.bijlage {
+    font-weight: bold;
+    margin-top: 0.1em;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+ul > li {
+    /* Since we can't easily give the bullet a different color than the text, we use a SVG. */
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="#4C76BA" cx="5" cy="5" r="3"/></svg>');
+    padding-left: 1.7em;
+}
+
+.keep-together {
+    page-break-inside: avoid;
+}
+
+.maatregel {
+    background-color: #E6F6FD;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1em;
+}
+
+.risk {
+    background-color: #4C76BA;
+    color: white;
+    padding: 1em;
+}

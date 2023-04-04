@@ -37,7 +37,7 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
 ## Releasing a new version of the documentation
 
 1. Create a release branch: `git checkout -b releaseX-Y-Z`
-2. Update the version number and release date in the change log in ./Content/Bijlagen/Wijzigingsgeschiedenis.md
+2. Update the version number and release date in the change log in ./Content/Wijzigingsgeschiedenis.md
 3. Update the version number in ./docker-compose.yml
 4. Update the version number in docs/index.html
 5. Create a new release folder in ./docs: `mkdir docs/vX.Y.Z`

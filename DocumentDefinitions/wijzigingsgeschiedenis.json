@@ -1,0 +1,64 @@
+{
+    "InputFile": "Content/Wijzigingsgeschiedenis.md",
+    "BuildPath": "build/Wijzigingsgeschiedenis/",
+    "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
+    "Subtitle": "Wijzigingsgeschiedenis",
+    "DocumentType": "Kwaliteitsaanpak",
+    "FrontPage": "ICTU",
+    "IncludeTableOfContents": false,
+    "OutputFormats": {
+        "pdf": {
+            "OutputFile": "ICTU-Kwaliteitsaanpak-Wijzigingsgeschiedenis.pdf",
+            "OutputPaths": [
+                "docs/wip"
+            ],
+            "CopyFiles": [
+                {
+                    "from": "DocumentDefinitions/Shared/document.css",
+                    "to": [
+                        "build/Wijzigingsgeschiedenis/ICTU-Kwaliteitsaanpak.css"
+                    ]
+                },
+                {
+                    "from": "Content/Images/ICTU.png",
+                    "to": [
+                        "build/Wijzigingsgeschiedenis/ICTU.png"
+                    ]
+                },
+                {
+                    "from": "Content/Images/word-cloud.png",
+                    "to": [
+                        "build/Wijzigingsgeschiedenis/word-cloud.png"
+                    ]
+                }
+            ]
+        },
+        "html": {
+            "OutputFile": "ICTU-Kwaliteitsaanpak-Wijzigingsgeschiedenis.html",
+            "OutputPaths": [
+                "docs/wip"
+            ],
+            "CopyFiles": [
+                {
+                    "from": "DocumentDefinitions/Shared/document.css",
+                    "to": ["docs/wip/ICTU-Kwaliteitsaanpak.css"]
+                },
+                {
+                    "from": "Content/Images/relaties-tussen-producten.png",
+                    "to": ["docs/wip/relaties-tussen-producten.png"]
+                },
+                {
+                    "from": "Content/Images/ICTU.png",
+                    "to": ["docs/wip/ICTU.png"]
+                },
+                {
+                    "from": "Content/Images/word-cloud.png",
+                    "to": ["docs/wip/word-cloud.png"]
+                }
+            ]
+        }
+    },
+    "VariablesFiles": [
+        "DocumentDefinitions/Shared/variables.json"
+    ]
+}

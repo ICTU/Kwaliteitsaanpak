@@ -1,4 +1,8 @@
-## Wijzigingsgeschiedenis
+### Versie 3.1.0, nog te releasen
+
+#### Kwaliteitsaanpak
+
+* De bijlage 'Wijzigingsgeschiedenis' verplaatst naar een los document in PDF- en HTML-formaat.
 
 ### Versie 3.0.1, 4 april 2023
 

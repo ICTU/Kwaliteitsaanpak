@@ -75,5 +75,3 @@
 #include "Content/Bijlagen/Overzicht-Maatregelen.md"
 
 #include "Content/Bijlagen/NPR5326.md"
-
-#include "Content/Bijlagen/Wijzigingsgeschiedenis.md"

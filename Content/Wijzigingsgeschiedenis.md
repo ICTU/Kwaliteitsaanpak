@@ -10,6 +10,10 @@
 
 * Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.1 succescriteria.
 
+#### Template Kwaliteitsplan
+
+* Koppeling tussen Use cases, Logische testgevallen, User stories en Epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
+
 ### Versie 3.0.1, 4 april 2023
 
 #### Kwaliteitsaanpak

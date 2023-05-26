@@ -4,6 +4,10 @@
 
 * De bijlage 'Wijzigingsgeschiedenis' verplaatst naar een los document in PDF- en HTML-formaat.
 
+#### Template Niet-Functionele Eisen
+
+* Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.1 succescriteria.
+
 ### Versie 3.0.1, 4 april 2023
 
 #### Kwaliteitsaanpak

@@ -38,6 +38,8 @@
 
 #include "Content/Maatregelen/M05/Maatregel.md"
 
+#include "Content/Maatregelen/M35/Maatregel.md"
+
 #include "Content/Maatregelen/M10/Maatregel.md"
 
 #include "Content/Maatregelen/M16/Maatregel.md"

@@ -81,6 +81,12 @@ Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off g
 
 {Opdrachtgever/partijen} en ICTU werken gezamenlijk aan de op te leveren software in een Scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
 
+Vertegenwoordigers van het project nemen deel aan de volgende overleggen met de opdrachtgever en de beheerorganisatie:
+* het architectuuroverleg,
+* het informatiebeveiligingsoverleg,
+* het beheeroverleg,
+* {vul aan en pas aan, indien nodig}
+
 ## Projectbesturing
 
 {Beschrijf kort de governancestructuur: stuurgroep, rapportage- en escalatielijnen}

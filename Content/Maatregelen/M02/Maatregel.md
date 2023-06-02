@@ -8,7 +8,7 @@ Om continu te bewaken dat het product aan de kwaliteitsnormen voldoet, voert het
 
 1. Tijdens de voorfase: het project reviewt de deliverables periodiek.
 1. Tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd de kwaliteit van de software.
-1. Bij toepassing van DevOps tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd het gedrag van de software in gebruik en beheer.
+1. Als operationeel beheer onderdeel is van de dienstverlening tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd het gedrag van de software in gebruik en beheer.
 1. Tijdens de realisatiefase: het project evalueert periodiek en handmatig de kwaliteitseigenschappen van de software die niet geautomatiseerd kunnen worden gemeten.
 1. Tijdens de realisatiefase: het project actualiseert en reviewt periodiek de documentatie.
 1. Indien nodig: de kwaliteitsmanager escaleert het langdurig niet halen van de kwaliteitsnormen.
@@ -25,9 +25,9 @@ Tijdens de realisatiefase wordt de kwaliteit diverse malen per uur gemeten door 
 
 Het Scrumteam kijkt dagelijks of er afwijkingen van de normen zijn en onderneemt actie, indien nodig. Ook de kwaliteitsmanager signaleert afwijkingen en meldt deze bij het Scrumteam tijdens de daily scrum en/of tijdens het projectoverleg.
 
-### Realisatiefase DevOps: geautomatiseerde monitoring
+### Realisatiefase operationeel beheer: geautomatiseerde monitoring
 
-Bij een DevOps-werkwijze monitort en test het project continue het gedrag van de software in gebruik en beheer. Hiertoe gebruikt het project operationele monitoringsoftware, bijvoorbeeld Nagios en/of Zabbix.
+Als operationeel beheer onderdeel is van de dienstverlening tijdens de realisatiefase monitort en test het project continue het gedrag van de software in gebruik en beheer. Hiertoe gebruikt het project operationele monitoringsoftware, bijvoorbeeld Nagios en/of Zabbix.
 
 ### Realisatiefase: handmatige evaluatie
 

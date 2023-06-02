@@ -9,7 +9,7 @@ ICTU gebruikt hiervoor Scrum, een raamwerk voor agile productontwikkeling. ICTU 
 3. Definition of Ready en Definition of Done,
 4. Product backlog en sprint backlog.
 
-Bij een DevOps-werkwijze zijn deployment en operationeel beheer geïntegreerd in de Scrum-processen van het DevOps-team.
+Als operationeel beheer onderdeel is van de dienstverlening, past ICTU de DevOps-werkwijze toe door operationeel beheeractiviteiten te integreren in de Scrum-processen van het Scrumteam.
 
 ### Rationale
 

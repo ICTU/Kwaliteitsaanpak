@@ -8,7 +8,7 @@ Het project zorgt, bij voorkeur altijd maar in ieder geval bij de overdracht, da
 
 1. De documentatie beschrijft de ontwikkel- en testomgeving die is toegepast (5.1),
 1. De functionele documentatie beschrijft gegevensmodellen, functionele indeling, koppelingen, berichtdefinities en workflows/processen (5.2),
-1. In het geval van DevOps: de operationele bedieningsinstructies beschrijven minimaal back-up/recovery, procedures bij calamiteiten, regelmatig terugkerende beheeractiviteiten en opstart- en afsluitprocedures (5.3),
+1. Als operationeel beheer onderdeel was van de dienstverlening: de operationele bedieningsinstructies beschrijven minimaal back-up/recovery, procedures bij calamiteiten, regelmatig terugkerende beheeractiviteiten en opstart- en afsluitprocedures (5.3),
 1. De productbacklog bevat de bekende bugs en wensen (5.4),
 1. De broncode kent een gezonde balans tussen isolatie, cohesie en koppeling (6.1),
 1. De broncode heeft een beperkte mate van duplicatie (6.2),

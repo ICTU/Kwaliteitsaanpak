@@ -2,6 +2,8 @@
 
 #### Kwaliteitsaanpak
 
+* De scope van maatregel M29 "ICTU zorgt dat een project verantwoord kan starten" gereduceerd tot het organiseren van de interne dienstverlening voor aanvang van een project en de titel hieraan aangepast: "ICTU organiseert voor aanvang van een project de interne dienstverlening".
+* Maatregel M35 "Het project hanteert een agile architectuuraanpak" toegevoegd.
 * De bijlage 'Wijzigingsgeschiedenis' verplaatst naar een los document in PDF- en HTML-formaat.
 
 #### Template Niet-Functionele Eisen

@@ -42,6 +42,8 @@ Hieronder zijn alle maatregeldefinities uit de Kwaliteitsaanpak opgenomen. Zie d
 
 #include "Content/Maatregelen/M05/Definitie.md"
 
+#include "Content/Maatregelen/M35/Definitie.md"
+
 #include "Content/Maatregelen/M06/Definitie.md"
 
 #include "Content/Maatregelen/M10/Definitie.md"

@@ -2,6 +2,7 @@
 
 #### Kwaliteitsaanpak
 
+* Maatregel M35 "Het project hanteert een agile architectuuraanpak" toegevoegd.
 * De bijlage 'Wijzigingsgeschiedenis' verplaatst naar een los document in PDF- en HTML-formaat.
 
 ### Versie 3.0.1, 4 april 2023

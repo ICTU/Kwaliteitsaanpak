@@ -12,7 +12,7 @@ Als de benodigde informatie niet gereed is bij de start van de voorfase dan make
 
 ### Projectstartarchitectuur
 
-Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. Een PSA bevat in ieder geval de volgende onderwerpen:
+Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. De PSA is een concreet en doelgericht ICT-architectuurkader waarbinnen het project moet worden uitgevoerd. In de PSA zijn de architectuurvisie, enterprise-architectuur en overige architecturen van de opdrachtgever vertaald naar aan het product te stellen eisen. Een PSA bevat in ieder geval de volgende onderwerpen:
 
 * Een beschrijving van de doelen en ambities waaraan het project bijdraagt en invulling geeft. Dus niet de projectdoelen en -ambitie.
 * Een afbakening van het project en de context van de voorziening/oplossing die het project gaat realiseren. De PSA beschrijft niet de implementatie van de voorziening zelf (dit blijft een 'black box'), maar wel het gewenste gedrag in het grotere geheel. Denk o.a. ook aan relaties met andere projecten en generieke en specifieke diensten (services).

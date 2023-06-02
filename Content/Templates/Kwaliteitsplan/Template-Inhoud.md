@@ -22,7 +22,7 @@ Het project houdt een risicolog bij. De risicolog wordt digitaal bijgehouden doo
 
 ### Werkwijze
 
-Voor de realisatiefase wordt de agile ontwikkelmethode Scrum gebruikt ($M05$). Voor de beheerfase wordt gebruik gemaakt van de DevOps-principes. Afwijkingen hierop worden alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
+Voor de realisatiefase wordt de agile ontwikkelmethode Scrum gebruikt ($M05$). Als operationeel beheer onderdeel is van de dienstverlening wordt gebruik gemaakt van de DevOps-principes. Afwijkingen hierop worden alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
 
 De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen niet tijdig worden behaald:
 
@@ -74,11 +74,11 @@ Niet-functionele eisen aan het te ontwikkelen systeem worden vastgelegd op basis
 
 Niet-functionele eisen voor onderstaande kwaliteitsattributen worden als volgt verwerkt:
 
-* De informatiebeveiligingseisen worden in een afzonderlijk informatiebeveiligingsplan vastgelegd. De software zal zodanig worden voortgebracht en {in geval van DevOps:} beheerd dat deze de BIO-compliance van de opdrachtgever niet zal hinderen.
+* De informatiebeveiligingseisen worden in een afzonderlijk informatiebeveiligingsplan vastgelegd. De software zal zodanig worden voortgebracht en {in geval van operationeel en/of applicatiebeheer:} beheerd dat deze de BIO-compliance van de opdrachtgever niet zal hinderen.
 * Gebruikskwaliteit (usability) is ingebed in de standaard werkwijze van ICTU voor de realisatie van maatwerksoftware. Dit aspect wordt geborgd door opname in het plan van aanpak, het ontwerp en de testplannen.
 * Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.1, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
 * Performance- en securityeisen worden via performance- en securitytests geborgd, zie de kwaliteitsmaatregelen in paragraaf [Testen](#testen). Voor de borging van andere niet-functionele eisen moeten projectspecifieke maatregelen getroffen worden. Deze worden in dit kwaliteitsplan opgenomen.
-* {In het geval van DevOps:} Eisen aan het operationeel beheer worden vastgelegd als beheerafspraken in het plan van aanpak voor de realisatiefase en geborgd door te rapporteren over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten.
+* {Als operationeel beheer onderdeel is van de dienstverlening:} Eisen aan het operationeel beheer worden vastgelegd als beheerafspraken in het plan van aanpak voor de realisatiefase en geborgd door te rapporteren over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten.
 
 ### Compleetheid deliverables voorfase
 
@@ -147,7 +147,7 @@ Voor elke release stelt het project release notes op, een overzicht van de wijzi
 
 Gedurende de realisatiefase gebruikt ICTU Quality-time, het kwaliteitssysteem van ICTU, om automatisch metrieken te meten. Deze metrieken hebben zowel betrekking op het proces als op het product (broncode). De metrieken worden meerdere keer per uur bijgewerkt, zodat er altijd een goed inzicht is in de softwarekwaliteit. Zie het [overzicht van mogelijke metrieken](https://quality-time.readthedocs.io/en/latest/reference.html#metrics) en de daarbij horende standaard normen; de kwaliteitsmanager zal in samenwerking met het realisatieteam de te gebruiken metrieken en normen instellen.
 
-{In het geval van DevOps:} Het project gebruikt {monitoringapplicatie} om het gedrag en de kwaliteit van de applicatie in de operationale situatie te bewaken.
+{Als operationeel beheer onderdeel is van de dienstverlening:} Het project gebruikt {monitoringapplicatie} om het gedrag en de kwaliteit van de applicatie in de operationale situatie te bewaken.
 
 De actuele kwaliteitsrapportage wordt dagelijks besproken tijdens de daily scrum en wekelijks in het intern projectoverleg (IPO). De kwaliteitsmanager onderhoudt en bewaakt de kwaliteitsrapportage.
 
@@ -270,7 +270,7 @@ Deze performancetesten worden uitgevoerd in de {performancetestomgeving}. De loa
 
 Quality-time rapporteert over de geautomatiseerde performancetesten. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het Scrumteam. Issues die voortkomen uit performancetesten worden opgenomen in Jira met het label "performance_bevinding".
 
-{Als het project geen DevOps doet:} De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient de opdrachtgever zelf te laten testen.
+{Als operationeel beheer geen onderdeel is van de dienstverlening:} De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient de opdrachtgever zelf te laten testen.
 
 ## Security-testen
 
@@ -290,7 +290,7 @@ Elke beveiligingstest resulteert in een beveiligingstestrapportage met daarin de
 
 Quality-time rapporteert of gevonden beveiligingsissues niet te lang open staan.
 
-{Als het project geen DevOps doet:} Merk op: de beveiliging van de software in de acceptatie- en productieomgeving kan niet door ICTU getest worden. Deze test moet de opdrachtgever of de beheerpartij uitvoeren.
+{Als operationeel beheer geen onderdeel is van de dienstverlening:} Merk op: de beveiliging van de software in de acceptatie- en productieomgeving kan niet door ICTU getest worden. Deze test moet de opdrachtgever of de beheerpartij uitvoeren.
 
 ## Toegankelijkheidstesten
 
@@ -312,7 +312,7 @@ Als het Scrumteam of de kwaliteitsmanager constateert dat er technische schuld i
 
 ## Beheer
 
-Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementatie- en beheerplan opgesteld. Hierin worden de kaders aangegeven op welke wijze het beheer ingericht, geïmplementeerd en uitgevoerd wordt. Hierbij gaat de voorkeur uit naar beheer op basis van de principes van de DevOps-werkwijze.
+Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementatie- en beheerplan opgesteld. Hierin worden de kaders aangegeven op welke wijze het beheer ingericht, geïmplementeerd en uitgevoerd wordt.
 
 {Werk dit kwaliteitsplan bij zodra er meer informatie beschikbaar is over de werkwijze ten aanzien van implementatie en beheer}
 

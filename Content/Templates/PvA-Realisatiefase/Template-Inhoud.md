@@ -3,9 +3,9 @@
 De te {ontwikkelen en/of onderhouden} software {beschrijving functionaliteit in hoofdlijnen van de software}.
 De software komt tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU de softwareontwikkeling uitvoert; zie hiervoor het hoofdstuk “Werkwijze”.
 
-## Producten {bij DevOps: en diensten}
+## Producten en diensten
 
-ICTU levert de volgende producten {bij DevOps: en diensten} op:
+ICTU levert de volgende producten en diensten op:
 
 1. Werkende software met de functionaliteiten zoals hierboven beschreven.
 1. Per release:
@@ -20,9 +20,9 @@ ICTU levert de volgende producten {bij DevOps: en diensten} op:
     a. een actuele versie van de kwaliteitsrapportage,
     a. {eventueel bijgewerkte andere documentatie waarvoor ICTU verantwoordelijk en/of penvoerder is, zoals testplannen en kwaliteitsplan}.
 
-{Bij DevOps: Het DevOps-team voert operationele beheertaken uit, conform overeengekomen kwaliteitsniveaus (quality of services). Hiertoe maakt het project beheerafspraken met de opdrachtgever en de beheerorganisatie en legt deze vast in een dossier afspraken en procedures (DAP). Het vastleggen en rapporteren van informatie over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten kan hiervan deel uitmaken. De afspraken zijn afgestemd op het beheerplan van de beheerorganisatie, waarin is beschreven hoe de verschillende vormen van beheer van de applicaties en de infrastructuur worden uitgevoerd.}
+{Als operationeel beheer onderdeel is van de dienstverlening: Het DevOps-team voert operationele beheertaken uit, conform overeengekomen kwaliteitsniveaus (quality of services). Hiertoe maakt het project beheerafspraken met de opdrachtgever en de beheerorganisatie en legt deze vast in een dossier afspraken en procedures (DAP). Het vastleggen en rapporteren van informatie over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten kan hiervan deel uitmaken. De afspraken zijn afgestemd op het beheerplan van de beheerorganisatie, waarin is beschreven hoe de verschillende vormen van beheer van de applicaties en de infrastructuur worden uitgevoerd.}
 
-{Bij DevOps: beschrijf wanneer en hoe de dienstverlening eindigt of verlengd wordt. Bijvoorbeeld, geef aan wat de minimale hoeveelheid aan ontwikkel- en onderhoudwerk is waarbij ICTU nog een geschikte partij is om het operationeel beheer uit te voeren.}
+{Als operationeel en/of applicatiebeheer onderdeel is van de dienstverlening: beschrijf wanneer en hoe de dienstverlening eindigt of verlengd wordt. Bijvoorbeeld, geef aan wat de minimale hoeveelheid aan ontwikkel- en onderhoudwerk is waarbij ICTU nog een geschikte partij is om het operationeel en applicatiebeheer uit te voeren.}
 
 ## Scope
 
@@ -30,11 +30,11 @@ Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {
 
 * Ontwikkel, test- en demo-omgevingen,
 * Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Azure DevOps, GitLab en/of Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (SonarQube, OWASP Dependency Checker, OWASP ZAP, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
-* {Bij DevOps:}	Uitrollen in de productieomgeving (Ansible), container registry (Harbor), performance monitoring (APM), security monitoring ({vul aan met concreet product}), controle van kwetsbaarheden in frameworks ({vul aan met concreet product}), controle van images van containers (Trivy), registratie van incidenten bij gebruik en beheer (Topdesk of Jira).
+* {Als operationeel beheer onderdeel is van de dienstverlening:} Uitrollen in de productieomgeving (Ansible), container registry (Harbor), performance monitoring (APM), security monitoring ({vul aan met concreet product}), controle van kwetsbaarheden in frameworks ({vul aan met concreet product}), controle van images van containers (Trivy), registratie van incidenten bij gebruik en beheer (Topdesk of Jira).
 * Backlog management tools (Jira en/of Azure DevOps),
 * Beveiligings- en performancetesten in de ICTU-testomgevingen. ICTU voert deze tests uit voordat een nieuwe versie van de software wordt opgeleverd. {Beschrijf hier eventuele andere afspraken met opdrachtgever}.
 
-{Tenzij DevOps:} Buiten de scope van de opdracht valt:
+{Als operationeel beheer geen onderdeel is van de dienstverlening:} Buiten de scope van de opdracht valt:
 
 * Acceptatie- en productieomgevingen en de installatie van de software op acceptatie- en productieomgevingen,
 * Beveiligings- en performancetesten in acceptatie- en productieomgevingen, die onder verantwoordelijkheid van de opdrachtgever worden uitgevoerd,

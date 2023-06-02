@@ -15,6 +15,10 @@
 
 * Koppeling tussen Use cases, Logische testgevallen, User stories en Epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
 
+#### Alle documenten
+
+* De term "DevOps-werkwijze" vervangen door "operationeel beheer" of door "operationeel en/of applicatiebeheer" op de plekken waar het gaat over de dienstverlening en niet zozeer over de aanpak.
+
 ### Versie 3.0.1, 4 april 2023
 
 #### Kwaliteitsaanpak

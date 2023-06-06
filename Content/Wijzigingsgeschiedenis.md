@@ -2,6 +2,7 @@
 
 #### Kwaliteitsaanpak
 
+* Het hoofdstuk 'Begrippenkader' is verwijderd. De begrippen die hierin werden besproken staan ook in de bijlage 'Terminologie'. Het hoofdstuk 'Leeswijzer' verwijst nu naar deze bijlage.
 * De titel van M02 is veranderd van "Het project zorgt dat het product continu aan de kwaliteitsnormen voldoet" in "Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet". Continue aan alle kwaliteitsnormen voldoen is in de praktijk onmogelijk (zie ook M08 "Het project maakt technische schuld inzichtelijk en lost deze planmatig op"). Hiermee is de overlap met M06 "Het project meet kwaliteitsnormen geautomatiseerd en frequent" zo groot dat deze laatste maatregel is komen te vervallen.
 * De scope van maatregel M29 "ICTU zorgt dat een project verantwoord kan starten" gereduceerd tot het organiseren van de interne dienstverlening voor aanvang van een project en de titel hieraan aangepast: "ICTU organiseert voor aanvang van een project de interne dienstverlening".
 * Maatregel M35 "Het project hanteert een agile architectuuraanpak" toegevoegd.

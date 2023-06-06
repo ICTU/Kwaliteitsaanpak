@@ -2,8 +2,6 @@
 
 #include "Content/Doelstellingen.md"
 
-#include "Content/Begrippenkader.md"
-
 #include "Content/Leeswijzer.md"
 
 # Producten

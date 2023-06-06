@@ -104,7 +104,7 @@ Als standaard voor toegankelijkheid hanteert de Nederlandse overheid, en dus ICT
 |:-----|:--------------------------------------------------------------------|:-------|:------------------------|:--------------------|
 | 1    | De applicatie voldoet aan de WCAG2.1 succescriteria, niveau A en AA | {prio} | Wettelijke verplichting | Axe-core rapportage |
 
-Onderstaande tabel bevat de WCAG2.1 succescriteria. {Verwijder de AAA-succescriteria indien gewenst.} Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren. {Geef aan of de succescriteria die Axe-core niet geautomatiseerd kan controleren wel of niet met de hand zullen worden gecontroleerd.} 
+Onderstaande tabel bevat de WCAG2.1 succescriteria. {Verwijder de AAA-succescriteria indien gewenst.} Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren. {Geef aan of de succescriteria die Axe-core niet geautomatiseerd kan controleren wel of niet met de hand zullen worden gecontroleerd.}
 
 Merk op dat de [Axe-core regels die als "experimenteel" zijn gemarkeerd](https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md#experimental-rules) niet standaard door Axe-core worden getest. Zie de [Axe-core API-documentatie](https://www.deque.com/axe/core-documentation/api-documentation/#options-parameter) voor instructies hoe dit aan te passen.
 
@@ -161,8 +161,8 @@ De overheid is gebonden aan kaderstelling op het gebied van informatiebeveiligin
 BIO en SSD bevatten ook een aantal maatregelen ten aanzien van software en/of de infrastructurele componenten waar deze software gebruik van maakt. Deze maatregelen zijn hieronder als eisen opgenomen.
 
 | Nr.  | Eis | Prio | Rationale | Bewijs |
-|:-----|:-----|:-------|:---------|:---|
-| 1    | Applicaties zijn gebaseerd op een formele, met de beheerpartij afgestemde standaard stack | {prio} | Dit maakt integrale beveiliging mogelijk en beperkt het risico op nieuwe en onbekende zwakheden door het gebruik van onbekende componenten of services | {bewijs} |
+|:-----|:----|:-----|:----------|:-------|
+| 1    | Applicaties zijn gebaseerd op een formele, met de beheerorganisatie afgestemde standaard stack | {prio} | Dit maakt integrale beveiliging mogelijk en beperkt het risico op nieuwe en onbekende zwakheden door het gebruik van onbekende componenten of services | {bewijs} |
 | 2    | De architectuur van een (web)applicatie is gebaseerd op een gelaagde structuur door de presentatielaag, de applicatielaag en de gegevens te scheiden | {prio} | Hierdoor kunnen de lagen beschermd worden binnen de netwerkzones | {bewijs} |
 | 3    | (Web)applicaties stellen de identiteit van externe gebruikers vast op basis van een mechanisme voor identificatie en authenticatie, waarbij de authenticatiegegevens in een geconsolideerde authenticatievoorziening worden beheerd | {prio} | {rationale} | {bewijs} |
 | 4    | (Web)applicaties stellen de identiteit van interne gebruikers vast op basis van een mechanisme voor identificatie en authenticatie, waarbij de authenticatie- en autorisatiegegevens in een geconsolideerde authenticatie- en autorisatievoorziening worden beheerd | {prio} | {rationale} | {bewijs} |

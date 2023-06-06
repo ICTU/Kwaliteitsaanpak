@@ -30,7 +30,7 @@ De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen
 2. Indien 1. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de ICTU-projectleider;
 3. Indien 2. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar het hoofd van de afdeling ICTU Software Expertise (ISE).
 
-Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden het kwaliteitsplan en/of Quality-time uitgebreid met nieuwe maatregelen en metrieken om de problemen in de toekomst te signaleren en te voorkomen. Dat gebeurt ook proactief, bijvoorbeeld naar aanleiding van ervaringen in andere projecten of als er nieuwe tools beschikbaar komen. De projectleiders van opdrachtgever, de beheerpartij en ICTU zorgen er gezamenlijk voor dat de gewenste uitbreidingen worden gerealiseerd.
+Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden het kwaliteitsplan en/of Quality-time uitgebreid met nieuwe maatregelen en metrieken om de problemen in de toekomst te signaleren en te voorkomen. Dat gebeurt ook proactief, bijvoorbeeld naar aanleiding van ervaringen in andere projecten of als er nieuwe tools beschikbaar komen. De projectleiders van opdrachtgever, de beheerorganisatie en ICTU zorgen er gezamenlijk voor dat de gewenste uitbreidingen worden gerealiseerd.
 
 ## Projectdocumenten
 
@@ -290,7 +290,7 @@ Elke beveiligingstest resulteert in een beveiligingstestrapportage met daarin de
 
 Quality-time rapporteert of gevonden beveiligingsissues niet te lang open staan.
 
-{Als operationeel beheer geen onderdeel is van de dienstverlening:} Merk op: de beveiliging van de software in de acceptatie- en productieomgeving kan niet door ICTU getest worden. Deze test moet de opdrachtgever of de beheerpartij uitvoeren.
+{Als operationeel beheer geen onderdeel is van de dienstverlening:} Merk op: de beveiliging van de software in de acceptatie- en productieomgeving kan niet door ICTU getest worden. Deze test moet de opdrachtgever of de beheerorganisatie uitvoeren.
 
 ## Toegankelijkheidstesten
 

@@ -118,14 +118,14 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 | Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden backlog                                                         |
 | Business analist                              | {aantal} dagen           | Epics opstellen voor de product backlog, eventueel uitgewerkt in user stories                                                |
 | Architect                                     | {aantal} dagen           | Bewaken en onderhouden van de softwarearchitectuur                                                                           |
-| Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur, opstellen high level design (HLD)                                           |
+| Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur, opstellen high level design (HLD)                                         |
 | Testmanager                                   | {aantal} dagen           | Testen van nieuwe softwarereleases voordat deze voor gebruik worden vrijgegeven                                              |
-| Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, opstellen TVA en IB-plan                                                                            |
+| Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, opstellen TVA en IB-plan                                                                         |
 | Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                                   |
-| Diverse inhoudelijk deskundigen               | {aantal} dagen           | Inbrengen domeinexpertise en vertegenwoordiging van (eind)gebruikers en belanghebbenden                                         |
-| Technisch beheerder beheerpartij              | {aantal} dagen           | Leveren en beheer acceptatie- en productieomgeving |
-| Functioneel beheerder                         | {aantal} dagen           | Functioneel beheer |
-| Servicedeskmedewerker                         | {aantal} dagen           | Gebruikersondersteuning en incidentbeheer |
+| Diverse inhoudelijk deskundigen               | {aantal} dagen           | Inbrengen domeinexpertise en vertegenwoordiging van (eind)gebruikers en belanghebbenden                                      |
+| Technisch beheerder beheerorganisatie         | {aantal} dagen           | Leveren en beheer acceptatie- en productieomgeving                                                                           |
+| Functioneel beheerder                         | {aantal} dagen           | Functioneel beheer                                                                                                           |
+| Servicedeskmedewerker                         | {aantal} dagen           | Gebruikersondersteuning en incidentbeheer                                                                                    |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                  |
 
 ## Afstemming met gerelateerde projecten
@@ -146,29 +146,29 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 
 {Hieronder een voorbeeld van een planning}
 
-| Onderdeel/week                       | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 | 12 |
-|:-------------------------------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-| Bemensen project                     | X  | X  | X  |    |    |    |    |    |    |    |    |    |
-| Voorbereiden en plannen kick-off     |    | X  | X  |    |    |    |    |    |    |    |    |    |
-| Kick-off                             |    |    |    | X  |    |    |    |    |    |    |    |    |
-| Inrichten ontwikkelstraat sprint 0   |    |    |    | X  | X  |    |    |    |    |    |    |    |
-| Realisatie producten sprint 1        |    |    |    |    |    | X  | X  |    |    |    |    |    |
-| Realisatie producten sprint 2        |    |    |    |    |    |    |    | X  | X  |    |    |    |
-| Realisatie producten sprint 3        |    |    |    |    |    |    |    |    |    | X  | X  |    |
-| Afronden en afsluiten realisatiefase |    |    |    |    |    |    |    |    |    |    |    | X  |
+| Onderdeel/week                       | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+|:-------------------------------------|:--|:--|:--|:--|:--|:--|:--|:--|:--|:---|:---|:---|
+| Bemensen project                     | X | X | X |   |   |   |   |   |   |    |    |    |
+| Voorbereiden en plannen kick-off     |   | X | X |   |   |   |   |   |   |    |    |    |
+| Kick-off                             |   |   |   | X |   |   |   |   |   |    |    |    |
+| Inrichten ontwikkelstraat sprint 0   |   |   |   | X | X |   |   |   |   |    |    |    |
+| Realisatie producten sprint 1        |   |   |   |   |   | X | X |   |   |    |    |    |
+| Realisatie producten sprint 2        |   |   |   |   |   |   |   | X | X |    |    |    |
+| Realisatie producten sprint 3        |   |   |   |   |   |   |   |   |   | X  | X  |    |
+| Afronden en afsluiten realisatiefase |   |   |   |   |   |   |   |   |   |    |    | X  |
 
 # Randvoorwaarden
 
 Voor de uitvoering van de realisatiefase gelden de volgende randvoorwaarden:
 
-| Nr           | Randvoorwaarde                                                                                                           |
-|:-------------|:-------------------------------------------------------------------------------------------------------------------------|
-| R01          | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd.                         |
-| R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de functionaliteit van de software.              |
-| R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever}, {beheerpartij} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
-| R04          | De voorfaseproducten {producten} zijn beschikbaar voor aanvang van de realisatiefase.                                    |
-| R05          | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar.                                                       |
-| {volgnummer} | {randvoorwaarde}                                                                                                         |
+| Nr           | Randvoorwaarde                                                                                                                                |
+|:-------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
+| R01          | De vereiste inzet van betrokkenen van {opdrachtgever/partijen} is georganiseerd en gegarandeerd.                                              |
+| R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de functionaliteit van de software.                                   |
+| R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgever}, {beheerorganisatie} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
+| R04          | De voorfaseproducten {producten} zijn beschikbaar voor aanvang van de realisatiefase.                                                         |
+| R05          | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar.                                                                            |
+| {volgnummer} | {randvoorwaarde}                                                                                                                              |
 
 # Projectrisico’s
 
@@ -178,13 +178,13 @@ De risico’s worden door het project bijgehouden in het risicolog. De risico’
 
 {Deze tabel dient op basis van het concrete project en voorstel aangepast te worden.}
 
-| Projectrisico                                                                                                                                | Maatregel                                                                                                                                                                      |
-|:---------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Verwachtingen over dit project tussen verschillende partijen ({partijen}, ICTU) kunnen niet waargemaakt worden, waardoor vertraging ontstaat | Wekelijks projectoverleg, samenwerken door middel van werkgroepen en fysiek bij elkaar komen, kick-off met alle betrokkenen waarbij {opdrachtgever} de productvisie uiteenzet. |
-| Scope-uitbreiding, gebrek aan focus                                                                                                          | Scope bewaken, alleen de scope uitbreiden als dit noodzakelijk is voor {doel}                                                                                                  |
-| Onvoldoende bemensing door vakanties                                                                                                         | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert.                                                                                           |
-| {Bij DevOps werkwijze} Onduidelijkheid over de verdeling van verantwoordelijkheden tussen DevOps-team en beheerorganisatie (incident management, backup & restore, etc.) | Afspraken over onderlinge samenwerking vastleggen in een dossier afspraken en procedures (DAP). |
-| {risico}                                                                                                                                     | {maatregel}                                                                                                                                                                    |
+| Projectrisico                                                                                                                                                            | Maatregel                                                                                                                                                                      |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Verwachtingen over dit project tussen verschillende partijen ({partijen}, ICTU) kunnen niet waargemaakt worden, waardoor vertraging ontstaat                             | Wekelijks projectoverleg, samenwerken door middel van werkgroepen en fysiek bij elkaar komen, kick-off met alle betrokkenen waarbij {opdrachtgever} de productvisie uiteenzet. |
+| Scope-uitbreiding, gebrek aan focus                                                                                                                                      | Scope bewaken, alleen de scope uitbreiden als dit noodzakelijk is voor {doel}                                                                                                  |
+| Onvoldoende bemensing door vakanties                                                                                                                                     | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert.                                                                                           |
+| {Bij DevOps werkwijze} Onduidelijkheid over de verdeling van verantwoordelijkheden tussen DevOps-team en beheerorganisatie (incident management, backup & restore, etc.) | Afspraken over onderlinge samenwerking vastleggen in een dossier afspraken en procedures (DAP).                                                                                |
+| {risico}                                                                                                                                                                 | {maatregel}                                                                                                                                                                    |
 
 # Verwachte inzet ICTU
 
@@ -192,23 +192,23 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 
 {Selecteer de rollen die nodig zijn en vul ze aan. Vul de juiste verantwoordelijkheden in. De onderstaande tabel is een eerste opzet met veel voorkomende rollen.}
 
-| Rol                                    | Verwachte inzet | Verantwoordelijkheden                                                                                                       |
-|:---------------------------------------|:----------------|:----------------------------------------------------------------------------------------------------------------------------|
-| Software-architect/senior ontwikkelaar | {x} uur         | Onderhouden SAD, bewaken architectuurkeuzes, ontwerpen, ontwikkelen en testen van de software                               |
-| Scrummaster                            | {x} uur         | Bewaken Scrumproces, faciliteren Scrumevents                                                                                |
-| Ontwikkelaar                           | {x} uur         | Ontwerpen, ontwikkelen en testen van de software                                                                            |
-| DevOps-engineer                        | {x} uur         | Ontwerpen, ontwikkelen en testen van de software, daarnaast uitvoeren beheeractiviteiten, waaronder het oplossen van incidenten                                                                            |
-| Tester                                 | {x} uur         | Opstellen logische testgevallen, ontwikkelen en uitvoeren fysieke testgevallen, opstellen testrapportages en vrijgaveadvies |
-| Functioneel ontwerper                  | {x} uur         | Onderhouden GFO, ondersteunen product owner bij opstellen en uitwerken van de user stories                                  |
-| Database administrator                 | {x} uur         | Onderhouden logisch datamodel en fysiek database ontwerp, ontwikkelen migratiescripts, database tuning                      |
+| Rol                                    | Verwachte inzet | Verantwoordelijkheden                                                                                                                             |
+|:---------------------------------------|:----------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
+| Software-architect/senior ontwikkelaar | {x} uur         | Onderhouden SAD, bewaken architectuurkeuzes, ontwerpen, ontwikkelen en testen van de software                                                     |
+| Scrummaster                            | {x} uur         | Bewaken Scrumproces, faciliteren Scrumevents                                                                                                      |
+| Ontwikkelaar                           | {x} uur         | Ontwerpen, ontwikkelen en testen van de software                                                                                                  |
+| DevOps-engineer                        | {x} uur         | Ontwerpen, ontwikkelen en testen van de software, daarnaast uitvoeren beheeractiviteiten, waaronder het oplossen van incidenten                   |
+| Tester                                 | {x} uur         | Opstellen logische testgevallen, ontwikkelen en uitvoeren fysieke testgevallen, opstellen testrapportages en vrijgaveadvies                       |
+| Functioneel ontwerper                  | {x} uur         | Onderhouden GFO, ondersteunen product owner bij opstellen en uitwerken van de user stories                                                        |
+| Database administrator                 | {x} uur         | Onderhouden logisch datamodel en fysiek database ontwerp, ontwikkelen migratiescripts, database tuning                                            |
 | UX-designer                            | {x} uur         | Gebruikersonderzoek, onderhouden UX-richtlijnen, maken en onderhouden prototype {of wireframe/mockup/animatie}, toetsen prototypes met gebruikers |
-| Informatiebeveiligingsexpert           | {x} uur         | Onderhouden IB-plan, toetsen IB-maatregelen                                                                                 |
-| Kwaliteitsmanager                      | {x} uur         | Inrichten, onderhouden en bewaken kwaliteitsrapportage                                                                      |
-| Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het Scrumteam, inhoudelijke rapportage                    |
-| Projectleider                          | {x} uur         | Bewaken overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
-| Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                    |
-| Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is  |
-| **Totaal**                             | **{x} uur**     |                                                                                                                             |
+| Informatiebeveiligingsexpert           | {x} uur         | Onderhouden IB-plan, toetsen IB-maatregelen                                                                                                       |
+| Kwaliteitsmanager                      | {x} uur         | Inrichten, onderhouden en bewaken kwaliteitsrapportage                                                                                            |
+| Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het Scrumteam, inhoudelijke rapportage                                     |
+| Projectleider                          | {x} uur         | Bewaken overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever                       |
+| Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                                          |
+| Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is                        |
+| **Totaal**                             | **{x} uur**     |                                                                                                                                                   |
 
 {In de projectovereenkomst moet in de begroting met onderstaande opmerkingen rekening worden gehouden.}
 
@@ -216,10 +216,10 @@ Onderstaand is de verwachte inzet van ICTU voor de uitvoering van dit plan van a
 
 Naast kosten voor de inzet van ICTU-medewerkers worden de volgende kosten voor door ICTU te benutten diensten verwacht:
 
- | Dienst                           | Verwachte kosten | Toelichting                                                                                        |
-|:----------------------------------|:-----------------| :--------------------------------------------------------------------------------------------------|
-| Performancetests                  |                  |                                                                                                    |
-| Securitytests                     |                  |                                                                                                    |
-| Onderhoudbaarheidstoetsen         |                  |                                                                                                    |
-| Usabilitytests                    |                  |                                                                                                    |
-| Toegankelijkheidstests            |                  |                                                                                                    |
+| Dienst                    | Verwachte kosten | Toelichting |
+|:--------------------------|:-----------------|:------------|
+| Performancetests          |                  |             |
+| Securitytests             |                  |             |
+| Onderhoudbaarheidstoetsen |                  |             |
+| Usabilitytests            |                  |             |
+| Toegankelijkheidstests    |                  |             |

@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M01/Definitie.md"
 
-Opdrachtgever, ICTU, beheerpartij en andere meewerkende partijen leveren de onderstaande informatie op. Voor een aantal documenten zijn als onderdeel van de Kwaliteitsaanpak templates beschikbaar. Ook kan gebruik worden gemaakt van bestaande templates uit bijvoorbeeld de NORA. Zie [$M29$](#m29).
+Opdrachtgever, ICTU, beheerorganisatie en andere meewerkende partijen leveren de onderstaande informatie op. Voor een aantal documenten zijn als onderdeel van de Kwaliteitsaanpak templates beschikbaar. Ook kan gebruik worden gemaakt van bestaande templates uit bijvoorbeeld de NORA. Zie [$M29$](#m29).
 
 De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het ✔ geeft aan in welke fase ze worden opgeleverd.
 
@@ -104,7 +104,7 @@ Als de opdrachtgever een overkoepelend kwaliteitsplan heeft zorgt het project da
 
 ### Deploybare versie van de software
 
-Het project levert deploybare versies van de software in een formaat dat is afgestemd met de beheerpartij.
+Het project levert deploybare versies van de software in een formaat dat is afgestemd met de beheerorganisatie.
 
 ### Documentatie voor deployment en operationeel beheer
 
@@ -114,7 +114,7 @@ De documentatie voor operationeel beheer bevat tenminste informatie over: back-u
 
 ### Software bill of materials
 
-Voor elke release stelt het project een "software bill of materials" op: een overzicht van de gebruikte libraries, frameworks, componenten en andere software(deel)producten in de release. Software draagt inherent het risico in zich van verborgen fouten. Deze fouten kunnen mogelijk misbruikt worden, waardoor (beveiligings)problemen ontstaan. Met dit overzicht heeft de opdrachtgever of diens beheerpartij informatie over de gebruikte software(deel)producten, die geraadpleegd kan worden wanneer fouten in software bekend wordt, zodat een risico-inschatting gemaakt kan worden en eventueel actie kan worden ondernomen.
+Voor elke release stelt het project een "software bill of materials" op: een overzicht van de gebruikte libraries, frameworks, componenten en andere software(deel)producten in de release. Software draagt inherent het risico in zich van verborgen fouten. Deze fouten kunnen mogelijk misbruikt worden, waardoor (beveiligings)problemen ontstaan. Met dit overzicht heeft de opdrachtgever of diens beheerorganisatie informatie over de gebruikte software(deel)producten, die geraadpleegd kan worden wanneer fouten in software bekend wordt, zodat een risico-inschatting gemaakt kan worden en eventueel actie kan worden ondernomen.
 
 ### Release notes
 
@@ -124,7 +124,7 @@ Voor elke release stelt het project release notes op: een overzicht van de wijzi
 
 Voor elke release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat tenminste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Als er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschrijving van de voorziene impact.
 
-Software delivery manager en opdrachtgever maken afspraken over de opzet van het vrijgaveadvies en de verantwoordelijkheden van betrokken partijen bij de totstandkoming ervan, waaronder ook de beheerpartij.
+Software delivery manager en opdrachtgever maken afspraken over de opzet van het vrijgaveadvies en de verantwoordelijkheden van betrokken partijen bij de totstandkoming ervan, waaronder ook de beheerorganisatie.
 
 ### Samenhang voorfaseproducten
 
@@ -140,12 +140,12 @@ ICTU is primair verantwoordelijk voor plan van aanpak, softwarearchitectuurdocum
 
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de kwaliteit van deze software, zie [$M32$](#m32). In dat geval levert het project ook de onderzoeksresultaten daarvan en maakt een transitieplan, en indien van toepassing, een plan voor het aflossen van technische schuld.
 
-De beheerpartij is primair verantwoordelijk voor de infrastructuurarchitectuur en -ontwerp en detailtestplannen en testrapportages voor infrastructuurtesten.
+De beheerorganisatie is primair verantwoordelijk voor de infrastructuurarchitectuur en -ontwerp en detailtestplannen en testrapportages voor infrastructuurtesten.
 
 ### Rationale
 
 Het uniformeren van op te leveren producten biedt voordelen voor planning (het is bekend welke producten gemaakt moeten worden), voor bemensing (het is bekend welke expertise nodig is) en voor het uitwisselen van medewerkers.
 
-De voorgeschreven producten stellen de beheerpartij in staat om de opgeleverde software uit te rollen, te beheren en eventueel te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.
+De voorgeschreven producten stellen de beheerorganisatie in staat om de opgeleverde software uit te rollen, te beheren en eventueel te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.
 
 De genoemde producten uit de voorfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen, zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.

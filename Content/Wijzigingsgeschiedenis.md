@@ -8,6 +8,10 @@
 * Maatregel M35 "Het project hanteert een agile architectuuraanpak" toegevoegd.
 * De bijlage 'Wijzigingsgeschiedenis' verplaatst naar een los document in PDF- en HTML-formaat.
 
+#### Samenvatting Kwaliteitsaanpak
+
+* HTML-versie van de samenvatting toegevoegd aan de set van documenten zodat er een toegankelijk alternatief is voor de PDF-versie van de samenvatting.
+
 #### Template Niet-Functionele Eisen
 
 * Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.1 succescriteria.

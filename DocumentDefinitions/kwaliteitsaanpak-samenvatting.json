@@ -32,6 +32,26 @@
                     ]
                 }
             ]
+        },
+        "html": {
+            "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.html",
+            "OutputPaths": [
+                "docs/wip"
+            ],
+            "CopyFiles": [
+                {
+                    "from": "DocumentDefinitions/Shared/document.css",
+                    "to": ["docs/wip/ICTU-Kwaliteitsaanpak-Samenvatting.css"]
+                },
+                {
+                    "from": "Content/Images/ICTU.png",
+                    "to": ["docs/wip/ICTU.png"]
+                },
+                {
+                    "from": "Content/Images/word-cloud.png",
+                    "to": ["docs/wip/word-cloud.png"]
+                }
+            ]
         }
     },
     "VariablesFiles": [

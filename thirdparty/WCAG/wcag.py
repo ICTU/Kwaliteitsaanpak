@@ -31,10 +31,13 @@ def node(script):
 
 # Read the Axe-core version and rules
 axe_core_version = node("console.log(require('axe-core').version)")
-rules_text = node("axe = require('axe-core'); console.log(axe.getRules())")
-rules_text = re.sub(r"([a-zA-Z]+): ", r'"\1": ', rules_text)
-rules_text = re.sub(r": undefined", r": []", rules_text)
-rules = ast.literal_eval(rules_text)
+node("""
+const axe = require('axe-core');
+const fs = require('fs');
+
+fs.writeFileSync('/tmp/wcag_rules.json', JSON.stringify(axe.getRules(), null, 2), 'utf-8')
+""")
+rules = json.load(pathlib.Path("/tmp/wcag_rules.json").open())
 
 # Read the WCAG success criteria
 with pathlib.Path("wcag.json").open() as wcag_file:

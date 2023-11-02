@@ -6,6 +6,8 @@ Bij voorkeur zijn dezelfde deskundigen in zowel de voorfase als in de realisatie
 
 In de realisatiefase wordt de prioriteit van werk van het Scrumteam bepaald door een product owner van de opdrachtgever. Bij aanvang van de voorfase is deze beoogde product owner bekend en werkt deze ook mee in de voorfase.
 
+Als tijdens de realisatiefase blijkt dat de kaders van het project significant wijzigen, dan stemmen opdrachtgever, ICTU en andere betrokken partijen af welke onderdelen van de voorfase opnieuw moeten worden uitgevoerd.
+
 ### Rationale
 
 Het doel van de voorfase is ten eerste om uitgangspunten, risico's en randvoorwaarden voor verdere projectuitvoering te bepalen en ten tweede om te zorgen dat aan de randvoorwaarden wordt voldaan en voor zoveel mogelijk projectspecifieke risico's maatregelen genomen zijn. Het doel van de realisatiefase is het daadwerkelijk bouwen en onderhouden van de software. Een expliciete splitsing zorgt ervoor dat projecten doordacht van start gaan.

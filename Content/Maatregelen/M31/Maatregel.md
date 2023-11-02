@@ -24,6 +24,8 @@ Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkeli
 
 Zie [https://www.noraonline.nl/wiki/PSA](https://www.noraonline.nl/wiki/PSA).
 
+Bij wijzigingen aan de PSA na de start van het project is het niet zinvol nog van een project*start*architectuur te spreken en noemen we het een projectarchitectuur.
+
 ### Business impact analysis
 
 In een business impact analysis (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting: de risico’s die een organisatie bereid is te accepteren. Alleen de opdrachtgevende organisatie zelf kan hierover een uitspraak doen.
@@ -42,4 +44,4 @@ Waar mogelijk stelt de opdrachtgever ook andere relevante informatie ter beschik
 
 De genoemde producten hebben tot doel om de benodigde omvang, kosten en doorlooptijd van de voorfase te kunnen schatten. De projectstartarchitectuur vormt input voor de tijdens de voorfase te ontwikkelen producten zoals functionele en niet-functionele eisen, functioneel ontwerp en softwarearchitectuur. Een BIA en eventuele PIA zijn richtinggevend voor de in de voorfase te selecteren beveiligingsmaatregelen.
 
-Als deze producten er niet zijn, dan moeten ze in de voorfase alsnog worden gemaakt. Dat vereist grote betrokkenheid van de organisatie van de opdrachtgever, en duurt in de regel lang. De aanwezigheid en compleetheid van deze producten is dus belangrijke informatie voor de raming van de voorfase.
+Als deze producten er niet zijn, niet actueel zijn, en/of niet compleet zijn, dan moeten ze in de voorfase alsnog worden gemaakt, bijgewerkt en/of aangevuld. Dit vereist grote betrokkenheid van de organisatie van de opdrachtgever, en is in de regel lastig op korte termijn te organiseren.

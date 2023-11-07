@@ -4,7 +4,7 @@
 
 Onder het ondersteunen van "agile werken" vallen het opvoeren van eisen, het opvoeren van logische testgevallen, het koppelen van logische testgevallen aan eisen, het bijhouden van een werkvoorraad, het plannen van iteraties en het toewijzen van eisen aan iteraties. De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als backlog en de iteraties als sprints.
 
-ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Projecten gebruiken deze tools:
+ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Projecten gebruiken deze tools, of gelijkwaardige alternatieven:
 
 1. Backlogmanagement en agile werken: Azure DevOps of Jira,
 2. Continuous delivery pipeline: Jenkins, GitLab CI/CD (Continuous Integration, Delivery, and Deployment) of Azure DevOps,
@@ -15,14 +15,15 @@ ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Project
 7. Kwaliteitsrapportages: Quality-time,
 8. Kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
 9. Kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency Checker,
-10. Kwetsbaarheden in software: GitLab SAST (Static Application Security Testing), SonarQube en/of OWASP ZAP (Zed Attack Proxy),
-11. Kwetsbaarheden in container images: Trivy,
-12. Performancetesten en performancetestrapportages: JMeter en Performancetestrunner,
-13. Toegankelijkheid: Axe,
-14. Software bill of materials: tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren,
-15. Artifact repository: Nexus of Harbor,
-16. Registratie van incidenten bij gebruik en beheer: Jira,
-17. Bij het uitvoeren van operationeel beheer; uitrollen in de productieomgeving: Ansible.
+10. Kwetsbaarheden in software (statische analyse): SonarQube,
+11. Kwetsbaarheden in software (dynamische analyse): OWASP ZAP (Zed Attack Proxy),
+12. Kwetsbaarheden in container images: Trivy,
+13. Performancetesten en performancetestrapportages: JMeter en Performancetestrunner,
+14. Toegankelijkheid: Axe,
+15. Software bill of materials: tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren,
+16. Artifact repository: Nexus of Harbor,
+17. Registratie van incidenten bij gebruik en beheer: Jira,
+18. Bij het uitvoeren van operationeel beheer; uitrollen in de productieomgeving: Ansible.
 
 ### Rationale
 

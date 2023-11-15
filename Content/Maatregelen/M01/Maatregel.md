@@ -123,9 +123,9 @@ Voor elke release stelt het project release notes op: een overzicht van de wijzi
 
 ### Vrijgaveadvies
 
-Voor elke release stelt het project een vrijgaveadvies op. Het vrijgaveadvies bevat tenminste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Als er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschrijving van de voorziene impact.
+De opdrachtgever organiseert dat voor elke release de betrokken partijen informatie aanleveren voor een vrijgaveadvies.
 
-Software delivery manager en opdrachtgever maken afspraken over de opzet van het vrijgaveadvies en de verantwoordelijkheden van betrokken partijen bij de totstandkoming ervan, waaronder ook de beheerorganisatie.
+Het project levert bij elke release informatie aan de opdrachtgever over nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Als er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschrijving van de voorziene impact.
 
 ### Samenhang voorfaseproducten
 

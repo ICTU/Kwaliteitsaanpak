@@ -27,6 +27,10 @@
 * De tekst over kwaliteitsnormen uit paragraaf 3.1.4 ondergebracht in een nieuwe paragraaf 3.1.5 "Behalen van kwaliteitsnormen".
 * Koppeling tussen Use cases, Logische testgevallen, User stories en Epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
 
+#### Self-assessment checklist
+
+* Maak het mogelijk bij maatregelen met submaatregelen ook de hoofdmaatregel te scoren.
+
 #### Alle documenten
 
 * De term "DevOps-werkwijze" vervangen door "operationeel beheer" of door "operationeel en/of applicatiebeheer" op de plekken waar het gaat over de dienstverlening en niet zozeer over de aanpak.

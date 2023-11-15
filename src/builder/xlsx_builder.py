@@ -53,7 +53,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         super().start_element(tag, attributes)
         if tag == xmltags.DOCUMENT:
             self.__create_checklist(str(attributes["version"]))
-        elif tag == xmltags.MEASURE and not self.in_element(xmltags.SECTION, {xmltags.SECTION_IS_APPENDIX: "y"}):
+        elif tag == xmltags.MEASURE and not self.__in_appendix():
             if self.last_level_1_section_heading:
                 self.row += 1
                 self.checklist.merge_range(
@@ -77,9 +77,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         text = re.sub("[¹²³⁴⁵⁶⁷⁸⁹⁰]+", "", text)  # Remove footnotes
         if tag == xmltags.HEADING and self.nr_elements(xmltags.SECTION) == 1:
             self.last_level_1_section_heading = text
-        elif self.in_element(xmltags.MEASURE) and not self.in_element(
-            xmltags.SECTION, {xmltags.SECTION_IS_APPENDIX: "y"}
-        ):
+        elif self.in_element(xmltags.MEASURE) and not self.__in_appendix():
             if tag == xmltags.BOLD:
                 self.measure_row = self.row
                 self.measure_id, measure_title = text.split(":")
@@ -110,15 +108,17 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
     ) -> None:
         """Write a measure row."""
         measure_format_key = "submeasure" if submeasure else "measure"
+        status_format_key = "substatus" if submeasure else "status"
         self.checklist.write(self.row, self.MEASURE_ID_COLUMN, measure_id, self.formats[measure_format_key])
         self.checklist.write(self.row, self.MEASURE_COLUMN, measure_text, self.formats[measure_format_key])
+        self.__write_assessment_choices(self.row, self.STATUS_COLUMN)
         if has_submeasures:
-            self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[measure_format_key])
-            self.checklist.write_comment(self.row, self.STATUS_COLUMN, "Bepaal a.u.b. de status per submaatregel")
-        else:
-            status_format_key = "substatus" if submeasure else "status"
-            self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
-            self.__write_assessment_choices(self.row, self.STATUS_COLUMN)
+            self.checklist.write_comment(
+                self.row,
+                self.STATUS_COLUMN,
+                "Tip: bepaal eerst de status per submaatregel en daarna de status van de hoofdmaatregel."
+            )
+        self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
         self.checklist.write(self.row, self.EXPLANATION_COLUMN, "", self.formats["explanation"])
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
@@ -224,3 +224,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         for column, (header, width) in enumerate([("Datum", 12), ("Actie", 70), ("Status", 20), ("Toelichting", 70)]):
             action_list.write(1, column, header, self.formats["header"])
             action_list.set_column(f"{'ABCD'[column]}:{'ABCD'[column]}", width)
+
+    def __in_appendix(self) -> bool:
+        """Return whether the current section is in an appendix."""
+        return self.in_element(xmltags.SECTION, {xmltags.SECTION_IS_APPENDIX: "y"})

@@ -13,12 +13,13 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het ✔ g
 | Beschrijving van niet-functionele eisen                                     |            | ✔        | ✔              |
 | Product backlog                                                             |            | ✔        | ✔              |
 | Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur) |            | ✔        | ✔              |
-| Testdocumentatie: testplannen                                               |            | ✔        | ✔              |
+| Mastertestplan                                                              |            | ✔        | ✔              |
+| Detailtestplannen                                                           |            | ✔        | ✔              |
 | Informatiebeveiligingsplan                                                  |            | ✔        | ✔              |
 | Kwaliteitsplan                                                              |            | ✔        | ✔              |
 | Plan van aanpak: realisatiefase                                             |            | ✔        |                |
 | Deploybare versie van de software                                           |            |          | ✔              |
-| Testdocumentatie: testgevallen, rapportages                                 |            |          | ✔              |
+| Testrapportages                                                             |            |          | ✔              |
 | Documentatie voor deployment en operationeel beheer                         |            |          | ✔              |
 | Software bill of materials                                                  |            |          | ✔              |
 | Release notes                                                               |            |          | ✔              |
@@ -78,7 +79,7 @@ De infrastructuurarchitectuur beschrijft de topologie van de implementatie-omgev
 
 Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illustreert waar men uiteindelijk met de toepassing naar toe wil. Het maakt ideeën tastbaar en creëert een eerste indruk van structuur, ontwerp en functionaliteit.
 
-### Testdocumentatie
+### Testplannen en -rapportages
 
 De testplannen bestaan uit een mastertestplan (MTP), gemaakt op basis van een productrisicoanalyse (PRA), en detailtestplannen. Het doel van een mastertestplan is om betrokkenen bij het testproces te informeren over de strategie, aanpak, activiteiten, inclusief de onderlinge relaties en afhankelijkheden, en de op te leveren producten met betrekking tot het testtraject. Het mastertestplan beschrijft deze strategie, aanpak, activiteiten en eindproducten, die in de detailtestplannen verder worden gedetailleerd.
 

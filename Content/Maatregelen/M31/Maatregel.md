@@ -6,7 +6,8 @@ De opdrachtgever zorgt dat het project vanaf de start van de voorfase beschikt o
 
 1. Projectstartarchitectuur,
 2. Business impact analysis,
-3. Privacy impact assessment.
+3. Privacy impact assessment,
+4. Afspraken tussen opdrachtgever en beheerpartij.
 
 Als de benodigde informatie niet gereed is bij de start van de voorfase dan maken opdrachtgever en ICTU nadere afspraken over de manier waarop de benodigde informatie nog tijdens de voorfase beschikbaar komt voor het project.
 
@@ -36,9 +37,15 @@ In een privacy impact assessment (PIA) legt de opdrachtgevende organisatie vast 
 
 Als een PIA niet nodig is, dan is een verklaring daaromtrent vereist.
 
+### Afspraken tussen opdrachtgever en beheerpartij
+
+Opdrachtgever heeft afspraken gemaakt met een (interne of externe) beheerpartij die voornemens is het beheer van de software uit te voeren. De afspraken omvatten in ieder geval de inzet van medewerkers van de beheerpartij tijdens de voorfase en het type beheer dat de beheerpartij voornemens is te gaan uitvoeren: operationeel beheer, applicatiebeheer en/of functioneel beheer.
+
+De beheerpartij stelt relevante informatie ter beschikking aan het project zoals beveiligingsbeleid, beheeracceptatiecriteria, documentatie van de te gebruiken voorzieningen voor bijvoorbeeld authenticatie en autorisatie en verder te hanteren kaders en richtlijnen.
+
 ### Aanvullende informatie
 
-Waar mogelijk stelt de opdrachtgever ook andere relevante informatie ter beschikking aan het project zoals een eventueel programma van eisen, procesbeschrijvingen van te ondersteunen bedrijfsprocessen, documentatie van te koppelen systemen, documentatie van de te gebruiken voorzieningen voor bijvoorbeeld authenticatie en autorisatie, beveiligingsbeleid, beheeracceptatiecriteria en verder te hanteren kaders en richtlijnen.
+Waar mogelijk stelt de opdrachtgever ook andere relevante informatie ter beschikking aan het project zoals een eventueel programma van eisen, procesbeschrijvingen van te ondersteunen bedrijfsprocessen, documentatie van te koppelen systemen en verder te hanteren kaders en richtlijnen.
 
 ### Rationale
 

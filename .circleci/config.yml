@@ -2,11 +2,11 @@ version: 2
 jobs:
   build:
     machine:
-      image: ubuntu-2004:current
+      image: ubuntu-2204:2023.10.1
     parallelism: 1
     steps:
       - checkout
       - run:
-          docker-compose up
+          docker compose up
       - store_artifacts:
           path: docs/wip

@@ -8,7 +8,7 @@
 * In maatregel M14 "Het project bereidt samen met opdrachtgever en belanghebbenden de realisatie voor" toegevoegd dat bij significante wijzigingen aan de projectkader de voorfase geheel of deels opnieuw wordt uitgevoerd.
 * In maatregel M16 "Het project gebruikt tools voor vastgestelde taken" toegevoegd dat projecten de genoemde tools *of gelijkwaardige alternatieven* gebruiken. Verder GitLab SAST verwijderd uit de lijst van tools en SonarQube en OWASP ZAP over twee regels verspreid zodat ze apart kunnen worden ingevuld in de self-assessment.
 * De scope van maatregel M29 "ICTU zorgt dat een project verantwoord kan starten" gereduceerd tot het organiseren van de interne dienstverlening voor aanvang van een project en de titel hieraan aangepast: "ICTU organiseert voor aanvang van een project de interne dienstverlening".
-* De naam van maatregel M31 "Het project beschikt over vastgestelde informatie" veranderd in "Het project beschikt over actuele vastgestelde informatie" en de tekst van de maatregel hieraan aangepast.
+* De naam van maatregel M31 "Het project beschikt over vastgestelde informatie" veranderd in "Het project beschikt over actuele vastgestelde informatie" en de tekst van de maatregel hieraan aangepast. Een extra kopje "Afspraken tussen opdrachtgever en beheerpartij" toegevoegd.
 * Maatregel M35 "Het project hanteert een agile architectuuraanpak" toegevoegd.
 * De bijlage 'Wijzigingsgeschiedenis' verplaatst naar een los document in PDF- en HTML-formaat.
 

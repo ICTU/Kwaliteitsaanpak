@@ -2,9 +2,10 @@
 
 De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEITSAANPAK$ en bijbehorende templates.
 
-| Term/afkorting | Toelichting |
-|:---------------|:------------|
-| **actor** | een persoon die, of een extern informatiesysteem dat, een handeling verricht op het **informatiesysteem** |
+| Term/afkorting | Toelichting                                                                                               |
+|:---------------|:----------------------------------------------------------------------------------------------------------|
+| **actor**      | een persoon die, of een extern informatiesysteem dat, een handeling verricht op het **informatiesysteem** |
+| **architectuur** | een beschrijving van de structuur van een systeem, inclusief onderdelen, relaties tussen die onderdelen en eigenschappen van die onderdelen en relaties.
 | **API** | application programming interface |
 | **ART** | automatische **regressietest** |
 | **auditing** | Vastlegging van de door een actor verrichtte handelingen. |
@@ -22,6 +23,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **GFO** | globaal functioneel ontwerp |
 | **IB-plan** | informatiebeveiligingsplan |
 | **informatiesysteem** | een samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en **programmatuur** alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie [VIR 2007, NORA]
+| **infrastructuurarchitectuur** | een **architectuur** die vooral de hardwareonderdelen en -relaties (housing, hardware, virtuals, standaard software en middleware) van een systeem beschrijft |
 | **IPO** | intern projectoverleg |
 | **ISD** | ICTU Software Diensten, afdeling van ICTU die **softwareontwikkelprojecten** ondersteunt met ontwikkel- en testomgevingen, tools en diensten |
 | **ISE** | ICTU Software Expertise, afdeling van ICTU die **softwareontwikkelprojecten** ondersteunt met expertise op het gebied van **softwareontwikkeling** en die de $KWALITEITSAANPAK$ onderhoudt |
@@ -58,6 +60,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **Scrum** | Scrum is een lichtgewicht raamwerk dat mensen, teams en organisaties helpt om waarde te creёren door middel van adaptieve oplossingen voor complexe problemen [Scrumgids] |
 | **Scrummaster** | De Scrummaster is verantwoordelijk voor het opzetten van **Scrum**, zoals staat beschreven in de Scrumgids [Scrumgids] |
 | **Scrumteam** | Een Scrumteam bestaat uit één **Scrummaster**, één **product owner** en **ontwikkelaars** (*developers* in de Scrumgids) [Scrumgids]. |
+| **softwarearchitectuur** | een **architectuur** die vooral de softwareonderdelen en -relaties (processen, modules, interfaces, datamodel) van een systeem beschrijft.
 | **software delivery manager** | organiseert het ontwikkelen en opleveren van **software** conform de vastgestelde eisen en de Kwaliteitsaanpak en rapporteert aan de **projectleider**
 | **software** | software is de verzameling instructies die bepalen wat een computer uitvoert en is uiteindelijk wat de gebruiker ziet, ervaart en waarmee hij interacteert. |
 | **softwareontwikkeling** | een activiteit die nieuwe **software** maakt en/of bestaande software aanpast |

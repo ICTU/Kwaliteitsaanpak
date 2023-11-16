@@ -22,6 +22,8 @@
 
 #include "Content/Maatregelen/M07/Maatregel.md"
 
+#include "Content/Maatregelen/M16/Maatregel.md"
+
 #include "Content/Maatregelen/M08/Maatregel.md"
 
 #include "Content/Maatregelen/M26/Maatregel.md"
@@ -39,8 +41,6 @@
 #include "Content/Maatregelen/M35/Maatregel.md"
 
 #include "Content/Maatregelen/M10/Maatregel.md"
-
-#include "Content/Maatregelen/M16/Maatregel.md"
 
 #include "Content/Maatregelen/M28/Maatregel.md"
 

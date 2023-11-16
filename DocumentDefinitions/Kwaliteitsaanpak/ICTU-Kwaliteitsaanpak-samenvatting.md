@@ -28,6 +28,8 @@ Hieronder zijn alle maatregeldefinities uit de Kwaliteitsaanpak opgenomen. Zie d
 
 #include "Content/Maatregelen/M07/Definitie.md"
 
+#include "Content/Maatregelen/M16/Definitie.md"
+
 #include "Content/Maatregelen/M08/Definitie.md"
 
 #include "Content/Maatregelen/M26/Definitie.md"
@@ -45,8 +47,6 @@ Hieronder zijn alle maatregeldefinities uit de Kwaliteitsaanpak opgenomen. Zie d
 #include "Content/Maatregelen/M35/Definitie.md"
 
 #include "Content/Maatregelen/M10/Definitie.md"
-
-#include "Content/Maatregelen/M16/Definitie.md"
 
 #include "Content/Maatregelen/M28/Definitie.md"
 

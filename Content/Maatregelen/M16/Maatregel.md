@@ -6,24 +6,24 @@ Onder het ondersteunen van "agile werken" vallen het opvoeren van eisen, het opv
 
 ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Projecten gebruiken deze tools, of gelijkwaardige alternatieven:
 
-1. Backlogmanagement en agile werken: Azure DevOps of Jira,
-2. Continuous delivery pipeline: Jenkins, GitLab CI/CD (Continuous Integration, Delivery, and Deployment) of Azure DevOps,
-3. Kwaliteit van broncode: SonarQube,
-4. Versiebeheer: GitLab of Azure DevOps,
-5. Release van software: Releaseserver in het ontwikkelplatform,
-6. Testrapportages: JUnit, Robot Framework, TestNG, of hiermee compatible tools,
-7. Kwaliteitsrapportages: Quality-time,
-8. Kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
-9. Kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency Checker,
-10. Kwetsbaarheden in software (statische analyse): SonarQube,
-11. Kwetsbaarheden in software (dynamische analyse): OWASP ZAP (Zed Attack Proxy),
-12. Kwetsbaarheden in container images: Trivy,
-13. Performancetesten en performancetestrapportages: JMeter en Performancetestrunner,
-14. Toegankelijkheid: Axe,
-15. Software bill of materials: tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren,
-16. Artifact repository: Nexus of Harbor,
-17. Registratie van incidenten bij gebruik en beheer: Jira,
-18. Bij het uitvoeren van operationeel beheer; uitrollen in de productieomgeving: Ansible.
+1. backlog management en agile werken: Azure DevOps of Jira,
+2. inrichten en uitvoeren van een continuous delivery pipeline: Jenkins, GitLab CI/CD (Continuous Integration, Delivery, and Deployment) of Azure DevOps,
+3. monitoren van de kwaliteit van broncode: SonarQube,
+4. versiebeheer van op te leveren producten: GitLab of Azure DevOps,
+5. release van software: Releaseserver in het ontwikkelplatform,
+6. maken van testrapportages: JUnit, Robot Framework, TestNG, of hiermee compatible tools,
+7. maken van kwaliteitsrapportages: Quality-time,
+8. controleren van de configuratie op aanwezigheid van bekende kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
+9. controleren op aanwezigheid van bekende kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency Checker,
+10. statische controle van de software op aanwezigheid van kwetsbare constructies: SonarQube,
+11. dynamische controle van de software op aanwezigheid van kwetsbare constructies: OWASP ZAP (Zed Attack Proxy),
+12. controleren van container images op aanwezigheid van bekende kwetsbaarheden: Trivy,
+13. testen van performance en schaalbaarheid: JMeter en Performancetestrunner,
+14. testen op toegankelijkheid van de applicatie: Axe,
+15. produceren van een "software bill of materials" (SBoM): tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren,
+16. opslaan van artifacten: Nexus of Harbor,
+17. registratie van incidenten bij gebruik en beheer: Jira, en
+18. bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving: Ansible.
 
 ### Rationale
 

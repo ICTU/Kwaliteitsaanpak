@@ -7,7 +7,6 @@ De realisatiefase is een vervolg op de voorfase {voorfaseproject}. De documenten
 * Privacy impact assessment (PIA), versie {versie},
 * Softwarearchitectuurdocument (SAD), versie {versie},
 * Infrastructuurarchitectuur (IA), versie {versie},
-* High level design (HLD), versie {versie},
 * Mastertestplan, versie {versie},
 * Testplan softwarerealisatie, versie {versie},
 * Informatiebeveiligingsplan (IB-plan), versie {versie},

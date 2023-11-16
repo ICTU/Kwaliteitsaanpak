@@ -1,15 +1,15 @@
 {
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
-    "BuildPath": "build/Templates/HLD/",
+    "BuildPath": "build/Templates/IA/",
     "Title": "High-Level Design",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
-    "DocumentFolder": "HLD",
+    "DocumentFolder": "IA",
     "FrontPage": "Neutral",
     "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
-            "OutputFile": "Neutraal-Template-High-Level-Design.docx",
+            "OutputFile": "Neutraal-Template-Infrastructuurarchitectuur.docx",
              "OutputPaths": [
                 "docs/wip"
             ],

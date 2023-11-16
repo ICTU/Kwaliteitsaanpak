@@ -17,7 +17,6 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Interactie-ontwerp (UX)                         | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Softwarearchitectuurdocument (SAD)              | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Infrastructuurarchitectuur (IA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| High level design (HLD)                         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Product risico analyse (PRA)                    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Mastertestplan (op basis van PRA)               | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Testplan softwarerealisatie                     | {verantwoordelijke}          | ICTU         | {reviewers}             |
@@ -109,7 +108,7 @@ Onderstaand is de verwachte inzet van {opdrachtgever/partijen} voor de uitvoerin
 |:----------------------------------------------|:-------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
 | Expert informatiebeveiliging                  | {aantal} dagen           | Uitvoeren TVA, opstellen BIA en IB-plan, reviewen {documenten}                                                                                 |
 | Privacy-expert                                | {aantal} dagen           | Opstellen PIA, reviewen {documenten}                                                                                                           |
-| Infrastructuurarchitect                       | {aantal} dagen           | Opstellen infrastructuurarchitectuur en high level design (HLD), reviewen SAD, NFE en IB-plan                                                  |
+| Infrastructuurarchitect                       | {aantal} dagen           | Opstellen infrastructuurarchitectuur, reviewen SAD, NFE en IB-plan                                                                             |
 | Architect                                     | {aantal} dagen           | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur                                                |
 | Testmanager                                   | {aantal} dagen           | Uitvoeren PRA, opstellen mastertestplan, reviewen kwaliteitsplan, testplan softwarerealisatie                                                  |
 | Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                                                |

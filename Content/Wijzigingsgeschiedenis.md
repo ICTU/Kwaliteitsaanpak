@@ -22,6 +22,8 @@
 
 #### Template Kwaliteitsplan
 
+* Paragraag 3.1.4 "Werkwijze" hernoemd naar "Ontwikkelproces", overeenkomstig maatregel M05 "Het project hanteert een iteratief en incrementeel ontwikkelproces".
+* De tekst over kwaliteitsnormen uit paragraaf 3.1.4 ondergebracht in een nieuwe paragraaf 3.1.5 "Behalen van kwaliteitsnormen".
 * Koppeling tussen Use cases, Logische testgevallen, User stories en Epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
 
 #### Alle documenten

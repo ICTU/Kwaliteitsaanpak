@@ -20,9 +20,11 @@ Het project houdt een actie- en besluitenlijst bij. De actie- en besluitenlijst 
 
 Het project houdt een risicolog bij. De risicolog wordt digitaal bijgehouden door de software delivery manager en periodiek besproken tijdens het projectoverleg. Iedere projectmedewerker kan risico's melden bij de software delivery manager. De omvang van risico's wordt ingeschat en indien nodig voorzien van een of meer maatregelen. Quality-time bewaakt de actualiteit van het risicolog.
 
-### Werkwijze
+### Ontwikkelproces
 
 Voor de realisatiefase wordt de agile ontwikkelmethode Scrum gebruikt ($M05$). Als operationeel beheer onderdeel is van de dienstverlening wordt gebruik gemaakt van de DevOps-principes. Afwijkingen hierop worden alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
+
+### Behalen van kwaliteitsnormen
 
 De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen niet tijdig worden behaald:
 

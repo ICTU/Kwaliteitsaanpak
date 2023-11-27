@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M02/Definitie.md"
 
-De kwaliteitsnormen voor het project zijn beschreven in de niet-functionele eisen, het informatiebeveiligingsplan, het kwaliteitsplan en deze Kwaliteitsaanpak, zie [$M01$](#m01).
+De kwaliteitsnormen voor het product zijn beschreven in de niet-functionele eisen, het informatiebeveiligingsplan, het kwaliteitsplan en deze Kwaliteitsaanpak, zie [$M01$](#m01).
 
 Om continu te bewaken dat het product aan de kwaliteitsnormen voldoet, voert het project de volgende activiteiten uit:
 

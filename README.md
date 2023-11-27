@@ -32,20 +32,18 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
 - Make sure you have Docker
 - Clone this repository
 - Run `docker compose up`
-- View the documents in the docs/wip folder
+- Run `open html/index.html` to view the latest release and the work in progress (wip)
 
 ## Releasing a new version of the documentation
 
-1. Create a release branch: `git checkout -b releaseX-Y-Z`
-2. Update the version number and release date in the change log in ./Content/Wijzigingsgeschiedenis.md
-3. Update the version number in ./docker-compose.yml
-4. Update the version number in docs/index.html
-5. Create a new release folder in ./docs: `mkdir docs/vX.Y.Z`
-6. Run `docker compose up` to generate the documents
-7. Copy the generated documents from the wip folder to folder for the new version: `cp docs/wip/* docs/vX.Y.Z`
-8. Commit the changes and push to GitHub: `git commit -a -m "Release vX.Y.Z"; git push`
-9. Review and merge the branch on GitHub
-10. Tag the release and push the tag to GitHub: `git checkout master; git pull -p; git tag vX.Y.Z; git push --tags`
+1. Create a release branch: `git checkout -b release-vx-y-z`
+2. Update the version number and release date in the change log in `./Content/Wijzigingsgeschiedenis.md``
+3. Update the version number in `docs/index.html`
+4. Create a new release folder in ./docs: `mkdir docs/vx.y.z`
+5. Run `VERSION=x.y.z docker compose up` to generate the documents
+6. Commit the changes and push to GitHub: `git commit -a -m "Release vx.y.z"; git push`
+7. Review and merge the branch on GitHub
+8. Tag the release and push the tag to GitHub: `git checkout master; git pull -p; git tag vx.y.z; git push --tags`
 
 ## Point of contact
 

@@ -11,7 +11,7 @@
         "docx": {
             "OutputFile": "Neutraal-Template-Niet-Functionele-Eisen.docx",
             "OutputPaths": [
-                "docs/wip"
+                "docs/$VERSIE$"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"
         }

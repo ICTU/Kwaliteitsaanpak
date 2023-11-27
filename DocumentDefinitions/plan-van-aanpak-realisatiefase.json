@@ -11,7 +11,7 @@
         "docx": {
             "OutputFile": "ICTU-Template-Plan-van-Aanpak-Realisatiefase.docx",
             "OutputPaths": [
-                "docs/wip"
+                "docs/$VERSIE$"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }

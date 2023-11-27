@@ -10,7 +10,7 @@
         "pdf": {
             "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.pdf",
             "OutputPaths": [
-                "docs/wip"
+                "docs/$VERSIE$"
             ],
             "CopyFiles": [
                 {
@@ -36,20 +36,20 @@
         "html": {
             "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.html",
             "OutputPaths": [
-                "docs/wip"
+                "docs/$VERSIE$"
             ],
             "CopyFiles": [
                 {
                     "from": "DocumentDefinitions/Shared/document.css",
-                    "to": ["docs/wip/ICTU-Kwaliteitsaanpak-Samenvatting.css"]
+                    "to": ["docs/$VERSIE$/ICTU-Kwaliteitsaanpak-Samenvatting.css"]
                 },
                 {
                     "from": "Content/Images/ICTU.png",
-                    "to": ["docs/wip/ICTU.png"]
+                    "to": ["docs/$VERSIE$/ICTU.png"]
                 },
                 {
                     "from": "Content/Images/word-cloud.png",
-                    "to": ["docs/wip/word-cloud.png"]
+                    "to": ["docs/$VERSIE$/word-cloud.png"]
                 }
             ]
         }

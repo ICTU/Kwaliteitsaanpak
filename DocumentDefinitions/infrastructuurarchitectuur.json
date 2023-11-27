@@ -11,7 +11,7 @@
         "docx": {
             "OutputFile": "Neutraal-Template-Infrastructuurarchitectuur.docx",
              "OutputPaths": [
-                "docs/wip"
+                "docs/$VERSIE$"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"
         }

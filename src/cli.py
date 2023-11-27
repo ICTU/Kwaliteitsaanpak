@@ -9,7 +9,7 @@ def parse_cli_arguments() -> argparse.Namespace:
     parser.add_argument(
         "settings", nargs="+", help="One or more JSON settings files that specify the conversion options"
     )
-    parser.add_argument("--version", help="Document version", default="[unreleased]")
+    parser.add_argument("--version", help="Document version", default="wip")
     parser.add_argument(
         "--log",
         default="WARNING",

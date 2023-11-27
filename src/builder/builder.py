@@ -21,11 +21,11 @@ class Builder:
         """Return whether the builder accepts the element."""
         return True
 
-    def in_element(self, tag: str, attributes: TreeBuilderAttributes = None) -> bool:
+    def in_element(self, tag: str, attributes: TreeBuilderAttributes | None = None) -> bool:
         """Return whether we are currently in an element with the specified tag and attributes."""
         return self.nr_elements(tag, attributes) > 0
 
-    def nr_elements(self, tag: str, attributes: TreeBuilderAttributes = None) -> int:
+    def nr_elements(self, tag: str, attributes: TreeBuilderAttributes | None = None) -> int:
         """Return how many elements with the specified tag and attributes are currently being built."""
         attributes = attributes or {}
         return len(

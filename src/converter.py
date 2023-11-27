@@ -19,7 +19,7 @@ class Converter:
         self.convert_element(self.root, builder)
         builder.end_document()
 
-    def convert_element(self, element: Element, builder: Builder, parent: Element = None) -> None:
+    def convert_element(self, element: Element, builder: Builder, parent: Element | None = None) -> None:
         """Recursively convert the element using the builder."""
         if not builder.accept_element(element.tag):
             return

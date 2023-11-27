@@ -3,6 +3,7 @@
 #### Kwaliteitsaanpak
 
 * Het hoofdstuk 'Begrippenkader' is verwijderd. De begrippen die hierin werden besproken staan ook in de bijlage 'Terminologie'. Het hoofdstuk 'Leeswijzer' verwijst nu naar deze bijlage.
+* Op relevante plekken zijn verwijzingen naar templates, self-assessment checklist en wijzigingsgeschiedenis toegevoegd.
 * Paragraaf 3.5 "Evolutie van de aanpak zelf" verwijderd uit hoofdstuk 3 "Leeswijzer". Deze tekst staat ook al in hoofdstuk 2 "Doelstellingen en uitgangspunten".
 * In M01 "Het project levert in elke fase vastgestelde producten en informatie op": De testplannen uitgesplitst naar MTP en detailtestplannen zodat deze apart kunnen worden ingevuld in de self-assessment. Onder het kopje Vrijgaveadvies, opgenomen dat het de verantwoordelijkheid van de opdrachtgever is om te organiseren dat betrokken partijen informatie aanleveren voor het vrijgaveadvies.
 * De titel van maatregel M02 is veranderd van "Het project zorgt dat het product continu aan de kwaliteitsnormen voldoet" in "Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet". Continue aan alle kwaliteitsnormen voldoen is in de praktijk onmogelijk (zie ook M08 "Het project maakt technische schuld inzichtelijk en lost deze planmatig op"). Hiermee is de overlap met M06 "Het project meet kwaliteitsnormen geautomatiseerd en frequent" zo groot dat deze laatste maatregel is komen te vervallen.

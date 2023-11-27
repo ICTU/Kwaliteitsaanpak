@@ -9,7 +9,7 @@
         "pdf": {
             "OutputFile": "ICTU-Kwaliteitsaanpak.pdf",
             "OutputPaths": [
-                "docs/wip"
+                "docs/$VERSIE$"
             ],
             "CopyFiles": [
                 {
@@ -33,37 +33,37 @@
         "html": {
             "OutputFile": "ICTU-Kwaliteitsaanpak.html",
             "OutputPaths": [
-                "docs/wip"
+                "docs/$VERSIE$"
             ],
             "CopyFiles": [
                 {
                     "from": "DocumentDefinitions/Shared/document.css",
-                    "to": ["docs/wip/ICTU-Kwaliteitsaanpak.css"]
+                    "to": ["docs/$VERSIE$/ICTU-Kwaliteitsaanpak.css"]
                 },
                 {
                     "from": "Content/Images/relaties-tussen-producten.png",
-                    "to": ["docs/wip/relaties-tussen-producten.png"]
+                    "to": ["docs/$VERSIE$/relaties-tussen-producten.png"]
                 },
                 {
                     "from": "Content/Images/ICTU.png",
-                    "to": ["docs/wip/ICTU.png"]
+                    "to": ["docs/$VERSIE$/ICTU.png"]
                 },
                 {
                     "from": "Content/Images/word-cloud.png",
-                    "to": ["docs/wip/word-cloud.png"]
+                    "to": ["docs/$VERSIE$/word-cloud.png"]
                 }
             ]
         },
         "xlsx": {
             "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx",
             "OutputPaths": [
-                "docs/wip"
+                "docs/$VERSIE$"
             ]
         },
         "pptx": {
             "OutputFile": "ICTU-Kwaliteitsaanpak.pptx",
             "OutputPaths": [
-                "docs/wip"
+                "docs/$VERSIE$"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-ictu.pptx"
         }

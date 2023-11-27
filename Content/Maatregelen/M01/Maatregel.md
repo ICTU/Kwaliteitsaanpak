@@ -31,6 +31,11 @@ Het plan van aanpak voor de voorfase en het plan van aanpak voor de realisatiefa
 
 Als operationeel en/of applicatiebeheer onderdeel is van de te leveren dienstverlening tijdens de realisatiefase bevat het plan van aanpak voor de realisatiefase de hiervoor noodzakelijke afspraken met de opdrachtgever en de beheerorganisatie. De afspraken omvatten zowel de te behalen kwaliteitsniveaus van de dienstverlening als de uit te voeren operationele en applicatiebeheertaken. Daarnaast beschrijft het plan hoe informatie zal worden verzameld over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten. En hoe hierover zal worden gerapporteerd. Ook worden de criteria voor het beëindigen van de dienstverlening vastgelegd. De te leveren dienstverlening is afgestemd op het beheerplan van de beheerorganisatie.
 
+Beschikbare templates:
+
+- [Template plan van aanpak voorfase]($BASE_URL$/$VERSIE$/ICTU-Template-Plan-van-Aanpak-Voorfase.docx).
+- [Template plan van aanpak realisatiefase]($BASE_URL$/$VERSIE$/ICTU-Template-Plan-van-Aanpak-Realisatiefase.docx).
+
 ### Beschrijving van functionele eisen
 
 De beschrijving van functionele eisen bestaat uit epics en/of user stories, eventueel aangevuld met use cases. De beschrijving bevat tevens eisen voor ondersteuning van beheerfuncties, die door de beoogd beheerder gesteld worden, en voor logging, inclusief de globale inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen.
@@ -54,6 +59,10 @@ De beschrijving van niet-functionele eisen moet expliciet aandacht besteden aan 
 Overheidsorganisaties moeten een [toegankelijkheidsverklaring](https://www.digitoegankelijk.nl/wetgeving/toegankelijkheidsverklaring) op hun websites plaatsen. Indien gewenst ondersteunt ICTU bij het opstellen van de toegankelijkheidsverklaring.
 
 Bronnen van de opdrachtgever zoals procesbeschrijvingen, privacy impact assessment (PIA), beheeracceptatiecriteria, beveiligingsbeleid en projectstartarchitectuur vormen het startpunt voor de niet-functionele eisen.
+
+Beschikbare templates:
+
+- [Template niet-functionele eisen]($BASE_URL$/$VERSIE$/Neutraal-Template-Niet-Functionele-Eisen.docx).
 
 ### Product backlog
 
@@ -79,6 +88,12 @@ De infrastructuurarchitectuur beschrijft de topologie van de implementatie-omgev
 
 Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illustreert waar men uiteindelijk met de toepassing naar toe wil. Het maakt ideeën tastbaar en creëert een eerste indruk van structuur, ontwerp en functionaliteit.
 
+Beschikbare templates:
+
+- [Template globaal functioneel ontwerp]($BASE_URL$/$VERSIE$/ICTU-Template-Globaal-Functioneel-Ontwerp.docx).
+- [Template softwarearchitectuurdocument]($BASE_URL$/$VERSIE$/ICTU-Template-Software-architectuurdocument.docx).
+- [Template infrastructuurarchitectuur]($BASE_URL$/$VERSIE$/Neutraal-Template-Infrastructuurarchitectuur.docx).
+
 ### Testplannen en -rapportages
 
 De testplannen bestaan uit een mastertestplan (MTP), gemaakt op basis van een productrisicoanalyse (PRA), en detailtestplannen. Het doel van een mastertestplan is om betrokkenen bij het testproces te informeren over de strategie, aanpak, activiteiten, inclusief de onderlinge relaties en afhankelijkheden, en de op te leveren producten met betrekking tot het testtraject. Het mastertestplan beschrijft deze strategie, aanpak, activiteiten en eindproducten, die in de detailtestplannen verder worden gedetailleerd.
@@ -86,6 +101,10 @@ De testplannen bestaan uit een mastertestplan (MTP), gemaakt op basis van een pr
 Opdrachtgever is verantwoordelijk voor het mastertestplan. Het project maakt een detailtestplan voor de testsoorten die tijdens de realisatiefase door het project worden uitgevoerd. Voor testen die onder verantwoordelijkheid van het project door een derde partij worden uitgevoerd, denk aan penetratietesten en evaluaties van gebruikskwaliteit, worden aparte detailtestplannen gemaakt.
 
 Logische testgevallen worden vastgelegd en gekoppeld met use cases en user stories. Fysieke testgevallen worden vastgelegd in het formaat van de gebruikte tooling en gekoppeld met de logische testgevallen. Op basis hiervan worden testrapportages gegenereerd die laten zien dat alle use cases en user stories zijn getest en dat die tests zijn geslaagd.
+
+Beschikbare templates:
+
+- [Template detailtestplan]($BASE_URL$/$VERSIE$/ICTU-Template-Detailtestplan.docx).
 
 ### Informatiebeveiligingsplan
 
@@ -102,6 +121,10 @@ Het ICTU-kwaliteitsplan beschrijft de standaard kwaliteitsmaatregelen die ICTU-p
 Als er bijzondere of hoge niet-functionele eisen zijn, beschrijft het ICTU-kwaliteitsplan ook de extra projectspecifieke kwaliteitsmaatregelen die het project treft om deze eisen te realiseren.
 
 Als de opdrachtgever een overkoepelend kwaliteitsplan heeft zorgt het project dat het ICTU-kwaliteitsplan aansluit op het overkoepelende kwaliteitsplan.
+
+Beschikbare templates:
+
+- [Template kwaliteitsplan]($BASE_URL$/$VERSIE$/ICTU-Template-Kwaliteitsplan.docx).
 
 ### Deploybare versie van de software
 

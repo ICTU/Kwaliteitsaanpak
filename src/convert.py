@@ -8,6 +8,7 @@ import logging
 import os
 import pathlib
 import pprint
+import re
 import shutil
 from typing import cast, List
 from xml.etree.ElementTree import ElementTree
@@ -16,42 +17,64 @@ from cli import parse_cli_arguments
 from converter import Converter
 from builder import DocxBuilder, HTMLBuilder, HTMLContentBuilder, HTMLCoverBuilder, PptxBuilder, XlsxBuilder
 from markdown_converter import MarkdownConverter
+from markdown_syntax import VARIABLE_USE_PATTERN
 from custom_types import JSON, Settings, Variables
 
 
 def convert(settings_filename: str, version: str) -> None:
     """Convert the input document to the specified output formats."""
     # pylint: disable=unsubscriptable-object,unsupported-assignment-operation
-    settings = cast(Settings, read_json(settings_filename))
-    variables = cast(Variables, {})
-    for variable_file in settings["VariablesFiles"]:
-        variables.update(cast(Variables, read_json(variable_file)))
-    variables["VERSIE"] = settings["Version"] = version
-    variables["DATUM"] = settings["Date"] = datetime.date.today().strftime("%d-%m-%Y")
+    variables = read_variables(settings_filename, version)
+    settings = read_settings(settings_filename, variables)
     logging.info("Converting with settings:\n%s", pprint.pformat(settings))
-    build_path = pathlib.Path(settings["BuildPath"])
-    build_path.mkdir(parents=True, exist_ok=True)
+    get_build_path(settings)
     xml = MarkdownConverter(variables).convert(settings)
     write_xml(xml, settings)
     converter = Converter(xml)
     if "docx" in settings["OutputFormats"]:
-        convert_docx(converter, build_path, settings)
+        convert_docx(converter, settings)
     if "pdf" in settings["OutputFormats"]:
         copy_files(settings, "pdf")
-        convert_pdf(converter, build_path, settings, variables)
+        convert_pdf(converter, settings, variables)
     if "pptx" in settings["OutputFormats"]:
-        convert_pptx(converter, build_path, settings)
+        convert_pptx(converter, settings)
     if "xlsx" in settings["OutputFormats"]:
-        convert_xlsx(converter, build_path, settings)
+        convert_xlsx(converter, settings)
     if "html" in settings["OutputFormats"]:
         copy_files(settings, "html")
-        convert_html(converter, build_path, settings)
+        convert_html(converter, settings)
 
 
-def read_json(json_filename: str) -> JSON:
+def read_variables(settings_filename: str, version: str) -> dict:
+    """Read the variables."""
+    settings = cast(Settings, read_json(settings_filename))
+    variables = cast(Variables, {})
+    for variable_file in settings["VariablesFiles"]:
+        variables.update(cast(Variables, read_json(variable_file)))
+    variables["VERSIE"] = version if version == "wip" else f"v{version}"
+    variables["VERSIE_ZONDER_V"] = version
+    variables["DATUM"] = datetime.date.today().strftime("%d-%m-%Y")
+    return variables
+
+
+def read_settings(settings_filename: str, variables: Variables) -> dict:
+    """Read the settings."""
+    settings = read_json(settings_filename, variables)
+    settings["Version"] = variables["VERSIE"]
+    settings["Date"] = variables["DATUM"]
+    return settings
+
+
+def read_json(json_filename: str, variables: Variables | None = None) -> JSON:
     """Read JSON from the specified filename."""
+    variables = variables or {}
     with open(json_filename, encoding="utf-8") as json_file:
-        return JSON(json.load(json_file))
+        json_text = re.sub(
+            VARIABLE_USE_PATTERN,
+            lambda variable: variables.get(variable.group(1), variable.group(0)),
+            json_file.read()
+        )
+        return JSON(json.loads(json_text))
 
 
 def write_xml(xml: ElementTree, settings: Settings) -> None:
@@ -70,18 +93,18 @@ def copy_files(settings: Settings, output_format: str) -> None:
             shutil.copy(source_path, destination_path)
 
 
-def convert_html(converter, build_path: pathlib.Path, settings: Settings) -> None:
+def convert_html(converter, settings: Settings) -> None:
     """Convert the XML to HTML."""
+    build_path = get_build_path(settings)
     html_build_filename = build_path / settings["OutputFormats"]["html"]["OutputFile"]
     html_builder = HTMLBuilder(html_build_filename, pathlib.Path(""))
     converter.convert(html_builder)
     copy_output(html_build_filename, settings, "html")
 
 
-def convert_pdf(converter, build_path: pathlib.Path, settings: Settings, variables: Variables) -> None:
+def convert_pdf(converter, settings: Settings, variables: Variables) -> None:
     """Convert the XML to PDF."""
     build_path = get_build_path(settings)
-    pdf_build_filename = build_path / pathlib.Path(settings["OutputFormats"]["pdf"]["OutputFile"])
     html_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".html").name
     html_builder = HTMLContentBuilder(html_filename, build_path)
     converter.convert(html_builder)
@@ -110,8 +133,9 @@ def convert_pdf(converter, build_path: pathlib.Path, settings: Settings, variabl
     copy_output(pdf_build_filename2, settings, "pdf")
 
 
-def convert_docx(converter, build_path: pathlib.Path, settings: Settings) -> None:
+def convert_docx(converter, settings: Settings) -> None:
     """Convert the XML to docx."""
+    build_path = get_build_path(settings)
     docx_build_filename = build_path / settings["OutputFormats"]["docx"]["OutputFile"]
     docx_builder = DocxBuilder(
         docx_build_filename,
@@ -122,16 +146,18 @@ def convert_docx(converter, build_path: pathlib.Path, settings: Settings) -> Non
     copy_output(docx_build_filename, settings, "docx")
 
 
-def convert_pptx(converter, build_path: pathlib.Path, settings: Settings) -> None:
+def convert_pptx(converter, settings: Settings) -> None:
     """Convert the XML to pptx."""
+    build_path = get_build_path(settings)
     pptx_build_filename = build_path / settings["OutputFormats"]["pptx"]["OutputFile"]
     pptx_builder = PptxBuilder(pptx_build_filename, pathlib.Path(settings["OutputFormats"]["pptx"]["ReferenceFile"]))
     converter.convert(pptx_builder)
     copy_output(pptx_build_filename, settings, "pptx")
 
 
-def convert_xlsx(converter, build_path: pathlib.Path, settings: Settings) -> None:
+def convert_xlsx(converter, settings: Settings) -> None:
     """Convert the XML to xlsx."""
+    build_path = get_build_path(settings)
     xlsx_build_filename = build_path / settings["OutputFormats"]["xlsx"]["OutputFile"]
     xlsx_builder = XlsxBuilder(xlsx_build_filename)
     converter.convert(xlsx_builder)
@@ -169,4 +195,4 @@ def main(settings_filenames: List[str], version: str) -> None:
 if __name__ == "__main__":
     args = parse_cli_arguments()
     logging.basicConfig(level=getattr(logging, args.log))
-    main(args.settings, args.version)
+    main(args.settings, os.getenv("VERSION") or args.version)

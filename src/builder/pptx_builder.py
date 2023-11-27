@@ -52,11 +52,11 @@ class PptxBuilder(Builder):
                 self.add_slide(self.CONTENT_SLIDE, text)
                 self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(24)  # type: ignore
             else:
-                if len(self.current_slide.shapes) == 1:
+                if len(self.current_slide.shapes) == 1:  # type: ignore
                     self.add_text_box()
                     self.current_slide.shapes[1].text = text  # type: ignore
                 else:
-                    paragraph = self.current_slide.shapes[1].text_frame.add_paragraph()
+                    paragraph = self.current_slide.shapes[1].text_frame.add_paragraph()  # type: ignore
                     paragraph.text = text
                     paragraph.font.size = Pt(20)
         elif (

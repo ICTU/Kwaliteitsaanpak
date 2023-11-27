@@ -123,6 +123,7 @@ class MarkdownConverter:
             self.end_lists()
             self.end_table()
             return  # Empty line, nothing further to do
+        stripped_line = self.process_variables(stripped_line)
         if match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
             attributes: dict[bytes | str, bytes | str] = {}
             if attribute := match.group(2):
@@ -144,6 +145,10 @@ class MarkdownConverter:
         else:
             with self.element(xmltags.PARAGRAPH):
                 self.process_formatted_text(stripped_line)
+
+    def process_variables(self, line: str) -> str:
+        """Replace the variables with their values."""
+        return re.sub(markdown_syntax.VARIABLE_USE_PATTERN, lambda variable: self.variables[variable.group(1)], line)
 
     def process_heading(self, heading: str, level: int) -> None:
         """Process a heading."""
@@ -271,13 +276,6 @@ class MarkdownConverter:
                     with self.element(xmltags.ANCHOR, {xmltags.ANCHOR_LINK: match.group(2)}):
                         self.process_formatted_text(match.group(1))
                     line = line[len(match.group(0)) :]
-                elif (match := re.match(markdown_syntax.VARIABLE_USE_PATTERN, line)) is not None:
-                    format_found = True
-                    self.flush(seen)
-                    seen = ""
-                    match = cast(re.Match, match)
-                    self.builder.data(self.variables[match.group(1)])
-                    line = line[len(match.group(0)) :]
                 elif match := re.match(markdown_syntax.IMAGE_PATTERN, line):
                     format_found = True
                     self.flush(seen)
@@ -305,13 +303,13 @@ class MarkdownConverter:
         self.end_sections()
         self.builder.end(xmltags.DOCUMENT)
 
-    def add_element(self, tag: str, text: str = "", attributes: TreeBuilderAttributes = None) -> None:
+    def add_element(self, tag: str, text: str = "", attributes: TreeBuilderAttributes | None = None) -> None:
         """Add an element with text."""
         with self.element(tag, attributes):
             self.flush(text)
 
     @contextlib.contextmanager
-    def element(self, tag: str, attributes: TreeBuilderAttributes = None):
+    def element(self, tag: str, attributes: TreeBuilderAttributes | None = None):
         """Return a context manager."""
         element = self.builder.start(tag, attributes or {})
         try:

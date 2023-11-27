@@ -160,6 +160,12 @@ class MarkdownTest(MarkdownConverterTestCase):
         """Test that a variable is replaced with its value."""
         self.assertEqual("Replace variable.", self.xml().find(xmltags.PARAGRAPH).text)
 
+    @patch("markdown_converter.open", mock_open(read_data="Replace [anchor](https://$var$/).\n"))
+    def test_variable_in_url(self):
+        """Test that a variable in a URL is replaced with its value."""
+        anchor_link = self.xml().find(xmltags.PARAGRAPH).find(xmltags.ANCHOR).attrib[xmltags.ANCHOR_LINK]
+        self.assertEqual("https://variable/", anchor_link)
+
     @patch(
         "markdown_converter.open", mock_open(read_data="<!-- begin: measure -->\nMeasure\n<!-- end: measure -->\n")
     )

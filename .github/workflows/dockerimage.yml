@@ -13,7 +13,7 @@ jobs:
     - name: Generate artifacts
       run: docker compose up
     - name: Archive artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: dist
         path: docs/wip

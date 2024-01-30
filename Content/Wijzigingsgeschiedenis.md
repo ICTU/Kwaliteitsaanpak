@@ -5,12 +5,12 @@
 * Het hoofdstuk 'Begrippenkader' is verwijderd. De begrippen die hierin werden besproken staan ook in de bijlage 'Terminologie'. Het hoofdstuk 'Leeswijzer' verwijst nu naar deze bijlage.
 * Op relevante plekken zijn verwijzingen naar templates, self-assessment checklist en wijzigingsgeschiedenis toegevoegd.
 * Paragraaf 3.5 "Evolutie van de aanpak zelf" verwijderd uit hoofdstuk 3 "Leeswijzer". Deze tekst staat ook al in hoofdstuk 2 "Doelstellingen en uitgangspunten".
-* In M01 "Het project levert in elke fase vastgestelde producten en informatie op": De testplannen uitgesplitst naar MTP en detailtestplannen zodat deze apart kunnen worden ingevuld in de self-assessment. Onder het kopje Vrijgaveadvies, opgenomen dat het de verantwoordelijkheid van de opdrachtgever is om te organiseren dat betrokken partijen informatie aanleveren voor het vrijgaveadvies.
+* In M01 "Het project levert in elke fase vastgestelde producten en informatie op": De testplannen uitgesplitst naar MTP en detailtestplannen zodat deze apart kunnen worden ingevuld in de self-assessment. Onder het kopje Vrijgaveadvies, opgenomen dat het de verantwoordelijkheid van de opdrachtgevende organisatie is om te organiseren dat betrokken partijen informatie aanleveren voor het vrijgaveadvies.
 * De titel van maatregel M02 is veranderd van "Het project zorgt dat het product continu aan de kwaliteitsnormen voldoet" in "Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet". Continue aan alle kwaliteitsnormen voldoen is in de praktijk onmogelijk (zie ook M08 "Het project maakt technische schuld inzichtelijk en lost deze planmatig op"). Hiermee is de overlap met M06 "Het project meet kwaliteitsnormen geautomatiseerd en frequent" zo groot dat deze laatste maatregel is komen te vervallen.
-* In maatregel M14 "Het project bereidt samen met opdrachtgever en belanghebbenden de realisatie voor" toegevoegd dat bij significante wijzigingen aan de projectkader de voorfase geheel of deels opnieuw wordt uitgevoerd.
+* De naam van maatregel M14 "Het project bereidt samen met opdrachtgever en belanghebbenden de realisatie voor" veranderd in "M14: Het project bereidt samen met opdrachtgevende organisatie en betrokken partijen de realisatie voor". Daarnaast toegevoegd dat bij significante wijzigingen aan de projectkaders de voorfase geheel of deels opnieuw wordt uitgevoerd.
 * In maatregel M16 "Het project gebruikt tools voor vastgestelde taken" toegevoegd dat projecten de genoemde tools *of gelijkwaardige alternatieven* gebruiken. Verder GitLab SAST verwijderd uit de lijst van tools en SonarQube en OWASP ZAP over twee regels verspreid zodat ze apart kunnen worden ingevuld in de self-assessment. Daarnaast M16 verplaatst naar het hoofdstuk "Producten".
 * De scope van maatregel M29 "ICTU zorgt dat een project verantwoord kan starten" gereduceerd tot het organiseren van de interne dienstverlening voor aanvang van een project en de titel hieraan aangepast: "ICTU organiseert voor aanvang van een project de interne dienstverlening".
-* De naam van maatregel M31 "Het project beschikt over vastgestelde informatie" veranderd in "Het project beschikt over actuele vastgestelde informatie" en de tekst van de maatregel hieraan aangepast. Een extra kopje "Afspraken tussen opdrachtgever en beheerpartij" toegevoegd.
+* De naam van maatregel M31 "Het project beschikt over vastgestelde informatie" veranderd in "Het project beschikt over actuele vastgestelde informatie" en de tekst van de maatregel hieraan aangepast. Een extra kopje "Afspraken tussen opdrachtgevende organisatie en beheerpartij" toegevoegd.
 * Maatregel M35 "Het project hanteert een agile architectuuraanpak" toegevoegd.
 * De bijlage 'Wijzigingsgeschiedenis' verplaatst naar een los document in PDF- en HTML-formaat.
 
@@ -37,6 +37,7 @@
 * De term "DevOps-werkwijze" vervangen door "operationeel beheer" of door "operationeel en/of applicatiebeheer" op de plekken waar het gaat over de dienstverlening en niet zozeer over de aanpak.
 * De term "high level design" (HLD) vervangen door "infrastructuurarchitectuur" (IA) of waar beide termen werden gebruikt HLD verwijderd. Het HLD-template hernoemd naar IA-template.
 * "Beheerorganisatie" en "beheerpartij" werden door elkaar gebruikt. Alle voorkomens van beheerpartij vervangen door beheerorganisatie.
+* De term "opdrachtgever" vervangen door "opdrachtgevende organisatie" waar dat bedoeld werd. Opdrachtgever en opdrachtgevende organisatie toegevoegd aan de terminologie bijlagen.
 
 ### Versie 3.0.1, 4 april 2023
 

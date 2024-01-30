@@ -109,17 +109,17 @@ Leerdoelen (week 3):
 ## Projectcontext
 
 Leerdoelen (week 1):
-* Je begrijpt wat de doelstelling van de opdrachtgever met het project is, c.q. je weet welk probleem het project moet oplossen
+* Je begrijpt wat de doelstelling van de opdrachtgevende organisatie met het project is, c.q. je weet welk probleem het project moet oplossen
 * Je weet wie de beoogde gebruikers zijn en wie er verder belanghebbende zijn bij het projectresultaat
-* Je weet welke organisaties naast de opdrachtgever en ICTU bij het project zijn betrokken
+* Je weet welke organisaties naast de opdrachtgevende organisatie en ICTU bij het project zijn betrokken
 
 ## Projectorganisatie
 
 Leerdoelen (week 2):
 * Je weet welke governancestructuur er is afgesproken (stuurgroep, projectleidersoverleg, rapportages, e.d.)
-* Je weet wie welke rol speelt bij de opdrachtgever, ICTU en andere betrokken organisaties (projectleider, product owner, software delivery manager, e.d.)
+* Je weet wie welke rol speelt bij de opdrachtgevende organisatie, ICTU en andere betrokken organisaties (opdrachtgever, projectleider, product owner, software delivery manager, e.d.)
 * Je weet wie welke rol speelt binnen het/de Scrumteam(s) in je project (ontwikkelaar, tester, devops-engineer, ontwerper, etc.)
-* Je hebt kennisgemaakt met de kwaliteitsmanager aan de kant van de opdrachtgever
+* Je hebt kennisgemaakt met de kwaliteitsmanager aan de kant van de opdrachtgevende organisatie
 
 ## Proces
 

@@ -6,7 +6,7 @@ Technische schuld zijn eigenschappen van de software die de lange termijn inzetb
 
 De kwaliteitsmanager maakt de technische schuld inzichtelijk met behulp van Quality-time, het kwaliteitssysteem van ICTU. Technische schuld die niet geautomatiseerd kan worden gemeten legt de kwaliteitsmanager handmatig vast.
 
-Als het Scrumteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in Quality-time om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het Scrumteam om de omvang van de technische schuld in te schatten in user-story-punten. Daarna wordt een plan gemaakt om de technische schuld in een beheerst tempo weg te werken; uitgangspunt is ongeveer 10% van de punten die het Scrumteam normaal in een sprint doet. Dit kan in principe zonder overleg met de opdrachtgever omdat het leveren van kwaliteit onderdeel van het werk is.
+Als het Scrumteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in Quality-time om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het Scrumteam om de omvang van de technische schuld in te schatten in user-story-punten. Daarna wordt een plan gemaakt om de technische schuld in een beheerst tempo weg te werken; uitgangspunt is ongeveer 10% van de punten die het Scrumteam normaal in een sprint doet. Dit kan in principe zonder overleg met de opdrachtgevende organisatie omdat het leveren van kwaliteit onderdeel van het werk is.
 
 ### Rationale
 

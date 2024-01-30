@@ -2,18 +2,18 @@
 
 #include "Content/Maatregelen/M31/Definitie.md"
 
-De opdrachtgever zorgt dat het project vanaf de start van de voorfase beschikt over:
+De opdrachtgevende organisatie zorgt dat het project vanaf de start van de voorfase beschikt over:
 
 1. Projectstartarchitectuur,
 2. Business impact analysis,
 3. Privacy impact assessment,
-4. Afspraken tussen opdrachtgever en beheerpartij.
+4. Afspraken tussen opdrachtgevende organisatie en beheerorganisatie.
 
-Als de benodigde informatie niet gereed is bij de start van de voorfase dan maken opdrachtgever en ICTU nadere afspraken over de manier waarop de benodigde informatie nog tijdens de voorfase beschikbaar komt voor het project.
+Als de benodigde informatie niet gereed is bij de start van de voorfase dan maken opdrachtgevende organisatie en ICTU nadere afspraken over de manier waarop de benodigde informatie nog tijdens de voorfase beschikbaar komt voor het project.
 
 ### Projectstartarchitectuur
 
-Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. De PSA is een concreet en doelgericht ICT-architectuurkader waarbinnen het project moet worden uitgevoerd. In de PSA zijn de architectuurvisie, enterprise-architectuur en overige architecturen van de opdrachtgever vertaald naar aan het product te stellen eisen. Een PSA bevat in ieder geval de volgende onderwerpen:
+Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. De PSA is een concreet en doelgericht ICT-architectuurkader waarbinnen het project moet worden uitgevoerd. In de PSA zijn de architectuurvisie, enterprise-architectuur en overige architecturen van de opdrachtgevende organisatie vertaald naar aan het product te stellen eisen. Een PSA bevat in ieder geval de volgende onderwerpen:
 
 * Een beschrijving van de doelen en ambities waaraan het project bijdraagt en invulling geeft. Dus niet de projectdoelen en -ambitie.
 * Een afbakening van het project en de context van de voorziening/oplossing die het project gaat realiseren. De PSA beschrijft niet de implementatie van de voorziening zelf (dit blijft een 'black box'), maar wel het gewenste gedrag in het grotere geheel. Denk o.a. ook aan relaties met andere projecten en generieke en specifieke diensten (services).
@@ -37,18 +37,18 @@ In een privacy impact assessment (PIA) legt de opdrachtgevende organisatie vast 
 
 Als een PIA niet nodig is, dan is een verklaring daaromtrent vereist.
 
-### Afspraken tussen opdrachtgever en beheerpartij
+### Afspraken tussen opdrachtgevende organisatie en beheerorganisatie
 
-Opdrachtgever heeft afspraken gemaakt met een (interne of externe) beheerpartij die voornemens is het beheer van de software uit te voeren. De afspraken omvatten in ieder geval de inzet van medewerkers van de beheerpartij tijdens de voorfase en het type beheer dat de beheerpartij voornemens is te gaan uitvoeren: operationeel beheer, applicatiebeheer en/of functioneel beheer.
+De opdrachtgevende organisatie heeft afspraken gemaakt met een (interne of externe) beheerorganisatie die voornemens is het beheer van de software uit te voeren. De afspraken omvatten in ieder geval de inzet van medewerkers van de beheerorganisatie tijdens de voorfase en het type beheer dat de beheerorganisatie voornemens is te gaan uitvoeren: operationeel beheer, applicatiebeheer en/of functioneel beheer.
 
-De beheerpartij stelt relevante informatie ter beschikking aan het project zoals beveiligingsbeleid, beheeracceptatiecriteria, documentatie van de te gebruiken voorzieningen voor bijvoorbeeld authenticatie en autorisatie en verder te hanteren kaders en richtlijnen.
+De beheerorganisatie stelt relevante informatie ter beschikking aan het project zoals beveiligingsbeleid, beheeracceptatiecriteria, documentatie van de te gebruiken voorzieningen voor bijvoorbeeld authenticatie en autorisatie en verder te hanteren kaders en richtlijnen.
 
 ### Aanvullende informatie
 
-Waar mogelijk stelt de opdrachtgever ook andere relevante informatie ter beschikking aan het project zoals een eventueel programma van eisen, procesbeschrijvingen van te ondersteunen bedrijfsprocessen, documentatie van te koppelen systemen en verder te hanteren kaders en richtlijnen.
+Waar mogelijk stelt de opdrachtgevende organisatie ook andere relevante informatie ter beschikking aan het project zoals een eventueel programma van eisen, procesbeschrijvingen van te ondersteunen bedrijfsprocessen, documentatie van te koppelen systemen en verder te hanteren kaders en richtlijnen.
 
 ### Rationale
 
 De genoemde producten hebben tot doel om de benodigde omvang, kosten en doorlooptijd van de voorfase te kunnen schatten. De projectstartarchitectuur vormt input voor de tijdens de voorfase te ontwikkelen producten zoals functionele en niet-functionele eisen, functioneel ontwerp en softwarearchitectuur. Een BIA en eventuele PIA zijn richtinggevend voor de in de voorfase te selecteren beveiligingsmaatregelen.
 
-Als deze producten er niet zijn, niet actueel zijn, en/of niet compleet zijn, dan moeten ze in de voorfase alsnog worden gemaakt, bijgewerkt en/of aangevuld. Dit vereist grote betrokkenheid van de organisatie van de opdrachtgever, en is in de regel lastig op korte termijn te organiseren.
+Als deze producten er niet zijn, niet actueel zijn, en/of niet compleet zijn, dan moeten ze in de voorfase alsnog worden gemaakt, bijgewerkt en/of aangevuld. Dit vereist grote betrokkenheid van de opdrachtgevende organisatie, en is in de regel lastig op korte termijn te organiseren.

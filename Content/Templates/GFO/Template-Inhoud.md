@@ -36,7 +36,7 @@ Dit hoofdstuk beschrijft de werking van {de applicatie} op hoofdlijnen. Het besc
 
 # Use cases
 
-{Gebruik voor de beschrijving van use cases in de voorfase een methode als de “casual” variant van Cockburn ("Writing effective use cases", 2001). In de realisatiefase en/of voor overdracht naar een andere partij kan de “fully dressed” variant (of een andere methode voor uitgebreidere beschrijvingen) worden toegepast. Doe dit gezien de onderhoudslast alleen als de opdrachtgever en/of ontvangende partij daar expliciet om vraagt.}
+{Gebruik voor de beschrijving van use cases in de voorfase een methode als de “casual” variant van Cockburn ("Writing effective use cases", 2001). In de realisatiefase en/of voor overdracht naar een andere partij kan de “fully dressed” variant (of een andere methode voor uitgebreidere beschrijvingen) worden toegepast. Doe dit gezien de onderhoudslast alleen als de opdrachtgevende organisatie en/of ontvangende partij daar expliciet om vraagt.}
 
 {Leg bij een update in de realisatiefase vast welke use cases zijn gerealiseerd, eventueel met de rationale en met een verwijzing naar de ontwerpbesluiten (in het SAD) die daarvoor zijn genomen.}
 
@@ -55,7 +55,7 @@ De use cases zijn gegroepeerd naar de functies zoals beschreven in het vorige ho
 
 ## {F1} - {naam functie 1}
 
-Deze paragraaf bevat de use cases behorende bij functie "{functie}". 
+Deze paragraaf bevat de use cases behorende bij functie "{functie}".
 
 ### {UC1.1} - {naam use case 1.1}
 

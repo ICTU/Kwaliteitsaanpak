@@ -2,7 +2,7 @@
 
 Dit hoofdstuk bevat de ontwerpbeslissingen die betrekking hebben op de software. Zij zijn de basis voor de in dit document uitgewerkte software-architectuur.
 
-{Dit hoofdstuk bevat een aantal veelgebruikte ontwerpbeslissingen. Waar nodig moeten ze worden aangevuld of aangepast, waarbij de relaties met de door opdrachtgever en beheerorganisatie gedefinieerde eisen en architectuurkaders traceerbaar zijn.}
+{Dit hoofdstuk bevat een aantal veelgebruikte ontwerpbeslissingen. Waar nodig moeten ze worden aangevuld of aangepast, waarbij de relaties met de door opdrachtgevende organisatie en beheerorganisatie gedefinieerde eisen en architectuurkaders traceerbaar zijn.}
 
 ## Ontwerpprincipes
 

@@ -8,7 +8,7 @@ De realisatiefase is een vervolg op de voorfase {voorfaseproject}. De documenten
 * Softwarearchitectuurdocument (SAD), versie {versie},
 * Infrastructuurarchitectuur (IA), versie {versie},
 * Mastertestplan, versie {versie},
-* Testplan softwarerealisatie, versie {versie},
+* Detailtestplan softwarerealisatie, versie {versie},
 * Informatiebeveiligingsplan (IB-plan), versie {versie},
 * Kwaliteitsplan, versie {versie},
 * Niet-functionele eisen (NFE), versie {versie},

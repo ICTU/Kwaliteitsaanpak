@@ -104,7 +104,7 @@ Logische testgevallen worden vastgelegd en gekoppeld met use cases en user stori
 
 Beschikbare templates:
 
-- [Template detailtestplan]($BASE_URL$/$VERSIE$/ICTU-Template-Detailtestplan.docx).
+- [Template detailtestplan softwarerealisatie]($BASE_URL$/$VERSIE$/ICTU-Template-Detailtestplan-Softwarerealisatie.docx).
 
 ### Informatiebeveiligingsplan
 
@@ -160,7 +160,7 @@ Bovenstaande figuur laat de belangrijkste relaties zien tussen de verschillende 
 
 De opdrachtgevende organisatie is primair verantwoordelijk voor het beschrijven van de functionele en niet-functionele eisen, de geprioriteerde backlog, het mastertestplan en het informatiebeveiligingsplan.
 
-ICTU is primair verantwoordelijk voor plan van aanpak, softwarearchitectuurdocumentatie, globaal functioneel ontwerp, prototype, detailtestplannen en testrapportages voor bouwtesten, kwaliteitsplan, deploybare versie van de software, documentatie voor deployment en operationeel beheer, release notes en vrijgaveadvies.
+ICTU is primair verantwoordelijk voor plan van aanpak, softwarearchitectuurdocumentatie, globaal functioneel ontwerp, prototype, detailtestplannen en testrapportages voor softwarerealisatie, kwaliteitsplan, deploybare versie van de software, documentatie voor deployment en operationeel beheer, release notes en vrijgaveadvies.
 
 Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de kwaliteit van deze software, zie [$M32$](#m32). In dat geval levert het project ook de onderzoeksresultaten daarvan en maakt een transitieplan, en indien van toepassing, een plan voor het aflossen van technische schuld.
 

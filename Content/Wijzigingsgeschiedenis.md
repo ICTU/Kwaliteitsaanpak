@@ -16,7 +16,7 @@
 
 #### Samenvatting Kwaliteitsaanpak
 
-* HTML-versie van de samenvatting toegevoegd aan de set van documenten zodat er een toegankelijk alternatief is voor de PDF-versie van de samenvatting.
+* Een HTML-versie van de samenvatting toegevoegd aan de set van documenten zodat er een toegankelijk alternatief is voor de PDF-versie van de samenvatting.
 
 #### Template Niet-Functionele Eisen
 
@@ -24,9 +24,9 @@
 
 #### Template Kwaliteitsplan
 
-* Paragraag 3.1.4 "Werkwijze" hernoemd naar "Ontwikkelproces", overeenkomstig maatregel M05 "Het project hanteert een iteratief en incrementeel ontwikkelproces".
+* Paragraaf 3.1.4 "Werkwijze" hernoemd naar "Ontwikkelproces", overeenkomstig maatregel M05 "Het project hanteert een iteratief en incrementeel ontwikkelproces".
 * De tekst over kwaliteitsnormen uit paragraaf 3.1.4 ondergebracht in een nieuwe paragraaf 3.1.5 "Behalen van kwaliteitsnormen".
-* Koppeling tussen Use cases, Logische testgevallen, User stories en Epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
+* Koppeling tussen use cases, logische testgevallen, user stories en epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
 
 #### Template Detailtestplan
 
@@ -34,7 +34,7 @@
 
 #### Self-assessment checklist
 
-* Maak het mogelijk bij maatregelen met submaatregelen ook de hoofdmaatregel te scoren.
+* Het mogelijk gemaakt bij maatregelen met submaatregelen ook de hoofdmaatregel te scoren.
 
 #### Alle documenten
 

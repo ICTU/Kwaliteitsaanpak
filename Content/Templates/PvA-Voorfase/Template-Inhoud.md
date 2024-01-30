@@ -19,7 +19,7 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Infrastructuurarchitectuur (IA)                 | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Product risico analyse (PRA)                    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Mastertestplan (op basis van PRA)               | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Testplan softwarerealisatie                     | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Detailtestplan softwarerealisatie               | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Threat & vulnerability assessment (TVA)         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Informatiebeveiligingsplan  (IB-plan)           | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Niet-functionele eisen (NFE)                    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
@@ -185,7 +185,7 @@ Onderstaand is de verwachte inzet per rol van ICTU voor de uitvoering van dit pl
 | UX-designer                            | {x} uur         | Gebruikersonderzoek, opstellen UX-richtlijnen, maken prototype {of wireframe/mockup/animatie}, reviewen {documenten}                                                                                         |
 | Informatiebeveiligingsexpert           | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                                               |
 | Privacy expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                                               |
-| Testmanager                            | {x} uur         | Penvoerder testplan softwarerealisatie, reviewen {documenten}                                                                                                                                                |
+| Testmanager                            | {x} uur         | Penvoerder detailtestplan softwarerealisatie, reviewen {documenten}                                                                                                                                          |
 | Kwaliteitsmanager                      | {x} uur         | Penvoerder kwaliteitsplan, reviewen {documenten}                                                                                                                                                             |
 | Software delivery manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het Scrumteam, inhoudelijke rapportage                                           |
 | Projectleider                          | {x} uur         | Voorbereiden en plannen kick-off, opstellen plan van aanpak en voorstel inclusief projectovereenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |

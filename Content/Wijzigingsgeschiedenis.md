@@ -28,6 +28,10 @@
 * De tekst over kwaliteitsnormen uit paragraaf 3.1.4 ondergebracht in een nieuwe paragraaf 3.1.5 "Behalen van kwaliteitsnormen".
 * Koppeling tussen Use cases, Logische testgevallen, User stories en Epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
 
+#### Template Detailtestplan
+
+* Template detailtestplan hernoemd naar Template detailtestplan softwarerealisatie om duidelijk te maken dat het alleen gericht is op softwarerealisatie en niet op andere onderwerpen waarvoor een detailtestplan zou kunnen worden gemaakt zoals infrastructuurtesten.
+
 #### Self-assessment checklist
 
 * Maak het mogelijk bij maatregelen met submaatregelen ook de hoofdmaatregel te scoren.
@@ -38,6 +42,7 @@
 * De term "high level design" (HLD) vervangen door "infrastructuurarchitectuur" (IA) of waar beide termen werden gebruikt HLD verwijderd. Het HLD-template hernoemd naar IA-template.
 * "Beheerorganisatie" en "beheerpartij" werden door elkaar gebruikt. Alle voorkomens van beheerpartij vervangen door beheerorganisatie.
 * De term "opdrachtgever" vervangen door "opdrachtgevende organisatie" waar dat bedoeld werd. Opdrachtgever en opdrachtgevende organisatie toegevoegd aan de terminologie bijlagen.
+* De term "Testplan softwarerealisatie" vervangen door "Detailtestplan softwarerealisatie".
 
 ### Versie 3.0.1, 4 april 2023
 

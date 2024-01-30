@@ -1,6 +1,6 @@
 # Scope
 
-Dit hoofdstuk beschrijft welke projecten, systemen, componenten, releases, use cases, user stories en niet-functionele eigenschappen binnen of juist buiten de scope van dit testplan vallen.
+Dit hoofdstuk beschrijft welke projecten, systemen, componenten, releases, use cases, user stories en niet-functionele eigenschappen binnen of juist buiten de scope van dit detailtestplan vallen.
 
 ## Binnen scope
 
@@ -14,7 +14,7 @@ Dit hoofdstuk beschrijft welke projecten, systemen, componenten, releases, use c
 
 Dit hoofdstuk beschrijft hoe de testen conform de teststrategie, beschreven in het Mastertestplan, concreet worden aangepakt.
 
-{De Kwaliteitsaanpak schrijft voor dat er in de voorfase een Mastertestplan (door de opdrachtgevende organisatie) is opgesteld. Mocht dit niet zijn opgesteld, dan zal het detailtestplan minimaal aan de door ICTU gestelde kwaliteitsnormen moeten voldoen.}
+{De Kwaliteitsaanpak schrijft voor dat er in de voorfase een Mastertestplan (door de opdrachtgevende organisatie) is opgesteld. Mocht dit niet zijn opgesteld, dan zal dit detailtestplan minimaal aan de door ICTU gestelde kwaliteitsnormen moeten voldoen.}
 
 ## Soorten testen
 

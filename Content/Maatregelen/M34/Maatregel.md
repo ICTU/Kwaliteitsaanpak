@@ -4,7 +4,7 @@
 
 Het project gebruikt de Nederlandse praktijkrichtlijn NEN NPR 5325:2017 als leidraad voor de overdracht van software aan een andere partij. De paragraafnummers hieronder verwijzen naar de betreffende paragraaf in NPR 5325.
 
-Het project zorgt, bij voorkeur altijd maar in ieder geval bij de overdracht, dat de software, documentatie en testmiddelen aantoonbaar voldoen aan onderstaande criteria. Waar nodig scherpt het project, in afstemming met opdrachtgever en ontvangende partij, de criteria aan.
+Het project zorgt, bij voorkeur altijd maar in ieder geval bij de overdracht, dat de software, documentatie en testmiddelen aantoonbaar voldoen aan onderstaande criteria. Waar nodig scherpt het project, in afstemming met opdrachtgevende organisatie en ontvangende partij, de criteria aan.
 
 1. De documentatie beschrijft de ontwikkel- en testomgeving die is toegepast (5.1),
 1. De functionele documentatie beschrijft gegevensmodellen, functionele indeling, koppelingen, berichtdefinities en workflows/processen (5.2),
@@ -21,4 +21,4 @@ Het project zorgt, bij voorkeur altijd maar in ieder geval bij de overdracht, da
 1. Er is traceerbaarheid van eisen naar testgevallen (7.5), en
 1. De testset is goed opgebouwd (7.6).
 
-Ten behoeve van de overdracht maakt het project, in afstemming met opdrachtgever en ontvangende partij, een plan voor de voorbereiding van de overdracht, de kennisoverdracht, de overdracht van de software zelf en eventuele nazorg.
+Ten behoeve van de overdracht maakt het project, in afstemming met opdrachtgevende organisatie en ontvangende partij, een plan voor de voorbereiding van de overdracht, de kennisoverdracht, de overdracht van de software zelf en eventuele nazorg.

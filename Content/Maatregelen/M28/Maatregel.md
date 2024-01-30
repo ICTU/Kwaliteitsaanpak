@@ -15,7 +15,7 @@ Voor de belangrijkste verschillen beschrijft de projectleider:
 
 De projectleider is verantwoordelijk voor het doen van de self-assessment, die in de regel door de software delivery manager wordt uitgevoerd. De kwaliteitsmanager reviewt de self-assessment, of de software delivery manager en kwaliteitsmanager voeren de self-assessment samen uit.
 
-De self-assessment is een intern product, maar kan gedeeld worden met opdrachtgevers en andere betrokkenen. Voor het uitvoeren en vastleggen van de self-assessment stelt ICTU een [self-assessment formulier]($BASE_URL$/$VERSIE$/ICTU-Kwaliteitsaanpak-Checklist.xlsx) beschikbaar.
+De self-assessment is een intern product, maar kan gedeeld worden met opdrachtgevende organisatie en andere betrokken partijen. Voor het uitvoeren en vastleggen van de self-assessment stelt ICTU een [self-assessment formulier]($BASE_URL$/$VERSIE$/ICTU-Kwaliteitsaanpak-Checklist.xlsx) beschikbaar.
 
 ### Rationale
 

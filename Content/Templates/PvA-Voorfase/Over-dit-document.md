@@ -6,7 +6,7 @@ Bij de uitvoering van softwareontwikkelprojecten hanteert ICTU de $KWALITEITSAAN
 
 De voorfase heeft de volgende doelen:
 
-1. Vaststellen of het mogelijk is om binnen de door de opdrachtgever gestelde kaders productierijpe software op te leveren {en operationeel te beheren} met de gevraagde functionaliteit en kwaliteit, en zo ja, onder welke randvoorwaarden. Hierbij wordt gekeken naar:
+1. Vaststellen of het mogelijk is om binnen de door {de opdrachtgevende organisatie} gestelde kaders productierijpe software op te leveren {en operationeel te beheren} met de gevraagde functionaliteit en kwaliteit, en zo ja, onder welke randvoorwaarden. Hierbij wordt gekeken naar:
     a. techniek (zoals platform, voortbrengingsproces software en koppelingen),
     a. scope,
     a. planning,

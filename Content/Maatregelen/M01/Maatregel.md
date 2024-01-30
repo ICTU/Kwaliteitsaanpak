@@ -6,28 +6,30 @@ Opdrachtgevende organisatie, ICTU, beheerorganisatie en andere meewerkende parti
 
 De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het ✔ geeft aan in welke fase ze worden opgeleverd.
 
-| Product                                                                     | Voor start | Voorfase | Realisatiefase |
-|-----------------------------------------------------------------------------|------------|----------|----------------|
-| Plan van aanpak: voorfase                                                   | ✔          |          |                |
-| Beschrijving van functionele eisen                                          |            | ✔        | ✔              |
-| Beschrijving van niet-functionele eisen                                     |            | ✔        | ✔              |
-| Product backlog                                                             |            | ✔        | ✔              |
-| Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur) |            | ✔        | ✔              |
-| Mastertestplan                                                              |            | ✔        | ✔              |
-| Detailtestplannen                                                           |            | ✔        | ✔              |
-| Informatiebeveiligingsplan                                                  |            | ✔        | ✔              |
-| Kwaliteitsplan                                                              |            | ✔        | ✔              |
-| Plan van aanpak: realisatiefase                                             |            | ✔        |                |
-| Deploybare versie van de software                                           |            |          | ✔              |
-| Testrapportages                                                             |            |          | ✔              |
-| Documentatie voor deployment en operationeel beheer                         |            |          | ✔              |
-| Software bill of materials                                                  |            |          | ✔              |
-| Release notes                                                               |            |          | ✔              |
-| Vrijgaveadvies                                                              |            |          | ✔              |
+| Product                                             | Voor start | Voorfase | Realisatiefase | Verantwoordelijke organisatie |
+|-----------------------------------------------------|------------|----------|----------------|-------------------------------|
+| Plan van aanpak: voorfase                           | ✔          |          |                | ICTU                          |
+| Beschrijving van functionele eisen                  |            | ✔        | ✔              | opdrachtgever                 |
+| Beschrijving van niet-functionele eisen             |            | ✔        | ✔              | opdrachtgever                 |
+| Product backlog                                     |            | ✔        | ✔              | opdrachtgever                 |
+| Ontwerp- en architectuurdocumentatie                |            | ✔        | ✔              | ICTU, beheerorganisatie       |
+| Mastertestplan                                      |            | ✔        | ✔              | opdrachtgever                 |
+| Detailtestplannen                                   |            | ✔        | ✔              | ICTU, beheerorganisatie       |
+| Informatiebeveiligingsplan                          |            | ✔        | ✔              | opdrachtgever                 |
+| Kwaliteitsplan                                      |            | ✔        | ✔              | ICTU                          |
+| Plan van aanpak: realisatiefase                     |            | ✔        |                | ICTU                          |
+| Deploybare versie van de software                   |            |          | ✔              | ICTU                          |
+| Testrapportages                                     |            |          | ✔              | ICTU, beheerorganisatie       |
+| Documentatie voor deployment en operationeel beheer |            |          | ✔              | ICTU                          |
+| Software bill of materials                          |            |          | ✔              | ICTU                          |
+| Release notes                                       |            |          | ✔              | ICTU                          |
+| Vrijgaveadvies                                      |            |          | ✔              | opdrachtgever                 |
 
 ### Plan van aanpak
 
 Het plan van aanpak voor de voorfase en het plan van aanpak voor de realisatiefase beschrijven de in deze fasen te realiseren producten en diensten, en de planning, werkwijze en verantwoordelijkheden voor de totstandkoming van die producten en diensten.
+
+Als tijdens de realisatiefase van het project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, bevat het plan van aanpak voor de voorfase een onderzoek naar de kwaliteit van deze software, zie [$M32$](#m32).
 
 Als operationeel en/of applicatiebeheer onderdeel is van de te leveren dienstverlening tijdens de realisatiefase bevat het plan van aanpak voor de realisatiefase de hiervoor noodzakelijke afspraken met de opdrachtgevende organisatie en de beheerorganisatie. De afspraken omvatten zowel de te behalen kwaliteitsniveaus van de dienstverlening als de uit te voeren operationele en applicatiebeheertaken. Daarnaast beschrijft het plan hoe informatie zal worden verzameld over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten. En hoe hierover zal worden gerapporteerd. Ook worden de criteria voor het beëindigen van de dienstverlening vastgelegd. De te leveren dienstverlening is afgestemd op het beheerplan van de beheerorganisatie.
 
@@ -76,7 +78,7 @@ De product owner is verantwoordelijk voor de inhoud en bepaalt de prioritering v
 
 Zie [https://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog](https://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog).
 
-### Ontwerp- en architectuurdocumentatie (software, interactie, infrastructuur)
+### Ontwerp- en architectuurdocumentatie
 
 De ontwerp- en architectuurdocumentatie beschrijft de opzet van de te bouwen software in de context waarbinnen deze moet opereren en de ontwerpkeuzes en -principes die zijn gevolgd. Die documentatie laat tevens zien hoe de software aan de gestelde functionele en niet-functionele eisen voldoet.
 
@@ -155,16 +157,6 @@ Het project levert bij elke release informatie aan de opdrachtgevende organisati
 ![Projectstartarchitectuur (PSA), business impact analysis (BIA) en privacy impact assessment (PIA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), backlog (BL), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De projectstartarchitectuur vormt input voor functionele eisen en niet-functionele eisen. De business impact analyse vormt input voor de niet-functionele eisen en informatiebeveiligingsplan. De privacy impact analyse vormt input voor de niet-functionele eisen en het informatiebeveiligingsplan. De functionele eisen vormen input voor de backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.](relaties-tussen-producten.png "Relaties tussen producten")
 
 Bovenstaande figuur laat de belangrijkste relaties zien tussen de verschillende producten die de input en output van de voorfase vormen. Naast de informatiestromen zoals door de pijlen weergegeven zijn er in de praktijk nog meer verbanden tussen de producten. Zo kan de gekozen oplossing in de architectuur van invloed zijn op de maatregelen in het informatiebeveiligingsplan of leiden niet-functionele eisen tot extra functionele eisen.
-
-### Verantwoordelijkheden
-
-De opdrachtgevende organisatie is primair verantwoordelijk voor het beschrijven van de functionele en niet-functionele eisen, de geprioriteerde backlog, het mastertestplan en het informatiebeveiligingsplan.
-
-ICTU is primair verantwoordelijk voor plan van aanpak, softwarearchitectuurdocumentatie, globaal functioneel ontwerp, prototype, detailtestplannen en testrapportages voor softwarerealisatie, kwaliteitsplan, deploybare versie van de software, documentatie voor deployment en operationeel beheer, release notes en vrijgaveadvies.
-
-Als tijdens een project bestaande software dient te worden afgebouwd, onderhouden en/of herbouwd, vindt een onderzoek plaats naar de kwaliteit van deze software, zie [$M32$](#m32). In dat geval levert het project ook de onderzoeksresultaten daarvan en maakt een transitieplan, en indien van toepassing, een plan voor het aflossen van technische schuld.
-
-De beheerorganisatie is primair verantwoordelijk voor de infrastructuurarchitectuur en -ontwerp en detailtestplannen en testrapportages voor infrastructuurtesten.
 
 ### Rationale
 

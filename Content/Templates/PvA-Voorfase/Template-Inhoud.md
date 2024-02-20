@@ -47,8 +47,8 @@ Het succes van deze voorfase, en van het eventueel later uit te voeren realisati
 
 Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak. Dit vertaalt zich concreet in:
 
-* Eén Scrumteam met medewerkers van {opdrachtgevende organisatie/andere partijen} en ICTU werkt minimaal {aantal} dagdelen per week aan de gedefinieerde documenten.
-* Er is een product owner door {de opdrachtgevende organisatie} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
+* Eén Scrumteam met medewerkers van {opdrachtgevende organisatie} en {partijen} en ICTU werkt minimaal {aantal} dagdelen per week aan de gedefinieerde documenten.
+* Er is een product owner door {opdrachtgevende organisatie} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
 * Voor elk product is een inhoudelijk verantwoordelijke, een penvoerder/schrijver en één of meer reviewers. Alle partijen werken constructief samen. Reviews zijn gericht op kwaliteitsverbeteringen. Waar nodig schrijven reviewers mee aan de documenten.
 * Nieuwe tussentijdse versies van documenten worden kortcyclisch opgeleverd, elke {termijn}.
 * Alle tussentijdse versies worden gereviewd door {reviewers} binnen de afgesproken termijn (maximaal {aantal} werkdagen).
@@ -65,9 +65,9 @@ Voor een goede start wordt er, bij aanvang van de voorfase, een kick-off georgan
 
 ## Samenwerking
 
-{Opdrachtgevende organisatie/andere partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een Scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
+{opdrachtgevende organisatie} en {partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een Scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
 
-Vertegenwoordigers van het project nemen deel aan de volgende overleggen met vertegenwoordigers van {de opdrachtgevende organisatie} en de beheerorganisatie:
+Vertegenwoordigers van het project nemen deel aan de volgende overleggen met vertegenwoordigers van {opdrachtgevende organisatie} en de beheerorganisatie:
 * het architectuuroverleg,
 * het informatiebeveiligingsoverleg,
 * het beheeroverleg,
@@ -79,7 +79,7 @@ Vertegenwoordigers van het project nemen deel aan de volgende overleggen met ver
 
 ## Oplevering producten
 
-De voorfase is op basis van sprints ingericht. Aan het einde van elke sprint zijn alle tot dan toe opgedane inzichten verwerkt in de producten. Na de laatste sprint levert ICTU het geheel op aan {de opdrachtgevende organisatie}.
+De voorfase is op basis van sprints ingericht. Aan het einde van elke sprint zijn alle tot dan toe opgedane inzichten verwerkt in de producten. Na de laatste sprint levert ICTU het geheel op aan {opdrachtgevende organisatie}.
 
 ## Kwaliteitsbeheersing
 
@@ -92,15 +92,15 @@ De experts reviewen op zaken zoals:
 * interne en onderlinge consistentie;
 * volledigheid.
 
-## Inzet {opdrachtgevende organisatie/andere partijen}
+## Inzet {opdrachtgevende organisatie} en {partijen}
 
-Betrokkenheid van inhoudsdeskundigen van {opdrachtgevende organisatie/andere partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
+Betrokkenheid van inhoudsdeskundigen van {opdrachtgevende organisatie} en {partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
 
-* De producten worden opgesteld tijdens verschillende werksessies. Aanwezigheid bij de werksessies (welke zoveel mogelijk tijdens de dagdelen waarop {opdrachtgevende organisatie/andere partijen} en ICTU samenwerken worden gepland) en indien gewenst aan vervolgafspraken in dat kader;
+* De producten worden opgesteld tijdens verschillende werksessies. Aanwezigheid bij de werksessies (welke zoveel mogelijk tijdens de dagdelen waarop {opdrachtgevende organisatie} en {partijen} en ICTU samenwerken worden gepland) en indien gewenst aan vervolgafspraken in dat kader;
 * Actief bijdragen aan het schrijven en reviewen van de producten;
 * Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden.
 
-Onderstaand is de verwachte inzet per rol van {opdrachtgevende organisatie/andere partijen} voor de uitvoering van dit plan van aanpak (één persoon kan eventueel meer dan één rol vervullen):
+Onderstaand is de verwachte inzet per rol van {opdrachtgevende organisatie} en {partijen} voor de uitvoering van dit plan van aanpak (één persoon kan eventueel meer dan één rol vervullen):
 
 {Selecteer de juiste rollen en vul aan, vul ook de juiste verantwoordelijkheden in, onderstaande is een eerste opzet met zoveel mogelijk rollen}
 
@@ -125,7 +125,7 @@ Omdat ICTU tijdens het project de documenten regelmatig oplevert is er geen spec
 
 {Verwijs naar dit hoofdstuk in hoofdstuk 5 van het voorstel inclusief POK}
 
-De start van het project vindt uiterlijk {aantal} weken na ondertekening van het eveneens verstuurde voorstel inclusief projectovereenkomst plaats. In deze periode bemensen zowel ICTU als {de opdrachtgevende organisatie} het project. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
+De start van het project vindt uiterlijk {aantal} weken na ondertekening van het eveneens verstuurde voorstel inclusief projectovereenkomst plaats. In deze periode bemensen zowel ICTU als {opdrachtgevende organisatie} het project. Daarbij is rekening gehouden met de doorlooptijd van de werving en selectie van de geschikte mensen.
 
 De verwachte doorlooptijd van de uitvoering van deze voorfase is {aantal} weken.
 
@@ -151,7 +151,7 @@ Voor de uitvoering van de voorfase gelden de volgende randvoorwaarden:
 
 | Nr           | Randvoorwaarde                                                                                                                                              |
 |:-------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| R01          | De vereiste inzet van betrokkenen van {opdrachtgevende organisatie/andere partijen} is georganiseerd en gegarandeerd.                                       |
+| R01          | De vereiste inzet van betrokkenen van {opdrachtgevende organisatie} en {partijen} is georganiseerd en gegarandeerd.                                       |
 | R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.                                                         |
 | R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgevende organisatie}, {beheerorganisatie} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
 | R04          | De producten {producten} zijn beschikbaar voor aanvang van de voorfase.                                                                                     |

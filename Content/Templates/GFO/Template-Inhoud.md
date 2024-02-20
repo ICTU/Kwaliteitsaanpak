@@ -1,6 +1,6 @@
 # Context
 
-Dit hoofdstuk beschrijft de context waarin {de applicatie} zal opereren aan de hand van de organisaties en mensen die {de applicatie} gebruiken, de processen die de applicatie ondersteunt en het applicatielandschap waarbinnen {de applicatie} functioneert.
+Dit hoofdstuk beschrijft de context waarin {het product} zal opereren aan de hand van de organisaties en mensen die {het product} gebruiken, de processen die de applicatie ondersteunt en het applicatielandschap waarbinnen {het product} functioneert.
 
 ## Betrokken organisaties en gebruikers
 
@@ -16,7 +16,7 @@ Dit hoofdstuk beschrijft de context waarin {de applicatie} zal opereren aan de h
 
 # Werking op hoofdlijnen
 
-Dit hoofdstuk beschrijft de werking van {de applicatie} op hoofdlijnen. Het beschrijft de hoofdfuncties die het systeem biedt, de ondersteunende functies, de belangrijkste informatie die het systeem bevat, en de klantreizen.
+Dit hoofdstuk beschrijft de werking van {het product} op hoofdlijnen. Het beschrijft de hoofdfuncties die het systeem biedt, de ondersteunende functies, de belangrijkste informatie die het systeem bevat, en de klantreizen.
 
 ## Hoofdfuncties
 
@@ -40,12 +40,12 @@ Dit hoofdstuk beschrijft de werking van {de applicatie} op hoofdlijnen. Het besc
 
 {Leg bij een update in de realisatiefase vast welke use cases zijn gerealiseerd, eventueel met de rationale en met een verwijzing naar de ontwerpbesluiten (in het SAD) die daarvoor zijn genomen.}
 
-Dit hoofdstuk beschrijft de use cases die {de applicatie} ondersteunt. Per use case worden de volgende aspecten benoemd:
+Dit hoofdstuk beschrijft de use cases die {het product} ondersteunt. Per use case worden de volgende aspecten benoemd:
 
 * Id: Unieke identificatie van de use case.
 * Naam: Korte aanduiding van de use case.
 * Doel: Het resultaat dat de (belangrijkste) actor wil bereiken door middel van de use case.
-* Actor(en): Een actor is een persoon of een systeem; de actor gebruikt {de applicatie} om zijn of haar doel te bereiken door middel van de use case.
+* Actor(en): Een actor is een persoon of een systeem; de actor gebruikt {het product} om zijn of haar doel te bereiken door middel van de use case.
 * Precondities: Wat moet er waar zijn om de use case te kunnen starten?
 * Trigger: Wat start de use case?
 * Primaire scenario: Beschrijving van de interactie tussen actor en systeem waarmee het doel bereikt wordt.

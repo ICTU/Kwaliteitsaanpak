@@ -29,13 +29,13 @@ Componenten uit een laag mogen alleen componenten uit dezelfde of een diepere la
 
 ## Gebruik van bewezen componenten en standaarden
 
-{De applicatie} is gebaseerd op industriestandaarden {opsomming van standaarden}. Om deze standaarden te implementeren gebruikt {de applicatie} gangbare componenten en bibliotheken, bij voorkeur die onderdeel uitmaken van beheerde platformen. Gebruik van gangbare, bewezen en actief onderhouden componenten verlaagt de beheerlast op langere termijn; gebruik van beheerde en volwassen componenten verlaagt beveiligingsrisico's.
+{het product} is gebaseerd op industriestandaarden {opsomming van standaarden}. Om deze standaarden te implementeren gebruikt {het product} gangbare componenten en bibliotheken, bij voorkeur die onderdeel uitmaken van beheerde platformen. Gebruik van gangbare, bewezen en actief onderhouden componenten verlaagt de beheerlast op langere termijn; gebruik van beheerde en volwassen componenten verlaagt beveiligingsrisico's.
 
 De toegankelijkheid van de applicatie voldoet aan de WCAG 2.1 (Web Content Accessibility Guidelines).
 
 ## Gebruik van gangbare security-ontwerpprincipes
 
-{De Applicatie} maakt gebruik van de volgende gangbare security-ontwerpprincipes:
+{het product} maakt gebruik van de volgende gangbare security-ontwerpprincipes:
 
 * **Least common mechanism**: Minimaliseer gedeelde resources tussen verschillende functies of gebruikers.
 * **Least privilege**: Ken de minimale rechten toe die nodig zijn voor de adequate uitvoering van elke rol en taak.
@@ -115,7 +115,7 @@ In situaties waarin het niet op voorhand duidelijk is wat de correcte reactie va
 
 ## Scope
 
-Dit hoofdstuk beschrijft de algemene richtlijnen voor de implementatie van {de applicatie} en de belangrijkste aspecten met betrekking tot de realisatie van de componenten.
+Dit hoofdstuk beschrijft de algemene richtlijnen voor de implementatie van {het product} en de belangrijkste aspecten met betrekking tot de realisatie van de componenten.
 
 ## Implementatierichtlijnen
 
@@ -159,7 +159,7 @@ Criteria voor de keuze van een programmeertaal voor de implementatie zijn:
 
 ## Inleiding
 
-Dit hoofdstuk vat de technische beveiliging van {de applicatie} samen. De maatregelen zijn gegroepeerd naar systeemfunctie en voorzien van verwijzingen naar maatregelen in de risicoanalyse ({referentie}) en het informatiebeveiligingsplan ({referentie}).
+Dit hoofdstuk vat de technische beveiliging van {het product} samen. De maatregelen zijn gegroepeerd naar systeemfunctie en voorzien van verwijzingen naar maatregelen in de risicoanalyse ({documentreferentie}) en het informatiebeveiligingsplan ({documentreferentie}).
 
 ## Gegevensbeveiliging tijdens transport
 
@@ -208,7 +208,7 @@ Certificaten van anderen:
 
 ## Inleiding
 
-Dit hoofdstuk vat de performancekarakteristieken van {de applicatie} samen en beschrijft hoe de benodigde throughput, response tijden en schaalbaarheid bereikt zullen worden.
+Dit hoofdstuk vat de performancekarakteristieken van {het product} samen en beschrijft hoe de benodigde throughput, response tijden en schaalbaarheid bereikt zullen worden.
 
 ## Belasting
 

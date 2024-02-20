@@ -112,7 +112,7 @@ Merk op dat de [Axe-core regels die als "experimenteel" zijn gemarkeerd](https:/
 
 ## Taal en leesbaarheid
 
-Naast de aan NEN-ISO/IEC 25010 ontleende hoofdeigenschap bruikbaarheid zijn voor de gebruikskwaliteit van {de applicatie} van belang:
+Naast de aan NEN-ISO/IEC 25010 ontleende hoofdeigenschap bruikbaarheid zijn voor de gebruikskwaliteit van {het product} van belang:
 
 * Taal: welke talen dienen te worden ondersteund.
 * Leesbaarheid: teksten moeten makkelijk te lezen zijn. Korte zinnen hebben de voorkeur. Hoe gemakkelijker de zin en de woorden, hoe beter de leesbaarheid.

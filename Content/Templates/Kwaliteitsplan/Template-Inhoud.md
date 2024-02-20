@@ -32,7 +32,7 @@ De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen
 2. Indien 1. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de ICTU-projectleider;
 3. Indien 2. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar het hoofd van de afdeling ICTU Software Expertise (ISE).
 
-Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden het kwaliteitsplan en/of Quality-time uitgebreid met nieuwe maatregelen en metrieken om de problemen in de toekomst te signaleren en te voorkomen. Dat gebeurt ook proactief, bijvoorbeeld naar aanleiding van ervaringen in andere projecten of als er nieuwe tools beschikbaar komen. De projectleiders van {de opdrachtgevende organisatie}, de beheerorganisatie en ICTU zorgen er gezamenlijk voor dat de gewenste uitbreidingen worden gerealiseerd.
+Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden het kwaliteitsplan en/of Quality-time uitgebreid met nieuwe maatregelen en metrieken om de problemen in de toekomst te signaleren en te voorkomen. Dat gebeurt ook proactief, bijvoorbeeld naar aanleiding van ervaringen in andere projecten of als er nieuwe tools beschikbaar komen. De projectleiders van {opdrachtgevende organisatie}, de beheerorganisatie en ICTU zorgen er gezamenlijk voor dat de gewenste uitbreidingen worden gerealiseerd.
 
 ## Projectdocumenten
 
@@ -54,7 +54,7 @@ De opstellers verwerken het commentaar. Vervolgens sturen de opstellers een toel
 
 Het doel van de voorfase is tweeledig: het voorbereiden van de realisatiefase, zodat ICTU verantwoord een projectovereenkomst kan opstellen voor de realisatiefase, en het identificeren van risico’s die van toepassing zijn op de realisatiefase en het verdere verloop van het project.
 
-{De opdrachtgevende organisatie} zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analysis en privacy impact assessment. Waar nodig werkt {de opdrachtgevende organisatie} de informatie bij tijdens de voorfase en realisatiefase.
+{opdrachtgevende organisatie} zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analysis en privacy impact assessment. Waar nodig werkt {opdrachtgevende organisatie} de informatie bij tijdens de voorfase en realisatiefase.
 
 Dit kwaliteitsplan wordt opgesteld tijdens de voorfase, maar is tevens al deels van toepassing, in ieder geval aan het eind van de voorfase. Voor de voorfase gelden de onderstaande kwaliteitsmaatregelen.
 
@@ -62,13 +62,13 @@ Dit kwaliteitsplan wordt opgesteld tijdens de voorfase, maar is tevens al deels 
 
 De kwaliteit van de deliverables wordt mede bepaald door de verwachtingen van de belanghebbenden. Het is van belang dat alle belanghebbenden zijn geïdentificeerd en hun verwachtingen zijn vastgelegd, geanalyseerd en vertaald naar de eisen voor het te implementeren systeem. De belanghebbenden worden geïdentificeerd in het projectvoorstel voor de voorfase. De eisen aan het te ontwikkelen systeem worden vastgelegd in Backlog en NFE-document.
 
-De tijdens de voorfase geïdentificeerde eisen vormen het startpunt van {de opdrachtgevende organisatie} en kunnen gedurende de vervolgfases in overeenstemming met de opdrachtnemer aangepast worden. De product owner vertegenwoordigt gedurende de vervolgfasen de geïdentificeerde belanghebbenden.
+De tijdens de voorfase geïdentificeerde eisen vormen het startpunt van {opdrachtgevende organisatie} en kunnen gedurende de vervolgfases in overeenstemming met de opdrachtnemer aangepast worden. De product owner vertegenwoordigt gedurende de vervolgfasen de geïdentificeerde belanghebbenden.
 
 ## Verwerking eisen
 
 ### Functionele eisen
 
-Het programma van eisen en de projectstartarchitectuur, beide opgesteld door {de opdrachtgevende organisatie}, zijn de basis voor de op te leveren ICTU-documenten, zoals architectuur en ontwerpdocumenten.
+Het programma van eisen en de projectstartarchitectuur, beide opgesteld door {opdrachtgevende organisatie}, zijn de basis voor de op te leveren ICTU-documenten, zoals architectuur en ontwerpdocumenten.
 
 ### Niet-Functionele eisen
 
@@ -76,7 +76,7 @@ Niet-functionele eisen aan het te ontwikkelen systeem worden vastgelegd op basis
 
 Niet-functionele eisen voor onderstaande kwaliteitsattributen worden als volgt verwerkt:
 
-* De informatiebeveiligingseisen worden in een afzonderlijk informatiebeveiligingsplan vastgelegd. De software zal zodanig worden voortgebracht en {in geval van operationeel en/of applicatiebeheer:} beheerd dat deze de BIO-compliance van {de opdrachtgevende organisatie} niet zal hinderen.
+* De informatiebeveiligingseisen worden in een afzonderlijk informatiebeveiligingsplan vastgelegd. De software zal zodanig worden voortgebracht en {in geval van operationeel en/of applicatiebeheer:} beheerd dat deze de BIO-compliance van {opdrachtgevende organisatie} niet zal hinderen.
 * Gebruikskwaliteit (usability) is ingebed in de standaard werkwijze van ICTU voor de realisatie van maatwerksoftware. Dit aspect wordt geborgd door opname in het plan van aanpak, het ontwerp en de testplannen.
 * Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.1, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
 * Performance- en securityeisen worden via performance- en securitytests geborgd, zie de kwaliteitsmaatregelen in paragraaf [Testen](#testen). Voor de borging van andere niet-functionele eisen moeten projectspecifieke maatregelen getroffen worden. Deze worden in dit kwaliteitsplan opgenomen.
@@ -196,9 +196,9 @@ De configuratie van de tools wordt {wel/niet} gedeeld in de broncode-repository.
 
 Het project hanteert de volgende werkwijze voor broncodereviews:
 
-* Elke pull request wordt door minimaal {X} ontwikkelaar(s) gereviewed.
-* Er zijn {Y} goedkeuringen nodig voordat een pull request mag worden gemerged.
-* Na goedkeuring wordt de pull request gemerged door de {ontwikkelaar/reviewer}.
+* Elke merge request wordt door minimaal {X} ontwikkelaar(s) gereviewed.
+* Er zijn {Y} goedkeuringen nodig voordat een merge request mag worden gemerged.
+* Na goedkeuring wordt de merge request gemerged door de {ontwikkelaar/reviewer}.
 
 Quality-time bewaakt of de reviews hebben plaatsgevonden.
 
@@ -272,7 +272,7 @@ Deze performancetesten worden uitgevoerd in de {performancetestomgeving}. De loa
 
 Quality-time rapporteert over de geautomatiseerde performancetesten. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het Scrumteam. Issues die voortkomen uit performancetesten worden opgenomen in Jira met het label "performance_bevinding".
 
-{Als operationeel beheer geen onderdeel is van de dienstverlening:} De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient {de opdrachtgevende organisatie} zelf te (laten) testen.
+{Als operationeel beheer geen onderdeel is van de dienstverlening:} De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient {opdrachtgevende organisatie} zelf te (laten) testen.
 
 ## Security-testen
 

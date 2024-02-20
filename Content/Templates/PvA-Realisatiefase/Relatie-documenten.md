@@ -1,6 +1,6 @@
 ## Relatie met andere documenten
 
-De realisatiefase is een vervolg op de voorfase {voorfaseproject}. De documenten die in die voorfase zijn gerealiseerd en die uitgangspunt zijn voor dit plan van aanpak zijn:
+De realisatiefase is een vervolg op de voorfase van {het project}. De documenten die in die voorfase zijn gerealiseerd en die uitgangspunt zijn voor dit plan van aanpak zijn:
 
 * Projectstartarchitectuur (PSA), versie {versie},
 * Business impact analysis (BIA), versie {versie},

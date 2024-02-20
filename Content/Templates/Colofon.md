@@ -12,36 +12,36 @@ Rubricering conform [VIRBI 2013, art. 4](https://wetten.overheid.nl/BWBR0033507/
 
 ###### Revisiehistorie
 
-| Versie   | Auteur | Datum   | Status               | Opmerkingen   |
-|:---------|:-------|:--------|:---------------------|:--------------|
-| {versie} | {naam} | {datum} | {concept/definitief} | {opmerkingen} |
+| Versie   | Auteur        | Datum   | Status               | Opmerkingen   |
+|:---------|:--------------|:--------|:---------------------|:--------------|
+| {versie} | {naam auteur} | {datum} | {concept/definitief} | {opmerkingen} |
 
 ###### Reviewers
 
-| Functie/rol                                     | Naam   | Datum   |  Versie  |
-|:------------------------------------------------|:-------|:--------|:--------:|
-| Kwaliteitsmanager {opdrachtgevende organisatie} | {naam} | {datum} | {versie} |
-| Kwaliteitsmanager {beheerorganisatie}           | {naam} | {datum} | {versie} |
-| Kwaliteitsmanager ICTU                          | {naam} | {datum} | {versie} |
+| Functie/rol                                     | Naam                                                 | Datum   |  Versie  |
+|:------------------------------------------------|:-----------------------------------------------------|:--------|:--------:|
+| Kwaliteitsmanager {opdrachtgevende organisatie} | {naam kwaliteitsmanager opdrachtgevende organisatie} | {datum} | {versie} |
+| Kwaliteitsmanager {beheerorganisatie}           | {naam kwaliteitsmanager beheerorganisatie}           | {datum} | {versie} |
+| Kwaliteitsmanager ICTU                          | {naam kwaliteitsmanager ICTU}                        | {datum} | {versie} |
 
 ###### Vereiste goedkeuringen
 
-| Functie/rol                                 | Naam   | Datum   |  Versie  |
-|:--------------------------------------------|:-------|:--------|:--------:|
-| Projectleider {opdrachtgevende organisatie} | {naam} | {datum} | {versie} |
-| Projectleider {beheerorganisatie}           | {naam} | {datum} | {versie} |
-| Projectleider ICTU                          | {naam} | {datum} | {versie} |
-| Product owner                               | {naam} | {datum} | {versie} |
+| Functie/rol                                 | Naam                                             | Datum   |  Versie  |
+|:--------------------------------------------|:-------------------------------------------------|:--------|:--------:|
+| Projectleider {opdrachtgevende organisatie} | {naam projectleider opdrachtgevende organisatie} | {datum} | {versie} |
+| Projectleider {beheerorganisatie}           | {naam projectleider beheerorganisatie}           | {datum} | {versie} |
+| Projectleider ICTU                          | {naam projectleider ICTU}                        | {datum} | {versie} |
+| Product owner                               | {naam product owner}                             | {datum} | {versie} |
 
 ###### Verzendlijst huidige versie
 
-| Naam   | Organisatie                   | Functie/rol               |
-|:-------|:------------------------------|:--------------------------|
-| {naam} | {opdrachtgevende organisatie} | Projectleider             |
-| {naam} | {opdrachtgevende organisatie} | Product owner             |
-| {naam} | {beheerorganisatie}           | Projectleider             |
-| {naam} | ICTU                          | Projectleider             |
-| {naam} | ICTU                          | Software delivery manager |
+| Naam                                             | Organisatie                   | Functie/rol               |
+|:-------------------------------------------------|:------------------------------|:--------------------------|
+| {naam projectleider opdrachtgevende organisatie} | {opdrachtgevende organisatie} | Projectleider             |
+| {naam product owner}                             | {opdrachtgevende organisatie} | Product owner             |
+| {naam projectleider beheerorganisatie}           | {beheerorganisatie}           | Projectleider             |
+| {naam projectleider ICTU}                        | ICTU                          | Projectleider             |
+| {naam software delivery manager}                 | ICTU                          | Software delivery manager |
 
 ###### Template versie
 

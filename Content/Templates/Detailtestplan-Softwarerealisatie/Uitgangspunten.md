@@ -4,7 +4,7 @@ De volgende uitgangspunten zijn van toepassing op dit document:
 
 | Volgnummer  | Uitgangspunt |
 |:-----|:----|
-| U01 | De realisatie van de software wordt door ICTU uitgevoerd. Het beheer wordt door {Beheerorganisatie} uitgevoerd. |
+| U01 | De realisatie van de software wordt door ICTU uitgevoerd. Het beheer wordt door {beheerorganisatie} uitgevoerd. |
 | U02 | De als testbasis geïdentificeerde documenten dienen door alle acceptanten, inclusief het testteam, te zijn geaccordeerd, alvorens met de testspecificatie kan worden begonnen. |
 | U03 | Per release of per sprint kan de product owner besluiten om bepaalde functionaliteit, bijvoorbeeld geleverd door externe partijen, niet te testen. Indien dit voorkomt, dan zal dit expliciet worden opgenomen in de managementsamenvatting van het vrijgaveadvies. |
 | U04 | De multidisciplinaire samenstelling van de Scrumteams — test engineers en ontwikkelaars zitten in hetzelfde team — geeft mogelijkheid tot snelle interactie. Issues gevonden binnen een sprint kunnen hierdoor vaak nog binnen dezelfde sprint worden opgelost en hoeven dus niet apart geadministreerd te worden. |

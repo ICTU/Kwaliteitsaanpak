@@ -26,11 +26,16 @@
 
 * Paragraaf 3.1.4 "Werkwijze" hernoemd naar "Ontwikkelproces", overeenkomstig maatregel M05 "Het project hanteert een iteratief en incrementeel ontwikkelproces".
 * De tekst over kwaliteitsnormen uit paragraaf 3.1.4 ondergebracht in een nieuwe paragraaf 3.1.5 "Behalen van kwaliteitsnormen".
+* In paragraaf 5.3.3 "Broncodereviews", de term pull request vervangen door merge request omdat dat de terminologie is die in GitLab wordt gebruikt.
 * Koppeling tussen use cases, logische testgevallen, user stories en epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
 
 #### Template Detailtestplan
 
 * Template detailtestplan hernoemd naar Template detailtestplan softwarerealisatie om duidelijk te maken dat het alleen gericht is op softwarerealisatie en niet op andere onderwerpen waarvoor een detailtestplan zou kunnen worden gemaakt zoals infrastructuurtesten.
+
+#### Alle templates
+
+* De labels voor te vervangen teksten geuniformeerd om zoek-en-vervang te vereenvoudigen: {de opdrachtgevende organisatie} vervangen door {opdrachtgevende organisatie}, {(de) applicatie} en {(het) systeem} vervangen door {het product}, {projectnaam} door {het project}, {productnaam} door {het product}, {samenwerkende partijen} door {partijen}, {referentie} door {documentreferentie} en in de colofons aan {naam} ook de rol toegevoegd (bijvoorbeeld {naam projectleider beheerorganisatie}).
 
 #### Self-assessment checklist
 

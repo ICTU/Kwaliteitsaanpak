@@ -4,7 +4,7 @@ Relevant voor dit inwerkplan zijn de volgende documenten:
 
 | Titel                                  |  Versie  |
 |:---------------------------------------|:--------:|
-| Projectstartarchitectuur {projectnaam} | {versie} |
-| Niet-functionele eisen {productnaam}   | {versie} |
-| Kwaliteitsplan {projectnaam}           | {versie} |
+| Projectstartarchitectuur {het project} | {versie} |
+| Niet-functionele eisen {het product}   | {versie} |
+| Kwaliteitsplan {het project}           | {versie} |
 | {titel}                                | {versie} |

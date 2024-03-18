@@ -25,7 +25,7 @@
 #### Template Kwaliteitsplan
 
 * Paragraaf 3.1.4 "Werkwijze" hernoemd naar "Ontwikkelproces", overeenkomstig maatregel M05 "Het project hanteert een iteratief en incrementeel ontwikkelproces".
-* De tekst over kwaliteitsnormen uit paragraaf 3.1.4 ondergebracht in een nieuwe paragraaf 3.1.5 "Behalen van kwaliteitsnormen".
+* De tekst over kwaliteitsnormen uit paragraaf 3.1.4 ondergebracht in een nieuwe paragraaf 3.1.5 "Bewaken van kwaliteitsnormen". Een alinea toegevoegd met afspraken over hoe/aan wie de kwaliteitsmanager rapporteert over het al dan niet behalen van de kwaliteitsnormen.
 * In paragraaf 5.3.3 "Broncodereviews", de term pull request vervangen door merge request omdat dat de terminologie is die in GitLab wordt gebruikt.
 * Koppeling tussen use cases, logische testgevallen, user stories en epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
 

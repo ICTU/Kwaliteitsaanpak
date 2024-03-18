@@ -24,7 +24,9 @@ Het project houdt een risicolog bij. De risicolog wordt digitaal bijgehouden doo
 
 Voor de realisatiefase wordt de agile ontwikkelmethode Scrum gebruikt ($M05$). Als operationeel beheer onderdeel is van de dienstverlening wordt gebruik gemaakt van de DevOps-principes. Afwijkingen hierop worden alleen toegestaan met goedkeuring van de software delivery manager en kwaliteitsmanager.
 
-### Behalen van kwaliteitsnormen
+### Bewaken van kwaliteitsnormen
+
+De kwaliteitsmanager rapporteert {frequentie/als onderdeel van de managementrapportage} over het al dan niet behalen van de kwaliteitsnormen. De rapportage bestaat uit {geschreven rapportage en/of Quality-time export}. De kwaliteitsmanager verstuurt de rapportage per mail aan {ontvangers} en archiveert de verstuurde rapportages {op Sharepoint}.
 
 De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen niet tijdig worden behaald:
 
@@ -32,7 +34,7 @@ De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen
 2. Indien 1. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar de ICTU-projectleider;
 3. Indien 2. niet tot resultaat leidt, escaleert de kwaliteitsmanager de situatie naar het hoofd van de afdeling ICTU Software Expertise (ISE).
 
-Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden het kwaliteitsplan en/of Quality-time uitgebreid met nieuwe maatregelen en metrieken om de problemen in de toekomst te signaleren en te voorkomen. Dat gebeurt ook proactief, bijvoorbeeld naar aanleiding van ervaringen in andere projecten of als er nieuwe tools beschikbaar komen. De projectleiders van {opdrachtgevende organisatie}, de beheerorganisatie en ICTU zorgen er gezamenlijk voor dat de gewenste uitbreidingen worden gerealiseerd.
+Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden dit kwaliteitsplan en/of Quality-time uitgebreid met nieuwe maatregelen en metrieken om de problemen in de toekomst te signaleren en te voorkomen. Dat gebeurt ook proactief, bijvoorbeeld naar aanleiding van ervaringen in andere projecten of als er nieuwe tools beschikbaar komen. De projectleiders van {opdrachtgevende organisatie}, de beheerorganisatie en ICTU zorgen er gezamenlijk voor dat de gewenste uitbreidingen worden gerealiseerd.
 
 ## Projectdocumenten
 

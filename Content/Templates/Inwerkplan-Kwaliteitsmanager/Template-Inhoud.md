@@ -12,7 +12,7 @@ Leerdoelen (week 1):
 
 Acties (zodra mogelijk):
 * Je hebt deelgenomen aan de [ICTU-onboarding](https://ictubeheer.sharepoint.com/teams/Onboarding2)
-* Je hebt deelgenomen aan de [ICTU-live update](https://ictubeheer.sharepoint.com/teams/Corona-info/SitePages/coronavirus--updates.aspx)
+* Je hebt deelgenomen aan de [ICTU-live update](https://ictubeheer.sharepoint.com/teams/Organisatie_Communicatie/SitePages/Live%20Update.aspx)
 
 ## ICTU-voorzieningen
 
@@ -23,9 +23,8 @@ Je hebt toegang tot (week 1):
 * [MS Outlook](https://webmail.ictu.nl) voor e-mail en agenda
 * [Timetell](https://timetell.ictu.nl) voor het registreren van uren
 * [Sharepoint](https://ictubeheer.sharepoint.com) voor het delen van documenten
-* [MS Teams](https://teams.microsoft.com) voor online vergaderen en teamconversaties (chat)
+* [MS Teams](https://teams.microsoft.com) voor online vergaderen, individuele chats, teamkanalen en organisatiebrede conversaties (dat laatste kun je vinden via de app "Viva Engage" binnen MS Teams)
 * [Topdesk](https://topdesk.ictu.nl) voor het reserveren van vergaderzalen, parkeerplaatsen en andere diensten
-* [Yammer](https://www.yammer.com) voor niet-urgente communicatie en organisatiebrede conversaties (ook bereikbaar via MS Teams)
 
 # Wat je moet weten over softwareontwikkeling bij ICTU
 
@@ -66,7 +65,7 @@ Leerdoelen self-assessment (week 3):
 * Je weet waar je de self-assessment template kunt vinden (hint: zie locatie interne versie van de kwaliteitsaanpak hierboven)
 * Je weet hoe je de self-assessment kunt invullen
 * Je weet wat het doel van de self-assessment is en hoe ICTU dit instrument toepast
-* Je kent de [uitkomsten van recente gezamenlijke self-assessments](https://ictubeheer.sharepoint.com/:f:/r/teams/Organisatie_SoftwareExpertise/Besloten/Gez.%20self-assessments?csf=1&web=1&e=lXs65L)
+* Je kent de [uitkomsten van recente gezamenlijke self-assessments](https://ictubeheer.sharepoint.com/:f:/r/teams/Organisatie_SoftwareExpertise/Open/Gezamenlijke%20self-assessments?csf=1&web=1&e=QBecdn)
 
 Leerdoelen templates (week 4):
 * Je weet de templates te vinden (hint: zie locatie interne versie van de kwaliteitsaanpak hierboven)
@@ -99,7 +98,6 @@ Leerdoelen (week 2):
 
 Leerdoelen (week 3):
 * Je kent de [functies](https://ictubeheer.sharepoint.com/teams/Organisatie_SoftwareDiensten/SitePages/ECO2.aspx) van het Ecosysteem
-* Je weet dat er twee generaties ontwikkelplatform zijn, te weten "Eco1" en "Eco2", en kent de belangrijkste verschillen
 * Je weet wie de product owner van het Ecosysteem is
 * Je weet hoe je problemen met het ecosysteem kunt [melden aan ISD](https://jira.ictu-sd.nl/jira/secure/CreateIssueDetails!init.jspa?pid=11709&issuetype=10100)
 * Je weet hoe je je Ecosysteem VPN-key kan verlengen
@@ -143,7 +141,7 @@ Leerdoelen periodieke kwaliteitsrapportage (indien van toepassing, zodra mogelij
 * Je kent de inhoud van recente periodieke kwaliteitsrapportages
 
 Leerdoelen diensten (week 3):
-* Je weet welke ondersteuning je project krijgt van ISD (en of dat Eco1 of Eco2 is)
+* Je weet welke ondersteuning je project krijgt van ISD
 * Je weet welke ondersteuning je project krijgt van de security tool engineer
 * Je weet welke ondersteuning je project krijgt van de performancetestdienstverlener (momenteel Sentia)
 

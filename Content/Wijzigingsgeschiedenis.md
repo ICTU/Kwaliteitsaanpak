@@ -33,6 +33,11 @@
 
 * Template detailtestplan hernoemd naar Template detailtestplan softwarerealisatie om duidelijk te maken dat het alleen gericht is op softwarerealisatie en niet op andere onderwerpen waarvoor een detailtestplan zou kunnen worden gemaakt zoals infrastructuurtesten.
 
+#### Template Inwerkplan Kwaliteitsmanager
+
+* Verwijzingen naar Eco1 verwijderd.
+* URLs naar ICTU bronnen bijgewerkt.
+
 #### Alle templates
 
 * De labels voor te vervangen teksten geuniformeerd om zoek-en-vervang te vereenvoudigen: {de opdrachtgevende organisatie} vervangen door {opdrachtgevende organisatie}, {(de) applicatie} en {(het) systeem} vervangen door {het product}, {projectnaam} door {het project}, {productnaam} door {het product}, {samenwerkende partijen} door {partijen}, {referentie} door {documentreferentie} en in de colofons aan {naam} ook de rol toegevoegd (bijvoorbeeld {naam projectleider beheerorganisatie}).

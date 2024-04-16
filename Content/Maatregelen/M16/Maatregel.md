@@ -14,7 +14,7 @@ ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Project
 6. maken van testrapportages: JUnit, Robot Framework, TestNG, of hiermee compatible tools,
 7. maken van kwaliteitsrapportages: Quality-time,
 8. controleren van de configuratie op aanwezigheid van bekende kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
-9. controleren op aanwezigheid van bekende kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency Checker,
+9. controleren op aanwezigheid van bekende kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency Checker en/of Dependency-Track,
 10. statische controle van de software op aanwezigheid van kwetsbare constructies: SonarQube,
 11. dynamische controle van de software op aanwezigheid van kwetsbare constructies: OWASP ZAP (Zed Attack Proxy),
 12. controleren van container images op aanwezigheid van bekende kwetsbaarheden: Trivy,

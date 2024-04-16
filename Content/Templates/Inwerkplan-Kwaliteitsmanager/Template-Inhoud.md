@@ -177,8 +177,9 @@ Acties (week 3):
 * Je hebt toegang tot de securityrapportages in de build pipeline (OWASP Dependency Check, OWASP ZAP, OpenVAS)
 * Je hebt toegang tot de toegankelijksrapportage (Axe) in de build pipeline
 * Je hebt toegang tot de testrapportages in de build pipeline (Robot Framework, JUnit, Cypress, etc.)
-* Je hebt toegang tot de SonarQube van je project
-* Je hebt toegang tot de Quality-time van je project
+* Je hebt toegang tot de Dependency-Track instantie van je project
+* Je hebt toegang tot de SonarQube instantie van je project
+* Je hebt toegang tot de Quality-time instantie van je project
 * Je hebt toegang tot de performancerapportage van je project (zie [overzicht performancetestrapportages](https://reports.pc.iesprd.ictu-sr.nl))
 * Je hebt toegang tot de actie- en besluitenlijst van je project (in Trello of MS Planner)
 * Je hebt toegang tot het risicolog van je project

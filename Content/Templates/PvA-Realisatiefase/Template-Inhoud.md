@@ -9,7 +9,7 @@ ICTU levert de volgende producten en diensten op:
 
 1. Werkende software met de functionaliteiten zoals hierboven beschreven.
 1. Per release:
-    a. een vrijgaveadvies,
+    a. informatie ten behoeve van het vrijgaveadvies,
     a. de release notes,
     a. een bijgewerkte installatiehandleiding,
     a. een bijgewerkt software-architectuurdocument (SAD),
@@ -198,7 +198,7 @@ Onderstaand is de verwachte inzet per rol van ICTU voor de uitvoering van dit pl
 | Scrummaster                            | {x} uur         | Bewaken Scrumproces, faciliteren Scrumevents                                                                                                      |
 | Ontwikkelaar                           | {x} uur         | Ontwerpen, ontwikkelen en testen van de software                                                                                                  |
 | DevOps-engineer                        | {x} uur         | Ontwerpen, ontwikkelen en testen van de software, daarnaast uitvoeren beheeractiviteiten, waaronder het oplossen van incidenten                   |
-| Tester                                 | {x} uur         | Opstellen logische testgevallen, ontwikkelen en uitvoeren fysieke testgevallen, opstellen testrapportages en vrijgaveadvies                       |
+| Tester                                 | {x} uur         | Opstellen logische testgevallen, ontwikkelen en uitvoeren fysieke testgevallen, opstellen testrapportages                                         |
 | Functioneel ontwerper                  | {x} uur         | Onderhouden GFO, ondersteunen product owner bij opstellen en uitwerken van de user stories                                                        |
 | Database administrator                 | {x} uur         | Onderhouden logisch datamodel en fysiek database ontwerp, ontwikkelen migratiescripts, database tuning                                            |
 | UX-designer                            | {x} uur         | Gebruikersonderzoek, onderhouden UX-richtlijnen, maken en onderhouden prototype {of wireframe/mockup/animatie}, toetsen prototypes met gebruikers |

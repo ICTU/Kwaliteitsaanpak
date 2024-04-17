@@ -8,7 +8,7 @@ Tijdens de voorfase schrijft de softwarearchitect (het teamlid met de rol van ar
 
 Tijdens de realisatiefase ondersteunt de softwareachitect het team bij het realiseren van de software conform het SAD. Daarbij kunnen nieuwe inzichten ontstaan die van invloed zijn op het SAD, bijvoorbeeld dat gekozen technologie niet voldoet of dat benodigde brondata niet eenvoudig ontsluitbaar is.
 
-De softwarearchitect informeert de opdrachtgevende organisatie en de beheerorganisatie over deze nieuwe inzichten en stemt de gevolgen hiervan af. Deze nieuwe inzichten kunnen voor de opdrachtgevende organisatie en de beheerorganisatie aanleiding zijn om hun architectuur aan te passen.
+De softwarearchitect informeert de opdrachtgevende organisatie en de beheerorganisatie over deze nieuwe inzichten en stemt de gevolgen hiervan af. Deze nieuwe inzichten kunnen voor de opdrachtgevende organisatie en de beheerorganisatie aanleiding zijn om hun (solution) architectuur aan te passen.
 
 ### Rationale
 

@@ -6,7 +6,7 @@ Bij voorkeur zijn dezelfde deskundigen in zowel de voorfase als in de realisatie
 
 In de realisatiefase wordt de prioriteit van werk van het Scrumteam bepaald door een product owner van de opdrachtgevende organisatie. Bij aanvang van de voorfase is deze beoogde product owner bekend en werkt deze ook mee in de voorfase.
 
-Als tijdens de realisatiefase blijkt dat de kaders van het project significant wijzigen, dan stemmen opdrachtgevende organisatie, ICTU en andere betrokken partijen af welke onderdelen van de voorfase opnieuw moeten worden uitgevoerd.
+Als tijdens de realisatiefase blijkt dat de kaders van het project significant wijzigen, dan stemmen opdrachtgevende organisatie, ICTU en andere betrokken partijen af welke onderdelen van de voorfase opnieuw moeten worden uitgevoerd. Denk bij significante wijzigingen aan grote aanpassingen aan de scope, het budget, de belanghebbenden en/of de planning van het project.
 
 ### Rationale
 

@@ -1,0 +1,22 @@
+{
+    "InputFile": "DocumentDefinitions/Templates/document-template.md",
+    "BuildPath": "build/Templates/MTP/",
+    "Title": "Mastertestplan",
+    "Subtitle": "{Productnaam, versie}",
+    "DocumentType": "Template",
+    "DocumentFolder": "MTP",
+    "FrontPage": "Neutral",
+    "IncludeTableOfContents": true,
+    "OutputFormats": {
+        "docx": {
+            "OutputFile": "Neutraal-Template-Mastertestplan.docx",
+            "OutputPaths": [
+                "docs/$VERSIE$"
+            ],
+            "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"
+        }
+    },
+    "VariablesFiles": [
+        "DocumentDefinitions/Shared/variables.json"
+    ]
+}

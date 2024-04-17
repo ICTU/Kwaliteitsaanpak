@@ -19,6 +19,10 @@
 
 * Een HTML-versie van de samenvatting toegevoegd aan de set van documenten zodat er een toegankelijk alternatief is voor de PDF-versie van de samenvatting.
 
+### Template Mastertestplan
+
+* Een neutraal template Mastertestplan toegevoegd aan de set van templates.
+
 #### Template Niet-Functionele Eisen
 
 * Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.2 succescriteria.

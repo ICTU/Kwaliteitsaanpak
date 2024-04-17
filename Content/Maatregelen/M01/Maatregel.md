@@ -8,6 +8,9 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het ✔ g
 
 | Product                                             | Voor start | Voorfase | Realisatiefase | Verantwoordelijke organisatie |
 |-----------------------------------------------------|------------|----------|----------------|-------------------------------|
+| Projectstartarchitectuur                            | ✔          |          |                | opdrachtgever                 |
+| Business impact analysis                            | ✔          |          |                | opdrachtgever                 |
+| Privacy impact assessment                           | ✔          |          |                | opdrachtgever                 |
 | Plan van aanpak: voorfase                           | ✔          |          |                | ICTU                          |
 | Beschrijving van functionele eisen                  |            | ✔        | ✔              | opdrachtgever                 |
 | Beschrijving van niet-functionele eisen             |            | ✔        | ✔              | opdrachtgever                 |
@@ -24,6 +27,10 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het ✔ g
 | Software bill of materials                          |            |          | ✔              | ICTU                          |
 | Release notes                                       |            |          | ✔              | ICTU                          |
 | Vrijgaveadvies                                      |            |          | ✔              | opdrachtgever                 |
+
+### Projectstartarchitectuur, business impact analysis en privacy impact assessment
+
+De opdrachtgevende organisatie zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analysis en privacy impact assessment. Zie [$M31$](#m31).
 
 ### Plan van aanpak
 

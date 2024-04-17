@@ -25,7 +25,9 @@ Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkeli
 
 Zie [https://www.noraonline.nl/wiki/PSA](https://www.noraonline.nl/wiki/PSA).
 
-Bij wijzigingen aan de PSA na de start van het project is het niet zinvol nog van een project*start*architectuur te spreken en noemen we het een projectarchitectuur.
+Conform NORA werkt de opdrachtgevende organisatie na de start van het project de PSA uit in een solution architectuur (SA).
+
+Zie [https://www.noraonline.nl/wiki/Solution-architectuur](https://www.noraonline.nl/wiki/Solution-architectuur).
 
 ### Business impact analysis
 

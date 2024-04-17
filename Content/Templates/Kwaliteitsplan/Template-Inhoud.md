@@ -133,13 +133,13 @@ De Definition Of Done van het project bevat de volgende criteria ({vul aan en pa
 
 ### Vrijgaveadvies
 
-Voor elke major release stelt het project (bijvoorbeeld de testmanager) een vrijgaveadvies op. Eventuele afwijkingen in de kwaliteitsrapportage en hieruit voortvloeiende risico's ("rode metrieken") worden in het vrijgaveadvies toegelicht. De kwaliteitsmanager reviewt het vrijgaveadvies.
+Voor elke major release stelt de opdrachtgevende organisatie (bijvoorbeeld de testmanager) een vrijgaveadvies op. Het project levert daartoe informatie aan. De kwaliteitsmanager reviewt de aangeleverde informatie.
 
-Het vrijgaveadvies beschrijft ({vul aan en pas aan}):
+Aan te leveren informatie ten behoeve van het vrijgaveadvies ({vul aan en pas aan}):
 
 1. Welke functionele en niet-functionele eisen in deze release gerealiseerd zijn en hoe dit getoetst en/of getest is,
 2. Openstaande bugs,
-3. Afwijkingen kwaliteitsrapportage,
+3. Afwijkingen kwaliteitsrapportage ("rode metrieken") en hieruit voortvloeiende risico's,
 4. Overige risico's,
 5. Het advies van ICTU wat betreft ingebruikname van de release.
 

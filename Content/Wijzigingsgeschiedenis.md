@@ -5,12 +5,12 @@
 * Het hoofdstuk 'Begrippenkader' is verwijderd. De begrippen die hierin werden besproken staan ook in de bijlage 'Terminologie'. Het hoofdstuk 'Leeswijzer' verwijst nu naar deze bijlage.
 * Op relevante plekken zijn verwijzingen naar templates, self-assessment checklist en wijzigingsgeschiedenis toegevoegd.
 * Paragraaf 3.5 "Evolutie van de aanpak zelf" verwijderd uit hoofdstuk 3 "Leeswijzer". Deze tekst staat ook al in hoofdstuk 2 "Doelstellingen en uitgangspunten".
-* In M01 "Het project levert in elke fase vastgestelde producten en informatie op": Een kolom toegevoegd aan de tabel met daarin de verantwoordelijke organisatie per regel van de tabel. Hiermee is de paragraaf "Verantwoordelijkheden" overbodig en verwijderd. De opmerking in de paragraaf "Verantwoordelijkheden" over onderzoek naar her te gebruiken software verplaatst naar de paragraaf over de plannen van aanpak. De testplannen uitgesplitst naar MTP en detailtestplannen zodat deze apart kunnen worden ingevuld in de self-assessment. Onder het kopje Vrijgaveadvies, opgenomen dat het de verantwoordelijkheid van de opdrachtgevende organisatie is om te organiseren dat betrokken partijen informatie aanleveren voor het vrijgaveadvies.
+* In M01 "Het project levert in elke fase vastgestelde producten en informatie op": Een kolom toegevoegd aan de tabel met daarin de verantwoordelijke organisatie per regel van de tabel. Hiermee is de paragraaf "Verantwoordelijkheden" overbodig en verwijderd. De opmerking in de paragraaf "Verantwoordelijkheden" over onderzoek naar her te gebruiken software verplaatst naar de paragraaf over de plannen van aanpak. De testplannen uitgesplitst naar MTP en detailtestplannen zodat deze apart kunnen worden ingevuld in de self-assessment. Onder het kopje Vrijgaveadvies, opgenomen dat het de verantwoordelijkheid van de opdrachtgevende organisatie is om te organiseren dat betrokken partijen informatie aanleveren voor het vrijgaveadvies. De informatie die de opdrachtgevende organisatie dient aan te leveren ook opgenomen in de tabel en daaronder verwezen naar M31.
 * De titel van maatregel M02 is veranderd van "Het project zorgt dat het product continu aan de kwaliteitsnormen voldoet" in "Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet". Continue aan alle kwaliteitsnormen voldoen is in de praktijk onmogelijk (zie ook M08 "Het project maakt technische schuld inzichtelijk en lost deze planmatig op"). Hiermee is de overlap met M06 "Het project meet kwaliteitsnormen geautomatiseerd en frequent" zo groot dat deze laatste maatregel is komen te vervallen.
 * De naam van maatregel M14 "Het project bereidt samen met opdrachtgever en belanghebbenden de realisatie voor" veranderd in "M14: Het project bereidt samen met opdrachtgevende organisatie en betrokken partijen de realisatie voor". Daarnaast toegevoegd dat bij significante wijzigingen aan de projectkaders de voorfase geheel of deels opnieuw wordt uitgevoerd.
 * In maatregel M16 "Het project gebruikt tools voor vastgestelde taken" toegevoegd dat projecten de genoemde tools *of gelijkwaardige alternatieven* gebruiken. Verder GitLab SAST verwijderd uit de lijst van tools, Dependency-Track toegevoegd en SonarQube en OWASP ZAP over twee regels verspreid zodat ze apart kunnen worden ingevuld in de self-assessment. Daarnaast M16 verplaatst naar het hoofdstuk "Producten".
-* De scope van maatregel M29 "ICTU zorgt dat een project verantwoord kan starten" gereduceerd tot het organiseren van de interne dienstverlening voor aanvang van een project en de titel hieraan aangepast: "ICTU organiseert voor aanvang van een project de interne dienstverlening".
-* De naam van maatregel M31 "Het project beschikt over vastgestelde informatie" veranderd in "Het project beschikt over actuele vastgestelde informatie" en de tekst van de maatregel hieraan aangepast. Een extra kopje "Afspraken tussen opdrachtgevende organisatie en beheerpartij" toegevoegd.
+* De scope van maatregel M29 "ICTU zorgt dat een project verantwoord kan starten" gereduceerd tot het organiseren van de interne dienstverlening voor aanvang van een project en de titel hieraan aangepast: "ICTU organiseert voor aanvang van een project de interne dienstverlening". Tevens een opmerking over externe dienstverlening toegevoegd.
+* De naam van maatregel M31 "Het project beschikt over vastgestelde informatie" veranderd in "Het project beschikt over actuele vastgestelde informatie" en de tekst van de maatregel hieraan aangepast. Een extra kopje "Afspraken tussen opdrachtgevende organisatie en beheerpartij" toegevoegd. Toegevoegd dat de opdrachtgevende organisatie na start van een project de PSA uitwerkt in een solution architectuur.
 * Maatregel M35 "Het project hanteert een agile architectuuraanpak" toegevoegd.
 * De bijlage 'Wijzigingsgeschiedenis' verplaatst naar een los document in PDF- en HTML-formaat.
 
@@ -36,12 +36,13 @@
 #### Template Inwerkplan Kwaliteitsmanager
 
 * Verwijzingen naar Eco1 verwijderd.
-* URLs naar ICTU bronnen bijgewerkt.
+* URLs naar ICTU-bronnen bijgewerkt.
 
 #### Alle templates
 
 * De labels voor te vervangen teksten geuniformeerd om zoek-en-vervang te vereenvoudigen: {de opdrachtgevende organisatie} vervangen door {opdrachtgevende organisatie}, {(de) applicatie} en {(het) systeem} vervangen door {het product}, {projectnaam} door {het project}, {productnaam} door {het product}, {samenwerkende partijen} door {partijen}, {referentie} door {documentreferentie} en in de colofons aan {naam} ook de rol toegevoegd (bijvoorbeeld {naam projectleider beheerorganisatie}).
 * Waar relevant Dependency-Track toegevoegd aan genoemde beveiligingstools.
+* Waar gesproken wordt over vrijgaveadvies de tekst aangepast zodat duidelijk is dat ICTU het vrijgaveadvies niet zelf maakt, maar informatie ten behoeve van het vrijgaveadvies oplevert.
 
 #### Self-assessment checklist
 

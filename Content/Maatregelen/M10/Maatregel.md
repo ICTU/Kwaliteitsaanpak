@@ -13,8 +13,6 @@ Nadere toelichting op de agenda:
 * Kwaliteit en architectuur: bespreking van kwaliteit, bijvoorbeeld naar aanleiding van de self-assessment, architectuur voor borging van inhoudelijke koers, eventuele afwijkingen en benodigde acties.
 * Risico's en aandachtspunten: de software delivery manager houdt het risicolog bij.
 
-Quality-time, het kwaliteitssysteem van ICTU, bewaakt de actualiteit van de actie- en besluitenlijst en het risicolog.
-
 ### Rationale
 
 Het doel van het periodiek projectoverleg is alle betrokkenen op hetzelfde informatieniveau te brengen en te houden. Het overleg is intern om vrijuit te kunnen praten over personele zaken en risico's voor het project.

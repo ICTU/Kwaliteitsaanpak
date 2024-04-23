@@ -12,4 +12,4 @@ Naast {kwaliteitsaspect 1} is ook {kwaliteitsaspect 2} van groot belang omdat {r
 
 Omdat {rationale} is ook {kwaliteitsaspect 3} van belang. Daarom {belangrijkste concrete niet-functionele eis voor kwaliteitsaspect 3}. Ook zal {volgende niet-functionele eis voor kwaliteitsaspect 3}.
 
-Uiteraard voldoet {het product} aan de wettelijke verplichting voor toegankelijkheid (de A en AA-eisen uit WCAG v2.1).
+Uiteraard voldoet {het product} aan de wettelijke verplichting voor toegankelijkheid (de A en AA-eisen uit WCAG v2.2).

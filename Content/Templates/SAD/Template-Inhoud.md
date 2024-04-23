@@ -31,7 +31,7 @@ Componenten uit een laag mogen alleen componenten uit dezelfde of een diepere la
 
 {het product} is gebaseerd op industriestandaarden {opsomming van standaarden}. Om deze standaarden te implementeren gebruikt {het product} gangbare componenten en bibliotheken, bij voorkeur die onderdeel uitmaken van beheerde platformen. Gebruik van gangbare, bewezen en actief onderhouden componenten verlaagt de beheerlast op langere termijn; gebruik van beheerde en volwassen componenten verlaagt beveiligingsrisico's.
 
-De toegankelijkheid van de applicatie voldoet aan de WCAG 2.1 (Web Content Accessibility Guidelines).
+De toegankelijkheid van de applicatie voldoet aan de WCAG 2.2 (Web Content Accessibility Guidelines).
 
 ## Gebruik van gangbare security-ontwerpprincipes
 

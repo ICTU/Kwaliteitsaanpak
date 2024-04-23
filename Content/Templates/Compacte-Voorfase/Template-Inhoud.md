@@ -30,7 +30,7 @@ Onderstaande niet-functionele eisen zijn van toepassing op {het product}:
 1. De oplossing is in het Nederlands omdat {rationale}.
 1. De oplossing is compatible met {andere software}.
 1. De oplossing wordt open source ter beschikking gesteld via {bijvoorbeeld: GitHub en PyPI (Python Package Index)}.
-1. De oplossing voldoet aan de A- en AA-eisen uit WCAG 2.1.
+1. De oplossing voldoet aan de A- en AA-eisen uit WCAG 2.2.
 5. De oplossing ondersteunt {...}.
 
 {Vul aan.}

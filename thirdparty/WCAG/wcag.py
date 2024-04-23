@@ -16,7 +16,7 @@ def url(anchor, uri):
 def item_url(item):
     """Return a Markdown URL for the WCAG item."""
     fragment = item["id"].split(":")[1]
-    return url(item["handle"], f"https://www.w3.org/TR/WCAG21/#{fragment}")
+    return url(item["handle"], f"https://www.w3.org/TR/WCAG22/#{fragment}")
 
 
 def rule_url(rule):

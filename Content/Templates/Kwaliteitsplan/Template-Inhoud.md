@@ -80,7 +80,7 @@ Niet-functionele eisen voor onderstaande kwaliteitsattributen worden als volgt v
 
 * De informatiebeveiligingseisen worden in een afzonderlijk informatiebeveiligingsplan vastgelegd. De software zal zodanig worden voortgebracht en {in geval van operationeel en/of applicatiebeheer:} beheerd dat deze de BIO-compliance van {opdrachtgevende organisatie} niet zal hinderen.
 * Gebruikskwaliteit (usability) is ingebed in de standaard werkwijze van ICTU voor de realisatie van maatwerksoftware. Dit aspect wordt geborgd door opname in het plan van aanpak, het ontwerp en de testplannen.
-* Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.1, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
+* Toegankelijkheid is een wettelijke verplichting voor webgebaseerde en mobiele applicaties, zie de EN 301 549 en de WCAG 2.2, niveau A en AA. Toegankelijkheid wordt geborgd via toegankelijkheidstesten, zie de kwaliteitsmaatregelen in paragraaf [Toegankelijkheidstesten](#toegankelijkheidstesten).
 * Performance- en securityeisen worden via performance- en securitytests geborgd, zie de kwaliteitsmaatregelen in paragraaf [Testen](#testen). Voor de borging van andere niet-functionele eisen moeten projectspecifieke maatregelen getroffen worden. Deze worden in dit kwaliteitsplan opgenomen.
 * {Als operationeel beheer onderdeel is van de dienstverlening:} Eisen aan het operationeel beheer worden vastgelegd als beheerafspraken in het plan van aanpak voor de realisatiefase en geborgd door te rapporteren over de software tijdens het gebruik en over de uitgevoerde beheeractiviteiten.
 
@@ -298,7 +298,7 @@ Quality-time rapporteert of gevonden beveiligingsissues niet te lang open staan.
 
 ## Toegankelijkheidstesten
 
-Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Quality-time rapporteert over de toegankelijkheidsrapportage van Axe. Daarnaast worden handmatige toegankelijkheidstesten uitgevoerd, door deskundige leden van het Scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.1-richtlijnen die niet geautomatiseerd kunnen worden getest.
+Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Quality-time rapporteert over de toegankelijkheidsrapportage van Axe. Daarnaast worden handmatige toegankelijkheidstesten uitgevoerd, door deskundige leden van het Scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.2-richtlijnen die niet geautomatiseerd kunnen worden getest.
 
 ## Usability-testen
 

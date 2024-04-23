@@ -21,7 +21,7 @@
 
 #### Template Niet-Functionele Eisen
 
-* Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.1 succescriteria.
+* Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.2 succescriteria.
 
 #### Template Kwaliteitsplan
 
@@ -44,6 +44,7 @@
 * De labels voor te vervangen teksten geuniformeerd om zoek-en-vervang te vereenvoudigen: {de opdrachtgevende organisatie} vervangen door {opdrachtgevende organisatie}, {(de) applicatie} en {(het) systeem} vervangen door {het product}, {projectnaam} door {het project}, {productnaam} door {het product}, {samenwerkende partijen} door {partijen}, {referentie} door {documentreferentie} en in de colofons aan {naam} ook de rol toegevoegd (bijvoorbeeld {naam projectleider beheerorganisatie}).
 * Waar relevant Dependency-Track toegevoegd aan genoemde beveiligingstools.
 * Waar gesproken wordt over vrijgaveadvies de tekst aangepast zodat duidelijk is dat ICTU het vrijgaveadvies niet zelf maakt, maar informatie ten behoeve van het vrijgaveadvies oplevert.
+* WCAG bijgewerkt naar versie 2.2.
 
 #### Self-assessment checklist
 

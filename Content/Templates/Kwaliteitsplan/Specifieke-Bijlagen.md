@@ -97,7 +97,7 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 | Vrijgaveadvies                               | Kwaliteitsplan §5.1.3    | Het project levert de afgesproken informatie ten behoeve van het vrijgaveadvies                                                      |
 | Kwaliteit broncode                           | Kwaliteitsplan §5.3      | Onderdrukte SonarQube-waarschuwingen zijn afgestemd en (nog steeds) terecht                                                          |
 | Kwaliteit broncode                           | Kwaliteitsplan §5.3      | De kwaliteit van de broncode voldoet bij een steekproefsgewijze, handmatige inspectie aan de eisen                                   |
-| Beveiliging broncode                         | Kwaliteitsplan §5.10     | Onderdrukte beveiligingsbevindingen uit OWASP Dependency Check, Dependency-Track en SonarQube zijn afgestemd en (nog steeds) terecht |
+| Beveiliging broncode                         | Kwaliteitsplan §5.10     | Onderdrukte beveiligingsbevindingen uit OWASP Dependency-Check, Dependency-Track en SonarQube zijn afgestemd en (nog steeds) terecht |
 | Beveiligingstesten                           | Kwaliteitsplan §5.10     | Beveiligingsissues uit securitytesten zijn opgenomen in Jira en volgens de oplostermijnen opgelost                                   |
 | Projectspecifieke kwaliteitsmaatregelen      | Kwaliteitsplan §5.16     | Projectspecifieke maatregelen zijn uitgevoerd zoals afgesproken                                                                      |
 | Projectafsluiting                            | Kwaliteitsplan §6        | Projectafsluiting is conform de afspraken uitgevoerd                                                                                 |

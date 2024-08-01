@@ -15,6 +15,7 @@ IMAGE = "image"
 IMAGE_ALT = "alt"
 IMAGE_SRC = "src"
 IMAGE_TITLE = "title"
+IMAGE_WIDTH = "width"  # Image width in centimeters
 ITALIC = "i"
 INSTRUCTION = "instruction"
 LIST_ITEM = "item"

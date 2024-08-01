@@ -8,7 +8,7 @@ from custom_types import TreeBuilderAttributes
 class Builder:
     """Abstract builder."""
 
-    # pylint: disable=unused-argument,no-self-use
+    # pylint: disable=unused-argument
 
     def __init__(self, filename: pathlib.Path) -> None:
         self.filename = filename

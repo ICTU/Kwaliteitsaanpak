@@ -30,7 +30,7 @@ class MarkdownConverterTestCase(unittest.TestCase):
 
     def xml(self):
         """Create the XML."""
-        return MarkdownConverter(Variables(dict(var="variable"))).convert(self.settings)
+        return MarkdownConverter(Variables({"var": "variable"})).convert(self.settings)
 
 
 @patch("markdown_converter.open", mock_open(read_data=""))

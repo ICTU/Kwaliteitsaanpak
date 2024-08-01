@@ -42,8 +42,8 @@ Als operationeel en/of applicatiebeheer onderdeel is van de te leveren dienstver
 
 Beschikbare templates:
 
-- [Template plan van aanpak voorfase]($BASE_URL$/$VERSIE$/ICTU-Template-Plan-van-Aanpak-Voorfase.docx).
-- [Template plan van aanpak realisatiefase]($BASE_URL$/$VERSIE$/ICTU-Template-Plan-van-Aanpak-Realisatiefase.docx).
+* [Template plan van aanpak voorfase]($BASE_URL$/$VERSIE$/ICTU-Template-Plan-van-Aanpak-Voorfase.docx).
+* [Template plan van aanpak realisatiefase]($BASE_URL$/$VERSIE$/ICTU-Template-Plan-van-Aanpak-Realisatiefase.docx).
 
 ### Beschrijving van functionele eisen
 
@@ -71,7 +71,7 @@ Bronnen van de opdrachtgevende organisatie zoals procesbeschrijvingen, privacy i
 
 Beschikbare templates:
 
-- [Template niet-functionele eisen]($BASE_URL$/$VERSIE$/Neutraal-Template-Niet-Functionele-Eisen.docx).
+* [Template niet-functionele eisen]($BASE_URL$/$VERSIE$/Neutraal-Template-Niet-Functionele-Eisen.docx).
 
 ### Product backlog
 
@@ -99,9 +99,9 @@ Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illust
 
 Beschikbare templates:
 
-- [Template globaal functioneel ontwerp]($BASE_URL$/$VERSIE$/ICTU-Template-Globaal-Functioneel-Ontwerp.docx).
-- [Template softwarearchitectuurdocument]($BASE_URL$/$VERSIE$/ICTU-Template-Software-architectuurdocument.docx).
-- [Template infrastructuurarchitectuur]($BASE_URL$/$VERSIE$/Neutraal-Template-Infrastructuurarchitectuur.docx).
+* [Template globaal functioneel ontwerp]($BASE_URL$/$VERSIE$/ICTU-Template-Globaal-Functioneel-Ontwerp.docx).
+* [Template softwarearchitectuurdocument]($BASE_URL$/$VERSIE$/ICTU-Template-Software-architectuurdocument.docx).
+* [Template infrastructuurarchitectuur]($BASE_URL$/$VERSIE$/Neutraal-Template-Infrastructuurarchitectuur.docx).
 
 ### Testplannen en -rapportages
 
@@ -113,7 +113,7 @@ Logische testgevallen worden vastgelegd en gekoppeld met use cases en user stori
 
 Beschikbare templates:
 
-- [Template detailtestplan softwarerealisatie]($BASE_URL$/$VERSIE$/ICTU-Template-Detailtestplan-Softwarerealisatie.docx).
+* [Template detailtestplan softwarerealisatie]($BASE_URL$/$VERSIE$/ICTU-Template-Detailtestplan-Softwarerealisatie.docx).
 
 ### Informatiebeveiligingsplan
 
@@ -133,7 +133,7 @@ Als de opdrachtgevende organisatie een overkoepelend kwaliteitsplan heeft zorgt 
 
 Beschikbare templates:
 
-- [Template kwaliteitsplan]($BASE_URL$/$VERSIE$/ICTU-Template-Kwaliteitsplan.docx).
+* [Template kwaliteitsplan]($BASE_URL$/$VERSIE$/ICTU-Template-Kwaliteitsplan.docx).
 
 ### Deploybare versie van de software
 

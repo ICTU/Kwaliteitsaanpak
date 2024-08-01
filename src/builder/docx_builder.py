@@ -2,10 +2,11 @@
 
 import pathlib
 import shutil
-from typing import List, Optional
+from typing import cast
 
 from docx import Document
 from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
+from docx.shared import Cm
 from docx.table import Table
 from docx.table import _Row as Row
 from docx.text.paragraph import Paragraph
@@ -17,7 +18,7 @@ from .hyperlink import add_hyperlink
 from .table_of_contents import add_table_of_contents
 
 
-class DocxBuilder(Builder):
+class DocxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
     """Docx builder."""
 
     SCHEMA = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
@@ -41,13 +42,13 @@ class DocxBuilder(Builder):
         super().__init__(filename)
         filename.unlink(missing_ok=True)
         shutil.copy(docx_reference_filename, filename)
-        self.doc = Document(filename)
+        self.doc = Document(str(filename))
         self.images_folder = images_folder
-        self.paragraph: Optional[Paragraph] = None  # The current paragraph
-        self.current_list_style: List[str] = []  # Stack of list styles
-        self.previous_list_item: List[Optional[Paragraph]] = []  # Stack of previous list items
-        self.table: Optional[Table] = None
-        self.row: Optional[Row] = None
+        self.paragraph: Paragraph | None = None  # The current paragraph
+        self.current_list_style: list[str] = []  # Stack of list styles
+        self.previous_list_item: list[Paragraph | None] = []  # Stack of previous list items
+        self.table: Table | None = None
+        self.row: Row | None = None
         self.column_index = 0
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:  # pylint:disable=too-many-branches
@@ -71,7 +72,10 @@ class DocxBuilder(Builder):
             style = f"Kop {level} Bijlage" if in_appendix else f"heading {level}"
             self.paragraph = self.doc.add_paragraph(style=style)
         elif tag == xmltags.TABLE:
-            self.table = self.doc.add_table(0, int(attributes[xmltags.TABLE_COLUMNS]), style="Tabelraster1")
+            self.table = cast(
+                Table,
+                self.doc.add_table(0, int(attributes[xmltags.TABLE_COLUMNS]), style="Tabelraster1"),
+            )
             # Set table width to 100%
             self.table._tbl.tblPr.xpath("./w:tblW")[0].attrib[f"{self.SCHEMA}type"] = "pct"
             self.table._tbl.tblPr.xpath("./w:tblW")[0].attrib[f"{self.SCHEMA}w"] = "100%"
@@ -82,7 +86,7 @@ class DocxBuilder(Builder):
         elif tag == xmltags.TABLE_CELL:
             self._add_table_cell(attributes)
         elif tag == xmltags.HEADER:
-            self.paragraph = self.doc.sections[0].header.paragraphs[0]
+            self.paragraph = cast(Paragraph, self.doc.sections[0].header.paragraphs[0])
             self.paragraph.paragraph_format.alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT  # pylint: disable=no-member
         elif tag == xmltags.TITLE:
             self.paragraph = self.doc.add_paragraph(style="Title")
@@ -90,14 +94,14 @@ class DocxBuilder(Builder):
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
         elif tag == xmltags.IMAGE:
-            self.doc.add_picture(str(self.images_folder / str(attributes["src"])))
+            self.doc.add_picture(str(self.images_folder / str(attributes["src"])), width=Cm(int(attributes["width"])))
 
     def _add_list_item(self) -> None:
         """Add a list item."""
         # pylint: disable=protected-access
         self.paragraph = self.doc.add_paragraph(style=self.current_list_style[-1])
         level = len(self.current_list_style) - 1
-        self.paragraph._p.get_or_add_pPr().get_or_add_numPr().get_or_add_ilvl().val = level
+        self.paragraph_number(self.paragraph).get_or_add_ilvl().val = level
         if self.current_list_style[-1] == "Lijstnummering1":
             if self.previous_list_item[-1] is None:
                 # Add a new concrete numbering for Lijstnummering1. "0" is the id of the abstract numbering of
@@ -108,24 +112,30 @@ class DocxBuilder(Builder):
                 num.add_lvlOverride(ilvl=level).add_startOverride(1)  # Restart the numbering
                 num = num.numId
             else:
-                num = self.previous_list_item[-1]._p.pPr.numPr.numId.val
-            self.paragraph._p.get_or_add_pPr().get_or_add_numPr().get_or_add_numId().val = num
+                num = self.previous_list_item[-1]._p.pPr.numPr.numId.val  # type: ignore[union-attr]
+            self.paragraph_number(self.paragraph).get_or_add_numId().val = num
         self.previous_list_item[-1] = self.paragraph
+
+    @staticmethod
+    def paragraph_number(paragraph: Paragraph):
+        """Return the current paragraph number ."""
+        # pylint: disable=protected-access
+        return paragraph._p.get_or_add_pPr().get_or_add_numPr()  # type: ignore[attr-defined]
 
     def _add_table_cell(self, attributes: TreeBuilderAttributes) -> None:
         """Add a table cell."""
         # pylint: disable=protected-access
         assert self.row
         cell = self.row.cells[self.column_index]
-        cell._tc.tcPr.tcW.type = "auto"
-        self.paragraph = cell.paragraphs[0]
+        cell._tc.tcPr.tcW.type = "auto"  # type: ignore[union-attr]
+        self.paragraph = cast(Paragraph, cell.paragraphs[0])
         if alignment_attr := attributes.get(xmltags.TABLE_CELL_ALIGNMENT):
             # pylint: disable=no-member
-            alignment = dict(
-                left=WD_PARAGRAPH_ALIGNMENT.LEFT,
-                right=WD_PARAGRAPH_ALIGNMENT.RIGHT,
-                center=WD_PARAGRAPH_ALIGNMENT.CENTER,
-            )[str(alignment_attr)]
+            alignment = {
+                "left": WD_PARAGRAPH_ALIGNMENT.LEFT,
+                "right": WD_PARAGRAPH_ALIGNMENT.RIGHT,
+                "center": WD_PARAGRAPH_ALIGNMENT.CENTER,
+            }[str(alignment_attr)]
             self.paragraph.paragraph_format.alignment = alignment
         self.column_index += 1
 
@@ -160,4 +170,4 @@ class DocxBuilder(Builder):
             self.previous_list_item.pop()
 
     def end_document(self) -> None:
-        self.doc.save(self.filename)
+        self.doc.save(str(self.filename))

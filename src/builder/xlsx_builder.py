@@ -33,20 +33,20 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
     @staticmethod
     def __create_formats(workbook: xlsxwriter.Workbook) -> Dict[str, xlsxwriter.format.Format]:
         """Create the formats."""
-        measure_format_options = dict(bg_color="#BCD2EE", text_wrap=True, valign="top")
-        status_format_options = dict(bg_color="#FED32D", text_wrap=True)
+        measure_format_options = {"bg_color": "#BCD2EE", "text_wrap": True, "valign": "top"}
+        status_format_options = {"bg_color": "#FED32D", "text_wrap": True}
         return {
-            "header": workbook.add_format(dict(text_wrap=True, font_size=14, bold=True, bg_color="#B3D6C9")),
-            "instructions": workbook.add_format(dict(text_wrap=True, font_size=13, bg_color="#B3D6C9")),
+            "header": workbook.add_format({"text_wrap": True, "font_size": 14, "bold": True, "bg_color": "#B3D6C9"}),
+            "instructions": workbook.add_format({"text_wrap": True, "font_size": 13, "bg_color": "#B3D6C9"}),
             "measure": workbook.add_format(measure_format_options),
-            "submeasure": workbook.add_format(dict(align="vjustify", indent=1, **measure_format_options)),
-            "explanation": workbook.add_format(dict(bg_color="#FFFFA5", text_wrap=True)),
+            "submeasure": workbook.add_format({"align": "vjustify", "indent": 1, **measure_format_options}),
+            "explanation": workbook.add_format({"bg_color": "#FFFFA5", "text_wrap": True}),
             "status": workbook.add_format(status_format_options),
-            "substatus": workbook.add_format(dict(indent=1, **status_format_options)),
-            "voldoet": workbook.add_format(dict(fg_color="#0B5101", bg_color="#BBEDC3")),
-            "voldoet deels": workbook.add_format(dict(fg_color="#894503", bg_color="#FEE88A")),
-            "voldoet niet": workbook.add_format(dict(fg_color="#880009", bg_color="#FEB8C3")),
-            "niet van toepassing": workbook.add_format(dict(fg_color="#6D6D6D", bg_color="#EFEFEF")),
+            "substatus": workbook.add_format({"indent": 1, **status_format_options}),
+            "voldoet": workbook.add_format({"fg_color": "#0B5101", "bg_color": "#BBEDC3"}),
+            "voldoet deels": workbook.add_format({"fg_color": "#894503", "bg_color": "#FEE88A"}),
+            "voldoet niet": workbook.add_format({"fg_color": "#880009", "bg_color": "#FEB8C3"}),
+            "niet van toepassing": workbook.add_format({"fg_color": "#6D6D6D", "bg_color": "#EFEFEF"}),
         }
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
@@ -81,7 +81,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             if tag == xmltags.BOLD:
                 self.measure_row = self.row
                 self.measure_id, measure_title = text.split(":")
-                has_submeasures = self.in_element(xmltags.MEASURE, dict(composite="true"))
+                has_submeasures = self.in_element(xmltags.MEASURE, {"composite": "true"})
                 self.__write_measure(self.measure_id, measure_title.strip(), has_submeasures=has_submeasures)
             self.measure_text.append(text)
         elif self.measure_text:
@@ -116,7 +116,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             self.checklist.write_comment(
                 self.row,
                 self.STATUS_COLUMN,
-                "Tip: bepaal eerst de status per submaatregel en daarna de status van de hoofdmaatregel."
+                "Tip: bepaal eerst de status per submaatregel en daarna de status van de hoofdmaatregel.",
             )
         self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
         self.checklist.write(self.row, self.EXPLANATION_COLUMN, "", self.formats["explanation"])
@@ -130,7 +130,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
                 self.measure_row,
                 self.MEASURE_COLUMN,
                 "".join(self.measure_text),
-                dict(x_scale=7, y_scale=8, font_name="Courier", font_size=9),
+                {"x_scale": 7, "y_scale": 8, "font_name": "Courier", "font_size": 9},
             )
             self.measure_text = []
             self.row += 1
@@ -209,7 +209,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
                 column,
                 {"type": "cell", "criteria": "==", "value": f'"{choice}"', "format": self.formats[choice]},
             )
-        self.checklist.data_validation(row, column, row, column, dict(validate="list", source=assessment_choices))
+        self.checklist.data_validation(row, column, row, column, {"validate": "list", "source": assessment_choices})
 
     def __create_action_list(self) -> None:
         """Create a worksheet with room for actions from the self-assessment."""

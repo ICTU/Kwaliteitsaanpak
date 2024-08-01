@@ -61,8 +61,8 @@ class PptxBuilder(Builder):
                     paragraph.font.size = Pt(20)
         elif (
             tag == xmltags.HEADING
-            and self.in_element(xmltags.SECTION, dict(level="1"))
-            and not self.in_element(xmltags.SECTION, dict(level="2"))
+            and self.in_element(xmltags.SECTION, {"level": "1"})
+            and not self.in_element(xmltags.SECTION, {"level": "2"})
         ):
             self.chapter_heading = text
         elif tag == xmltags.LIST_ITEM and self.in_element(xmltags.SLIDE):
@@ -87,6 +87,7 @@ class PptxBuilder(Builder):
 
     def remove_bullet(self, paragraph_index: int):
         """Remove bullets from the paragraph."""
+        # pylint: disable=c-extension-no-member
         no_bullet = etree.Element("{http://schemas.openxmlformats.org/drawingml/2006/main}buNone")
         # pylint: disable=protected-access
         self.current_slide.shapes[1].text_frame.paragraphs[paragraph_index]._pPr.insert(0, no_bullet)  # type: ignore

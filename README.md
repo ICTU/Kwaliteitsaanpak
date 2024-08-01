@@ -6,7 +6,7 @@ This repository contains the source information and automation scripts for gener
 
 ## Documents
 
-The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak itself, a number of templates, and a self-assessment checklist. The sources are a collection of Markdown files and supporting material. Scripts convert the Kwaliteitsaanpak main document to html and pdf, the templates to docx, and the self-assessment checklist to xslx.
+The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak itself, a number of templates, and a self-assessment checklist. The sources are a collection of Markdown files and supporting material. Scripts convert the Kwaliteitsaanpak main document to html, the templates to docx, and the self-assessment checklist to xslx.
 
 ## Authoring guidelines
 

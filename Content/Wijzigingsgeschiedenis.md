@@ -1,12 +1,28 @@
-### [Unreleased]
+# [Unreleased]
 
-#### Alle documenten
+## Kwaliteitsaanpak
+
+* Een Word-versie toegevoegd, om het makkelijker te maken wijzigingsvoorstellen in te dienen.
+* De PDF-versie wordt niet langer gemaakt. De software (wkhtmltopdf) om de PDF te genereren wordt niet meer onderhouden. Overstappen op een andere oplossing kost te veel tijd. Indien nodig kunnen gebruikers de HTML-versie zelf naar PDF exporteren met behulp van een webbrowser.
+* Een inhoudsopgave toegevoegd aan de HTML-versie.
+
+## Samenvatting Kwaliteitsaanpak
+
+* De PDF-versie wordt niet langer gemaakt. De software (wkhtmltopdf) om de PDF te genereren wordt niet meer onderhouden. Overstappen op een andere oplossing kost te veel tijd. Indien nodig kunnen gebruikers de HTML-versie zelf naar PDF exporteren met behulp van een webbrowser.
+* Een inhoudsopgave toegevoegd aan de HTML-versie.
+
+## Wijzigingsgeschiedenis
+
+* De PDF-versie wordt niet langer gemaakt. De software (wkhtmltopdf) om de PDF te genereren wordt niet meer onderhouden. Overstappen op een andere oplossing kost te veel tijd. Indien nodig kunnen gebruikers de HTML-versie zelf naar PDF exporteren met behulp van een webbrowser.
+* Een inhoudsopgave toegevoegd aan de HTML-versie.
+
+## Alle documenten
 
 * "OWASP Dependency-Check" consistent gespeld.
 
-### Versie 4.0.0, 26 april 2024
+# Versie 4.0.0, 26 april 2024
 
-#### Kwaliteitsaanpak
+## Kwaliteitsaanpak
 
 * Het hoofdstuk 'Begrippenkader' is verwijderd. De begrippen die hierin werden besproken staan ook in de bijlage 'Terminologie'. Het hoofdstuk 'Leeswijzer' verwijst nu naar deze bijlage.
 * Op relevante plekken zijn verwijzingen naar templates, self-assessment checklist en wijzigingsgeschiedenis toegevoegd.
@@ -21,46 +37,46 @@
 * Maatregel M35 "Het project hanteert een agile architectuuraanpak" toegevoegd.
 * De bijlage 'Wijzigingsgeschiedenis' verplaatst naar een los document in PDF- en HTML-formaat.
 
-#### Samenvatting Kwaliteitsaanpak
+## Samenvatting Kwaliteitsaanpak
 
 * Een HTML-versie van de samenvatting toegevoegd aan de set van documenten zodat er een toegankelijk alternatief is voor de PDF-versie van de samenvatting.
 
-### Template Mastertestplan
+## Template Mastertestplan
 
 * Een neutraal template Mastertestplan toegevoegd aan de set van templates.
 
-#### Template Niet-Functionele Eisen
+## Template Niet-Functionele Eisen
 
 * Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.2 succescriteria.
 
-#### Template Kwaliteitsplan
+## Template Kwaliteitsplan
 
 * Paragraaf 3.1.4 "Werkwijze" hernoemd naar "Ontwikkelproces", overeenkomstig maatregel M05 "Het project hanteert een iteratief en incrementeel ontwikkelproces".
 * De tekst over kwaliteitsnormen uit paragraaf 3.1.4 ondergebracht in een nieuwe paragraaf 3.1.5 "Bewaken van kwaliteitsnormen". Een alinea toegevoegd met afspraken over hoe/aan wie de kwaliteitsmanager rapporteert over het al dan niet behalen van de kwaliteitsnormen.
 * In paragraaf 5.3.3 "Broncodereviews", de term pull request vervangen door merge request omdat dat de terminologie is die in GitLab wordt gebruikt.
 * Koppeling tussen use cases, logische testgevallen, user stories en epics minder strikt gemaakt in bijlage D "Gebruik van Jira".
 
-#### Template Detailtestplan
+## Template Detailtestplan
 
 * Template detailtestplan hernoemd naar Template detailtestplan softwarerealisatie om duidelijk te maken dat het alleen gericht is op softwarerealisatie en niet op andere onderwerpen waarvoor een detailtestplan zou kunnen worden gemaakt zoals infrastructuurtesten.
 
-#### Template Inwerkplan Kwaliteitsmanager
+## Template Inwerkplan Kwaliteitsmanager
 
 * Verwijzingen naar Eco1 verwijderd.
 * URLs naar ICTU-bronnen bijgewerkt.
 
-#### Alle templates
+## Alle templates
 
 * De labels voor te vervangen teksten geuniformeerd om zoek-en-vervang te vereenvoudigen: {de opdrachtgevende organisatie} vervangen door {opdrachtgevende organisatie}, {(de) applicatie} en {(het) systeem} vervangen door {het product}, {projectnaam} door {het project}, {productnaam} door {het product}, {samenwerkende partijen} door {partijen}, {referentie} door {documentreferentie} en in de colofons aan {naam} ook de rol toegevoegd (bijvoorbeeld {naam projectleider beheerorganisatie}).
 * Waar relevant Dependency-Track toegevoegd aan genoemde beveiligingstools.
 * Waar gesproken wordt over vrijgaveadvies de tekst aangepast zodat duidelijk is dat ICTU het vrijgaveadvies niet zelf maakt, maar informatie ten behoeve van het vrijgaveadvies oplevert.
 * WCAG bijgewerkt naar versie 2.2.
 
-#### Self-assessment checklist
+## Self-assessment checklist
 
 * Het mogelijk gemaakt bij maatregelen met submaatregelen ook de hoofdmaatregel te scoren.
 
-#### Alle documenten
+## Alle documenten
 
 * De term "DevOps-werkwijze" vervangen door "operationeel beheer" of door "operationeel en/of applicatiebeheer" op de plekken waar het gaat over de dienstverlening en niet zozeer over de aanpak.
 * De term "high level design" (HLD) vervangen door "infrastructuurarchitectuur" (IA) of waar beide termen werden gebruikt HLD verwijderd. Het HLD-template hernoemd naar IA-template.
@@ -68,9 +84,9 @@
 * De term "opdrachtgever" vervangen door "opdrachtgevende organisatie" waar dat bedoeld werd. Opdrachtgever en opdrachtgevende organisatie toegevoegd aan de terminologie bijlagen.
 * De term "Testplan softwarerealisatie" vervangen door "Detailtestplan softwarerealisatie".
 
-### Versie 3.0.1, 4 april 2023
+# Versie 3.0.1, 4 april 2023
 
-#### Kwaliteitsaanpak
+## Kwaliteitsaanpak
 
 * In M01 toegevoegd dat het ICTU-kwaliteitsplan waar nodig aansluit op het overkoepelende kwaliteitsplan van de opdrachtgever.
 * Bij M02 ontbrak (een verwijzing naar) de self-assessment als activiteit om aan de kwaliteitsnormen te voldoen.
@@ -80,17 +96,17 @@
 * De link naar de toegankelijkheidsverklaring was niet correct.
 * Definitie voor 'operationeel beheer' toegevoegd aan de bijlage 'Terminologie'.
 
-#### Template Kwaliteitsplan
+## Template Kwaliteitsplan
 
 * Het Jira-type "Systeemfunctie" verwijderd uit bijlage D omdat dit niet meer gebruikt wordt.
 
-#### Self-assessment checklist
+## Self-assessment checklist
 
 * Een deel van de tekst van maatregel M05 was weggevallen.
 
-### Versie 3.0.0, 28 februari 2023
+# Versie 3.0.0, 28 februari 2023
 
-#### Kwaliteitsaanpak
+## Kwaliteitsaanpak
 
 * HTML-versie van de Kwaliteitsaanpak toegevoegd als toegankelijk alternatief voor de PDF-versie.
 * Op meerdere plekken in de Kwaliteitsaanpak de gebruikte rollen aangescherpt of verbeterd door bijvoorbeeld ICTU te vervangen door project, team door Scrumteam en projectleider door software delivery manager.
@@ -106,11 +122,11 @@
 * De term 'standup' vervangen door de officiële term 'daily scrum'.
 * De Scrumrollen toegevoegd aan de bijlage 'Terminologie'.
 
-#### Samenvatting Kwaliteitsaanpak
+## Samenvatting Kwaliteitsaanpak
 
 * Gebruik dezelfde volgorde van de maatregelen in de samenvatting als in de gehele Kwaliteitsaanpak.
 
-#### Template Niet-Functionele Eisen
+## Template Niet-Functionele Eisen
 
 * Paragraaf "Relaties met andere documenten" verder uitgewerkt.
 * In de paragraaf "Over dit document" handreiking voor het scherp formuleren van eisen toegevoegd.
@@ -118,109 +134,109 @@
 * Template neutraal gemaakt (ICTU logo's verwijderd) omdat dit document een verantwoordelijkheid van de opdrachtgever is.
 * Kolommen aan eisentabellen toegevoegd om eisen toe te wijzen aan systeemonderdelen en verantwoordelijke partijen.
 
-#### Template High Level Design
+## Template High Level Design
 
 * Template neutraal gemaakt (ICTU logo's verwijderd) omdat dit document een verantwoordelijkheid van de opdrachtgever is.
 
-#### Template Kwaliteitsplan
+## Template Kwaliteitsplan
 
 * In de beschrijving van het vrijgaveadvies "testresultaten" vervangen door toetsing van functionele en niet-functionele eisen.
 * Paragraaf over linters, checkers en formatters toegevoegd aan het hoofdstuk "Kwaliteitsmaatregelen realisatiefase".
 * Paragraaf over broncodereviews specifieker gemaakt.
 * De scope van de paragraaf over certificeringen uitgebreid zodat ook externe testen en toetsen eronder vallen.
 
-#### Template Generiek
+## Template Generiek
 
 * Een neutrale versie van het generieke template toegevoegd.
 
-#### Template Compacte Voorfase
+## Template Compacte Voorfase
 
 * Een template toegevoegd voor het vastleggen van de uitkomsten van een compacte voorfase. Dit template is bedoeld om functionele eisen, niet-functionele eisen, ontwerp en plan van aanpak voor de realisatiefase vast te leggen bij een project waar het maken van aparte en uitgebreidere (HLD, SAD, NFE, etc.) documenten niet nodig is. Dit zijn typisch interne ICTU-projecten met beperkte omvang.
 
-#### Alle templates
+## Alle templates
 
 * Beheerpartijrollen toegevoegd aan colofon.
 
-#### Alle documenten
+## Alle documenten
 
 * Voor toepassing van de DevOps-werkwijze zijn uitzonderingen, extra maatregelen en extra rollen toegevoegd.
 * Verwijzingen naar Checkmarx vervangen door verwijzingen naar SonarQube.
 
-### Versie 2.4.0, 12 januari 2022
+# Versie 2.4.0, 12 januari 2022
 
-#### Kwaliteitsaanpak
+## Kwaliteitsaanpak
 
 * De titel van maatregel "Het project levert in elke fase vastgestelde informatie over het product op" (M01) veranderd in "Het project levert in elke fase vastgestelde producten en informatie op" zodat de titel beter past bij de scope van de maatregel.
 * Bij maatregel "Het project levert in elke fase vastgestelde producten en informatie op" (M01): de tabel uitgebreid met product backlog, en de lopende tekst aangevuld en aangepast opdat deze consistent is met de tabel.
 * Bij maatregel "Het project zorgt dat het product continu aan de kwaliteitsnormen voldoet" (M02): "Ook zorgt het project dat de performance van de software regelmatig wordt getest." toegevoegd.
 
-#### Template Kwaliteitsplan
+## Template Kwaliteitsplan
 
 * Bijlage met periodieke (kwaliteits)controles toegevoegd.
 * Beschrijvingen van release notes en performancetest toegevoegd.
 
-#### Template Niet-Functionele Eisen
+## Template Niet-Functionele Eisen
 
 * Axe-core bijgewerkt naar versie 4.3 in de tabel met de WCAG 2.1 succescriteria.
 
-#### Template Plan van Aanpak Realisatiefase
+## Template Plan van Aanpak Realisatiefase
 
 * UX: aanpassing producten uit de voorfase; verantwoordelijkheden van rol UX-designer aangevuld.
 * Toelichting op te maken afspraken voor: release notes, vrijgaveadvies, beveiligingstest, performancetest.
 * In hoofdstuk Verwachte inzet ICTU een tabel toegevoegd met te verwachten kosten voor door ICTU te benutten diensten.
 
-#### Template Plan van Aanpak Voorfase
+## Template Plan van Aanpak Voorfase
 
 * UX: te realiseren producten toegevoegd: interactie-ontwerp (UX), wireframe, mockup, prototype, animatie.
 
-#### Template Generiek
+## Template Generiek
 
 * Definities toegevoegd: release notes en vrijgaveadvies.
 
-#### Self-assessment checklist
+## Self-assessment checklist
 
 * Invulinstructie uitgebreid.
 * Duidelijk gemaakt dat als maatregelen submaatregelen hebben alleen de status van submaatregelen hoeft te worden ingevuld.
 
-#### Inwerkplan Kwaliteitsmanager
+## Inwerkplan Kwaliteitsmanager
 
 * Inwerkplan voor de rol van kwaliteitsmanager toegevoegd.
 
-### Versie 2.3.0, 14 mei 2021
+# Versie 2.3.0, 14 mei 2021
 
-#### Kwaliteitsaanpak
+## Kwaliteitsaanpak
 
 * Verwijzingen naar BIRT en de Releasemanager verwijderd uit de maatregel "Het project gebruikt tools voor vastgestelde taken" (M16) omdat deze tools niet meer ondersteund worden.
 * Manifest verwijderd omdat de inhoud grotendeels terugkomt op andere plekken in de Kwaliteitsaanpak.
 
-#### Samenvatting Kwaliteitsaanpak
+## Samenvatting Kwaliteitsaanpak
 
 * Een samenvatting van de Kwaliteitsaanpak als los document toegevoegd.
 
-#### Presentatie Kwaliteitsaanpak
+## Presentatie Kwaliteitsaanpak
 
 * Een presentatie van de Kwaliteitsaanpak als los document toegevoegd.
 
-#### Alle templates
+## Alle templates
 
 * Lijst van reviewers toegevoegd aan colofon.
 * Leeswijzer uitgebreid met een beschrijving van de (standaard) bijlagen van de templates.
 * Hoofdstuk "Managementsamenvatting" toegevoegd.
 
-#### Template Detailtestplan
+## Template Detailtestplan
 
 * Verwijzingen naar BIRT en de Releasemanager verwijderd.
 
-#### Template Globaal Functioneel Ontwerp
+## Template Globaal Functioneel Ontwerp
 
 * Template aangepast naar het gebruik van use cases om de functionaliteit te beschrijven.
 * Kaders die niet relevant waren voor een GFO verwijderd.
 
-#### Template Niet-Functionele Eisen
+## Template Niet-Functionele Eisen
 
 * Tabel met de WCAG 2.1 succescriteria toegevoegd. Per succescriterium geeft de tabel aan of Axe-core, en zo ja met welke regels, het succescriterium geautomatiseerd kan controleren.
 
-#### Template Kwaliteitsplan
+## Template Kwaliteitsplan
 
 * Het kwaliteitsplantemplate sprak van een verantwoordingsparagraaf in alle documenten, maar deze paragraaf zat niet in de andere templates. Deze verantwoordingsparagrafen waren bedoeld om de eisen traceerbaar te maken. Omdat niet alle projecten dit nodig hebben, en er andere manieren in gebruik zijn om eisen traceerbaar te maken (bijvoorbeeld een losse administratie in Confluence) is de tekst over verantwoordingsparagrafen vervangen door een optionele paragraaf over tracering van eisen die nader kan worden ingevuld.
 * Uit de bijlage "Gebruik van Jira" is de paragraaf "Velden in Jira" verwijderd omdat deze out-of-date en incompleet was en bovendien niet ging over velden in Jira, maar over metrieken die met behulp van de informatie in Jira gemeten kunnen worden. In plaats van deze paragraaf verwijst het kwaliteitsplantemplate naar de lijst op GitHub van metrieken die Quality-time kan meten.
@@ -228,21 +244,21 @@
 * Uit de bijlage "Gebruik van Jira" is het issue type "Custom issue" verwijderd omdat custom issues optioneel zijn en in de praktijk te weinig worden toegepast om apart te beschrijven.
 * Het hoofdstuk "Kwaliteitsmaatregelen projectafsluiting" bevatte een lijst van activiteiten voor de software delivery manager. Die activiteiten zijn verplaatst naar het template plan van aanpak realisatiefase. De kwaliteitsmaatregelen bij projectafsluiting zijn beperkt tot een controle door de kwaliteitsmanager van de uitvoering van die activiteiten.
 
-#### Template Plan van Aanpak Voorfase
+## Template Plan van Aanpak Voorfase
 
 * Paragraaf over projectafsluiting toegevoegd.
 
-#### Template Plan van Aanpak Realisatiefase
+## Template Plan van Aanpak Realisatiefase
 
 * Paragraaf over projectafsluiting en bijlage met activiteiten voor projectafsluiting toegevoegd.
 
-#### Alle documenten
+## Alle documenten
 
 * Vervang 'privacy impact analyse' door 'privacy impact assessment' en 'business impact analyse' door 'business impact analysis' zodat beide termen consequent op dezelfde manier geschreven worden.
 
-### Versie 2.2.0, 27 januari 2021
+# Versie 2.2.0, 27 januari 2021
 
-#### Kwaliteitsaanpak
+## Kwaliteitsaanpak
 
 * Afdeling ICTU Software Realisatie vervangen door de afdelingen ICTU Software Diensten en/of ICTU Software Expertise.
 * ICTU ondersteunt alleen nog Quality-time als kwaliteitssysteem; HQ verwijderd.
@@ -256,51 +272,51 @@
 * Bij maatregel "Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen" (M26) beter toegelicht onder welke voorwaarden de beveiligingstesten alleen door de opdrachtgever kunnen worden uitgevoerd.
 * Bijlage "Risico's van softwareontwikkeling" verwijderd vanwege de overlap met de bijlage "Relatie met NEN NPR 5326".
 
-#### Template Projectvoorstel Voorfase
+## Template Projectvoorstel Voorfase
 
 * Template veranderd in een template voor een plan van aanpak voor de voorfase. Gebruik voor projectvoorstellen het ICTU-brede template.
 
-#### Template Projectvoorstel Realisatiefase
+## Template Projectvoorstel Realisatiefase
 
 * Template veranderd in een template voor een plan van aanpak voor de realisatiefase. Gebruik voor projectvoorstellen het ICTU-brede template.
 
-#### Template Kwaliteitsplan
+## Template Kwaliteitsplan
 
 * Toegevoegd bij projectafsluiting dat VPN-keys, LDAP-accounts, Jira-accounts en werkstations moeten worden opgeschoond.
 * Bij projectafsluiting de verantwoordelijke rol aangepast naar software delivery manager, conform Maatregel 27 in de Kwaliteitsaanpak.
 * Het hanteren van codeerstandaarden toegevoegd aan de kwaliteitsmaatregelen tijdens de realisatiefase.
 
-### Versie 2.1.0, 2 september 2020
+# Versie 2.1.0, 2 september 2020
 
-#### Kwaliteitsaanpak
+## Kwaliteitsaanpak
 
 * M30 ontbrak in de bijlage met het overzicht van alle maatregelen.
 * Link naar Kwaliteitsaanpak op ICTU-website toegevoegd.
 
-#### Alle templates
+## Alle templates
 
 * Rubriceringsmogelijkheid conform Besluit Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie 2013 (VIRBI 2013) toegevoegd.
 * Rubriceringsniveau, rubriceringsduur en totaal aantal bladzijden conform VIRBI 2013, bijlage 1, eis 6J toegevoegd.
 * Link naar Kwaliteitsaanpak op ICTU-website toegevoegd in de bijlage over de Kwaliteitsaanpak.
 
-#### Template Projectvoorstel Realisatiefase
+## Template Projectvoorstel Realisatiefase
 
 * Projectvoorstel Realisatiefase template toegevoegd dat als basis kan dienen voor een projectvoorstel voor het uitvoeren van een realisatiefase aansluitend aan een voorfase.
 
-#### Generiek template
+## Generiek template
 
 * Generiek template toegevoegd dat als basis kan dienen voor documenten waarvoor nog geen specifiek template is.
 
-#### Template Kwaliteitsplan
+## Template Kwaliteitsplan
 
 * Paragrafen 1.2, 1.5 en 1.6 uitgebreid met standaard teksten.
 * Stakeholder management vervangen door het bescheidener identificeren van belanghebbenden en belangen.
 
-#### Template Niet-Functionele Eisen
+## Template Niet-Functionele Eisen
 
 * Link naar Nederlandse vertaling van WCAG 2.1 toegevoegd aan het NFE-template.
 
-### Versie 2.0.0, 29 april 2020
+# Versie 2.0.0, 29 april 2020
 
 * Naam van de Kwaliteitsaanpak veranderd van "Kwaliteitsaanpak ICTU Software Realisatie" naar "ICTU Kwaliteitsaanpak Softwareontwikkeling". Waar relevant "softwarerealisatie" veranderd in "softwareontwikkeling".
 * Maatregelen, waar mogelijk, compacter geformuleerd.
@@ -323,11 +339,11 @@
 * Actielijst toegevoegd aan self-assessment spreadsheet.
 * Generatie van documenttemplates is onderdeel van de Kwaliteitsaanpak.
 
-### Versie 1.3.1, 1 mei 2019
+# Versie 1.3.1, 1 mei 2019
 
 * M14: Maatregeltitel ingekort zodat paginanummers in de inhoudsopgave niet overlappen.
 
-### Versie 1.3, 5 april 2019
+# Versie 1.3, 5 april 2019
 
 * Overbodig kopje in de wijzigingsgeschiedenis van de generieke versie verwijderd.
 * Bijlage met afkortingen toegevoegd.
@@ -339,7 +355,7 @@
 * M16: Axe toegevoegd.
 * WCAG 2.1 toegevoegd aan bijlage C: Documenten voor M01.
 
-### Versie 1.2, 1 augustus 2018
+# Versie 1.2, 1 augustus 2018
 
 * M01: Op te leveren producten: Niet alle producten hoeven door het project te worden gemaakt.
 * M02: Continu voldoen aan kwaliteitsnormen: Zo snel mogelijk voldoen aan kwaliteitsnormen in plaats van altijd.
@@ -352,10 +368,10 @@
 * ICTU-specifieke invulling van maatregelen aangepast aan nieuwe organisatiestructuur en rollen zoals die in 2018 gelden.
 * In M16: Verplichte tools, de verwijzing naar ICTU-specifieke SonarQube kwaliteitsprofielen verwijderd omdat ICTU de standaard Sonar Way kwaliteitsprofielen gebruikt.
 
-### Versie 1.1, 7 november 2017
+# Versie 1.1, 7 november 2017
 
 * BIR-maatregelen toegevoegd.
 
-### Versie 1.0.2, 9 mei 2017
+# Versie 1.0.2, 9 mei 2017
 
 * Eerste publicatie.

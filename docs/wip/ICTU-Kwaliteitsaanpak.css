@@ -1,44 +1,102 @@
 @import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
 
+@page {
+    size: A4; /* DIN A4 standard, Europe */
+    margin-top: 25mm;
+    margin-bottom: 25mm;
+}
+
 body {
     font-size: 12pt !important;
     color: #000 !important;
-    font-family: 'Muli', sans-serif;
+    font-family: "Muli", sans-serif;
     width: 680px;
     margin: auto;
     counter-reset: section;
 }
 
-h1::before {
+/* Front matter */
+
+img[title="word-cloud"] {
+    width: 95%;
+    padding-top: 100px;
+}
+
+/* Table of contents *.keep-together */
+
+#toc {
+    counter-reset: toc-h1;
+}
+
+#toc div.h1::before {
+    counter-increment: toc-h1;
+    content: counter(toc-h1) " ";
+    color: #2c64ad;
+    margin-left: -2em;
+    width: 2em;
+    position: absolute;
+}
+
+#toc div.h1.bijlage::before {
+    counter-reset: toc-h1;
+    content: "";
+}
+
+#toc div.h1 {
+    margin-top: 1em;
+    margin-left: 2em;
+    counter-reset: toc-h2;
+}
+
+#toc div.h1.bijlage {
+    margin-left: 0em;
+}
+
+#toc div.h2.bijlage::before {
+    counter-increment: toc-h2;
+    content: counter(toc-h2, upper-alpha) " ";
+    color: #2c64ad;
+    margin-left: -2em;
+    width: 2em;
+    position: absolute;
+}
+
+#toc div.h2::before {
+    counter-increment: toc-h2;
+    content: counter(toc-h1) "." counter(toc-h2) " ";
+    color: #2c64ad;
+    margin-left: -2em;
+    width: 2em;
+    position: absolute;
+}
+
+#toc div.h2 {
+    margin-left: 4em;
+}
+
+/* Headers */
+
+h1:not(toc)::before {
     counter-increment: section;
     content: counter(section) " ";
-    color: #2C64AD;
+    color: #2c64ad;
 }
 
 h1 {
     line-height: 150%;
-    color: #2C64AD;
+    color: #2c64ad;
     font-size: 20pt;
     font-weight: bold;
     page-break-before: always;
     counter-reset: subsection;
 }
 
-p.title {
-    margin-top: 30px;
-    color: #2C64AD;
-    font-size: 42pt;
-    font-weight: bold;
-    line-height: 130%;
+h1.toc::before {
+    content: ""; /* The table of contents title has no counter */
 }
 
-img[title='word-cloud'] {
-    width: 95%;
-    padding-top: 100px;
-}
-
-#bijlagen::before {
-    content: "";  /* The Bijlagen section has no counter */
+h1.toc {
+    counter-reset: section;
 }
 
 h2.bijlage::before {
@@ -51,13 +109,9 @@ h2::before {
     content: counter(section) "." counter(subsection) " ";
 }
 
-h2.toc::before {
-    content: "";  /* The table of contents title has no counter */
-}
-
 h2 {
     margin-top: 20px;
-    color: #DB1778;
+    color: #db1778;
     font-size: 16pt;
     font-weight: bold;
 }
@@ -67,17 +121,17 @@ h3 {
     color: black;
     font-size: 14pt;
     font-weight: bold;
-    margin-bottom: -15px;  /* Remove vertical space between header and next element */
+    margin-bottom: -15px; /* Remove vertical space between header and next element */
 }
 
 h4 {
     font-size: 12pt;
-    color: #B500C7;
-    margin-bottom: -15px;  /* Remove vertical space between header and next element */
+    color: #b500c7;
+    margin-bottom: -15px; /* Remove vertical space between header and next element */
 }
 
 h4.risk {
-    background-color: #4C76BA;
+    background-color: #4c76ba;
     color: white;
     padding: 1em;
 }
@@ -88,14 +142,35 @@ h5 {
     font-weight: bold;
 }
 
+#bijlagen::before {
+    content: ""; /* The Bijlagen section has no counter */
+}
+
+/* Paragraphs */
+
+p.title {
+    margin-top: 30px;
+    color: #2c64ad;
+    font-size: 42pt;
+    font-weight: bold;
+    line-height: 130%;
+}
+
+.keep-together {
+    page-break-inside: avoid;
+}
+
+/* Tables */
+
 tr {
     page-break-inside: avoid;
 }
 
-th,td {
+th,
+td {
     text-align: left;
     vertical-align: top;
-    background-color: #E6F6FD;
+    background-color: #e6f6fd;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -103,8 +178,10 @@ th,td {
 }
 
 th {
-    background-color: #83D0F5;
+    background-color: #83d0f5;
 }
+
+/* Numbered lists */
 
 ol {
     list-style-type: none;
@@ -114,15 +191,16 @@ ol {
     padding: 0;
 }
 
-ol > li:before {
+ol > li::before {
     counter-increment: ol-item;
     content: counter(ol-item) ". ";
     margin-left: -3em;
     position: absolute;
+    color: #4c76ba;
 }
 
 ol ol > li:before {
-    content: counters(item, ".") " ";  /* Use nested counters when ol's are nested */
+    content: counters(item, ".") " "; /* Use nested counters when ol's are nested */
 }
 
 ol > li {
@@ -141,29 +219,32 @@ ol.bijlage {
     margin-top: 0.1em;
 }
 
+/* Bulleted lists */
+
 ul {
     padding-left: 1.2em;
+    list-style: none;
 }
 
-ul > li {
-    /* Since we can't easily give the bullet a different color than the text, we use a SVG. */
-    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" width="10" height="10"><circle fill="#4C76BA" cx="5" cy="5" r="3"/></svg>');
-    padding-left: 1.7em;
+ul > li::before {
+    content: "●";
+    color: #4c76ba;
+    display: inline-block;
+    width: 1.2em;
+    margin-left: -1.2em;
 }
 
-.keep-together {
-    page-break-inside: avoid;
-}
+/* Domain specific styles */
 
 .maatregel {
-    background-color: #E6F6FD;
+    background-color: #e6f6fd;
     border-style: solid;
     border-width: 1px;
     padding: 1em;
 }
 
 .risk {
-    background-color: #4C76BA;
+    background-color: #4c76ba;
     color: white;
     padding: 1em;
 }

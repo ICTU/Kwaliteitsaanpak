@@ -15,7 +15,7 @@ from xml.etree.ElementTree import ElementTree
 
 from cli import parse_cli_arguments
 from converter import Converter
-from builder import DocxBuilder, HTMLBuilder, HTMLContentBuilder, HTMLCoverBuilder, PptxBuilder, XlsxBuilder
+from builder import DocxBuilder, HTMLBuilder, PptxBuilder, XlsxBuilder
 from markdown_converter import MarkdownConverter
 from markdown_syntax import VARIABLE_USE_PATTERN
 from custom_types import JSON, Settings, Variables
@@ -33,9 +33,6 @@ def convert(settings_filename: str, version: str) -> None:
     converter = Converter(xml)
     if "docx" in settings["OutputFormats"]:
         convert_docx(converter, settings)
-    if "pdf" in settings["OutputFormats"]:
-        copy_files(settings, "pdf")
-        convert_pdf(converter, settings, variables)
     if "pptx" in settings["OutputFormats"]:
         convert_pptx(converter, settings)
     if "xlsx" in settings["OutputFormats"]:
@@ -45,11 +42,11 @@ def convert(settings_filename: str, version: str) -> None:
         convert_html(converter, settings)
 
 
-def read_variables(settings_filename: str, version: str) -> dict:
+def read_variables(settings_filename: str, version: str) -> Variables:
     """Read the variables."""
     settings = cast(Settings, read_json(settings_filename))
     variables = cast(Variables, {})
-    for variable_file in settings["VariablesFiles"]:
+    for variable_file in settings["VariablesFiles"]:  # pylint: disable=unsubscriptable-object
         variables.update(cast(Variables, read_json(variable_file)))
     variables["VERSIE"] = version if version == "wip" else f"v{version}"
     variables["VERSIE_ZONDER_V"] = version
@@ -57,22 +54,23 @@ def read_variables(settings_filename: str, version: str) -> dict:
     return variables
 
 
-def read_settings(settings_filename: str, variables: Variables) -> dict:
+def read_settings(settings_filename: str, variables: Variables) -> Settings:
     """Read the settings."""
     settings = read_json(settings_filename, variables)
+    # pylint: disable=unsupported-assignment-operation
     settings["Version"] = variables["VERSIE"]
     settings["Date"] = variables["DATUM"]
-    return settings
+    return cast(Settings, settings)
 
 
 def read_json(json_filename: str, variables: Variables | None = None) -> JSON:
     """Read JSON from the specified filename."""
-    variables = variables or {}
+    variables = variables or cast(Variables, {})
     with open(json_filename, encoding="utf-8") as json_file:
         json_text = re.sub(
             VARIABLE_USE_PATTERN,
             lambda variable: variables.get(variable.group(1), variable.group(0)),
-            json_file.read()
+            json_file.read(),
         )
         return JSON(json.loads(json_text))
 
@@ -100,37 +98,6 @@ def convert_html(converter, settings: Settings) -> None:
     html_builder = HTMLBuilder(html_build_filename, pathlib.Path(""))
     converter.convert(html_builder)
     copy_output(html_build_filename, settings, "html")
-
-
-def convert_pdf(converter, settings: Settings, variables: Variables) -> None:
-    """Convert the XML to PDF."""
-    build_path = get_build_path(settings)
-    html_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".html").name
-    html_builder = HTMLContentBuilder(html_filename, build_path)
-    converter.convert(html_builder)
-    html_cover_filename = build_path / pathlib.Path(settings["InputFile"]).with_suffix(".cover.html").name
-    html_cover_builder = HTMLCoverBuilder(html_cover_filename, build_path)
-    converter.convert(html_cover_builder)
-    with open("DocumentDefinitions/Shared/header.html", encoding="utf-8") as header_template_file:
-        header_contents = header_template_file.read() % variables["KWALITEITSAANPAK"]
-    header_filename = build_path / "header.html"
-    with open(header_filename, mode="w", encoding="utf-8") as header_file:
-        header_file.write(header_contents)
-    pdf_build_filename = build_path / pathlib.Path(settings["OutputFormats"]["pdf"]["OutputFile"])
-    os.system(
-        f"""wkhtmltopdf \
-        --enable-local-file-access \
-        --footer-html DocumentDefinitions/Shared/footer.html --footer-spacing 10 \
-        --header-html {header_filename} --header-spacing 10 \
-        --margin-bottom 27 --margin-left 34 --margin-right 34 --margin-top 27 \
-        --title '{settings["Title"]}' \
-        cover {html_cover_filename} \
-        {"toc --xsl-style-sheet DocumentDefinitions/Shared/toc.xsl" if settings["IncludeTableOfContents"] else ""} \
-        {html_filename} {pdf_build_filename}"""
-    )
-    pdf_build_filename2 = build_path / pathlib.Path(settings["OutputFormats"]["pdf"]["OutputFile"] + ".step2")
-    os.system(f"gs -o {pdf_build_filename2} -sDEVICE=pdfwrite -dPrinted=false -f {pdf_build_filename} src/pdfmark.txt")
-    copy_output(pdf_build_filename2, settings, "pdf")
 
 
 def convert_docx(converter, settings: Settings) -> None:

@@ -2,8 +2,6 @@ services:
   ka:
     build:
       context: .
-      args:
-        ARCH: ${ARCH:-amd64}
     environment:
       VERSION: ${VERSION:-wip}
     working_dir: /work

@@ -6,30 +6,6 @@
     "FrontPage": "ICTU",
     "IncludeTableOfContents": true,
     "OutputFormats": {
-        "pdf": {
-            "OutputFile": "ICTU-Kwaliteitsaanpak.pdf",
-            "OutputPaths": [
-                "docs/$VERSIE$"
-            ],
-            "CopyFiles": [
-                {
-                    "from": "DocumentDefinitions/Shared/document.css",
-                    "to": ["build/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.css"]
-                },
-                {
-                    "from": "Content/Images/relaties-tussen-producten.png",
-                    "to": ["build/Kwaliteitsaanpak/relaties-tussen-producten.png"]
-                },
-                {
-                    "from": "Content/Images/ICTU.png",
-                    "to": ["build/Kwaliteitsaanpak/ICTU.png"]
-                },
-                {
-                    "from": "Content/Images/word-cloud.png",
-                    "to": ["build/Kwaliteitsaanpak/word-cloud.png"]
-                }
-            ]
-        },
         "html": {
             "OutputFile": "ICTU-Kwaliteitsaanpak.html",
             "OutputPaths": [
@@ -38,21 +14,36 @@
             "CopyFiles": [
                 {
                     "from": "DocumentDefinitions/Shared/document.css",
-                    "to": ["docs/$VERSIE$/ICTU-Kwaliteitsaanpak.css"]
+                    "to": [
+                        "docs/$VERSIE$/ICTU-Kwaliteitsaanpak.css"
+                    ]
                 },
                 {
                     "from": "Content/Images/relaties-tussen-producten.png",
-                    "to": ["docs/$VERSIE$/relaties-tussen-producten.png"]
+                    "to": [
+                        "docs/$VERSIE$/relaties-tussen-producten.png"
+                    ]
                 },
                 {
                     "from": "Content/Images/ICTU.png",
-                    "to": ["docs/$VERSIE$/ICTU.png"]
+                    "to": [
+                        "docs/$VERSIE$/ICTU.png"
+                    ]
                 },
                 {
                     "from": "Content/Images/word-cloud.png",
-                    "to": ["docs/$VERSIE$/word-cloud.png"]
+                    "to": [
+                        "docs/$VERSIE$/word-cloud.png"
+                    ]
                 }
             ]
+        },
+        "docx": {
+            "OutputFile": "ICTU-Kwaliteitsaanpak.docx",
+            "OutputPaths": [
+                "docs/$VERSIE$"
+            ],
+            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         },
         "xlsx": {
             "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx",

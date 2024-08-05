@@ -64,7 +64,7 @@ typing-extensions==4.12.2
     #   python-docx
 vulture==2.11
     # via ictu-kwaliteitsaanpak (pyproject.toml)
-wheel==0.43.0
+wheel==0.44.0
     # via pip-tools
 xlsxwriter==3.2.0
     # via

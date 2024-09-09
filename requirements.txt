@@ -8,7 +8,7 @@ astroid==3.2.4
     # via pylint
 black==24.8.0
     # via ictu-kwaliteitsaanpak (pyproject.toml)
-build==1.2.1
+build==1.2.2
     # via pip-tools
 click==8.1.7
     # via

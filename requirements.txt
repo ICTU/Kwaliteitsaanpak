@@ -42,7 +42,7 @@ pillow==10.4.0
     # via python-pptx
 pip-tools==7.4.1
     # via ictu-kwaliteitsaanpak (pyproject.toml)
-platformdirs==4.2.2
+platformdirs==4.3.3
     # via
     #   black
     #   pylint

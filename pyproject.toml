@@ -18,7 +18,7 @@ optional-dependencies.dev = [
     "mypy==1.11.2",
     "pip-tools==7.4.1",
     "pylint==3.2.7",
-    "vulture==2.11",
+    "vulture==2.12",
 ]
 
 [tool.black]

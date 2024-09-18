@@ -62,7 +62,7 @@ typing-extensions==4.12.2
     # via
     #   mypy
     #   python-docx
-vulture==2.11
+vulture==2.12
     # via ictu-kwaliteitsaanpak (pyproject.toml)
 wheel==0.44.0
     # via pip-tools

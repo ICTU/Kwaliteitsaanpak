@@ -46,7 +46,7 @@ platformdirs==4.2.2
     # via
     #   black
     #   pylint
-pylint==3.2.7
+pylint==3.3.0
     # via ictu-kwaliteitsaanpak (pyproject.toml)
 pyproject-hooks==1.1.0
     # via

@@ -17,7 +17,7 @@ optional-dependencies.dev = [
     "lxml-stubs==0.5.1",
     "mypy==1.11.2",
     "pip-tools==7.4.1",
-    "pylint==3.2.7",
+    "pylint==3.3.0",
     "vulture==2.11",
 ]
 

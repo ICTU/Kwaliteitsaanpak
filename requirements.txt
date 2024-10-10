@@ -14,7 +14,7 @@ click==8.1.7
     # via
     #   black
     #   pip-tools
-coverage==7.6.1
+coverage==7.6.2
     # via ictu-kwaliteitsaanpak (pyproject.toml)
 dill==0.3.8
     # via pylint

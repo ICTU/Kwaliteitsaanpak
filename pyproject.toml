@@ -15,7 +15,7 @@ optional-dependencies.dev = [
     "black==24.10.0",
     "coverage==7.6.1",
     "lxml-stubs==0.5.1",
-    "mypy==1.11.2",
+    "mypy==1.12.0",
     "pip-tools==7.4.1",
     "pylint==3.2.7",
     "vulture==2.13",

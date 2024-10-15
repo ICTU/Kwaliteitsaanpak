@@ -26,7 +26,7 @@ lxml==5.3.0
     #   python-pptx
 mccabe==0.7.0
     # via pylint
-mypy==1.11.2
+mypy==1.12.0
     # via ictu-kwaliteitsaanpak (pyproject.toml)
 mypy-extensions==1.0.0
     # via

@@ -38,7 +38,7 @@ packaging==24.1
     #   build
 pathspec==0.12.1
     # via black
-pillow==10.4.0
+pillow==11.0.0
     # via python-pptx
 pip-tools==7.4.1
     # via ictu-kwaliteitsaanpak (pyproject.toml)

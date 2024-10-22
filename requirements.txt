@@ -16,7 +16,7 @@ click==8.1.7
     #   pip-tools
 coverage==7.6.4
     # via ictu-kwaliteitsaanpak (pyproject.toml)
-dill==0.3.8
+dill==0.3.9
     # via pylint
 isort==5.13.2
     # via pylint

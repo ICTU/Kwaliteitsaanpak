@@ -16,7 +16,7 @@ ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Project
 8. controleren van de configuratie op aanwezigheid van bekende kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
 9. controleren op aanwezigheid van bekende kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency-Check en/of Dependency-Track,
 10. statische controle van de software op aanwezigheid van kwetsbare constructies: SonarQube,
-11. dynamische controle van de software op aanwezigheid van kwetsbare constructies: OWASP ZAP (Zed Attack Proxy),
+11. dynamische controle van de software op aanwezigheid van kwetsbare constructies: ZAP (Zed Attack Proxy) by Checkmarx,
 12. controleren van container images op aanwezigheid van bekende kwetsbaarheden: Trivy,
 13. testen van performance en schaalbaarheid: JMeter en Performancetestrunner,
 14. testen op toegankelijkheid van de applicatie: Axe,

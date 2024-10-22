@@ -174,7 +174,7 @@ Acties (week 3):
 * Je hebt toegang tot het versiebeheersysteem van je project (GitLab of Azure DevOps)
 * Je hebt toegang tot de build server van je project (GitLab CI, Azure DevOps of Jenkins)
 * Je hebt toegang tot je project in [Jira](https://jira.ictu-sd.nl/jira/)
-* Je hebt toegang tot de securityrapportages in de build pipeline (OWASP Dependency-Check, OWASP ZAP, OpenVAS)
+* Je hebt toegang tot de securityrapportages in de build pipeline (OWASP Dependency-Check, ZAP by Checkmarx, OpenVAS)
 * Je hebt toegang tot de toegankelijksrapportage (Axe) in de build pipeline
 * Je hebt toegang tot de testrapportages in de build pipeline (Robot Framework, JUnit, Cypress, etc.)
 * Je hebt toegang tot de Dependency-Track instantie van je project

@@ -113,6 +113,7 @@ Logische testgevallen worden vastgelegd en gekoppeld met use cases en user stori
 
 Beschikbare templates:
 
+* [Template mastertestplan]($BASE_URL$/$VERSIE$/Neutraal-Template-Mastertestplan.docx).
 * [Template detailtestplan softwarerealisatie]($BASE_URL$/$VERSIE$/ICTU-Template-Detailtestplan-Softwarerealisatie.docx).
 
 ### Informatiebeveiligingsplan

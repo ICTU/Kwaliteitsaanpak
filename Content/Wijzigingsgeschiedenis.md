@@ -20,6 +20,7 @@
 ## Alle documenten
 
 * "OWASP Dependency-Check" consistent gespeld.
+* "OWASP ZAP" hernoemd naar "ZAP by Checkmarx".
 
 # Versie 4.0.0, 26 april 2024
 

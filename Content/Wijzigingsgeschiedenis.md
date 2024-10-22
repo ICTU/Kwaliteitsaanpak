@@ -5,7 +5,7 @@
 * Een Word-versie toegevoegd, om het makkelijker te maken wijzigingsvoorstellen in te dienen.
 * De PDF-versie wordt niet langer gemaakt. De software (wkhtmltopdf) om de PDF te genereren wordt niet meer onderhouden. Overstappen op een andere oplossing kost te veel tijd. Indien nodig kunnen gebruikers de HTML-versie zelf naar PDF exporteren met behulp van een webbrowser.
 * Een inhoudsopgave toegevoegd aan de HTML-versie.
-* In maatregel M01 "Het project levert in elke fase vastgestelde producten en informatie op" verduidelijkt dat de aparte detailtestplannen die onder verantwoordelijkheid van het project door een derde partij worden uitgevoerd doorgaans de vorm hebben van een offerteaanvraag gemaakt door ICTU en een offerte met plan van aanpak gemaakt door de leverancier.
+* In maatregel M01 "Het project levert in elke fase vastgestelde producten en informatie op" verduidelijkt dat de aparte detailtestplannen die onder verantwoordelijkheid van het project door een derde partij worden uitgevoerd doorgaans de vorm hebben van een offerteaanvraag gemaakt door ICTU en een offerte met plan van aanpak gemaakt door de leverancier. Tevens de ontbrekende link naar het template Mastertestplan toegevoegd.
 
 ## Samenvatting Kwaliteitsaanpak
 

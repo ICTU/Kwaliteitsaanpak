@@ -5,6 +5,7 @@
 * Een Word-versie toegevoegd, om het makkelijker te maken wijzigingsvoorstellen in te dienen.
 * De PDF-versie wordt niet langer gemaakt. De software (wkhtmltopdf) om de PDF te genereren wordt niet meer onderhouden. Overstappen op een andere oplossing kost te veel tijd. Indien nodig kunnen gebruikers de HTML-versie zelf naar PDF exporteren met behulp van een webbrowser.
 * Een inhoudsopgave toegevoegd aan de HTML-versie.
+* In M01 "Het project levert in elke fase vastgestelde producten en informatie op" de ontbrekende link naar het template Mastertestplan toegevoegd.
 
 ## Samenvatting Kwaliteitsaanpak
 

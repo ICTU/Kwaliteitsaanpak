@@ -1,4 +1,4 @@
-| Item | Omschrijving | Niveau | Axe-core 4.10.1 regels |
+| Item | Omschrijving | Niveau | Axe-core 4.10.2 regels |
 | :--- | :--- | :--- | :--- |
 | Principe 1 | [Perceivable](https://www.w3.org/TR/WCAG22/#perceivable) | | |
 | Richtlijn 1.1 | [Text Alternatives](https://www.w3.org/TR/WCAG22/#text-alternatives) | | |

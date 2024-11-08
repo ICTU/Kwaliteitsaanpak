@@ -8,9 +8,6 @@ from custom_types import Settings, Variables
 from markdown_converter import MarkdownConverter
 
 
-# pylint: disable=unsupported-assignment-operation,unsubscriptable-object
-
-
 class MarkdownConverterTestCase(unittest.TestCase):
     """Base class for Markdown converter tests."""
 
@@ -61,7 +58,10 @@ class EmptyMarkdownTest(MarkdownConverterTestCase):
     def test_frontpage_title(self):
         """Test the front page title."""
         self.settings["FrontPage"] = "ICTU"
-        self.assertEqual(self.settings["Title"], self.xml().find(xmltags.FRONTPAGE).find(xmltags.TITLE).text)
+        self.assertEqual(
+            self.settings["Title"],
+            self.xml().find(xmltags.FRONTPAGE).find(xmltags.TITLE).text,
+        )
 
     def test_toc(self):
         """Test the table of contents."""
@@ -108,7 +108,8 @@ class MarkdownTest(MarkdownConverterTestCase):
         self.assertEqual("Heading 1", section2.find(xmltags.HEADING).text)
 
     @patch(
-        "markdown_converter.open", mock_open(read_data="**Bold** _Italic_ ~~Strike~~ {Instruction} [Anchor](link)")
+        "markdown_converter.open",
+        mock_open(read_data="**Bold** _Italic_ ~~Strike~~ {Instruction} [Anchor](link)"),
     )
     def test_formatting(self):
         """Test formatting."""
@@ -140,11 +141,20 @@ class MarkdownTest(MarkdownConverterTestCase):
     def test_table(self):
         """Test table."""
         table = self.xml().find(xmltags.TABLE)
-        self.assertEqual(("1", "3"), (table.attrib[xmltags.TABLE_ROWS], table.attrib[xmltags.TABLE_COLUMNS]))
+        self.assertEqual(
+            ("1", "3"),
+            (table.attrib[xmltags.TABLE_ROWS], table.attrib[xmltags.TABLE_COLUMNS]),
+        )
         self.assertEqual("col1", table.find(xmltags.TABLE_HEADER_ROW).find(xmltags.TABLE_CELL).text)
         cell = table.find(xmltags.TABLE_ROW).find(xmltags.TABLE_CELL)
         self.assertEqual("cell1", cell.text)
-        self.assertEqual(("1", "0"), (cell.attrib[xmltags.TABLE_CELL_ROW], cell.attrib[xmltags.TABLE_CELL_COLUMN]))
+        self.assertEqual(
+            ("1", "0"),
+            (
+                cell.attrib[xmltags.TABLE_CELL_ROW],
+                cell.attrib[xmltags.TABLE_CELL_COLUMN],
+            ),
+        )
         self.assertEqual("center", cell.attrib[xmltags.TABLE_CELL_ALIGNMENT])
         self.assertEqual(str(len("cell1")), cell.attrib[xmltags.TABLE_CELL_WIDTH])
 
@@ -152,7 +162,10 @@ class MarkdownTest(MarkdownConverterTestCase):
     def test_table_marker_without_columns(self):
         """Test an incomplete table."""
         table = self.xml().find(xmltags.TABLE)
-        self.assertEqual(("0", "1"), (table.attrib[xmltags.TABLE_ROWS], table.attrib[xmltags.TABLE_COLUMNS]))
+        self.assertEqual(
+            ("0", "1"),
+            (table.attrib[xmltags.TABLE_ROWS], table.attrib[xmltags.TABLE_COLUMNS]),
+        )
         self.assertEqual("text", table.find(xmltags.TABLE_HEADER_ROW).find(xmltags.TABLE_CELL).text)
 
     @patch("markdown_converter.open", mock_open(read_data="Replace $var$."))
@@ -160,14 +173,18 @@ class MarkdownTest(MarkdownConverterTestCase):
         """Test that a variable is replaced with its value."""
         self.assertEqual("Replace variable.", self.xml().find(xmltags.PARAGRAPH).text)
 
-    @patch("markdown_converter.open", mock_open(read_data="Replace [anchor](https://$var$/).\n"))
+    @patch(
+        "markdown_converter.open",
+        mock_open(read_data="Replace [anchor](https://$var$/).\n"),
+    )
     def test_variable_in_url(self):
         """Test that a variable in a URL is replaced with its value."""
         anchor_link = self.xml().find(xmltags.PARAGRAPH).find(xmltags.ANCHOR).attrib[xmltags.ANCHOR_LINK]
         self.assertEqual("https://variable/", anchor_link)
 
     @patch(
-        "markdown_converter.open", mock_open(read_data="<!-- begin: measure -->\nMeasure\n<!-- end: measure -->\n")
+        "markdown_converter.open",
+        mock_open(read_data="<!-- begin: measure -->\nMeasure\n<!-- end: measure -->\n"),
     )
     def test_measure(self):
         """Test measure."""
@@ -176,5 +193,8 @@ class MarkdownTest(MarkdownConverterTestCase):
     @patch("markdown_converter.open", new_callable=mock_open, read_data="#include 'file'")
     def test_include(self, mocked_open):
         """Test that Markdown files can be included."""
-        mocked_open.side_effect = (mocked_open.return_value, mock_open(read_data="included\n").return_value)
+        mocked_open.side_effect = (
+            mocked_open.return_value,
+            mock_open(read_data="included\n").return_value,
+        )
         self.assertEqual("included", self.xml().find(xmltags.PARAGRAPH).text)

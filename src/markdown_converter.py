@@ -41,7 +41,8 @@ class MarkdownConverter:
                 if line.startswith("#include"):
                     filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
                     filename = filename.replace(
-                        "{{DOCUMENT-FOLDER}}", settings.get("DocumentFolder", "DocumentFolder missing in settings")
+                        "{{DOCUMENT-FOLDER}}",
+                        settings.get("DocumentFolder", "DocumentFolder missing in settings"),
                     )
                     self._convert_markdown_file(pathlib.Path(filename), settings)
                 else:
@@ -50,7 +51,10 @@ class MarkdownConverter:
     def _start_document(self, settings: Settings) -> None:
         """Start the document."""
         document_attributes: TreeBuilderAttributes = {}
-        for setting, tag in (("Title", xmltags.DOCUMENT_TITLE), ("Version", xmltags.DOCUMENT_VERSION)):
+        for setting, tag in (
+            ("Title", xmltags.DOCUMENT_TITLE),
+            ("Version", xmltags.DOCUMENT_VERSION),
+        ):
             document_attributes[tag] = str(settings[setting])
         self.builder.start(xmltags.DOCUMENT, document_attributes)
         self._create_frontpage(settings)
@@ -100,7 +104,10 @@ class MarkdownConverter:
             if settings["FrontPage"] == "ICTU":
                 self._add_element(
                     xmltags.IMAGE,
-                    attributes={xmltags.IMAGE_SRC: "word-cloud.png", xmltags.IMAGE_WIDTH: "15"},
+                    attributes={
+                        xmltags.IMAGE_SRC: "word-cloud.png",
+                        xmltags.IMAGE_WIDTH: "15",
+                    },
                 )
             self._add_element(xmltags.PAGEBREAK)
 
@@ -121,12 +128,15 @@ class MarkdownConverter:
     def _create_table_of_contents(self) -> None:
         """Create the table of contents placeholder. Actually creating a table of contents is the responsibility of the
         target format (e.g. docx)."""
-        self._add_element(xmltags.TABLE_OF_CONTENTS, attributes={xmltags.TABLE_OF_CONTENTS_HEADING: "Inhoudsopgave"})
+        self._add_element(
+            xmltags.TABLE_OF_CONTENTS,
+            attributes={xmltags.TABLE_OF_CONTENTS_HEADING: "Inhoudsopgave"},
+        )
         self._add_element(xmltags.PAGEBREAK)
 
     def _process_line(self, line: str) -> None:
         """Process a line of Markdown."""
-        if not (stripped_line := line.strip()):  # pylint: disable=superfluous-parens
+        if not (stripped_line := line.strip()):
             self._end_lists()
             self._end_table()
             return  # Empty line, nothing further to do
@@ -155,7 +165,11 @@ class MarkdownConverter:
 
     def _process_variables(self, line: str) -> str:
         """Replace the variables with their values."""
-        return re.sub(markdown_syntax.VARIABLE_USE_PATTERN, lambda variable: self.variables[variable.group(1)], line)
+        return re.sub(
+            markdown_syntax.VARIABLE_USE_PATTERN,
+            lambda variable: self.variables[variable.group(1)],
+            line,
+        )
 
     def _process_heading(self, heading: str, level: int) -> None:
         """Process a heading."""
@@ -177,7 +191,10 @@ class MarkdownConverter:
                 }
                 self.builder.start(xmltags.SECTION, attributes)
         self.current_section_level = level
-        self.builder.start(xmltags.SECTION, {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)})
+        self.builder.start(
+            xmltags.SECTION,
+            {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)},
+        )
         with self.element(xmltags.HEADING):
             self._process_formatted_text(heading)
 
@@ -253,11 +270,27 @@ class MarkdownConverter:
         seen = ""
         formats = [
             (markdown_syntax.BOLD_START, markdown_syntax.BOLD_END, xmltags.BOLD),
-            (markdown_syntax.BOLD_ALTERNATIVE_START, markdown_syntax.BOLD_ALTERNATIVE_END, xmltags.BOLD),
-            (markdown_syntax.INSTRUCTION_START, markdown_syntax.INSTRUCTION_END, xmltags.INSTRUCTION),
+            (
+                markdown_syntax.BOLD_ALTERNATIVE_START,
+                markdown_syntax.BOLD_ALTERNATIVE_END,
+                xmltags.BOLD,
+            ),
+            (
+                markdown_syntax.INSTRUCTION_START,
+                markdown_syntax.INSTRUCTION_END,
+                xmltags.INSTRUCTION,
+            ),
             (markdown_syntax.ITALIC_START, markdown_syntax.ITALIC_END, xmltags.ITALIC),
-            (markdown_syntax.ITALIC_ALTERNATIVE_START, markdown_syntax.ITALIC_ALTERNATIVE_END, xmltags.ITALIC),
-            (markdown_syntax.STRIKETROUGH_START, markdown_syntax.STRIKETROUGH_END, xmltags.STRIKETHROUGH),
+            (
+                markdown_syntax.ITALIC_ALTERNATIVE_START,
+                markdown_syntax.ITALIC_ALTERNATIVE_END,
+                xmltags.ITALIC,
+            ),
+            (
+                markdown_syntax.STRIKETROUGH_START,
+                markdown_syntax.STRIKETROUGH_END,
+                xmltags.STRIKETHROUGH,
+            ),
         ]
         while line:
             format_found = False

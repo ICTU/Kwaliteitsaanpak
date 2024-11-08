@@ -18,7 +18,7 @@ from .hyperlink import add_hyperlink
 from .table_of_contents import add_table_of_contents
 
 
-class DocxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
+class DocxBuilder(Builder):
     """Docx builder."""
 
     SCHEMA = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
@@ -37,7 +37,10 @@ class DocxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
     )
 
     def __init__(
-        self, filename: pathlib.Path, docx_reference_filename: pathlib.Path, images_folder: pathlib.Path
+        self,
+        filename: pathlib.Path,
+        docx_reference_filename: pathlib.Path,
+        images_folder: pathlib.Path,
     ) -> None:
         super().__init__(filename)
         filename.unlink(missing_ok=True)
@@ -51,8 +54,7 @@ class DocxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         self.row: Row | None = None
         self.column_index = 0
 
-    def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:  # pylint:disable=too-many-branches
-        # pylint: disable=protected-access
+    def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().start_element(tag, attributes)
         if tag == xmltags.PARAGRAPH:
             self.paragraph = self.doc.add_paragraph(style="Maatregel" if self.in_element(xmltags.MEASURE) else None)
@@ -87,18 +89,20 @@ class DocxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             self._add_table_cell(attributes)
         elif tag == xmltags.HEADER:
             self.paragraph = cast(Paragraph, self.doc.sections[0].header.paragraphs[0])
-            self.paragraph.paragraph_format.alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT  # pylint: disable=no-member
+            self.paragraph.paragraph_format.alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT
         elif tag == xmltags.TITLE:
             self.paragraph = self.doc.add_paragraph(style="Title")
         elif tag == xmltags.TABLE_OF_CONTENTS:
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
         elif tag == xmltags.IMAGE:
-            self.doc.add_picture(str(self.images_folder / str(attributes["src"])), width=Cm(int(attributes["width"])))
+            self.doc.add_picture(
+                str(self.images_folder / str(attributes["src"])),
+                width=Cm(int(attributes["width"])),
+            )
 
     def _add_list_item(self) -> None:
         """Add a list item."""
-        # pylint: disable=protected-access
         self.paragraph = self.doc.add_paragraph(style=self.current_list_style[-1])
         level = len(self.current_list_style) - 1
         self.paragraph_number(self.paragraph).get_or_add_ilvl().val = level
@@ -119,18 +123,15 @@ class DocxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
     @staticmethod
     def paragraph_number(paragraph: Paragraph):
         """Return the current paragraph number ."""
-        # pylint: disable=protected-access
         return paragraph._p.get_or_add_pPr().get_or_add_numPr()  # type: ignore[attr-defined]
 
     def _add_table_cell(self, attributes: TreeBuilderAttributes) -> None:
         """Add a table cell."""
-        # pylint: disable=protected-access
         assert self.row
         cell = self.row.cells[self.column_index]
         cell._tc.tcPr.tcW.type = "auto"  # type: ignore[union-attr]
         self.paragraph = cast(Paragraph, cell.paragraphs[0])
         if alignment_attr := attributes.get(xmltags.TABLE_CELL_ALIGNMENT):
-            # pylint: disable=no-member
             alignment = {
                 "left": WD_PARAGRAPH_ALIGNMENT.LEFT,
                 "right": WD_PARAGRAPH_ALIGNMENT.RIGHT,
@@ -146,7 +147,7 @@ class DocxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             if self.in_element(xmltags.BOLD):
                 run.font.bold = True
             if self.in_element(xmltags.INSTRUCTION):
-                run.font.highlight_color = WD_COLOR_INDEX.YELLOW  # pylint: disable=no-member
+                run.font.highlight_color = WD_COLOR_INDEX.YELLOW
             if self.in_element(xmltags.ITALIC):
                 run.font.italic = True
             if self.in_element(xmltags.STRIKETHROUGH):

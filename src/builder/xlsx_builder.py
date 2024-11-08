@@ -12,7 +12,7 @@ from custom_types import TreeBuilderAttributes
 from .builder import Builder
 
 
-class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
+class XlsxBuilder(Builder):
     """Self-assessment builder."""
 
     MEASURE_ID_COLUMN, MEASURE_COLUMN, STATUS_COLUMN, EXPLANATION_COLUMN = range(4)
@@ -31,12 +31,25 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         self.measure_text: List[str] = []
 
     @staticmethod
-    def __create_formats(workbook: xlsxwriter.Workbook) -> Dict[str, xlsxwriter.format.Format]:
+    def __create_formats(
+        workbook: xlsxwriter.Workbook,
+    ) -> Dict[str, xlsxwriter.format.Format]:
         """Create the formats."""
-        measure_format_options = {"bg_color": "#BCD2EE", "text_wrap": True, "valign": "top"}
+        measure_format_options = {
+            "bg_color": "#BCD2EE",
+            "text_wrap": True,
+            "valign": "top",
+        }
         status_format_options = {"bg_color": "#FED32D", "text_wrap": True}
         return {
-            "header": workbook.add_format({"text_wrap": True, "font_size": 14, "bold": True, "bg_color": "#B3D6C9"}),
+            "header": workbook.add_format(
+                {
+                    "text_wrap": True,
+                    "font_size": 14,
+                    "bold": True,
+                    "bg_color": "#B3D6C9",
+                }
+            ),
             "instructions": workbook.add_format({"text_wrap": True, "font_size": 13, "bg_color": "#B3D6C9"}),
             "measure": workbook.add_format(measure_format_options),
             "submeasure": workbook.add_format({"align": "vjustify", "indent": 1, **measure_format_options}),
@@ -65,9 +78,7 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         elif self.measure_text:
             if tag == xmltags.LIST_ITEM:
                 prefix = (
-                    f"{str(attributes[xmltags.LIST_ITEM_NUMBER])}. "
-                    if xmltags.LIST_ITEM_NUMBER in attributes
-                    else "- "
+                    f"{str(attributes[xmltags.LIST_ITEM_NUMBER])}. " if xmltags.LIST_ITEM_NUMBER in attributes else "- "
                 )
                 self.measure_text.append(prefix)
             elif tag == xmltags.TABLE_CELL:
@@ -82,7 +93,11 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
                 self.measure_row = self.row
                 self.measure_id, measure_title = text.split(":")
                 has_submeasures = self.in_element(xmltags.MEASURE, {"composite": "true"})
-                self.__write_measure(self.measure_id, measure_title.strip(), has_submeasures=has_submeasures)
+                self.__write_measure(
+                    self.measure_id,
+                    measure_title.strip(),
+                    has_submeasures=has_submeasures,
+                )
             self.measure_text.append(text)
         elif self.measure_text:
             if (
@@ -91,11 +106,18 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
                 and self.measure_id in ("M01", "M02", "M05", "M07", "M16", "M31", "M32", "M34")
             ):
                 self.row += 1
-                self.__write_measure("", f"{str(attributes[xmltags.LIST_ITEM_NUMBER])}. {text}", submeasure=True)
+                self.__write_measure(
+                    "",
+                    f"{str(attributes[xmltags.LIST_ITEM_NUMBER])}. {text}",
+                    submeasure=True,
+                )
             if tag == xmltags.TABLE_CELL and self.measure_id == "M01":
                 # The unicode check symbol is wider than other characters, messing up the table layout:
                 text = text.replace("✔", "x")
-                column, row = int(attributes[xmltags.TABLE_CELL_COLUMN]), int(attributes[xmltags.TABLE_CELL_ROW])
+                column, row = (
+                    int(attributes[xmltags.TABLE_CELL_COLUMN]),
+                    int(attributes[xmltags.TABLE_CELL_ROW]),
+                )
                 if row > 0 and column == 0:  # Table cell with a document
                     self.row += 1
                     # Write the document as (sub)measure
@@ -104,13 +126,27 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
             self.measure_text.append(text)
 
     def __write_measure(
-        self, measure_id, measure_text, submeasure: bool = False, has_submeasures: bool = False
+        self,
+        measure_id,
+        measure_text,
+        submeasure: bool = False,
+        has_submeasures: bool = False,
     ) -> None:
         """Write a measure row."""
         measure_format_key = "submeasure" if submeasure else "measure"
         status_format_key = "substatus" if submeasure else "status"
-        self.checklist.write(self.row, self.MEASURE_ID_COLUMN, measure_id, self.formats[measure_format_key])
-        self.checklist.write(self.row, self.MEASURE_COLUMN, measure_text, self.formats[measure_format_key])
+        self.checklist.write(
+            self.row,
+            self.MEASURE_ID_COLUMN,
+            measure_id,
+            self.formats[measure_format_key],
+        )
+        self.checklist.write(
+            self.row,
+            self.MEASURE_COLUMN,
+            measure_text,
+            self.formats[measure_format_key],
+        )
         self.__write_assessment_choices(self.row, self.STATUS_COLUMN)
         if has_submeasures:
             self.checklist.write_comment(
@@ -189,7 +225,12 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
         self.checklist.set_row(3, 40)
         self.checklist.set_row(self.HEADER_ROW, 30)
         for column, (header, width) in enumerate(
-            [("Maatregel", 12), ("Omschrijving", 70), ("Status", 20), ("Toelichting", 70)]
+            [
+                ("Maatregel", 12),
+                ("Omschrijving", 70),
+                ("Status", 20),
+                ("Toelichting", 70),
+            ]
         ):
             self.checklist.write(self.HEADER_ROW, column, header, self.formats["header"])
             self.checklist.set_column(f"{'ABCD'[column]}:{'ABCD'[column]}", width)
@@ -200,14 +241,24 @@ class XlsxBuilder(Builder):  # pylint: disable=too-many-instance-attributes
 
     def __write_assessment_choices(self, row: int, column: int) -> None:
         """Write the assessment choices, colors and data validation in the status column."""
-        assessment_choices = ["voldoet", "voldoet deels", "voldoet niet", "niet van toepassing"]
+        assessment_choices = [
+            "voldoet",
+            "voldoet deels",
+            "voldoet niet",
+            "niet van toepassing",
+        ]
         for choice in assessment_choices:
             self.checklist.conditional_format(
                 row,
                 column,
                 row,
                 column,
-                {"type": "cell", "criteria": "==", "value": f'"{choice}"', "format": self.formats[choice]},
+                {
+                    "type": "cell",
+                    "criteria": "==",
+                    "value": f'"{choice}"',
+                    "format": self.formats[choice],
+                },
             )
         self.checklist.data_validation(row, column, row, column, {"validate": "list", "source": assessment_choices})
 

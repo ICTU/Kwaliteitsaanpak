@@ -1,0 +1,21 @@
+---
+name: Test and quality
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          version: "0.4.22"
+      - name: Install dependencies, run unit tests and check quality
+        run: |
+          uv venv
+          uv pip install -r requirements.txt
+          ci/unittest.sh
+          ci/quality.sh

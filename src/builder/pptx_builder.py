@@ -25,7 +25,7 @@ class PptxBuilder(Builder):
         super().__init__(filename)
         filename.unlink(missing_ok=True)
         shutil.copy(pptx_reference_filename, filename)
-        self.presentation = Presentation(filename)
+        self.presentation = Presentation(str(filename))
         # Make the title placeholder on the measure slide wider
         measure_master_slide = self.presentation.slide_master.slide_layouts[self.CONTENT_SLIDE]
         measure_master_slide.placeholders[0].width = Inches(10)
@@ -50,7 +50,9 @@ class PptxBuilder(Builder):
                 self.chapter_heading = ""
             if tag == xmltags.BOLD:
                 self.add_slide(self.CONTENT_SLIDE, text)
-                self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(24)  # type: ignore
+                self.current_slide.shapes.title.text_frame.paragraphs[  # type: ignore
+                    0
+                ].font.size = Pt(24)
             else:
                 if len(self.current_slide.shapes) == 1:  # type: ignore
                     self.add_text_box()
@@ -87,10 +89,10 @@ class PptxBuilder(Builder):
 
     def remove_bullet(self, paragraph_index: int):
         """Remove bullets from the paragraph."""
-        # pylint: disable=c-extension-no-member
         no_bullet = etree.Element("{http://schemas.openxmlformats.org/drawingml/2006/main}buNone")
-        # pylint: disable=protected-access
-        self.current_slide.shapes[1].text_frame.paragraphs[paragraph_index]._pPr.insert(0, no_bullet)  # type: ignore
+        self.current_slide.shapes[1].text_frame.paragraphs[paragraph_index]._pPr.insert(  # type: ignore
+            0, no_bullet
+        )
 
     def in_appendix(self) -> bool:
         """Return whether the current section is an appendix."""
@@ -98,4 +100,4 @@ class PptxBuilder(Builder):
 
     def end_document(self) -> None:
         """Override to save the presentation."""
-        self.presentation.save(self.filename)
+        self.presentation.save(str(self.filename))

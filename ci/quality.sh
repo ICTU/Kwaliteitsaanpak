@@ -2,8 +2,9 @@
 
 set -e
 
-black --quiet --line-length 118 src tests
-mypy --no-error-summary src tests
-pylint src tests
+uvx ruff check
+uvx ruff format --check
+uvx mypy --python-executable=.venv/bin/python src tests
 NAMES_TO_IGNORE=''
-vulture --min-confidence 0 --ignore-names $NAMES_TO_IGNORE src tests .vulture_white_list.py
+uvx vulture --min-confidence 0 --ignore-names $NAMES_TO_IGNORE src tests .vulture_white_list.py
+uvx md-dead-link-check .

@@ -1,10 +1,8 @@
 """Script to convert the WCAG success critera to a Markdown table, and include which Axe-core rules check which WCAG
 criteria."""
 
-import ast
 import json
 import pathlib
-import re
 import subprocess
 
 
@@ -45,7 +43,12 @@ with pathlib.Path("wcag.json").open() as wcag_file:
 
 # Generate the Markdown table
 lines = []
-lines.extend([f"| Item | Omschrijving | Niveau | Axe-core {axe_core_version} regels |", "| :--- | :--- | :--- | :--- |"])
+lines.extend(
+    [
+        f"| Item | Omschrijving | Niveau | Axe-core {axe_core_version} regels |",
+        "| :--- | :--- | :--- | :--- |",
+    ]
+)
 for principle in wcag["principles"]:
     lines.append(f"| Principe {principle['num']} | {item_url(principle)} | | |")
     for guideline in principle["guidelines"]:

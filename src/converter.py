@@ -3,7 +3,7 @@
 from xml.etree.ElementTree import Element, ElementTree
 from typing import cast
 
-from builder import Builder
+from builder.builder import Builder
 from custom_types import TreeBuilderAttributes
 
 
@@ -31,5 +31,5 @@ class Converter:
             self.convert_element(child_element, builder, element)
         builder.end_element(element.tag, attributes)
         if element.tail:
-            assert parent
+            assert parent is not None
             builder.tail(element.tag, element.tail, parent.tag, attributes)

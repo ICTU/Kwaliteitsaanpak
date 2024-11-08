@@ -15,7 +15,10 @@ from xml.etree.ElementTree import ElementTree
 
 from cli import parse_cli_arguments
 from converter import Converter
-from builder import DocxBuilder, HTMLBuilder, PptxBuilder, XlsxBuilder
+from builder.docx_builder import DocxBuilder
+from builder.html_builder import HTMLBuilder
+from builder.pptx_builder import PptxBuilder
+from builder.xlsx_builder import XlsxBuilder
 from markdown_converter import MarkdownConverter
 from markdown_syntax import VARIABLE_USE_PATTERN
 from custom_types import JSON, Settings, Variables
@@ -23,7 +26,6 @@ from custom_types import JSON, Settings, Variables
 
 def convert(settings_filename: str, version: str) -> None:
     """Convert the input document to the specified output formats."""
-    # pylint: disable=unsubscriptable-object,unsupported-assignment-operation
     variables = read_variables(settings_filename, version)
     settings = read_settings(settings_filename, variables)
     logging.info("Converting with settings:\n%s", pprint.pformat(settings))
@@ -46,7 +48,7 @@ def read_variables(settings_filename: str, version: str) -> Variables:
     """Read the variables."""
     settings = cast(Settings, read_json(settings_filename))
     variables = cast(Variables, {})
-    for variable_file in settings["VariablesFiles"]:  # pylint: disable=unsubscriptable-object
+    for variable_file in settings["VariablesFiles"]:
         variables.update(cast(Variables, read_json(variable_file)))
     variables["VERSIE"] = version if version == "wip" else f"v{version}"
     variables["VERSIE_ZONDER_V"] = version
@@ -57,7 +59,6 @@ def read_variables(settings_filename: str, version: str) -> Variables:
 def read_settings(settings_filename: str, variables: Variables) -> Settings:
     """Read the settings."""
     settings = read_json(settings_filename, variables)
-    # pylint: disable=unsupported-assignment-operation
     settings["Version"] = variables["VERSIE"]
     settings["Date"] = variables["DATUM"]
     return cast(Settings, settings)
@@ -117,7 +118,10 @@ def convert_pptx(converter, settings: Settings) -> None:
     """Convert the XML to pptx."""
     build_path = get_build_path(settings)
     pptx_build_filename = build_path / settings["OutputFormats"]["pptx"]["OutputFile"]
-    pptx_builder = PptxBuilder(pptx_build_filename, pathlib.Path(settings["OutputFormats"]["pptx"]["ReferenceFile"]))
+    pptx_builder = PptxBuilder(
+        pptx_build_filename,
+        pathlib.Path(settings["OutputFormats"]["pptx"]["ReferenceFile"]),
+    )
     converter.convert(pptx_builder)
     copy_output(pptx_build_filename, settings, "pptx")
 

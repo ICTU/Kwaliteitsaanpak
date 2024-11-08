@@ -3,29 +3,18 @@ name = "ictu-kwaliteitsaanpak"
 version = "4.0.0"
 requires-python = ">=3.12"
 classifiers = [
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-    "python-docx==1.1.2",
-    "python-pptx==1.0.2",
-    "xlsxwriter==3.2.0",
+  "coverage==7.6.4",
+  "lxml-stubs==0.5.1",
+  "python-docx==1.1.2",
+  "python-pptx==1.0.2",
+  "vulture==2.13",
+  "xlsxwriter==3.2",
 ]
-optional-dependencies.dev = [
-    "black==24.10.0",
-    "coverage==7.6.4",
-    "lxml-stubs==0.5.1",
-    "mypy==1.13.0",
-    "pip-tools==7.4.1",
-    "pylint==3.3.1",
-    "vulture==2.13",
-]
-
-[tool.black]
-line-length = 120
-
-[tool.pylint]
-max-line-length=120
 
 [tool.mypy]
 ignore_missing_imports = false
@@ -37,8 +26,43 @@ warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
 module = [
-    "pptx",
-    "pptx.util",
-    "xlsxwriter",
+  "pptx",
+  "pptx.util",
+  "xlsxwriter",
 ]
 ignore_missing_imports = true
+
+[tool.md_dead_link_check]
+exclude_links = [
+  "#m01",
+  "#m02",
+  "#m04",
+  "#m05",
+  "#m07",
+  "#m08",
+  "#m10",
+  "#m14",
+  "#m16",
+  "#m18",
+  "#m19",
+  "#m26",
+  "#m27",
+  "#m28",
+  "#m29",
+  "#m30",
+  "#m31",
+  "#m32",
+  "#m33",
+  "#m34",
+  "#relatie-met-nen-npr-5326",
+  "#terminologie-en-afkortingen",
+  "relaties-tussen-producten.png",
+  "relaties-testproducten-agile.png",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+src = [
+    "src",
+]

@@ -23,7 +23,7 @@ def add_table_of_contents(paragraph: Paragraph) -> None:
     fld_char4 = OxmlElement("w:fldChar")
     fld_char4.set(qn("w:fldCharType"), "end")
 
-    r_element = run._r  # pylint: disable=protected-access
+    r_element = run._r
     r_element.append(fld_char)
     r_element.append(instr_text)
     r_element.append(fld_char2)

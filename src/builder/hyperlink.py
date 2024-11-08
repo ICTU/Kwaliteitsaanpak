@@ -37,6 +37,6 @@ def add_hyperlink(paragraph, url, text, style="Hyperlink"):
     new_run.style = style
     hyperlink.append(new_run)
 
-    paragraph._p.append(hyperlink)  # pylint: disable=protected-access
+    paragraph._p.append(hyperlink)
 
     return hyperlink

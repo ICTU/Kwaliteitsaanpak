@@ -36,7 +36,7 @@ class HTMLBuilder(Builder):
         self.in_keep_together_div = False
         self.in_measure = False
 
-    def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:  # pylint:disable=too-many-branches
+    def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         match tag:
             case xmltags.DOCUMENT:
                 self.builder.start(html_tags.HTML, {html_tags.LANGUAGE: "nl"})
@@ -48,7 +48,10 @@ class HTMLBuilder(Builder):
                 self.builder.end(html_tags.TITLE)
                 self.builder.start(
                     html_tags.LINK,
-                    {html_tags.LINK_REL: "stylesheet", html_tags.LINK_HREF: self.STYLESHEET},
+                    {
+                        html_tags.LINK_REL: "stylesheet",
+                        html_tags.LINK_HREF: self.STYLESHEET,
+                    },
                 )
                 self.builder.end(html_tags.LINK)
                 self.builder.end(html_tags.HEAD)
@@ -74,7 +77,10 @@ class HTMLBuilder(Builder):
                 self.builder.start(html_tags.TABLE_ROW, {})
             case xmltags.TABLE_CELL:
                 alignment = str(attributes[xmltags.TABLE_CELL_ALIGNMENT])
-                self.builder.start(self.table_cell_html_tag, {html_tags.STYLE: f"text-align:{alignment}"})
+                self.builder.start(
+                    self.table_cell_html_tag,
+                    {html_tags.STYLE: f"text-align:{alignment}"},
+                )
             case xmltags.ANCHOR:
                 self.builder.start(
                     html_tags.ANCHOR,

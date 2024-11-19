@@ -1,4 +1,4 @@
-# [Unreleased]
+# Versie 4.0.1, 19 november 2024
 
 ## Kwaliteitsaanpak
 

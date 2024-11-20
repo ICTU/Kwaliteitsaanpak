@@ -1,3 +1,9 @@
+# Versie 4.0.2, 26 november 2024
+
+## Alle templates
+
+* Colofon vereenvoudigd door reviewers te noemen in de revisiehistorie en niet in een aparte tabel, de vereiste goedkeuringen te vervangen door een tabel met versies die feitelijk zijn goedgekeurd, een losse tabel met betrokkenen toe te voegen en door de verzendlijsttabel te verwijderen.
+
 # Versie 4.0.1, 20 november 2024
 
 ## Kwaliteitsaanpak

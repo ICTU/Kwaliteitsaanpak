@@ -4,44 +4,39 @@
 
 Rubricering conform [VIRBI 2013, art. 4](https://wetten.overheid.nl/BWBR0033507/2013-06-01#Artikel4).
 
-{Verwijder eventueel deze paragraaf en de rubricering op de titelpagina indien rubricering niet van toepassing is}
+{Verwijder deze paragraaf en de rubricering op de titelpagina als rubricering niet van toepassing is}
 
 | Rubriceringsniveau   | Rubriceringsduur   | Vaststeller                                                                                                                                           |
 |:---------------------|:-------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 | {Rubriceringsniveau} | {Rubriceringsduur} | {Vaststeller van de rubricering: minister, staatssecretaris, secretaris-generaal of een door de secretaris-generaal aangewezen rubriceringsambtenaar} |
 
+###### Goedkeuring
+
+| Versie   | Datum goedkeuring | Goedgekeurd door |
+|:---------|:------------------|:-----------------|
+| {versie} | {datum}           | {naam}           |
+
 ###### Revisiehistorie
 
-| Versie   | Auteur        | Datum   | Status               | Opmerkingen   |
-|:---------|:--------------|:--------|:---------------------|:--------------|
-| {versie} | {naam auteur} | {datum} | {concept/definitief} | {opmerkingen} |
+| Versie   | Datum   | Status   | Auteur | Reviewers | Opmerkingen   |
+|:---------|:--------|:---------|:-------|:----------|:--------------|
+| {versie} | {datum} | {status} | {naam} | {namen}   | {opmerkingen} |
 
-###### Reviewers
+###### Betrokkenen bij dit document
 
-| Functie/rol                                     | Naam                                                 | Datum   |  Versie  |
-|:------------------------------------------------|:-----------------------------------------------------|:--------|:--------:|
-| Kwaliteitsmanager {opdrachtgevende organisatie} | {naam kwaliteitsmanager opdrachtgevende organisatie} | {datum} | {versie} |
-| Kwaliteitsmanager {beheerorganisatie}           | {naam kwaliteitsmanager beheerorganisatie}           | {datum} | {versie} |
-| Kwaliteitsmanager ICTU                          | {naam kwaliteitsmanager ICTU}                        | {datum} | {versie} |
+{Neem in onderstaande tabel de auteurs, reviewers en goedkeurders van dit document op}
 
-###### Vereiste goedkeuringen
-
-| Functie/rol                                 | Naam                                             | Datum   |  Versie  |
-|:--------------------------------------------|:-------------------------------------------------|:--------|:--------:|
-| Projectleider {opdrachtgevende organisatie} | {naam projectleider opdrachtgevende organisatie} | {datum} | {versie} |
-| Projectleider {beheerorganisatie}           | {naam projectleider beheerorganisatie}           | {datum} | {versie} |
-| Projectleider ICTU                          | {naam projectleider ICTU}                        | {datum} | {versie} |
-| Product owner                               | {naam product owner}                             | {datum} | {versie} |
-
-###### Verzendlijst huidige versie
-
-| Naam                                             | Organisatie                   | Functie/rol               |
-|:-------------------------------------------------|:------------------------------|:--------------------------|
-| {naam projectleider opdrachtgevende organisatie} | {opdrachtgevende organisatie} | Projectleider             |
-| {naam product owner}                             | {opdrachtgevende organisatie} | Product owner             |
-| {naam projectleider beheerorganisatie}           | {beheerorganisatie}           | Projectleider             |
-| {naam projectleider ICTU}                        | ICTU                          | Projectleider             |
-| {naam software delivery manager}                 | ICTU                          | Software delivery manager |
+| Organisatie                   | Functie/rol               | Naam   |
+|:------------------------------|:--------------------------|:-------|
+| {opdrachtgevende organisatie} | Opdrachtgever             | {naam} |
+| {opdrachtgevende organisatie} | Projectleider             | {naam} |
+| {opdrachtgevende organisatie} | Product owner             | {naam} |
+| {opdrachtgevende organisatie} | Kwaliteitsmanager         | {naam} |
+| {beheerorganisatie}           | Projectleider             | {naam} |
+| {beheerorganisatie}           | Kwaliteitsmanager         | {naam} |
+| ICTU                          | Projectleider             | {naam} |
+| ICTU                          | Software delivery manager | {naam} |
+| ICTU                          | Kwaliteitsmanager         | {naam} |
 
 ###### Template versie
 

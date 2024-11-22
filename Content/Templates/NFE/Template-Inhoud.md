@@ -1,102 +1,102 @@
-# Functionele geschiktheid
+# Functional suitability
 
-De mate waarin een softwareproduct of computersysteem functies levert die voldoen aan de uitgesproken en veronderstelde behoeften, bij gebruik onder gespecificeerde condities.
+Capability of a product to provide functions that meet stated and implied needs of intended users when it is used under specified conditions.
 
-Opmerking: functionele geschiktheid gaat alleen over of, en in welke mate, expliciete en impliciete behoeften worden afgedekt en betreft niet de functionele eisen zelf.
+Opmerking: functional suitability gaat alleen over of, en in welke mate, expliciete en impliciete behoeften worden afgedekt en betreft niet de functionele eisen zelf.
 
-## Functionele compleetheid
+## Functional completeness
 
-De mate waarin de set van functies alle gespecificeerde taken en gebruikersdoelen ondersteunen.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Functionele correctheid
-
-De mate waarin het systeem de juiste resultaten met de benodigde nauwkeurigheid beschikbaar stelt.
+Capability of a product to provide a set of functions that covers all the specified tasks and intended users’ objectives.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Functionele toepasbaarheid
+## Functional correctness
 
-De mate waarin de functies bijdragen aan het behalen van specifieke taken en doelen.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-# Prestatie-efficiëntie
-
-Prestatie van het systeem in verhouding tot het aantal resources, onder bepaalde condities.
-
-## Snelheid
-
-De mate waarin antwoord- en verwerkingstijden en doorvoersnelheid van een product of systeem, tijdens de uitvoer van zijn functies, voldoet aan de wensen.
+Capability of a product to provide accurate results when used by intended users.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Middelenbeslag
+## Functional appropriateness
 
-De mate waarin de hoeveelheid en type middelen die gebruikt worden door een product of systeem, tijdens de uitvoer van zijn functies, voldoet aan de wensen.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Capaciteit
-
-De mate waarin de maximale limieten van een product- of systeemparameter voldoet aan de wensen.
+Capability of a product to provide functions that facilitate the accomplishment of specified tasks and objectives.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-# Uitwisselbaarheid
+# Performance-efficiency
 
-De mate waarin een product, systeem of component informatie uit kan wisselen met andere producten, systemen of componenten, en/of het de gewenste functies kan uitvoeren terwijl het dezelfde hard- of software-omgeving deelt.
+Capability of a product to perform its functions within specified time and throughput parameters and be efficient in the use of resources under specified conditions.
 
-## Beïnvloedbaarheid
+## Time behavior
 
-De mate waarin een product zijn vereiste functies kan vervullen terwijl het een omgeving en resources deelt met andere producten, zonder negatieve impact op enig product.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Koppelbaarheid
-
-De mate waarin twee of meer systemen, producten of componenten informatie kunnen uitwisselen en deze uitgewisselde informatie kunnen gebruiken.
+Capability of a product to perform its specified function under specified conditions so that the response time and throughput rates meet the requirements.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-# Bruikbaarheid
+## Resource utilization
 
-De mate waarin een product of systeem gebruikt kan worden door gespecificeerde gebruikers om effectief, efficiënt en naar tevredenheid gespecificeerde doelen te bereiken in een gespecificeerde gebruikscontext.
-
-## Herkenbaarheid van geschiktheid
-
-De mate waarin gebruikers kunnen herkennen of het product of systeem geschikt is voor hun behoeften.
+Capability of a product to use no more than the specified amount of resources to perform its function under specified conditions.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Leerbaarheid
+## Capacity
 
-De mate waarin het systeem gebruikt kan worden door gespecificeerde gebruikers om gespecificeerde (leer)doelen te bereiken met betrekking tot het gebruik van het systeem met effectiviteit, efficiëntie, vrijheid van risico en voldoening, in een gespecificeerde gebruikscontext.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Bedienbaarheid
-
-De mate waarin het systeem kenmerken heeft die het makkelijk maken om het te bedienen en beheersen.
+Capability of a product to meet requirements for the maximum limits of a product parameter.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Voorkomen gebruikersfouten
+# Compatability
 
-De mate waarin het systeem gebruikers beschermt tegen het maken van fouten.
+Capability of a product to exchange information with other products, and/or to perform its required functions while sharing the same common environment and resources.
 
-#include "Content/Templates/NFE/Eisentabel.md"
+## Co-existence
 
-## Volmaaktheid gebruikersinterface
-
-De mate waarin een gebruikersinterface het de gebruiker mogelijk maakt om een plezierige en voldoening gevende interactie te hebben.
+Capability of a product to perform its required functions efficiently while sharing a common environment and resources with other products, without detrimental impact on any other product.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Toegankelijkheid
+## Interoperability
 
-De mate waarin het systeem gebruikt kan worden door mensen met de meest uiteenlopende eigenschappen en mogelijkheden om een gespecificeerd doel te bereiken in een gespecificeerde gebruikscontext.
+Capability of a product to exchange information with other products and mutually use the information that has been exchanged.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+# Interaction capability
+
+Capability of a product to be interacted with by specified users to exchange information between a user and a system via the user interface to complete the intended task.
+
+## Appropriateness recognizability
+
+Capability of a product to be recognized by users as appropriate for their needs.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Learnability
+
+Capability of a product to have specified users learn to use specified product functions within a specified amount of time.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Operability
+
+Capability of a product to have functions and attributes that it easy to operate and control.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## User error protection
+
+Capability of a product to prevent operation errors.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## User engagement
+
+Capability of a product to present functions and information in an inviting and motivating manner encouraging continued interaction.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Inclusivity
+
+Capability of a product to be utilised by people of various backgrounds.
 
 Als standaard voor toegankelijkheid hanteert de Nederlandse overheid de Web Content Accessibility Guidelines (WCAG), zie [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/). Officieel gebruikt de Nederlandse Overheid versie 2.1, maar het gebruik van versie 2.2 wordt [aangeraden](https://www.digitaleoverheid.nl/nieuws/nieuwe-aanbevolen-standaard-digitale-toegankelijkheid/).
 
@@ -114,9 +114,21 @@ Merk op dat de [Axe-core regels die als "experimenteel" zijn gemarkeerd](https:/
 
 #include "Content/Templates/NFE/WCAG-Tabel-Gegenereerd.md"
 
+## User assistance
+
+Capability of a product to be used by people with the widest range of characteristics and capabilities to achieve specified goals in a specified context of use.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Self-descriptiveness
+
+Capability of a product to present appropriate information, where needed by the user, to make its capabilities and use immediately obvious to the user without excessive interactions with a product or other resources.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
 ## Taal en leesbaarheid
 
-Naast de aan NEN-ISO/IEC 25010 ontleende hoofdeigenschap bruikbaarheid zijn voor de gebruikskwaliteit van {het product} van belang:
+Naast de aan NEN-ISO/IEC 25010:2023 ontleende hoofdeigenschap bruikbaarheid zijn voor de gebruikskwaliteit van {het product} van belang:
 
 * Taal: welke talen dienen te worden ondersteund.
 * Leesbaarheid: teksten moeten makkelijk te lezen zijn. Korte zinnen hebben de voorkeur. Hoe gemakkelijker de zin en de woorden, hoe beter de leesbaarheid.
@@ -126,37 +138,37 @@ Naast de aan NEN-ISO/IEC 25010 ontleende hoofdeigenschap bruikbaarheid zijn voor
 | 1   | De applicatie gebruikt maximaal taalniveau B1  | {prio} | [Aanbevolen richtlijn](https://www.communicatierijk.nl/vakkennis/rijkswebsites/aanbevolen-richtlijnen/taalniveau-b1) | {software}    | {partij}        | {bewijs} |
 | 2   | De applicatie ondersteunt {ondersteunde talen} | {prio} | {rationale}                                                                                                          | {software}    | ICTU            | {bewijs} |
 
-# Betrouwbaarheid
+# Reliability
 
-De mate waarin een systeem, product of component gespecificeerde functies uitvoert onder gespecificeerde condities gedurende een gespecificeerde hoeveelheid tijd.
+Capability of a product to perform specified functions under specified conditions for a specified period of time without interruptions and failures.
 
-## Volwassenheid
+## Faultlessness
 
-De mate waarin het systeem onder normale condities de betrouwbaarheidsnormen haalt.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Beschikbaarheid
-
-De mate waarin het systeem operationeel en toegankelijk is wanneer men het wil gebruiken.
+Capability of a product to perform specified functions without fault under normal operation.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Foutbestendigheid
+## Availability
 
-De mate waarin het systeem werkt zoals bedoeld ondanks de aanwezigheid van hard- of software-fouten.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Herstelbaarheid
-
-De mate waarin het systeem, in geval van een onderbreking of bij een fout, de direct betrokken gegevens kan herstellen en het systeem in de gewenste staat kan terug brengen.
+Capability of a product to be operational and accessible when required for use.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-# Beveiligbaarheid
+## Fault tolerance
 
-De mate waarin een product of systeem informatie en gegevens beschermt zodat personen, andere producten of systemen de juiste mate van gegevenstoegang hebben passend bij hun soort en niveau van autorisatie.
+Capability of a product to operate as intented despite the presence of hardware or software faults.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Recoverability
+
+Capability of a product in the event of an interruption or a failure to recover the data directly affected and re-establish the desired state of the system.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+# Security
+
+Capability of a product to protect information and data so that persons or other products have the degree of data access appropriate to their types and levels of authorization, and to defend against attack patterns by malicious actors.
 
 ## BIO- en SSD-eisen
 
@@ -199,88 +211,134 @@ BIO en SSD bevatten ook een aantal maatregelen ten aanzien van software en/of de
 | 24   | In de (web)applicatieomgeving zijn signaleringsfuncties (registratie en detectie) actief en efficiënt, effectief en beveiligd ingericht                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | {prio} | {rationale}{software, hardware, combinatie}                                                                                                                                                                                                        | {partij}                         |                 | {bewijs}                         |
 | {nr} | {eis}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | {prio} | {rationale}                                                                                                                                                                                                                                        | {software, hardware, combinatie} | {partij}        | {software, hardware, combinatie} | {partij} | {bewijs} |
 
-## Vertrouwelijkheid
+## Confidentiality
 
-De mate waarin een product of systeem ervoor zorgt dat gegevens alleen toegankelijk zijn voor diegenen die geautoriseerd zijn.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Integriteit
-
-De mate waarin een systeem, product of component ongeautoriseerde toegang tot of aanpassing van computerprogramma’s of gegevens verhindert.
+Capability of a product to ensure that data are accessible only to those authorized to have access.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Onweerlegbaarheid
+## Integrity
 
-De mate waarin kan worden bewezen dat acties of gebeurtenissen plaats hebben gevonden, zodat later deze acties of gebeurtenissen niet ontkend kunnen worden.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Verantwoording
-
-De mate waarin acties van een entiteit getraceerd kunnen worden naar die specifieke entiteit.
+Capability of a product to ensure that the state of its system and data are protected from unauthorized modification or deletion either by malicious action or computer error.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Authenticiteit
+## Non-repudiation
 
-De mate waarin bewezen kan worden dat de identiteit van een onderwerp of bron is zoals wordt beweerd.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-# Onderhoudbaarheid
-
-De mate waarin een product of systeem effectief en efficiënt gewijzigd kan worden door de aangewezen beheerders
-
-## Modulariteit
-
-De mate waarin het systeem opgebouwd is uit losstaande componenten zodat wijzigingen van een component minimale impact heeft op andere componenten.
+Capability of a product to prove that actions or events have taken place, so that the events or actions cannot be repudiated later.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Herbruikbaarheid
+## Accountability
 
-De mate waarin een bestaand onderdeel gebruikt kan worden in meer dan één systeem of bij het bouwen van een nieuw onderdeel.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Analyseerbaarheid
-
-De mate waarin het mogelijk is om effectief en efficiënt de impact, van een geplande verandering van één of meer onderdelen, op een product of systeem te beoordelen, om afwijkingen en/of foutoorzaken van een product vast te stellen of om onderdelen te identificeren die gewijzigd moeten worden.
+Capability of a product to enable actions of an entity to be traced uniquely to the entity.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Wijzigbaarheid
+## Authenticity
 
-De mate waarin een product of systeem effectief en efficiënt gewijzigd kan worden zonder fouten of kwaliteitsvermindering tot gevolg.
-
-#include "Content/Templates/NFE/Eisentabel.md"
-
-## Testbaarheid
-
-De mate waarin effectief en efficiënt testcriteria vastgesteld kunnen worden voor een systeem, product of component en waarin tests uitgevoerd kunnen worden om vast te stellen of aan die criteria is voldaan.
+Capability of a product to prove that the identity of a subject or resource is the one claimed.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-# Overdraagbaarheid
+## Resistance
 
-De mate waarin een systeem, product of component effectief en efficiënt overgezet kan worden van één hardware, software of andere operationele of gebruiksomgeving naar een andere.
-
-## Aanpasbaarheid
-
-De mate waarin een product of systeem effectief en efficiënt aangepast kan worden voor andere of zich ontwikkelende hardware, software of andere operationele of gebruiksomgevingen.
+Capability of a product to sustain operations while under attack from a malicious actor.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Installeerbaarheid
+# Maintainability
 
-De mate waarin het product of het systeem effectief en efficiënt geïnstalleerd of verwijderd kan worden in een gespecificeerde omgeving.
+Capability of a product to be modified by the intended maintainers with effectiveness and efficiency.
+
+## Modularity
+
+Capability of a product to limit changes to one component from affecting other components.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-## Vervangbaarheid
+## Reusability
 
-De mate waarin een product een ander specifiek softwareproduct, met hetzelfde doel in de zelfde omgeving, kan vervangen.
+Capability of a product to be used as assets in more than one system, or in building other assets.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Analysability
+
+Capability of a product to be effectively and efficiently assessed regarding the impact of an intended change to one or more of its parts, to diagnose it for deficiencies or causes of failures, or to identify parts to be modified.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Modifiability
+
+Capability of a product to be effectively and efficiently modified without introducing defects or degrading existing product quality.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Testability
+
+Capability of a product to enable an objective and feasible test to be designed and performed to determine whether a requirement is met.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+# Flexibility
+
+Capability of a product to be adapted to changes in its requirements, contexts of use, or system environment.
+
+## Adaptability
+
+Capability of a product to be effectively and efficiently adapted for or transferred to different hardware, software or other operational or usage environments.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Scalability
+
+Capability of a product to handle growing or shrinking workloads or to adapt its capacity to handle variability.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Installability
+
+Capability of a product to be effectively and efficiently installed successfully and/or uninstalled in a specified environment.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Replaceability
+
+Capability of a product to replace another specified product for the same purpose in the same environment.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+# Safety
+
+Capability of a product under defined conditions to avoid a state in which human life, health, property, or the environment is endangered.
+
+## Operational constraint
+
+Capability of a product to constrain its operation to within safe parameters or states when encountering operational hazard.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Risk identification
+
+Capability of a product to identify a course of events or operations that can expose life, property or environment to unacceptable risk.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Fail safe
+
+Capability of a product to automatically place itself in a safe operating mode, or to revert to a safe condition in the event of a failure.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Hazard warning
+
+Capability of a product to provide warnings of unacceptable risks to operations or internal controls so that they can react in sufficient time to sustain safe operations.
+
+#include "Content/Templates/NFE/Eisentabel.md"
+
+## Safe integration
+
+Capability of a product to maintain safety during and after integration with one or more components.
 
 #include "Content/Templates/NFE/Eisentabel.md"

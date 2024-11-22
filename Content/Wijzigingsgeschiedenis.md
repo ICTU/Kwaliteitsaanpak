@@ -14,6 +14,7 @@
 
 ## Alle documenten
 
+* Referenties naar NEN-ISO/IEC 25010:2011 vervangen door NEN-ISO/IEC 25010:2023.
 * De spelling van business impact analysis veranderd in business impact analyse, conform NORA.
 
 # Versie 4.0.4, 16 december 2024

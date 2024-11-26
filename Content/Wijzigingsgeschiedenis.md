@@ -1,3 +1,9 @@
+# Versie 4.1.0, nog niet gereleased
+
+## Alle documenten
+
+* Referenties naar NEN-ISO/IEC 25010:2011 vervangen door NEN-ISO/IEC 25010:2023.
+
 # Versie 4.0.2, 26 november 2024
 
 ## Alle templates

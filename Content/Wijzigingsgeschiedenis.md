@@ -1,3 +1,9 @@
+# Versie 4.1.0, nog niet gereleased
+
+## Template Plan van Aanpak Realisatiefase
+
+* In de paragraaf "Oplevering software" afspraken toegevoegd over het controleren van opgeleverde software op beveiligingskwetsbaarheden.
+
 # Versie 4.0.4, 16 december 2024
 
 ## Alle Word-documenten

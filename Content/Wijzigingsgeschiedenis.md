@@ -4,6 +4,10 @@
 
 * Toegevoegd in paragraaf 8.1, eis 17 dat de software alleen producten gebruikt of ondersteunt waarvoor de leverancier security patches uitbrengt.
 
+## Template Plan van Aanpak Realisatiefase
+
+* In de paragraaf "Oplevering software" afspraken toegevoegd over het controleren van opgeleverde software op beveiligingskwetsbaarheden.
+
 # Versie 4.0.4, 16 december 2024
 
 ## Alle Word-documenten

@@ -1,3 +1,9 @@
+# Versie 4.1.0, nog niet gereleased
+
+## Template Plan van Aanpak Realisatiefase
+
+* In de paragraaf "Oplevering software" afspraken toegevoegd over het controleren van opgeleverde software op beveiligingskwetsbaarheden.
+
 # Versie 4.0.3, 6 december 2024
 
 ## Template Niet-Functionele Eisen

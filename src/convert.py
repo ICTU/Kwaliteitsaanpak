@@ -15,10 +15,10 @@ from xml.etree.ElementTree import ElementTree
 
 from cli import parse_cli_arguments
 from converter import Converter
+from builder import xlsx_builder as xlsx_builder_module
 from builder.docx_builder import DocxBuilder
 from builder.html_builder import HTMLBuilder
 from builder.pptx_builder import PptxBuilder
-from builder.xlsx_builder import XlsxBuilder
 from markdown_converter import MarkdownConverter
 from markdown_syntax import VARIABLE_USE_PATTERN
 from custom_types import JSON, Settings, Variables
@@ -130,7 +130,8 @@ def convert_xlsx(converter, settings: Settings) -> None:
     """Convert the XML to xlsx."""
     build_path = get_build_path(settings)
     xlsx_build_filename = build_path / settings["OutputFormats"]["xlsx"]["OutputFile"]
-    xlsx_builder = XlsxBuilder(xlsx_build_filename)
+    xlsx_builder_class_name = settings["OutputFormats"]["xlsx"]["BuilderClass"]
+    xlsx_builder = getattr(xlsx_builder_module, xlsx_builder_class_name)(xlsx_build_filename)
     converter.convert(xlsx_builder)
     copy_output(xlsx_build_filename, settings, "xlsx")
 

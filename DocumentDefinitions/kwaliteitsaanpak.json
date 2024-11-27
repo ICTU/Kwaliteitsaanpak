@@ -46,6 +46,7 @@
             "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         },
         "xlsx": {
+            "BuilderClass": "SelfAssessmentXlsxBuilder",
             "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx",
             "OutputPaths": [
                 "docs/$VERSIE$"

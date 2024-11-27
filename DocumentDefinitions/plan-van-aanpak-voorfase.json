@@ -14,6 +14,13 @@
                 "docs/$VERSIE$"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+        },
+        "xlsx": {
+            "BuilderClass": "VoorfaseProductenXlsxBuilder",
+            "OutputFile": "ICTU-Template-Plan-van-Aanpak-Voorfase-Producten.xlsx",
+            "OutputPaths": [
+                "docs/$VERSIE$"
+            ]
         }
     },
     "VariablesFiles": [

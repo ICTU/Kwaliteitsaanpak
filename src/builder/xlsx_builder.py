@@ -12,7 +12,7 @@ from custom_types import TreeBuilderAttributes
 from .builder import Builder
 
 
-class XlsxBuilder(Builder):
+class SelfAssessmentXlsxBuilder(Builder):
     """Self-assessment builder."""
 
     MEASURE_ID_COLUMN, MEASURE_COLUMN, STATUS_COLUMN, EXPLANATION_COLUMN = range(4)

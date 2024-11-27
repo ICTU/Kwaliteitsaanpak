@@ -27,5 +27,20 @@
     "M32": "M32: Het project onderzoekt de kwaliteit van over te nemen software",
     "M33": "M33: ICTU organiseert periodiek een gezamenlijke self-assessment ten aanzien van de Kwaliteitsaanpak",
     "M34": "M34: Het project draagt software beheerst over",
-    "M35": "M35: Het project hanteert een agile architectuuraanpak"
+    "M35": "M35: Het project hanteert een agile architectuuraanpak",
+    "BIA": "Een business impact analyse is een methode om de mogelijke bedrijfsimpact te bepalen die een organisatie zou kunnen ervaren door een incident, dat de functionaliteit van of de informatie in een applicatie in gevaar brengt [NORA]",
+    "DTPSR": "Een detailtestplan softwarerealisatie beschrijft welke testen en testsoorten ICTU gebruikt om de kwaliteit van de projectresultaten te testen gedurende de realisatiefase van het project",
+    "GFO": "Een globaal functioneel ontwerp beschrijft de functionele werking van een product op hoofdlijnen, voor specifieke use cases",
+    "IA": "De infrastructuurarchitectuur beschrijft de technische infrastructuur van een product op hoofdlijnen, in termen van hardwareonderdelen en -relaties (housing, hardware, virtuals, standaard software en middleware)",
+    "IB": "Een informatiebeveiligingsplan beschrijft binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en met welke maatregelen die bescherming vorm krijgt",
+    "IO": "Een interactie-ontwerp beschrijft de interacties tussen gebruikers en het systeem en de user experience daarbij",
+    "KP": "Een kwaliteitsplan beschrijft de kwaliteitsmaatregelen die een project treft om een product te realiseren dat voldoet aan de kwaliteitseisen van de opdrachtgever en andere belanghebbenden en aan de kwaliteitsnormen van ICTU",
+    "MTP": "Een mastertestplan beschrijft de aanpak van het testen van een product op hoofdlijnen, in termen van strategie, activiteiten, afhankelijkheden en de op te leveren resultaten",
+    "MVP": "Een minimum viable product is een eerste versie van een product, die zo vroeg mogelijk wordt uitgerold naar de gebruikers, met net voldoende functionaliteit om het gestelde doel te behalen en niet meer dan dat",
+    "NFE": "Niet-functionele eisen specificeren criteria om de kwaliteit van de software te beoordelen",
+    "PIA": "Een privacy impact assessment geeft bij een wet of project, waar persoonsgegevens van toepassing zijn, aan wat de gevolgen voor de privacy van de getroffen personen zijn [NORA]",
+    "PRA": "Een productrisicoanalyse is een analyse van het te testen product die resulteert in een overzicht van wat de meer of minder risicovolle kenmerken en delen van het te testen product zijn, zodat de grondigheid van testen hieraan gerelateerd kan worden",
+    "PSA": "De projectstartarchitectuur is een concreet en doelgericht ICT-architectuurkader waarbinnen het **project** moet worden uitgevoerd [NORA]",
+    "SAD": "Een software-architectuurdocument beschrijft de technische werking van een product op hoofdlijnen, in termen van softwarecomponenten, hun functies en hun onderlinge interacties en samenhang voor specifieke use cases",
+    "TVA": "Een threat and vulnerability assessment inventariseert de betrouwbaarheidseisen die aan de bedrijfsprocessen en dientengevolge aan het product worden gesteld, gevolgd door identificatie en analyse van bedreigingen"
 }

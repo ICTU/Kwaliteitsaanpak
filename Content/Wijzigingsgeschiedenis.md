@@ -4,9 +4,17 @@
 
 * Toegevoegd in paragraaf 8.1, eis 17 dat de software alleen producten gebruikt of ondersteunt waarvoor de leverancier security patches uitbrengt.
 
+## Template Plan van Aanpak Voorfase
+
+* Genereer de tabel met voorfaseproducten ook in Excel-formaat.
+
 ## Template Plan van Aanpak Realisatiefase
 
 * In de paragraaf "Oplevering software" afspraken toegevoegd over het controleren van opgeleverde software op beveiligingskwetsbaarheden.
+
+## Alle documenten
+
+* De spelling van business impact analysis veranderd in business impact analyse, conform NORA.
 
 # Versie 4.0.3, 6 december 2024
 

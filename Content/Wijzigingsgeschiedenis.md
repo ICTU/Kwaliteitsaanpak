@@ -1,5 +1,9 @@
 # Versie 4.1.0, nog niet gereleased
 
+## Template Plan van Aanpak Voorfase
+
+* Genereer de tabel met voorfaseproducten ook in Excel-formaat.
+
 ## Template Plan van Aanpak Realisatiefase
 
 * In de paragraaf "Oplevering software" afspraken toegevoegd over het controleren van opgeleverde software op beveiligingskwetsbaarheden.

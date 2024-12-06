@@ -6,7 +6,7 @@ from typing import cast
 
 from docx import Document
 from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
-from docx.shared import Cm
+from docx.shared import Cm, RGBColor
 from docx.table import Table
 from docx.table import _Row as Row
 from docx.text.paragraph import Paragraph
@@ -96,10 +96,11 @@ class DocxBuilder(Builder):
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
         elif tag == xmltags.IMAGE:
-            self.doc.add_picture(
-                str(self.images_folder / str(attributes["src"])),
-                width=Cm(int(attributes["width"])),
+            picture = self.doc.add_picture(
+                str(self.images_folder / str(attributes[xmltags.IMAGE_SRC])),
+                width=Cm(int(attributes[xmltags.IMAGE_WIDTH])),
             )
+            picture._inline.docPr.attrib["title"] = attributes[xmltags.IMAGE_TITLE]
 
     def _add_list_item(self) -> None:
         """Add a list item."""
@@ -148,6 +149,7 @@ class DocxBuilder(Builder):
                 run.font.bold = True
             if self.in_element(xmltags.INSTRUCTION):
                 run.font.highlight_color = WD_COLOR_INDEX.YELLOW
+                run.font.color.rgb = RGBColor(0, 0, 0)
             if self.in_element(xmltags.ITALIC):
                 run.font.italic = True
             if self.in_element(xmltags.STRIKETHROUGH):

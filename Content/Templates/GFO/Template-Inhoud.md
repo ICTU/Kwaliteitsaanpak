@@ -53,11 +53,11 @@ Dit hoofdstuk beschrijft de use cases die {het product} ondersteunt. Per use cas
 
 De use cases zijn gegroepeerd naar de functies zoals beschreven in het vorige hoofdstuk.
 
-## {F1} - {naam functie 1}
+## F1 - {naam functie 1}
 
 Deze paragraaf bevat de use cases behorende bij functie "{functie}".
 
-### {UC1.1} - {naam use case 1.1}
+### UC1.1 - {naam use case 1.1}
 
 | Aspect            | Beschrijving  |
 |:------------------|---------------|
@@ -68,10 +68,10 @@ Deze paragraaf bevat de use cases behorende bij functie "{functie}".
 | Primaire scenario | {Wat zijn de stappen in het belangrijkste scenario van de use case} |
 | Opmerkingen       | {Eventuele toevoegingen en openstaande punten} |
 
-### {UC1.2} - {naam use case 1.2}
+### UC1.2 - {naam use case 1.2}
 
 {Kopieer voorgaande subparagraaf om meer use cases toe te voegen.}
 
-## {F2} - {naam functie 2}
+## F2 - {naam functie 2}
 
 {Kopieer voorgaande paragraaf om meer functies toe te voegen.}

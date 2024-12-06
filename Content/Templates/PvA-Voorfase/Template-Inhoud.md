@@ -92,7 +92,7 @@ De experts reviewen op zaken zoals:
 * interne en onderlinge consistentie;
 * volledigheid.
 
-## Inzet {opdrachtgevende organisatie} en {partijen}
+## Verwachte inzet inhoudsdeskundigen
 
 Betrokkenheid van inhoudsdeskundigen van {opdrachtgevende organisatie} en {partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
 

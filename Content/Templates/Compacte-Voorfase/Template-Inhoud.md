@@ -2,7 +2,7 @@
 
 Voor {het product} gelden de volgende functionele eisen, geformuleerd in de vorm van epics. Eisen voor het MVP zijn vetgedrukt.
 
-## {Hoofdfunctie 1, bijvoorbeeld softwareproducten registreren}
+## Hoofdfunctie 1 - {naam hoofdfunctie, bijvoorbeeld: Softwareproducten registreren}
 
 {Introductie op hoofdfunctie 1, bijvoorbeeld: Beheerders kunnen softwareproducten registreren, inclusief de versies die beschikbaar zijn bij de leverancier.}
 
@@ -11,7 +11,7 @@ Voor {het product} gelden de volgende functionele eisen, geformuleerd in de vorm
 1. **{Titel epic 3, bijvoorbeeld: Beschikbare versies registreren}**: Als {rol} wil ik {actie} zodat {doel}. {Bijvoorbeeld: Als beheerder wil ik registreren welke versies van welke softwareproducten bij de leverancier beschikbaar zijn zodat ik kan zien welke software-installaties bijgewerkt kunnen worden.}
 1. {Titel epic 4, bijvoorbeeld: Notificatie over nieuwe versies}: {Bijvoorbeeld: Als beheerder wil ik een notificatie ontvangen als er een nieuwe beschikbare versie van een softwareproduct geregistreerd wordt door een collega zodat ik niet zelf regelmatig hoef te kijken of er nieuwe versies beschikbaar zijn. }
 
-## {Hoofdfunctie 2, bijvoorbeeld softwareinstallaties registreren}
+## Hoofdfunctie 2 - {naam hoofdfunctie, bijvoorbeeld: Softwareinstallaties registreren}
 
 {Introductie op hoofdfunctie 2, bijvoorbeeld: Bij installatie van een softwareproduct registreren beheerders welke versie van het softwareproduct op welke apparaat wordt geïnstalleerd. Dat maakt het mogelijk te zien wat waar is geïnstalleerd en de geïnstalleerde versies te vergelijken met de beschikbare versies.}
 
@@ -19,7 +19,7 @@ Voor {het product} gelden de volgende functionele eisen, geformuleerd in de vorm
 1. **{Titel epic 2, bijvoorbeeld: Overzicht van software-installaties}**: Als {rol} wil ik {actie} zodat {doel}. {Bijvoorbeeld: Als beheerder wil ik bekijken welke versies van welke softwareproducten op welke apparaten zijn geïnstalleerd zodat ik in het geval van nieuwe bekende beveiligingskwetsbaarheden in bepaalde versies van een softwareproduct kan zien op welke apparaten deze versies van het softwareproduct zijn geïnstalleerd.}
 1. **{Titel epic 3, bijvoorbeeld: Geïnstalleerde versies vergelijken met beschikbare versies}**: Als {rol} wil ik {actie} zodat {doel}. {Bijvoorbeeld: Als beheerder wil ik de versies van software-installaties vergelijken met de beschikbare versies van de softwareproducten zodat ik kan bepalen of ik een software-installatie kan bijwerken.}
 
-## {Hoofdfunctie 3}
+## Hoofdfunctie 3 - {naam hoofdfunctie}
 
 {Vul aan}
 
@@ -45,15 +45,15 @@ Onderstaande niet-functionele eisen zijn van toepassing op {het product}:
 
 Het datamodel voor {het product} moet de hieronder beschreven entiteiten ondersteunen.
 
-### {Entiteit 1, bijvoorbeeld: Softwareproduct}
+### Entiteit 1 - {naam entiteit, bijvoorbeeld: Softwareproduct}
 
 {Omschrijving van de entiteit, attributen en relaties. Bijvoorbeeld: Een softwareproduct is een applicatie, firmware of besturingssysteem dat geïnstalleerd kan worden op een apparaat. Softwareproducten hebben een naam, een omschrijving en een lijst van tags. Softwareproducten hebben (net als device types) een manufacturer. Softwareproducten hebben een link naar een pagina op een website van de manufacturer met beschikbare versienummers. Softwareproducten hebben nul of meer versies.}
 
-### {Entiteit 2, bijvoorbeeld: Softwareinstallatie}
+### Entiteit 2 - {naam entitieit, bijvoorbeeld: Softwareinstallatie}
 
 {Omschrijving van de entiteit, attributen en relaties. Bijvoorbeeld: Een software-installatie is een softwareproduct dat geïnstalleerd is op één specifiek apparaat. Software-installaties hebben een versie, een installatiedatum, een commentaarveld en een lijst van tags. In NetBox kunnen devices services bevatten (services zijn combinaties van protocol en poortnummers en optioneel IP-adressen). Voor softwareproducten ondersteunen we geen services. Gebruikers kunnen bij installatie alleen versienummers invoeren die bij het softwareproduct voorkomen als beschikbaar versienummer.}
 
-### {Entiteit 3}
+### Entiteit 3 - {naam entiteit}
 
 {Vul aan}
 

@@ -95,8 +95,6 @@ Vertegenwoordigers van het project nemen deel aan de volgende overleggen met {op
 
 De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het Scrumteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Als er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgevende organisatie} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
 
-Het Scrumteam controleert de software voor oplevering op beveiligingskwetsbaarheden en lost deze waar mogelijk op. Na oplevering van de software kunnen er nieuwe kwetsbaarheden worden ontdekt in de software of kunnen er oplossingen beschikbaar komen voor bekende kwetsbaarheden. Het is tot {kies: een datum, x weken na oplevering, moment van acceptie, moment van uitrol in de productieomgeving} de verantwoordelijkheid van ICTU om de opgeleverde software te controleren op beveiligingskwetsbaarheden en deze te repareren. Na dit moment is het de verantwoordelijkheid van {kies: opdrachtgevende organisatie, beheerorganisatie} om de opgeleverde software te controleren op beveiligingskwetsbaarheden en deze te repareren.
-
 {Beschrijf hier de afspraken tussen ICTU en de opdrachtgevende organisatie over de opzet van vrijgaveadvies, release notes en goedkeuringsproces.}
 
 ## Kwaliteitsbeheersing

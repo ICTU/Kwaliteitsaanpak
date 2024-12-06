@@ -1,8 +1,8 @@
 # Versie 4.1.0, nog niet gereleased
 
-## Template Plan van Aanpak Realisatiefase
+## Template Niet-Functionele Eisen
 
-* In de paragraaf "Oplevering software" afspraken toegevoegd over het controleren van opgeleverde software op beveiligingskwetsbaarheden.
+* Toegevoegd in paragraaf 8.1, eis 17 dat de software geen producten gebruikt of ondersteunt waarvoor de leverancier geen security patches meer uitbrengt.
 
 # Versie 4.0.3, 6 december 2024
 

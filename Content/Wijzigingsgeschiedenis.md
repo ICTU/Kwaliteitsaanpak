@@ -1,3 +1,9 @@
+# Versie 4.1.0, nog niet gereleased
+
+## Template Niet-Functionele Eisen
+
+* Toegevoegd in paragraaf 8.1, eis 17 dat de software geen producten gebruikt of ondersteunt waarvoor de leverancier geen security patches meer uitbrengt.
+
 # Versie 4.0.3, 6 december 2024
 
 ## Template Niet-Functionele Eisen

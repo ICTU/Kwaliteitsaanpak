@@ -94,6 +94,7 @@ Vertegenwoordigers van het project nemen deel aan de volgende overleggen met {op
 ## Oplevering software
 
 De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het Scrumteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Als er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgevende organisatie} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
+
 {Beschrijf hier de afspraken tussen ICTU en de opdrachtgevende organisatie over de opzet van vrijgaveadvies, release notes en goedkeuringsproces.}
 
 ## Kwaliteitsbeheersing

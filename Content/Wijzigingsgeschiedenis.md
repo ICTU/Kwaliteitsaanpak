@@ -1,3 +1,13 @@
+# Versie 4.0.4, 16 december 2024
+
+## Alle Word-documenten
+
+* Toegankelijkheid verbeterd door alt-tekst toe te voegen aan plaatjes en het contrast van titels met instructies (gele achtergrond) te verbeteren.
+
+## Self-assessment checklist
+
+* Toegankelijkheid verbeterd door cellen niet samen te voegen in de subkopjes van de maatregeltabel.
+
 # Versie 4.0.3, 6 december 2024
 
 ## Template Niet-Functionele Eisen

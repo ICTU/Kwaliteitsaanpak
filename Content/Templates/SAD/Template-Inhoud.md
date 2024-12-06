@@ -89,11 +89,11 @@ In situaties waarin het niet op voorhand duidelijk is wat de correcte reactie va
 
 ## Uitwisseling van gegevens met externe systemen
 
-### Koppelvlak {identiteiten- en autorisatiessysteem}
+### Koppelvlak 1 - {naam koppelvlak, bijvoorbeeld: Identiteiten- en autorisatiessysteem}
 
-### Koppelvlak {naam 1}
+### Koppelvlak 2 - {naam koppelvlak}
 
-### Koppelvlak {naam 2}
+### Koppelvlak 3 - {naam koppelvlak}
 
 ## Conceptueel gegevensmodel
 
@@ -226,6 +226,6 @@ Dit hoofdstuk vat de performancekarakteristieken van {het product} samen en besc
 
 {Beschrijf hoe de applicatie horizontaal danwel verticaal schaalbaar is}
 
-# {Overige architectureel-significante niet-functionele eigenschappen}
+# Overige architectureel-significante niet-functionele eigenschappen
 
 {Voeg indien nodig hoofdstukken toe voor andere architectuureel-significante niet-functionele eigenschappen van de applicatie}

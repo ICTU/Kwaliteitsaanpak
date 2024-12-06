@@ -106,6 +106,10 @@ class MarkdownConverter:
                     xmltags.IMAGE,
                     attributes={
                         xmltags.IMAGE_SRC: "word-cloud.png",
+                        xmltags.IMAGE_TITLE: (
+                            "Word cloud met woorden die veel voorkomen in het document zoals "
+                            "Kwaliteitsaanpak, Realisatie, ICTU, Software en Overheid"
+                        ),
                         xmltags.IMAGE_WIDTH: "15",
                     },
                 )

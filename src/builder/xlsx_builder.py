@@ -66,15 +66,8 @@ class SelfAssessmentXlsxBuilder(Builder):
         super().start_element(tag, attributes)
         if tag == xmltags.DOCUMENT:
             self.__create_checklist(str(attributes["version"]))
-        elif tag == xmltags.MEASURE and not self.__in_appendix():
-            if self.last_level_1_section_heading:
-                self.row += 1
-                self.checklist.merge_range(
-                    f"A{self.row}:D{self.row}",
-                    self.last_level_1_section_heading,
-                    self.formats["header"],
-                )
-                self.last_level_1_section_heading = ""
+        elif tag == xmltags.MEASURE and not self.__in_appendix() and self.last_level_1_section_heading:
+            self.__write_measure_table_sub_header()
         elif self.measure_text:
             if tag == xmltags.LIST_ITEM:
                 prefix = (
@@ -83,6 +76,15 @@ class SelfAssessmentXlsxBuilder(Builder):
                 self.measure_text.append(prefix)
             elif tag == xmltags.TABLE_CELL:
                 self.measure_text.append("")  # Add empty string in case the cell is empty and text() is never called
+
+    def __write_measure_table_sub_header(self) -> None:
+        """Write a subheader in the measures table. Don't merge the header cells, it causes accessibility issues."""
+        format = self.formats["header"]
+        self.checklist.write(self.row, self.MEASURE_ID_COLUMN, self.last_level_1_section_heading, format)
+        for column in self.MEASURE_COLUMN, self.STATUS_COLUMN, self.EXPLANATION_COLUMN:
+            self.checklist.write(self.row, column, "", format)
+        self.row += 1
+        self.last_level_1_section_heading = ""
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
         text = re.sub("[¹²³⁴⁵⁶⁷⁸⁹⁰]+", "", text)  # Remove footnotes

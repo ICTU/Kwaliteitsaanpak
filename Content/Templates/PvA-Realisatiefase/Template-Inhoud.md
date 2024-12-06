@@ -100,7 +100,7 @@ De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het
 
 De kwaliteitsbeheersing is door ICTU beschreven in het Kwaliteitsplan. Eén van de kwaliteitsmaatregelen is dat ICTU een geautomatiseerd kwaliteitssysteem (Quality-time) inricht dat de kwaliteit van de software en het ontwikkelproces bewaakt. De ICTU-kwaliteitsmanager configureert de metrieken in Quality-time en bewaakt de metingen.
 
-## Inzet {opdrachtgevende organisatie} en {partijen}
+## Verwachte inzet inhoudsdeskundigen
 
 Betrokkenheid van inhoudsdeskundigen van {opdrachtgevende organisatie} en {partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
 

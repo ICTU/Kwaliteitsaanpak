@@ -37,7 +37,7 @@ De volgende tabel bevat technische eisen die ten grondslag liggen aan het projec
 
 {Beschrijving OTAP-omgevingen.}
 
-## {Component 1}
+## Component 1 - {naam component}
 
 {Beschrijving component}
 
@@ -49,7 +49,7 @@ De volgende tabel bevat technische eisen die ten grondslag liggen aan het projec
 
 {Beschrijving van subcomponenten en een gedetailleerde infrastructuurplaat opnemen, indien dit toegevoegde waarde heeft.}
 
-## {Component 2}
+## Component 2 - {naam component}
 
 {Beschrijving component}
 

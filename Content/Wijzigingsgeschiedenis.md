@@ -1,3 +1,9 @@
+# Versie 4.0.3, 6 december 2024
+
+## Template Niet-Functionele Eisen
+
+* Gezorgd dat alle eisentabellen dezelfde kolommen hebben.
+
 # Versie 4.0.2, 26 november 2024
 
 ## Alle templates

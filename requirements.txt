@@ -301,9 +301,9 @@ typing-extensions==4.12.2 \
     # via
     #   python-docx
     #   python-pptx
-vulture==2.13 \
-    --hash=sha256:34793ba60488e7cccbecdef3a7fe151656372ef94fdac9fe004c52a4000a6d44 \
-    --hash=sha256:78248bf58f5eaffcc2ade306141ead73f437339950f80045dce7f8b078e5a1aa
+vulture==2.14 \
+    --hash=sha256:cb8277902a1138deeab796ec5bef7076a6e0248ca3607a3f3dee0b6d9e9b8415 \
+    --hash=sha256:d9a90dba89607489548a49d557f8bac8112bd25d3cbc8aeef23e860811bd5ed9
     # via ictu-kwaliteitsaanpak (pyproject.toml)
 xlsxwriter==3.2.0 \
     --hash=sha256:9977d0c661a72866a61f9f7a809e25ebbb0fb7036baa3b9fe74afcfca6b3cb8c \

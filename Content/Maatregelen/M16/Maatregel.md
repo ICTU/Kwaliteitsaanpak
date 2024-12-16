@@ -13,6 +13,7 @@ ICTU adviseert en ondersteunt voor de hieronder genoemde taken specifieke tools.
 | Release van software | Releaseserver in het ontwikkelplatform |
 | Maken van testrapportages | JUnit, Robot Framework, TestNG, of hiermee compatible tools |
 | Maken van kwaliteitsrapportages | Quality-time |
+| Actueel houden van externe software | RenovateBot |
 | Controleren op aanwezigheid van bekende kwetsbaarheden in externe software | OWASP (Open Web Application Security Project) Dependency-Check en/of Dependency-Track |
 | Statische controle van de software op aanwezigheid van kwetsbare constructies | SonarQube |
 | Dynamische controle van de software op aanwezigheid van kwetsbare constructies | ZAP (Zed Attack Proxy) by Checkmarx |

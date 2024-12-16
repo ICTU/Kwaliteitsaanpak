@@ -5,7 +5,7 @@
 De opdrachtgevende organisatie zorgt dat het project vanaf de start van de voorfase beschikt over:
 
 1. Projectstartarchitectuur,
-2. Business impact analysis,
+2. Business impact analyse,
 3. Privacy impact assessment,
 4. Afspraken tussen opdrachtgevende organisatie en beheerorganisatie.
 
@@ -29,9 +29,9 @@ Conform NORA werkt de opdrachtgevende organisatie na de start van het project de
 
 Zie [https://www.noraonline.nl/wiki/Solution-architectuur](https://www.noraonline.nl/wiki/Solution-architectuur).
 
-### Business impact analysis
+### Business impact analyse
 
-In een business impact analysis (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting: de risico’s die een organisatie bereid is te accepteren. Alleen de opdrachtgevende organisatie zelf kan hierover een uitspraak doen.
+In een business impact analyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting: de risico’s die een organisatie bereid is te accepteren. Alleen de opdrachtgevende organisatie zelf kan hierover een uitspraak doen.
 
 ### Privacy impact assessment
 

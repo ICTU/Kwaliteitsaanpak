@@ -1,0 +1,22 @@
+{
+    "InputFile": "DocumentDefinitions/Templates/spreadsheet-template.md",
+    "BuildPath": "build/Templates/PvA-Voorfase-Producten/",
+    "Title": "Voorfase Producten",
+    "Subtitle": "{Projectnaam}",
+    "DocumentType": "Template",
+    "DocumentFolder": "PvA-Voorfase-Producten",
+    "FrontPage": "ICTU",
+    "IncludeTableOfContents": false,
+    "OutputFormats": {
+        "xlsx": {
+            "BuilderClass": "TableXlsxBuilder",
+            "OutputFile": "ICTU-Template-Plan-van-Aanpak-Voorfase-Producten.xlsx",
+            "OutputPaths": [
+                "docs/$VERSIE$"
+            ]
+        }
+    },
+    "VariablesFiles": [
+        "DocumentDefinitions/Shared/variables.json"
+    ]
+}

@@ -12,7 +12,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **authenticatie** | het vaststellen van de identiteit van een **actor** |
 | **autorisatie** | aan een **actor** toegekende rechten |
 | **beheerorganisatie** | een (samenwerkingsverband van) organisatie(s) die in opdracht van een **opdrachtgevende organisatie** het **operationeel beheer**, applicatief beheer en/of functioneel beheer van **software** uitvoert |
-| **BIA** | business impact analysis |
+| **BIA** | $BIA$ |
 | **BIO** | Baseline Informatiebeveiliging Overheid |
 | **broncode** | **software** in een vorm die leesbaar is voor mensen en de intentie van een programmeur uitdrukt |
 | **deployment** | installatie van **software** op een systeem waardoor de software beschikbaar wordt gemaakt voor gebruik door **actor**en |
@@ -21,10 +21,11 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **DoD** | definition of done |
 | **DoR** | definition of ready |
 | **gebruikskwaliteit** | mate waarin een systeem, product of dienst kan worden gebruikt door gespecificeerde gebruikers, voor het bereiken van gespecificeerde doelen, met effectiviteit, efficiëntie en tevredenheid in een gespecificeerde gebruikscontext |
-| **GFO** | globaal functioneel ontwerp |
-| **IB-plan** | informatiebeveiligingsplan |
+| **GFO** | $GFO$ |
+| **IB-plan** | $IB$ |
 | **informatiesysteem** | een samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en **programmatuur** alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie [VIR 2007, NORA] |
-| **infrastructuurarchitectuur** | een **architectuur** die vooral de hardwareonderdelen en -relaties (housing, hardware, virtuals, standaard software en middleware) van een systeem beschrijft |
+| **infrastructuurarchitectuur** | $IA$ |
+| **interactie-ontwerp** | $IO$ |
 | **IPO** | intern projectoverleg |
 | **ISD** | ICTU Software Diensten, afdeling van ICTU die **softwareontwikkelprojecten** ondersteunt met ontwikkel- en testomgevingen, tools en diensten |
 | **ISE** | ICTU Software Expertise, afdeling van ICTU die **softwareontwikkelprojecten** ondersteunt met expertise op het gebied van **softwareontwikkeling** en die de $KWALITEITSAANPAK$ onderhoudt |
@@ -33,10 +34,10 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **klantreis** | alle directe en indirecte interactie van een klant of gebruiker met een product of dienst |
 | **KPI** | key performance indicator |
 | **kwaliteitsmanager** | controleert en borgt de kwaliteit van **software** conform de vastgestelde eisen en de Kwaliteitsaanpak en rapporteert aan de **projectleider** |
-| **minimum viable product** | de eerste versie van een product of dienst, die zo vroeg mogelijk wordt uitgerold naar de gebruikers; het bevat net voldoende functionaliteit om het gestelde doel te behalen, en niet meer dan dat |
-| **MTP** | master testplan |
+| **minimum viable product** | $MVP$ |
+| **MTP** | $MTP$ |
 | **MVP** | **minimum viable product** |
-| **NFE** | niet-functionele eis(en) |
+| **NFE** | $NFE$ |
 | **NORA** | Nederlandse Overheidsreferentie-architectuur |
 | **NPR** | Nederlandse Praktijkrichtlijn |
 | **ontwikkelaars** | Ontwikkelaars (*developers* in de Scrumgids) zijn de mensen in het **Scrumteam** die iedere sprint gecommitteerd zijn aan het maken van elk aspect van een bruikbaar increment [Scrumgids] |
@@ -45,21 +46,21 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **operationeel beheer** | activiteiten die zorgen dat software operationeel is en blijft, zoals het oplossen van incidenten, het uitvoeren van onderhoud, het implementeren van upgrades en patches, het beheren van configuraties, en het monitoren van prestaties en beschikbaarheid |
 | **OTAP** | ontwikkel, test, acceptatie, productie; gebruikt om verschillende soorten omgevingen aan te duiden |
 | **persona** | een min of meer realistische beschrijving van een fictief persoon, veelal met naam, persoonskenmerken, drijfveren en behoeften, die een groep gebruikers representeert en gebruikt wordt om te redeneren over de gewenste functionele en niet-functionele eigenschappen van de **software** |
-| **PIA** | privacy impact assessment |
+| **PIA** | $PIA$ |
 | **PKI** | public key infrastructure |
-| **PRA** | productrisicoanalyse |
+| **PRA** | $PRA$ |
 | **Product owner** | De product owner is verantwoordelijk voor het maximaliseren van de waarde van het product, dat het resultaat is van het werk van het **Scrumteam** [Scrumgids] |
 | **programmatuur** | zie **software** |
 | **project** | een tijdelijke organisatie voor het realiseren van een resultaat - bij ICTU bestaat een **softwareontwikkelproject** uit medewerkers van ICTU, de **opdrachtgevende organisatie**, beheerorganisatie en eventueel andere partijen |
 | **projectleider** | medewerker eindverantwoordelijk voor het projectresultaat - bij ICTU-softwareontwikkelprojecten is de projectleider een medewerker van ICTU |
-| **PSA** | De projectstartarchitectuur is een concreet en doelgericht ICT-architectuurkader waarbinnen het **project** moet worden uitgevoerd |
+| **PSA** | $PSA$ |
 | **PvE** | programma van eisen |
 | **Quality-time** | een door ICTU ontwikkeld, open source, geautomatiseerd kwaliteitssysteem |
 | **realisatiefase** | fase van een **softwareontwikkelproject** waarin de **software** daadwerkelijk wordt gebouwd en onderhouden, en bij een **DevOps** werkwijze ook operationeel wordt beheerd |
 | **regressietest** | test die na een wijziging controleert of niet-gewijzigde delen van een systeem nog steeds correct functioneren |
 | **release notes** | een overzicht van de wijzigingen in een **release** |
 | **release** | een voor gebruik vrijgegeven versie van de **software** |
-| **SAD** | software-architectuurdocument |
+| **SAD** | $SAD$ |
 | **Scrum** | Scrum is een lichtgewicht raamwerk dat mensen, teams en organisaties helpt om waarde te creёren door middel van adaptieve oplossingen voor complexe problemen [Scrumgids] |
 | **Scrummaster** | De Scrummaster is verantwoordelijk voor het opzetten van **Scrum**, zoals staat beschreven in de Scrumgids [Scrumgids] |
 | **Scrumteam** | Een Scrumteam bestaat uit één **Scrummaster**, één **product owner** en **ontwikkelaars** (*developers* in de Scrumgids) [Scrumgids] |
@@ -70,7 +71,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **softwareontwikkelproject** | een **project** dat de oplevering van **software** als enige of voornaamste projectresultaat heeft |
 | **solution architectuur**| beschrijving van de gewenste oplossing van een specifiek probleem, of het eindresultaat van een **project** [NORA] |
 | **technische schuld** | eigenschappen van de **software** die de lange-termijninzetbaarheid en onderhoudbaarheid bedreigen |
-| **TVA** | threat and vulnerability assessment |
+| **TVA** | $TVA$ |
 | **usability** | gebruiksvriendelijkheid |
 | **use case** | een afgebakende eenheid van interactie tussen een **actor** en het systeem |
 | **UX** | user experience |

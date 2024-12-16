@@ -103,9 +103,9 @@ Het Scrumteam controleert de software voor oplevering op beveiligingskwetsbaarhe
 
 De kwaliteitsbeheersing is door ICTU beschreven in het Kwaliteitsplan. Eén van de kwaliteitsmaatregelen is dat ICTU een geautomatiseerd kwaliteitssysteem (Quality-time) inricht dat de kwaliteit van de software en het ontwikkelproces bewaakt. De ICTU-kwaliteitsmanager configureert de metrieken in Quality-time en bewaakt de metingen.
 
-## Verwachte inzet inhoudsdeskundigen
+## Verwachte inzet door {opdrachtgevende organisatie} en {partijen}
 
-Betrokkenheid van inhoudsdeskundigen van {opdrachtgevende organisatie} en {partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
+Betrokkenheid van vertegenwoordigers van {opdrachtgevende organisatie} en {partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
 
 * Actief bijdragen aan workshops en demo's;
 * Buiten de workshops uitzoeken van onduidelijkheden en binnen de eigen organisatie(s) op zoek gaan naar antwoorden;

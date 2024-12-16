@@ -1,9 +1,9 @@
-"""Self-assessment XLSX-spreadsheet builder."""
+"""XLSX-spreadsheet builder."""
 
 import datetime
 import pathlib
 import re
-from typing import Dict, List, Optional
+import string
 
 import xlsxwriter
 
@@ -12,7 +12,67 @@ from custom_types import TreeBuilderAttributes
 from .builder import Builder
 
 
-class SelfAssessmentXlsxBuilder(Builder):
+class XlsxBuilder(Builder):
+    """Base class for XLSX builders."""
+
+    def __init__(self, filename: pathlib.Path) -> None:
+        super().__init__(filename)
+        filename.unlink(missing_ok=True)
+        self.workbook = xlsxwriter.Workbook(filename)
+        self.formats = self.create_formats(self.workbook)
+
+    def end_document(self) -> None:
+        self.workbook.close()
+
+    def create_formats(self, workbook: xlsxwriter.Workbook) -> dict[str, xlsxwriter.format.Format]:
+        """Create cell formats."""
+        return {
+            "header": workbook.add_format(
+                {"align": "top", "text_wrap": True, "font_size": 14, "bold": True, "bg_color": "#B3D6C9"},
+            ),
+        }
+
+    def set_column_width(self, sheet, column: int, width: int) -> None:
+        """Set the width of the column in the sheet."""
+        sheet.set_column(f"{string.ascii_uppercase[column]}:{string.ascii_uppercase[column]}", width)
+
+
+class TableXlsxBuilder(XlsxBuilder):
+    """Table builder."""
+
+    COLUMN_WIDTH = 50
+
+    def __init__(self, filename: pathlib.Path) -> None:
+        super().__init__(filename)
+        self.cell_contents: list[str] = []
+
+    def create_formats(self, workbook: xlsxwriter.Workbook) -> dict[str, xlsxwriter.format.Format]:
+        """Create cell formats."""
+        return {"cell": workbook.add_format({"text_wrap": True, "align": "top"}), **super().create_formats(workbook)}
+
+    def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
+        if self.in_element(xmltags.TABLE_CELL):
+            self.cell_contents.append(text)
+        if tag == xmltags.TITLE:
+            self.sheet = self.workbook.add_worksheet(text)
+
+    def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
+        super().end_element(tag, attributes)
+        if tag == xmltags.TABLE_CELL:
+            row = int(attributes[xmltags.TABLE_CELL_ROW])
+            column = int(attributes[xmltags.TABLE_CELL_COLUMN])
+            format = self.formats["header" if self.in_element(xmltags.TABLE_HEADER_ROW) or column == 0 else "cell"]
+            self.set_column_width(self.sheet, column, self.COLUMN_WIDTH)
+            self.sheet.write(row, column, " ".join(self.cell_contents), format)
+            self.cell_contents.clear()
+
+    def end_document(self) -> None:
+        """End the document."""
+        self.sheet.freeze_panes(1, 1)
+        super().end_document()
+
+
+class SelfAssessmentXlsxBuilder(XlsxBuilder):
     """Self-assessment builder."""
 
     MEASURE_ID_COLUMN, MEASURE_COLUMN, STATUS_COLUMN, EXPLANATION_COLUMN = range(4)
@@ -21,19 +81,13 @@ class SelfAssessmentXlsxBuilder(Builder):
 
     def __init__(self, filename: pathlib.Path) -> None:
         super().__init__(filename)
-        filename.unlink(missing_ok=True)
-        self.workbook = xlsxwriter.Workbook(filename)
-        self.formats = self.__create_formats(self.workbook)
         self.checklist = self.workbook.add_worksheet("Self-assessment checklist")
         self.row = self.measure_row = self.MEASURE_START_ROW
         self.last_level_1_section_heading = ""
-        self.measure_id: Optional[str] = None
-        self.measure_text: List[str] = []
+        self.measure_id: str | None = None
+        self.measure_text: list[str] = []
 
-    @staticmethod
-    def __create_formats(
-        workbook: xlsxwriter.Workbook,
-    ) -> Dict[str, xlsxwriter.format.Format]:
+    def create_formats(self, workbook: xlsxwriter.Workbook) -> dict[str, xlsxwriter.format.Format]:
         """Create the formats."""
         measure_format_options = {
             "bg_color": "#BCD2EE",
@@ -42,14 +96,6 @@ class SelfAssessmentXlsxBuilder(Builder):
         }
         status_format_options = {"bg_color": "#FED32D", "text_wrap": True}
         return {
-            "header": workbook.add_format(
-                {
-                    "text_wrap": True,
-                    "font_size": 14,
-                    "bold": True,
-                    "bg_color": "#B3D6C9",
-                }
-            ),
             "instructions": workbook.add_format({"text_wrap": True, "font_size": 13, "bg_color": "#B3D6C9"}),
             "measure": workbook.add_format(measure_format_options),
             "submeasure": workbook.add_format({"align": "vjustify", "indent": 1, **measure_format_options}),
@@ -60,6 +106,7 @@ class SelfAssessmentXlsxBuilder(Builder):
             "voldoet deels": workbook.add_format({"fg_color": "#894503", "bg_color": "#FEE88A"}),
             "voldoet niet": workbook.add_format({"fg_color": "#880009", "bg_color": "#FEB8C3"}),
             "niet van toepassing": workbook.add_format({"fg_color": "#6D6D6D", "bg_color": "#EFEFEF"}),
+            **super().create_formats(workbook),
         }
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
@@ -191,7 +238,7 @@ class SelfAssessmentXlsxBuilder(Builder):
 
     def end_document(self) -> None:
         self.__create_action_list()
-        self.workbook.close()
+        super().end_document()
 
     def __create_checklist(self, version: str) -> None:
         self.checklist.merge_range(
@@ -235,7 +282,7 @@ class SelfAssessmentXlsxBuilder(Builder):
             ]
         ):
             self.checklist.write(self.HEADER_ROW, column, header, self.formats["header"])
-            self.checklist.set_column(f"{'ABCD'[column]}:{'ABCD'[column]}", width)
+            self.set_column_width(self.checklist, column, width)
 
     def __finish_checklist(self) -> None:
         """Wrap up the checklist."""
@@ -276,7 +323,7 @@ class SelfAssessmentXlsxBuilder(Builder):
         action_list.set_row(1, 30)
         for column, (header, width) in enumerate([("Datum", 12), ("Actie", 70), ("Status", 20), ("Toelichting", 70)]):
             action_list.write(1, column, header, self.formats["header"])
-            action_list.set_column(f"{'ABCD'[column]}:{'ABCD'[column]}", width)
+            self.set_column_width(action_list, column, width)
 
     def __in_appendix(self) -> bool:
         """Return whether the current section is in an appendix."""

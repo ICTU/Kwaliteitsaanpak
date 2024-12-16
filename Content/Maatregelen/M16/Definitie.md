@@ -14,10 +14,11 @@ ICTU stelt het gebruik van tools verplicht voor de volgende taken:
 10. statische controle van de software op aanwezigheid van kwetsbare constructies,
 11. dynamische controle van de software op aanwezigheid van kwetsbare constructies,
 12. controleren van container images op aanwezigheid van bekende kwetsbaarheden,
-13. testen van performance en schaalbaarheid,
-14. testen op toegankelijkheid van de applicatie,
-15. produceren van een "software bill of materials" (SBoM),
-16. opslaan van artifacten,
-17. registratie van incidenten bij gebruik en beheer, en
-18. bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving.
+13. actueel houden van externe software,
+14. testen van performance en schaalbaarheid,
+15. testen op toegankelijkheid van de applicatie,
+16. produceren van een "software bill of materials" (SBoM),
+17. opslaan van artifacten,
+18. registratie van incidenten bij gebruik en beheer, en
+19. bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving.
 <!-- end: measure -->

@@ -9,7 +9,7 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het ✔ g
 | Product                                             | Voor start | Voorfase | Realisatiefase | Verantwoordelijke organisatie |
 |-----------------------------------------------------|------------|----------|----------------|-------------------------------|
 | Projectstartarchitectuur                            | ✔          |          |                | opdrachtgever                 |
-| Business impact analysis                            | ✔          |          |                | opdrachtgever                 |
+| Business impact analyse                             | ✔          |          |                | opdrachtgever                 |
 | Privacy impact assessment                           | ✔          |          |                | opdrachtgever                 |
 | Plan van aanpak: voorfase                           | ✔          |          |                | ICTU                          |
 | Beschrijving van functionele eisen                  |            | ✔        | ✔              | opdrachtgever                 |
@@ -28,9 +28,9 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het ✔ g
 | Release notes                                       |            |          | ✔              | ICTU                          |
 | Vrijgaveadvies                                      |            |          | ✔              | opdrachtgever                 |
 
-### Projectstartarchitectuur, business impact analysis en privacy impact assessment
+### Projectstartarchitectuur, business impact analyse en privacy impact assessment
 
-De opdrachtgevende organisatie zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analysis en privacy impact assessment. Zie [$M31$](#m31).
+De opdrachtgevende organisatie zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analyse en privacy impact assessment. Zie [$M31$](#m31).
 
 ### Plan van aanpak
 
@@ -118,7 +118,7 @@ Beschikbare templates:
 
 ### Informatiebeveiligingsplan
 
-Het informatiebeveiligingsplan vormt een praktisch toepasbaar document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en met welke maatregelen die bescherming vorm krijgt. Mogelijke bronnen voor het informatiebeveiligingsplan zijn de business impact analysis (BIA), privacy impact assessment (PIA) en de threat and vulnerability assessment (TVA).
+Het informatiebeveiligingsplan vormt een praktisch toepasbaar document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en met welke maatregelen die bescherming vorm krijgt. Mogelijke bronnen voor het informatiebeveiligingsplan zijn de business impact analyse (BIA), privacy impact assessment (PIA) en de threat and vulnerability assessment (TVA).
 
 Het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) bevat een methode om te komen tot een systematische aanpak van informatiebeveiliging. Eén van de vereisten van het VIR 2007 is dat voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een afhankelijkheids- en kwetsbaarheidsanalyse (A&K-analyse) wordt uitgevoerd.
 
@@ -162,7 +162,7 @@ Het project levert bij elke release informatie aan de opdrachtgevende organisati
 
 ### Samenhang voorfaseproducten
 
-![Projectstartarchitectuur (PSA), business impact analysis (BIA) en privacy impact assessment (PIA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), backlog (BL), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De projectstartarchitectuur vormt input voor functionele eisen en niet-functionele eisen. De business impact analyse vormt input voor de niet-functionele eisen en informatiebeveiligingsplan. De privacy impact analyse vormt input voor de niet-functionele eisen en het informatiebeveiligingsplan. De functionele eisen vormen input voor de backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.](relaties-tussen-producten.png "Relaties tussen producten")
+![Projectstartarchitectuur (PSA), business impact analyse (BIA) en privacy impact assessment (PIA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), backlog (BL), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De projectstartarchitectuur vormt input voor functionele eisen en niet-functionele eisen. De business impact analyse vormt input voor de niet-functionele eisen en informatiebeveiligingsplan. De privacy impact analyse vormt input voor de niet-functionele eisen en het informatiebeveiligingsplan. De functionele eisen vormen input voor de backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.](relaties-tussen-producten.png "Relaties tussen producten")
 
 Bovenstaande figuur laat de belangrijkste relaties zien tussen de verschillende producten die de input en output van de voorfase vormen. Naast de informatiestromen zoals door de pijlen weergegeven zijn er in de praktijk nog meer verbanden tussen de producten. Zo kan de gekozen oplossing in de architectuur van invloed zijn op de maatregelen in het informatiebeveiligingsplan of leiden niet-functionele eisen tot extra functionele eisen.
 

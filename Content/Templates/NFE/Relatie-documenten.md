@@ -2,7 +2,7 @@
 
 De volgende documenten waren input voor de niet-functionele eisen:
 
-* Business impact analysis (BIA),
+* Business impact analyse (BIA),
 * Privacy impact assessment (PIA),
 * Projectstartarchitectuur (PSA) en referentiearchitecturen,
 * {En verder, bijvoorbeeld protocollen en samenwerkingsafspraken}.

@@ -1,5 +1,9 @@
 # Versie 4.1.0, nog niet gereleased
 
+## Kwaliteitsaanpak
+
+* In M14 "Het project bereidt samen met opdrachtgevende organisatie en betrokken partijen de realisatie voor" toegevoegd dat de opdrachtgever de betrokkenheid van vertegenwoordigers (voorheen "deskundigen") organiseert en zorgt dat zij voldoende kennis, tijd en mandaat hebben om hun rol goed in te vullen.
+
 ## Template Niet-Functionele Eisen
 
 * Toegevoegd in paragraaf 8.1, eis 17 dat de software alleen producten gebruikt of ondersteunt waarvoor de leverancier security patches uitbrengt.
@@ -7,10 +11,12 @@
 ## Template Plan van Aanpak Voorfase
 
 * Genereer de tabel met voorfaseproducten ook in Excel-formaat.
+* Uitgangspunt toegevoegd dat de opdrachtgevende organisatie verantwoordelijk is voor het betrekken van vertegenwoordigers van betrokken partijen met voldoende kennis, tijd en mandaat.
 
 ## Template Plan van Aanpak Realisatiefase
 
 * In de paragraaf "Oplevering software" afspraken toegevoegd over het controleren van opgeleverde software op beveiligingskwetsbaarheden.
+* Uitgangspunt toegevoegd dat de opdrachtgevende organisatie verantwoordelijk is voor het betrekken van vertegenwoordigers van betrokken partijen met voldoende kennis, tijd en mandaat.
 
 ## Alle documenten
 

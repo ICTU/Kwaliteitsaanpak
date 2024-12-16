@@ -3,7 +3,7 @@
 Het mastertestplan is gebaseerd op de volgende documenten, die beschrijven welke eisen en wensen aan de oplossing zijn gesteld en hoe de oplossing werkt {Selecteer de van toepassing zijnde documenten}:
 
 * Projectstartarchitectuur (PSA), {documentreferentie},
-* Business impact analysis (BIA), {documentreferentie},
+* Business impact analyse (BIA), {documentreferentie},
 * Privacy impact assessment (PIA), {documentreferentie},
 * Softwarearchitectuurdocument (SAD), {documentreferentie},
 * Infrastructuurarchitectuur (IA), {documentreferentie},

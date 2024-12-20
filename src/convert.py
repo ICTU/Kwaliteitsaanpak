@@ -3,6 +3,7 @@
 """Main program to convert Markdown files to different possible output formats."""
 
 import datetime
+import glob
 import json
 import logging
 import os
@@ -10,6 +11,7 @@ import pathlib
 import pprint
 import re
 import shutil
+import zipfile
 from typing import cast, List
 from xml.etree.ElementTree import ElementTree
 
@@ -30,18 +32,21 @@ def convert(settings_filename: str, version: str) -> None:
     settings = read_settings(settings_filename, variables)
     logging.info("Converting with settings:\n%s", pprint.pformat(settings))
     get_build_path(settings)
-    xml = MarkdownConverter(variables).convert(settings)
-    write_xml(xml, settings)
-    converter = Converter(xml)
-    if "docx" in settings["OutputFormats"]:
-        convert_docx(converter, settings)
-    if "pptx" in settings["OutputFormats"]:
-        convert_pptx(converter, settings)
-    if "xlsx" in settings["OutputFormats"]:
-        convert_xlsx(converter, settings)
-    if "html" in settings["OutputFormats"]:
-        copy_files(settings, "html")
-        convert_html(converter, settings)
+    if "InputFile" in settings:
+        xml = MarkdownConverter(variables).convert(settings)
+        write_xml(xml, settings)
+        converter = Converter(xml)
+        if "docx" in settings["OutputFormats"]:
+            convert_docx(converter, settings)
+        if "pptx" in settings["OutputFormats"]:
+            convert_pptx(converter, settings)
+        if "xlsx" in settings["OutputFormats"]:
+            convert_xlsx(converter, settings)
+        if "html" in settings["OutputFormats"]:
+            copy_files(settings, "html")
+            convert_html(converter, settings)
+    if "zip" in settings["OutputFormats"]:
+        zip_files(settings)
 
 
 def read_variables(settings_filename: str, version: str) -> Variables:
@@ -90,6 +95,17 @@ def copy_files(settings: Settings, output_format: str) -> None:
         destination_paths = [pathlib.Path(path) for path in file_to_copy["to"]]
         for destination_path in destination_paths:
             shutil.copy(source_path, destination_path)
+
+
+def zip_files(settings: Settings) -> None:
+    """Zip the generated files."""
+    build_path = get_build_path(settings)
+    zip_filename = build_path / settings["OutputFormats"]["zip"]["OutputFile"]
+    with zipfile.ZipFile(zip_filename, mode="w") as zip_archive:
+        for input_path in settings["OutputFormats"]["zip"]["InputPaths"]:
+            for filename in glob.glob(input_path):
+                zip_archive.write(filename)
+    copy_output(zip_filename, settings, "zip")
 
 
 def convert_html(converter, settings: Settings) -> None:

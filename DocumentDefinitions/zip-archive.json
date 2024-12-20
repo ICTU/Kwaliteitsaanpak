@@ -1,0 +1,22 @@
+{
+    "BuildPath": "build/",
+    "OutputFormats": {
+        "zip": {
+            "InputPaths": [
+                "docs/$VERSIE$/*.css",
+                "docs/$VERSIE$/*.docx",
+                "docs/$VERSIE$/*.html",
+                "docs/$VERSIE$/*.png",
+                "docs/$VERSIE$/*.pptx",
+                "docs/$VERSIE$/*.xlsx"
+            ],
+            "OutputFile": "ICTU-Kwaliteitsaanpak.zip",
+            "OutputPaths": [
+                "docs/$VERSIE$"
+            ]
+        }
+    },
+    "VariablesFiles": [
+        "DocumentDefinitions/Shared/variables.json"
+    ]
+}

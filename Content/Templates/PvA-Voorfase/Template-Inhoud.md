@@ -93,9 +93,9 @@ De experts reviewen op zaken zoals:
 * interne en onderlinge consistentie;
 * volledigheid.
 
-## Verwachte inzet inhoudsdeskundigen
+## Verwachte inzet door {opdrachtgevende organisatie} en {partijen}
 
-Betrokkenheid van inhoudsdeskundigen van {opdrachtgevende organisatie} en {partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
+Betrokkenheid van vertegenwoordigers van {opdrachtgevende organisatie} en {partijen} is randvoorwaardelijk voor de uitvoering van de opdracht. Van de betrokken medewerkers van deze organisatie{s} wordt het volgende verwacht:
 
 * De producten worden opgesteld tijdens verschillende werksessies. Aanwezigheid bij de werksessies (welke zoveel mogelijk tijdens de dagdelen waarop {opdrachtgevende organisatie} en {partijen} en ICTU samenwerken worden gepland) en indien gewenst aan vervolgafspraken in dat kader;
 * Actief bijdragen aan het schrijven en reviewen van de producten;

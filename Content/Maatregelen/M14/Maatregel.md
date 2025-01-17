@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M14/Definitie.md"
 
-Bij voorkeur zijn dezelfde deskundigen in zowel de voorfase als in de realisatiefase betrokken.
+De opdrachtgever organiseert de betrokkenheid van vertegenwoordigers en zorgt dat zij voldoende tijd en mandaat hebben om hun rol goed in te vullen. Bij voorkeur zijn dezelfde vertegenwoordigers in zowel de voorfase als in de realisatiefase betrokken.
 
 In de realisatiefase wordt de prioriteit van werk van het Scrumteam bepaald door een product owner van de opdrachtgevende organisatie. Bij aanvang van de voorfase is deze beoogde product owner bekend en werkt deze ook mee in de voorfase.
 

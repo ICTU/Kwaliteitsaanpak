@@ -45,6 +45,7 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
 6. Commit the changes and push to GitHub: `git commit -a -m "Release vx.y.z"; git push`
 7. Review and merge the branch on GitHub
 8. Tag the release and push the tag to GitHub: `git checkout master; git pull -p; git tag vx.y.z; git push --tags`
+9. Announce the release in MS Teams channel "ICTU Softwareontwikkeling/Algemeen". In case of a minor release, also mail the SDM'ers. In case of a major release, also email everyone at ISE.
 
 ## Point of contact
 

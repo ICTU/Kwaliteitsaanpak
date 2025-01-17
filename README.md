@@ -38,14 +38,14 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
 
 1. Create a release branch: `git checkout -b release-vx-y-z`
 2. Update the version number and release date in the change log in `./Content/Wijzigingsgeschiedenis.md``
-3. Update the version number in `docs/index.html`
-3. Update the version number in `pyproject.toml`
-4. Create a new release folder in ./docs: `mkdir docs/vx.y.z`
-5. Run `VERSION=x.y.z docker compose up` to generate the documents
-6. Commit the changes and push to GitHub: `git commit -a -m "Release vx.y.z"; git push`
-7. Review and merge the branch on GitHub
-8. Tag the release and push the tag to GitHub: `git checkout master; git pull -p; git tag vx.y.z; git push --tags`
-9. Announce the release in MS Teams channel "ICTU Softwareontwikkeling/Algemeen". In case of a minor release, also mail the SDM'ers. In case of a major release, also email everyone at ISE.
+3. Create a new release folder in ./docs: `mkdir docs/vx.y.z`
+4. Update the version number in `docs/index.html`
+5. Update the version number in `pyproject.toml`
+6. Run `VERSION=x.y.z docker compose up` to generate the documents
+7. Commit the changes and push to GitHub: `git commit -a -m "Release vx.y.z"; git push`
+8. Review and merge the branch on GitHub
+9. Tag the release and push the tag to GitHub: `git checkout master; git pull -p; git tag vx.y.z; git push --tags`
+10. Announce the release in MS Teams channel "ICTU Softwareontwikkeling/Algemeen". In case of a minor release, also mail the SDM'ers. In case of a major release, also email everyone at ISE.
 
 ## Point of contact
 

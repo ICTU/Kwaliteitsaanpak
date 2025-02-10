@@ -8,7 +8,7 @@ De volgende uitgangspunten zijn van toepassing op dit document:
 | U02 | De als testbasis geïdentificeerde documenten dienen door alle acceptanten, inclusief het testteam, te zijn geaccordeerd, alvorens met de testspecificatie kan worden begonnen. |
 | U03 | Per release of per sprint kan de product owner besluiten om bepaalde functionaliteit, bijvoorbeeld geleverd door externe partijen, niet te testen. Indien dit voorkomt, dan zal dit expliciet worden opgenomen in de managementsamenvatting van het vrijgaveadvies. |
 | U04 | De multidisciplinaire samenstelling van de Scrumteams — test engineers en ontwikkelaars zitten in hetzelfde team — geeft mogelijkheid tot snelle interactie. Issues gevonden binnen een sprint kunnen hierdoor vaak nog binnen dezelfde sprint worden opgelost en hoeven dus niet apart geadministreerd te worden. |
-| U05 | Issues gevonden tijdens de acceptatietesten of in productie worden op de backlog verwerkt samen met de user stories. |
+| U05 | Issues gevonden tijdens de acceptatietesten of in productie worden op de product backlog verwerkt samen met de user stories. |
 | U06 | De ontwikkel- en testplanning zijn met elkaar verweven. Het ontwikkelen en testen van de user stories zijn onlosmakelijk met elkaar verbonden en beginnen op hetzelfde moment. |
 | U07 | De testomgeving wordt conform planning tijdig en correct werkend opgeleverd. |
 | U08 | Er is voldoende en gepaste testdata ter beschikking. Zie de paragraaf Testdata in het hoofdstuk Infrastructuur voor een beschrijving van de testdata. |

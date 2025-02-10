@@ -2,7 +2,7 @@
 **$M16$**
 ICTU stelt het gebruik van tools verplicht voor de volgende taken:
 
-1. backlog management en agile werken,
+1. product en sprint backlog management en agile werken,
 2. inrichten en uitvoeren van een continuous delivery pipeline,
 3. monitoren van de kwaliteit van broncode,
 4. versiebeheer van op te leveren producten,

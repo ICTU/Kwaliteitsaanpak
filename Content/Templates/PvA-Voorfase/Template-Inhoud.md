@@ -24,7 +24,7 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Informatiebeveiligingsplan (IB-plan)    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Niet-functionele eisen (NFE)            | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Kwaliteitsplan                          | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Geprioriteerde backlog met user stories | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Product backlog                         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Vastgesteld minimal viable product      | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Wireframe, mockup, prototype, animatie  | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Voorstel realisatiefase                 | ICTU                         | ICTU         | {reviewers}             |
@@ -113,7 +113,7 @@ Onderstaand is de verwachte inzet per rol van {opdrachtgevende organisatie} en {
 | Architect                                     | {aantal} dagen           | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur                                                |
 | Testmanager                                   | {aantal} dagen           | Uitvoeren PRA, opstellen mastertestplan, reviewen kwaliteitsplan, detailtestplan softwarerealisatie                                            |
 | Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                                                |
-| Product owner                                 | {aantal} dagen           | Inhoudelijk sturing / prioritering, opstellen backlog, NFE, minimal viable product, reviewen GFO en prototype                                  |
+| Product owner                                 | {aantal} dagen           | Inhoudelijk sturing / prioritering, opstellen product backlog, NFE, minimal viable product, reviewen GFO en prototype                         |
 | Projectleider ({opdrachtgevende organisatie}) | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleiders van opdrachtnemer, deelname aan kick-off en eventuele workshops              |
 | Projectleider ({beheerorganisatie})           | {aantal} dagen           | Opstellen plan van aanpak realisatiefase voor het inrichten van technisch en operationeel beheer, deelname aan kick-off en eventuele workshops |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                                    |

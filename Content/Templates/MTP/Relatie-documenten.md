@@ -12,7 +12,7 @@ Het mastertestplan is gebaseerd op de volgende documenten, die beschrijven welke
 * Niet-functionele eisen (NFE), {documentreferentie},
 * Globaal functioneel ontwerp (GFO), {documentreferentie},
 * Interactie-ontwerp (UX), {documentreferentie},
-* Geprioriteerde backlog met user stories, {documentreferentie},
+* Product backlog, {documentreferentie},
 * Vastgesteld minimal viable product, {documentreferentie},
 * Wireframe, mockup, prototype, animatie, {documentreferentie}.
 

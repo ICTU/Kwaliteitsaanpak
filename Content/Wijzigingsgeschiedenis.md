@@ -1,3 +1,9 @@
+# Versie 4.1.1, nog te releasen
+
+## Alle documenten
+
+* Product backlog, sprint backlog en product owner consistent geschreven.
+
 # Versie 4.1.0, 17 januari 2025
 
 ## Kwaliteitsaanpak

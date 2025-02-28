@@ -2,7 +2,7 @@
 
 ## Alle documenten
 
-* Verwijzigingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.
+* Verwijzingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.
 
 # Versie 4.2.0, 24 maart 2025
 

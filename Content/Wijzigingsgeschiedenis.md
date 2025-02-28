@@ -1,3 +1,9 @@
+# Versie 5.0.0, nog niet gereleased
+
+## Alle documenten
+
+* Verwijzigingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.
+
 # Versie 4.2.0, nog te releasen
 
 ## Kwaliteitsaanpak
@@ -9,7 +15,7 @@
 
 ## Template Niet-Functionele Eisen
 
-* Nederlandstalige definities uit NEN-ISO/IEC 25010:2011 vervangen door de engelstalige definities uit NEN-ISO/IEC 25010:2023 (er is momenteel geen Nederlandse vertaling van ISO/IEC 25010:2023).
+* Nederlandstalige definities uit NEN-ISO/IEC 25010:2011 vervangen door de Engelstalige definities uit NEN-ISO/IEC 25010:2023 (er is momenteel geen Nederlandse vertaling van ISO/IEC 25010:2023).
 
 ## Template Plan van Aanpak Voorfase
 
@@ -47,6 +53,7 @@
 ## Alle documenten
 
 * De spelling van business impact analysis veranderd in business impact analyse, conform NORA.
+* Product backlog, sprint backlog en product owner consistent geschreven.
 
 # Versie 4.0.4, 16 december 2024
 

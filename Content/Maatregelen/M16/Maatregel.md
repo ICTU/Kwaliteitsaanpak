@@ -13,17 +13,16 @@ ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Project
 5. release van software: Releaseserver in het ontwikkelplatform,
 6. maken van testrapportages: JUnit, Robot Framework, TestNG, of hiermee compatible tools,
 7. maken van kwaliteitsrapportages: Quality-time,
-8. controleren van de configuratie op aanwezigheid van bekende kwetsbaarheden in configuratie: OpenVAS (Vulnerability Assessment System),
-9. controleren op aanwezigheid van bekende kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency-Check en/of Dependency-Track,
-10. statische controle van de software op aanwezigheid van kwetsbare constructies: SonarQube,
-11. dynamische controle van de software op aanwezigheid van kwetsbare constructies: ZAP (Zed Attack Proxy) by Checkmarx,
-12. controleren van container images op aanwezigheid van bekende kwetsbaarheden: Trivy,
-13. testen van performance en schaalbaarheid: JMeter en Performancetestrunner,
-14. testen op toegankelijkheid van de applicatie: Axe,
-15. produceren van een "software bill of materials" (SBoM): tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren,
-16. opslaan van artifacten: Nexus of Harbor,
-17. registratie van incidenten bij gebruik en beheer: Jira, en
-18. bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving: Ansible.
+8. controleren op aanwezigheid van bekende kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency-Check en/of Dependency-Track,
+9. statische controle van de software op aanwezigheid van kwetsbare constructies: SonarQube,
+10. dynamische controle van de software op aanwezigheid van kwetsbare constructies: ZAP (Zed Attack Proxy) by Checkmarx,
+11. controleren van container images op aanwezigheid van bekende kwetsbaarheden: Trivy,
+12. testen van performance en schaalbaarheid: JMeter en Performancetestrunner,
+13. testen op toegankelijkheid van de applicatie: Axe,
+14. produceren van een "software bill of materials" (SBoM): tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren,
+15. opslaan van artifacten: Nexus of Harbor,
+16. registratie van incidenten bij gebruik en beheer: Jira, en
+17. bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving: Ansible.
 
 ### Rationale
 

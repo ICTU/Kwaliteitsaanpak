@@ -1,3 +1,9 @@
+# Versie 5.0.0, nog niet gereleased
+
+## Alle documenten
+
+* Verwijzigingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.
+
 # Versie 4.2.0, 24 maart 2025
 
 ## Kwaliteitsaanpak
@@ -52,6 +58,7 @@
 ## Alle documenten
 
 * De spelling van business impact analysis veranderd in business impact analyse, conform NORA.
+* Product backlog, sprint backlog en product owner consistent geschreven.
 
 # Versie 4.0.4, 16 december 2024
 

@@ -12,6 +12,6 @@ Tijdens de voorfase van {het project} zijn de volgende activiteiten uitgevoerd:
     a. planning,
     a. samenwerking,
     a. risico’s.
-1. Voorbereiden van een eventuele start van de realisatie, zodat het Scrumteam van een voldoende uitgewerkte backlog is voorzien bij de start.
+1. Voorbereiden van een eventuele start van de realisatie, zodat het Scrumteam van een voldoende uitgewerkte product backlog is voorzien bij de start.
 
 Om tot {projectresultaat} te komen, ontwikkelt ICTU in samenwerking met {partijen} {het product}; zie voor een beschrijving hiervan het hoofdstuk "Producten". Dit plan van aanpak beschrijft verder de planning van en werkwijze tijdens de realisatiefase. Het is een aanvulling op het voorstel inclusief projectovereenkomst {titel, versie en datum}.

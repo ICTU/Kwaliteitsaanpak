@@ -7,7 +7,7 @@ Deze hoofdeigenschappen zijn nog te globaal en te abstract om de gewenste kenmer
 De opzet, formulering en inhoud van de niet-functionele eisen voldoen aan algemeen erkende kwaliteitskenmerken: een eis gaat over één onderwerp en is toe te wijzen aan één partij. Daarnaast is de eis compleet, consistent met andere eisen, herleidbaar naar organisatie-eisen, van erkend belang voor de organisatie, actueel, ondubbelzinnig en verifieerbaar. De belangrijke niet-functionele eisen zijn identificeerbaar tot een zodanig niveau dat het mogelijk is:
 
 1. de realisatiefase te begroten met voldoende zekerheid over de benodigde expertise, doorlooptijd en kosten, en
-1. op controleerbare wijze te verwerken in software-architectuurdocument (SAD), backlog en testplannen.
+1. op controleerbare wijze te verwerken in software-architectuurdocument (SAD), product backlog en testplannen.
 
 Dit document is als volgt tot stand gekomen:
 

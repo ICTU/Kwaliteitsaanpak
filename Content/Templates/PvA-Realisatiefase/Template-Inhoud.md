@@ -31,7 +31,7 @@ Binnen de scope van de opdracht valt de {ontwikkeling en/of het onderhoud} van {
 * Ontwikkel, test- en demo-omgevingen,
 * Engineering tools voor versiebeheer (GitLab of Azure DevOps), bouwen en testen (Azure DevOps, GitLab en/of Jenkins), kwaliteitscontrole (SonarQube), beveiligingscontrole (SonarQube, OWASP Dependency-Check en/of Dependency-Track, ZAP by Checkmarx, OpenVAS), toegankelijkheid (Axe), performancetesten (JMeter) en integrale kwaliteitsrapportage (Quality-time),
 * {Als operationeel beheer onderdeel is van de dienstverlening:} Uitrollen in de productieomgeving (Ansible), container registry (Harbor), performance monitoring (APM), security monitoring ({vul aan met concreet product}), controle van kwetsbaarheden in frameworks ({vul aan met concreet product}), controle van images van containers (Trivy), registratie van incidenten bij gebruik en beheer (Topdesk of Jira).
-* Backlog management tools (Jira en/of Azure DevOps),
+* Product en sprint backlog management tools (Jira en/of Azure DevOps),
 * Beveiligings- en performancetesten in de ICTU-testomgevingen. ICTU voert deze tests uit voordat een nieuwe versie van de software wordt opgeleverd. {Beschrijf hier eventuele andere afspraken met de opdrachtgevende organisatie}.
 
 {Als operationeel beheer geen onderdeel is van de dienstverlening:} Buiten de scope van de opdracht valt:
@@ -118,7 +118,7 @@ Onderstaand is de verwachte inzet van per rol van {opdrachtgevende organisatie} 
 | Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                        |
 |:----------------------------------------------|:-------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
 | Projectleider ({opdrachtgevende organisatie}) | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan demo's en eventuele workshops |
-| Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden backlog                                                         |
+| Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden product backlog                                                |
 | Business analist                              | {aantal} dagen           | Epics opstellen voor de product backlog, eventueel uitgewerkt in user stories                                                |
 | Architect                                     | {aantal} dagen           | Bewaken en onderhouden van de softwarearchitectuur                                                                           |
 | Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur, opstellen infrastructuurarchitectuur (IA)                                 |

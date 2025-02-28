@@ -62,7 +62,7 @@ Dit kwaliteitsplan wordt opgesteld tijdens de voorfase, maar is tevens al deels 
 
 ## Belanghebbenden
 
-De kwaliteit van de deliverables wordt mede bepaald door de verwachtingen van de belanghebbenden. Het is van belang dat alle belanghebbenden zijn geïdentificeerd en hun verwachtingen zijn vastgelegd, geanalyseerd en vertaald naar de eisen voor het te implementeren systeem. De belanghebbenden worden geïdentificeerd in het projectvoorstel voor de voorfase. De eisen aan het te ontwikkelen systeem worden vastgelegd in Backlog en NFE-document.
+De kwaliteit van de deliverables wordt mede bepaald door de verwachtingen van de belanghebbenden. Het is van belang dat alle belanghebbenden zijn geïdentificeerd en hun verwachtingen zijn vastgelegd, geanalyseerd en vertaald naar de eisen voor het te implementeren systeem. De belanghebbenden worden geïdentificeerd in het projectvoorstel voor de voorfase. De eisen aan het te ontwikkelen systeem worden vastgelegd in product backlog en NFE-document.
 
 De tijdens de voorfase geïdentificeerde eisen vormen het startpunt van {opdrachtgevende organisatie} en kunnen gedurende de vervolgfases in overeenstemming met de opdrachtnemer aangepast worden. De product owner vertegenwoordigt gedurende de vervolgfasen de geïdentificeerde belanghebbenden.
 
@@ -90,7 +90,7 @@ In aanvulling op de maatregelen met betrekking tot reviews, zie paragraaf [Docum
 
 ### Tracering eisen
 
-{Als de eisen traceerbaar moeten zijn vanuit de Backlog/NFE-document/Informatiebeveiligingsplan via GFO en SAD naar broncode, beschrijf dan hier de wijze waarop de eisen uniek identificeerbaar zijn gemaakt, hoe de relaties tussen eisen en ontwerp(beslissingen) worden bijgehouden en hoe de relaties tussen ontwerp(beslissingen) en code worden bijgehouden. Beschrijf hier ook wie deze relaties op welke momenten verifieert en hoe de verificatie wordt gedocumenteerd.}
+{Als de eisen traceerbaar moeten zijn vanuit product backlog/NFE-document/Informatiebeveiligingsplan via GFO en SAD naar broncode, beschrijf dan hier de wijze waarop de eisen uniek identificeerbaar zijn gemaakt, hoe de relaties tussen eisen en ontwerp(beslissingen) worden bijgehouden en hoe de relaties tussen ontwerp(beslissingen) en code worden bijgehouden. Beschrijf hier ook wie deze relaties op welke momenten verifieert en hoe de verificatie wordt gedocumenteerd.}
 
 # Kwaliteitsmaatregelen realisatiefase
 

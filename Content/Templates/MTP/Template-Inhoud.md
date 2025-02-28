@@ -26,7 +26,7 @@ De volgende onderdelen van {het product} zijn binnen de scope van de tests: {Dee
 * ondersteunde processen
 * {vul aan indien nodig}
 
-{het product} wordt op de volgende kwaliteitskenmerken getest: {Maak gebruik van de kwaliteitskarakteristieken van de norm ISO/IEC-25010:2011 (zie [https://nl.wikipedia.org/wiki/ISO_25010](https://nl.wikipedia.org/wiki/ISO_25010)). Of vat de acceptatiecriteria samen die eventueel al zijn beschreven in het document Niet-functionele eisen.}
+{het product} wordt op de volgende kwaliteitskenmerken getest: {Maak gebruik van de kwaliteitskarakteristieken van de norm ISO/IEC-25010:2023. Of vat de acceptatiecriteria samen die eventueel al zijn beschreven in het document Niet-functionele eisen.}
 
 * functionele geschiktheid
 * prestatie-efficiëntie (performance)

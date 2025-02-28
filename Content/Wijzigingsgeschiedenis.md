@@ -6,6 +6,7 @@
 
 ## Template Niet-Functionele Eisen
 
+* Nederlandstalige definities uit NEN-ISO/IEC 25010:2011 vervangen door de engelstalige definities uit NEN-ISO/IEC 25010:2023 (er is momenteel geen Nederlandse vertaling van ISO/IEC 25010:2023).
 * Toegevoegd in paragraaf 8.1, eis 17 dat de software alleen producten gebruikt of ondersteunt waarvoor de leverancier security patches uitbrengt.
 
 ## Template Plan van Aanpak Voorfase
@@ -20,6 +21,7 @@
 
 ## Alle documenten
 
+* Referenties naar NEN-ISO/IEC 25010:2011 vervangen door NEN-ISO/IEC 25010:2023.
 * De spelling van business impact analysis veranderd in business impact analyse, conform NORA.
 
 # Versie 4.0.4, 16 december 2024

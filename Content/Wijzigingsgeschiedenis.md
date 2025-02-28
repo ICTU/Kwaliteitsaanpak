@@ -1,8 +1,8 @@
-# Versie 4.1.1, nog te releasen
+# Version 5.0.0, nog niet gereleased
 
 ## Alle documenten
 
-* Product backlog, sprint backlog en product owner consistent geschreven.
+* Verwijzigingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.
 
 # Versie 4.1.0, 17 januari 2025
 
@@ -29,6 +29,7 @@
 
 * Referenties naar NEN-ISO/IEC 25010:2011 vervangen door NEN-ISO/IEC 25010:2023.
 * De spelling van business impact analysis veranderd in business impact analyse, conform NORA.
+* Product backlog, sprint backlog en product owner consistent geschreven.
 
 # Versie 4.0.4, 16 december 2024
 

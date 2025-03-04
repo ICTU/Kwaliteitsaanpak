@@ -4,6 +4,14 @@
 
 * Nederlandstalige definities uit NEN-ISO/IEC 25010:2011 vervangen door de engelstalige definities uit NEN-ISO/IEC 25010:2023 (er is momenteel geen Nederlandse vertaling van ISO/IEC 25010:2023).
 
+## Template Plan van Aanpak Voorfase
+
+* Betere voorbeelden van projectrisio's en maatregelen.
+
+## Template Plan van Aanpak Realisatiefase
+
+* Betere voorbeelden van projectrisio's en maatregelen.
+
 ## Alle documenten
 
 * Referenties naar NEN-ISO/IEC 25010:2011 vervangen door NEN-ISO/IEC 25010:2023.

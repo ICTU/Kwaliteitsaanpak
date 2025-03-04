@@ -163,14 +163,16 @@ Voor de uitvoering van de voorfase gelden de volgende randvoorwaarden:
 
 De onderstaande projectrisico’s, die het succes van de voorfase kunnen belemmeren, zijn reeds onderkend; daarbij zijn per risico de maatregelen benoemd.
 
+{ICTU/opdrachtgever} houdt projectrisico's bij in het risicolog. In het risicolog wordt het risico beschreven, een risico-eigenaar benoemd, het risicoprofiel bepaald en de te treffen maatregelen vastgesteld. Tijdens de realisatiefase bewaakt {ICTU/opdrachtgever} het risicolog en actualiseert dit wanneer nodig. {Het risicolog is onderdeel van de maandrapportage van ICTU.}
+
 {Deze tabel dient op basis van het concrete project en voorstel aangepast te worden.}
 
-| Projectrisico                                                                                                                                | Maatregel                                                                                                                                                                                |
-| :------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Verwachtingen over dit project tussen verschillende partijen ({partijen}, ICTU) kunnen niet waargemaakt worden, waardoor vertraging ontstaat | Wekelijks projectoverleg, samenwerken door middel van werkgroepen en fysiek bij elkaar komen, kick-off met alle betrokkenen waarbij de opdrachtgever het doel van de voorfase uiteenzet. |
-| Scope-uitbreiding, gebrek aan focus                                                                                                          | Scope voorfase bewaken, alleen de scope uitbreiden als dit noodzakelijk is voor {doel}                                                                                                   |
-| Onvoldoende bemensing door vakanties                                                                                                         | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert.                                                                                                     |
-| {risico}                                                                                                                                     | {maatregel}                                                                                                                                                                              |
+| Projectrisico | Maatregel |
+| :---| :---|
+| Betrokken partijen communiceren onvoldoende over het beoogde projectresultaat, waardoor verwachtingen uit elkaar lopen. Gevolg is dat partijen geen overeenstemming bereiken over de scope van de realisatiefase. | Wekelijks projectoverleg, samenwerken door middel van werkgroepen en fysiek bij elkaar komen, kick-off met alle betrokkenen waarbij de opdrachtgever het doel van de voorfase uiteenzet. |
+| PSA is niet gereed bij de start van de voorfase. Hierdoor is de scope niet helder en kan de voorfase niet tijdig worden afgerond. | PSA laten goedkeuren door architectuurboard voor de start van de voorfase. |
+| Diverse vertegenwoordigers van de opdrachtgever zijn niet beschikbaar vanwege een voorgenomen reorganisatie. Inhoudelijke vragen van het voorfaseteam worden hierdoor niet tijdig beantwoord. | Voor de voorfase controleren of alle genoemde vertegenwoordigers volgens plannning beschikbaar zijn. Achtervang organiseren. |
+| {risico} | {maatregel} |
 
 # Verwachte inzet ICTU
 

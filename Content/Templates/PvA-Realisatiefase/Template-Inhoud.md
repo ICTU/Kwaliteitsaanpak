@@ -177,17 +177,21 @@ Voor de uitvoering van de realisatiefase gelden de volgende randvoorwaarden:
 
 De onderstaande projectrisico’s, die het succes van de realisatiefase kunnen belemmeren, zijn reeds onderkend; daarbij zijn per risico de maatregelen benoemd.
 
-De risico’s worden door het project bijgehouden in het risicolog. De risico’s en de mitigerende maatregelen worden in de realisatiefase bewaakt en waar nodig geactualiseerd.
+{ICTU/opdrachtgever} houdt projectrisico's bij in het risicolog. In het risicolog wordt het risico beschreven, een risico-eigenaar benoemd, het risicoprofiel bepaald en de te treffen maatregelen vastgesteld. Tijdens de realisatiefase bewaakt {ICTU/opdrachtgever} het risicolog en actualiseert dit wanneer nodig. {Het risicolog is onderdeel van de maandrapportage van ICTU.}
 
 {Deze tabel dient op basis van het concrete project en voorstel aangepast te worden.}
 
-| Projectrisico                                                                                                                                                            | Maatregel                                                                                                                                                                                     |
-|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Verwachtingen over dit project tussen verschillende partijen ({partijen}, ICTU) kunnen niet waargemaakt worden, waardoor vertraging ontstaat                             | Wekelijks projectoverleg, samenwerken door middel van werkgroepen en fysiek bij elkaar komen, kick-off met alle betrokkenen waarbij opdrachtgever of product owner de productvisie uiteenzet. |
-| Scope-uitbreiding, gebrek aan focus                                                                                                                                      | Scope bewaken, alleen de scope uitbreiden als dit noodzakelijk is voor {doel}                                                                                                                 |
-| Onvoldoende bemensing door vakanties                                                                                                                                     | Rekening houden met langere doorlooptijd dan de (te) eenvoudige rekensom suggereert.                                                                                                          |
-| {Bij DevOps werkwijze} Onduidelijkheid over de verdeling van verantwoordelijkheden tussen DevOps-team en beheerorganisatie (incident management, backup & restore, etc.) | Afspraken over onderlinge samenwerking vastleggen in een dossier afspraken en procedures (DAP).                                                                                               |
-| {risico}                                                                                                                                                                 | {maatregel}                                                                                                                                                                                   |
+| Projectrisico | Maatregel |
+|:---:---|
+| Een deel van de voorfase producten is niet voor de start van de realisatiefase gereed. Er wordt toch gestart met realiseren. Tijdens de realisatiefase worden de producten aangevuld, maar deze aanvullingen hebben impact op de scope. De planning van de realisatiefase wordt hierdoor niet gehaald. |	Afronden voorfase producten voor start realisatie, afronden voorfase producten in de eerste sprint van de realisatiefase, tijd inplannen voor mogelijke grotere wijzigingen, besluitvorming door stuurgroep over scopewijzigingen. |
+| De product owner is niet in staat de backlog snel genoeg aan te vullen en te refinen waardoor het ontwikkelteam te
+weinig werk heeft en ontwikkelaars gedemotiveerd raken en daardoor vertrekken. | Opdrachtgever geeft product owner
+voldoende mandaat om besluiten te nemen, inhoudelijke specialisten hebben voldoende tijd om de product owner te
+ondersteunen, functioneel ontwerper ondersteunt product owner bij het refinen van user stories. |
+| De beheerpartij kan de onderliggende infrastructuur niet tijdig leveren waardoor de oplossing niet getest en in gebruik kan worden genomen. | Vroegtijdig installatietests uitvoeren op de infrastructuur, mogelijke alternatieve oplossingen uitwerken. |
+| Door uitloop van {ander project} kan de software niet volgens planning in productie. Hierdoor zijn er onvoldoende user stories voor het ontwikkelteam. Op een later moment ontstaat meerwerk en blijft minder tijd over voor nieuwe functionaliteiten. Ontwikkelaars raken gedemotiveerd en vertrekken. | Tijdig afschalen van het ontwikkelteam, onderzoeken of het mogelijk is het team te behouden ten behoeve van applicatiebeheer,	product owner voegt relevant ontwikkelwerk toe aan de backlog en borgt besluitvorming hierover. |
+| {Bij DevOps werkwijze} De voorzieningen die de beheerorganisatie biedt voor backup en restore voldoen niet aan de eisen van het DevOps-team waardoor extra voorbereidingstijd nodig is voordat de applicatie in productie kan. | Ruim voor de geplande MVP-datum in productie met een dummy-versie zodat het DevOps-team backup en restore kan testen. |
+| {risico} | {maatregel} |
 
 # Verwachte inzet ICTU
 

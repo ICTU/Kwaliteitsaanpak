@@ -4,22 +4,22 @@
 
 Opdrachtgevende organisatie, ICTU, beheerorganisatie en andere meewerkende partijen leveren de onderstaande informatie op. Voor een aantal documenten zijn als onderdeel van de Kwaliteitsaanpak templates beschikbaar. Ook kan gebruik worden gemaakt van bestaande templates uit bijvoorbeeld de NORA. Zie [$M29$](#m29).
 
-De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het ✔ geeft aan in welke fase ze worden opgeleverd.
+De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkje (✔) geeft aan in welke fase ze (initieel) worden opgeleverd. Het tandwiel (⚙) geeft aan in welke fase de producten worden onderhouden en bijgewerkt.
 
 | Product                                             | Voor start | Voorfase | Realisatiefase | Verantwoordelijke organisatie |
 |-----------------------------------------------------|------------|----------|----------------|-------------------------------|
-| Projectstartarchitectuur                            | ✔          |          |                | opdrachtgever                 |
-| Business impact analyse                             | ✔          |          |                | opdrachtgever                 |
-| Privacy impact assessment                           | ✔          |          |                | opdrachtgever                 |
+| Projectstartarchitectuur                            | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| Business impact analyse                             | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| Privacy impact assessment                           | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | Plan van aanpak: voorfase                           | ✔          |          |                | ICTU                          |
-| Beschrijving van functionele eisen                  |            | ✔        | ✔              | opdrachtgever                 |
-| Beschrijving van niet-functionele eisen             |            | ✔        | ✔              | opdrachtgever                 |
-| Product backlog                                     |            | ✔        | ✔              | opdrachtgever                 |
-| Ontwerp- en architectuurdocumentatie                |            | ✔        | ✔              | ICTU, beheerorganisatie       |
-| Mastertestplan                                      |            | ✔        | ✔              | opdrachtgever                 |
-| Detailtestplannen                                   |            | ✔        | ✔              | ICTU, beheerorganisatie       |
-| Informatiebeveiligingsplan                          |            | ✔        | ✔              | opdrachtgever                 |
-| Kwaliteitsplan                                      |            | ✔        | ✔              | ICTU                          |
+| Beschrijving van functionele eisen                  |            | ✔        | ⚙              | opdrachtgever                 |
+| Beschrijving van niet-functionele eisen             |            | ✔        | ⚙              | opdrachtgever                 |
+| Product backlog                                     |            | ✔        | ⚙              | opdrachtgever                 |
+| Ontwerp- en architectuurdocumentatie                |            | ✔        | ⚙              | ICTU, beheerorganisatie       |
+| Mastertestplan                                      |            | ✔        | ⚙              | opdrachtgever                 |
+| Detailtestplannen                                   |            | ✔        | ⚙              | ICTU, beheerorganisatie       |
+| Informatiebeveiligingsplan                          |            | ✔        | ⚙              | opdrachtgever                 |
+| Kwaliteitsplan                                      |            | ✔        | ⚙              | ICTU                          |
 | Plan van aanpak: realisatiefase                     |            | ✔        |                | ICTU                          |
 | Deploybare versie van de software                   |            |          | ✔              | ICTU                          |
 | Testrapportages                                     |            |          | ✔              | ICTU, beheerorganisatie       |

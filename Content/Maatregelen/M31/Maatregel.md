@@ -9,6 +9,8 @@ De opdrachtgevende organisatie zorgt dat het project vanaf de start van de voorf
 3. Privacy impact assessment,
 4. Afspraken tussen opdrachtgevende organisatie en beheerorganisatie.
 
+Tevens onderhoudt de opdrachtgevende organisatie deze informatie tijdens de voorfase en realisatiefase.
+
 Als de benodigde informatie niet gereed is bij de start van de voorfase dan maken opdrachtgevende organisatie en ICTU nadere afspraken over de manier waarop de benodigde informatie nog tijdens de voorfase beschikbaar komt voor het project.
 
 ### Projectstartarchitectuur

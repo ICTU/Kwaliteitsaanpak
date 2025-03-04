@@ -2,6 +2,7 @@
 
 ## Kwaliteitsaanpak
 
+* In M01 "Het project levert in elke fase vastgestelde producten en informatie op" expliciet gemaakt in welke fasen producten worden onderhouden.
 * In M02 "Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet" bij het kopje "Realisatiefase: handmatige evaluatie" weggehaald dat de performance handmatig wordt getest; dit gebeurt in de praktijk altijd geautomatiseerd.
 * In M07 "Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren" toegevoegd in welke omgeving(en) performance- en beveiligingstests plaatsvinden.
 * In M26 "Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen" toegevoegd in welke omgeving(en) penetratietesten plaatsvinden.

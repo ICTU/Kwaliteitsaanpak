@@ -1,5 +1,11 @@
 # Versie 4.2.0, nog te releasen
 
+## Kwaliteitsaanpak
+
+* In M02 "Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet" bij het kopje "Realisatiefase: handmatige evaluatie" weggehaald dat de performance handmatig wordt getest; dit gebeurt in de praktijk altijd geautomatiseerd.
+* In M07 "Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren" toegevoegd in welke omgeving(en) performance- en beveiligingstests plaatsvinden.
+* In M26 "Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen" toegevoegd in welke omgeving(en) penetratietesten plaatsvinden.
+
 ## Template Niet-Functionele Eisen
 
 * Nederlandstalige definities uit NEN-ISO/IEC 25010:2011 vervangen door de engelstalige definities uit NEN-ISO/IEC 25010:2023 (er is momenteel geen Nederlandse vertaling van ISO/IEC 25010:2023).

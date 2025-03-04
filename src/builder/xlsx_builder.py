@@ -161,8 +161,9 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
                     submeasure=True,
                 )
             if tag == xmltags.TABLE_CELL and self.measure_id == "M01":
-                # The unicode check symbol is wider than other characters, messing up the table layout:
+                # Unicode symbols are wider than other characters, messing up the table layout:
                 text = text.replace("✔", "x")
+                text = text.replace("⚙", "o")
                 column, row = (
                     int(attributes[xmltags.TABLE_CELL_COLUMN]),
                     int(attributes[xmltags.TABLE_CELL_ROW]),

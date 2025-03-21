@@ -14,8 +14,6 @@
 
 #include "Content/Maatregelen/M03/Maatregel.md"
 
-#include "Content/Maatregelen/M13/Maatregel.md"
-
 #include "Content/Maatregelen/M04/Maatregel.md"
 
 #include "Content/Maatregelen/M07/Maatregel.md"

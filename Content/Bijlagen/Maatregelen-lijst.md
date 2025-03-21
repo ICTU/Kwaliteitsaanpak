@@ -18,8 +18,6 @@
 
 #include "Content/Maatregelen/M12/Definitie.md"
 
-#include "Content/Maatregelen/M13/Definitie.md"
-
 #include "Content/Maatregelen/M14/Definitie.md"
 
 #include "Content/Maatregelen/M16/Definitie.md"

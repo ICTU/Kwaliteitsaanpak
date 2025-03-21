@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M18/Definitie.md"
 
-ICTU zorgt voor ondersteuning van de bij [$M16$](#m16) verplicht gestelde tools. Een team van specialisten met kennis, ervaring en capaciteit is beschikbaar voor ondersteuning aan projecten.
+ICTU zorgt voor ondersteuning van de in [$M16$](#m16) verplicht gestelde tools. Een team van specialisten met kennis, ervaring en capaciteit is beschikbaar voor ondersteuning aan projecten. Projecten zijn verantwoordelijk voor de correcte werking van de pipeline.
 
 Bij de selectie van tools ter ondersteuning van de projectuitvoering geeft ICTU de voorkeur aan open source tools. Ook tools die ICTU zelf ontwikkelt ter ondersteuning van softwareontwikkelprojecten worden bij voorkeur open source beschikbaar gesteld.
 

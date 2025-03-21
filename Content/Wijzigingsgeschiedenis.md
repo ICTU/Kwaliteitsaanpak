@@ -1,5 +1,10 @@
 # Versie 5.0.0, nog niet gereleased
 
+## Kwaliteitsaanpak
+
+* In M07 "Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren" het produceren van een SBOM als aparte activiteit verwijderd omdat de SBOM onderdeel uitmaakt van het totale product zoals genoemd in de laatste activiteit "Oplevering van het totale product". De in M07 genoemde ondersteuning door de afdeling ISD staat ook in M18 "ICTU biedt ondersteuning voor verplicht gestelde tools". Deze ondersteuning verwijderd uit M07. De in M07 genoemde CI-tools (Jenkins, GitLab CI en Azure DevOps) en de releasevoorziening zijn ook al genoemd in M16 "Het project gebruikt tools voor vastgestelde taken" en dus verwijderd uit M07.
+* In M16 "Het project gebruikt tools voor vastgestelde taken" de opsomming van taken gecombineerd met de opsomming van tools in één tabel.
+
 ## Alle documenten
 
 * Verwijzigingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.

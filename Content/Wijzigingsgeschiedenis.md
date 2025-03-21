@@ -1,5 +1,9 @@
 # Versie 5.0.0, nog niet gereleased
 
+## Kwaliteitsaanpak
+
+* Maatregel M13 "Het project gebruikt ISO-25010 voor de specificatie van productkwaliteitseisen" is vervallen. Het gebruik van ISO-25010 voor de specificatie van productkwaliteitseisen staat al genoemd in M01 "Het project levert in elke fase vastgestelde producten en informatie op".
+
 ## Alle documenten
 
 * Verwijzigingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.

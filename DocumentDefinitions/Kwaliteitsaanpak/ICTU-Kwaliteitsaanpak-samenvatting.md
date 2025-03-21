@@ -22,8 +22,6 @@ Hieronder zijn alle maatregeldefinities uit de Kwaliteitsaanpak opgenomen. Zie d
 
 #include "Content/Maatregelen/M03/Definitie.md"
 
-#include "Content/Maatregelen/M13/Definitie.md"
-
 #include "Content/Maatregelen/M04/Definitie.md"
 
 #include "Content/Maatregelen/M07/Definitie.md"

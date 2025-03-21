@@ -19,6 +19,10 @@
 
 * Betere voorbeelden van projectrisio's en maatregelen.
 
+## Self-assessment checklist
+
+* Maak het scoren van hoofdmaatregelen onmogelijk bij maatregelen met submaatregelen.
+
 ## Alle documenten
 
 * Referenties naar NEN-ISO/IEC 25010:2011 vervangen door NEN-ISO/IEC 25010:2023.

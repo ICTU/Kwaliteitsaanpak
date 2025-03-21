@@ -2,27 +2,29 @@
 
 #include "Content/Maatregelen/M16/Definitie.md"
 
-Onder het ondersteunen van "agile werken" vallen het opvoeren van eisen, het opvoeren van logische testgevallen, het koppelen van logische testgevallen aan eisen, het bijhouden van een werkvoorraad, het plannen van iteraties en het toewijzen van eisen aan iteraties. De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als product backlog en de iteraties als sprints. Het toewijzen van eisen aan iteraties gebeurt via de sprint backlog.
+ICTU adviseert en ondersteunt voor de hieronder genoemde taken specifieke tools. Projecten gebruiken deze tools, of gelijkwaardige alternatieven.
 
-ICTU adviseert en ondersteunt voor de genoemde taken onderstaande tools. Projecten gebruiken deze tools, of gelijkwaardige alternatieven:
+| Activiteit | Tools |
+|---|---|
+| Product en sprint backlog management en agile werken | Azure DevOps of Jira |
+| Inrichten en uitvoeren van een continuous delivery pipeline | Jenkins, GitLab CI/CD (Continuous Integration, Delivery, and Deployment) of Azure DevOps |
+| Monitoren van de kwaliteit van broncode | SonarQube |
+| Versiebeheer van op te leveren producten | GitLab of Azure DevOps |
+| Release van software | Releaseserver in het ontwikkelplatform |
+| Maken van testrapportages | JUnit, Robot Framework, TestNG, of hiermee compatible tools |
+| Maken van kwaliteitsrapportages | Quality-time |
+| Controleren op aanwezigheid van bekende kwetsbaarheden in externe software | OWASP (Open Web Application Security Project) Dependency-Check en/of Dependency-Track |
+| Statische controle van de software op aanwezigheid van kwetsbare constructies | SonarQube |
+| Dynamische controle van de software op aanwezigheid van kwetsbare constructies | ZAP (Zed Attack Proxy) by Checkmarx |
+| Controleren van container images op aanwezigheid van bekende kwetsbaarheden | Trivy |
+| Testen van performance en schaalbaarheid | JMeter en Performancetestrunner |
+| Testen op toegankelijkheid van de applicatie | Axe |
+| Produceren van een "software bill of materials" (SBoM) | Tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren |
+| Opslaan van artifacten | Nexus of Harbor |
+| Registratie van incidenten bij gebruik en beheer | Jira |
+| Bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving | Ansible |
 
-1. product en sprint backlog management en agile werken: Azure DevOps of Jira,
-2. inrichten en uitvoeren van een continuous delivery pipeline: Jenkins, GitLab CI/CD (Continuous Integration, Delivery, and Deployment) of Azure DevOps,
-3. monitoren van de kwaliteit van broncode: SonarQube,
-4. versiebeheer van op te leveren producten: GitLab of Azure DevOps,
-5. release van software: Releaseserver in het ontwikkelplatform,
-6. maken van testrapportages: JUnit, Robot Framework, TestNG, of hiermee compatible tools,
-7. maken van kwaliteitsrapportages: Quality-time,
-8. controleren op aanwezigheid van bekende kwetsbaarheden in externe software: OWASP (Open Web Application Security Project) Dependency-Check en/of Dependency-Track,
-9. statische controle van de software op aanwezigheid van kwetsbare constructies: SonarQube,
-10. dynamische controle van de software op aanwezigheid van kwetsbare constructies: ZAP (Zed Attack Proxy) by Checkmarx,
-11. controleren van container images op aanwezigheid van bekende kwetsbaarheden: Trivy,
-12. testen van performance en schaalbaarheid: JMeter en Performancetestrunner,
-13. testen op toegankelijkheid van de applicatie: Axe,
-14. produceren van een "software bill of materials" (SBoM): tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren,
-15. opslaan van artifacten: Nexus of Harbor,
-16. registratie van incidenten bij gebruik en beheer: Jira, en
-17. bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving: Ansible.
+N.B. Onder het ondersteunen van "agile werken" vallen het opvoeren van eisen, het opvoeren van logische testgevallen, het koppelen van logische testgevallen aan eisen, het bijhouden van een werkvoorraad, het plannen van iteraties en het toewijzen van eisen aan iteraties. De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als product backlog en de iteraties als sprints. Het toewijzen van eisen aan iteraties gebeurt via de sprint backlog.
 
 ### Rationale
 

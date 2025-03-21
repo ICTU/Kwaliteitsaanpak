@@ -1,5 +1,9 @@
 # Versie 5.0.0, nog niet gereleased
 
+## Kwaliteitsaanpak
+
+* Maatregel M31 "Het project beschikt over actuele vastgestelde informatie" is vervallen. Alle inhoudelijke tekst is verplaatst naar maatregel M01. De titel van maatregel M01 is aangepast van "Het project levert in elke fase vastgestelde producten en informatie op" naar "Het project ontvangt en levert in elke fase vastgestelde producten en informatie".
+
 ## Alle documenten
 
 * Verwijzigingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.

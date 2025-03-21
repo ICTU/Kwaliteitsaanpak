@@ -1,5 +1,9 @@
 # Versie 5.0.0, nog niet gereleased
 
+## Kwaliteitsaanpak
+
+* In maatregel M16 "Het project gebruikt tools voor vastgestelde taken" de taak "actueel houden van externe software" toegevoegd.
+
 ## Alle documenten
 
 * Verwijzigingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.

@@ -1,7 +1,7 @@
 {
     "KWALITEITSAANPAK": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "BASE_URL": "https://ictu.github.io/Kwaliteitsaanpak",
-    "M01": "M01: Het project levert in elke fase vastgestelde producten en informatie op",
+    "M01": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
     "M02": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
     "M03": "M03: Het project zorgt dat het product traceerbaar aan eisen voldoet",
     "M04": "M04: Het project borgt de correcte werking van het product met geautomatiseerde regressietests",
@@ -23,7 +23,6 @@
     "M28": "M28: Het project voert periodiek een self-assessment uit tegen de actuele versie van de Kwaliteitsaanpak",
     "M29": "M29: ICTU organiseert voor aanvang van een project de interne dienstverlening",
     "M30": "M30: Het project identificeert, mitigeert en bewaakt risico's",
-    "M31": "M31: Het project beschikt over actuele vastgestelde informatie",
     "M32": "M32: Het project onderzoekt de kwaliteit van over te nemen software",
     "M33": "M33: ICTU organiseert periodiek een gezamenlijke self-assessment ten aanzien van de Kwaliteitsaanpak",
     "M34": "M34: Het project draagt software beheerst over",

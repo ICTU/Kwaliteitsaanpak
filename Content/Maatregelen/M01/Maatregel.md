@@ -11,6 +11,7 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 | Projectstartarchitectuur                            | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | Business impact analyse                             | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | Privacy impact assessment                           | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| Afspraken met de beheerorganisatie                  | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | Plan van aanpak: voorfase                           | ✔          |          |                | ICTU                          |
 | Beschrijving van functionele eisen                  |            | ✔        | ⚙              | opdrachtgever                 |
 | Beschrijving van niet-functionele eisen             |            | ✔        | ⚙              | opdrachtgever                 |
@@ -28,9 +29,39 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 | Release notes                                       |            |          | ✔              | ICTU                          |
 | Vrijgaveadvies                                      |            |          | ✔              | opdrachtgever                 |
 
-### Projectstartarchitectuur, business impact analyse en privacy impact assessment
+### Projectstartarchitectuur
 
-De opdrachtgevende organisatie zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analyse en privacy impact assessment. Zie [$M31$](#m31).
+Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. De PSA is een concreet en doelgericht ICT-architectuurkader waarbinnen het project moet worden uitgevoerd. In de PSA zijn de architectuurvisie, enterprise-architectuur en overige architecturen van de opdrachtgevende organisatie vertaald naar aan het product te stellen eisen. Een PSA bevat in ieder geval de volgende onderwerpen:
+
+* Een beschrijving van de doelen en ambities waaraan het project bijdraagt en invulling geeft. Dus niet de projectdoelen en -ambitie.
+* Een afbakening van het project en de context van de voorziening/oplossing die het project gaat realiseren. De PSA beschrijft niet de implementatie van de voorziening zelf (dit blijft een 'black box'), maar wel het gewenste gedrag in het grotere geheel. Denk o.a. ook aan relaties met andere projecten en generieke en specifieke diensten (services).
+* De belangrijkste functies van de door het project te realiseren voorziening, informatiestromen en koppelvlakken.
+* Een beschrijving van de belangrijkste belanghebbenden en/of betrokken ketenpartijen.
+* Een concretisering van kaders en randvoorwaarden die van toepassing zijn.
+* Beleidsuitgangspunten (drijfveren en doelen), zowel voor het specifieke project als algemeen voor de organisatie en visie (oplossingsrichting).
+* Standaarden en normen (open standaarden van het Forum Standaardisatie en domeinspecifieke standaarden).
+
+Zie [https://www.noraonline.nl/wiki/PSA](https://www.noraonline.nl/wiki/PSA).
+
+Conform NORA werkt de opdrachtgevende organisatie na de start van het project de PSA uit in een solution architectuur (SA).
+
+Zie [https://www.noraonline.nl/wiki/Solution-architectuur](https://www.noraonline.nl/wiki/Solution-architectuur).
+
+### Business impact analyse
+
+In een business impact analyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting: de risico’s die een organisatie bereid is te accepteren. Alleen de opdrachtgevende organisatie zelf kan hierover een uitspraak doen.
+
+### Privacy impact assessment
+
+In een privacy impact assessment (PIA) legt de opdrachtgevende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. De rechtmatigheid van de verwerking wordt beoordeeld. En de PIA stelt grenzen aan de gegevens die mogen worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan overdragen.
+
+Als een PIA niet nodig is, dan is een verklaring daaromtrent vereist.
+
+### Afspraken met de beheerorganisatie
+
+De opdrachtgevende organisatie heeft afspraken gemaakt met een (interne of externe) beheerorganisatie die voornemens is het beheer van de software uit te voeren. De afspraken omvatten in ieder geval de inzet van medewerkers van de beheerorganisatie tijdens de voorfase en het type beheer dat de beheerorganisatie voornemens is te gaan uitvoeren: operationeel beheer, applicatiebeheer en/of functioneel beheer.
+
+De beheerorganisatie stelt relevante informatie ter beschikking aan het project zoals beveiligingsbeleid, beheeracceptatiecriteria, documentatie van de te gebruiken voorzieningen voor bijvoorbeeld authenticatie en autorisatie en verder te hanteren kaders en richtlijnen.
 
 ### Plan van aanpak
 
@@ -160,6 +191,10 @@ De opdrachtgevende organisatie organiseert dat voor elke release de betrokken pa
 
 Het project levert bij elke release informatie aan de opdrachtgevende organisatie over nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen; zie ook [$M26$](#m26) en [$M16$](#m16). Als er issues zijn, bijvoorbeeld rondom kwaliteit of beveiliging, zijn deze voorzien van een beschrijving van de voorziene impact.
 
+### Aanvullende informatie
+
+Waar mogelijk stelt de opdrachtgevende organisatie ook andere relevante informatie ter beschikking aan het project zoals een eventueel programma van eisen, procesbeschrijvingen van te ondersteunen bedrijfsprocessen, documentatie van te koppelen systemen en verder te hanteren kaders en richtlijnen.
+
 ### Samenhang voorfaseproducten
 
 ![Projectstartarchitectuur (PSA), business impact analyse (BIA) en privacy impact assessment (PIA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), product backlog (PB), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De projectstartarchitectuur vormt input voor functionele eisen en niet-functionele eisen. De business impact analyse vormt input voor de niet-functionele eisen en informatiebeveiligingsplan. De privacy impact analyse vormt input voor de niet-functionele eisen en het informatiebeveiligingsplan. De functionele eisen vormen input voor de product backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor product backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De product backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.](relaties-tussen-producten.png "Relaties tussen producten")
@@ -170,6 +205,10 @@ Bovenstaande figuur laat de belangrijkste relaties zien tussen de verschillende 
 
 Het uniformeren van op te leveren producten biedt voordelen voor planning (het is bekend welke producten gemaakt moeten worden), voor bemensing (het is bekend welke expertise nodig is) en voor het uitwisselen van medewerkers.
 
-De voorgeschreven producten stellen de beheerorganisatie in staat om de opgeleverde software uit te rollen, te beheren en eventueel te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.
+De genoemde producten die voor start beschikbaar zijn hebben tot doel om de benodigde omvang, kosten en doorlooptijd van de voorfase te kunnen schatten. De projectstartarchitectuur vormt input voor de tijdens de voorfase te ontwikkelen producten zoals functionele en niet-functionele eisen, functioneel ontwerp en softwarearchitectuur. Een BIA en eventuele PIA zijn richtinggevend voor de in de voorfase te selecteren beveiligingsmaatregelen.
+
+Als deze producten er niet zijn, niet actueel zijn, en/of niet compleet zijn, dan moeten ze in de voorfase alsnog worden gemaakt, bijgewerkt en/of aangevuld. Dit vereist grote betrokkenheid van de opdrachtgevende organisatie, en is in de regel lastig op korte termijn te organiseren.
 
 De genoemde producten uit de voorfase hebben tot doel om enerzijds de omvang, kosten en doorlooptijd van de realisatiefase te kunnen schatten en anderzijds om de kaders voor de realisatiefase te bepalen, zodat de scope, aanpak en oplossingsrichting in grote lijnen bekend zijn.
+
+De voorgeschreven producten uit de realisatiefase stellen de beheerorganisatie in staat om de opgeleverde software uit te rollen, te beheren en eventueel te onderhouden. Daarnaast is duidelijk welke eventueel openstaande punten er nog zijn. De voorgeschreven producten bieden voldoende verantwoording richting de ontvanger voor uitgevoerde werkzaamheden.

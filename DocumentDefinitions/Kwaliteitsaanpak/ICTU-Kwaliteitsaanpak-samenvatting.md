@@ -12,8 +12,6 @@ Hieronder zijn alle maatregeldefinities uit de Kwaliteitsaanpak opgenomen. Zie d
 
 ## Producten
 
-#include "Content/Maatregelen/M31/Definitie.md"
-
 #include "Content/Maatregelen/M01/Definitie.md"
 
 #include "Content/Maatregelen/M32/Definitie.md"

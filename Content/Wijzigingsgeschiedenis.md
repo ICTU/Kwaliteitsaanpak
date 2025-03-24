@@ -2,6 +2,8 @@
 
 ## Kwaliteitsaanpak
 
+* In M07 "Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren" het produceren van een SBOM als aparte activiteit verwijderd omdat de SBOM onderdeel uitmaakt van het totale product zoals genoemd in de laatste activiteit "Oplevering van het totale product". De in M07 genoemde ondersteuning door de afdeling ISD staat ook in M18 "ICTU biedt ondersteuning voor verplicht gestelde tools". Deze ondersteuning verwijderd uit M07. De in M07 genoemde CI-tools (Jenkins, GitLab CI en Azure DevOps) en de releasevoorziening zijn ook al genoemd in M16 "Het project gebruikt tools voor vastgestelde taken" en dus verwijderd uit M07.
+* In M16 "Het project gebruikt tools voor vastgestelde taken" de opsomming van taken gecombineerd met de opsomming van tools in één tabel.
 * De titel van maatregel M23 is veranderd van "Het project zorgt voor de aanwezigheid van ervaring met de Kwaliteitsaanpak" naar "Het project zorgt voor de aanwezigheid van kennis van en ervaring met de Kwaliteitsaanpak". Aan de inhoud is toegevoegd dat nieuwe projectleden uitleg over de Kwaliteitsaanpak krijgen.
 * Maatregel M31 "Het project beschikt over actuele vastgestelde informatie" is vervallen. Alle inhoudelijke tekst is verplaatst naar maatregel M01. De titel van maatregel M01 is aangepast van "Het project levert in elke fase vastgestelde producten en informatie op" naar "Het project ontvangt en levert in elke fase vastgestelde producten en informatie".
 

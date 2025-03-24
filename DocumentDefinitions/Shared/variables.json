@@ -37,7 +37,7 @@
     "MTP": "Een mastertestplan beschrijft de aanpak van het testen van een product op hoofdlijnen, in termen van strategie, activiteiten, afhankelijkheden en de op te leveren resultaten",
     "MVP": "Een minimum viable product is een eerste versie van een product, die zo vroeg mogelijk wordt uitgerold naar de gebruikers, met net voldoende functionaliteit om het gestelde doel te behalen en niet meer dan dat",
     "NFE": "Niet-functionele eisen specificeren criteria om de kwaliteit van de software te beoordelen",
-    "PIA": "Een privacy impact assessment geeft bij een wet of project, waar persoonsgegevens van toepassing zijn, aan wat de gevolgen voor de privacy van de getroffen personen zijn [NORA]",
+    "DPIA": "Een data protection impact assessment is een instrument om vooraf de privacyrisico’s van een gegevensverwerking in kaart te brengen zodat de organisatie maatregelen kan nemen om deze risico’s te verkleinen",
     "PRA": "Een productrisicoanalyse is een analyse van het te testen product die resulteert in een overzicht van wat de meer of minder risicovolle kenmerken en delen van het te testen product zijn, zodat de grondigheid van testen hieraan gerelateerd kan worden",
     "PSA": "De projectstartarchitectuur is een concreet en doelgericht ICT-architectuurkader waarbinnen het **project** moet worden uitgevoerd [NORA]",
     "SAD": "Een software-architectuurdocument beschrijft de technische werking van een product op hoofdlijnen, in termen van softwarecomponenten, hun functies en hun onderlinge interacties en samenhang voor specifieke use cases",

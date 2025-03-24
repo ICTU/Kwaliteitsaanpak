@@ -98,6 +98,7 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
         return {
             "instructions": workbook.add_format({"text_wrap": True, "font_size": 13, "bg_color": "#B3D6C9"}),
             "measure": workbook.add_format(measure_format_options),
+            "measure_id": workbook.add_format({"underline": True, **measure_format_options}),
             "submeasure": workbook.add_format({"align": "vjustify", "indent": 1, **measure_format_options}),
             "explanation": workbook.add_format({"bg_color": "#FFFFA5", "text_wrap": True}),
             "status": workbook.add_format(status_format_options),
@@ -112,7 +113,8 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().start_element(tag, attributes)
         if tag == xmltags.DOCUMENT:
-            self.__create_checklist(str(attributes["version"]))
+            self.version = str(attributes["version"])
+            self.__create_checklist(self.version)
         elif tag == xmltags.MEASURE and not self.__in_appendix() and self.last_level_1_section_heading:
             self.__write_measure_table_sub_header()
         elif self.measure_text:
@@ -185,12 +187,16 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
         """Write a measure row."""
         measure_format_key = "submeasure" if submeasure else "measure"
         status_format_key = "substatus" if submeasure else "status"
-        self.checklist.write(
-            self.row,
-            self.MEASURE_ID_COLUMN,
-            measure_id,
-            self.formats[measure_format_key],
-        )
+        if submeasure:
+            self.checklist.write(self.row, self.MEASURE_ID_COLUMN, "", self.formats[measure_format_key])
+        else:
+            self.checklist.write_url(
+                self.row,
+                self.MEASURE_ID_COLUMN,
+                f"https://ictu.github.io/Kwaliteitsaanpak/{self.version}/ICTU-Kwaliteitsaanpak.html#{measure_id.lower()}",
+                self.formats["measure_id"],
+                string=measure_id,
+            )
         self.checklist.write(
             self.row,
             self.MEASURE_COLUMN,

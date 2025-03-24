@@ -19,6 +19,10 @@
 
 * Betere voorbeelden van projectrisio's en maatregelen.
 
+## Self-assessment checklist
+
+* De maatregelennummers linken naar de bijbehorende maatregelen in de online versie van de Kwaliteitsaanpak.
+
 ## Alle documenten
 
 * Referenties naar NEN-ISO/IEC 25010:2011 vervangen door NEN-ISO/IEC 25010:2023.

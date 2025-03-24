@@ -1,4 +1,4 @@
-# Versie 4.2.0, nog te releasen
+# Versie 4.2.0, 24 maart 2025
 
 ## Kwaliteitsaanpak
 
@@ -9,7 +9,7 @@
 
 ## Template Niet-Functionele Eisen
 
-* Nederlandstalige definities uit NEN-ISO/IEC 25010:2011 vervangen door de engelstalige definities uit NEN-ISO/IEC 25010:2023 (er is momenteel geen Nederlandse vertaling van ISO/IEC 25010:2023).
+* Nederlandstalige definities uit NEN-ISO/IEC 25010:2011 vervangen door de Engelstalige definities uit NEN-ISO/IEC 25010:2023 (er is momenteel geen Nederlandse vertaling van ISO/IEC 25010:2023).
 
 ## Template Plan van Aanpak Voorfase
 

@@ -3,6 +3,7 @@
 ## Kwaliteitsaanpak
 
 * De titel van maatregel M23 is veranderd van "Het project zorgt voor de aanwezigheid van ervaring met de Kwaliteitsaanpak" naar "Het project zorgt voor de aanwezigheid van kennis van en ervaring met de Kwaliteitsaanpak". Aan de inhoud is toegevoegd dat nieuwe projectleden uitleg over de Kwaliteitsaanpak krijgen.
+* Maatregel M31 "Het project beschikt over actuele vastgestelde informatie" is vervallen. Alle inhoudelijke tekst is verplaatst naar maatregel M01. De titel van maatregel M01 is aangepast van "Het project levert in elke fase vastgestelde producten en informatie op" naar "Het project ontvangt en levert in elke fase vastgestelde producten en informatie".
 
 ## Alle documenten
 

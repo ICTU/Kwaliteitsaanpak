@@ -154,7 +154,7 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
             if (
                 tag == xmltags.LIST_ITEM
                 and xmltags.LIST_ITEM_NUMBER in attributes
-                and self.measure_id in ("M01", "M02", "M05", "M07", "M16", "M32", "M34")
+                and self.measure_id in ("M02", "M05", "M07", "M32", "M34")
             ):
                 self.row += 1
                 self.__write_measure(
@@ -162,7 +162,7 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
                     f"{str(attributes[xmltags.LIST_ITEM_NUMBER])}. {text}",
                     submeasure=True,
                 )
-            if tag == xmltags.TABLE_CELL and self.measure_id == "M01":
+            if tag == xmltags.TABLE_CELL and self.measure_id in ("M01", "M16"):
                 # Unicode symbols are wider than other characters, messing up the table layout:
                 text = text.replace("✔", "x")
                 text = text.replace("⚙", "o")

@@ -1,8 +1,12 @@
 # Versie 5.0.0, nog niet gereleased
 
+## Kwaliteitsaanpak
+
+* De titel van maatregel M23 is veranderd van "Het project zorgt voor de aanwezigheid van ervaring met de Kwaliteitsaanpak" naar "Het project zorgt voor de aanwezigheid van kennis van en ervaring met de Kwaliteitsaanpak". Aan de inhoud is toegevoegd dat nieuwe projectleden uitleg over de Kwaliteitsaanpak krijgen.
+
 ## Alle documenten
 
-* Verwijzigingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.
+* Verwijzingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.
 
 # Versie 4.2.0, 24 maart 2025
 

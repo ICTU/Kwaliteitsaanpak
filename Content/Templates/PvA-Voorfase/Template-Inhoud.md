@@ -4,32 +4,32 @@ Om tot {projectresultaat} te komen, levert ICTU in samenwerking met {partijen} e
 
 ## Producten
 
-In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, zoals PSA, BIA en PIA, indien beschikbaar}:
+In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, zoals PSA, BIA en DPIA, indien beschikbaar}:
 
 {Onderstaande tabel geeft de gangbare producten weer, verwijder of vul aan wat er voor de situatie van toepassing is.}
 
-| Onderdeel voorfase                      | Inhoudelijk verantwoordelijk | Penvoerder   | Review en meewerken aan |
-| :-------------------------------------- | :--------------------------- | :----------- | :---------------------- |
-| Projectstartarchitectuur (PSA)          | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Business impact analyse (BIA)           | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Privacy impact assessment (PIA)         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Globaal functioneel ontwerp (GFO)       | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Interactie-ontwerp (UX)                 | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Softwarearchitectuurdocument (SAD)      | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Infrastructuurarchitectuur (IA)         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Product risico analyse (PRA)            | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Mastertestplan (op basis van PRA)       | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Detailtestplan softwarerealisatie       | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Threat & vulnerability assessment (TVA) | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Informatiebeveiligingsplan (IB-plan)    | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Niet-functionele eisen (NFE)            | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Kwaliteitsplan                          | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Product backlog                         | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Vastgesteld minimal viable product      | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Wireframe, mockup, prototype, animatie  | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Voorstel realisatiefase                 | ICTU                         | ICTU         | {reviewers}             |
-| Plan van aanpak realisatiefase          | ICTU                         | ICTU         | {reviewers}             |
-| Rapportage t.b.v. go/no-go besluit      | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Onderdeel voorfase                       | Inhoudelijk verantwoordelijk | Penvoerder   | Review en meewerken aan |
+| :--------------------------------------- | :--------------------------- | :----------- | :---------------------- |
+| Projectstartarchitectuur (PSA)           | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Business impact analyse (BIA)            | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Data protection impact assessment (DPIA) | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Globaal functioneel ontwerp (GFO)        | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Interactie-ontwerp (UX)                  | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Softwarearchitectuurdocument (SAD)       | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Infrastructuurarchitectuur (IA)          | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Product risico analyse (PRA)             | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Mastertestplan (op basis van PRA)        | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Detailtestplan softwarerealisatie        | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Threat & vulnerability assessment (TVA)  | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Informatiebeveiligingsplan (IB-plan)     | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Niet-functionele eisen (NFE)             | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Kwaliteitsplan                           | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Product backlog                          | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Vastgesteld minimal viable product       | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Wireframe, mockup, prototype, animatie   | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Voorstel realisatiefase                  | ICTU                         | ICTU         | {reviewers}             |
+| Plan van aanpak realisatiefase           | ICTU                         | ICTU         | {reviewers}             |
+| Rapportage t.b.v. go/no-go besluit       | {verantwoordelijke}          | ICTU         | {reviewers}             |
 
 De penvoerder van het product is de uitvoerende partij die verantwoordelijk is voor het opleveren van het product tijdens de voorfase; de inhoudelijk verantwoordelijke bepaalt de uiteindelijke inhoud. Zie de $KWALITEITSAANPAK$ voor een nadere toelichting op de documentatie.
 
@@ -108,7 +108,7 @@ Onderstaand is de verwachte inzet per rol van {opdrachtgevende organisatie} en {
 | Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                                          |
 | :-------------------------------------------- | :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | Expert informatiebeveiliging                  | {aantal} dagen           | Uitvoeren TVA, opstellen BIA en IB-plan, reviewen {documenten}                                                                                 |
-| Privacy-expert                                | {aantal} dagen           | Opstellen PIA, reviewen {documenten}                                                                                                           |
+| Privacy-expert                                | {aantal} dagen           | Opstellen DPIA, reviewen {documenten}                                                                                                          |
 | Infrastructuurarchitect                       | {aantal} dagen           | Opstellen infrastructuurarchitectuur, reviewen SAD, NFE en IB-plan                                                                             |
 | Architect                                     | {aantal} dagen           | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur                                                |
 | Testmanager                                   | {aantal} dagen           | Uitvoeren PRA, opstellen mastertestplan, reviewen kwaliteitsplan, detailtestplan softwarerealisatie                                            |
@@ -187,7 +187,7 @@ Onderstaand is de verwachte inzet per rol van ICTU voor de uitvoering van dit pl
 | Database administrator                 | {x} uur         | Opstellen logisch datamodel en fysiek database ontwerp, reviewen {documenten}                                                                                                                                |
 | UX-designer                            | {x} uur         | Gebruikersonderzoek, opstellen UX-richtlijnen, maken prototype {of wireframe/mockup/animatie}, reviewen {documenten}                                                                                         |
 | Informatiebeveiligingsexpert           | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                                               |
-| Privacy expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                                               |
+| Privacy-expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                                               |
 | Testmanager                            | {x} uur         | Penvoerder detailtestplan softwarerealisatie, reviewen {documenten}                                                                                                                                          |
 | Kwaliteitsmanager                      | {x} uur         | Penvoerder kwaliteitsplan, reviewen {documenten}                                                                                                                                                             |
 | Software delivery manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het Scrumteam, inhoudelijke rapportage                                           |

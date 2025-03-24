@@ -56,7 +56,7 @@ De opstellers verwerken het commentaar. Vervolgens sturen de opstellers een toel
 
 Het doel van de voorfase is tweeledig: het voorbereiden van de realisatiefase, zodat ICTU verantwoord een projectovereenkomst kan opstellen voor de realisatiefase, en het identificeren van risico’s die van toepassing zijn op de realisatiefase en het verdere verloop van het project.
 
-{opdrachtgevende organisatie} zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analyse en privacy impact assessment. Waar nodig werkt {opdrachtgevende organisatie} de informatie bij tijdens de voorfase en realisatiefase.
+{opdrachtgevende organisatie} zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analyse en data protection impact assessment. Waar nodig werkt {opdrachtgevende organisatie} de informatie bij tijdens de voorfase en realisatiefase.
 
 Dit kwaliteitsplan wordt opgesteld tijdens de voorfase, maar is tevens al deels van toepassing, in ieder geval aan het eind van de voorfase. Voor de voorfase gelden de onderstaande kwaliteitsmaatregelen.
 

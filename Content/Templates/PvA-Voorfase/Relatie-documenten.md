@@ -4,4 +4,4 @@ Dit plan van aanpak is gebaseerd op de volgende documenten {pas aan en breid uit
 
 * Projectstartarchitectuur (PSA), versie {versie},
 * Business impact analyse (BIA), versie {versie},
-* Privacy impact assessment (PIA), versie {versie}.
+* Data protection impact assessment (DPIA), versie {versie}.

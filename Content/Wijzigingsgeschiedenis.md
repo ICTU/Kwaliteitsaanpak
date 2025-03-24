@@ -10,6 +10,7 @@
 ## Alle documenten
 
 * Verwijzingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.
+* Gebruik DPIA in plaats van PIA.
 
 # Versie 4.2.0, 24 maart 2025
 

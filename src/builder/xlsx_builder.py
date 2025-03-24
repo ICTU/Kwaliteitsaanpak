@@ -203,14 +203,17 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
             measure_text,
             self.formats[measure_format_key],
         )
-        self.__write_assessment_choices(self.row, self.STATUS_COLUMN)
         if has_submeasures:
-            self.checklist.write_comment(
+            self.checklist.write_comment(self.row, self.STATUS_COLUMN, "Bepaal de status per submaatregel.")
+            self.checklist.write(
                 self.row,
                 self.STATUS_COLUMN,
-                "Tip: bepaal eerst de status per submaatregel en daarna de status van de hoofdmaatregel.",
+                "",
+                self.formats[measure_format_key],
             )
-        self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
+        else:
+            self.__write_assessment_choices(self.row, self.STATUS_COLUMN)
+            self.checklist.write(self.row, self.STATUS_COLUMN, "", self.formats[status_format_key])
         self.checklist.write(self.row, self.EXPLANATION_COLUMN, "", self.formats["explanation"])
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
@@ -258,7 +261,7 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
         self.checklist.merge_range(
             "A2:D2",
             "Gebruik de 'Status' kolom om aan te geven in hoeverre een maatregel uit de Kwaliteitsaanpak is toegepast. "
-            "Bij maatregelen met submaatregelen hoeft alleen de status van de submaatregelen te worden ingevuld.",
+            "Vul bij maatregelen met submaatregelen alleen de status van de submaatregelen in.",
             self.formats["instructions"],
         )
         self.checklist.set_row(1, 40)

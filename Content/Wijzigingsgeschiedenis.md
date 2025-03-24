@@ -22,6 +22,7 @@
 ## Self-assessment checklist
 
 * De maatregelennummers linken naar de bijbehorende maatregelen in de online versie van de Kwaliteitsaanpak.
+* Maak het scoren van hoofdmaatregelen onmogelijk bij maatregelen met submaatregelen.
 
 ## Alle documenten
 

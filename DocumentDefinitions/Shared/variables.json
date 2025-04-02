@@ -30,6 +30,7 @@
     "DTPSR": "Een detailtestplan softwarerealisatie beschrijft welke testen en testsoorten ICTU gebruikt om de kwaliteit van de projectresultaten te testen gedurende de realisatiefase van het project",
     "GFO": "Een globaal functioneel ontwerp beschrijft de functionele werking van een product op hoofdlijnen, voor specifieke use cases",
     "IA": "De infrastructuurarchitectuur beschrijft de technische infrastructuur van een product op hoofdlijnen, in termen van hardwareonderdelen en -relaties (housing, hardware, virtuals, standaard software en middleware)",
+    "IAMA": "Een impact assessment voor mensenrechten bij de inzet van algoritmes is een instrument voor discussie en besluitvorming door overheidsorganen over de ontwikkeling en/of inzet van een algoritmisch systeem",
     "IB": "Een informatiebeveiligingsplan beschrijft binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en met welke maatregelen die bescherming vorm krijgt",
     "IO": "Een interactie-ontwerp beschrijft de interacties tussen gebruikers en het systeem en de user experience daarbij",
     "KP": "Een kwaliteitsplan beschrijft de kwaliteitsmaatregelen die een project treft om een product te realiseren dat voldoet aan de kwaliteitseisen van de opdrachtgever en andere belanghebbenden en aan de kwaliteitsnormen van ICTU",

@@ -5,6 +5,7 @@ De realisatiefase is een vervolg op de voorfase van {het project}. De documenten
 * Projectstartarchitectuur (PSA), versie {versie},
 * Business impact analyse (BIA), versie {versie},
 * Data protection impact assessment (DPIA), versie {versie},
+* Impact assessment mensenrechten en algoritmes (IAMA), versie {versie},
 * Softwarearchitectuurdocument (SAD), versie {versie},
 * Infrastructuurarchitectuur (IA), versie {versie},
 * Mastertestplan, versie {versie},

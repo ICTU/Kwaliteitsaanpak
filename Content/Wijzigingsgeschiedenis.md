@@ -2,7 +2,7 @@
 
 ## Kwaliteitsaanpak
 
-* In M01 "Het project ontvangt en levert in elke fase vastgestelde producten en informatie", projectstartarchitectuur vervangen door projectarchitectuur en solution architectuur, aangezien de opdrachtgever geacht wordt, conform NORA, de projectstartarchitectuur na start van het project uit te werken in een solution architectuur.
+* In M01 "Het project ontvangt en levert in elke fase vastgestelde producten en informatie", projectstartarchitectuur vervangen door projectarchitectuur en solution architectuur, aangezien de opdrachtgever geacht wordt, conform NORA, de projectstartarchitectuur na start van het project uit te werken in een solution architectuur. Tevens IAMA als te ontvangen informatie toegevoegd.
 * In M07 "Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren" het produceren van een SBOM als aparte activiteit verwijderd omdat de SBOM onderdeel uitmaakt van het totale product zoals genoemd in de laatste activiteit "Oplevering van het totale product". De in M07 genoemde ondersteuning door de afdeling ISD staat ook in M18 "ICTU biedt ondersteuning voor verplicht gestelde tools". Deze ondersteuning verwijderd uit M07. De in M07 genoemde CI-tools (Jenkins, GitLab CI en Azure DevOps) en de releasevoorziening zijn ook al genoemd in M16 "Het project gebruikt tools voor vastgestelde taken" en dus verwijderd uit M07.
 * Maatregel M13 "Het project gebruikt ISO-25010 voor de specificatie van productkwaliteitseisen" is vervallen. Het gebruik van ISO-25010 voor de specificatie van productkwaliteitseisen staat al genoemd in M01 "Het project levert in elke fase vastgestelde producten en informatie op".
 * In M16 "Het project gebruikt tools voor vastgestelde taken" de opsomming van taken gecombineerd met de opsomming van tools in één tabel.
@@ -13,6 +13,7 @@
 
 * Verwijzingen naar OpenVAS verwijderd. Te weinig projecten leveren infrastructuur op om OpenVAS als verplicht tool voor te schrijven.
 * Gebruik DPIA in plaats van PIA.
+* IAMA toegevoegd waar ook BIA en DPIA worden genoemd.
 
 # Versie 4.2.0, 24 maart 2025
 

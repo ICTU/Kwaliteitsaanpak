@@ -13,6 +13,7 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Projectstartarchitectuur (PSA)           | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Business impact analyse (BIA)            | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Data protection impact assessment (DPIA) | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Impact assessment mensenrechten en algoritmes (IAMA) | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Globaal functioneel ontwerp (GFO)        | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Interactie-ontwerp (UX)                  | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Softwarearchitectuurdocument (SAD)       | {verantwoordelijke}          | ICTU         | {reviewers}             |

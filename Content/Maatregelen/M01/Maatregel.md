@@ -8,7 +8,7 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 
 | Product                                             | Voor start | Voorfase | Realisatiefase | Verantwoordelijke organisatie |
 |-----------------------------------------------------|------------|----------|----------------|-------------------------------|
-| Projectstartarchitectuur                            | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| Projectstartarchitectuur en solution architectuur   | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | Business impact analyse                             | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | Data protection impact assessment                   | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | Afspraken met de beheerorganisatie                  | ✔          | ⚙        | ⚙              | opdrachtgever                 |
@@ -29,7 +29,7 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 | Release notes                                       |            |          | ✔              | ICTU                          |
 | Vrijgaveadvies                                      |            |          | ✔              | opdrachtgever                 |
 
-### Projectstartarchitectuur
+### Projectstartarchitectuur en solution architectuur
 
 Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. De PSA is een concreet en doelgericht ICT-architectuurkader waarbinnen het project moet worden uitgevoerd. In de PSA zijn de architectuurvisie, enterprise-architectuur en overige architecturen van de opdrachtgevende organisatie vertaald naar aan het product te stellen eisen. Een PSA bevat in ieder geval de volgende onderwerpen:
 

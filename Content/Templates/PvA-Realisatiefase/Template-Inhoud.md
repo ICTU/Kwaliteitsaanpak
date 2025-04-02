@@ -124,7 +124,7 @@ Onderstaand is de verwachte inzet van per rol van {opdrachtgevende organisatie} 
 | Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur, opstellen infrastructuurarchitectuur (IA)                                 |
 | Testmanager                                   | {aantal} dagen           | Testen van nieuwe softwarereleases voordat deze voor gebruik worden vrijgegeven                                              |
 | Expert informatiebeveiliging                  | {aantal} dagen           | Bewaken en onderhouden BIA, opstellen TVA en IB-plan                                                                         |
-| Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden PIA                                                                                                   |
+| Privacy-expert                                | {aantal} dagen           | Bewaken en onderhouden DPIA                                                                                                   |
 | Diverse inhoudelijk deskundigen               | {aantal} dagen           | Inbrengen domeinexpertise en vertegenwoordiging van (eind)gebruikers en belanghebbenden                                      |
 | Technisch beheerder beheerorganisatie         | {aantal} dagen           | Leveren en beheer acceptatie- en productieomgeving                                                                           |
 | Functioneel beheerder                         | {aantal} dagen           | Functioneel beheer                                                                                                           |

@@ -4,7 +4,7 @@ Het mastertestplan is gebaseerd op de volgende documenten, die beschrijven welke
 
 * Projectstartarchitectuur (PSA), {documentreferentie},
 * Business impact analyse (BIA), {documentreferentie},
-* Privacy impact assessment (PIA), {documentreferentie},
+* Data protection impact assessment (DPIA), {documentreferentie},
 * Softwarearchitectuurdocument (SAD), {documentreferentie},
 * Infrastructuurarchitectuur (IA), {documentreferentie},
 * Informatiebeveiligingsplan (IB-plan), {documentreferentie},

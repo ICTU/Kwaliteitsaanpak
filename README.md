@@ -49,4 +49,4 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
 
 ## Point of contact
 
-Points of contact for the ICTU Kwaliteitsaanpak Softwareontwikkeling and this repository are [Auke Bloembergen](https://github.com/aukebloembergen) and [Frank Niessink](https://github.com/fniessink).
+Points of contact for the ICTU Kwaliteitsaanpak Softwareontwikkeling and this repository are [Birgitte Plasse](https://github.com/bipla2) and [Frank Niessink](https://github.com/fniessink).

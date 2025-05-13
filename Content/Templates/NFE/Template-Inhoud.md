@@ -156,7 +156,7 @@ Capability of a product to be operational and accessible when required for use.
 
 ## Fault tolerance
 
-Capability of a product to operate as intented despite the presence of hardware or software faults.
+Capability of a product to operate as intended despite the presence of hardware or software faults.
 
 #include "Content/Templates/NFE/Eisentabel.md"
 

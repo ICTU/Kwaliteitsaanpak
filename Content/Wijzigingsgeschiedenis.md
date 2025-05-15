@@ -1,4 +1,4 @@
-# Versie 5.0.0, nog niet gereleased
+# Versie 5.0.0, 15 mei 2025
 
 ## Kwaliteitsaanpak
 

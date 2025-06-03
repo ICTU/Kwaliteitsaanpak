@@ -6,7 +6,7 @@
 
 ## Template Detailtestplan
 
-* In paragrafen 6.1 en 6.2 ontbrak een bullet bij "Gebruikerskwaliteitsrapport".
+* In paragrafen 6.1 en 6.2 ontbrak een bullet bij "Gebruikskwaliteitsrapport".
 * Spelfout in instructie in paragraaf 3.2 opgelost.
 
 ## Template Plan van Aanpak Voorfase

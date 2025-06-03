@@ -14,6 +14,16 @@ class ConverterTestCase(unittest.TestCase):
     def setUp(self):
         self.builder = Mock(spec=Builder)
 
+    def test_empty_document(self):
+        """Test an empty document."""
+        tree = xml.etree.ElementTree.ElementTree()
+        Converter(tree).convert(self.builder)
+        self.builder.start_document.assert_called_once()
+        self.builder.accept_element.assert_not_called()
+        self.builder.start_element.assert_not_called()
+        self.builder.end_element.assert_not_called()
+        self.builder.end_document.assert_called_once()
+
     def test_convert_element(self):
         """Test that the builder is called for each element."""
         tree = xml.etree.ElementTree.ElementTree(xml.etree.ElementTree.XML("<document/>"))

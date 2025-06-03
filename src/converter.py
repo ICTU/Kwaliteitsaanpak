@@ -1,10 +1,8 @@
 """Converter."""
 
 from xml.etree.ElementTree import Element, ElementTree
-from typing import cast
 
 from builder.builder import Builder
-from custom_types import TreeBuilderAttributes
 
 
 class Converter:
@@ -16,14 +14,15 @@ class Converter:
     def convert(self, builder: Builder) -> None:
         """Convert the XML using the builder."""
         builder.start_document()
-        self.convert_element(self.root, builder)
+        if self.root is not None:
+            self.convert_element(self.root, builder)
         builder.end_document()
 
     def convert_element(self, element: Element, builder: Builder, parent: Element | None = None) -> None:
         """Recursively convert the element using the builder."""
         if not builder.accept_element(element.tag):
             return
-        attributes = cast(TreeBuilderAttributes, element.attrib)
+        attributes = element.attrib
         builder.start_element(element.tag, attributes)
         if element.text:
             builder.text(element.tag, element.text, attributes)

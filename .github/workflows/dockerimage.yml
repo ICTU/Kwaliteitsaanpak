@@ -3,17 +3,17 @@ name: Generate Kwaliteitsaanpak
 on: [push]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: read
+      pages: write
     steps:
-    - uses: actions/checkout@v4
-    - name: Generate artifacts
-      run: docker compose up
-    - name: Archive artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: dist
-        path: docs/wip
+      - uses: actions/checkout@v4
+      - name: Generate artifacts
+        run: docker compose up
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: docs/wip

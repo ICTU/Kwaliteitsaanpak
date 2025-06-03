@@ -1,3 +1,9 @@
+# Versie 5.0.1, nog te releasen
+
+## GitHub pages
+
+* De linkjes naar het Template Detailtestplan waren kapot.
+
 # Versie 5.0.0, 15 mei 2025
 
 ## Kwaliteitsaanpak

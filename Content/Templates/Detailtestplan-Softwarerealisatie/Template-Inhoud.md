@@ -87,7 +87,7 @@ Conform BIO-12.1.4 zijn productieomgevingen gescheiden van testomgevingen en wor
 * **Performancetestomgeving:** Omgeving gebruikt voor performancetesten;
 * **Securitytestomgeving:** Gebruikt voor security- en penetratietesten;
 * **Middleware-omgevingen:** Deze testomgevingen worden gebruikt om besturingssystemen, databases, patches en andere 3rd party componenten te testen voor uitrol naar productie;
-* **GAT-omgeving:** Op deze omgeving worden de gebruikersacceptatietesten uitgevoerd, inclusief usabilitytestsen.
+* **GAT-omgeving:** Op deze omgeving worden de gebruikersacceptatietesten uitgevoerd, inclusief usabilitytesten.
 
 ICTU beschikt over een private cloud waarin deze omgevingen allemaal kunnen worden ingericht. In welke mate dit productie-like kan, is afhankelijk van de karakteristieken van de productie-omgeving en het beschikbare budget.
 

@@ -331,7 +331,7 @@ De volgende externe testen, toetsen en certificeringen zijn gepland:
 | Toegankelijkheidstoets  | {Leverancier}                               | {Sprint/Kwartaal} |
 | {Certificering}         | {Leverancier}                               | {Sprint/Kwartaal} |
 
-Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld NEN-ISO/IEC 27001:2017 compliancy.
+Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld NEN-ISO/IEC 27001 compliancy.
 
 ## Projectspecifieke maatregelen
 

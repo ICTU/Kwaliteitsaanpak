@@ -4,6 +4,11 @@
 
 * Verwijzing naar de wijzigingsgeschiedenis in PDF-formaat in hoofdstuk verwijderd. De PDF-versie wordt niet meer gemaakt en de link werkt dus niet.
 
+## Template Detailtestplan
+
+* In paragrafen 6.1 en 6.2 ontbrak een bullet bij "Gebruikerskwaliteitsrapport".
+* Spelfout in instructie in paragraaf 3.2 opgelost.
+
 ## GitHub pages
 
 * De linkjes naar het Template Detailtestplan waren kapot.

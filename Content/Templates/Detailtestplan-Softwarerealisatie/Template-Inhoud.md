@@ -8,7 +8,7 @@ Dit hoofdstuk beschrijft welke projecten, systemen, componenten, releases, use c
 
 ## Buiten scope
 
-{Beschrijf hier relevante projecten, systemen, releases, versies en user stories die juist buitne de opdracht vallen.}
+{Beschrijf hier relevante projecten, systemen, releases, versies en user stories die juist buiten de opdracht vallen.}
 
 # Testaanpak
 
@@ -127,7 +127,7 @@ De resultaten van de testuitvoer worden gedeeld met de software delivery manager
 * **ART-resultaten:** Zichtbaar in Jenkins als resultaat van de Jenkins job.
 * **Performancetestrapport:** Op wekelijkse basis, met hierin een overzicht van de testresultaten van de performancetest, de performancetrend, een analyse en eventueel advies.
 * **Securitytestrapport:** De securitytesten worden uitgevoerd door een gespecialiseerde organisatie. Deze organisatie stelt ook het securityeindrapport op. Hierin staat een overzicht van de kwetsbaarheden die zijn ontdekt tijdens het testen, en een advies hoe deze te aan te pakken.
-  **Gebruikskwaliteitsrapport:** In dit rapport is vastgelegd in welke mate de software aan de eisen ten aanzien van gebruikskwaliteit voldoet.
+* **Gebruikskwaliteitsrapport:** In dit rapport is vastgelegd in welke mate de software aan de eisen ten aanzien van gebruikskwaliteit voldoet.
 * **Toegankelijkheidstestrapport:** In dit rapport is vastgelegd in welke mate de software aan de toegankelijkheidseisen voldoet, waaronder de wettelijk verplichte Web Content Accessibility Guidelines.
 
 ## Externe testrapportages
@@ -144,7 +144,7 @@ De volgende externe testrapportages zijn onderdeel van elke release:
   + Wat het resultaat van de test was (geslaagd/gefaald/overgeslagen).
 * **Performancetestrapport:** Een overzicht van de testresultaten van de performancetest, de performancetrend, een analyse en eventueel advies.
 * **Securitytestrapport:** De securitytesten worden uitgevoerd door een gespecialiseerde organisatie. Deze organisatie stelt ook het securityeindrapport op. Hierin staat een overzicht van de kwetsbaarheden die zijn ontdekt tijdens het testen, en een advies hoe deze te aan te pakken.
-  **Gebruikskwaliteitsrapport:** In dit rapport is vastgelegd in welke mate de software aan de eisen ten aanzien van gebruikskwaliteit voldoet.
+* **Gebruikskwaliteitsrapport:** In dit rapport is vastgelegd in welke mate de software aan de eisen ten aanzien van gebruikskwaliteit voldoet.
 * **Toegankelijkheidstestrapport:** In dit rapport is vastgelegd in welke mate de software aan de toegankelijkheidseisen voldoet, waaronder de wettelijk verplichte Web Content Accessibility Guidelines.
 
 ## Bevindingenprocedure

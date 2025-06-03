@@ -1,4 +1,4 @@
-# Versie 5.0.1, nog te releasen
+# Versie 5.0.1, 3 juni 2025
 
 ## Kwaliteitsaanpak
 
@@ -11,11 +11,11 @@
 
 ## Template Plan van Aanpak Voorfase
 
-* Verwijzingen in de leeswijzer gefixt.
+* Verwijzingen in de leeswijzer bijgewerkt.
 
 ## Template Plan van Aanpak Realisatiefase
 
-* Verwijzingen in de leeswijzer gefixt.
+* Verwijzingen in de leeswijzer bijgewerkt.
 
 ## Alle templates
 

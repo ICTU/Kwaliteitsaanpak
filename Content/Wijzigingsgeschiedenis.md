@@ -1,5 +1,9 @@
 # Versie 5.0.1, nog te releasen
 
+## Kwaliteitsaanpak
+
+* Verwijzing naar de wijzigingsgeschiedenis in PDF-formaat in hoofdstuk verwijderd. De PDF-versie wordt niet meer gemaakt en de link werkt dus niet.
+
 ## GitHub pages
 
 * De linkjes naar het Template Detailtestplan waren kapot.

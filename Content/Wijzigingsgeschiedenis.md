@@ -9,6 +9,14 @@
 * In paragrafen 6.1 en 6.2 ontbrak een bullet bij "Gebruikerskwaliteitsrapport".
 * Spelfout in instructie in paragraaf 3.2 opgelost.
 
+## Template Plan van Aanpak Voorfase
+
+* Verwijzingen in de leeswijzer gefixt.
+
+## Template Plan van Aanpak Realisatiefase
+
+* Verwijzingen in de leeswijzer gefixt.
+
 ## Alle templates
 
 * Standaard kaders bijgewerkt naar actuele versies: NEN-ISO/IEC 27001:2023 (was 2017), NEN-ISO/IEC 27002:2022 (was 2017), NEN 7510-2:2024 (was NEN 7510:2017) en Wbni 2024 (was 2018).

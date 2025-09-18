@@ -58,6 +58,12 @@
                 "docs/$VERSIE$"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-ictu.pptx"
+        },
+        "json": {
+            "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist-Quality-time.json",
+            "OutputPaths": [
+                "docs/$VERSIE$"
+            ]
         }
     },
     "VariablesFiles": [

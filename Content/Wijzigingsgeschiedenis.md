@@ -4,6 +4,10 @@
 
 * Spelfout in "Compatibility" opgelost.
 
+## Self-assessment checklist
+
+* Versie in Quality-time JSON-formaat toegevoegd die kan worden geïmporteerd in Quality-time.
+
 # Versie 5.0.1, 3 juni 2025
 
 ## Kwaliteitsaanpak

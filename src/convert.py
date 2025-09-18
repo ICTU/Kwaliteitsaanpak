@@ -20,6 +20,7 @@ from converter import Converter
 from builder import xlsx_builder as xlsx_builder_module
 from builder.docx_builder import DocxBuilder
 from builder.html_builder import HTMLBuilder
+from builder.json_builder import JSONBuilder
 from builder.pptx_builder import PptxBuilder
 from markdown_converter import MarkdownConverter
 from markdown_syntax import VARIABLE_USE_PATTERN
@@ -45,6 +46,8 @@ def convert(settings_filename: str, version: str) -> None:
         if "html" in settings["OutputFormats"]:
             copy_files(settings, "html")
             convert_html(converter, settings)
+        if "json" in settings["OutputFormats"]:
+            convert_json(converter, settings)
     if "zip" in settings["OutputFormats"]:
         zip_files(settings)
 
@@ -150,6 +153,15 @@ def convert_xlsx(converter, settings: Settings) -> None:
     xlsx_builder = getattr(xlsx_builder_module, xlsx_builder_class_name)(xlsx_build_filename)
     converter.convert(xlsx_builder)
     copy_output(xlsx_build_filename, settings, "xlsx")
+
+
+def convert_json(converter, settings: Settings) -> None:
+    """Convert the XML to JSON."""
+    build_path = get_build_path(settings)
+    json_build_filename = build_path / settings["OutputFormats"]["json"]["OutputFile"]
+    json_builder = JSONBuilder(json_build_filename)
+    converter.convert(json_builder)
+    copy_output(json_build_filename, settings, "json")
 
 
 def copy_output(build_filename: pathlib.Path, settings: Settings, output_format: str):

@@ -1,3 +1,9 @@
+# Work-in-progress
+
+## Template Niet-functionele Eisen
+
+* Spelfout in "Compatibility" opgelost.
+
 # Versie 5.0.1, 3 juni 2025
 
 ## Kwaliteitsaanpak

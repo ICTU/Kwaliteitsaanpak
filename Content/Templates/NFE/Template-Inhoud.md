@@ -44,7 +44,7 @@ Capability of a product to meet requirements for the maximum limits of a product
 
 #include "Content/Templates/NFE/Eisentabel.md"
 
-# Compatability
+# Compatibility
 
 Capability of a product to exchange information with other products, and/or to perform its required functions while sharing the same common environment and resources.
 

@@ -6,6 +6,7 @@
                 "docs/$VERSIE$/*.css",
                 "docs/$VERSIE$/*.docx",
                 "docs/$VERSIE$/*.html",
+                "docs/$VERSIE$/*.json",
                 "docs/$VERSIE$/*.png",
                 "docs/$VERSIE$/*.pptx",
                 "docs/$VERSIE$/*.xlsx"

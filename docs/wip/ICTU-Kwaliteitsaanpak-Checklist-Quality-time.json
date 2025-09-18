@@ -1,0 +1,1129 @@
+{
+    "subjects": {
+        "56736485-e5ad-493d-bde1-d0a9c43173eb": {
+            "type": "software",
+            "name": "Producten",
+            "metrics": {
+                "17710134-176d-46e5-8637-9231dba30f67": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 1. Business impact analyse",
+                    "sources": {
+                        "172a4634-ba33-4344-9958-678e935061d4": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "fd5e3211-19a7-4d37-aa18-7891135d9bec": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 2. Data protection impact assessment",
+                    "sources": {
+                        "8c2edd1c-d08f-4d74-b6b1-6d3ef0b05648": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "7f5ffef6-ead5-46a4-903b-14bd27e6ab4a": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 3. Impact assessment mensenrechten en algoritmes",
+                    "sources": {
+                        "f7eade60-e753-4497-888f-c1f254373dea": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "b4207304-f2c2-4202-b587-5b473f2dd6b0": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 4. Projectstartarchitectuur en solution architectuur ",
+                    "sources": {
+                        "2119218b-8af7-4fcf-a5e4-503f5eda82c6": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "eb7a4f23-1f12-4b4d-9f54-1e2c645b2855": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 5. Afspraken met de beheerorganisatie ",
+                    "sources": {
+                        "4b45f37a-dc14-4988-a189-0bf388419222": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "87afdd6b-925d-4789-9d60-74bfd02012f4": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 6. Plan van aanpak: voorfase ",
+                    "sources": {
+                        "65f379ed-4b60-4eac-b002-7a9055e40618": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "48ebd994-84b2-412c-9964-ad20b3da21d2": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 7. Beschrijving van functionele eisen ",
+                    "sources": {
+                        "265447f4-8cd3-4871-aaa7-42427140db73": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "4fc022d6-fd51-46cf-8ed9-053d99911882": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 8. Beschrijving van niet-functionele eisen ",
+                    "sources": {
+                        "1f4513fc-c7b4-484a-9d56-71297dc0cde2": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "8120e82c-449c-4222-ad9a-320645ee740a": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 9. Product backlog",
+                    "sources": {
+                        "e6c0e535-37f9-43a0-beef-7651b8075784": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "5606752d-ec15-4f40-a777-0c29e37ad5ca": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 10. Ontwerp- en architectuurdocumentatie",
+                    "sources": {
+                        "9c3831ff-7f9e-44dc-bc4a-320ded3ef935": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "c9ec7e38-862b-4ff3-98b2-fad0f6dee639": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 11. Mastertestplan",
+                    "sources": {
+                        "b3dc5599-7536-4a1b-969d-1cbc0b700a48": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "a99de8ee-0484-4a9c-b4fc-cb8a5d8350ff": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 12. Detailtestplannen",
+                    "sources": {
+                        "0b817292-a88c-48b7-81c4-b387f4193b4d": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "91d7aec1-4109-4f09-851c-ed13be8ccdc1": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 13. Informatiebeveiligingsplan",
+                    "sources": {
+                        "12a9ae3e-19d0-4fc1-8437-b1635b4b9bb3": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "9b9fe1d0-6c08-4b18-ba53-f565718ad553": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 14. Kwaliteitsplan",
+                    "sources": {
+                        "166773af-e9bb-4edb-a708-c7ebba5ba8e5": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "89129aa0-5bbc-4401-ba7d-06e0db7582f6": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 15. Plan van aanpak: realisatiefase",
+                    "sources": {
+                        "3261f6ce-da61-415c-ad53-81471b76ff42": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "897b3199-68e4-4f93-9e61-aead1b5d5a4a": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 16. Deploybare versie van de software",
+                    "sources": {
+                        "c5f6f2ec-0a2c-4df7-a4db-a3c8a496b0c9": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "44ce6c62-a1a5-4c37-beec-531bd0ca969f": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 17. Testrapportages",
+                    "sources": {
+                        "32f99ff2-333a-470a-8b4d-d2438a0f4c45": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "5cd914da-c4c2-4142-ac26-e8ddbf612c47": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 18. Documentatie voor deployment en operationeel beheer",
+                    "sources": {
+                        "9f90b0e2-b08d-420e-b2d1-bce757808dde": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "80208a7f-11ae-47d4-a7da-e21c4c503079": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 19. Software bill of materials",
+                    "sources": {
+                        "14e0460b-1c32-470d-80b0-3c6873e92172": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "9f2980d7-cd65-4185-8f66-1cc5a0bce96f": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 20. Release notes",
+                    "sources": {
+                        "587429fc-52c9-442f-960c-cd9af7a4148d": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "18298bd3-b3c8-4766-ae56-ce7233e69eaa": {
+                    "type": "compliance",
+                    "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie - 21. Vrijgaveadvies",
+                    "sources": {
+                        "587b4f58-a3fa-4b20-837c-dc8b2f9c2e44": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "5bba31ac-f844-430a-9fb5-e254ef60d931": {
+                    "type": "compliance",
+                    "name": "M32: Het project onderzoekt de kwaliteit van over te nemen software - 1. Een rapportage met tenminste de bevindingen, risico's voor opdrachtgevende organisatie en ICTU, en mitigerende maatregelen",
+                    "sources": {
+                        "a5665d25-d8fe-4a84-b2eb-31594e57fb66": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "51c1e5e6-fee5-4e26-be64-b7ccaec57a0f": {
+                    "type": "compliance",
+                    "name": "M32: Het project onderzoekt de kwaliteit van over te nemen software - 2. Een transitieplan dat de activiteiten beschrijft die nodig zijn om de software af te bouwen of te herbouwen en te onderhouden",
+                    "sources": {
+                        "01120900-222a-4bae-904b-9b72a4d187e5": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "1ca99453-b02c-4cef-8054-da8b22ad0f5c": {
+                    "type": "compliance",
+                    "name": "M32: Het project onderzoekt de kwaliteit van over te nemen software - 3. Als er significante technische schuld aanwezig is in de bestaande software: een plan voor het aflossen van deze schuld",
+                    "sources": {
+                        "c8c0162b-e4eb-4a8f-af40-3f2568d4f245": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "6e0157d6-81e3-4ae0-bee9-da0a84b07623": {
+                    "type": "compliance",
+                    "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet - 1. Tijdens de voorfase: het project reviewt de deliverables periodiek",
+                    "sources": {
+                        "f5333538-8965-4d81-868d-089a328b9628": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "2d901646-5ee6-4422-b56d-33488692b922": {
+                    "type": "compliance",
+                    "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet - 2. Tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd de kwaliteit van de software",
+                    "sources": {
+                        "297b9681-f7b5-47f9-bb2c-45c12f5221e5": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "f3881e36-df6f-432d-89e0-214eb273a2d6": {
+                    "type": "compliance",
+                    "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet - 3. Als operationeel beheer onderdeel is van de dienstverlening tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd het gedrag van de software in gebruik en beheer",
+                    "sources": {
+                        "8518d3a0-0209-420c-9454-03630b26011c": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "fe3d85b7-558a-46c5-9b01-7a7f2fbf65b2": {
+                    "type": "compliance",
+                    "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet - 4. Tijdens de realisatiefase: het project evalueert periodiek en handmatig de kwaliteitseigenschappen van de software die niet geautomatiseerd kunnen worden gemeten",
+                    "sources": {
+                        "4be69305-8fae-4322-9b47-8118b975e408": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "b4547e9f-5d70-410f-84a7-15bc02864823": {
+                    "type": "compliance",
+                    "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet - 5. Tijdens de realisatiefase: het project actualiseert en reviewt periodiek de documentatie",
+                    "sources": {
+                        "ddbdc202-72b9-4e32-9896-2de1af10a296": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "85c929a3-20af-4201-894a-5616e4875b77": {
+                    "type": "compliance",
+                    "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet - 6. Indien nodig: de kwaliteitsmanager escaleert het langdurig niet halen van de kwaliteitsnormen",
+                    "sources": {
+                        "1bdbfde4-1d2d-4f6d-80fa-66da580734f7": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "70f82a1f-7bd4-4ca3-9340-d26f5379f6a9": {
+                    "type": "compliance",
+                    "name": "M03: Het project zorgt dat het product traceerbaar aan eisen voldoet",
+                    "sources": {
+                        "4f2e093d-1d2f-4e02-b6b3-5ae480b2b295": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "6ea70172-e8cd-4957-8b5a-e3a49a0b16d8": {
+                    "type": "compliance",
+                    "name": "M04: Het project borgt de correcte werking van het product met geautomatiseerde regressietests",
+                    "sources": {
+                        "81bd4b27-ee9a-4d22-948e-415cea4fd0e4": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "83d810ae-1159-4304-a472-f3a45667976a": {
+                    "type": "compliance",
+                    "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren - 1. Bouw van de software",
+                    "sources": {
+                        "f707f9ae-a515-471a-9e16-701a8e088c7d": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "86b25ecc-7bbd-40b1-9638-92d95f519d29": {
+                    "type": "compliance",
+                    "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren - 2. Unit tests",
+                    "sources": {
+                        "2404d84b-bc27-48a0-8c4b-854120f5a91b": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "7a10b918-908f-4449-93d1-daf99a02eb6e": {
+                    "type": "compliance",
+                    "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren - 3. Regressietests",
+                    "sources": {
+                        "2bf6ef52-7e85-4df5-9968-57cbedd5e1e9": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "64664adc-f455-4f10-8272-48df4eb84f70": {
+                    "type": "compliance",
+                    "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren - 4. Beveiligingstests",
+                    "sources": {
+                        "0781a36c-9ed4-43f3-bb81-9514fe25e701": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "55f568f1-f736-4d1d-9fdb-ef7bebadc07e": {
+                    "type": "compliance",
+                    "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren - 5. Performancetests",
+                    "sources": {
+                        "c035adab-dad6-41c0-a8a2-486f74e57375": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "eb003e23-aace-4d16-a682-ac54bb234378": {
+                    "type": "compliance",
+                    "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren - 6. Toegankelijkheidstests",
+                    "sources": {
+                        "e97a5167-1bbe-4962-ae08-22bd36954e1b": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "51aebc7e-bff0-4558-9e92-c0d1de5433fc": {
+                    "type": "compliance",
+                    "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren - 7. Broncodekwaliteitscontroles",
+                    "sources": {
+                        "33a3d34f-aed7-4805-b933-8dae6d0e2b53": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "0f552117-c852-4f08-9dcf-ea8705de7081": {
+                    "type": "compliance",
+                    "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren - 8. Installatie van de software in test, acceptatie en/of productieomgevingen",
+                    "sources": {
+                        "a29ce51d-8770-4565-846e-5876399b6dff": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "c881b177-8954-408d-b2b1-35f2d272cc25": {
+                    "type": "compliance",
+                    "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren - 9. Oplevering van het totale product, dus inclusief alle deliverables, in de vorm zoals bruikbaar voor en afgesproken met de opdrachtgevende organisatie",
+                    "sources": {
+                        "c77d9cfb-ba34-46ce-9b54-386651c04f73": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "6f03916d-1b44-4bf0-9140-fc83b57279d0": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 1. Product en sprint backlog management en agile werken",
+                    "sources": {
+                        "400369a6-cb8c-45ed-9a5d-4107d243836e": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "c7766eef-ec42-4503-bc01-90a188d7ddf6": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 2. Inrichten en uitvoeren van een continuous delivery pipeline",
+                    "sources": {
+                        "746a1f38-b43b-4f69-9e05-1da1548bfa98": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "6cee77b4-defd-4fb3-b9ed-ab9174e28756": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 3. Monitoren van de kwaliteit van broncode",
+                    "sources": {
+                        "d4d87f12-54ba-4a03-acd0-01cd3ccef5d1": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "8972b7dc-5b44-41bd-811b-97597c871e55": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 4. Versiebeheer van op te leveren producten",
+                    "sources": {
+                        "315cc145-fce4-40c2-9f06-4603c2b31993": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "2048f0b6-dcc1-4fd9-973a-2ed1474ed634": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 5. Release van software",
+                    "sources": {
+                        "afe9331c-414c-49c7-a088-7a2fda43766c": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "42d9612f-5600-4a47-adbb-fc4b5ba9289e": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 6. Maken van testrapportages",
+                    "sources": {
+                        "b125b230-48fb-410a-b8da-be9305085a4f": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "46b63819-e171-4fec-9262-b9f23d686749": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 7. Maken van kwaliteitsrapportages",
+                    "sources": {
+                        "04272206-b114-4dd2-b4e1-0377ffa46bd2": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "7e8ff4aa-3c04-40ad-a6f8-e91e49a5e982": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 8. Controleren op aanwezigheid van bekende kwetsbaarheden in externe software",
+                    "sources": {
+                        "60accc8a-31f9-4a38-b608-d52dfde2c2a1": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "ab2fed1a-efb6-4318-8a4c-d395dc0c6c6b": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 9. Statische controle van de software op aanwezigheid van kwetsbare constructies",
+                    "sources": {
+                        "b69ff42e-36d2-4fd4-b1c9-2c01b77d523e": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "0ba7bc74-0954-4187-8dab-58ab3d91f924": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 10. Dynamische controle van de software op aanwezigheid van kwetsbare constructies",
+                    "sources": {
+                        "296fc343-2972-4692-b143-5dd9f8e53a60": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "85432403-7829-4127-9725-7eada85f4bc9": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 11. Controleren van container images op aanwezigheid van bekende kwetsbaarheden",
+                    "sources": {
+                        "3857794f-7501-44e7-9b16-c61537f9ced3": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "0cb094fe-9800-49c1-9b94-eee5e96badcd": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 12. Testen van performance en schaalbaarheid",
+                    "sources": {
+                        "6c290b77-643f-4d35-a297-3b5fbbc98cae": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "2bd3c684-6dfb-4428-87f6-000ead3104ce": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 13. Testen op toegankelijkheid van de applicatie",
+                    "sources": {
+                        "8a1881e4-9a63-4601-b7bd-297783686a78": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "f11313ab-2743-4630-907d-929e312a8fdd": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 14. Produceren van een \"software bill of materials\" (SBoM)",
+                    "sources": {
+                        "b34f103c-9e90-416f-9172-1c8accc61dcd": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "af1d6c27-c577-436f-8e3c-ac52cd973431": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 15. Opslaan van artifacten",
+                    "sources": {
+                        "a72bdfe4-19a5-4e01-8c3d-f26abc06e974": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "5641c640-dd1c-4acb-88e6-644deceee4e8": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 16. Registratie van incidenten bij gebruik en beheer",
+                    "sources": {
+                        "b2ebaad8-b2eb-46fe-818d-6240a86c8f04": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "83d21fbf-ab4d-46d4-8677-ba854132ff52": {
+                    "type": "compliance",
+                    "name": "M16: Het project gebruikt tools voor vastgestelde taken - 17. Bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving",
+                    "sources": {
+                        "ee61dce2-ccf4-4166-8556-fde6feaf21d4": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "267f76b7-8e2a-4bbd-8d82-6266fa03f770": {
+                    "type": "compliance",
+                    "name": "M08: Het project maakt technische schuld inzichtelijk en lost deze planmatig op",
+                    "sources": {
+                        "96d2c9fb-4305-464b-ae85-94b7eddea35d": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "00102cdf-0138-42f1-8ca8-b66ed7c154fa": {
+                    "type": "compliance",
+                    "name": "M26: Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen",
+                    "sources": {
+                        "4fb9017c-d7b3-4a89-b68d-1a98a3a837f5": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                }
+            }
+        },
+        "d6c394b1-f367-453a-8eac-6956087aae04": {
+            "type": "software",
+            "name": "Processen",
+            "metrics": {
+                "0e2ad17a-4ce4-477f-b309-3dafc9517632": {
+                    "type": "compliance",
+                    "name": "M14: Het project bereidt samen met opdrachtgevende organisatie en betrokken partijen de realisatie voor",
+                    "sources": {
+                        "a4e932f1-4397-4edd-9de3-71ea7956bbed": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "bff1ee83-9f29-4446-b7fa-613b68241f40": {
+                    "type": "compliance",
+                    "name": "M21: Het project selecteert medewerkers op basis van kwaliteit",
+                    "sources": {
+                        "1155a55d-366d-4d6a-af64-d4f00992e70c": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "b937bc97-e78a-4bda-b8d6-fde300f0771c": {
+                    "type": "compliance",
+                    "name": "M23: Het project zorgt voor de aanwezigheid van kennis van en ervaring met de Kwaliteitsaanpak",
+                    "sources": {
+                        "6b232be7-0489-45ef-ac35-4f9d7d078797": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "fbb74aa4-fa38-4920-806f-db1e6e00176b": {
+                    "type": "compliance",
+                    "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces - 1. Scrumteam bestaand uit product owner, ontwikkelaars (zoals programmeurs, testers en ontwerpers) en Scrummaster",
+                    "sources": {
+                        "56d98144-d4ff-45f6-bf05-ea482a51c39d": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "27990de3-8039-4fa5-af4a-1dd46e008567": {
+                    "type": "compliance",
+                    "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces - 2. Proces met daily scrum, sprints, sprint planning, sprint review, sprint retrospective en sprint refinement",
+                    "sources": {
+                        "421a0ec1-12b8-4401-8235-1211d9185da2": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "614a8214-a428-4950-9ac5-b361765c132b": {
+                    "type": "compliance",
+                    "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces - 3. Definition of Ready en Definition of Done",
+                    "sources": {
+                        "483d1063-9e79-467c-8bd6-b5f29ad9e4ce": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "9b32afae-a66b-4c03-b52c-40a9a8058491": {
+                    "type": "compliance",
+                    "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces - 4. Product backlog en sprint backlog",
+                    "sources": {
+                        "a116d076-d3e1-4321-ab50-80f6567bea9e": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "e8652736-ddf2-404a-988e-c77f28c2fa16": {
+                    "type": "compliance",
+                    "name": "M35: Het project hanteert een agile architectuuraanpak",
+                    "sources": {
+                        "b6577628-3617-40f2-8d78-0fc31ce2115a": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "ba417fee-22de-4654-9cf7-e47e59edc6d1": {
+                    "type": "compliance",
+                    "name": "M10: Het project kent een wekelijks projectoverleg",
+                    "sources": {
+                        "c0dcbd39-d6ad-45ca-a7b9-c8e4c022c8a7": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "e2d64708-19b2-4b6f-a547-088b220f884f": {
+                    "type": "compliance",
+                    "name": "M28: Het project voert periodiek een self-assessment uit tegen de actuele versie van de Kwaliteitsaanpak",
+                    "sources": {
+                        "0d7c6e3e-426f-4210-91e6-a61d71aa8424": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "b77bdb46-ae09-4122-89d9-fa83732c5022": {
+                    "type": "compliance",
+                    "name": "M30: Het project identificeert, mitigeert en bewaakt risico's",
+                    "sources": {
+                        "b51dcb04-fac2-4c7f-8313-b6591e786873": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "a3a8ec73-195b-4a21-bed3-73e7e90cb9c1": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 1. De documentatie beschrijft de ontwikkel- en testomgeving die is toegepast",
+                    "sources": {
+                        "485b880c-f2d0-4283-8aa8-01cd4440b0ea": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "ab3028fb-d791-4469-b1d0-7465912b8ef3": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 2. De functionele documentatie beschrijft gegevensmodellen, functionele indeling, koppelingen, berichtdefinities en workflows/processen",
+                    "sources": {
+                        "45007d1d-46dc-4776-a131-1d5f68f0ac89": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "1937c68d-7f64-41bc-afb2-f18fcc3f66af": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 3. Als operationeel beheer onderdeel was van de dienstverlening: de operationele bedieningsinstructies beschrijven minimaal back-up/recovery, procedures bij calamiteiten, regelmatig terugkerende beheeractiviteiten en opstart- en afsluitprocedures",
+                    "sources": {
+                        "136d82c0-bcab-4a6d-88d3-44fb1d483bfb": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "5b9f31ae-fdcd-4b17-a5ed-007db13815d1": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 4. De product backlog bevat de bekende bugs en wensen",
+                    "sources": {
+                        "d7add283-177f-4a74-8a57-4d8ac95b5627": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "f8575f99-7604-47eb-81f8-6e73240f6060": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 5. De broncode kent een gezonde balans tussen isolatie, cohesie en koppeling",
+                    "sources": {
+                        "0f5b86fa-7b36-495e-882d-8862807caa21": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "dfce5912-2e91-433a-adbc-81a8c4d7daae": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 6. De broncode heeft een beperkte mate van duplicatie",
+                    "sources": {
+                        "822f7dab-b2bf-4f45-8303-4cf4e5d9f873": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "8d7a4a32-86c5-4bea-949f-1d2b68d31cc6": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 7. De broncode heeft een beperkte mate van complexiteit",
+                    "sources": {
+                        "51dfba3a-0b10-485d-838d-19a1cad8561d": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "c3af6734-91c2-4179-a691-510be0df1894": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 8. De broncode bevat geen of een beperkt aantal niet-afgeronde werkzaamheden (\"todo's\")",
+                    "sources": {
+                        "045cc18c-ce60-4513-9f4b-336788cb57cb": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "2a840859-c7ad-4ad2-99fb-4f4779326e91": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 9. De tests raken een voldoende groot deel van de broncode",
+                    "sources": {
+                        "590840f6-ab89-4b96-83f3-6b58773c7d38": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "8f67604e-9c6d-4b92-87ac-8a8554bb5c5a": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 10. De tests raken een voldoende groot deel van de functionaliteit (functionele dekking)",
+                    "sources": {
+                        "545f59ef-b56b-43b7-a73a-ba261f977db0": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "62059459-1e63-469f-b444-10c457201abc": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 11. De onderkende productrisico's zijn gedekt",
+                    "sources": {
+                        "4574da68-d5af-41dc-958f-2b0e16b2f4bf": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "5a8e93c9-81ac-45e1-bccd-f38c2f7bfbc9": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 12. Er is een regressietest beschikbaar",
+                    "sources": {
+                        "f9ca3e1d-3f2e-4f8a-b325-7d47380777f2": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "570db994-330d-4329-8f1f-8c17da057558": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 13. Er is traceerbaarheid van eisen naar testgevallen",
+                    "sources": {
+                        "ab7630cf-a46f-43c9-ab42-c376f386c784": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "ae017ae8-92c4-4c5a-8e68-2e513aba5981": {
+                    "type": "compliance",
+                    "name": "M34: Het project draagt software beheerst over - 14. De testset is goed opgebouwd",
+                    "sources": {
+                        "044d88cb-2603-4ee4-a8f2-7edc140fba1b": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "7fd233b0-0eb8-466c-b6ab-256f3ac4b942": {
+                    "type": "compliance",
+                    "name": "M27: Het project sluit projectfasen en zichzelf expliciet af",
+                    "sources": {
+                        "fbfe2175-fbfd-46f4-9a86-44fa1393f15f": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                }
+            }
+        },
+        "7bad0d82-5d57-4139-bb36-03c1da80a023": {
+            "type": "software",
+            "name": "Organisatie",
+            "metrics": {
+                "f1a16ef5-39fe-4129-b67c-7f1aa2adc59a": {
+                    "type": "compliance",
+                    "name": "M29: ICTU organiseert voor aanvang van een project de interne dienstverlening",
+                    "sources": {
+                        "05e91e09-0763-4ae6-825e-6a4f19a04e0b": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "08652932-6c8e-494b-b8a4-895d1d875d7d": {
+                    "type": "compliance",
+                    "name": "M19: ICTU biedt projecten een afgeschermde digitale omgeving",
+                    "sources": {
+                        "f7f77b96-7829-4d5b-8d6f-e6cc570ea1b6": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "37d1fa83-6ca2-4018-bdf1-c0074a9b22cc": {
+                    "type": "compliance",
+                    "name": "M18: ICTU biedt ondersteuning voor verplicht gestelde tools",
+                    "sources": {
+                        "71949294-277b-46fe-ae1e-6276f7c7d096": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "81fcc0b9-3491-4ae9-90f9-b14182b3b42c": {
+                    "type": "compliance",
+                    "name": "M11: ICTU beheert, onderhoudt en implementeert de Kwaliteitsaanpak en kwaliteitsnormen",
+                    "sources": {
+                        "0d308c60-fc94-45c9-9b16-1a7c53a4d5cc": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "7f3485a9-71a7-4d4c-86e8-461356ce2c02": {
+                    "type": "compliance",
+                    "name": "M12: ICTU publiceert nieuwe versies van de Kwaliteitsaanpak en normen periodiek en op een vaste locatie",
+                    "sources": {
+                        "dfd8deb7-6412-469a-b0d0-2d805acd0932": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                },
+                "7fff8c9b-b87a-4a4a-bdc8-67485c3ef69d": {
+                    "type": "compliance",
+                    "name": "M33: ICTU organiseert periodiek een gezamenlijke self-assessment ten aanzien van de Kwaliteitsaanpak",
+                    "sources": {
+                        "c59e78ab-808f-41d5-8743-c8b2d31be7ba": {
+                            "type": "manual_number",
+                            "parameters": {}
+                        }
+                    },
+                    "target": "100",
+                    "near_target": "80"
+                }
+            }
+        }
+    },
+    "title": "ICTU Kwaliteitsaanpak Softwareontwikkeling versie wip",
+    "subtitle": "Checklist",
+    "report_uuid": "ictu_ka_checklist_wip"
+}

@@ -20,9 +20,9 @@ class Converter:
 
     def convert_element(self, element: Element, builder: Builder, parent: Element | None = None) -> None:
         """Recursively convert the element using the builder."""
-        if not builder.accept_element(element.tag):
-            return
         attributes = element.attrib
+        if not builder.accept_element(element.tag, attributes):
+            return
         builder.start_element(element.tag, attributes)
         if element.text:
             builder.text(element.tag, element.text, attributes)

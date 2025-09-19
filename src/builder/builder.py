@@ -15,9 +15,15 @@ class Builder:
     def start_document(self) -> None:
         """Start the document."""
 
-    def accept_element(self, tag: str) -> bool:
+    def accept_element(self, tag: str, attributes: TreeBuilderAttributes) -> bool:
         """Return whether the builder accepts the element."""
         return True
+
+    def get_element_attributes(self, tag: str) -> TreeBuilderAttributes | None:
+        """Return the attributes of the element."""
+        if matching_elements := [element for element in self._stack if tag == element[0]]:
+            return matching_elements[-1][1]
+        return None
 
     def in_element(self, tag: str, attributes: TreeBuilderAttributes | None = None) -> bool:
         """Return whether we are currently in an element with the specified tag and attributes."""

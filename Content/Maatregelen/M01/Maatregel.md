@@ -6,29 +6,29 @@ Opdrachtgevende organisatie, ICTU, beheerorganisatie en andere meewerkende parti
 
 De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkje (✔) geeft aan in welke fase ze (initieel) worden opgeleverd. Het tandwiel (⚙) geeft aan in welke fase de producten worden onderhouden en bijgewerkt.
 
-| Product                                             | Voor start | Voorfase | Realisatiefase | Verantwoordelijke organisatie |
-|-----------------------------------------------------|------------|----------|----------------|-------------------------------|
-| Business impact analyse                             | ✔          | ⚙        | ⚙              | opdrachtgever                 |
-| Data protection impact assessment                   | ✔          | ⚙        | ⚙              | opdrachtgever                 |
-| Impact assessment mensenrechten en algoritmes       | ✔          | ⚙        | ⚙              | opdrachtgever                 |
-| Projectstartarchitectuur en solution architectuur   | ✔          | ⚙        | ⚙              | opdrachtgever                 |
-| Afspraken met de beheerorganisatie                  | ✔          | ⚙        | ⚙              | opdrachtgever                 |
-| Plan van aanpak: voorfase                           | ✔          |          |                | ICTU                          |
-| Beschrijving van functionele eisen                  |            | ✔        | ⚙              | opdrachtgever                 |
-| Beschrijving van niet-functionele eisen             |            | ✔        | ⚙              | opdrachtgever                 |
-| Product backlog                                     |            | ✔        | ⚙              | opdrachtgever                 |
-| Ontwerp- en architectuurdocumentatie                |            | ✔        | ⚙              | ICTU, beheerorganisatie       |
-| Mastertestplan                                      |            | ✔        | ⚙              | opdrachtgever                 |
-| Detailtestplannen                                   |            | ✔        | ⚙              | ICTU, beheerorganisatie       |
-| Informatiebeveiligingsplan                          |            | ✔        | ⚙              | opdrachtgever                 |
-| Kwaliteitsplan                                      |            | ✔        | ⚙              | ICTU                          |
-| Plan van aanpak: realisatiefase                     |            | ✔        |                | ICTU                          |
-| Deploybare versie van de software                   |            |          | ✔              | ICTU                          |
-| Testrapportages                                     |            |          | ✔              | ICTU, beheerorganisatie       |
-| Documentatie voor deployment en operationeel beheer |            |          | ✔              | ICTU                          |
-| Software bill of materials                          |            |          | ✔              | ICTU                          |
-| Release notes                                       |            |          | ✔              | ICTU                          |
-| Vrijgaveadvies                                      |            |          | ✔              | opdrachtgever                 |
+| Product | Voor start | Voorfase | Realisatiefase | Verantwoordelijke organisatie |
+|---------|------------|----------|----------------|-------------------------------|
+| [submeasure-title]Business impact analyse[/submeasure-title]                             | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Data protection impact assessment[/submeasure-title]                   | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Impact assessment mensenrechten en algoritmes[/submeasure-title]       | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Projectstartarchitectuur en solution architectuur [/submeasure-title]  | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Afspraken met de beheerorganisatie [/submeasure-title]                 | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Plan van aanpak: voorfase [/submeasure-title]                          | ✔          |          |                | ICTU                          |
+| [submeasure-title]Beschrijving van functionele eisen [/submeasure-title]                 |            | ✔        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Beschrijving van niet-functionele eisen [/submeasure-title]            |            | ✔        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Product backlog[/submeasure-title]                                    |            | ✔        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Ontwerp- en architectuurdocumentatie[/submeasure-title]                |            | ✔        | ⚙              | ICTU, beheerorganisatie       |
+| [submeasure-title]Mastertestplan[/submeasure-title]                                      |            | ✔        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Detailtestplannen[/submeasure-title]                                   |            | ✔        | ⚙              | ICTU, beheerorganisatie       |
+| [submeasure-title]Informatiebeveiligingsplan[/submeasure-title]                          |            | ✔        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Kwaliteitsplan[/submeasure-title]                                      |            | ✔        | ⚙              | ICTU                          |
+| [submeasure-title]Plan van aanpak: realisatiefase[/submeasure-title]                     |            | ✔        |                | ICTU                          |
+| [submeasure-title]Deploybare versie van de software[/submeasure-title]                   |            |          | ✔              | ICTU                          |
+| [submeasure-title]Testrapportages[/submeasure-title]                                     |            |          | ✔              | ICTU, beheerorganisatie       |
+| [submeasure-title]Documentatie voor deployment en operationeel beheer[/submeasure-title] |            |          | ✔              | ICTU                          |
+| [submeasure-title]Software bill of materials[/submeasure-title]                          |            |          | ✔              | ICTU                          |
+| [submeasure-title]Release notes[/submeasure-title]                                       |            |          | ✔              | ICTU                          |
+| [submeasure-title]Vrijgaveadvies[/submeasure-title]                                      |            |          | ✔              | opdrachtgever                 |
 
 ### Business impact analyse
 

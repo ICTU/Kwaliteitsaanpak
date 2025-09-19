@@ -13,10 +13,10 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
-          version: "0.4.22"
+          version: "0.8.13"
       - name: Install dependencies, run unit tests and check quality
         run: |
           uv venv
-          uv pip install -r requirements.txt
+          uv sync
           ci/unittest.sh
           ci/quality.sh

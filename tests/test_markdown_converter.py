@@ -2,6 +2,7 @@
 
 import unittest
 from unittest.mock import patch, mock_open
+from xml.etree.ElementTree import ElementTree
 
 import xmltags
 from custom_types import Settings, Variables
@@ -25,7 +26,7 @@ class MarkdownConverterTestCase(unittest.TestCase):
             }
         )
 
-    def xml(self):
+    def xml(self) -> ElementTree:
         """Create the XML."""
         return MarkdownConverter(Variables({"var": "variable"})).convert(self.settings)
 
@@ -109,7 +110,10 @@ class MarkdownTest(MarkdownConverterTestCase):
 
     @patch(
         "markdown_converter.open",
-        mock_open(read_data="**Bold** _Italic_ ~~Strike~~ {Instruction} [Anchor](link)"),
+        mock_open(
+            read_data="**Bold** _Italic_ ~~Strike~~ {Instruction} [Anchor](link) "
+            "[measure-title]Measure[/measure-title] [submeasure-title]Submeasure[/submeasure-title]"
+        ),
     )
     def test_formatting(self):
         """Test formatting."""
@@ -120,6 +124,16 @@ class MarkdownTest(MarkdownConverterTestCase):
         self.assertEqual("{Instruction}", paragraph.find(xmltags.INSTRUCTION).text)
         self.assertEqual("Anchor", paragraph.find(xmltags.ANCHOR).text)
         self.assertEqual("link", paragraph.find(xmltags.ANCHOR).attrib[xmltags.ANCHOR_LINK])
+        self.assertEqual("Measure", paragraph.find(xmltags.MEASURE_TITLE).text)
+        self.assertEqual("Submeasure", paragraph.find(xmltags.SUBMEASURE_TITLE).text)
+        self.assertEqual("1", paragraph.find(xmltags.SUBMEASURE_TITLE).attrib[xmltags.SUBMEASURE_TITLE_NUMBER])
+
+    @patch("markdown_converter.open", mock_open(read_data='![Anchor](image.png "description")'))
+    def test_image(self):
+        """Test image."""
+        image = self.xml().find(f".//{xmltags.IMAGE}")
+        self.assertEqual("image.png", image.attrib[xmltags.IMAGE_SRC])
+        self.assertEqual("description", image.attrib[xmltags.IMAGE_TITLE])
 
     @patch("markdown_converter.open", mock_open(read_data="* Bullet\n* list\n\n"))
     def test_bullet_list(self):

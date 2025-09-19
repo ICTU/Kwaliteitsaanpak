@@ -6,12 +6,12 @@ De kwaliteitsnormen voor het product zijn beschreven in de niet-functionele eise
 
 Om continu te bewaken dat het product aan de kwaliteitsnormen voldoet, voert het project de volgende activiteiten uit:
 
-1. Tijdens de voorfase: het project reviewt de deliverables periodiek.
-1. Tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd de kwaliteit van de software.
-1. Als operationeel beheer onderdeel is van de dienstverlening tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd het gedrag van de software in gebruik en beheer.
-1. Tijdens de realisatiefase: het project evalueert periodiek en handmatig de kwaliteitseigenschappen van de software die niet geautomatiseerd kunnen worden gemeten.
-1. Tijdens de realisatiefase: het project actualiseert en reviewt periodiek de documentatie.
-1. Indien nodig: de kwaliteitsmanager escaleert het langdurig niet halen van de kwaliteitsnormen.
+1. [submeasure-title]Tijdens de voorfase: het project reviewt de deliverables periodiek[/submeasure-title],
+1. [submeasure-title]Tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd de kwaliteit van de software[/submeasure-title],
+1. [submeasure-title]Als operationeel beheer onderdeel is van de dienstverlening tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd het gedrag van de software in gebruik en beheer[/submeasure-title],
+1. [submeasure-title]Tijdens de realisatiefase: het project evalueert periodiek en handmatig de kwaliteitseigenschappen van de software die niet geautomatiseerd kunnen worden gemeten[/submeasure-title],
+1. [submeasure-title]Tijdens de realisatiefase: het project actualiseert en reviewt periodiek de documentatie[/submeasure-title],
+1. [submeasure-title]Indien nodig: de kwaliteitsmanager escaleert het langdurig niet halen van de kwaliteitsnormen[/submeasure-title].
 
 Daarnaast voert het project periodiek een self-assessment uit tegen de actuele versie van de Kwaliteitsaanpak, zie [$M28$](#m28).
 

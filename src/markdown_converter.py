@@ -3,7 +3,7 @@
 import contextlib
 import pathlib
 import re
-from typing import cast, List, Optional, Set
+from typing import cast
 from xml.etree.ElementTree import ElementTree, TreeBuilder
 
 import markdown_syntax
@@ -20,11 +20,11 @@ class MarkdownConverter:
 
     def __init__(self, variables: Variables) -> None:
         self.builder = TreeBuilder()
-        self.context: Set[str] = set()  # Current context, e.g. are we in a measure, or in the appendices
+        self.context: set[str] = set()  # Current context, e.g. are we in a measure, or in the appendices
         self.current_section_level = 0
-        self.current_list_tags: List[str] = []
-        self.list_counter: List[int] = []  # List item counters per list level
-        self.table: Optional[Table] = None
+        self.current_list_tags: list[str] = []
+        self.list_counter: list[int] = []  # List item counters per list level
+        self.table: Table | None = None
         self.variables = variables
 
     def convert(self, settings: Settings) -> ElementTree:
@@ -294,6 +294,16 @@ class MarkdownConverter:
                 markdown_syntax.STRIKETROUGH_START,
                 markdown_syntax.STRIKETROUGH_END,
                 xmltags.STRIKETHROUGH,
+            ),
+            (
+                markdown_syntax.MEASURE_TITLE_START,
+                markdown_syntax.MEASURE_TITLE_END,
+                xmltags.MEASURE_TITLE,
+            ),
+            (
+                markdown_syntax.SUBMEASURE_TITLE_START,
+                markdown_syntax.SUBMEASURE_TITLE_END,
+                xmltags.SUBMEASURE_TITLE,
             ),
         ]
         while line:

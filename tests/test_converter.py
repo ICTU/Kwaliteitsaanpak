@@ -29,7 +29,7 @@ class ConverterTestCase(unittest.TestCase):
         tree = xml.etree.ElementTree.ElementTree(xml.etree.ElementTree.XML("<document/>"))
         Converter(tree).convert(self.builder)
         self.builder.start_document.assert_called_once()
-        self.builder.accept_element.assert_called_once_with("document")
+        self.builder.accept_element.assert_called_once_with("document", {})
         self.builder.start_element.assert_called_once_with("document", {})
         self.builder.end_element.assert_called_once_with("document", {})
         self.builder.end_document.assert_called_once()

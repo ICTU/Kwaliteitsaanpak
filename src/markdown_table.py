@@ -1,5 +1,6 @@
 """Table class."""
 
+import re
 from typing import List
 
 import markdown_syntax
@@ -11,7 +12,7 @@ class Table:
     def __init__(self, header_cells: List[str]):
         self.header_cells = header_cells
         self.column_alignment: List[str] = ["left" for _ in self.header_cells]  # alignment per column
-        self.column_widths = [len(cell) for cell in header_cells]
+        self.column_widths = [self.cell_width(cell) for cell in header_cells]
         self.rows: List[List[str]] = []
 
     def process_table_cells(self, cells: List[str]) -> None:
@@ -21,7 +22,7 @@ class Table:
         else:
             self.rows.append(cells)
             self.column_widths = [
-                max(current_width, len(cell)) for current_width, cell in zip(self.column_widths, cells)
+                max(current_width, self.cell_width(cell)) for current_width, cell in zip(self.column_widths, cells)
             ]
 
     def __process_table_alignment(self, cells: List[str]) -> None:
@@ -42,3 +43,7 @@ class Table:
         """Return the table cells."""
         line = line.strip().strip(markdown_syntax.TABLE_MARKER)
         return [cell.strip() for cell in line.split(markdown_syntax.TABLE_MARKER)]
+
+    def cell_width(self, cell: str) -> int:
+        """Return the cell width."""
+        return len(re.sub(r"\[[^\[]+\]", "", cell))

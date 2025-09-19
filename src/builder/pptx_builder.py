@@ -32,6 +32,10 @@ class PptxBuilder(Builder):
         self.current_slide = None
         self.chapter_heading = ""
 
+    def accept_element(self, tag: str, attributes: TreeBuilderAttributes) -> bool:
+        """Return whether the builder accepts the element."""
+        return attributes.get(xmltags.SECTION_IS_APPENDIX) != "y"
+
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().start_element(tag, attributes)
         if tag == xmltags.SLIDE:
@@ -44,11 +48,11 @@ class PptxBuilder(Builder):
         elif tag == xmltags.PARAGRAPH and (self.in_element(xmltags.FRONTPAGE) or self.in_element(xmltags.SLIDE)):
             self.current_slide.shapes[1].text = text  # type: ignore
             self.remove_bullet(paragraph_index=0)
-        elif self.in_element(xmltags.MEASURE) and not self.in_appendix():
+        elif self.in_element(xmltags.MEASURE):
             if self.chapter_heading:
                 self.add_slide(self.CHAPTER_SLIDE, self.chapter_heading)
                 self.chapter_heading = ""
-            if tag == xmltags.BOLD:
+            if tag == xmltags.MEASURE_TITLE:
                 self.add_slide(self.CONTENT_SLIDE, text)
                 self.current_slide.shapes.title.text_frame.paragraphs[  # type: ignore
                     0
@@ -93,10 +97,6 @@ class PptxBuilder(Builder):
         self.current_slide.shapes[1].text_frame.paragraphs[paragraph_index]._pPr.insert(  # type: ignore
             0, no_bullet
         )
-
-    def in_appendix(self) -> bool:
-        """Return whether the current section is an appendix."""
-        return self.in_element(xmltags.SECTION, {xmltags.SECTION_IS_APPENDIX: "y"})
 
     def end_document(self) -> None:
         """Override to save the presentation."""

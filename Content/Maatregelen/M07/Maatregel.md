@@ -4,15 +4,15 @@
 
 De geautomatiseerde continuous delivery pipeline voert ten minste de volgende activiteiten uit:
 
-1. Bouw van de software,
-2. Unit tests,
-3. Regressietests,
-4. Beveiligingstests,
-5. Performancetests,
-6. Toegankelijkheidstests,
-7. Broncodekwaliteitscontroles,
-8. Installatie van de software in test, acceptatie en/of productieomgevingen,
-9. Oplevering van het totale product, dus inclusief alle deliverables, in de vorm zoals bruikbaar voor en afgesproken met de opdrachtgevende organisatie.
+1. [submeasure-title]Bouw van de software[/submeasure-title],
+2. [submeasure-title]Unit tests[/submeasure-title],
+3. [submeasure-title]Regressietests[/submeasure-title],
+4. [submeasure-title]Beveiligingstests[/submeasure-title],
+5. [submeasure-title]Performancetests[/submeasure-title],
+6. [submeasure-title]Toegankelijkheidstests[/submeasure-title],
+7. [submeasure-title]Broncodekwaliteitscontroles[/submeasure-title],
+8. [submeasure-title]Installatie van de software in test, acceptatie en/of productieomgevingen[/submeasure-title],
+9. [submeasure-title]Oplevering van het totale product, dus inclusief alle deliverables, in de vorm zoals bruikbaar voor en afgesproken met de opdrachtgevende organisatie[/submeasure-title].
 
 Performance- en beveiligingstests op de software zijn ook onderdeel van de continuous delivery pipeline, maar vanwege doorlooptijden en licenties is dat niet altijd haalbaar; in dat geval vinden de performance- en beveiligingstests zo veel mogelijk, en bij voorkeur dagelijks, plaats. Performance- en beveiligingstests op de software vinden plaats in de testomgeving van het project. Als ICTU verantwoordelijk is voor het operationeel beheer laat ICTU de performance- en beveiligingstesten op de software (ook) uitvoeren in een productie-like omgeving.
 

@@ -7,4 +7,4 @@ services:
     working_dir: /work
     volumes:
       - ./:/work
-    command: bash -c "python3 src/convert.py --log INFO DocumentDefinitions/*.json"
+    command: bash -c "uv run src/convert.py --log INFO DocumentDefinitions/*.json"

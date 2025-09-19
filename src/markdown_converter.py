@@ -3,7 +3,7 @@
 import contextlib
 import pathlib
 import re
-from typing import cast, List, Optional, Set
+from typing import cast
 from xml.etree.ElementTree import ElementTree, TreeBuilder
 
 import markdown_syntax
@@ -20,11 +20,12 @@ class MarkdownConverter:
 
     def __init__(self, variables: Variables) -> None:
         self.builder = TreeBuilder()
-        self.context: Set[str] = set()  # Current context, e.g. are we in a measure, or in the appendices
+        self.context: set[str] = set()  # Current context, e.g. are we in a measure, or in the appendices
         self.current_section_level = 0
-        self.current_list_tags: List[str] = []
-        self.list_counter: List[int] = []  # List item counters per list level
-        self.table: Optional[Table] = None
+        self.current_list_tags: list[str] = []
+        self.list_counter: list[int] = []  # List item counters per list level
+        self.submeasure_counter: int = 0
+        self.table: Table | None = None
         self.variables = variables
 
     def convert(self, settings: Settings) -> ElementTree:
@@ -295,6 +296,16 @@ class MarkdownConverter:
                 markdown_syntax.STRIKETROUGH_END,
                 xmltags.STRIKETHROUGH,
             ),
+            (
+                markdown_syntax.MEASURE_TITLE_START,
+                markdown_syntax.MEASURE_TITLE_END,
+                xmltags.MEASURE_TITLE,
+            ),
+            (
+                markdown_syntax.SUBMEASURE_TITLE_START,
+                markdown_syntax.SUBMEASURE_TITLE_END,
+                xmltags.SUBMEASURE_TITLE,
+            ),
         ]
         while line:
             format_found = False
@@ -303,7 +314,14 @@ class MarkdownConverter:
                     format_found = True
                     self._flush(seen)
                     seen = ""
-                    with self.element(xml_tag):
+                    if md_start == markdown_syntax.MEASURE_TITLE_START:
+                        self.submeasure_counter = 0
+                    if md_start == markdown_syntax.SUBMEASURE_TITLE_START:
+                        self.submeasure_counter += 1
+                        attributes = {xmltags.SUBMEASURE_TITLE_NUMBER: str(self.submeasure_counter)}
+                    else:
+                        attributes = {}
+                    with self.element(xml_tag, attributes):
                         if xml_tag == xmltags.INSTRUCTION:
                             self.builder.data(md_start)
                         formatted_text, line = line[len(md_start) :].split(md_end, maxsplit=1)

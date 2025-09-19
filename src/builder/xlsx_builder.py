@@ -110,12 +110,16 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
             **super().create_formats(workbook),
         }
 
+    def accept_element(self, tag: str, attributes: TreeBuilderAttributes) -> bool:
+        """Return whether the builder accepts the element."""
+        return attributes.get(xmltags.SECTION_IS_APPENDIX) != "y"
+
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().start_element(tag, attributes)
         if tag == xmltags.DOCUMENT:
             self.version = str(attributes["version"])
             self.__create_checklist(self.version)
-        elif tag == xmltags.MEASURE and not self.__in_appendix() and self.last_level_1_section_heading:
+        elif tag == xmltags.MEASURE and self.last_level_1_section_heading:
             self.__write_measure_table_sub_header()
         elif self.measure_text:
             if tag == xmltags.LIST_ITEM:
@@ -139,41 +143,24 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
         text = re.sub("[¹²³⁴⁵⁶⁷⁸⁹⁰]+", "", text)  # Remove footnotes
         if tag == xmltags.HEADING and self.nr_elements(xmltags.SECTION) == 1:
             self.last_level_1_section_heading = text
-        elif self.in_element(xmltags.MEASURE) and not self.__in_appendix():
-            if tag == xmltags.BOLD:
-                self.measure_row = self.row
-                self.measure_id, measure_title = text.split(":")
-                has_submeasures = self.in_element(xmltags.MEASURE, {"composite": "true"})
-                self.__write_measure(
-                    self.measure_id,
-                    measure_title.strip(),
-                    has_submeasures=has_submeasures,
-                )
+        elif tag == xmltags.MEASURE_TITLE:
+            self.measure_row = self.row
+            self.measure_id, measure_title = text.split(":")
+            has_submeasures = self.in_element(xmltags.MEASURE, {"composite": "true"})
+            self.__write_measure(self.measure_id, measure_title.strip(), has_submeasures=has_submeasures)
+            self.measure_text.append(text)
+        elif tag == xmltags.SUBMEASURE_TITLE:
+            self.row += 1
+            self.__write_measure("", f"{attributes[xmltags.SUBMEASURE_TITLE_NUMBER]}. {text.strip()}", submeasure=True)
+            if table_cell := self.get_element_attributes(xmltags.TABLE_CELL):
+                width = int(table_cell[xmltags.TABLE_CELL_WIDTH])
+                text += " " * (width - len(text))
             self.measure_text.append(text)
         elif self.measure_text:
-            if (
-                tag == xmltags.LIST_ITEM
-                and xmltags.LIST_ITEM_NUMBER in attributes
-                and self.measure_id in ("M02", "M05", "M07", "M32", "M34")
-            ):
-                self.row += 1
-                self.__write_measure(
-                    "",
-                    f"{str(attributes[xmltags.LIST_ITEM_NUMBER])}. {text}",
-                    submeasure=True,
-                )
-            if tag == xmltags.TABLE_CELL and self.measure_id in ("M01", "M16"):
+            if tag == xmltags.TABLE_CELL:
                 # Unicode symbols are wider than other characters, messing up the table layout:
                 text = text.replace("✔", "x")
                 text = text.replace("⚙", "o")
-                column, row = (
-                    int(attributes[xmltags.TABLE_CELL_COLUMN]),
-                    int(attributes[xmltags.TABLE_CELL_ROW]),
-                )
-                if row > 0 and column == 0:  # Table cell with a document
-                    self.row += 1
-                    # Write the document as (sub)measure
-                    self.__write_measure("", f"{row}. {text}", submeasure=True)
                 text += " " * (int(attributes[xmltags.TABLE_CELL_WIDTH]) - len(text))
             self.measure_text.append(text)
 
@@ -334,7 +321,3 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
         for column, (header, width) in enumerate([("Datum", 12), ("Actie", 70), ("Status", 20), ("Toelichting", 70)]):
             action_list.write(1, column, header, self.formats["header"])
             self.set_column_width(action_list, column, width)
-
-    def __in_appendix(self) -> bool:
-        """Return whether the current section is in an appendix."""
-        return self.in_element(xmltags.SECTION, {xmltags.SECTION_IS_APPENDIX: "y"})

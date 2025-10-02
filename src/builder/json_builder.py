@@ -50,18 +50,19 @@ class JSONBuilder(Builder):
                 if not self.in_element(xmltags.MEASURE, {"composite": "true"}):
                     self.add_metric(text)
             case xmltags.SUBMEASURE_TITLE:
-                self.add_metric(f"{self.current_measure} - {attributes[xmltags.SUBMEASURE_TITLE_NUMBER]}. {text}")
+                self.add_metric(self.current_measure, f"{attributes[xmltags.SUBMEASURE_TITLE_NUMBER]}. {text}")
 
     def add_subject(self, text: str) -> None:
         """Add a subject to the JSON."""
         self.subject_id = str(uuid4())
         self.json["subjects"][self.subject_id] = {"type": "software", "name": text, "metrics": {}}
 
-    def add_metric(self, text: str) -> None:
+    def add_metric(self, name: str, secondary_name: str = "") -> None:
         """Add a metric to the JSON."""
         self.json["subjects"][self.subject_id]["metrics"][str(uuid4())] = {
             "type": "compliance",
-            "name": text,
+            "name": name,
+            "secondary_name": secondary_name,
             "sources": {str(uuid4()): {"type": "manual_number", "parameters": {}}},
             "target": "100",
             "near_target": "80",

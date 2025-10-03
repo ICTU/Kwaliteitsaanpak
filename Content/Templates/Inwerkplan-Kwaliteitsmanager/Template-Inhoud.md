@@ -22,7 +22,7 @@ Leerdoelen (week 1):
 Je hebt toegang tot (week 1):
 * [MS Outlook](https://webmail.ictu.nl) voor e-mail en agenda
 * [Timetell](https://timetell.ictu.nl) voor het registreren van uren
-* [Sharepoint](https://ictubeheer.sharepoint.com) voor het delen van documenten
+* [SharePoint](https://ictubeheer.sharepoint.com) voor het delen van documenten
 * [MS Teams](https://teams.microsoft.com) voor online vergaderen, individuele chats, teamkanalen en organisatiebrede conversaties (dat laatste kun je vinden via de app "Viva Engage" binnen MS Teams)
 * [Topdesk](https://topdesk.ictu.nl) voor het reserveren van vergaderzalen, parkeerplaatsen en andere diensten
 
@@ -169,7 +169,7 @@ Leerdoelen (week 3):
 Acties (week 3):
 * Je bent lid van de mailgroep van je project (indien van toepassing)
 * Je hebt toegang tot het MS Teams-team van je project
-* Je hebt toegang tot de Sharepoint teamsite van je project
+* Je hebt toegang tot de SharePoint teamsite van je project
 * Je hebt toegang tot de ontwikkelomgeving (VLAN) van je project, d.w.z. dat je beschikt over een VPN-key die daartoe toegang geeft
 * Je hebt toegang tot het versiebeheersysteem van je project (GitLab of Azure DevOps)
 * Je hebt toegang tot de build server van je project (GitLab CI, Azure DevOps of Jenkins)

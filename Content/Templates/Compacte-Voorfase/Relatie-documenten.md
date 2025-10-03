@@ -2,5 +2,8 @@
 
 De volgende documenten waren input voor dit document:
 
-* {Input documenten, bijvoorbeeld opdracht memo, Jira epic}
-* {Context documenten, bijvoorbeeld bestaande documentatie}
+| Titel                                                     | Versie   | Datum   |
+|:----------------------------------------------------------|:---------|:--------|
+| {Input documenten, bijvoorbeeld opdracht memo, Jira epic} | {versie} | {datum} |
+| {Context documenten, bijvoorbeeld bestaande documentatie} | {versie} | {datum} |
+| {titel}                                                   | {versie} | {datum} |

@@ -26,7 +26,7 @@ Voor de realisatiefase wordt de agile ontwikkelmethode Scrum gebruikt ($M05$). A
 
 ### Bewaken van kwaliteitsnormen
 
-De kwaliteitsmanager rapporteert {frequentie/als onderdeel van de managementrapportage} over het al dan niet behalen van de kwaliteitsnormen. De rapportage bestaat uit {geschreven rapportage en/of Quality-time export}. De kwaliteitsmanager verstuurt de rapportage per mail aan {ontvangers} en archiveert de verstuurde rapportages {op Sharepoint}.
+De kwaliteitsmanager rapporteert {frequentie/als onderdeel van de managementrapportage} over het al dan niet behalen van de kwaliteitsnormen. De rapportage bestaat uit {geschreven rapportage en/of Quality-time export}. De kwaliteitsmanager verstuurt de rapportage per mail aan {ontvangers} en archiveert de verstuurde rapportages {op SharePoint}.
 
 De volgende rapportage/escalatielijnen worden gehanteerd indien kwaliteitsnormen niet tijdig worden behaald:
 
@@ -40,7 +40,7 @@ Als ontdekte kwaliteitsproblemen daartoe aanleiding geven, worden dit kwaliteits
 
 ### Versiebeheer documenten
 
-Alle documenten die een deliverable van het project zijn, zoals architectuurdocumenten, functioneel ontwerp en installatiehandleidingen, worden in de digitale samenwerkruimte van het project geplaatst. De opgeleverde documenten worden in pdf-formaat opgeslagen en bevatten een versienummer in de naam. De versies van de bronbestanden van deliverables worden opgeslagen in een online werkomgeving en moeten beschikbaar zijn om later aangepast te kunnen worden. Dit project gebruikt {Git, Sharepoint, Samenwerkingsruimte}.
+Alle documenten die een deliverable van het project zijn, zoals architectuurdocumenten, functioneel ontwerp en installatiehandleidingen, worden in de digitale samenwerkruimte van het project geplaatst. De opgeleverde documenten worden in pdf-formaat opgeslagen en bevatten een versienummer in de naam. De versies van de bronbestanden van deliverables worden opgeslagen in een online werkomgeving en moeten beschikbaar zijn om later aangepast te kunnen worden. Dit project gebruikt {Git, SharePoint, Samenwerkingsruimte}.
 
 Bij elk formele release moeten de documenten geactualiseerd zijn en formeel opgeleverd worden.
 
@@ -114,6 +114,7 @@ De Definition Of Ready van het project bevat de volgende criteria ({vul aan en p
 6. De story is goedgekeurd door de reviewer binnen het Scrumteam;
 7. Het verwachte aantal logische testgevallen is ingevuld;
 8. Er is ingeschat of de user story mogelijk impact heeft op performance, beveiliging, infrastructuur of andere niet-functionele aspecten. {Zie de bijlage "Gebruik van Jira" voor meer informatie.}
+9. De story voldoet aan de [INVEST-criteria](https://xp123.com/invest-in-good-stories-and-smart-tasks/).
 
 ### Definition of Done
 
@@ -163,10 +164,10 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 
 Het project hanteert de volgende codeerstandaarden:
 
-| Programmeertaal     | Codeerstandaard     | Controle         |
-|:--------------------|:--------------------|:-----------------|
-| {programmeertaal A} | {codeerstandaard A} | {broncodereview} |
-| {programmeertaal B} | {codeerstandaard B} | {tool B}         |
+| Programmeertaal     | Codeerstandaard                            | Controle         |
+|:--------------------|:-------------------------------------------|:-----------------|
+| Python              | [PEP-8](https://peps.python.org/pep-0008/) | Ruff             |
+| {programmeertaal}   | {codeerstandaard}                          | {broncodereview} |
 
 De keuze van programmeertalen en andere technologie staat beschreven in het SAD.
 
@@ -203,6 +204,32 @@ Het project hanteert de volgende werkwijze voor broncodereviews:
 * Na goedkeuring wordt de merge request gemerged door de {ontwikkelaar/reviewer}.
 
 Quality-time bewaakt of de reviews hebben plaatsgevonden.
+
+Gebruik deze checklist voor het uitvoeren van de broncodereviews:
+
+1. Voorbereiden
+  a. Lees de user story inclusief acceptatiecriteria.
+  b. Lees de relevante use cases/onderdelen van het Globaal Functioneel Ontwerp.
+  c. Denk na hoe jij de oplossing zou bouwen en noteer kort jouw verwachtingen.
+2. Controleren op functionaliteit
+  a. Sluit de code aan bij de user story en acceptatiecriteria?
+  b. Zijn randgevallen en foutafhandeling meegenomen?
+3. Codekwaliteit
+  a. Is de code leesbaar en consistent met onze coding conventions?
+  b. Zijn er geen duplicaties of onnodige complexiteit?
+  c. Zijn namen (variabelen, functies, klassen) duidelijk en betekenisvol?
+4. Onderhoudbaarheid
+  a. Is de code goed testbaar? (unit-/integratietesten aanwezig)
+  b. Is de architectuur en structuur logisch en schaalbaar?
+5. Veiligheid en betrouwbaarheid
+  a. Geen hardcoded secrets of credentials?
+  b. Inputvalidatie en foutafhandeling correct toegepast?
+6. Performance en efficiëntie
+  a. Zijn er geen onnodig zware operaties?
+  b. Worden resources efficiënt gebruikt?
+7. Overige controles
+  a. Zijn alle nieuwe en gewijzigde tests geslaagd?
+  b. Is de documentatie (code comments, README-bestanden, use cases) bijgewerkt?
 
 ### Complexiteit van broncode limiteren
 
@@ -272,6 +299,8 @@ ICTU voert drie soorten performancetesten uit, die inzicht geven in de volgende 
 
 Deze performancetesten worden uitgevoerd in de {performancetestomgeving}. De loadtest draait dagelijks. De duurtest en stresstest draaien wekelijks.
 
+{Als de performancetestgeving niet representatief is voor de productieomgeving:} Omdat de performancetestomgeving niet representatief is voor de productieomgeving, zijn de absolute meetwaardes uit de performancetesten, zoals responsetijden en maximale belastbaarheid, zeer waarschijnlijk niet hetzelfde als die in de productieomgeving zouden worden gemeten. ICTU gebruikt de performancetesten daarom als regressietest: door de meetwaardes van een test te vergelijken met de vorige testrun of een baselinetestrun kunnen veranderingen in de performance vroegtijdig worden opgemerkt.
+
 Quality-time rapporteert over de geautomatiseerde performancetesten. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het Scrumteam. Issues die voortkomen uit performancetesten worden opgenomen in Jira met het label "performance_bevinding".
 
 {Als operationeel beheer geen onderdeel is van de dienstverlening:} De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaard kwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient {opdrachtgevende organisatie} zelf te (laten) testen.
@@ -324,12 +353,13 @@ Ten behoeve van de beheerfase wordt gedurende de realisatiefase een implementati
 
 De volgende externe testen, toetsen en certificeringen zijn gepland:
 
-| Aspect                  | Opdrachtnemer                               | Planning          |
-|:------------------------|:--------------------------------------------|:------------------|
-| Penetratietest          | {Leverancier uit de ICTU-mantel IT-audits } | {Sprint/Kwartaal} |
-| Onderhoudbaarheidstoets | {Leverancier uit de ICTU-mantel IT-audits } | {Sprint/Kwartaal} |
-| Toegankelijkheidstoets  | {Leverancier}                               | {Sprint/Kwartaal} |
-| {Certificering}         | {Leverancier}                               | {Sprint/Kwartaal} |
+| Aspect                  | Opdrachtnemer                               | Planning                    |
+|:------------------------|:--------------------------------------------|:----------------------------|
+| Penetratietest          | {Leverancier uit de ICTU-mantel IT-audits } | {datum(s) en/of frequentie} |
+| Security code review    | {Leverancier uit de ICTU-mantel IT-audits } | {datum(s) en/of frequentie} |
+| Onderhoudbaarheidstoets | {Leverancier uit de ICTU-mantel IT-audits } | {datum(s) en/of frequentie} |
+| Toegankelijkheidstoets  | {Leverancier}                               | {datum(s) en/of frequentie} |
+| {Certificering}         | {Leverancier}                               | {datum(s) en/of frequentie} |
 
 Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld NEN-ISO/IEC 27001 compliancy.
 

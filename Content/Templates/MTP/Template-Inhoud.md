@@ -427,7 +427,7 @@ Onderstaande tabel bevat de bevindingenprocedures per testsoort en/of testvorm.
 
 # Testprocesrisico's en maatregelen
 
-In dit hoofdstuk zijn de belangrijkste potentiële projectrisico's voor het testproces van {project} beschreven. Door te anticiperen op wat mogelijk kan gebeuren kunnen nu reeds maatregelen worden getroffen. De risico’s kunnen optreden in het testproces zelf of projectrisico’s zijn met gevolgen voor het testproces.
+In dit hoofdstuk zijn de belangrijkste potentiële projectrisico's voor het testproces van {het project} beschreven. Door te anticiperen op wat mogelijk kan gebeuren kunnen nu reeds maatregelen worden getroffen. De risico’s kunnen optreden in het testproces zelf of projectrisico’s zijn met gevolgen voor het testproces.
 
 Het in kaart brengen en bewaken van deze risico’s is ook na het opstellen van dit MTP een continu proces: bij uitwerking van de testaanpak en bij aanvang van de testuitvoering van elke testsoort zal de risicotaxatie worden geactualiseerd.
 

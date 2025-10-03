@@ -2,7 +2,7 @@
     "InputFile": "DocumentDefinitions/Templates/spreadsheet-template.md",
     "BuildPath": "build/Templates/PvA-Voorfase-Producten/",
     "Title": "Voorfase Producten",
-    "Subtitle": "{Projectnaam}",
+    "Subtitle": "{het project}",
     "DocumentType": "Template",
     "DocumentFolder": "PvA-Voorfase-Producten",
     "FrontPage": "ICTU",

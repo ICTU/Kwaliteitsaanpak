@@ -1,15 +1,33 @@
 {
     "subjects": {
+<<<<<<< HEAD
         "5226ef5b-73d3-4374-af0c-8df7d80f5aca": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+        "c86a04ce-c5c0-4303-ae52-5262598e5165": {
+=======
+        "127bb3e1-be5e-443c-81cf-eb4d2b15500b": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
             "type": "software",
             "name": "Producten",
             "metrics": {
+<<<<<<< HEAD
                 "4954731f-abef-4f0b-9f15-0e167c3867eb": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "42d3f921-9a16-4c56-b584-b8b153ee697d": {
+=======
+                "82ee34dc-a54f-48ed-b003-9cce02bd8753": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "1. Business impact analyse",
                     "sources": {
+<<<<<<< HEAD
                         "db560b56-a97c-446e-af72-7c901d5275ea": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "bf51156f-6acd-458d-9f01-28b19842f76e": {
+=======
+                        "69b07f3a-fc61-421f-8707-7f5e8b354097": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -17,12 +35,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "0d520c42-db5b-46e7-bd88-66217dcd9105": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "cd6c5780-ff8e-4c58-99a9-11357b654d6c": {
+=======
+                "a50e0ae0-96fe-4f5a-a9ac-110b344a4888": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "2. Data protection impact assessment",
                     "sources": {
+<<<<<<< HEAD
                         "6a3a7606-9c94-454d-8845-1a2e2ff562cc": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "e606a17a-a925-4129-8aee-9e3fa2e0e562": {
+=======
+                        "0c1f05b5-9e20-4dca-bc8d-ef4f86c7c209": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -30,12 +60,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "d133d2ec-f5df-4548-a816-6d8dfa729348": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "d6fc835f-2cd6-44fd-af30-9a8dd9467b96": {
+=======
+                "5865641f-c449-4e76-90d0-ed688f68e969": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "3. Impact assessment mensenrechten en algoritmes",
                     "sources": {
+<<<<<<< HEAD
                         "3b49a7d5-05ff-40cc-865b-f457e38e4cde": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "48e6fc0f-584d-4f2d-803a-3e162a7f4ae7": {
+=======
+                        "55618810-1e1a-4d29-8848-2b14b2ccca07": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -43,12 +85,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "e04f98e1-4089-459f-b939-bd2eaf50d9df": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "fad0663d-80f1-4dc3-a86d-989c69e95e32": {
+=======
+                "1c78e6b7-1da3-43f9-b317-f89b3b1e25a8": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "4. Projectstartarchitectuur en solution architectuur ",
                     "sources": {
+<<<<<<< HEAD
                         "706a0585-6dd1-41c9-b5d6-0ce5e66ea9a6": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "4b55b630-6caf-4e39-b96b-82d706065fb9": {
+=======
+                        "89a04296-bbc1-4392-bf9c-834d61aa1597": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -56,12 +110,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "ed108adc-adf5-4a5a-838f-db8396a08ade": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "27384de8-d5a5-4abd-9b72-81c4ad688ecc": {
+=======
+                "e956e477-cccd-4518-acfa-222bcc6455e4": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "5. Afspraken met de beheerorganisatie ",
                     "sources": {
+<<<<<<< HEAD
                         "5edef2b5-b16c-490a-86b4-e39bd705921c": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "3cc3dfa7-2cf6-4cd7-8fa7-98e39a476489": {
+=======
+                        "a345b10d-f318-4f96-bca7-c57b5d4b18f7": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -69,12 +135,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "d3284642-5493-4181-b857-4d2c959a5fdd": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "05374ea1-13eb-45b6-92b5-084581504e63": {
+=======
+                "6536ebeb-1278-4ee1-bef8-f3de203d07ce": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "6. Plan van aanpak: voorfase ",
                     "sources": {
+<<<<<<< HEAD
                         "e564428c-9513-4a94-966a-6ef9466fae51": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "644f25f0-a327-4b2e-aa2d-c7ca03a254b8": {
+=======
+                        "af0a387e-15bd-4b2b-b42d-7618f3f7c85b": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -82,12 +160,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "fbdcb60d-8e20-471d-92e5-2b36678f0c8a": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "1e371f5b-754d-4ed7-abfe-21df75a01012": {
+=======
+                "83fef8dd-7ff4-4da8-9c0f-25c90e9483aa": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "7. Beschrijving van functionele eisen ",
                     "sources": {
+<<<<<<< HEAD
                         "bf79d4c7-6fcd-422d-908e-6268ee7ea7e2": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "5f56bbb3-6e88-4563-97d0-a90ec63fdc43": {
+=======
+                        "22564d96-6d78-484a-acfc-2a30c228db09": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -95,12 +185,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "7ed37b81-871e-4533-9624-3953d07aec99": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "6a90ff0f-5bc0-4576-bbd4-61980ddeef0b": {
+=======
+                "7638b18a-9c86-4bfe-adb5-c7c58c570b38": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "8. Beschrijving van niet-functionele eisen ",
                     "sources": {
+<<<<<<< HEAD
                         "e51c56cc-2932-4d79-b4f2-a443bfcd1453": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "ced104e2-9411-4bd2-b41e-47c063f7604d": {
+=======
+                        "793b03b7-cb61-4b5a-9cf7-b31d9b7fecfe": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -108,12 +210,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "9faba94e-3e13-4b93-a0a4-e66adef82039": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "13a3c75d-ae0d-4b53-ab95-7647186e5279": {
+=======
+                "c5908989-4ce0-45fc-8a5a-5b96c8ddf14e": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "9. Product backlog",
                     "sources": {
+<<<<<<< HEAD
                         "8ec56120-e0b1-4edf-a337-47f9eb089c4b": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "28fb493e-fecf-4dd9-a596-f1f671ebd83a": {
+=======
+                        "ec50b820-568a-44cb-a98b-41352fabca3d": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -121,12 +235,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "9d29ac77-835e-41f6-a29e-d046657e2b33": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "c5c91db6-2d8f-43fa-85f8-de25862e3cae": {
+=======
+                "a388f452-b4f5-49f0-8ad9-f3508ca834a6": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "10. Ontwerp- en architectuurdocumentatie",
                     "sources": {
+<<<<<<< HEAD
                         "596ee0d8-878a-489e-a6e6-23296d8cbfcd": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b602fd4d-e5e5-4dc3-bc66-79bb78e72055": {
+=======
+                        "c3756eda-89cc-440e-9490-6043a9c7b6a6": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -134,12 +260,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "6c8f3006-6872-4ef4-afaf-f37745bdb355": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "46e5a585-b7c7-401f-9415-14e2e3c9f7e7": {
+=======
+                "b37f7358-683b-4930-928b-70e99e45b4dc": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "11. Mastertestplan",
                     "sources": {
+<<<<<<< HEAD
                         "913491ce-6905-42a4-b79d-eb400bf2f8b6": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "7c533a35-0a66-4b20-b173-1a87b4d60f39": {
+=======
+                        "447c3bf2-6792-41b6-8199-f793e7e4ce48": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -147,12 +285,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "05b41439-9d7a-4e4f-ad9e-f929ece00a36": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "2c3a8032-e75d-46bb-9fad-d5e7d93100b0": {
+=======
+                "3b4a7808-27cd-4463-a70d-aee61a7f9186": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "12. Detailtestplannen",
                     "sources": {
+<<<<<<< HEAD
                         "0b0cdd47-11f6-4825-98d1-1cd85eed7637": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "41935eb2-c108-4e6b-b04d-46ed25463a31": {
+=======
+                        "71c14257-40c5-4293-94ec-fb07b398e609": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -160,12 +310,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "9193bc59-3b2e-40fd-8825-df10cdaf20e9": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "3f3bb7bc-7508-44a0-b996-f037febc3cab": {
+=======
+                "308e1bb2-f17a-466f-9bd5-a36207e6a82a": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "13. Informatiebeveiligingsplan",
                     "sources": {
+<<<<<<< HEAD
                         "8cb28d16-1470-49e0-8eda-35dfd71fea04": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b31a3682-1b88-4d31-9ff9-b9265a3ee3d2": {
+=======
+                        "0b50299c-c03d-4a94-b2fe-f85cf2ccbf07": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -173,12 +335,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "aca8b437-2847-4d07-93d8-d37537f0af52": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "a18caf22-b214-49a4-a2ee-c03aea60ff8e": {
+=======
+                "f14171da-1307-43be-ba7d-86c44516b925": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "14. Kwaliteitsplan",
                     "sources": {
+<<<<<<< HEAD
                         "b16a812a-b5c7-4de8-964d-0fa25946dbb8": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "26b9d667-a520-489d-b080-13d30907273b": {
+=======
+                        "a2c00d3a-c9dc-42f3-a537-b850b486413f": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -186,12 +360,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "0c9f33ca-849e-4c65-b725-cc9c971d63d8": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "ba3389be-3125-4d75-bbb7-309a45903768": {
+=======
+                "52c0140b-e4af-4b0e-8134-b27ae5c7e32b": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "15. Plan van aanpak: realisatiefase",
                     "sources": {
+<<<<<<< HEAD
                         "aa219d46-a9cb-48d8-803e-3a30f66d6754": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "47c621d3-6da7-4533-8d80-6e150bc480e3": {
+=======
+                        "8cc996ab-872f-43bd-bbab-354317bf45c1": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -199,12 +385,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "b9bf9f2a-abff-4686-988e-978c85759989": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "254b1be1-1ab4-432b-ba47-6c58b0ea723b": {
+=======
+                "02882264-1530-460e-9a97-5e58a6e8b170": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "16. Deploybare versie van de software",
                     "sources": {
+<<<<<<< HEAD
                         "ac1819c4-5cf7-46b0-ade1-62be617f3848": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "c9c9606d-0f9e-452d-b3bd-360c8768bb15": {
+=======
+                        "90543aa6-aef4-4608-9ec3-c9a42b4c61bc": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -212,12 +410,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "c93e1b7d-91f4-4df7-b9bb-c7b9a810b611": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "5a2d6200-9ff1-4e45-aa54-19742f3a9b61": {
+=======
+                "411c94f2-fd43-40f6-a2c3-f562197960c6": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "17. Testrapportages",
                     "sources": {
+<<<<<<< HEAD
                         "1ab667c5-a9c4-4b4f-b01f-afe2041ee79a": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "18a99c11-f390-441d-94d7-c9c72c161ca9": {
+=======
+                        "eefe4d6e-e333-40e9-838d-926c7168d489": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -225,12 +435,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "5a61f5c1-19de-477b-9d74-81bdf3b1d605": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "2006cbe1-9ef3-49d8-bac3-13aecf864b22": {
+=======
+                "3566d4b2-da43-4359-91f4-198f3c13da11": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "18. Documentatie voor deployment en operationeel beheer",
                     "sources": {
+<<<<<<< HEAD
                         "ede48608-553f-4510-9bfe-234e96f7e501": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "581647e8-24f2-4529-94d0-dc92fa74ea06": {
+=======
+                        "8d6f0d61-ba9c-4e1b-a5c0-078e72644d66": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -238,12 +460,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "07336281-9c85-40fe-bf4e-9796591c232c": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "b53a0458-62a4-486a-9100-ae9d2b659071": {
+=======
+                "55fcd445-a9e4-4215-893c-293a558c6696": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "19. Software bill of materials",
                     "sources": {
+<<<<<<< HEAD
                         "c2fa57c5-303a-4080-89b8-920102c284e1": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "3a38b04c-b2ae-457a-91ff-ab2143114543": {
+=======
+                        "12a8fb76-86e9-425d-9bd2-71dd6a43c3d7": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -251,12 +485,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "e894e2c6-e851-44af-8909-fff2798c9d5b": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "c444f43a-d4d4-4432-aa41-14efdd524c4c": {
+=======
+                "4710b946-4759-4d42-99f4-6783b81ffaac": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "20. Release notes",
                     "sources": {
+<<<<<<< HEAD
                         "7846e5d6-d838-4b06-b94d-37b3735084c9": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "be2bfbc4-6886-4a6b-8d8d-eb80183d4d54": {
+=======
+                        "c1eadaeb-cccd-4611-8d06-3816024aed58": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -264,12 +510,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "50c6366e-71c4-4560-a3c1-b4369c8ccd71": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "c6ae7e93-ad2c-4ca1-83c8-7acc25044526": {
+=======
+                "e2c32169-500c-4e9e-b102-5263fbebc83b": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "21. Vrijgaveadvies",
                     "sources": {
+<<<<<<< HEAD
                         "450459fd-40c2-4681-8b48-b1761244240c": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "02395ff9-ee27-4536-be8d-76d1db4165e3": {
+=======
+                        "aa00fc85-b031-4986-bc58-539c1883ca51": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -277,12 +535,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "b7e85aa5-9cc2-46dd-9b42-6837163118a9": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "a653dba3-bc19-46f5-8b62-7e3edeaf49d8": {
+=======
+                "c0cfca7a-8643-4cf8-8bac-ac6f81b31373": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M32: Het project onderzoekt de kwaliteit van over te nemen software",
                     "secondary_name": "1. Een rapportage met tenminste de bevindingen, risico's voor opdrachtgevende organisatie en ICTU, en mitigerende maatregelen",
                     "sources": {
+<<<<<<< HEAD
                         "e1e386b4-930a-45e7-b232-bdd5dde3d4db": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "88977d3c-2c03-4154-bbeb-b9ae16861f77": {
+=======
+                        "4c26d328-cccf-4561-8b1c-034eeed31c59": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -290,12 +560,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "d10c88d8-08ae-4379-8947-64d135a5ebb2": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "c2ce1227-2f62-430c-829f-63670babd0ac": {
+=======
+                "0145a458-0c46-4304-9f58-307fbe1839e7": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M32: Het project onderzoekt de kwaliteit van over te nemen software",
                     "secondary_name": "2. Een transitieplan dat de activiteiten beschrijft die nodig zijn om de software af te bouwen of te herbouwen en te onderhouden",
                     "sources": {
+<<<<<<< HEAD
                         "2d433263-390b-4023-be3f-548452c210b7": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "624b31c8-9ff5-4c2d-8ae2-fe97fd30fd00": {
+=======
+                        "f7656ce6-b00c-401d-9a51-30f95c07b01b": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -303,12 +585,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "61a61cca-2c53-4fa5-91fa-a4b10aa40518": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "76448dcd-c00c-414d-b1d7-15ee97d967b2": {
+=======
+                "a2f61a8f-df42-4e9a-898a-705214fa2b29": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M32: Het project onderzoekt de kwaliteit van over te nemen software",
                     "secondary_name": "3. Als er significante technische schuld aanwezig is in de bestaande software: een plan voor het aflossen van deze schuld",
                     "sources": {
+<<<<<<< HEAD
                         "c1d7f89b-129f-40d5-aa53-7c9f3914926e": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b5717a05-efe0-44d7-a92a-236080b6493e": {
+=======
+                        "1ec9a29c-6de7-41c9-8e90-a09807646148": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -316,12 +610,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "4dcf0327-2c23-415d-a312-577c002a4daa": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "64a0581c-d391-4f39-a804-d9fc343175f5": {
+=======
+                "10b2a54e-bbcb-4012-aae0-a645c9b0160a": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "1. Tijdens de voorfase: het project reviewt de deliverables periodiek",
                     "sources": {
+<<<<<<< HEAD
                         "0bace036-dd5b-4d4e-ab86-ecac5d667bad": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "5981cf2f-420f-4e91-8a20-51efc7108218": {
+=======
+                        "8d4228d9-fcfb-48e9-9171-250630f24323": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -329,12 +635,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "0b859d85-100e-4f02-9fc3-7236117df1b1": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "0e2c22fc-6e64-457e-85a7-22603f40eacd": {
+=======
+                "c6fab67c-3ae8-4ac9-8ccf-addd6cfa29b9": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "2. Tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd de kwaliteit van de software",
                     "sources": {
+<<<<<<< HEAD
                         "0f4bdce4-21a4-4ece-8094-4bba19c0046a": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "e1aa0cc8-5ac4-47c9-9f0b-a0a7ba408a11": {
+=======
+                        "4c3d6f15-10bf-449c-86b8-93cde9516ae1": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -342,12 +660,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "056a71f9-00dd-4bde-bb4c-476b6d146505": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "e6ff84b5-0c27-4f5e-b3a7-b517e993598a": {
+=======
+                "74e65bad-0ba1-4334-bfb7-c3c9e6b81266": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "3. Als operationeel beheer onderdeel is van de dienstverlening tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd het gedrag van de software in gebruik en beheer",
                     "sources": {
+<<<<<<< HEAD
                         "d7220125-bba1-4b8c-8fe5-2ef77565d5c5": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "c38a29d6-e76a-46ed-925d-1ed4800edf00": {
+=======
+                        "ad63ffa9-d622-47f8-b2cc-416933a183fe": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -355,12 +685,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "37ec55e5-b62d-4ded-a641-ef388ba123f1": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "38e4ce91-e164-437d-875f-0b180845ab7d": {
+=======
+                "8623fe51-a1ac-4719-ab3b-24e97570d9b0": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "4. Tijdens de realisatiefase: het project evalueert periodiek en handmatig de kwaliteitseigenschappen van de software die niet geautomatiseerd kunnen worden gemeten",
                     "sources": {
+<<<<<<< HEAD
                         "df0c3054-d0ae-44c5-93c6-dcdf5bffa6d5": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "1e8fe5f1-958e-4767-8068-36a5cddb6a52": {
+=======
+                        "9ad6c574-09a4-4223-8e0a-78217479db9e": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -368,12 +710,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "4609786c-d30c-4542-a467-f7e61eb7436a": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "62be4b20-f8d2-44a4-ae45-767c0c99c58e": {
+=======
+                "d98e6c68-2ffe-4e50-8812-2c919f86d30d": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "5. Tijdens de realisatiefase: het project actualiseert en reviewt periodiek de documentatie",
                     "sources": {
+<<<<<<< HEAD
                         "0bcda02a-3435-41ae-991e-8f8b91128182": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "6617c665-6dcc-4397-a986-19d0aefdf772": {
+=======
+                        "1e8339c3-9904-4c57-94d2-1ff56829c3e0": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -381,12 +735,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "5e7ccb7f-2885-474a-b5f9-ed53ee147d2e": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "e1a11be1-7b84-4983-904e-85d0843c2413": {
+=======
+                "aa3db7bf-0795-4098-84a0-3336cacab713": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "6. Indien nodig: de kwaliteitsmanager escaleert het langdurig niet halen van de kwaliteitsnormen",
                     "sources": {
+<<<<<<< HEAD
                         "c0241279-2eef-4b8d-a666-daeb75a8b1fc": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "74c29e8c-c80b-4c5d-a5d2-d58dc71edd2b": {
+=======
+                        "2d502e1d-eb5b-4b5e-b169-e914f0aff29a": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -394,12 +760,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "0aed0cad-4900-46cf-af54-1cc6503bb114": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "69503556-bda7-48be-be42-af1a7f47d98b": {
+=======
+                "a238cee5-ac8c-482e-8492-2552edde4217": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M03: Het project zorgt dat het product traceerbaar aan eisen voldoet",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "a33c54c2-c6f0-435f-9c54-3574623adc35": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b97080c6-e102-4f29-9188-7213a820bac8": {
+=======
+                        "488f5bce-f399-45e1-a4d8-991ec10fc5db": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -407,12 +785,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "6d516e99-2752-4066-917e-3e3ab55c3fb7": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "fcfdab73-a78c-4069-9726-fc5f3c24c69b": {
+=======
+                "f9fd281b-e739-487a-9988-8bc238dc8bbd": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M04: Het project borgt de correcte werking van het product met geautomatiseerde regressietests",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "e360866e-9482-441c-a9d9-3c737d1a0bc9": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "eb8a8bbd-df56-4e6a-9ea2-8ed81ce57da3": {
+=======
+                        "c86f3bd2-265d-4aca-8d07-122b2cf3b740": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -420,12 +810,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "2f78324c-588f-4d32-9e71-81eea5818fa3": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "f3021535-6555-49da-abb0-86dea499de42": {
+=======
+                "1d806138-a4f9-4647-ad5c-ba0402ec67fd": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "1. Bouw van de software",
                     "sources": {
+<<<<<<< HEAD
                         "70096790-e2c4-4acf-a1c3-8a7979518cc7": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "ba6bfacd-f059-4f1d-b7da-59528ba3a01c": {
+=======
+                        "096363e9-987a-4567-af44-87bcafdb1dfc": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -433,12 +835,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "8cc5074f-971b-4981-8c96-3ab640672518": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "12188f85-9ae0-46e3-9417-e457192cd98b": {
+=======
+                "6c5c20bc-86c3-475f-8db6-3e1ab77d421f": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "2. Unit tests",
                     "sources": {
+<<<<<<< HEAD
                         "f88075d1-8a02-4904-b509-788df921f0ee": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "8610d995-1013-475e-9f8c-11b91fd08164": {
+=======
+                        "44972ad8-cdd3-4586-9ed8-d4ccc9159cb5": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -446,12 +860,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "22ec3dc2-de56-4499-a0f1-ab6f9b206655": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "dcc4b225-2c71-49c3-8c48-3024a6554e2d": {
+=======
+                "8aa78e11-74e6-404b-adb5-c45c5f1bb6d1": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "3. Regressietests",
                     "sources": {
+<<<<<<< HEAD
                         "8cd00620-c17c-45a6-84e5-459d220cbbb4": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "0d2d95d4-8edf-43b9-828e-528b9765c553": {
+=======
+                        "2474f59e-c45d-4d9e-a509-bd6cfc6e52d4": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -459,12 +885,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "5e8b3ea4-0a6c-41f4-9bd1-269cf5f2bac3": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "78001890-8f6d-496a-b010-a619615caa4f": {
+=======
+                "0119e16a-d6a7-4140-96c6-714273795973": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "4. Beveiligingstests",
                     "sources": {
+<<<<<<< HEAD
                         "7601415b-95f9-4f68-a575-1e04f62867f8": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "3aa0175a-8688-42e2-bbc4-a3c694371335": {
+=======
+                        "35c5ee04-2f76-4b62-abab-634a22abbb32": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -472,12 +910,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "c82e517c-fa46-4d9f-be97-9f96487190da": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "3bd7d3c9-8697-4059-a709-01aa9bec6915": {
+=======
+                "9ddd34b4-1c8f-4f42-9b91-1ef687b3bedf": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "5. Performancetests",
                     "sources": {
+<<<<<<< HEAD
                         "2653fc48-ee8e-4411-b399-55d06bdb28eb": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "fde8dacf-fb37-48e2-92a7-7c6b055b7404": {
+=======
+                        "6ee84520-677a-4128-ab08-19c50e102964": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -485,12 +935,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "57ecd79a-e06a-4937-8554-03d9d07540f5": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "be22352a-d6e8-472a-b901-d60932ec646f": {
+=======
+                "8d0bac23-aebf-4b60-81d8-b8fee8ba347d": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "6. Toegankelijkheidstests",
                     "sources": {
+<<<<<<< HEAD
                         "a2edf042-e5ea-4c73-ae67-6957893cc7d7": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "a7c3175b-b89f-4f9c-b50d-c52af4fb6fa5": {
+=======
+                        "d1c54157-1e11-4c7e-8776-ea2ed043f614": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -498,12 +960,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "18fe1f5f-10b6-445b-ab37-0cd3671a1b9f": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "e886b354-a447-4ea0-af1a-d57d5d326fab": {
+=======
+                "124f498f-70ad-4930-a47f-01556b022a78": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "7. Broncodekwaliteitscontroles",
                     "sources": {
+<<<<<<< HEAD
                         "f416bcb6-e86a-46a2-88c9-39247843e8bd": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "ca9c4526-1537-4c58-825b-7e3ce2f8e16f": {
+=======
+                        "e2ee59e9-d82a-455f-9334-d4843d410171": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -511,12 +985,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "29322dd4-cf20-472f-9fc9-6aabf098610a": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "d3abb9d1-e12a-41b4-8f13-90bd8363d3de": {
+=======
+                "be6cb17b-51ba-43cd-bb02-1957c9c57665": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "8. Installatie van de software in test, acceptatie en/of productieomgevingen",
                     "sources": {
+<<<<<<< HEAD
                         "a44d2b1d-f82e-4878-ba69-df168debde71": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "d4b45800-c0b0-4e9c-b2d3-243f16f0d1c4": {
+=======
+                        "72632ef9-a98b-4bc9-b036-1fd377e19db4": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -524,12 +1010,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "4fd87469-ec49-4661-bfd9-c99fa7dd491e": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "949c2192-d67a-4081-ac03-0f0112b4fa38": {
+=======
+                "388e2c7e-0308-4212-b8c3-b061d53f1e47": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "9. Oplevering van het totale product, dus inclusief alle deliverables, in de vorm zoals bruikbaar voor en afgesproken met de opdrachtgevende organisatie",
                     "sources": {
+<<<<<<< HEAD
                         "ec33c05d-5717-4de9-8cc0-012fa8bbefca": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "4fa3e40c-8e0b-41ce-af6b-dcf437540e29": {
+=======
+                        "30639d36-a643-4b8c-a99d-0107d4269c7e": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -537,12 +1035,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "3b49ad92-f761-4d8f-82e5-43443b90bc8c": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "02e9256b-98ca-4958-8b77-af8ab18f92a8": {
+=======
+                "4629e7ae-ef19-44d3-9744-f57e79be3af5": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "1. Product en sprint backlog management en agile werken",
                     "sources": {
+<<<<<<< HEAD
                         "4fc0cd4e-f7b8-47b3-8510-a9009612faaf": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "669f820a-a08d-44e4-b1c1-2c9c3646dd40": {
+=======
+                        "68935f35-2b10-43b5-8eed-353ff267a97e": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -550,12 +1060,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "9e68524f-9413-4759-bfc2-48fbc97578be": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "32e97978-d41b-4bb8-b983-dc1f7e6e787c": {
+=======
+                "0c679dbf-1db6-4165-b3d3-dd8951a10961": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "2. Inrichten en uitvoeren van een continuous delivery pipeline",
                     "sources": {
+<<<<<<< HEAD
                         "671c3880-d254-4f56-bd79-91a2f4bc2a77": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "3f0e1c12-9c4c-45df-959c-ca028b52c1c9": {
+=======
+                        "cd413cf1-0003-470c-b58e-0bf71ba4c079": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -563,12 +1085,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "7665f323-9bf5-401c-bb49-c4ffefd1a520": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "7c0036cb-d308-4605-a93f-7eb8e017f6ec": {
+=======
+                "a257ad8d-bd11-4c78-a5c5-5dbaa9936ea7": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "3. Monitoren van de kwaliteit van broncode",
                     "sources": {
+<<<<<<< HEAD
                         "1f3adcd3-1aa8-4920-84f4-d2736dc109d3": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "eb5c6fc3-221d-42ed-b821-14ba487c87d9": {
+=======
+                        "2d2db3a6-3a93-445c-b0fa-9e1380e43064": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -576,12 +1110,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "e2626837-79b5-41ee-9fb4-5d82e10ce7e7": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "e6c45811-8ecf-4952-b940-28b1570ef165": {
+=======
+                "d4787487-1fb6-441b-9385-4d7d8fbb5ed5": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "4. Versiebeheer van op te leveren producten",
                     "sources": {
+<<<<<<< HEAD
                         "ad223c7f-7f38-4e51-8391-0a0cf1609d81": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b72db693-04db-4d67-babe-2a9affac5a73": {
+=======
+                        "2cf95411-e7d3-4450-915c-c5c22b49571b": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -589,12 +1135,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "3f166eb2-2afa-4121-b52a-feeaa3e9f26c": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "7dd77e23-0cf9-4f6a-82d2-498a7b008dda": {
+=======
+                "ced84ca7-2737-452e-9a8f-10093a20a67f": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "5. Release van software",
                     "sources": {
+<<<<<<< HEAD
                         "912df845-cd5e-45ea-aea0-d42b9b14d4dd": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "1f329f5a-77ed-4e0a-9585-2c1e644265b9": {
+=======
+                        "3021d2f5-1185-4c1b-acce-4e3c8bc3e2e2": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -602,12 +1160,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "73e4fd3c-2025-49b9-b435-41bd4f65b893": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "121507c5-2e3d-47f4-8c13-71ecfa666969": {
+=======
+                "05812495-8add-4aa9-be9c-a4552898cee1": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "6. Maken van testrapportages",
                     "sources": {
+<<<<<<< HEAD
                         "a65e7efb-7375-435f-91a6-896b14f3b9e4": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "aa062576-f105-406c-8cb4-dc7272becad3": {
+=======
+                        "a5f8ef33-68b8-4ba9-82f2-57325e76dda3": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -615,12 +1185,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "463e3bbd-7244-49f5-9816-ecce79caa2ac": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "c580b574-cfb7-452e-881c-9c11d6056a7f": {
+=======
+                "044217a1-8886-4296-889b-5316cc937ddc": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "7. Maken van kwaliteitsrapportages",
                     "sources": {
+<<<<<<< HEAD
                         "4712df2a-2d20-46ab-a1d3-2bcc8aca17af": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "e3d84204-b939-4bc3-862c-1b9d7314f4d7": {
+=======
+                        "388105d3-dc74-4089-9d50-e048da12e309": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -628,12 +1210,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "2031e79a-014e-4ad2-bb13-3c505feb6ecb": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "ea8d9695-bb63-433d-8d00-33709209c86e": {
+=======
+                "cc1d56d7-418f-4029-8d1d-a5d24054a448": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "8. Controleren op aanwezigheid van bekende kwetsbaarheden in externe software",
                     "sources": {
+<<<<<<< HEAD
                         "a026d318-426e-48b9-b0e5-027b358d05b8": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "20a604dd-34f1-4465-8379-fc1d829024e2": {
+=======
+                        "e99e84a2-58cb-4203-967a-f58ce454f65f": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -641,12 +1235,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "44c06813-4826-4456-a8a7-69d88c19ec82": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "d4e61f75-827a-4f8a-b1a5-4f7308b211c5": {
+=======
+                "ee3afba2-db8b-4a47-9e4b-91c65e914bc0": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "9. Statische controle van de software op aanwezigheid van kwetsbare constructies",
                     "sources": {
+<<<<<<< HEAD
                         "6cdc0652-3802-48cb-8526-9d27ffa953e1": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "0fd2508f-d685-46bc-b7a7-fff9da55f117": {
+=======
+                        "6d9dd901-a5bf-47ef-9ebe-8d08f00e4806": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -654,12 +1260,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "571828cd-1280-48f5-ad1b-3721ee030757": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "1599e9b2-81b1-47db-87a8-23586f626506": {
+=======
+                "d9848203-a276-4726-afac-032afce7a6f8": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "10. Dynamische controle van de software op aanwezigheid van kwetsbare constructies",
                     "sources": {
+<<<<<<< HEAD
                         "f3515bbb-bcf8-4ce3-9495-c35d77db78bd": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "7d0f69fa-4a6a-4ccb-899d-4b497078c26d": {
+=======
+                        "5938fe8e-c117-450f-8003-ccba07ee46d2": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -667,12 +1285,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "96739c5b-6179-4d13-8f36-0cef40012cad": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "71e25a53-054a-4b84-910c-058d1db56564": {
+=======
+                "a0a8f2a8-a4cf-4589-a7a3-b77cb4d6eee2": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "11. Controleren van container images op aanwezigheid van bekende kwetsbaarheden",
                     "sources": {
+<<<<<<< HEAD
                         "4b23b431-4b46-4474-91f7-cc60c569d8cc": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "6095ca11-29f3-4933-bf71-1451446c1321": {
+=======
+                        "2b55516e-7d72-48b2-9dae-2b551cb92f9a": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -680,12 +1310,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "4a18be8f-54bb-4d26-9956-338362abe4ce": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "2581c713-2be6-45a6-ab15-7d0989f037f2": {
+=======
+                "0f772435-3e95-4c64-8940-c4414c867467": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "12. Testen van performance en schaalbaarheid",
                     "sources": {
+<<<<<<< HEAD
                         "6983ef44-392a-4271-9418-c0a4262732cc": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "08a44ada-92b9-4a72-bf8a-18b86e4f9937": {
+=======
+                        "c0e08f7d-75dc-49d1-b5f7-426e3c00651a": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -693,12 +1335,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "3841fec4-b0ba-4c26-a2df-744e26912d82": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "548aa5c1-03af-4b46-8083-d53d439a11b4": {
+=======
+                "60adf8cb-bee2-4aee-8dbc-fa0096ba0f85": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "13. Testen op toegankelijkheid van de applicatie",
                     "sources": {
+<<<<<<< HEAD
                         "3a7d3d94-9ea9-46d7-8304-e6cad36d3420": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b8d79b82-fa4f-4db3-a031-dc96e0ff7642": {
+=======
+                        "6913e108-918b-4ed4-88c6-3532e10c12ef": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -706,12 +1360,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "9a543f15-8c36-4afb-a7b6-922b0f88607c": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "6ec33f67-7e24-4bff-b3d5-6e27e2490b7e": {
+=======
+                "6b5f4669-f57c-4535-9b5f-8e00e5e33b47": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "14. Produceren van een \"software bill of materials\" (SBoM)",
                     "sources": {
+<<<<<<< HEAD
                         "9258b40f-808c-4cd9-907f-877dc01aed22": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "16052806-f965-440e-9946-62089b7441ca": {
+=======
+                        "6505162e-4d6c-4e41-b60b-1c81244fd7a0": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -719,12 +1385,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "1733b72d-c1ef-4765-84b3-7b6b4831de29": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "d4e34b34-a015-4069-ac6a-d4c3cf8f4639": {
+=======
+                "89104453-5bc0-42ae-826a-e635b0627af5": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "15. Opslaan van artifacten",
                     "sources": {
+<<<<<<< HEAD
                         "dbf74364-7d55-4f46-a223-ed3654bdd7c2": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "6d0f523c-5e21-4394-9718-58fa9f537d79": {
+=======
+                        "45e7084c-1e53-4ea1-b841-98b3e09dcb9f": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -732,12 +1410,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "e524dc46-6223-4761-b416-623b27cc011e": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "07300c0a-82f5-4f14-8f7d-3c2e2a3fc721": {
+=======
+                "151bba72-db30-4f41-97b5-860c0f04baa8": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "16. Registratie van incidenten bij gebruik en beheer",
                     "sources": {
+<<<<<<< HEAD
                         "f97d0664-9341-4e07-aa94-542f9760f8a0": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "829e43f1-c04b-4f03-8747-56df140edaa3": {
+=======
+                        "1e9e5777-49d1-422b-a4b4-9688dd769ba2": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -745,12 +1435,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "a0bedb3e-30f1-4198-8105-0ce337530cd3": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "b24f00d6-9e26-4793-9124-0c59cd448c3f": {
+=======
+                "0a17521c-a009-4fec-8e0d-8a602f97af8d": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "17. Bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving",
                     "sources": {
+<<<<<<< HEAD
                         "a180421d-6672-4c4a-aec4-dcaa74eb6016": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "bf72dc0a-3960-405f-b85e-40d07220e869": {
+=======
+                        "4bfecf52-d55d-4da5-9ec7-7cd12a4725c7": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -758,12 +1460,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "5e9c5d9b-b419-4a3f-9b8c-e5c3b4febb7b": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "562fb5e1-b386-48d8-8260-23eea9c49534": {
+=======
+                "1dc8b905-e90e-45cd-b5d6-d4c047c9f41b": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M08: Het project maakt technische schuld inzichtelijk en lost deze planmatig op",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "552b1f4f-70f3-4a69-aba5-7628f597dfb0": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "f19c3146-17cf-463e-919f-176482f2c83c": {
+=======
+                        "9dfe68b4-ef9b-4d34-a5e1-a9b85963c57c": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -771,12 +1485,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "1ca832c6-8e44-48a2-b5f2-2a1b8297a3e2": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "980b5856-6b67-46f3-b7db-414c8da4bfd0": {
+=======
+                "be40fd28-96a9-48d9-82f8-a06ec23065ce": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M26: Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "ba8781fa-533b-4322-92e8-268963e738a3": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b5951b83-7133-4165-ac27-fa246401fa49": {
+=======
+                        "b2a14c30-db5f-4d10-b53d-95185fceeb0c": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -786,16 +1512,34 @@
                 }
             }
         },
+<<<<<<< HEAD
         "493fd76a-cd36-43d1-ac16-3a2d38f30294": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+        "0905f3fd-51bf-423d-9609-b0bce79e5151": {
+=======
+        "b7fb8d62-3bb4-4203-94fa-25175f40e2b0": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
             "type": "software",
             "name": "Processen",
             "metrics": {
+<<<<<<< HEAD
                 "eed2ff9c-90a5-4124-a1e0-b15b68e9f943": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "f976e867-fc2a-469c-9285-5f4a1c692891": {
+=======
+                "a62e0da4-3f72-41bd-977d-05f2a457a70b": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M14: Het project bereidt samen met opdrachtgevende organisatie en betrokken partijen de realisatie voor",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "3682fea2-9a83-4292-9622-d86ba8605d86": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "80203e09-e663-4226-878d-ae3ac9836995": {
+=======
+                        "9f7d452a-56b6-4b5d-8247-19b287de5906": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -803,12 +1547,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "4fbee1d3-120a-4844-8a96-fe8a91ec5d79": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "8eaa1005-6224-47af-a919-480148a7403d": {
+=======
+                "7b7061ff-d746-4198-830c-5f5f63d5c52f": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M21: Het project selecteert medewerkers op basis van kwaliteit",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "1ac11da2-aee6-4b12-99a1-11ad7b0af663": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "964b2065-61cd-4cb0-838e-a62fd7cfce6b": {
+=======
+                        "a8287868-fae5-413f-9e4f-7195499111ab": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -816,12 +1572,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "dd6f2fd9-0981-462e-9f5c-61102d060cc1": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "d962dd5a-5e26-402b-b713-6e2fd97d1674": {
+=======
+                "df0f2d11-7075-438b-bb02-a39fce4fe0f6": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M23: Het project zorgt voor de aanwezigheid van kennis van en ervaring met de Kwaliteitsaanpak",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "edd9ea04-a935-49b9-94e2-9c7721eb1e8e": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "8b6d517e-614c-4612-9476-c65477a6a03d": {
+=======
+                        "0b2437a5-4231-4d5b-a3aa-f2ec64ee37ca": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -829,12 +1597,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "7e3f67a5-909b-4dc3-bfd8-9436b5a7f42c": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "888b83a4-0948-4690-868e-85ddb5b44cbc": {
+=======
+                "ae57e628-ce79-4071-b5ad-ed513f6f2529": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces",
                     "secondary_name": "1. Scrumteam bestaand uit product owner, ontwikkelaars (zoals programmeurs, testers en ontwerpers) en Scrummaster",
                     "sources": {
+<<<<<<< HEAD
                         "230954a2-2722-42e6-874f-e530f1e58f7c": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "018bacad-0e8c-4651-a4c1-14bdfe3b33d6": {
+=======
+                        "c1db2aa3-4140-4e30-8812-3798969f7386": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -842,12 +1622,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "4b7b3ae7-094a-43ab-a7fc-fc1eb8d8a419": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "2a9be86d-2649-4ebf-9115-cc65de2b4f24": {
+=======
+                "ff12fd05-6dfd-4d0d-aeab-236030f4a749": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces",
                     "secondary_name": "2. Proces met daily scrum, sprints, sprint planning, sprint review, sprint retrospective en sprint refinement",
                     "sources": {
+<<<<<<< HEAD
                         "372e176c-4ee8-4184-ac4c-e7103531f025": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "eb93fabf-9d7c-4fed-9915-418ca746af1b": {
+=======
+                        "6b9daecb-aca0-49e7-94b5-a3bf64b0eb18": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -855,12 +1647,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "50410795-2fc0-4934-9fb3-2f6a3455b479": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "50b0e173-84f8-4d8b-9d57-a02cb9921b3c": {
+=======
+                "3cdfe9c2-5ad3-4f0b-ad70-cce8e15c3ab3": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces",
                     "secondary_name": "3. Definition of Ready en Definition of Done",
                     "sources": {
+<<<<<<< HEAD
                         "29c00f59-f156-4e15-9474-9a8fd2795ea9": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "cf1e8f0c-8836-4995-8f98-215e9280c31c": {
+=======
+                        "525ca1e4-0952-4113-926f-ef7ce8d5d7ad": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -868,12 +1672,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "567c4051-60a2-4a3b-9d8d-3f07caf9765e": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "c20536e7-bcf7-440f-bd83-3f94cc32a509": {
+=======
+                "0d434c00-f3df-4aa6-ac9d-a46aa5b4cfa8": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces",
                     "secondary_name": "4. Product backlog en sprint backlog",
                     "sources": {
+<<<<<<< HEAD
                         "da1bf5e6-3384-41f4-b3c7-45e164068b22": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "e0024c7e-59d9-432c-9304-cb1a12b1f7db": {
+=======
+                        "0b3cef52-d69c-4935-9adc-88d19656cb7a": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -881,12 +1697,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "72fe554e-62e5-4fd7-aed8-27ae63f4abc8": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "ac998c5d-269c-4e7a-b726-22ea6cb69107": {
+=======
+                "d2d84614-5ab9-4c76-b880-80a469ced806": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M35: Het project hanteert een agile architectuuraanpak",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "c8339ac2-c6ba-4839-959e-9341ddac3847": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "1e9ee908-d529-4b75-8011-3329bf484f8b": {
+=======
+                        "7691a2f6-2d64-416a-8fb5-baf85e99d0d0": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -894,12 +1722,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "9c14a6c7-b130-429f-9e75-1fb7aa060d0c": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "f05cd858-c892-4392-9056-e5065fc987eb": {
+=======
+                "62f02d4a-cd17-4e05-a576-e3124df8a9d6": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M10: Het project kent een wekelijks projectoverleg",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "36ad8dbf-4faf-4e2a-b87c-075601f47773": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "c174a468-c7d6-4bce-b22a-6535ba28a909": {
+=======
+                        "af4fef03-9d4d-493c-be05-0ef7e28e65d0": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -907,12 +1747,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "0816e7c4-834b-4149-aa41-77cc7b916ae6": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "a2b4e2c8-deed-4447-96a1-c8f68c369a09": {
+=======
+                "0dcb51df-89c1-4d4f-bbe6-0955ac5b96c8": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M28: Het project voert periodiek een self-assessment uit tegen de actuele versie van de Kwaliteitsaanpak",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "fe1fc27b-dfed-4a3f-97af-3f4079e702bc": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "c22dc337-0a7b-44d7-a81e-01b526f402cf": {
+=======
+                        "38566cff-0a98-4877-add8-7b47aae985a6": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -920,12 +1772,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "a4b58221-2645-4748-b0b9-fc6dd6a867bc": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "f2294a93-973c-4c08-a651-ad7f27a56297": {
+=======
+                "3fd18cb0-1577-4a3e-a98a-28d81c14cd1f": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M30: Het project identificeert, mitigeert en bewaakt risico's",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "a860421b-3259-4cd9-b838-afade6184ebd": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b590c324-487f-4d3c-82a5-ab9ea310e15b": {
+=======
+                        "7af189b3-736a-429e-b14d-68227ba5eb80": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -933,12 +1797,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "fe16b93e-6ba3-4dbf-b0ad-0c1265321488": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "59ac5360-57f8-4e0d-a27d-d4a4b81d26ba": {
+=======
+                "ca5bcf0f-5636-4dc9-b6ef-c280d7b9fa2a": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "1. De documentatie beschrijft de ontwikkel- en testomgeving die is toegepast",
                     "sources": {
+<<<<<<< HEAD
                         "4accbdf8-8645-4a17-8bc3-ebe26dbbff01": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "155395be-d122-4df4-a567-3c11146e00a4": {
+=======
+                        "7bb8856a-d398-49d5-b2f7-9ef2649507dc": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -946,12 +1822,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "5ebf7dde-55fe-4392-a974-61768b9bd8d3": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "26f86152-491b-4826-ade0-7814e1ba41ed": {
+=======
+                "4500abb1-3d86-4015-a3a8-0eb6aa633b9a": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "2. De functionele documentatie beschrijft gegevensmodellen, functionele indeling, koppelingen, berichtdefinities en workflows/processen",
                     "sources": {
+<<<<<<< HEAD
                         "28c04efd-9477-452e-8bac-80542b5f1a76": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "c293d9eb-c153-4f30-8a49-a53bf87c31ad": {
+=======
+                        "9157d197-d4c7-4085-9a32-66b81b2a5606": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -959,12 +1847,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "55a59148-df1f-4c6f-890b-1e9c1ad6ecc9": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "dae90afe-a21b-4ede-8dab-4717e491ba00": {
+=======
+                "e963659a-87d1-4f5c-9485-cdf6791ec602": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "3. Als operationeel beheer onderdeel was van de dienstverlening: de operationele bedieningsinstructies beschrijven minimaal back-up/recovery, procedures bij calamiteiten, regelmatig terugkerende beheeractiviteiten en opstart- en afsluitprocedures",
                     "sources": {
+<<<<<<< HEAD
                         "d7a2ceab-71ed-4008-a091-7aa490e03013": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "7f784456-3515-431a-9d7f-aef7966b73a6": {
+=======
+                        "af3a7b88-a070-4f5c-9330-249ba645e8cf": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -972,12 +1872,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "343e5f9d-23ae-4a31-8f22-9980e1f76761": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "8019da8a-5bca-495c-bec7-e932495549d3": {
+=======
+                "054f324d-7aae-4ec9-a714-324bc053db99": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "4. De product backlog bevat de bekende bugs en wensen",
                     "sources": {
+<<<<<<< HEAD
                         "3bbc27cc-83b5-4933-96de-d41fceaecfc0": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b9aea401-c4d7-4f47-b301-d736192b3117": {
+=======
+                        "5e86d094-ea30-4ee3-bc95-c655dac17fa5": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -985,12 +1897,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "d2c64543-219a-4b32-b273-a150a54cd5ef": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "28932676-f629-4262-b393-00e95f5275e8": {
+=======
+                "a980d60b-be91-46ec-95e4-905c44c3f3ea": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "5. De broncode kent een gezonde balans tussen isolatie, cohesie en koppeling",
                     "sources": {
+<<<<<<< HEAD
                         "6e02ebdf-6060-4049-a83b-7c2e35486c41": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "8fd93236-68a9-464b-8b45-07447534e68c": {
+=======
+                        "ae9f3ff3-7ea5-4e14-a3db-f7506e2be4de": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -998,12 +1922,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "bb90ef9b-7b4a-4611-8f00-7b7184eb4d9f": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "c54fcdfb-b613-470b-bd17-caa67439850d": {
+=======
+                "cc0df896-e5fa-461d-910d-e1946d337e91": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "6. De broncode heeft een beperkte mate van duplicatie",
                     "sources": {
+<<<<<<< HEAD
                         "ba72d6b8-3a0e-4671-ac1e-de0546bade68": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "3ebe625c-deac-4b8f-9656-0c5cb87bdac4": {
+=======
+                        "c4ca7987-ffe5-4815-9e05-a4b3e708f27f": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1011,12 +1947,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "9220c456-0c10-4381-a287-0e25a0aebd97": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "c2e405d6-3f31-4dd2-b6c0-9490b430c7ad": {
+=======
+                "5d2e88fb-4f39-4c6c-b931-6c62fef519f8": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "7. De broncode heeft een beperkte mate van complexiteit",
                     "sources": {
+<<<<<<< HEAD
                         "35c6b302-933c-4899-b05f-2a22cb3d05eb": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "58f3cfaa-3aad-41dc-8bb7-b5f81f7cc785": {
+=======
+                        "2f83718f-5281-4c64-94df-21242e0deabf": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1024,12 +1972,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "19a602ea-f37d-4506-9765-241afc456d2d": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "8769893a-f94b-4ad0-a6ef-28508c8af118": {
+=======
+                "d8201132-8824-4754-acd7-aae6ef1b4841": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "8. De broncode bevat geen of een beperkt aantal niet-afgeronde werkzaamheden (\"todo's\")",
                     "sources": {
+<<<<<<< HEAD
                         "8b0d8834-4eba-479b-a67d-dcdc629b30f7": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "7f1b70e0-4555-481f-83a5-866b39e9bbe4": {
+=======
+                        "32893985-2e25-4a4d-8d45-b82172df8c6c": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1037,12 +1997,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "823b4d2f-b887-4dbb-b1da-d427afb5ff66": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "596d4d58-89f2-4a23-9986-06b2ab3cd620": {
+=======
+                "54a36d2d-63a2-44e2-b6dd-f2cd46c2cda6": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "9. De tests raken een voldoende groot deel van de broncode",
                     "sources": {
+<<<<<<< HEAD
                         "65a09c22-6cec-430b-b02f-595dff7cf4e9": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "2793f117-3ea1-445e-bae6-a0b3f3712419": {
+=======
+                        "b9c18c2d-2231-4cf8-a9d3-c63d05c71e12": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1050,12 +2022,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "cd5b461d-9783-4684-a1e5-f130c7a9a720": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "cc1bc001-92b6-4b49-a08f-c447e1c91191": {
+=======
+                "33e4221c-b661-4a63-b206-ca1c2c40d9a6": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "10. De tests raken een voldoende groot deel van de functionaliteit (functionele dekking)",
                     "sources": {
+<<<<<<< HEAD
                         "582a5c72-df10-40fb-a3c9-64380356c26b": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b4a85ef4-a783-468e-bf33-0bec7a128134": {
+=======
+                        "55652f4e-d0fa-4e85-bb67-59ec0401ac47": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1063,12 +2047,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "a9260fce-5772-4614-96e3-de46aa3697b7": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "dba45df3-975c-4b6e-bbbb-47c3c998dfb5": {
+=======
+                "91d1d477-9368-4ad3-a75e-f71978db8764": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "11. De onderkende productrisico's zijn gedekt",
                     "sources": {
+<<<<<<< HEAD
                         "50a76709-c329-4d42-8b3f-adcc7ae68f17": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "5a3abe14-134f-4e3e-9c9a-a56624251d3d": {
+=======
+                        "36bfa0f2-4221-455f-8224-fd91a39b6dd4": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1076,12 +2072,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "97897a90-988e-4292-9363-20d8190539da": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "447e11a8-bef9-4998-a85e-f0ae3ddaa453": {
+=======
+                "2496f7cd-2957-4f01-995b-0662fc345498": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "12. Er is een regressietest beschikbaar",
                     "sources": {
+<<<<<<< HEAD
                         "678718c9-0781-4749-a382-72828a87e6df": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "08b876a5-02ae-43df-8abd-60812e8c6e6a": {
+=======
+                        "3e37df1c-6c06-45d3-bef0-004e022a7fd9": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1089,12 +2097,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "9e0915d4-e76b-43fa-bd57-3f09714a9f0b": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "e038e747-eeef-416d-99d4-89185d297179": {
+=======
+                "6ce85fe1-0c31-4d33-bf4f-f77921d884eb": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "13. Er is traceerbaarheid van eisen naar testgevallen",
                     "sources": {
+<<<<<<< HEAD
                         "06e3819d-ab03-4a2c-b2e0-412626edbb1d": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "b9065ecf-a205-4a94-9401-e89fa219112d": {
+=======
+                        "d2bde0c4-b5db-43e3-ac34-1c956689c917": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1102,12 +2122,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "a403332d-7455-49ea-aebe-d576932f2afc": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "afa078cc-b9a0-4ac2-90b2-3f43295a678b": {
+=======
+                "c1da520c-2d42-490b-9820-ee5879dc0e4a": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "14. De testset is goed opgebouwd",
                     "sources": {
+<<<<<<< HEAD
                         "7cf57a78-fadc-4bc4-97ff-4c4556e3a71b": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "19bae218-902c-43fa-8548-8ff801440c0d": {
+=======
+                        "8d4258de-99d2-473c-af14-21490445c69e": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1115,12 +2147,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "2ca8aef9-ff38-4fa7-b3b9-d6c258ed89e6": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "8c344d28-e513-45bd-bbfb-233246c28c70": {
+=======
+                "c3cb4d87-dc17-4651-81f6-d595a4013ebd": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M27: Het project sluit projectfasen en zichzelf expliciet af",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "f661a0cd-3795-401e-9e13-df8fb189534b": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "6f01ac75-a9ea-4cc8-a291-1985880818ca": {
+=======
+                        "597af3fe-b61e-4186-9f6f-e86dd2127670": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1130,16 +2174,34 @@
                 }
             }
         },
+<<<<<<< HEAD
         "240de61a-fefe-4d7d-8156-4c535448b63e": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+        "6649bc35-b60e-46f6-958b-436900ae4576": {
+=======
+        "916b028d-8909-467c-bfb6-c7d75f0c994b": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
             "type": "software",
             "name": "Organisatie",
             "metrics": {
+<<<<<<< HEAD
                 "0eb1f565-d57b-4dd6-a7aa-4bbae28e98d5": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "9af8f409-4679-4ad0-815c-80a43a841264": {
+=======
+                "6d2351ee-e3c0-4cf3-b5dd-fa1e9f4909ff": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M29: ICTU organiseert voor aanvang van een project de interne dienstverlening",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "25ac27e6-2fb2-43b4-9d5e-d2847d52b34e": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "7300de8e-91b1-4611-9d42-90e8ec488cc9": {
+=======
+                        "da85a3ec-76fa-4579-ab1a-bf0d0b28f9ac": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1147,12 +2209,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "289ace0b-7d7c-41aa-a8af-07d61cd676c4": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "fadc71d3-f839-4ee5-87d6-0d3495910b06": {
+=======
+                "3bf5b041-7058-4aa0-940d-ea79537d49ee": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M19: ICTU biedt projecten een afgeschermde digitale omgeving",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "c605167b-5878-48bd-989a-3f4ea3ee7c6b": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "63e1d170-0186-4edc-b06a-8693d6a409fe": {
+=======
+                        "9c78a912-6e14-4d7a-9c12-f466120c62bc": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1160,12 +2234,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "39fe7572-9955-49b9-bb6f-1b71045fafd4": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "52c66bff-83b2-4b98-81a2-5240e2783280": {
+=======
+                "60c966d2-5843-42cc-bcd9-8601e47c9346": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M18: ICTU biedt ondersteuning voor verplicht gestelde tools",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "d1d817bd-4656-4eef-985f-fbdd23c75b70": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "01993048-5adf-4083-a6ff-5a1a0ff91d31": {
+=======
+                        "4b3e65f0-2f5a-40dc-9e47-90cd21523f94": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1173,12 +2259,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "8ddd7349-cfd0-4298-a01a-01f3f1bd30aa": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "5b93a862-6558-4709-815c-d7bbbb2f220b": {
+=======
+                "853f25a9-1a2f-43a4-83d2-a2fb209992a5": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M11: ICTU beheert, onderhoudt en implementeert de Kwaliteitsaanpak en kwaliteitsnormen",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "ef4aa999-5a6e-4f76-b21f-5c5ad7ad20fa": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "d0a7519e-a8b1-4520-b676-cd2e49e52674": {
+=======
+                        "08fb956b-26da-402e-b20c-eaf581b1d952": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1186,12 +2284,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "fc05a866-139f-4d3a-850c-11bc5d4003aa": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "bbc49cb9-b34a-42d0-8fde-b31466985235": {
+=======
+                "e20dd76c-3d5f-42e8-9539-2b0fecc45c6c": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M12: ICTU publiceert nieuwe versies van de Kwaliteitsaanpak en normen periodiek en op een vaste locatie",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "4d14bb00-84a6-4f30-938d-a23b4d674151": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "fd3a4fc9-9daa-4c56-9c22-2e481f5d261b": {
+=======
+                        "f1d43317-4047-47fd-8626-5d76aaa6a3f8": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1199,12 +2309,24 @@
                     "target": "100",
                     "near_target": "80"
                 },
+<<<<<<< HEAD
                 "faa30143-9c59-480d-b953-100b12f90c5d": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                "469d4897-761b-48a7-843c-b72b7624b97d": {
+=======
+                "523a2e7e-13d5-4db1-b903-97d4c8bcf9a8": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                     "type": "compliance",
                     "name": "M33: ICTU organiseert periodiek een gezamenlijke self-assessment ten aanzien van de Kwaliteitsaanpak",
                     "secondary_name": "",
                     "sources": {
+<<<<<<< HEAD
                         "a0797ce0-6948-473f-807f-d7ca78a3bf92": {
+||||||| parent of 11b8d40 (Kleine verbeteringen)
+                        "da08ea61-85b8-4932-9bb2-2b07da76273f": {
+=======
+                        "1cbfc023-5434-4b5f-ad5d-b6d254415ab8": {
+>>>>>>> 11b8d40 (Kleine verbeteringen)
                             "type": "manual_number",
                             "parameters": {}
                         }

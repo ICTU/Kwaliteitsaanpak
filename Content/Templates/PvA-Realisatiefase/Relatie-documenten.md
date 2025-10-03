@@ -2,22 +2,25 @@
 
 De realisatiefase is een vervolg op de voorfase van {het project}. De documenten die in die voorfase zijn gerealiseerd en die uitgangspunt zijn voor dit plan van aanpak zijn:
 
-* Projectstartarchitectuur (PSA), versie {versie},
-* Business impact analyse (BIA), versie {versie},
-* Data protection impact assessment (DPIA), versie {versie},
-* Impact assessment mensenrechten en algoritmes (IAMA), versie {versie},
-* Softwarearchitectuurdocument (SAD), versie {versie},
-* Infrastructuurarchitectuur (IA), versie {versie},
-* Mastertestplan, versie {versie},
-* Detailtestplan softwarerealisatie, versie {versie},
-* Informatiebeveiligingsplan (IB-plan), versie {versie},
-* Kwaliteitsplan, versie {versie},
-* Niet-functionele eisen (NFE), versie {versie},
-* Globaal functioneel ontwerp (GFO), versie {versie},
-* Interactie-ontwerp (UX), versie {versie},
-* Product backlog, versie {versie},
-* Vastgesteld minimal viable product, versie {versie},
-* Wireframe, mockup, prototype, animatie, versie {versie},
-* Tussentijdse rapportage t.b.v. go/no-go besluit, versie {versie}.
+| Titel                                                       |  Versie  |  Datum  |
+|:------------------------------------------------------------|:---------|:--------|
+| Projectstartarchitectuur {het project})                     | {versie} | {datum} |
+| Business impact analyse {het project}                       | {versie} | {datum} |
+| Data protection impact assessment {het project}             | {versie} | {datum} |
+| Impact assessment mensenrechten en algoritmes {het project} | {versie} | {datum} |
+| Software-architectuurdocument {het product}                 | {versie} | {datum} |
+| Infrastructuurarchitectuur {het product}                    | {versie} | {datum} |
+| Mastertestplan {het project}                                | {versie} | {datum} |
+| Detailtestplan softwarerealisatie {het project}             | {versie} | {datum} |
+| Informatiebeveiligingsplan {het project}                    | {versie} | {datum} |
+| Kwaliteitsplan {het project}                                | {versie} | {datum} |
+| Niet-functionele eisen {het product}                        | {versie} | {datum} |
+| Globaal functioneel ontwerp {het product}                   | {versie} | {datum} |
+| Interactie-ontwerp {het product}                            | {versie} | {datum} |
+| Product backlog {het product}                               | {versie} | {datum} |
+| Vastgesteld minimal viable product {het product}            | {versie} | {datum} |
+| Wireframe, mockup, prototype, animatie                      | {versie} | {datum} |
+| Tussentijdse rapportage t.b.v. go/no-go besluit             | {versie} | {datum} |
+| {titel}                                                     | {versie} | {datum} |
 
 {Beschrijf ook een eventuele relatie met andere documenten die niet afkomstig zijn uit de voorfase}

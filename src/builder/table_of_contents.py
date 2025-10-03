@@ -17,7 +17,7 @@ def add_table_of_contents(paragraph: Paragraph) -> None:
     fld_char2 = OxmlElement("w:fldChar")
     fld_char2.set(qn("w:fldCharType"), "separate")
     fld_char3 = OxmlElement("w:t")
-    fld_char3.text = "Right-click to update field."
+    fld_char3.text = "Klik rechtermuisknop om de inhoudsopgave bij te werken."
     fld_char2.append(fld_char3)
 
     fld_char4 = OxmlElement("w:fldChar")

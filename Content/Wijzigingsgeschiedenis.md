@@ -11,6 +11,23 @@
 * Link naar Nederlandse vertaling van WCAG 2.2 toegevoegd.
 * Verwijder de kolom voor prioriteit uit de eisentabellen. Het op volgorde zetten van tientallen eisen is in de praktijk ondoenlijk.
 
+## Template Kwaliteitsplan
+
+* Foutieve verwijzing in de paragraaf "Leeswijzer" verbeterd.
+* De instructies voor de planningskolom in de paragraaf "Externe testen, toetsen en certificeringen" verbeterd.
+* Security code review toegevoegd aan de paragraaf "Externe testen, toetsen en certificeringen".
+* De [INVEST-criteria](https://xp123.com/invest-in-good-stories-and-smart-tasks/) toegevoegd aan de paragraaf "Definition of Ready".
+* Voeg PEP-8 toe aan codeerstandaarden.
+* Checklist voor broncodereviews toegevoegd in de paragraaf "Broncodereviews".
+* Optionele alinea toegevoegd aan de paragraaf "Performancetesten" over de representativiteit van de performancetestomgeving.
+
+## Alle templates
+
+* Instructie voor het bijwerken van de inhoudsopgave in het Nederlands vertaald.
+* Spelling van SharePoint aangepast zodat de spellingscontrole in Word geen spelfout aangeeft.
+* Vervang de resterende labels {projectnaam} door {het project}.
+* Gebruik tabellen in de paragrafen "Relatie met andere documenten" met kolommen voor documenttitel, versie en datum.
+
 ## Self-assessment checklist
 
 * Versie in Quality-time JSON-formaat toegevoegd die kan worden geïmporteerd in Quality-time.

@@ -2,8 +2,8 @@
 
 Input voor dit kwaliteitsplan, en dan met name paragraaf 5.16, zijn de volgende documenten:
 
-| Titel                                  |  Versie  |
-|:---------------------------------------|:--------:|
-| Projectstartarchitectuur {het project} | {versie} |
-| Niet-functionele eisen {het product}   | {versie} |
-| {titel}                                | {versie} |
+| Titel                                        |  Versie  |  Datum  |
+|:---------------------------------------------|:---------|:--------|
+| Projectstartarchitectuur (PSA) {het project} | {versie} | {datum} |
+| Niet-functionele eisen (NFE) {het product}   | {versie} | {datum} |
+| {titel}                                      | {versie} | {datum} |

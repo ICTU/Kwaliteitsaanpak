@@ -2,7 +2,7 @@
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Template/",
     "Title": "{Documentnaam}",
-    "Subtitle": "{Projectnaam}",
+    "Subtitle": "{het project}",
     "DocumentType": "Template",
     "DocumentFolder": "Template",
     "FrontPage": "ICTU",
@@ -13,7 +13,6 @@
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-
             "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         }
     },

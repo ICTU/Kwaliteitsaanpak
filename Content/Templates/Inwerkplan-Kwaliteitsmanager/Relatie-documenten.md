@@ -2,9 +2,9 @@
 
 Relevant voor dit inwerkplan zijn de volgende documenten:
 
-| Titel                                  |  Versie  |
-|:---------------------------------------|:--------:|
-| Projectstartarchitectuur {het project} | {versie} |
-| Niet-functionele eisen {het product}   | {versie} |
-| Kwaliteitsplan {het project}           | {versie} |
-| {titel}                                | {versie} |
+| Titel                                        | Versie   | Datum   |
+|:---------------------------------------------|:---------|:--------|
+| Projectstartarchitectuur {het project}       | {versie} | {datum} |
+| Niet-functionele eisen {het product}         | {versie} | {datum} |
+| Kwaliteitsplan {het project}                 | {versie} | {datum} |
+| {titel}                                      | {versie} | {datum} |

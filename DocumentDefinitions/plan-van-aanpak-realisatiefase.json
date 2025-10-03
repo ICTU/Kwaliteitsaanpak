@@ -2,7 +2,7 @@
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/PvA-Realisatiefase/",
     "Title": "Plan van Aanpak Realisatiefase",
-    "Subtitle": "{Projectnaam}",
+    "Subtitle": "{het project}",
     "DocumentType": "Template",
     "DocumentFolder": "PvA-Realisatiefase",
     "FrontPage": "ICTU",

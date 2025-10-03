@@ -104,4 +104,4 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 | Gebruik van Jira                             | Kwaliteitsplan bijlage D | Jira wordt gebruikt zoals afgesproken                                                                                                |
 | Actualiteit kwaliteitsplan                   |                          | De kwaliteitsrapportage bevat een metriek voor de actualiteit van het kwaliteitsplan                                                 |
 | Nieuwe teamleden                             |                          | Nieuwe teamleden zijn op de hoogte van de Kwaliteitsaanpak, het kwaliteitssysteem (Quality-time) en het kwaliteitsplan               |
-| Vertrokken teamleden                         |                          | Alle rechten in tools (GitLab, GitHub, Trello, Sharepoint, VPN, Jira, Signal, Slack, etc.) van vertrokken teamleden zijn ingetrokken |
+| Vertrokken teamleden                         |                          | Alle rechten in tools (GitLab, GitHub, Trello, SharePoint, VPN, Jira, Signal, Slack, etc.) van vertrokken teamleden zijn ingetrokken |

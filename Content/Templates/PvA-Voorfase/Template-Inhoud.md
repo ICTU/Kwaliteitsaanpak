@@ -121,7 +121,7 @@ Onderstaand is de verwachte inzet per rol van {opdrachtgevende organisatie} en {
 
 ## Projectafsluiting
 
-Omdat ICTU tijdens het project de documenten regelmatig oplevert is er geen speciale eindoplevering nodig. ICTU archiveert de documenten op Sharepoint met een bewaartermijn van vijf jaar.
+Omdat ICTU tijdens het project de documenten regelmatig oplevert is er geen speciale eindoplevering nodig. ICTU archiveert de documenten op SharePoint met een bewaartermijn van vijf jaar.
 
 # Planning
 

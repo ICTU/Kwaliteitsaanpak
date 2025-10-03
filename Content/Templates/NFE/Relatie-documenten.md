@@ -2,11 +2,14 @@
 
 De volgende documenten waren input voor de niet-functionele eisen:
 
-* Business impact analyse (BIA),
-* Data protection impact assessment (DPIA),
-* Impact assessment mensenrechten en algoritmes (IAMA),
-* Projectstartarchitectuur (PSA) en referentiearchitecturen,
-* {En verder, bijvoorbeeld protocollen en samenwerkingsafspraken}.
+| Titel                                                                                    |  Versie  |  Datum  |
+|:-----------------------------------------------------------------------------------------|:---------|:--------|
+| Business impact analyse {het project}                                                    | {versie} | {datum} |
+| Data protection impact assessment {het project}                                          | {versie} | {datum} |
+| Impact assessment mensenrechten en algoritmes {het project}                              | {versie} | {datum} |
+| Projectstartarchitectuur {het project}                                                   | {versie} | {datum} |
+| {en verder, bijvoorbeeld refernetiearchitecturen, protocollen en samenwerkingsafspraken} | {versie} | {datum} |
+| {titel}                                                                                  | {versie} | {datum} |
 
 De niet-functionele eisen zelf zijn input voor:
 

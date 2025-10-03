@@ -2,7 +2,7 @@
     "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Kwaliteitsplan/",
     "Title": "Kwaliteitsplan",
-    "Subtitle": "{Projectnaam}",
+    "Subtitle": "{het project}",
     "DocumentType": "Template",
     "DocumentFolder": "Kwaliteitsplan",
     "FrontPage": "ICTU",

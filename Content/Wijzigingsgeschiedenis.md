@@ -1,5 +1,9 @@
 # Work-in-progress
 
+## Kwaliteitsaanpak
+
+* In M29 "ICTU organiseert voor aanvang van een project de interne dienstverlening" beginnen de samenvatting en de eerste alinea van de beschrijving met dezelfde woorden waardoor het in de popup in de self-assessment spreadsheet (die geen opmaak heeft) lijkt alsof er twee keer hetzelfde staat. Formulering aangepast.
+
 ## Template Niet-functionele Eisen
 
 * Spelfout in "Compatibility" opgelost.

@@ -9,6 +9,7 @@
 * Spelfout in "Compatibility" opgelost.
 * Verplaats de tabel met Axe-core regels naar een bijlage van het template.
 * Link naar Nederlandse vertaling van WCAG 2.2 toegevoegd.
+* Verwijder de kolom voor prioriteit uit de eisentabellen. Het op volgorde zetten van tientallen eisen is in de praktijk ondoenlijk.
 
 ## Self-assessment checklist
 

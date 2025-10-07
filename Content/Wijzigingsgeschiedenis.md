@@ -7,6 +7,8 @@
 ## Template Niet-functionele Eisen
 
 * Spelfout in "Compatibility" opgelost.
+* Verplaats de tabel met Axe-core regels naar een bijlage van het template.
+* Link naar Nederlandse vertaling van WCAG 2.2 toegevoegd.
 
 ## Self-assessment checklist
 

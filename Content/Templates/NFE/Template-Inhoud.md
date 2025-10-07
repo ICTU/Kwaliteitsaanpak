@@ -98,21 +98,11 @@ Capability of a product to present functions and information in an inviting and 
 
 Capability of a product to be utilised by people of various backgrounds.
 
-Als standaard voor toegankelijkheid hanteert de Nederlandse overheid de Web Content Accessibility Guidelines (WCAG), zie [https://www.w3.org/TR/WCAG22/](https://www.w3.org/TR/WCAG22/). Officieel gebruikt de Nederlandse Overheid versie 2.1, maar het gebruik van versie 2.2 wordt [aangeraden](https://www.digitaleoverheid.nl/nieuws/nieuwe-aanbevolen-standaard-digitale-toegankelijkheid/).
+| Nr.  | Eis  | Prio | Rationale | Realisatie in | Realisatie door | Bewijs |
+| :--- | :--- | :--- | :-------- | :------------ | :-------------- | :----- |
+| 1   | De applicatie voldoet aan de [WCAG2.2](https://www.w3.org/Translations/WCAG22-nl/) succescriteria, niveau A en AA | {prio} | [WCAG2.1](https://www.w3.org/Translations/WCAG21-nl/) is een wettelijke verplichting volgend uit [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf). [WCAG2.2 voegt negen criteria toe ten opzichte van versie 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) ten opzichte van versie 2.1  en wordt [aangeraden](https://www.digitaleoverheid.nl/nieuws/nieuwe-aanbevolen-standaard-digitale-toegankelijkheid/) door het platform Digitale Overheid van het Ministerie van BZK voor nieuwe websites en applicaties. | {software} | ICTU | Axe-core rapportage |
 
-Van WCAG versie 2.2 is op het moment nog geen Nederlandse vertaling, wel van versie 2.1, zie [https://www.w3.org/Translations/WCAG22-nl/](https://www.w3.org/Translations/WCAG21-nl/).
-
-Conform de EN 301 549, hanteert {opdrachtgevende organisatie} de succescriteria voor niveau A en AA als eisen.
-
-| Nr. | Eis                                                                 | Prio   | Rationale               | Realisatie in | Realisatie door | Bewijs              |
-| :--- | :------------------------------------------------------------------ | :----- | :---------------------- | :------------ | :-------------- | :------------------ |
-| 1   | De applicatie voldoet aan de WCAG2.2 succescriteria, niveau A en AA | {prio} | Wettelijke verplichting | {software}    | ICTU            | Axe-core rapportage |
-
-Onderstaande tabel bevat de WCAG2.2 succescriteria. {Verwijder de AAA-succescriteria indien gewenst.} Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren. {Geef aan of de succescriteria die Axe-core niet geautomatiseerd kan controleren wel of niet met de hand zullen worden gecontroleerd.}
-
-Merk op dat de [Axe-core regels die als "experimenteel" zijn gemarkeerd](https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md#experimental-rules) niet standaard door Axe-core worden getest. Zie de [Axe-core API-documentatie](https://www.deque.com/axe/core-documentation/api-documentation/#options-parameter) voor instructies hoe dit aan te passen.
-
-#include "Content/Templates/NFE/WCAG-Tabel-Gegenereerd.md"
+Zie de bijlagen voor een tabel met de WCAG2.2 succescriteria. Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren. {Geef aan of de succescriteria die Axe-core niet geautomatiseerd kan controleren wel of niet met de hand zullen worden gecontroleerd.}
 
 ## User assistance
 

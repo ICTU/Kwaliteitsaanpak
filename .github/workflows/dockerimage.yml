@@ -9,7 +9,7 @@ jobs:
       contents: read
       pages: write
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Generate artifacts
         run: docker compose up
       - name: Archive artifacts

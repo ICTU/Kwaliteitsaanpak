@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     machine:
-      image: ubuntu-2204:2024.11.1
+      image: ubuntu-2204:2025.09.1
     parallelism: 1
     steps:
       - checkout

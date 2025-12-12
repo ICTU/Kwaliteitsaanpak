@@ -1,5 +1,5 @@
-FROM python:3.13-slim-trixie
-COPY --from=ghcr.io/astral-sh/uv:0.8.21 /uv /uvx /bin/
+FROM python:3.14-slim-trixie
+COPY --from=ghcr.io/astral-sh/uv:0.9.17 /uv /uvx /bin/
 
 WORKDIR /work
 

@@ -45,31 +45,50 @@ class TableXlsxBuilder(XlsxBuilder):
     def __init__(self, filename: pathlib.Path) -> None:
         super().__init__(filename)
         self.cell_contents: list[str] = []
+        self.sheet = self.workbook.add_worksheet()
+        self.row_offset = 0
+        self.table_height = 0
+        self.header_written = False
+        self.last_heading = ""
 
     def create_formats(self, workbook: xlsxwriter.Workbook) -> dict[str, xlsxwriter.format.Format]:
         """Create cell formats."""
         return {"cell": workbook.add_format({"text_wrap": True, "align": "top"}), **super().create_formats(workbook)}
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
+        if self.in_element(xmltags.TABLE_HEADER_ROW) and self.header_written:
+            return
+        if tag == xmltags.TITLE:
+            self.sheet.name = text
+        if tag == xmltags.HEADING:
+            self.last_heading = text
         if self.in_element(xmltags.TABLE_CELL):
             self.cell_contents.append(text)
-        if tag == xmltags.TITLE:
-            self.sheet = self.workbook.add_worksheet(text)
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().end_element(tag, attributes)
+        if self.in_element(xmltags.TABLE_HEADER_ROW) and self.header_written:
+            return
         if tag == xmltags.TABLE_CELL:
             row = int(attributes[xmltags.TABLE_CELL_ROW])
             column = int(attributes[xmltags.TABLE_CELL_COLUMN])
             format = self.formats["header" if self.in_element(xmltags.TABLE_HEADER_ROW) or column == 0 else "cell"]
             self.set_column_width(self.sheet, column, self.COLUMN_WIDTH)
-            self.sheet.write(row, column, " ".join(self.cell_contents), format)
+            contents = " ".join(self.cell_contents)
+            if column == 0 and self.last_heading and not self.in_element(xmltags.TABLE_HEADER_ROW):
+                contents = f"{self.last_heading}-{contents}"
+            self.sheet.write(self.row_offset + row, column, contents, format)
             self.cell_contents.clear()
+            self.table_height = row
+        elif tag == xmltags.TABLE_HEADER_ROW:
+            self.header_written = True
+        elif tag == xmltags.TABLE:
+            self.row_offset += self.table_height
+            self.table_height = 0
 
     def end_document(self) -> None:
-        """End the document."""
         self.sheet.freeze_panes(1, 1)
-        super().end_document()
+        return super().end_document()
 
 
 class SelfAssessmentXlsxBuilder(XlsxBuilder):

@@ -1,14 +1,14 @@
 {
-    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/MTP/",
     "Title": "Mastertestplan",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "DocumentFolder": "MTP",
     "FrontPage": "Neutral",
-    "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Templates/document-template.md",
             "OutputFile": "Neutraal-Template-Mastertestplan.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"

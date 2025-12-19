@@ -1,14 +1,14 @@
 {
-    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/SAD/",
     "Title": "Software-architectuurdocument",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "DocumentFolder": "SAD",
     "FrontPage": "ICTU",
-    "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Templates/document-template.md",
             "OutputFile": "ICTU-Template-Software-architectuurdocument.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"

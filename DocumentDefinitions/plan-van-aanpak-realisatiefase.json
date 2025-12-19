@@ -1,14 +1,14 @@
 {
-    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/PvA-Realisatiefase/",
     "Title": "Plan van Aanpak Realisatiefase",
     "Subtitle": "{het project}",
     "DocumentType": "Template",
     "DocumentFolder": "PvA-Realisatiefase",
     "FrontPage": "ICTU",
-    "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Templates/document-template.md",
             "OutputFile": "ICTU-Template-Plan-van-Aanpak-Realisatiefase.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"

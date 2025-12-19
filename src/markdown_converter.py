@@ -8,7 +8,7 @@ from xml.etree.ElementTree import ElementTree, TreeBuilder
 
 import markdown_syntax
 import xmltags
-from custom_types import Settings, TreeBuilderAttributes, Variables
+from custom_types import OutputFormat, Settings, TreeBuilderAttributes, Variables
 from markdown_table import Table
 
 
@@ -28,10 +28,10 @@ class MarkdownConverter:
         self.table: Table | None = None
         self.variables = variables
 
-    def convert(self, settings: Settings) -> ElementTree:
-        """Convert the markdown to XML."""
-        self._start_document(settings)
-        self._convert_markdown_file(pathlib.Path(settings["InputFile"]), settings)
+    def convert(self, settings: Settings, output_format: OutputFormat) -> ElementTree:
+        """Convert the markdown to XML for the specified output format."""
+        self._start_document(settings, output_format)
+        self._convert_markdown_file(pathlib.Path(settings["OutputFormats"][output_format]["InputFile"]), settings)
         self._end_document()
         return ElementTree(self.builder.close())
 
@@ -49,7 +49,7 @@ class MarkdownConverter:
                 else:
                     self._process_line(line)
 
-    def _start_document(self, settings: Settings) -> None:
+    def _start_document(self, settings: Settings, output_format: OutputFormat) -> None:
         """Start the document."""
         document_attributes: TreeBuilderAttributes = {}
         for setting, tag in (
@@ -61,7 +61,7 @@ class MarkdownConverter:
         self._create_frontpage(settings)
         self._create_header(settings)
         self._create_footer()
-        if settings["IncludeTableOfContents"]:
+        if settings["OutputFormats"][output_format]["IncludeTableOfContents"]:
             self._create_table_of_contents()
 
     def _create_frontpage(self, settings: Settings) -> None:

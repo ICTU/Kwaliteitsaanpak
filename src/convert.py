@@ -24,30 +24,41 @@ from builder.json_builder import JSONBuilder
 from builder.pptx_builder import PptxBuilder
 from markdown_converter import MarkdownConverter
 from markdown_syntax import VARIABLE_USE_PATTERN
-from custom_types import JSON, Settings, Variables
+from custom_types import JSON, OutputFormat, Settings, Variables
 
 
 def convert(settings_filename: str, version: str) -> None:
-    """Convert the input document to the specified output formats."""
+    """Create the specified output formats."""
     variables = read_variables(settings_filename, version)
     settings = read_settings(settings_filename, variables)
     logging.info("Converting with settings:\n%s", pprint.pformat(settings))
     get_build_path(settings)
-    if "InputFile" in settings:
-        xml = MarkdownConverter(variables).convert(settings)
-        write_xml(xml, settings)
+    if "docx" in settings["OutputFormats"]:
+        xml = MarkdownConverter(variables).convert(settings, "docx")
+        write_xml(xml, settings, "docx")
         converter = Converter(xml)
-        if "docx" in settings["OutputFormats"]:
-            convert_docx(converter, settings)
-        if "pptx" in settings["OutputFormats"]:
-            convert_pptx(converter, settings)
-        if "xlsx" in settings["OutputFormats"]:
-            convert_xlsx(converter, settings)
-        if "html" in settings["OutputFormats"]:
-            copy_files(settings, "html")
-            convert_html(converter, settings)
-        if "json" in settings["OutputFormats"]:
-            convert_json(converter, settings)
+        convert_docx(converter, settings)
+    if "pptx" in settings["OutputFormats"]:
+        xml = MarkdownConverter(variables).convert(settings, "pptx")
+        write_xml(xml, settings, "pptx")
+        converter = Converter(xml)
+        convert_pptx(converter, settings)
+    if "xlsx" in settings["OutputFormats"]:
+        xml = MarkdownConverter(variables).convert(settings, "xlsx")
+        write_xml(xml, settings, "xlsx")
+        converter = Converter(xml)
+        convert_xlsx(converter, settings)
+    if "html" in settings["OutputFormats"]:
+        xml = MarkdownConverter(variables).convert(settings, "html")
+        write_xml(xml, settings, "html")
+        converter = Converter(xml)
+        copy_files(settings, "html")
+        convert_html(converter, settings)
+    if "json" in settings["OutputFormats"]:
+        xml = MarkdownConverter(variables).convert(settings, "json")
+        write_xml(xml, settings, "json")
+        converter = Converter(xml)
+        convert_json(converter, settings)
     if "zip" in settings["OutputFormats"]:
         zip_files(settings)
 
@@ -84,14 +95,14 @@ def read_json(json_filename: str, variables: Variables | None = None) -> JSON:
         return JSON(json.loads(json_text))
 
 
-def write_xml(xml: ElementTree, settings: Settings) -> None:
+def write_xml(xml: ElementTree, settings: Settings, output_format: OutputFormat) -> None:
     """Write the XML to the file specified in the settings."""
-    markdown_filename = pathlib.Path(str(settings["InputFile"]))
+    markdown_filename = pathlib.Path(str(settings["OutputFormats"][output_format]["InputFile"]))
     xml_filename = get_build_path(settings) / markdown_filename.with_suffix(".xml").name
     xml.write(str(xml_filename), encoding="utf-8")
 
 
-def copy_files(settings: Settings, output_format: str) -> None:
+def copy_files(settings: Settings, output_format: OutputFormat) -> None:
     """Copy specified source files (e.g. CSS files) to the specified destinations."""
     for file_to_copy in settings["OutputFormats"][output_format].get("CopyFiles", []):
         source_path = pathlib.Path(file_to_copy["from"])
@@ -164,7 +175,7 @@ def convert_json(converter, settings: Settings) -> None:
     copy_output(json_build_filename, settings, "json")
 
 
-def copy_output(build_filename: pathlib.Path, settings: Settings, output_format: str):
+def copy_output(build_filename: pathlib.Path, settings: Settings, output_format: OutputFormat) -> None:
     """Copy the build file to the output paths."""
     output_settings = settings["OutputFormats"][output_format]
     output_paths = [pathlib.Path(output_path) for output_path in output_settings["OutputPaths"]]

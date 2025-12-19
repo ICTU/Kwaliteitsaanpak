@@ -100,7 +100,10 @@ Capability of a product to be utilised by people of various backgrounds.
 
 | Nr.  | Eis  | Rationale | Realisatie door | Verificatie |
 | :--- | :--- | :-------- | :-------------- | :---------- |
-| 1   | De applicatie voldoet aan de [WCAG2.2](https://www.w3.org/Translations/WCAG22-nl/) succescriteria, niveau A en AA | [WCAG2.1](https://www.w3.org/Translations/WCAG21-nl/) is een wettelijke verplichting volgend uit [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf). [WCAG2.2 voegt negen criteria toe ten opzichte van versie 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) ten opzichte van versie 2.1  en wordt [aangeraden](https://www.digitaleoverheid.nl/nieuws/nieuwe-aanbevolen-standaard-digitale-toegankelijkheid/) door het platform Digitale Overheid van het Ministerie van BZK voor nieuwe websites en applicaties. Zie de bijlage "WCAG2.2 successcriteria" voor een tabel met de succescriteria. Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren. {Geef aan of de succescriteria die Axe-core niet geautomatiseerd kan controleren wel of niet met de hand zullen worden gecontroleerd.} | ICTU | Axe-core rapportage {en handmatige rapportage} |
+| 1    | De applicatie voldoet aan de [WCAG2.2](https://www.w3.org/Translations/WCAG22-nl/) succescriteria, niveau A en AA | [WCAG2.1](https://www.w3.org/Translations/WCAG21-nl/) is een wettelijke verplichting volgend uit [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf). [WCAG2.2 voegt negen criteria toe ten opzichte van versie 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) ten opzichte van versie 2.1  en wordt [aangeraden](https://www.digitaleoverheid.nl/nieuws/nieuwe-aanbevolen-standaard-digitale-toegankelijkheid/) door het platform Digitale Overheid van het Ministerie van BZK voor nieuwe websites en applicaties. Zie de bijlage "WCAG2.2 successcriteria" voor een tabel met de succescriteria. Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren. {Geef aan of de succescriteria die Axe-core niet geautomatiseerd kan controleren wel of niet met de hand zullen worden gecontroleerd.} | ICTU | Axe-core rapportage {en handmatige rapportage} |
+| 2    | De applicatie gebruikt maximaal taalniveau B1 | [Aanbevolen richtlijn](https://www.communicatierijk.nl/vakkennis/rijkswebsites/aanbevolen-richtlijnen/taalniveau-b1) | {opdrachtgever} | {verificatie} |
+| 3    | De applicatie ondersteunt {ondersteunde talen} | {rationale} | ICTU | {verificatie} |
+| {nr} | {eis} | {rationale} | {partij}     | {verificatie} |
 
 ## User assistance
 
@@ -113,18 +116,6 @@ Capability of a product to be used by people with the widest range of characteri
 Capability of a product to present appropriate information, where needed by the user, to make its capabilities and use immediately obvious to the user without excessive interactions with a product or other resources.
 
 #include "Content/Templates/NFE/Eisentabel.md"
-
-## Taal en leesbaarheid
-
-Naast de aan NEN-ISO/IEC 25010:2023 ontleende hoofdeigenschap bruikbaarheid zijn voor de gebruikskwaliteit van {het product} van belang:
-
-* Taal: welke talen dienen te worden ondersteund.
-* Leesbaarheid: teksten moeten makkelijk te lezen zijn. Korte zinnen hebben de voorkeur. Hoe gemakkelijker de zin en de woorden, hoe beter de leesbaarheid.
-
-| Nr.  | Eis  | Rationale | Realisatie door | Verificatie |
-| :--- | :--- | :-------- | :-------------- | :---------- |
-| 1    | De applicatie gebruikt maximaal taalniveau B1 | [Aanbevolen richtlijn](https://www.communicatierijk.nl/vakkennis/rijkswebsites/aanbevolen-richtlijnen/taalniveau-b1) | {opdrachtgever} | {verificatie} |
-| 2    | De applicatie ondersteunt {ondersteunde talen} | {rationale} | ICTU | {verificatie} |
 
 # Reliability
 
@@ -161,7 +152,6 @@ Capability of a product to protect information and data so that persons or other
 | Nr.  | Eis   | Rationale   | Realisatie door | Verificatie   |
 |:-----|:------|:------------|:----------------|:--------------|
 | 1    | Voldoen aan de BIO- en SDD-maatregelen ten aanzien van informatiebeveiliging | BIO en SSD bevatten een aantal maatregelen ten aanzien van software en/of de infrastructurele componenten waar de software gebruik van maakt. Zie de bijlage "BIO- en SDD-maatregelen". | ICTU | {penetratietest en/of een secure code review}, te organiseren door {ICTU of opdrachtgever} |
-| {nr} | {eis} | {rationale} | {partij}        | {verificatie} |
 
 ## Confidentiality
 

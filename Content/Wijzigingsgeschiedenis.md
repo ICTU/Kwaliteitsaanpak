@@ -14,6 +14,8 @@
 * Verwijder de kolom "Realisatie in" uit de eisentabellen.
 * Hernoem de kolom "Bewijs" van eisen naar "Verificatie" van eisen.
 * Verplaats de lijst van BIO- en SDD-maatregelen naar de bijlagen en vervang deze door één eis in het hoofdstuk "Security", namelijk dat de software voldoet aan de BIO- en SDD-maatregelen. Verificatie van deze eis vindt plaats door een penetratietest en/of secure code review.
+* Verwijder het hoofdstuk "Taal en leesbaarheid" en verplaats de eisen daaruit naar het hoofdstuk "Inclusivity".
+* Naast het Word-template ook een spreadsheet variant van de eisentabellen toegevoegd.
 
 ## Template Kwaliteitsplan
 

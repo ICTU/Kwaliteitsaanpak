@@ -19,16 +19,20 @@ class MarkdownConverterTestCase(unittest.TestCase):
                 "DocumentType": "Kwaliteitsaanpak",
                 "Title": "Title",
                 "Subtitle": "Subtitle",
-                "IncludeTableOfContents": False,
-                "InputFile": "document.md",
                 "Version": "x.y",
                 "Date": "2020-20-20",
+                "OutputFormats": {
+                    "html": {
+                        "IncludeTableOfContents": False,
+                        "InputFile": "document.md",
+                    }
+                },
             }
         )
 
     def xml(self) -> ElementTree:
         """Create the XML."""
-        return MarkdownConverter(Variables({"var": "variable"})).convert(self.settings)
+        return MarkdownConverter(Variables({"var": "variable"})).convert(self.settings, "html")
 
 
 @patch("markdown_converter.open", mock_open(read_data=""))
@@ -54,7 +58,7 @@ class EmptyMarkdownTest(MarkdownConverterTestCase):
         """Test that an unknown document type raises an exception."""
         self.settings["DocumentType"] = "Wrong type"
         self.settings["FrontPage"] = "ICTU"
-        self.assertRaises(ValueError, MarkdownConverter(Variables({})).convert, self.settings)
+        self.assertRaises(ValueError, MarkdownConverter(Variables({})).convert, self.settings, "html")
 
     def test_frontpage_title(self):
         """Test the front page title."""
@@ -66,7 +70,7 @@ class EmptyMarkdownTest(MarkdownConverterTestCase):
 
     def test_toc(self):
         """Test the table of contents."""
-        self.settings["IncludeTableOfContents"] = True
+        self.settings["OutputFormats"]["html"]["IncludeTableOfContents"] = True
         self.assertIsNotNone(self.xml().find(xmltags.TABLE_OF_CONTENTS))
 
 

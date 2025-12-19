@@ -1,14 +1,14 @@
 {
-    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Template/",
     "Title": "{Documentnaam}",
     "Subtitle": "{het project}",
     "DocumentType": "Template",
     "DocumentFolder": "Template",
     "FrontPage": "ICTU",
-    "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Templates/document-template.md",
             "OutputFile": "ICTU-Template-Generiek.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"

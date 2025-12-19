@@ -1,14 +1,14 @@
 {
-    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/NFE/",
     "Title": "Niet-Functionele Eisen",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "DocumentFolder": "NFE",
     "FrontPage": "Neutral",
-    "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Templates/document-template.md",
             "OutputFile": "Neutraal-Template-Niet-Functionele-Eisen.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"

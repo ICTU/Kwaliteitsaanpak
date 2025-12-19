@@ -1,13 +1,13 @@
 {
-    "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak-samenvatting.md",
     "BuildPath": "build/Kwaliteitsaanpak/",
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "Subtitle": "Samenvatting",
     "DocumentType": "Kwaliteitsaanpak",
     "FrontPage": "ICTU",
-    "IncludeTableOfContents": false,
     "OutputFormats": {
         "html": {
+            "IncludeTableOfContents": false,
+            "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak-samenvatting.md",
             "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.html",
             "OutputPaths": [
                 "docs/$VERSIE$"

@@ -1,12 +1,12 @@
 {
-    "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
     "BuildPath": "build/Kwaliteitsaanpak/",
     "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
     "DocumentType": "Kwaliteitsaanpak",
     "FrontPage": "ICTU",
-    "IncludeTableOfContents": true,
     "OutputFormats": {
         "html": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
             "OutputFile": "ICTU-Kwaliteitsaanpak.html",
             "OutputPaths": [
                 "docs/$VERSIE$"
@@ -39,6 +39,8 @@
             ]
         },
         "docx": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
             "OutputFile": "ICTU-Kwaliteitsaanpak.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
@@ -46,6 +48,8 @@
             "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
         },
         "xlsx": {
+            "IncludeTableOfContents": false,
+            "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
             "BuilderClass": "SelfAssessmentXlsxBuilder",
             "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist.xlsx",
             "OutputPaths": [
@@ -53,6 +57,8 @@
             ]
         },
         "pptx": {
+            "IncludeTableOfContents": false,
+            "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
             "OutputFile": "ICTU-Kwaliteitsaanpak.pptx",
             "OutputPaths": [
                 "docs/$VERSIE$"
@@ -60,6 +66,8 @@
             "ReferenceFile": "DocumentDefinitions/reference-ictu.pptx"
         },
         "json": {
+            "IncludeTableOfContents": false,
+            "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md",
             "OutputFile": "ICTU-Kwaliteitsaanpak-Checklist-Quality-time.json",
             "OutputPaths": [
                 "docs/$VERSIE$"

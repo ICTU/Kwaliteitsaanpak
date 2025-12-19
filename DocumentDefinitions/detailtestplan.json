@@ -1,14 +1,14 @@
 {
-    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/Detailtestplan-Softwarerealisatie/",
     "Title": "Detailtestplan Softwarerealisatie",
     "Subtitle": "{het project}",
     "DocumentType": "Template",
     "DocumentFolder": "Detailtestplan-Softwarerealisatie",
     "FrontPage": "ICTU",
-    "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Templates/document-template.md",
             "OutputFile": "ICTU-Template-Detailtestplan-Softwarerealisatie.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"

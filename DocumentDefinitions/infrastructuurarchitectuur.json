@@ -1,16 +1,16 @@
 {
-    "InputFile": "DocumentDefinitions/Templates/document-template.md",
     "BuildPath": "build/Templates/IA/",
     "Title": "High-Level Design",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "DocumentFolder": "IA",
     "FrontPage": "Neutral",
-    "IncludeTableOfContents": true,
     "OutputFormats": {
         "docx": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Templates/document-template.md",
             "OutputFile": "Neutraal-Template-Infrastructuurarchitectuur.docx",
-             "OutputPaths": [
+            "OutputPaths": [
                 "docs/$VERSIE$"
             ],
             "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"

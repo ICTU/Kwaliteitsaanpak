@@ -2,6 +2,7 @@
 
 ## Kwaliteitsaanpak
 
+* In M01 "Het project ontvangt en levert in elke fase vastgestelde producten en informatie", NEN 7510-2:2024 (Informatiebeveiliging in de zorg - Deel 2: Beheersmaatregelen) toegevoegd als mogelijke bron voor niet-functionele eisen.
 * In M29 "ICTU organiseert voor aanvang van een project de interne dienstverlening" beginnen de samenvatting en de eerste alinea van de beschrijving met dezelfde woorden waardoor het in de popup in de self-assessment spreadsheet (die geen opmaak heeft) lijkt alsof er twee keer hetzelfde staat. Formulering aangepast.
 
 ## Template Niet-functionele Eisen
@@ -27,6 +28,8 @@
 * Spelling van SharePoint aangepast zodat de spellingscontrole in Word geen spelfout aangeeft.
 * Vervang de resterende labels {projectnaam} door {het project}.
 * Gebruik tabellen in de paragrafen "Relatie met andere documenten" met kolommen voor documenttitel, versie en datum.
+* Hoofdstukken "Kaders" verwijderd. De genoemde kaders worden allemaal al op andere plekken genoemd.
+* In de hoofdstukken "Uitgangspunten" het ontwikkelen van de software volgens de Kwaliteitsaanpak als uitgangspunt toegevoegd, waar dit nog niet het geval was.
 
 ## Self-assessment checklist
 

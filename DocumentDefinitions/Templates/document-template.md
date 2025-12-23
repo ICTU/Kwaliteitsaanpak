@@ -10,8 +10,6 @@
 
 #include "Content/Templates/{{DOCUMENT-FOLDER}}/Doelgroep.md"
 
-#include "Content/Templates/{{DOCUMENT-FOLDER}}/Kaders.md"
-
 #include "Content/Templates/{{DOCUMENT-FOLDER}}/Uitgangspunten.md"
 
 #include "Content/Templates/{{DOCUMENT-FOLDER}}/Relatie-documenten.md"

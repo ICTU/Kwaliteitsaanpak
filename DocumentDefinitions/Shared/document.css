@@ -56,7 +56,7 @@ img[title="word-cloud"] {
     counter-increment: toc-h2;
     content: counter(toc-h2, upper-alpha) " ";
     color: #2c64ad;
-    margin-left: -2em;
+    margin-left: -2.8em;
     width: 2em;
     position: absolute;
 }
@@ -65,13 +65,13 @@ img[title="word-cloud"] {
     counter-increment: toc-h2;
     content: counter(toc-h1) "." counter(toc-h2) " ";
     color: #2c64ad;
-    margin-left: -2em;
+    margin-left: -2.8em;
     width: 2em;
     position: absolute;
 }
 
 #toc div.h2 {
-    margin-left: 4em;
+    margin-left: 4.8em;
 }
 
 /* Headers */

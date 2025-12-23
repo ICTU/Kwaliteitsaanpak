@@ -10,7 +10,7 @@ De resultaten van de tests zijn de basis voor het vrijgaveadvies, op basis waarv
 
 {Beschrijf kort de context waarin de applicatie zal opereren, voor zover deze van belang is voor de uit te voeren tests. Denk aan de speciale eisen die worden gesteld aan de verschillende onderdelen van het informatiesysteem: het “samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en programmatuur alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie” (zie bijlage A).}
 
-{Maak gebruik van beschrijvingen in bestaande documenten (zie paragraaf 2.5).}
+{Maak gebruik van beschrijvingen in bestaande documenten (zie paragraaf 2.4).}
 
 ## Scope van de tests
 

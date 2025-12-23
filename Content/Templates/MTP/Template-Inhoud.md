@@ -308,7 +308,7 @@ De op de tests toe te passen acceptatiecriteria worden als volgt bepaald:
 
 ## Op te leveren producten
 
-De volgende producten worden door het testteam opgeleverd:
+De volgende producten worden opgeleverd:
 
 | Testsoort   | Product       | Doel   | Doelgroep   | Opstellers   | Reviewers   |
 |:------------|:--------------|:-------|:------------|:-------------|:------------|

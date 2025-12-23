@@ -28,6 +28,7 @@
 * Vervang de resterende labels {projectnaam} door {het project}.
 * Gebruik tabellen in de paragrafen "Relatie met andere documenten" met kolommen voor documenttitel, versie en datum.
 * Sommige Word-stijlen hadden Engels als taal. Aangepast naar Nederlands.
+* Verwijder verwijzingen naar het "testteam". ICTU werkt volgens Scrum en er is dus niet zoiets als een testteam.
 
 ## Self-assessment checklist
 

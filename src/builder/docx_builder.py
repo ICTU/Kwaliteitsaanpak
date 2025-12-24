@@ -29,6 +29,8 @@ class DocxBuilder(Builder):
         xmltags.HEADING,
         xmltags.TABLE_CELL,
         xmltags.HEADER,
+        xmltags.MEASURE_TITLE,
+        xmltags.SUBMEASURE_TITLE,
         xmltags.TITLE,
         xmltags.INSTRUCTION,
         xmltags.BOLD,

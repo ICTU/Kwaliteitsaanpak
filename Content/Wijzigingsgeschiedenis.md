@@ -10,6 +10,9 @@
 * Verplaats de tabel met Axe-core regels naar een bijlage van het template.
 * Link naar Nederlandse vertaling van WCAG 2.2 toegevoegd.
 * Verwijder de kolom voor prioriteit uit de eisentabellen. Het op volgorde zetten van tientallen eisen is in de praktijk ondoenlijk.
+* Verwijder de kolom "Realisatie in" uit de eisentabellen.
+* Hernoem de kolom "Bewijs" van eisen naar "Verificatie" van eisen.
+* Verplaats de lijst van BIO- en SDD-maatregelen naar de bijlagen en vervang deze door één eis in het hoofdstuk "Security", namelijk dat de software voldoet aan de BIO- en SDD-maatregelen. Verificatie van deze eis vindt plaats door een penetratietest en/of secure code review.
 
 ## Template Kwaliteitsplan
 

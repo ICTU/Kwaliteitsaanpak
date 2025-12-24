@@ -27,6 +27,7 @@
 * Spelling van SharePoint aangepast zodat de spellingscontrole in Word geen spelfout aangeeft.
 * Vervang de resterende labels {projectnaam} door {het project}.
 * Gebruik tabellen in de paragrafen "Relatie met andere documenten" met kolommen voor documenttitel, versie en datum.
+* Sommige Word-stijlen hadden Engels als taal. Aangepast naar Nederlands.
 
 ## Self-assessment checklist
 

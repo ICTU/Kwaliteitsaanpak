@@ -84,7 +84,7 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 | Verwerking informatiebeveiligingsplan        | M01                      | Actuele beveiligingsmaatregelen zijn verwerkt in SAD, GFO en kwaliteitsplan                                                          |
 | Traceerbaarheid functionele eisen            | M03                      | Functionele functionele eisen zijn traceerbaar naar logische en fysieke testgevallen                                                 |
 | Traceerbaarheid niet-functionele eisen       | M03                      | Niet-functionele eisen zijn traceerbaar naar SAD, MTP en detailtestplannen                                                           |
-| Bewijs realisatie niet-functionele eisen     | Niet-functionele eisen   | Het bewijs dat aan ICTU toegewezen niet-functionele eisen zijn gerealiseerd is actueel                                               |
+| Verificatie realisatie niet-functionele eisen     | Niet-functionele eisen   | Verificatie van aan ICTU toegewezen niet-functionele eisen is actueel                                               |
 | Implementatie nieuwe versie Kwaliteitsaanpak | M28                      | De meest recente versie van de Kwaliteitsaanpak is geïmplementeerd in het project                                                    |
 | Gebruik tools                                | M16                      | Het project gebruikt de geadviseerde tools                                                                                           |
 | Actualiteit tools                            | M16                      | Het project gebruikt actuele versies van tools                                                                                       |

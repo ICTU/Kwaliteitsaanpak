@@ -8,7 +8,7 @@ classifiers = [
   "Programming Language :: Python :: 3.15",
 ]
 dependencies = [
-  "coverage==7.13.0",
+  "coverage==7.13.1",
   "lxml-stubs==0.5.1",
   "python-docx==1.2.0",
   "python-pptx==1.0.2",

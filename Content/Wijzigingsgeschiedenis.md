@@ -1,3 +1,9 @@
+# [Unreleased]
+
+## Alle templates
+
+* Verwijzingen naar VIRBI 2013 vervangen door VIRBI 2025.
+
 # Versie 5.1.0, 6 januari 2026
 
 ## Kwaliteitsaanpak

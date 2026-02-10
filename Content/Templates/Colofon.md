@@ -2,7 +2,7 @@
 
 ###### Rubricering
 
-Rubricering conform [VIRBI 2013, art. 4](https://wetten.overheid.nl/BWBR0033507/2013-06-01#Artikel4).
+Rubricering conform [VIRBI 2025, art. 4](https://wetten.overheid.nl/BWBR0051482/2025-09-09/0#Artikel4).
 
 {Verwijder deze paragraaf en de rubricering op de titelpagina als rubricering niet van toepassing is}
 

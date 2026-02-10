@@ -1,5 +1,9 @@
 # [Unreleased]
 
+## Template Kwaliteitsplan
+
+* Verplaats de paragraaf "Projectspecifieke maatregelen" naar voren en verbeter de toelichting op de paragraaf.
+
 ## Alle templates
 
 * Verwijzingen naar VIRBI 2013 vervangen door VIRBI 2025.

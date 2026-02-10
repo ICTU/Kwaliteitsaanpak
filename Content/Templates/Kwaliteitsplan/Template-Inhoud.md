@@ -94,7 +94,22 @@ In aanvulling op de maatregelen met betrekking tot reviews, zie paragraaf [Docum
 
 # Kwaliteitsmaatregelen realisatiefase
 
-De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende de realisatiefase.
+De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende de realisatiefase. 
+
+## Projectspecifieke kwaliteitsmaatregelen
+
+{Verwijder deze paragraaf indien er geen projectspecifieke kwaliteitsmaatregelen nodig zijn.}
+
+ICTU hanteert tijdens de realisatiefase van projecten een aantal standaard kwaliteitsmaatregelen. Deze standaard kwaliteitsmaatregelen borgen de functionele en niet-functionele eisen die opdrachtgevers vaak stellen. Denk aan eisen op het gebied van koppelingen, onderhoudbaarheid, beveiliging en performance. In dit project stelt de opdrachtgever ook een aantal "bijzondere" eisen waarvoor extra, projectspecifieke, kwaliteitsmaatregelen nodig zijn. 
+
+Deze paragraaf bevat de projectspecifieke kwaliteitsmaatregelen. De standaard kwaliteitsmaatregelen die ICTU-projecten normaal gesproken hanteren tijdens de realisatiefase staan beschreven in de volgende paragrafen in dit hoofdstuk. 
+
+In onderstaande tabel staan de "bijzondere" eisen genoemd, met per eis de extra maatregelen die het project treft om de eis te borgen. De kolom "Geplande controle" beschrijft wie/wanneer zal controleren of de maatregelen zijn uitgevoerd. De kolom "Uitgevoerde controle" beschrijft (nadat de controle is uitgevoerd) wie/wanneer de controle heeft uitgevoerd en wat het resultaat ervan was.
+
+| Eis | Omschrijving | Extra maatregelen | Geplande controle | Uitgevoerde controle |
+|:----|:-------------|:------------------|:------------------|:---------------------|
+| {Nummer} | {voorbeeld: onderdeel A moet kunnen worden vervangen door onderdeel B} | {voorbeeld: scenariotest opnemen in MTP} | {voorbeeld: review MTP door kwaliteitsmanager} | {voorbeeld: kwaliteitsmanager, dd/mm/jjjj, review MTP: geconstateerd dat de test is opgenomen in hoofdstuk x} |
+| {Nummer} | {Omschrijving} | {Maatregelen} | {Controle} | {Verificatie} |
 
 ## Entry- en exitcriteria
 

@@ -14,5 +14,5 @@ Hoe te runnen:
 
 ```console
 $ npm install
-$ python3 wcag.py
+$ uv run --script wcag.py
 ```

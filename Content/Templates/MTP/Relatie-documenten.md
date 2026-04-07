@@ -20,6 +20,6 @@ Het mastertestplan is gebaseerd op de volgende documenten, die beschrijven welke
 | Wireframe, mockup, prototype, animatie                      | {versie} | {datum} |
 | {titel}                                                     | {versie} | {datum} |
 
-Daarnaast is ten behoeve van het mastertestplan een productrisicoanalyse uitgevoerd. Zie de paragraaf 'Resultaat productrisicoanalyse'.
+Daarnaast is ten behoeve van het mastertestplan een productrisicoanalyse uitgevoerd. Zie de paragraaf [Resultaat productrisicoanalyse](#resultaat-productrisicoanalyse).
 
 {Beschrijf ook een eventuele relatie met andere documenten}

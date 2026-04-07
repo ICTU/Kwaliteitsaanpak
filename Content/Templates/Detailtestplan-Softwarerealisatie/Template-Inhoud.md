@@ -78,7 +78,7 @@ Aan het eind van de sprint zal er alleen functionaliteit overgedragen worden die
 
 {Neem hieronder alleen testomgevingen op die voor het project van toepassing zijn.}
 
-Conform BIO-12.1.4 zijn productieomgevingen gescheiden van testomgevingen en wordt er niet getest in productieomgevingen. De onderstaande testomgevingen zijn inzetbaar voor het project:
+Conform BIO-8.31.01 zijn productieomgevingen gescheiden van testomgevingen en wordt er niet getest in productieomgevingen. De onderstaande testomgevingen zijn inzetbaar voor het project:
 
 * **Ontwikkelomgeving:** Op deze omgeving wordt de smoketest uitgevoerd;
 * **Testomgeving:** Handmatig testen van nieuwe functionaliteit en het automatiseren van handmatig uitgevoerde testen om op te nemen in de ART;
@@ -104,7 +104,7 @@ Tijdens het testen worden de onderstaande tools gebruikt:
 
 ## Testdata
 
-Conform BIO-14.3 wordt er niet met productiedata getest. In de ontwikkel-, test- en regressietestomgevingen wordt nagemaakte testdata gebruikt. In de integratie- en performanceomgevingen wordt gegenereerde testdata of eventueel geanonimiseerde productiedata gebruikt. Deze richtlijnen zijn bedoeld om privacy te waarborgen.
+Conform BIO-8.31.01 wordt er niet met productiedata getest. In de ontwikkel-, test- en regressietestomgevingen wordt nagemaakte testdata gebruikt. In de integratie- en performanceomgevingen wordt gegenereerde testdata of eventueel geanonimiseerde productiedata gebruikt. Deze richtlijnen zijn bedoeld om privacy te waarborgen.
 
 Er worden drie soorten data onderscheiden:
 

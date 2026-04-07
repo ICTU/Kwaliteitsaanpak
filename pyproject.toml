@@ -26,38 +26,12 @@ warn_unused_ignores = true
 
 [[tool.mypy.overrides]]
 module = [
+  "docx",
   "pptx",
   "pptx.util",
   "xlsxwriter",
 ]
 ignore_missing_imports = true
-
-[tool.md_dead_link_check]
-exclude_links = [
-  "#m01",
-  "#m02",
-  "#m04",
-  "#m05",
-  "#m07",
-  "#m08",
-  "#m10",
-  "#m14",
-  "#m16",
-  "#m18",
-  "#m19",
-  "#m26",
-  "#m27",
-  "#m28",
-  "#m29",
-  "#m30",
-  "#m32",
-  "#m33",
-  "#m34",
-  "#relatie-met-nen-npr-5326",
-  "#terminologie-en-afkortingen",
-  "relaties-tussen-producten.png",
-  "relaties-testproducten-agile.png",
-]
 
 [tool.ruff]
 target-version = "py314"

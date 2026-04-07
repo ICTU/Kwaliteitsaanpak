@@ -14,7 +14,7 @@ from docx.text.paragraph import Paragraph
 import xmltags
 from custom_types import TreeBuilderAttributes
 from .builder import Builder
-from .hyperlink import add_hyperlink
+from .hyperlink import add_bookmark, add_hyperlink
 from .table_of_contents import add_table_of_contents
 
 
@@ -163,16 +163,16 @@ class DocxBuilder(Builder):
             except KeyError:
                 print(tag, text, attributes)
                 raise
-            if link.startswith("#"):
-                self.paragraph.add_run(text)  # Implement internal links some day
-            else:
-                add_hyperlink(self.paragraph, link, text)
+            add_hyperlink(self.paragraph, link, text)
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().end_element(tag, attributes)
         if tag in (xmltags.BULLET_LIST, xmltags.NUMBERED_LIST):
             self.current_list_style.pop()
             self.previous_list_item.pop()
+        elif tag == xmltags.HEADING:
+            assert self.paragraph
+            add_bookmark(self.paragraph)
 
     def end_document(self) -> None:
         self.doc.save(str(self.filename))

@@ -7,6 +7,12 @@
 ## Alle templates
 
 * Verwijzingen naar VIRBI 2013 vervangen door VIRBI 2025.
+* Verwijzingen naar BIO vervangen door BIO 2 v1.3.
+* Verwijzingen binnen templates klikbaar gemaakt.
+
+## Alle documenten
+
+* Externe verwijzingen en URLs bijgewerkt. 
 
 # Versie 5.1.0, 6 januari 2026
 
@@ -23,7 +29,7 @@
 * Verwijder de kolom voor prioriteit uit de eisentabellen. Het op volgorde zetten van tientallen eisen is in de praktijk ondoenlijk.
 * Verwijder de kolom "Realisatie in" uit de eisentabellen.
 * Hernoem de kolom "Bewijs" van eisen naar "Verificatie" van eisen.
-* Verplaats de lijst van BIO- en SDD-maatregelen naar de bijlagen en vervang deze door één eis in het hoofdstuk "Security", namelijk dat de software voldoet aan de BIO- en SDD-maatregelen. Verificatie van deze eis vindt plaats door een penetratietest en/of secure code review.
+* Verplaats de lijst van BIO- en SSD-maatregelen naar de bijlagen en vervang deze door één eis in het hoofdstuk "Security", namelijk dat de software voldoet aan de BIO- en SSD-maatregelen. Verificatie van deze eis vindt plaats door een penetratietest en/of secure code review.
 * Verwijder het hoofdstuk "Taal en leesbaarheid" en verplaats de eisen daaruit naar het hoofdstuk "Inclusivity".
 * Naast het Word-template ook een spreadsheet variant van de eisentabellen toegevoegd.
 

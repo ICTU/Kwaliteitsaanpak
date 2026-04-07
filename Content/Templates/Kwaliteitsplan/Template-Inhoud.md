@@ -128,7 +128,7 @@ De Definition Of Ready van het project bevat de volgende criteria ({vul aan en p
 5. De story is goedgekeurd door de product owner;
 6. De story is goedgekeurd door de reviewer binnen het Scrumteam;
 7. Het verwachte aantal logische testgevallen is ingevuld;
-8. Er is ingeschat of de user story mogelijk impact heeft op performance, beveiliging, infrastructuur of andere niet-functionele aspecten. {Zie de bijlage "Gebruik van Jira" voor meer informatie.}
+8. Er is ingeschat of de user story mogelijk impact heeft op performance, beveiliging, infrastructuur of andere niet-functionele aspecten. {Zie de bijlage [Gebruik van Jira](#gebruik-van-jira) voor meer informatie.}
 9. De story voldoet aan de [INVEST-criteria](https://xp123.com/invest-in-good-stories-and-smart-tasks/).
 
 ### Definition of Done
@@ -171,7 +171,7 @@ Gedurende de realisatiefase gebruikt ICTU Quality-time, het kwaliteitssysteem va
 
 De actuele kwaliteitsrapportage wordt dagelijks besproken tijdens de daily scrum en wekelijks in het intern projectoverleg (IPO). De kwaliteitsmanager onderhoudt en bewaakt de kwaliteitsrapportage.
 
-Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de software en het softwareproces geautomatiseerd te meten is dit niet altijd mogelijk of kosteneffectief. Daarom voert het project self-assessments uit en doet de kwaliteitsmanager periodiek ook handmatige controles. Zie bijlage E.
+Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de software en het softwareproces geautomatiseerd te meten is dit niet altijd mogelijk of kosteneffectief. Daarom voert het project self-assessments uit en doet de kwaliteitsmanager periodiek ook handmatige controles. Zie [bijlage E](#periodieke-handmatige-controles).
 
 ## Kwaliteit van de broncode
 
@@ -377,17 +377,6 @@ De volgende externe testen, toetsen en certificeringen zijn gepland:
 | {Certificering}         | {Leverancier}                               | {datum(s) en/of frequentie} |
 
 Een certificeringenplan wordt opgesteld indien het op te leveren systeem aan specifieke certificeringseisen moet voldoen. Dit plan bevat de activiteiten op welke wijze de certificatie wordt uitgevoerd. Eisen voor te behalen certificaten moeten in het PvE en/of NFE-document benoemd zijn; bijvoorbeeld NEN-ISO/IEC 27001 compliancy.
-
-## Projectspecifieke maatregelen
-
-{Verwijder deze paragraaf indien er geen projectspecifieke kwaliteitsmaatregelen nodig zijn}
-
-Deze paragraaf bevat maatregelen voor functionele en niet-functionele eisen, die via de standaardmaatregelen uit de ICTU-kwaliteitsaanpak en in dit kwaliteitsplan niet voldoende worden geborgd.
-
-| Eis      | Omschrijving                                                           | Extra maatregelen                        | Hoe controleren         | Verificatie                                                       |
-|:---------|:-----------------------------------------------------------------------|:-----------------------------------------|:------------------------|:------------------------------------------------------------------|
-| {Nummer} | {voorbeeld: onderdeel A moet kunnen worden vervangen door onderdeel B} | {voorbeeld: scenariotest opnemen in MTP} | {voorbeeld: review MTP} | {voorbeeld: dd/mm/jjjj review MTP, test opgenomen in hoofdstuk x} |
-| {Nummer} | {Omschrijving}                                                         | {Maatregelen}                            | {Controle}              | {Verificatie}                                                     |
 
 # Kwaliteitsmaatregelen projectafsluiting
 

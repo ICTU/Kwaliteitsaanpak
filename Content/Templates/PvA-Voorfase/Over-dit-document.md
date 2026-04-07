@@ -14,4 +14,4 @@ De voorfase heeft de volgende doelen:
     a. risico’s.
 1. Voorbereiden van een eventuele start van de realisatie, zodat het Scrumteam van een voldoende uitgewerkte product backlog is voorzien bij de start.
 
-Om deze doelen te realiseren, ontwikkelt ICTU in samenwerking met {partijen} een aantal producten, zie voor een beschrijving hiervan het hoofdstuk "Projectresultaat". Dit plan van aanpak beschrijft verder de planning van en werkwijze tijdens de voorfase. Het is een aanvulling op het voorstel inclusief projectovereenkomst {titel, versie en datum}.
+Om deze doelen te realiseren, ontwikkelt ICTU in samenwerking met {partijen} een aantal producten, zie voor een beschrijving hiervan het hoofdstuk [Projectresultaat](#projectresultaat). Dit plan van aanpak beschrijft verder de planning van en werkwijze tijdens de voorfase. Het is een aanvulling op het voorstel inclusief projectovereenkomst {titel, versie en datum}.

@@ -12,7 +12,7 @@ De volgende uitgangspunten zijn van toepassing op dit document:
 | U06 | Issues gevonden tijdens de acceptatietesten of in productie worden op de product backlog verwerkt samen met de user stories. |
 | U07 | De ontwikkel- en testplanning zijn met elkaar verweven. Het ontwikkelen en testen van de user stories zijn onlosmakelijk met elkaar verbonden en beginnen op hetzelfde moment. |
 | U08 | De testomgeving wordt conform planning tijdig en correct werkend opgeleverd. |
-| U09 | Er is voldoende en gepaste testdata ter beschikking. Zie de paragraaf Testdata in het hoofdstuk Infrastructuur voor een beschrijving van de testdata. |
+| U09 | Er is voldoende en gepaste testdata ter beschikking. Zie de paragraaf [Testdata](#testdata) in het hoofdstuk [Infrastructuur](#infrastructuur) voor een beschrijving van de testdata. |
 | U10 | De testspecificatie voor een testsoort start pas als aan de entry-criteria (Definition of Ready), die hiervoor gelden, is voldaan. Hieraan moet voldaan zijn voor het deel (van de testbasis) dat in de betreffende sprint gerealiseerd en getest wordt (bijvoorbeeld een aantal bij elkaar horende user stories). |
 | U11 | De gevonden en openstaande bevindingen worden structureel besproken in het bevindingenoverleg. Als er veel bevindingen zijn of meer ernstige bevindingen dan verwacht, dan wordt bijgestuurd op de kwaliteit van het ontwikkeltraject. Dat heeft ook impact op de planning en begroting. |
 | U12 | Nieuwe functionaliteit wordt vastgelegd in de geautomatiseerde regressietest. |

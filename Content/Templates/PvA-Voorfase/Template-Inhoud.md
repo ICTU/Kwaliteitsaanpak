@@ -1,6 +1,6 @@
 # Projectresultaat
 
-Om tot {projectresultaat} te komen, levert ICTU in samenwerking met {partijen} een aantal producten. Deze worden in dit hoofdstuk uitgewerkt. De producten komen tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU het proces rondom het opstellen van de producten faciliteert; zie hiervoor het hoofdstuk “Werkwijze”.
+Om tot {projectresultaat} te komen, levert ICTU in samenwerking met {partijen} een aantal producten. Deze worden in dit hoofdstuk uitgewerkt. De producten komen tot stand door middel van een agile aanpak met een doorlooptijd van {doorloop} weken, waarbij ICTU het proces rondom het opstellen van de producten faciliteert; zie hiervoor het hoofdstuk [Werkwijze](#werkwijze).
 
 ## Producten
 

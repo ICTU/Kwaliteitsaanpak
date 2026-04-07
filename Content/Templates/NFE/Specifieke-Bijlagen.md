@@ -1,4 +1,4 @@
-## WCAG2.2 succescriteria
+## WCAG-succescriteria
 
 Onderstaande tabel bevat de WCAG2.2 succescriteria. Per succescriterium is aangegeven of Axe-core, en zo ja met welke regels, het criterium geautomatiseerd kan controleren.
 

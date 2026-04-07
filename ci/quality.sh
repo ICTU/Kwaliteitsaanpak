@@ -2,9 +2,8 @@
 
 set -e
 
-uvx ruff check
+uvx ruff check src tests
 uvx ruff format --check
 uvx mypy --python-executable=.venv/bin/python src tests
-NAMES_TO_IGNORE=''
-uvx vulture --min-confidence 0 --ignore-names $NAMES_TO_IGNORE src tests .vulture_white_list.py
-uvx md-dead-link-check .
+uvx vulture --min-confidence 0 src tests .vulture_white_list.py
+node_modules/markdown-link-check/markdown-link-check --quiet build --config markdown-link-check.json

@@ -8,9 +8,9 @@ De resultaten van de tests zijn de basis voor het vrijgaveadvies, op basis waarv
 
 ## Context
 
-{Beschrijf kort de context waarin de applicatie zal opereren, voor zover deze van belang is voor de uit te voeren tests. Denk aan de speciale eisen die worden gesteld aan de verschillende onderdelen van het informatiesysteem: het “samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en programmatuur alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie” (zie bijlage A).}
+{Beschrijf kort de context waarin de applicatie zal opereren, voor zover deze van belang is voor de uit te voeren tests. Denk aan de speciale eisen die worden gesteld aan de verschillende onderdelen van het informatiesysteem: het “samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en programmatuur alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie” (zie [bijlage A](#terminologie-en-afkortingen)).}
 
-{Maak gebruik van beschrijvingen in bestaande documenten (zie paragraaf 2.4).}
+{Maak gebruik van beschrijvingen in bestaande documenten (zie [paragraaf 2.4](#relatie-met-andere-documenten)).}
 
 ## Scope van de tests
 
@@ -38,7 +38,7 @@ De volgende onderdelen van {het product} zijn binnen de scope van de tests: {Dee
 * overdraagbaarheid
 * {vul aan indien nodig}
 
-Voor de combinaties van de onderdelen en de kwaliteitskenmerken worden in de productrisicoanalyse de risico’s bepaald (zie paragraaf 4.1).
+Voor de combinaties van de onderdelen en de kwaliteitskenmerken worden in de productrisicoanalyse de risico’s bepaald (zie [paragraaf 4.1](#resultaat-productrisicoanalyse)).
 
 ### Buiten scope
 
@@ -94,7 +94,7 @@ In de teststrategie is per onderdeel van {het product} bepaald welke testsoorten
 
 ### Testsoorten en testvormen
 
-Onderstaande tabel bevat de te plannen testsoorten met hun definities. Ook zijn de onderkende testvormen genoemd; deze worden in het volgende hoofdstuk toegelicht.
+Onderstaande tabel bevat de te plannen testsoorten met hun definities. Ook zijn de onderkende testvormen genoemd; deze worden in [het volgende hoofdstuk](#testaanpak) toegelicht.
 
 Een testsoort is een concreet uit te voeren test waarmee een of meer testdoelen worden gerealiseerd. Binnen een testsoort kunnen verschillende testvormen voorkomen; een testvorm is bedoeld voor het testen op een specifiek kenmerk van {het product}.
 
@@ -361,21 +361,21 @@ Het uitgangspunt voor de testinfrastructuur is dat verschillende testsoorten in 
 
 Onderstaande tabel bevat een opsomming van de testomgevingen per testsoort. Zie de volgende paragraaf voor het beheer van de testomgevingen.
 
-| Test-soort | Testomgeving        | Infrastructuur   | Testgegevens   | Periode   | Kosten   |
-|:-----------|:--------------------|:-----------------|:---------------|:----------|:---------|
-| UT         | {testomgeving}      | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| UIT        | {testomgeving}      | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| ST         | Ontwikkel-omgeving  | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| FAT        | Testomgeving        | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| GAT        | Acceptatie-omgeving | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| PEN        | Productie-omgeving  | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| PERF       | {testomgeving}      | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| GEBR       | {testomgeving}      | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| TOEG       | {testomgeving}      | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| PAT        | {testomgeving}      | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
-| CONF       | {testomgeving}      | {infrastructuur} | {testgegevens} | {periode} | {kosten} |
+| Test-soort | Testomgeving        | Infrastructuur   | Testdata   | Periode   | Kosten   |
+|:-----------|:--------------------|:-----------------|:-----------|:----------|:---------|
+| UT         | {testomgeving}      | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| UIT        | {testomgeving}      | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| ST         | Ontwikkel-omgeving  | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| FAT        | Testomgeving        | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| GAT        | Acceptatie-omgeving | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| PEN        | Productie-omgeving  | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| PERF       | {testomgeving}      | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| GEBR       | {testomgeving}      | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| TOEG       | {testomgeving}      | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| PAT        | {testomgeving}      | {infrastructuur} | {testdata} | {periode} | {kosten} |
+| CONF       | {testomgeving}      | {infrastructuur} | {testdata} | {periode} | {kosten} |
 
-# Testtools
+## Testtools
 
 Onderstaande tabel bevat een opsomming van de testtools per testsoort of testvorm.
 

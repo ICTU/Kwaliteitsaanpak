@@ -51,7 +51,7 @@ Dit hoofdstuk beschrijft de use cases die {het product} ondersteunt. Per use cas
 * Primaire scenario: Beschrijving van de interactie tussen actor en systeem waarmee het doel bereikt wordt.
 * Opmerkingen: Eventuele toevoegingen en openstaande punten.
 
-De use cases zijn gegroepeerd naar de functies zoals beschreven in het vorige hoofdstuk.
+De use cases zijn gegroepeerd naar de functies zoals beschreven in [het vorige hoofdstuk](#werking-op-hoofdlijnen).
 
 ## F1 - {naam functie 1}
 

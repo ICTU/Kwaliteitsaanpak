@@ -46,9 +46,9 @@ $IAMA$. Met een dergelijke impact assessment kan een interdisciplinaire dialoog 
 
 Een IAMA wordt ingezet in alle gevallen waarin een overheidsorgaan overweegt een algoritme te (laten) ontwikkelen, in te kopen, aan te passen en/of in te gaan zetten.
 
-Zie [https://www.rijksoverheid.nl/documenten/rapporten/2021/02/25/impact-assessment-mensenrechten-en-algoritmes](https://www.rijksoverheid.nl/documenten/rapporten/2021/02/25/impact-assessment-mensenrechten-en-algoritmes).
+Zie [https://www.rijksoverheid.nl/documenten/rapporten/2026/02/16/impact-assessment-mensenrechten-en-algoritmes](https://www.rijksoverheid.nl/documenten/rapporten/2026/02/16/impact-assessment-mensenrechten-en-algoritmes).
 
-Voor meer informatie over het gezamenlijk gebruik van IAMA en DPIA, zie [https://www.cip-overheid.nl/media/av0dmahv/20230614-gezamenlijk-gebruik-iama-en-model-dpia-rijksdienst-v1-0.pdf](https://www.cip-overheid.nl/media/av0dmahv/20230614-gezamenlijk-gebruik-iama-en-model-dpia-rijksdienst-v1-0.pdf).
+Voor meer informatie over het gezamenlijk gebruik van IAMA en DPIA, zie [https://www.cip-overheid.nl/producten-en-diensten/handreiking-gebruik-iama-samen-met-model-dpia-rijksdienst/](hhttps://www.cip-overheid.nl/producten-en-diensten/handreiking-gebruik-iama-samen-met-model-dpia-rijksdienst/).
 
 ### Projectstartarchitectuur en solution architectuur
 
@@ -66,7 +66,7 @@ Zie [https://www.noraonline.nl/wiki/PSA](https://www.noraonline.nl/wiki/PSA).
 
 Conform NORA werkt de opdrachtgevende organisatie na de start van het project de PSA uit in een solution architectuur (SA).
 
-Zie [https://www.noraonline.nl/wiki/Solution-architectuur](https://www.noraonline.nl/wiki/Solution-architectuur).
+Zie [typen architecturen in NORA](https://www.noraonline.nl/wiki/Typen_architecturen_in_NORA-familie).
 
 ### Afspraken met de beheerorganisatie
 
@@ -100,7 +100,7 @@ Niet-functionele eisen specificeren criteria om het functioneren van de software
 * NEN-ISO/IEC 25010:2023,
 * Wet beveiliging netwerk- en informatiesystemen (Wbni),
 * Baseline Informatiebeveiliging Overheid (BIO),
-* methode Grip op SDD (Secure Software Development) van het Centrum Informatiebeveiliging en Privacybescherming (CIP),
+* methode Grip op SSD (Secure Software Development) van het Centrum Informatiebeveiliging en Privacybescherming (CIP),
 * Algemene verordening gegevensbescherming (AVG),
 * ISO 9241-210:2019 Ergonomics of human-system interaction - Part 210: Human-centred design for interactive systems,
 * Web Content Accessibility Guidelines versie 2.2, niveau A en AA. Hiermee wordt invulling gegeven aan hoofdstuk 9 van de Europese Standaard EN 301 549 die verwijst naar WCAG versie 2.1,

@@ -16,6 +16,7 @@ jobs:
           version: "0.9.17"
       - name: Install dependencies, run unit tests and check quality
         run: |
+          npm install --ignore-scripts
           uv venv
           uv sync
           ci/unittest.sh

@@ -8,7 +8,7 @@ Leerdoelen (week 1):
 * Je weet wat [de missie van ICTU](https://www.ictu.nl/over-ons) is
 * Je weet [voor wie ICTU werkt](https://www.ictu.nl/over-ons/voor-wie-we-werken) en [welke diensten ICTU levert](https://www.ictu.nl/dienstenoverzicht)
 * Je weet welke [directies en afdelingen ICTU](https://ictubeheer.sharepoint.com/teams/Organisatie_DirectieICTU/SitePages/Organisatieschets.aspx) heeft en wat in grote lijnen de taken en verantwoordelijkheden van die afdelingen zijn
-* Je weet wie de [directie van ICTU](https://www.ictu.nl/over-ons/bestuur-directie) bemensen
+* Je weet wie de [besturing van ICTU](https://www.ictu.nl/over-ons/besturing-ictu) bemensen
 
 Acties (zodra mogelijk):
 * Je hebt deelgenomen aan de [ICTU-onboarding](https://ictubeheer.sharepoint.com/teams/Onboarding2)
@@ -21,7 +21,7 @@ Leerdoelen (week 1):
 
 Je hebt toegang tot (week 1):
 * [MS Outlook](https://webmail.ictu.nl) voor e-mail en agenda
-* [Timetell](https://timetell.ictu.nl) voor het registreren van uren
+* AFAS voor het registreren van uren
 * [SharePoint](https://ictubeheer.sharepoint.com) voor het delen van documenten
 * [MS Teams](https://teams.microsoft.com) voor online vergaderen, individuele chats, teamkanalen en organisatiebrede conversaties (dat laatste kun je vinden via de app "Viva Engage" binnen MS Teams)
 * [Topdesk](https://topdesk.ictu.nl) voor het reserveren van vergaderzalen, parkeerplaatsen en andere diensten
@@ -99,7 +99,7 @@ Leerdoelen (week 2):
 Leerdoelen (week 3):
 * Je kent de [functies](https://ictubeheer.sharepoint.com/teams/Organisatie_SoftwareDiensten/SitePages/ECO2.aspx) van het Ecosysteem
 * Je weet wie de product owner van het Ecosysteem is
-* Je weet hoe je problemen met het ecosysteem kunt [melden aan ISD](https://jira.ictu-sd.nl/jira/secure/CreateIssueDetails!init.jspa?pid=11709&issuetype=10100)
+* Je weet hoe je problemen met het ecosysteem kunt melden aan ISD
 * Je weet hoe je je Ecosysteem VPN-key kan verlengen
 
 # Wat je moet weten over je project
@@ -173,17 +173,17 @@ Acties (week 3):
 * Je hebt toegang tot de ontwikkelomgeving (VLAN) van je project, d.w.z. dat je beschikt over een VPN-key die daartoe toegang geeft
 * Je hebt toegang tot het versiebeheersysteem van je project (GitLab of Azure DevOps)
 * Je hebt toegang tot de build server van je project (GitLab CI, Azure DevOps of Jenkins)
-* Je hebt toegang tot je project in [Jira](https://jira.ictu-sd.nl/jira/)
+* Je hebt toegang tot je project in Jira
 * Je hebt toegang tot de securityrapportages in de build pipeline (Dependency-Track, OWASP Dependency-Check, ZAP by Checkmarx )
 * Je hebt toegang tot de toegankelijksrapportage (Axe) in de build pipeline
 * Je hebt toegang tot de testrapportages in de build pipeline (Robot Framework, JUnit, Cypress, etc.)
 * Je hebt toegang tot de Dependency-Track instantie van je project
 * Je hebt toegang tot de SonarQube instantie van je project
 * Je hebt toegang tot de Quality-time instantie van je project
-* Je hebt toegang tot de performancerapportage van je project (zie [overzicht performancetestrapportages](https://reports.pc.iesprd.ictu-sr.nl))
-* Je hebt toegang tot de actie- en besluitenlijst van je project (in Trello of MS Planner)
+* Je hebt toegang tot de performancerapportage van je project 
+* Je hebt toegang tot de actie- en besluitenlijst van je project 
 * Je hebt toegang tot het risicolog van je project
-* Je beschikt over een urencode voor je project in [Timetell](https://timetell.ictu.nl)
+* Je beschikt over een urencode voor je project in AFAS
 
 # Wat je moet weten over je eigen rol
 

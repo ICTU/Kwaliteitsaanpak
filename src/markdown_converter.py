@@ -31,23 +31,32 @@ class MarkdownConverter:
     def convert(self, settings: Settings, output_format: OutputFormat) -> ElementTree:
         """Convert the markdown to XML for the specified output format."""
         self._start_document(settings, output_format)
-        self._convert_markdown_file(pathlib.Path(settings["OutputFormats"][output_format]["InputFile"]), settings)
+        document_md = pathlib.Path(settings["BuildPath"]) / "document.md"
+        md = self._assemble_markdown_file(pathlib.Path(settings["OutputFormats"][output_format]["InputFile"]), settings)
+        document_md.write_text(md)
+        self._convert_markdown_file(document_md, settings)
         self._end_document()
         return ElementTree(self.builder.close())
 
+    def _assemble_markdown_file(self, markdown_filename: pathlib.Path, settings: Settings) -> str:
+        """Create one markdown file by processing the includes."""
+        lines = []
+        for line in markdown_filename.read_text().splitlines():
+            if line.startswith("#include"):
+                filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
+                filename = filename.replace(
+                    "{{DOCUMENT-FOLDER}}",
+                    settings.get("DocumentFolder", "DocumentFolder missing in settings"),
+                )
+                lines.append(self._assemble_markdown_file(pathlib.Path(filename), settings))
+            else:
+                lines.append(line)
+        return "".join(lines)
+
     def _convert_markdown_file(self, markdown_filename: pathlib.Path, settings: Settings) -> None:
         """Convert markdown file to XML."""
-        with open(markdown_filename, encoding="utf-8") as markdown_file:
-            for line in markdown_file.readlines():
-                if line.startswith("#include"):
-                    filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
-                    filename = filename.replace(
-                        "{{DOCUMENT-FOLDER}}",
-                        settings.get("DocumentFolder", "DocumentFolder missing in settings"),
-                    )
-                    self._convert_markdown_file(pathlib.Path(filename), settings)
-                else:
-                    self._process_line(line)
+        for line in markdown_filename.read_text().splitlines():
+            self._process_line(line)
 
     def _start_document(self, settings: Settings, output_format: OutputFormat) -> None:
         """Start the document."""

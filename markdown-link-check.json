@@ -1,0 +1,37 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^#m26$"
+    },
+    {
+      "pattern": ".*BASE_URL.*"
+    },
+    {
+      "pattern": "^relaties-testproducten-agile.png$"
+    },
+    {
+      "pattern": "^#de-ictu-kwaliteitsaanpak-softwareontwikkeling$"
+    },
+    {
+      "pattern": "^#testprocesrisico-s-en-maatregelen$"
+    },
+    {
+      "pattern": "^#projectrisico-s$"
+    },
+    {
+      "pattern": "^#wcag-succescriteria$"
+    },
+    {
+      "pattern": "^#bio-en-ssd-maatregelen$"
+    },
+    {
+      "pattern": "^https://ictubeheer.sharepoint.com"
+    },
+    {
+      "pattern": "^https://www.cip-overheid.nl/media/k5wocp15/grip-op-ssd-het-proces-v20.pdf$"
+    },
+    {
+      "pattern": "^https://www.bio-overheid.nl/media/dr4inbhc/20260109-baseline-informatiebeveiliging-overheid-2-bio2-v13-def.pdf$"
+    }
+  ]
+}

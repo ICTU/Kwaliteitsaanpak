@@ -41,7 +41,7 @@ class MarkdownConverter:
     def _assemble_markdown_file(self, markdown_filename: pathlib.Path, settings: Settings) -> str:
         """Create one markdown file by processing the includes."""
         lines = []
-        for line in markdown_filename.read_text().splitlines():
+        for line in markdown_filename.read_text().splitlines(keepends=True):
             if line.startswith("#include"):
                 filename = line.split(" ", maxsplit=1)[1].strip().strip('"')
                 filename = filename.replace(

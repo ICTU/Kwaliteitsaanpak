@@ -1,4 +1,4 @@
-# [Unreleased]
+# Versie 5.2.0, 14 april 2026
 
 ## Template Kwaliteitsplan
 
@@ -13,6 +13,7 @@
 ## Alle documenten
 
 * Externe verwijzingen en URLs bijgewerkt. 
+* Spelfout in "SSD" opgelost.
 
 # Versie 5.1.0, 6 januari 2026
 

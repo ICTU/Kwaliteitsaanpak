@@ -38,7 +38,7 @@ The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak
 
 1. Create a release branch: `git checkout -b release-vx-y-z`
 2. Update the version number and release date in the change log in `./Content/Wijzigingsgeschiedenis.md``
-3. Create a new release folder in ./docs: `mkdir docs/vx.y.z`
+3. Create a new release folder in ./docs and add it to version control: `mkdir docs/vx.y.z; git add docs`
 4. Update the version number in `docs/index.html`
 5. Update the version number in `pyproject.toml`
 6. Run `VERSION=x.y.z docker compose up` to generate the documents

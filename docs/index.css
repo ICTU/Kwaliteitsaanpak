@@ -3,7 +3,7 @@
 body {
     font-size: 12pt !important;
     color: #000 !important;
-    font-family: 'Muli', sans-serif;
+    font-family: "Muli", sans-serif;
     width: 680px;
     margin: auto;
     counter-reset: section;
@@ -12,33 +12,39 @@ body {
 h1::before {
     counter-increment: section;
     content: counter(section) " ";
-    color: #2C64AD;
+    color: #2c64ad;
 }
 
 h1 {
     line-height: 150%;
-    color: #2C64AD;
+    color: #2c64ad;
     font-size: 20pt;
     font-weight: bold;
+    break-before: page;
     page-break-before: always;
     counter-reset: subsection;
 }
 
-p.title {
+h1.title {
     margin-top: 30px;
-    color: #2C64AD;
     font-size: 42pt;
     font-weight: bold;
     line-height: 130%;
 }
-
-img[title='word-cloud'] {
+h1.title::before {
+    counter-increment: none;
+    content: none;
+}
+img[title="word-cloud"] {
     width: 95%;
     padding-top: 100px;
 }
-
+img.logo {
+    max-width: 100%;
+    height: auto;
+}
 #bijlagen::before {
-    content: "";  /* The Bijlagen section has no counter */
+    content: ""; /* The Bijlagen section has no counter */
 }
 
 h2.bijlage::before {
@@ -52,12 +58,12 @@ h2::before {
 }
 
 h2.toc::before {
-    content: "";  /* The table of contents title has no counter */
+    content: ""; /* The table of contents title has no counter */
 }
 
 h2 {
     margin-top: 20px;
-    color: #DB1778;
+    color: #db1778;
     font-size: 16pt;
     font-weight: bold;
 }
@@ -67,17 +73,17 @@ h3 {
     color: black;
     font-size: 14pt;
     font-weight: bold;
-    margin-bottom: -15px;  /* Remove vertical space between header and next element */
+    margin-bottom: -15px; /* Remove vertical space between header and next element */
 }
 
 h4 {
     font-size: 12pt;
-    color: #B500C7;
-    margin-bottom: -15px;  /* Remove vertical space between header and next element */
+    color: #b500c7;
+    margin-bottom: -15px; /* Remove vertical space between header and next element */
 }
 
 h4.risk {
-    background-color: #4C76BA;
+    background-color: #4c76ba;
     color: white;
     padding: 1em;
 }
@@ -89,13 +95,15 @@ h5 {
 }
 
 tr {
+    break-inside: avoid;
     page-break-inside: avoid;
 }
 
-th,td {
+th,
+td {
     text-align: left;
     vertical-align: top;
-    background-color: #E6F6FD;
+    background-color: #e6f6fd;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -103,7 +111,7 @@ th,td {
 }
 
 th {
-    background-color: #83D0F5;
+    background-color: #83d0f5;
 }
 
 ol {
@@ -122,7 +130,7 @@ ol > li:before {
 }
 
 ol ol > li:before {
-    content: counters(item, ".") " ";  /* Use nested counters when ol's are nested */
+    content: counters(item, ".") " "; /* Use nested counters when ol's are nested */
 }
 
 ol > li {
@@ -152,18 +160,19 @@ ul > li {
 }
 
 .keep-together {
+    break-inside: avoid;
     page-break-inside: avoid;
 }
 
 .maatregel {
-    background-color: #E6F6FD;
+    background-color: #e6f6fd;
     border-style: solid;
     border-width: 1px;
     padding: 1em;
 }
 
 .risk {
-    background-color: #4C76BA;
+    background-color: #4c76ba;
     color: white;
     padding: 1em;
 }

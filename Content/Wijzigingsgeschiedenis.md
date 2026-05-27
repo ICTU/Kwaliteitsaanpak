@@ -1,3 +1,13 @@
+# Versie 6.0.0, nog te releasen
+
+## Kwaliteitsaanpak
+
+* In M16 "Het project gebruikt tools voor vastgestelde taken", Trivy vervangen door Grype als geadviseerd tool voor het controleren van container images op aanwezigheid van bekende kwetsbaarheden.
+
+## Template Plan van Aanpak Realisatiefase
+
+* Trivy vervangen door Grype als tool voor het controleren van container images op aanwezigheid van bekende kwetsbaarheden.
+
 # Versie 5.2.0, 14 april 2026
 
 ## Template Kwaliteitsplan
@@ -12,7 +22,7 @@
 
 ## Alle documenten
 
-* Externe verwijzingen en URLs bijgewerkt. 
+* Externe verwijzingen en URLs bijgewerkt.
 * Spelfout in "SSD" opgelost.
 
 # Versie 5.1.0, 6 januari 2026

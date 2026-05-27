@@ -16,7 +16,7 @@ ICTU adviseert en ondersteunt voor de hieronder genoemde taken specifieke tools.
 | [submeasure-title]Controleren op aanwezigheid van bekende kwetsbaarheden in externe software[/submeasure-title] | OWASP (Open Web Application Security Project) Dependency-Check en/of Dependency-Track |
 | [submeasure-title]Statische controle van de software op aanwezigheid van kwetsbare constructies[/submeasure-title] | SonarQube |
 | [submeasure-title]Dynamische controle van de software op aanwezigheid van kwetsbare constructies[/submeasure-title] | ZAP (Zed Attack Proxy) by Checkmarx |
-| [submeasure-title]Controleren van container images op aanwezigheid van bekende kwetsbaarheden[/submeasure-title] | Trivy |
+| [submeasure-title]Controleren van container images op aanwezigheid van bekende kwetsbaarheden[/submeasure-title] | Grype |
 | [submeasure-title]Testen van performance en schaalbaarheid[/submeasure-title] | JMeter en Performancetestrunner |
 | [submeasure-title]Testen op toegankelijkheid van de applicatie[/submeasure-title] | Axe |
 | [submeasure-title]Produceren van een "software bill of materials" (SBoM)[/submeasure-title] | Tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren |

@@ -1,52 +1,109 @@
 # ICTU Kwaliteitsaanpak Softwareontwikkeling
 
-[ICTU's Kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak) is a set of guidelines used at [ICTU](https://www.ictu.nl) for software development projects. It is only available in Dutch, sorry.
+| Disclaimer |
+| ----------- |
+| [ICTU's Kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak) is a set of guidelines used at [ICTU](https://www.ictu.nl) for software development projects. It is only available in Dutch as is this readme.md.|
 
-This repository contains the source information and automation scripts for generating ICTU's Kwaliteitsaanpak documentation. The Kwaliteitsaanpak itself is available via [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
+**Inhoudsopgave**
+- [Over de Kwaliteitsaanpak](#over-de-kwaliteitsaanpak)
+- [Werking van deze software](#werking-van-deze-software)
+  - [Indeling](#indeling)
+  - [Structuur van Richtlijnen](#structuur-van-richtlijnen)
+  - [Documentdefinities](#documentdefinities)
+- [Bijdragen](#bijdragen)
+  - [Vereisten](#vereisten)
+  - [Stappen](#stappen)
+  - [Een nieuwe versie van de documentatie uitbrengen](#een-nieuwe-versie-van-de-documentatie-uitbrengen)
+- [Contact](#contact)
 
-## Documents
+## Over de Kwaliteitsaanpak
+De ICTU Kwaliteitsaanpak is een set van maatregelen voor softwareontwikkelprojecten om de kans op een succesvol project te vergroten.
+De werkwijze van ICTU is hierdoor openbaar en een open bron voor andere organisaties die (delen) van deze aanpak willen toepassen.
 
-The Kwaliteitsaanpak consists of a main document containing the Kwaliteitsaanpak itself, a number of templates, and a self-assessment checklist. The sources are a collection of Markdown files and supporting material. Scripts convert the Kwaliteitsaanpak main document to html, the templates to docx, and the self-assessment checklist to xslx.
+De ICTU Kwaliteitsaanpak en bijbehorende documentsjablonen, de controlelijst en gidsen zijn beschikbaar via [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
 
-## Authoring guidelines
+## Werking van deze software
+### Indeling
+Deze repository bevat de bronbestanden die door middel van scripts de Markdown-bestanden omzetten in:
+- **HTML** (voor het hoofddocument).
+- **DOCX** (voor sjablonen).
+- **XLSX** (voor de checklist).
 
-- For each guideline:
-  - Create a folder under ./Content/Maatregelen
-  - Add 2 files to the folder
-    - Definitie.md - brief one paragraph definition of the guideline
-    - Maatregel.md - guideline title, description, and rationale
-- Add the maatregel to the document structure definition in ./DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md
+### Structuur van Richtlijnen
+Voor elke richtlijn:
+1. Maak een map aan in `./Content/Maatregelen`.
+2. Voeg twee bestanden toe:
+   - `Definitie.md`: Een korte alinea met de definitie van de richtlijn.
+   - `Maatregel.md`: Titel, beschrijving en onderbouwing van de richtlijn.
+3. Voeg de richtlijn toe aan de documentstructuur in `./DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak.md`.
 
-## Document definitions
+### Documentdefinities
+Elke documentdefinitie bevindt zich in een submap van `./DocumentDefinitions` en bestaat uit:
+- `document.json`: Metadata over het document.
+- `document.md`: Inhoud van het document.
+- `document.css`: Stijlen voor het document.
+- `cover.css`: Stijlen voor de cover.
 
-- Each document definition is stored inside a subfolder of ./DocumentDefinitions
-- A document definition is composed of a number of files:
-  - document.json - meta data about the document
-  - document.md - content of the document
-  - document.css - styling
-  - cover.css - styling
-- Shared material such as headers, footers, and stylesheets are in the ./DocumentDefinitions/Shared folder
+Gedeeld materiaal (zoals headers, footers en stylesheets) staan in `./DocumentDefinitions/Shared`.
 
-## Generating the documentation
+## Bijdragen
+### Vereisten
+- [Docker](https://www.docker.com/) geïnstalleerd op je systeem.
 
-- Make sure you have Docker
-- Clone this repository
-- Run `docker compose up`
-- Run `open html/index.html` to view the latest release and the work in progress (wip)
+### Stappen
+1. Clone deze repository.
+   ```bash
+   git clone https://github.com/ICTU/Kwaliteitsaanpak.git
+   cd Kwaliteitsaanpak
+   ```
+2. Genereer de documentatie.
+   Met het starten van de containers wordt direct de documentatie gegenereerd.
+   ```bash
+   docker compose up
+   ```
+3. Open de gegenereerde documentatie.
+   ```bash
+   open docs/index.html
+   ```
+In de bovenste sectie staat de meest recente release.
+In de sectie 'onderhanden werk' staat alles in de `wip`-map. Lokale wijzigingen worden ook weergeven onder 'onderhanden werk'.
 
-## Releasing a new version of the documentation
+⚠️ Wijzigingen (ook aan de software) moeten worden gedocumenteerd in `./Content/Wijzigingsgeschiedenis.md`.
 
-1. Create a release branch: `git checkout -b release-vx-y-z`
-2. Update the version number and release date in the change log in `./Content/Wijzigingsgeschiedenis.md``
-3. Create a new release folder in ./docs and add it to version control: `mkdir docs/vx.y.z; git add docs`
-4. Update the version number in `docs/index.html`
-5. Update the version number in `pyproject.toml`
-6. Run `VERSION=x.y.z docker compose up` to generate the documents
-7. Commit the changes and push to GitHub: `git commit -a -m "Release vx.y.z"; git push`
-8. Review and merge the branch on GitHub
-9. Tag the release and push the tag to GitHub: `git checkout master; git pull -p; git tag vx.y.z; git push --tags`
-10. Announce the release in MS Teams channel "ICTU Softwareontwikkeling/Algemeen". In case of a minor release, also mail the SDM'ers. In case of a major release, also email everyone at ISE.
+### Een nieuwe versie van de documentatie uitbrengen
+1. Maak een release branch:
+   ```bash
+   git checkout -b release-vx.y.z
+   ```
+2. Werk het versienummer en releasedatum bij in `./Content/Wijzigingsgeschiedenis.md`.
+3. Maak een nieuwe map voor de release in `./docs` en voeg deze toe aan versiebeheer:
+   ```bash
+   mkdir docs/vx.y.z
+   git add docs
+   ```
+4. Werk het versienummer bij in `docs/index.html` en `pyproject.toml`.
+5. Genereer de documentatie met het nieuwe versienummer:
+   ```bash
+   VERSION=x.y.z docker compose up
+   ```
+6. Commit en push de wijzigingen:
+   ```bash
+   git commit -a -m "Release vx.y.z"
+   git push
+   ```
+7. Review en merge de branch op GitHub.
+8. Tag de release en push de tag naar GitHub:
+   ```bash
+   git checkout master
+   git pull -p
+   git tag vx.y.z
+   git push --tags
+   ```
+9. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
+   - Bij een **minor release**: stuur ook een e-mail naar de SDM'ers.
+   - Bij een **major release**: stuur een e-mail naar iedereen bij ISE.
 
-## Point of contact
-
-Points of contact for the ICTU Kwaliteitsaanpak Softwareontwikkeling and this repository are [Sebastiaan Koot](https://github.com/Sebastiaan127001) and [Frank Niessink](https://github.com/fniessink).
+## Contact
+Voor vragen over de Kwaliteitsaanpak of deze repository, neem contact op met:
+- [Sebastiaan Koot 📧](mailto:sebastiaan.koot@ictu.nl)
+- [Frank Niessink 📧](mailto:frank.niessink@ictu.nl)

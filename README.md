@@ -64,6 +64,7 @@ Gedeeld materiaal (zoals headers, footers en stylesheets) staat in `./DocumentDe
 - [Docker](https://www.docker.com/) geïnstalleerd op je systeem.
 
 ### Stappen
+Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren. 
 1. Clone deze repository.
    ```bash
    git clone https://github.com/ICTU/Kwaliteitsaanpak.git
@@ -74,6 +75,7 @@ Gedeeld materiaal (zoals headers, footers en stylesheets) staat in `./DocumentDe
    ```bash
    docker compose up
    ```
+   Wanneer het proces succesvol is verlopen worden de containers vanzelf afgesloten en zijn de documenten gegenereerd. De terminal geeft dan iets weer als `ka-1 exited with code 0`.
 3. Open de gegenereerde documentatie.
    ```bash
    open docs/index.html

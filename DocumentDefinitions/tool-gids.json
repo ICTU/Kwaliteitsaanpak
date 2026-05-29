@@ -1,0 +1,30 @@
+{
+  "BuildPath": "build/ToolGuide/",
+  "Title": "ICTU Kwaliteitsaanpak Tool Guide",
+  "Subtitle": "Een praktische handleiding ...",
+  "DocumentType": "Kwaliteitsaanpak",
+  "FrontPage": "ICTU",
+  "OutputFormats": {
+    "html": {
+      "IncludeTableOfContents": true,
+      "InputFile": "Content/ToolGuide/ToolGuide.md",
+      "OutputFile": "ICTU-Kwaliteitsaanpak-ToolGuide.html",
+      "OutputPaths": ["docs/$VERSIE$"],
+      "CopyFiles": [
+        {
+          "from": "DocumentDefinitions/Shared/document.css",
+          "to": ["docs/$VERSIE$/ICTU-Kwaliteitsaanpak-ToolGuide.css"]
+        },
+        {
+          "from": "Content/Images/ICTU.png",
+          "to": ["docs/$VERSIE$/ICTU.png"]
+        },
+        {
+          "from": "Content/Images/word-cloud.png",
+          "to": ["docs/$VERSIE$/word-cloud.png"]
+        }
+      ]
+    }
+  },
+  "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]
+}

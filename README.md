@@ -2,7 +2,7 @@
 
 | Disclaimer |
 | ----------- |
-| [ICTU's Kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak) is a set of guidelines used at [ICTU](https://www.ictu.nl) for software development projects. It is only available in Dutch as is this readme.md.|
+| [ICTU's Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak) is a set of guidelines used at [ICTU](https://www.ictu.nl/kwaliteitsaanpak) for software development projects. It is only available in Dutch as is this readme.md.|
 
 **Inhoudsopgave**
 - [Over de Kwaliteitsaanpak](#over-de-kwaliteitsaanpak)
@@ -21,7 +21,7 @@
 De ICTU Kwaliteitsaanpak is een set van maatregelen voor softwareontwikkelprojecten om de kans op een succesvol project te vergroten.
 De werkwijze van ICTU is hierdoor openbaar en een open bron voor andere organisaties die (delen van) deze aanpak willen toepassen.
 
-De ICTU Kwaliteitsaanpak en bijbehorende documentsjablonen, de controlelijst en gidsen zijn beschikbaar via [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
+De ICTU Kwaliteitsaanpak en ondersteunende documenten zijn beschikbaar via [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
 
 ## Werking van deze software
 ### Indeling
@@ -83,38 +83,41 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
 In de bovenste sectie staat de meest recente release.
 In de sectie 'onderhanden werk' staat alles in de `wip`-map. Lokale wijzigingen worden ook weergegeven onder 'onderhanden werk'.
 
-⚠️ Wijzigingen (ook aan de software) moeten worden gedocumenteerd in `./Content/Wijzigingsgeschiedenis.md`.
+⚠️ Wijzigingen (alleen aan de inhoud van de Kwaliteitsaanpak) moeten worden gedocumenteerd in `./Content/Wijzigingsgeschiedenis.md`.
 
 ### Een nieuwe versie van de documentatie uitbrengen
-1. Maak een release branch:
+1. Bepaal het nieuwe versienummer. Zie https://ictu.github.io/Kwaliteitsaanpak/v5.2.0/ICTU-Kwaliteitsaanpak.html#versionering
+
+2. Maak een release branch:
    ```bash
    git checkout -b release-vx.y.z
    ```
-2. Werk het versienummer en de releasedatum bij in `./Content/Wijzigingsgeschiedenis.md`.
-3. Maak een nieuwe map voor de release in `./docs` en voeg deze toe aan versiebeheer:
+3. Werk het versienummer en de releasedatum bij in `./Content/Wijzigingsgeschiedenis.md`.
+
+4. Maak een nieuwe map voor de release in `./docs` en voeg deze toe aan versiebeheer:
    ```bash
    mkdir docs/vx.y.z
    git add docs
    ```
-4. Werk het versienummer bij in `docs/index.html` en `pyproject.toml`.
-5. Genereer de documentatie met het nieuwe versienummer:
+5. Werk het versienummer bij in `docs/index.html` en `pyproject.toml`.
+6. Genereer de documentatie met het nieuwe versienummer:
    ```bash
    VERSION=x.y.z docker compose up
    ```
-6. Commit en push de wijzigingen:
+7. Commit en push de wijzigingen:
    ```bash
    git commit -a -m "Release vx.y.z"
    git push
    ```
-7. Review en merge de branch op GitHub.
-8. Tag de release en push de tag naar GitHub:
+8. Review en merge de branch op GitHub.
+9. Tag de release en push de tag naar GitHub:
    ```bash
    git checkout master
    git pull -p
    git tag vx.y.z
    git push --tags
    ```
-9. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
+10. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
    - Bij een **minor release**: stuur ook een e-mail naar de SDM'ers.
    - Bij een **major release**: stuur een e-mail naar iedereen bij ISE.
 

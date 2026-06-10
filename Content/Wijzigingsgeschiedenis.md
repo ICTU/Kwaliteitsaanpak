@@ -1,8 +1,3 @@
-# Ongepubliceerd
-
-## README.md
-* Vertaal de REAMDME.md naar het Nederlands conform voertaal ICTU. Zie [#1147](https://github.com/ICTU/Kwaliteitsaanpak/issues/1147)
-
 # Versie 5.2.0, 14 april 2026
 
 ## Template Kwaliteitsplan

@@ -64,26 +64,19 @@ Gedeeld materiaal (zoals headers, footers en stylesheets) staat in `./DocumentDe
 - [Docker](https://www.docker.com/) geïnstalleerd op je systeem.
 
 ### Stappen
-Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren. 
-1. Clone deze repository.
+Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
+1. Clone deze repository:
    ```bash
    git clone https://github.com/ICTU/Kwaliteitsaanpak.git
    cd Kwaliteitsaanpak
    ```
-2. Genereer de documentatie.
-   Met het starten van de containers wordt direct de documentatie gegenereerd.
+2. Genereer de documentatie:
    ```bash
    docker compose up
    ```
-   Wanneer het proces succesvol is verlopen worden de containers vanzelf afgesloten en zijn de documenten gegenereerd. De terminal geeft dan iets weer als `ka-1 exited with code 0`.
-3. Open de gegenereerde documentatie.
-   ```bash
-   open docs/index.html
-   ```
-In de bovenste sectie staat de meest recente release.
-In de sectie 'onderhanden werk' staat alles in de `wip`-map. Lokale wijzigingen worden ook weergegeven onder 'onderhanden werk'.
+   Wanneer het proces succesvol is verlopen wordt de container vanzelf afgesloten. De terminal geeft dan iets weer als `ka-1 exited with code 0`. De gegenereerde documenten staan in de map `docs/wip` (work-in-progress).
 
-⚠️ Wijzigingen (alleen aan de inhoud van de Kwaliteitsaanpak) moeten worden gedocumenteerd in `./Content/Wijzigingsgeschiedenis.md`.
+⚠️ Documenteer wijzigingen (alleen aan de inhoud van de Kwaliteitsaanpak) in `./Content/Wijzigingsgeschiedenis.md`.
 
 ### Een nieuwe versie van de documentatie uitbrengen
 1. Bepaal het nieuwe versienummer. Zie https://ictu.github.io/Kwaliteitsaanpak/v5.2.0/ICTU-Kwaliteitsaanpak.html#versionering
@@ -104,6 +97,7 @@ In de sectie 'onderhanden werk' staat alles in de `wip`-map. Lokale wijzigingen 
    ```bash
    VERSION=x.y.z docker compose up
    ```
+   De gegenereerde documenten staan in de map `docs/vx.y.z`.
 7. Commit en push de wijzigingen:
    ```bash
    git commit -a -m "Release vx.y.z"

@@ -1,6 +1,9 @@
 # Input files to be processed
 input
 
+# Generated files
+docs/wip/*
+
 # Logs
 logs
 *.log

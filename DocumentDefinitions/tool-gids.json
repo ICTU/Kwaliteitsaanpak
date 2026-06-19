@@ -1,19 +1,19 @@
 {
-  "BuildPath": "build/ToolGuide/",
-  "Title": "ICTU Kwaliteitsaanpak Tool Guide",
-  "Subtitle": "Een praktische handleiding ...",
+  "BuildPath": "build/ToolGids/",
+  "Title": "ICTU Toolgids",
+  "Subtitle": "Handleidingen en tips bij het gebruik van tools die softwarekwaliteit inzichtelijk maken.",
   "DocumentType": "Kwaliteitsaanpak",
   "FrontPage": "ICTU",
   "OutputFormats": {
     "html": {
       "IncludeTableOfContents": true,
-      "InputFile": "Content/ToolGuide/ToolGuide.md",
-      "OutputFile": "ICTU-Kwaliteitsaanpak-ToolGuide.html",
+      "InputFile": "Content/ToolGids/ToolGidsIndex.md",
+      "OutputFile": "ICTU-Alle-ToolGidsen.html",
       "OutputPaths": ["docs/$VERSIE$"],
       "CopyFiles": [
         {
           "from": "DocumentDefinitions/Shared/document.css",
-          "to": ["docs/$VERSIE$/ICTU-Kwaliteitsaanpak-ToolGuide.css"]
+          "to": ["docs/$VERSIE$/ICTU-Kwaliteitsaanpak-ToolGids.css"]
         },
         {
           "from": "Content/Images/ICTU.png",
@@ -22,9 +22,13 @@
         {
           "from": "Content/Images/word-cloud.png",
           "to": ["docs/$VERSIE$/word-cloud.png"]
+        },
+        {
+          "from": "Content/ToolGids/img/jre.png",
+          "to": ["docs/$VERSIE$/jre.png"]
         }
       ]
     }
   },
-  "VariablesFiles": ["DocumentDefinitions/Shared/variables.json"]
+  "VariablesFiles": ["DocumentDefinitions/Shared/variables.json", "DocumentDefinitions/Shared/variables-toolgids.json"]
 }

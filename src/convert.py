@@ -105,9 +105,9 @@ def write_xml(xml: ElementTree, settings: Settings, output_format: OutputFormat)
 def copy_files(settings: Settings, output_format: OutputFormat) -> None:
     """Copy specified source files (e.g. CSS files) to the specified destinations."""
     for file_to_copy in settings["OutputFormats"][output_format].get("CopyFiles", []):
-        source_path = pathlib.Path(file_to_copy["from"])
-        destination_paths = [pathlib.Path(path) for path in file_to_copy["to"]]
-        for destination_path in destination_paths:
+        source_paths = pathlib.Path.glob(pathlib.Path.cwd(), file_to_copy["from"])
+        destination_path = pathlib.Path(file_to_copy["to"])
+        for source_path in source_paths:
             shutil.copy(source_path, destination_path)
 
 

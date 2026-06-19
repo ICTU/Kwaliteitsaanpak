@@ -59,6 +59,8 @@ Elke documentdefinitie bevindt zich in een submap van `./DocumentDefinitions` en
 
 Gedeeld materiaal (zoals headers, footers en stylesheets) staat in `./DocumentDefinitions/Shared`.
 
+Zie [DocumentDefinitions/README.md](DocumentDefinitions/README.md) voor meer informatie.
+
 ## Bijdragen
 ### Vereisten
 - [Docker](https://www.docker.com/) geïnstalleerd op je systeem.

@@ -15,21 +15,11 @@
             "CopyFiles": [
                 {
                     "from": "DocumentDefinitions/Shared/document.css",
-                    "to": [
-                        "docs/$VERSIE$/ICTU-Kwaliteitsaanpak-Samenvatting.css"
-                    ]
+                    "to": "docs/$VERSIE$/ICTU-Kwaliteitsaanpak-Samenvatting.css"
                 },
                 {
-                    "from": "Content/Images/ICTU.png",
-                    "to": [
-                        "docs/$VERSIE$/ICTU.png"
-                    ]
-                },
-                {
-                    "from": "Content/Images/word-cloud.png",
-                    "to": [
-                        "docs/$VERSIE$/word-cloud.png"
-                    ]
+                    "from": "Content/Images/*.png",
+                    "to": "docs/$VERSIE$"
                 }
             ]
         }

@@ -10,6 +10,9 @@ from docx.shared import Cm, RGBColor
 from docx.table import Table
 from docx.table import _Row as Row
 from docx.text.paragraph import Paragraph
+from pygments import lex
+from pygments.lexers import get_lexer_by_name
+from pygments.styles import get_style_by_name
 
 import xmltags
 from custom_types import TreeBuilderAttributes
@@ -144,6 +147,7 @@ class DocxBuilder(Builder):
         self.column_index += 1
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
+        super().text(tag, text, attributes)  # Buffer the text so code blocks can be tokenized in end_element
         if tag in self.TEXT_TAGS:
             assert self.paragraph
             run = self.paragraph.add_run(text)
@@ -166,6 +170,8 @@ class DocxBuilder(Builder):
             add_hyperlink(self.paragraph, link, text)
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
+        if tag == xmltags.CODE_BLOCK:
+            self._add_code_block(self.current_text(), attributes)
         super().end_element(tag, attributes)
         if tag in (xmltags.BULLET_LIST, xmltags.NUMBERED_LIST):
             self.current_list_style.pop()
@@ -173,6 +179,23 @@ class DocxBuilder(Builder):
         elif tag == xmltags.HEADING:
             assert self.paragraph
             add_bookmark(self.paragraph)
+
+    def _add_code_block(self, code: str, attributes: TreeBuilderAttributes) -> None:
+        """Add a syntax-highlighted code block as a paragraph with the Code style."""
+        lexer = get_lexer_by_name(str(attributes[xmltags.CODE_BLOCK_LANGUAGE]), ensurenl=False)
+        style = get_style_by_name("default")
+        paragraph = self.doc.add_paragraph(style="Code")
+        for token_type, value in lex(code.rstrip("\n"), lexer):
+            token_style = style.style_for_token(token_type)
+            # A token's value may span multiple lines; emit a line break between the lines.
+            for line_index, line in enumerate(value.split("\n")):
+                if line_index > 0:
+                    paragraph.add_run().add_break()
+                run = paragraph.add_run(line)
+                if token_style["color"]:
+                    run.font.color.rgb = RGBColor.from_string(token_style["color"])
+                run.font.bold = token_style["bold"]
+                run.font.italic = token_style["italic"]
 
     def end_document(self) -> None:
         self.doc.save(str(self.filename))

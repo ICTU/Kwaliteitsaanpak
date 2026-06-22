@@ -81,6 +81,8 @@ class HTMLBuilder(Builder):
                     self.table_cell_html_tag,
                     {html_tags.STYLE: f"text-align:{alignment}"},
                 )
+            case xmltags.CODE_BLOCK:
+                self.builder.start(html_tags.PRE, {})
             case xmltags.ANCHOR:
                 self.builder.start(
                     html_tags.ANCHOR,
@@ -179,6 +181,8 @@ class HTMLBuilder(Builder):
                 self.builder.end(html_tags.TABLE_ROW)
             case xmltags.TABLE_CELL:
                 self.builder.end(cast(str, self.table_cell_html_tag))
+            case xmltags.CODE_BLOCK:
+                self.builder.end(html_tags.PRE)
             case xmltags.ANCHOR:
                 self.builder.end(html_tags.ANCHOR)
             case xmltags.MEASURE:

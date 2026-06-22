@@ -5,6 +5,8 @@ BOLD_START = BOLD_END = "**"
 BOLD_ALTERNATIVE_START = BOLD_ALTERNATIVE_END = "__"
 BULLET_LIST_PATTERN = r"^[\*\+\-] "
 CELL_ALIGNMENT_MARKER = ":"
+CODE_BLOCK_START = r"```([a-z]+)"
+CODE_BLOCK_END = r"```"
 END_PATTERN = r"^<!-- end: ([^ ]+) -->"
 HEADING_PATTERN = r"^(#+) (.*)"
 IMAGE_PATTERN = r'^!\[([^\]]+)\]\(([^ ]+) "([^\)]+)"\)'

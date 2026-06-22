@@ -150,12 +150,20 @@ class MarkdownConverter:
 
     def _process_line(self, line: str) -> None:
         """Process a line of Markdown."""
-        if not (stripped_line := line.strip()):
+        if not (stripped_line := line.strip()) and xmltags.CODE_BLOCK not in self.context:
             self._end_lists()
             self._end_table()
             return  # Empty line, nothing further to do
         stripped_line = self._process_variables(stripped_line)
-        if match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
+        if match := re.match(markdown_syntax.CODE_BLOCK_START, stripped_line):
+            self.context.add(xmltags.CODE_BLOCK)
+            self.builder.start(xmltags.CODE_BLOCK, {xmltags.CODE_BLOCK_LANGUAGE: match.group(1)})
+        elif match := re.match(markdown_syntax.CODE_BLOCK_END, stripped_line):
+            self.context.remove(xmltags.CODE_BLOCK)
+            self.builder.end(xmltags.CODE_BLOCK)
+        elif xmltags.CODE_BLOCK in self.context:
+            self.builder.data(line + "\n")
+        elif match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
             attributes: dict[bytes | str, bytes | str] = {}
             if attribute := match.group(2):
                 key, value = attribute.split("=")

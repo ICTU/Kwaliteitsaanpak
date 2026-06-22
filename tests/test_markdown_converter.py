@@ -221,3 +221,9 @@ class MarkdownTest(MarkdownConverterTestCase):
     def test_include(self):
         """Test that Markdown files can be included."""
         self.assertEqual("included", self.find(xmltags.PARAGRAPH).text)
+
+    @patch(read_text, Mock(return_value="```python\nprint('Hello world')\n```\n"))
+    def test_code_blok(self):
+        """Test that a code block can be included in the Markdown."""
+        code_block = self.find(xmltags.CODE_BLOCK)
+        self.assertEqual("print('Hello world')\n", code_block.text)

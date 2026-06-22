@@ -2,7 +2,11 @@
 
 import pathlib
 from typing import cast
-from xml.etree.ElementTree import ElementTree, TreeBuilder
+from xml.etree.ElementTree import Element, ElementTree, TreeBuilder, fromstring
+
+from pygments import highlight
+from pygments.lexers import get_lexer_by_name
+from pygments.formatters import HtmlFormatter
 
 import xmltags
 from custom_types import TreeBuilderAttributes
@@ -37,6 +41,7 @@ class HTMLBuilder(Builder):
         self.in_measure = False
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
+        super().start_element(tag, attributes)
         match tag:
             case xmltags.DOCUMENT:
                 self.builder.start(html_tags.HTML, {html_tags.LANGUAGE: "nl"})
@@ -81,8 +86,6 @@ class HTMLBuilder(Builder):
                     self.table_cell_html_tag,
                     {html_tags.STYLE: f"text-align:{alignment}"},
                 )
-            case xmltags.CODE_BLOCK:
-                self.builder.start(html_tags.PRE, {})
             case xmltags.ANCHOR:
                 self.builder.start(
                     html_tags.ANCHOR,
@@ -103,6 +106,7 @@ class HTMLBuilder(Builder):
                 self.in_measure = True
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
+        super().text(tag, text, attributes)
         if tag == xmltags.TITLE:
             title = html_tags.PARAGRAPH
             self.builder.start(title, {html_tags.CLASS: "title"})
@@ -118,7 +122,7 @@ class HTMLBuilder(Builder):
             if self.heading_level[-1] <= 2:
                 heading_attributes["id"] = slugify(text)
             self.builder.start(html_tags.HEADING + str(self.heading_level[-1]), heading_attributes)
-        if tag not in (xmltags.IMAGE, xmltags.HEADER, xmltags.TITLE):
+        if tag not in (xmltags.IMAGE, xmltags.HEADER, xmltags.TITLE, xmltags.CODE_BLOCK):
             self.builder.data(text)
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
@@ -182,12 +186,28 @@ class HTMLBuilder(Builder):
             case xmltags.TABLE_CELL:
                 self.builder.end(cast(str, self.table_cell_html_tag))
             case xmltags.CODE_BLOCK:
-                self.builder.end(html_tags.PRE)
+                code = self.current_text()
+                language = attributes[xmltags.CODE_BLOCK_LANGUAGE]
+                lexer = get_lexer_by_name(language)
+                formatter = HtmlFormatter()
+                self.replay(fromstring(highlight(code, lexer, formatter)))
             case xmltags.ANCHOR:
                 self.builder.end(html_tags.ANCHOR)
             case xmltags.MEASURE:
                 self.builder.end(html_tags.DIV)
                 self.in_measure = False
+        super().end_element(tag, attributes)
+
+    def replay(self, node: Element) -> None:
+        """Replay a parsed HTML fragment into the tree builder."""
+        self.builder.start(node.tag, dict(node.attrib))
+        if node.text:
+            self.builder.data(node.text)
+        for child in node:
+            self.replay(child)
+            if child.tail:
+                self.builder.data(child.tail)
+        self.builder.end(node.tag)
 
     def end_paragraph(self) -> None:
         """End the paragraph."""

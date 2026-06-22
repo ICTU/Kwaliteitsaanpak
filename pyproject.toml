@@ -13,6 +13,7 @@ dependencies = [
   "pygments==2.20.0",
   "python-docx==1.2.0",
   "python-pptx==1.0.2",
+  "types-Pygments==2.20.0.20260518",
   "vulture==2.16",
   "xlsxwriter==3.2.9",
 ]

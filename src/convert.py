@@ -107,6 +107,9 @@ def copy_files(settings: Settings, output_format: OutputFormat) -> None:
     for file_to_copy in settings["OutputFormats"][output_format].get("CopyFiles", []):
         source_paths = pathlib.Path.glob(pathlib.Path.cwd(), file_to_copy["from"])
         destination_path = pathlib.Path(file_to_copy["to"])
+        if "*" in file_to_copy["from"] or "?" in file_to_copy["from"]:
+            # "from" is a glob pattern so "to" is a directory, make sure it exists:
+            destination_path.mkdir(parents=True, exist_ok=True)
         for source_path in source_paths:
             shutil.copy(source_path, destination_path)
 

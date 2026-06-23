@@ -1,31 +1,27 @@
 {
   "BuildPath": "build/ToolGids/",
-  "Title": "ICTU Toolgids",
+  "Title": "ICTU Toolgids - ZAP",
   "Subtitle": "Handleidingen en tips bij het gebruik van tools die softwarekwaliteit inzichtelijk maken.",
   "DocumentType": "Kwaliteitsaanpak",
   "FrontPage": "ICTU",
   "OutputFormats": {
     "html": {
       "IncludeTableOfContents": true,
-      "InputFile": "Content/ToolGids/ToolGidsIndex.md",
-      "OutputFile": "ICTU-Alle-ToolGidsen.html",
+      "InputFile": "Content/ToolGids/ToolGids.md",
+      "OutputFile": "ICTU-ToolGids.html",
       "OutputPaths": ["docs/$VERSIE$"],
       "CopyFiles": [
         {
           "from": "DocumentDefinitions/Shared/document.css",
-          "to": ["docs/$VERSIE$/ICTU-Kwaliteitsaanpak-ToolGids.css"]
+          "to": "docs/$VERSIE$/ICTU-ToolGids.css"
         },
         {
-          "from": "Content/Images/ICTU.png",
-          "to": ["docs/$VERSIE$/ICTU.png"]
+          "from": "Content/ToolGids/Images/*.png",
+          "to": "docs/$VERSIE$/ToolGids/Images"
         },
         {
-          "from": "Content/Images/word-cloud.png",
-          "to": ["docs/$VERSIE$/word-cloud.png"]
-        },
-        {
-          "from": "Content/ToolGids/img/jre.png",
-          "to": ["docs/$VERSIE$/jre.png"]
+          "from": "Content/Images/*.png",
+          "to": "docs/$VERSIE$"
         }
       ]
     }

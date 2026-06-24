@@ -1,12 +1,14 @@
 """HTML builder."""
 
 import pathlib
+import re
+from html.entities import name2codepoint
 from typing import cast
 from xml.etree.ElementTree import Element, ElementTree, TreeBuilder, fromstring
 
 from pygments import highlight
 from pygments.lexers import get_lexer_by_name
-from pygments.formatters import HtmlFormatter
+from pygments_better_html import BetterHtmlFormatter
 
 import xmltags
 from custom_types import TreeBuilderAttributes
@@ -189,14 +191,31 @@ class HTMLBuilder(Builder):
                 code = self.current_text()
                 language = attributes[xmltags.CODE_BLOCK_LANGUAGE]
                 lexer = get_lexer_by_name(language)
-                formatter = HtmlFormatter()
-                self.replay(fromstring(highlight(code, lexer, formatter)))
+                formatter = BetterHtmlFormatter(linenos=False)
+                self.replay(fromstring(self.html_entities_to_xml(highlight(code, lexer, formatter))))
             case xmltags.ANCHOR:
                 self.builder.end(html_tags.ANCHOR)
             case xmltags.MEASURE:
                 self.builder.end(html_tags.DIV)
                 self.in_measure = False
         super().end_element(tag, attributes)
+
+    # Entities that the XML parser understands and so must be left untouched; all other named HTML entities
+    # (e.g. &nbsp; emitted by the formatter) are turned into numeric character references the parser accepts.
+    XML_ENTITIES = frozenset({"amp", "lt", "gt", "quot", "apos"})
+
+    @classmethod
+    def html_entities_to_xml(cls, fragment: str) -> str:
+        """Replace named HTML entities with numeric character references so the fragment parses as XML."""
+
+        def reference(match: re.Match[str]) -> str:
+            name = match.group(1)
+            codepoint = name2codepoint.get(name)
+            if name in cls.XML_ENTITIES or codepoint is None:
+                return match.group(0)
+            return f"&#{codepoint};"
+
+        return re.sub(r"&([A-Za-z][A-Za-z0-9]*);", reference, fragment)
 
     def replay(self, node: Element) -> None:
         """Replay a parsed HTML fragment into the tree builder."""

@@ -53,6 +53,7 @@ dependencies = [
     { name = "coverage" },
     { name = "lxml-stubs" },
     { name = "pygments" },
+    { name = "pygments-better-html" },
     { name = "python-docx" },
     { name = "python-pptx" },
     { name = "types-pygments" },
@@ -65,6 +66,7 @@ requires-dist = [
     { name = "coverage", specifier = "==7.14.3" },
     { name = "lxml-stubs", specifier = "==0.5.1" },
     { name = "pygments", specifier = "==2.20.0" },
+    { name = "pygments-better-html", specifier = "==0.1.6" },
     { name = "python-docx", specifier = "==1.2.0" },
     { name = "python-pptx", specifier = "==1.0.2" },
     { name = "types-pygments", specifier = "==2.20.0.20260518" },
@@ -165,6 +167,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/c3/b2/bc9c9196916376152d655522fdcebac55e66de6603a76a02bca1b6414f6c/pygments-2.20.0.tar.gz", hash = "sha256:6757cd03768053ff99f3039c1a36d6c0aa0b263438fcab17520b30a303a82b5f", size = 4955991, upload-time = "2026-03-29T13:29:33.898Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/f4/7e/a72dd26f3b0f4f2bf1dd8923c85f7ceb43172af56d63c7383eb62b332364/pygments-2.20.0-py3-none-any.whl", hash = "sha256:81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176", size = 1231151, upload-time = "2026-03-29T13:29:30.038Z" },
+]
+
+[[package]]
+name = "pygments-better-html"
+version = "0.1.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pygments" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7d/24/b7006b8537def51c771efa81839ef8435e681c4e13d35e3f4b60cebce4ec/pygments_better_html-0.1.6.tar.gz", hash = "sha256:3821d9e2dcf402cd319edca6f893f3e8a399c42d096ab02a16155b8c3de4d888", size = 8636, upload-time = "2026-02-14T20:44:44.044Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ed/55/e441282f440008cc5d19de606f8160a4afb0a67e14a4f29a47bc5f8b07ae/pygments_better_html-0.1.6-py3-none-any.whl", hash = "sha256:03ab4583ca3e5af1f50ca47005a2803c25d8decffdd706ac62346146ed20abd0", size = 8794, upload-time = "2026-02-14T20:44:42.04Z" },
 ]
 
 [[package]]

@@ -1,15 +1,15 @@
 {
     "subjects": {
-        "d9898839-208c-419a-81ad-9be71e1f0c38": {
+        "42420b19-5646-477c-b84c-3f5551fd70bd": {
             "type": "software",
             "name": "Producten",
             "metrics": {
-                "a1a1d16c-8d9b-42f9-bfa1-0cfd04cf656f": {
+                "1556672b-2b4e-49d8-a630-6f72bd86e459": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "1. Business impact analyse",
                     "sources": {
-                        "187db09c-df5f-40b8-9d71-4c172fb15fba": {
+                        "347443d4-a588-4023-809f-1b99277a0473": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -17,12 +17,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "1a0fd878-07b2-4fb9-aa1b-4f2301b20755": {
+                "18835543-512d-45aa-a821-b4af964ffcd2": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "2. Data protection impact assessment",
                     "sources": {
-                        "5630a9ec-e154-4931-910b-b9a365b86bf5": {
+                        "6075305a-d913-44b6-af6c-37905d759858": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -30,12 +30,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "b707e27d-54ca-4a49-a1c2-39f4e1cae58d": {
+                "e10c39d2-6343-4663-a22f-77ed9df14d71": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "3. Impact assessment mensenrechten en algoritmes",
                     "sources": {
-                        "ed1526c1-4cc3-485e-8014-e80de0cf3248": {
+                        "3f9f7d69-f608-4351-88a5-342dec96413a": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -43,12 +43,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "e91a37da-0843-4a2d-88dd-9177279a26e8": {
+                "ff90a729-242b-4414-a334-4b8911eaa9d4": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "4. Projectstartarchitectuur en solution architectuur ",
                     "sources": {
-                        "635fea86-d26b-460e-88bc-41f45c6c8d23": {
+                        "bc8e4335-15ff-4254-91ef-8f1378de95bd": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -56,12 +56,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "5686ac7f-fa36-43e4-a898-d85437caf46e": {
+                "2b7c1cd8-e35c-4053-86af-e9905c282ae8": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "5. Afspraken met de beheerorganisatie ",
                     "sources": {
-                        "888b0928-72db-4307-9218-e2df7259af4a": {
+                        "1f3aa867-9b08-47f3-b2ba-c99dea8b8d3f": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -69,12 +69,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "5129d98c-99c3-4a85-847d-9dadb7f3c165": {
+                "2d7d23c5-fad5-4bd9-b62d-4c82c9392f46": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "6. Plan van aanpak: voorfase ",
                     "sources": {
-                        "31eb1b81-126f-4f28-95a5-249555032e1c": {
+                        "0870c220-ebb2-4b72-a7b2-91fb66ef930a": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -82,12 +82,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "5be0ce34-758f-482d-824a-402e5fdfcedb": {
+                "c0d14a5b-e8ed-455f-93bb-fba25b260086": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "7. Beschrijving van functionele eisen ",
                     "sources": {
-                        "5804d13d-c363-4b86-bbbf-d4b52b778d9e": {
+                        "6b6b140e-7305-4769-8899-b1ac62c04c7a": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -95,12 +95,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "85790485-1d16-4d77-8b73-da76a09f13e6": {
+                "f29a5c90-1e68-4302-823f-83e1467e2aa9": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "8. Beschrijving van niet-functionele eisen ",
                     "sources": {
-                        "6f69b355-1cb1-4e0c-a1aa-227ec486e5a6": {
+                        "c183a6d7-eebf-4423-907d-0e8bd2c077cb": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -108,12 +108,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "fe2018af-34e5-47cc-909b-1779c1cf39d7": {
+                "a35f6223-73bf-4e12-b85c-78098b71dfea": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "9. Product backlog",
                     "sources": {
-                        "222543a5-580c-46ac-8bf2-c102c43f1023": {
+                        "2405ec29-070b-4f4c-8eb7-90dcf3b6b938": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -121,12 +121,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "e7d7e478-8b9b-45b3-9367-94627e7ccef9": {
+                "e00544ad-3f4f-43af-bce6-4ea7d6f5a8a1": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "10. Ontwerp- en architectuurdocumentatie",
                     "sources": {
-                        "1b319a69-2c37-443b-a7ab-3858baa78e1f": {
+                        "c6454eed-4956-48db-9efa-db089dfa0116": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -134,12 +134,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "a91ac9b0-d0bf-47b3-b5a4-fc54a1337d6d": {
+                "3f170146-c42c-4645-bff7-ea00bff229cb": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "11. Mastertestplan",
                     "sources": {
-                        "de53bed0-93f6-4b7e-86fd-7eff3eb7d994": {
+                        "158d3061-9824-418d-a657-de35f260cfe0": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -147,12 +147,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "866f5f18-4bec-4a15-8d3a-9340eecaeae7": {
+                "ebf64e1c-9c04-40d0-823f-e4e2b6a0b1cd": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "12. Detailtestplannen",
                     "sources": {
-                        "0a8418b3-229d-472a-9ec1-17dfa153ab41": {
+                        "12d7ce18-0cbe-4cbf-ace6-d6fdb7c55b2b": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -160,12 +160,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "7bb4863b-591f-4d0c-99f5-f04c903829b7": {
+                "696f378a-221e-4d00-837f-c6b8e0337822": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "13. Informatiebeveiligingsplan",
                     "sources": {
-                        "294e384f-b5af-4648-b654-d9dd3cc8eaf5": {
+                        "eed28813-1e5a-40dd-9b82-5e808d22c2b1": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -173,12 +173,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "c50b84af-c293-4977-9cb0-e3969272bccc": {
+                "bd8e19e5-5859-4635-8ce0-c38bbd6a8134": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "14. Kwaliteitsplan",
                     "sources": {
-                        "a4f77a11-3a60-49bc-9cab-dde9290f4df1": {
+                        "3f4e2cb3-f510-46a6-afff-65e8b2f44d8f": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -186,12 +186,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "c57c574c-c6bb-4db0-8bf1-b5a640d51dbf": {
+                "88db730c-16cd-42e5-b4b3-fc226de14eef": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "15. Plan van aanpak: realisatiefase",
                     "sources": {
-                        "cfde51c6-88c4-4817-b0e7-ac197509579c": {
+                        "c2774f58-7ab1-4d12-be9b-f8d28e29b96a": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -199,12 +199,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "d6439c19-3257-4dc3-8a60-66042594057d": {
+                "82018fc3-15fd-453a-af9a-d2a1998f30b6": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "16. Deploybare versie van de software",
                     "sources": {
-                        "6a0d58f1-04a7-4db2-ae6a-9d2964ac4673": {
+                        "31d6db55-5aa0-4491-b648-58e872c97d5c": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -212,12 +212,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "0333a035-b70f-4a94-a38e-920767cd1f91": {
+                "84c495ac-5b10-4493-9ada-c1265d7d6089": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "17. Testrapportages",
                     "sources": {
-                        "19b40e3c-dbdc-4df9-9f8d-a97ee9977f04": {
+                        "514efbd5-e287-4975-b10b-becde2d57846": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -225,12 +225,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "330834d8-a0fe-4d10-a4f8-93f5f1d1328e": {
+                "c8ba1557-8ee2-4a37-831d-14ba4a809b29": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "18. Documentatie voor deployment en operationeel beheer",
                     "sources": {
-                        "cee72991-4142-4b98-bb16-6c5e27df2acf": {
+                        "41c3b232-2ba5-44c5-825e-c75ba771dfc3": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -238,12 +238,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "2fe9d0f8-46a0-45aa-8115-ee5d682584ad": {
+                "89df3758-1920-47cc-854a-c5edf6108b77": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "19. Software bill of materials",
                     "sources": {
-                        "e033c3fe-56c5-4205-86c9-0cc2c14fdb5a": {
+                        "f0b98f09-faa8-44f3-877c-020a85ad55a5": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -251,12 +251,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "553491bd-2edb-43bb-be72-3fd7f7d2e653": {
+                "4d9841fe-6023-4087-a45e-2db0d5106a0a": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "20. Release notes",
                     "sources": {
-                        "80340093-6669-42a3-a228-9e2d72561604": {
+                        "e43bb4cf-a4c9-4e12-b73a-96fd60de6ed5": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -264,12 +264,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "9ab37a72-d3eb-415f-a2c2-53b25dd6fdae": {
+                "ba536775-d5ff-46ac-81ba-887140b3644c": {
                     "type": "compliance",
                     "name": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
                     "secondary_name": "21. Vrijgaveadvies",
                     "sources": {
-                        "4e9116f2-b26f-4a09-a2d2-ea71dae05417": {
+                        "ede2519c-3850-4c8e-a177-505f68de233d": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -277,12 +277,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "f81bdb3e-62d5-4e8c-b8b1-2bb1c4a02c97": {
+                "9c979161-a87d-4905-8a3b-c517071b7e25": {
                     "type": "compliance",
                     "name": "M32: Het project onderzoekt de kwaliteit van over te nemen software",
                     "secondary_name": "1. Een rapportage met tenminste de bevindingen, risico's voor opdrachtgevende organisatie en ICTU, en mitigerende maatregelen",
                     "sources": {
-                        "db484e42-2cdf-4c7b-bd94-93d19773e729": {
+                        "06b64973-ad51-4ae8-98d1-0e522b1bc7e3": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -290,12 +290,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "a4e8ade1-89e3-46e9-a56c-d8f1226fb248": {
+                "3c9397df-7066-49da-84f4-7b2d3c056808": {
                     "type": "compliance",
                     "name": "M32: Het project onderzoekt de kwaliteit van over te nemen software",
                     "secondary_name": "2. Een transitieplan dat de activiteiten beschrijft die nodig zijn om de software af te bouwen of te herbouwen en te onderhouden",
                     "sources": {
-                        "4836fd82-d44e-4a2e-9fe2-020fa923b842": {
+                        "d14c7c3a-57a4-4487-a770-6208c976a590": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -303,12 +303,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "c98f0480-f6ea-476d-b46d-4eddbb3cdec7": {
+                "00a5a627-7c42-4184-bd18-56ca1a065d31": {
                     "type": "compliance",
                     "name": "M32: Het project onderzoekt de kwaliteit van over te nemen software",
                     "secondary_name": "3. Als er significante technische schuld aanwezig is in de bestaande software: een plan voor het aflossen van deze schuld",
                     "sources": {
-                        "6d83c24d-5d4a-45e5-9fcc-34b5c61be925": {
+                        "2c215afc-e5e0-4e00-b564-585594c056fe": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -316,12 +316,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "57384a58-f44a-4f78-b456-6af7f8e0c547": {
+                "dffb0705-ef9e-4b05-966e-9a9d9c577f46": {
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "1. Tijdens de voorfase: het project reviewt de deliverables periodiek",
                     "sources": {
-                        "b7cb2561-a674-496c-9c2d-02dbcdcbb1f2": {
+                        "4c08c858-6f8a-44e5-a687-cec6531dfc12": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -329,12 +329,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "2748ae8c-9b6a-4d28-a83d-2a797f7167db": {
+                "47fd7a7b-c41f-4e14-9ffe-56dc5b9abc0a": {
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "2. Tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd de kwaliteit van de software",
                     "sources": {
-                        "c9cd3f75-4b97-4a0d-b821-2ca572c18a1f": {
+                        "ea28da97-785a-47dc-9caa-8bc9b936e757": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -342,12 +342,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "0930173c-f27b-400d-9429-f8bf75ac2798": {
+                "f854ebf8-e166-43c1-b848-95fb5b34bd5e": {
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "3. Als operationeel beheer onderdeel is van de dienstverlening tijdens de realisatiefase: het project bewaakt op dagelijkse basis en geautomatiseerd het gedrag van de software in gebruik en beheer",
                     "sources": {
-                        "69e34308-7304-437c-a376-f974f50efdc8": {
+                        "01484ee8-53eb-46bd-b781-47c5be074d62": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -355,12 +355,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "701d7f09-acee-4bb0-a719-93ed3c7d271c": {
+                "a32b8275-2d35-4050-85a9-a622b4c133cf": {
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "4. Tijdens de realisatiefase: het project evalueert periodiek en handmatig de kwaliteitseigenschappen van de software die niet geautomatiseerd kunnen worden gemeten",
                     "sources": {
-                        "fc90e128-3ab3-4c66-9ac4-9bf942ebc805": {
+                        "d8254120-09c4-451f-b45a-03ccc9ca34ef": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -368,12 +368,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "dc6d64ec-b0bb-4c5b-a5b9-37b5deae3173": {
+                "51717aea-acd3-45ed-869b-496217c2b451": {
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "5. Tijdens de realisatiefase: het project actualiseert en reviewt periodiek de documentatie",
                     "sources": {
-                        "263ace3a-612a-42cb-a6a1-4d9ca7210769": {
+                        "6692f311-d32f-419e-b9d4-b3bb00f14c19": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -381,12 +381,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "91faa0d7-0d87-4d56-8cef-ad09e3b321df": {
+                "165e6a39-5cd4-4b5b-834c-480c935f6465": {
                     "type": "compliance",
                     "name": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
                     "secondary_name": "6. Indien nodig: de kwaliteitsmanager escaleert het langdurig niet halen van de kwaliteitsnormen",
                     "sources": {
-                        "7591d5b8-b89a-4ed1-9ab0-0e9a350af191": {
+                        "eed5b162-05a6-4497-977b-6c405b874d97": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -394,12 +394,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "fa1a6a7b-5962-4cef-9bab-1782568af8c0": {
+                "f85636c2-e79c-48eb-ad37-90fc20be23d2": {
                     "type": "compliance",
                     "name": "M03: Het project zorgt dat het product traceerbaar aan eisen voldoet",
                     "secondary_name": "",
                     "sources": {
-                        "7464add9-6c22-404a-adfb-362c3f82f920": {
+                        "718c0383-7d72-4d91-b748-a13ccc5fcfc3": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -407,12 +407,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "08b81c5a-e004-4a85-9e9f-03813ff511a6": {
+                "688d124e-8f70-44b7-9a0f-ec10f8d89249": {
                     "type": "compliance",
                     "name": "M04: Het project borgt de correcte werking van het product met geautomatiseerde regressietests",
                     "secondary_name": "",
                     "sources": {
-                        "0823bf8f-f51b-47be-af32-82177ffe33af": {
+                        "61945235-5a3a-41d1-a27f-58cc3e539cc1": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -420,12 +420,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "220bfeeb-d494-4338-9bf4-0f3b5f1e1294": {
+                "bbdc4ee9-c36e-4f3f-ab3f-41f06d7aed0e": {
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "1. Bouw van de software",
                     "sources": {
-                        "d863fceb-d7a1-4865-bc55-96ed7364315a": {
+                        "c3a7c8de-3b4b-4a74-aead-2115b298ccab": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -433,12 +433,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "88f84592-061d-4543-96ce-6efa6883f1bb": {
+                "84f3a126-040c-43ad-aeab-93ad82d829a5": {
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "2. Unit tests",
                     "sources": {
-                        "e91c0d79-18f4-44ac-bc30-530323520e32": {
+                        "5e679b34-ba25-4c0b-b844-c25982b39fed": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -446,12 +446,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "a23b1152-ac48-4667-b71c-5f2f3da2aac3": {
+                "6b6b1b1c-2742-40d7-b570-bc3f02c388f9": {
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "3. Regressietests",
                     "sources": {
-                        "bdd1d52f-6489-4191-bcd0-1a1ff6541169": {
+                        "321cbb23-1517-4a62-8177-2e1f7e0d8dd4": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -459,12 +459,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "b71f3ee3-6d6b-4c62-bbb9-14c9db77a3f5": {
+                "a00fdf10-8268-41f2-9b8a-d1cf7f9eab7a": {
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "4. Beveiligingstests",
                     "sources": {
-                        "19d89d95-47a1-4a02-b7d2-052ac8b98b8d": {
+                        "d85a690d-8dbf-40af-bf57-f264164ed76a": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -472,12 +472,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "54ade797-8423-4ea8-affd-51e42207714b": {
+                "a35a7ddd-3531-42c4-812c-3b6061fb8a3a": {
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "5. Performancetests",
                     "sources": {
-                        "d933d4ec-0176-4f94-a1b2-2155f077bc81": {
+                        "f1f61c32-5ee8-431d-8ce0-557e69167b65": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -485,12 +485,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "3bb525f6-4833-4b97-90d0-5b2786528486": {
+                "d27f0ed7-2fe2-4463-9dcd-f2581fa391d8": {
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "6. Toegankelijkheidstests",
                     "sources": {
-                        "90ca1701-9469-4d88-9e44-8645162b2324": {
+                        "94dd3aeb-43e1-44ee-9a58-3f95f79dedd6": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -498,12 +498,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "9f662d2e-5b20-464c-a737-3eb6bab65d42": {
+                "de370ad4-dde5-4c49-a7a2-1a78ef78c9a4": {
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "7. Broncodekwaliteitscontroles",
                     "sources": {
-                        "9008cbc4-d53e-4fb0-a7c6-c4cc6ab840d4": {
+                        "ca1cbe0d-5a07-488e-b942-e6e426326e18": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -511,12 +511,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "3b791268-2cdb-40b5-bb24-dfe4ae8153f4": {
+                "bd667a07-df66-478c-8e24-6ae315227652": {
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "8. Installatie van de software in test, acceptatie en/of productieomgevingen",
                     "sources": {
-                        "c49dd2a1-6976-4f5a-84ab-651184579fe0": {
+                        "1371902e-6c30-41b9-a199-9bf5b102f249": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -524,12 +524,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "d1ee9461-4414-45bb-8863-5e8ba95bf566": {
+                "da25fcf6-9df0-4ee3-b821-e0a4b17caa40": {
                     "type": "compliance",
                     "name": "M07: Het project gebruikt een continuous delivery pipeline om het product te bouwen, testen en op te leveren",
                     "secondary_name": "9. Oplevering van het totale product, dus inclusief alle deliverables, in de vorm zoals bruikbaar voor en afgesproken met de opdrachtgevende organisatie",
                     "sources": {
-                        "04656bcc-a7c9-4ac6-8a7c-f77d6541a5e1": {
+                        "db8b6288-e946-48e1-8849-f12af04d5c4e": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -537,12 +537,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "962e90b6-14e6-4e35-83d1-57a29e7ce633": {
+                "d264d250-7649-44dd-90fc-a95dae4f0ea9": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "1. Product en sprint backlog management en agile werken",
                     "sources": {
-                        "22f7cd29-6bce-4ca0-bcf7-0e52fbbcd4bf": {
+                        "2df62554-0fcf-409c-b0ce-bffc59d20253": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -550,12 +550,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "dae23c3a-9c85-4b6d-9c5c-4edad6d447ae": {
+                "2ad7c618-4bab-45b2-b9fa-de5667d5eb84": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "2. Inrichten en uitvoeren van een continuous delivery pipeline",
                     "sources": {
-                        "5e11a648-45af-4558-9300-183e1aa05ec9": {
+                        "f8b4ac50-e394-4663-9451-e4f1ae255e8a": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -563,12 +563,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "2f444aec-bf3d-464c-97da-81b4e9a5dca9": {
+                "863d25dc-6354-45ba-9db2-9171c59d8ec2": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "3. Monitoren van de kwaliteit van broncode",
                     "sources": {
-                        "b6e1c198-476f-4215-87ec-17bf5b5d96ba": {
+                        "28f860fc-2288-4938-bb68-f4ef05722106": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -576,12 +576,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "cf711c67-d2a8-41e5-b175-77bab8eae6b1": {
+                "32b4ebc5-ff3b-4582-9822-ae2cddafea46": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "4. Versiebeheer van op te leveren producten",
                     "sources": {
-                        "2870695c-610c-4ee6-9a90-e54a3487b2b6": {
+                        "acce13c8-7be0-461b-bc8a-aafd99dd2ac2": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -589,12 +589,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "2060dfb0-de3f-48d5-b7de-0bb7c5e05c93": {
+                "80470f00-ea13-48e8-be6a-bfc4bf2ea964": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "5. Release van software",
                     "sources": {
-                        "e11a8b5c-e3f4-4d27-990a-dedff4bf4b08": {
+                        "93bf6059-6160-43e8-a5ba-435da325cf96": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -602,12 +602,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "d5269d73-e448-45ee-8fff-19bcace3aa66": {
+                "eaa386d3-25fd-4154-9050-adb4810ae4ca": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "6. Maken van testrapportages",
                     "sources": {
-                        "7826b053-29af-4a18-b18c-f7d6562ca96c": {
+                        "737dce46-7234-4e31-b41f-2a509997d80b": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -615,12 +615,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "0cddab94-f589-4bcf-90d6-46ca3476eca8": {
+                "53479477-0e18-4b62-936d-010c987122d6": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "7. Maken van kwaliteitsrapportages",
                     "sources": {
-                        "3aa456d3-1604-4ad1-9ac5-f7433600a483": {
+                        "c51eb9e2-ee20-40f6-ac34-e06a90e4764f": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -628,12 +628,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "25f46b76-d642-4afd-8ad6-c2eeea9b70b0": {
+                "6540fed9-fb0e-4a5d-a28e-0a54ba4cd70d": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "8. Controleren op aanwezigheid van bekende kwetsbaarheden in externe software",
                     "sources": {
-                        "35151b4b-b149-466f-b2be-7cca9ee06b8b": {
+                        "bdc3e9d4-8dc7-4d09-9cfc-84ac54598d50": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -641,12 +641,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "22abd99c-2d66-4905-a64b-6853ed797182": {
+                "3f6c7679-6871-4579-8b15-7386e3e3b97b": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "9. Statische controle van de software op aanwezigheid van kwetsbare constructies",
                     "sources": {
-                        "b291e7d6-434c-448d-b9d8-f672cdc96872": {
+                        "858c6e9b-0891-4d46-9b61-63901d8f4135": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -654,12 +654,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "cb11bb5d-b16d-4b42-b993-fd549788f630": {
+                "2e3f5cb3-c3ad-44f3-baad-2d5ac3cf2abc": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "10. Dynamische controle van de software op aanwezigheid van kwetsbare constructies",
                     "sources": {
-                        "9f897ded-72f5-4c7a-abd9-4b964e933f44": {
+                        "e697eee6-3ad3-48c1-acbc-e3cdc9ae5217": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -667,12 +667,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "efd5add7-5a7e-43b6-a006-f9689d81cbf7": {
+                "29d67320-bf71-4f67-bb33-659c2a5bdd1a": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "11. Controleren van container images op aanwezigheid van bekende kwetsbaarheden",
                     "sources": {
-                        "f1d69947-7cb4-4c5b-abfa-fa631031bc33": {
+                        "50868a2c-33fb-47d1-8fe5-ec3f32aa484a": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -680,12 +680,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "019c6437-1fd6-4476-9733-a5d6ca7400bc": {
+                "9519c7f2-b69d-409b-bd70-f2f86579d85b": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "12. Testen van performance en schaalbaarheid",
                     "sources": {
-                        "4c441f46-35b5-43e4-ad82-de695acc1a57": {
+                        "de3ecf91-6ee5-4122-93c0-c58d68fc61af": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -693,12 +693,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "08f34057-0329-4b81-9615-29256fd4fdc0": {
+                "e223a8de-9dfa-4395-9229-df77475767ca": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "13. Testen op toegankelijkheid van de applicatie",
                     "sources": {
-                        "f5dc0350-8e7a-43f8-8c04-20c848196d72": {
+                        "818e30a7-911f-4e7f-bfee-d96b72efed30": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -706,12 +706,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "3dff6597-d4fa-4040-91b8-fa27650c6178": {
+                "bac189a9-bc4d-4fed-9413-9abf2a21bafb": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "14. Produceren van een \"software bill of materials\" (SBoM)",
                     "sources": {
-                        "baa955b7-8e41-4e03-ac40-6b732bb867f3": {
+                        "4a8a3b4a-fb6a-4179-a784-b8ee38064d52": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -719,12 +719,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "bbb8e769-76b4-4cef-8b59-e5635e8dc5ea": {
+                "2ca6f3d9-2408-4316-9400-507a3759d0db": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "15. Opslaan van artifacten",
                     "sources": {
-                        "2a572687-5379-4c37-a49a-a1ef706daea9": {
+                        "000498b3-cc6b-4778-bbd7-0cd3fd72ae46": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -732,12 +732,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "8a1bfeac-a106-455b-a47b-72c4a9fcdb19": {
+                "f7992c2b-40fc-4f7e-a70b-3e8699a1df2d": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "16. Registratie van incidenten bij gebruik en beheer",
                     "sources": {
-                        "fad6d198-c53a-4017-a301-9dce1ef4388e": {
+                        "114a2a1c-9f0d-42d5-9c4b-dce889176591": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -745,12 +745,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "07343a28-106b-4896-8c39-1e629913ce4d": {
+                "943fc527-e36f-49a3-8968-369fb77f3f88": {
                     "type": "compliance",
                     "name": "M16: Het project gebruikt tools voor vastgestelde taken",
                     "secondary_name": "17. Bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving",
                     "sources": {
-                        "e3d57831-d17a-40b5-a03a-bb7dbcbb367b": {
+                        "b14bf18e-6101-4d6f-9009-489361d37841": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -758,12 +758,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "392929ee-05ec-4259-9a57-d5f1c465bde3": {
+                "fa99ae03-4f27-4838-913f-d9daad3e8d99": {
                     "type": "compliance",
                     "name": "M08: Het project maakt technische schuld inzichtelijk en lost deze planmatig op",
                     "secondary_name": "",
                     "sources": {
-                        "9555b9a2-3347-41ae-abc4-95c6cc5a7c27": {
+                        "6c853d0c-d031-4925-b4b0-06573ccb234e": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -771,12 +771,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "a64c77f3-09d5-4ce4-92a4-40937207cc8e": {
+                "390ae78c-db15-4abf-a4d4-e91e58344518": {
                     "type": "compliance",
                     "name": "M26: Het project laat de beveiliging van het ontwikkelde product periodiek beoordelen",
                     "secondary_name": "",
                     "sources": {
-                        "0b6a430a-a899-48e9-82e3-d7ca7e1f126b": {
+                        "f91db02f-01b7-4664-aa5a-75a149f26ab4": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -786,16 +786,16 @@
                 }
             }
         },
-        "d37c4bd3-5a6c-4b74-8bdf-eabdc69a5e5d": {
+        "c3767318-c47b-4395-b6f5-dbe16f672c51": {
             "type": "software",
             "name": "Processen",
             "metrics": {
-                "b86ad6f9-ea3b-4168-9da4-39f5dba34d36": {
+                "3fce24b7-6f17-415d-ad7b-7898ea5231b8": {
                     "type": "compliance",
                     "name": "M14: Het project bereidt samen met opdrachtgevende organisatie en betrokken partijen de realisatie voor",
                     "secondary_name": "",
                     "sources": {
-                        "c5a08125-8710-4ffe-b0cb-9ac764d99f7d": {
+                        "abe48a92-067b-44bc-b2b3-ea4d38be68f2": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -803,12 +803,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "c00ecb71-254b-4cac-a6e2-b1b6324945cc": {
+                "19d41766-c665-4e8d-a4dc-ea09a927ab89": {
                     "type": "compliance",
                     "name": "M21: Het project selecteert medewerkers op basis van kwaliteit",
                     "secondary_name": "",
                     "sources": {
-                        "5eae4b8c-d3da-4ed2-ac53-0c0c10fc9be3": {
+                        "b78f8d35-8875-49f2-8031-eb8a813ca087": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -816,12 +816,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "9f89dfb1-f2b1-49f0-a640-0d938d0443a8": {
+                "ba41b4af-fb56-48fb-b6be-f8651ff5b377": {
                     "type": "compliance",
                     "name": "M23: Het project zorgt voor de aanwezigheid van kennis van en ervaring met de Kwaliteitsaanpak",
                     "secondary_name": "",
                     "sources": {
-                        "2d6a7f2b-ea94-49c7-adc0-7982ab361ebc": {
+                        "fb331fa9-36a4-4998-b6d9-98b5c6905a61": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -829,12 +829,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "7c96f140-36bc-4ca1-997d-f6f6a9c9351b": {
+                "76e4bd4f-0c66-4831-b5bd-8596de3d8922": {
                     "type": "compliance",
                     "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces",
                     "secondary_name": "1. Scrumteam bestaand uit product owner, ontwikkelaars (zoals programmeurs, testers en ontwerpers) en Scrummaster",
                     "sources": {
-                        "e6a42374-33eb-4f0f-9e31-5c4aa7f2e2fe": {
+                        "d0d11d1e-f677-460d-a758-f0e982987603": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -842,12 +842,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "080424b9-d9fe-4948-a219-29796b4d61b3": {
+                "78700214-776b-451e-8ec0-df9396140f0e": {
                     "type": "compliance",
                     "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces",
                     "secondary_name": "2. Proces met daily scrum, sprints, sprint planning, sprint review, sprint retrospective en sprint refinement",
                     "sources": {
-                        "780eb47d-ef76-457c-94ed-68f57f074a90": {
+                        "24c24c4f-2134-4bf0-b8cc-b8ef03f2e9f0": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -855,12 +855,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "1d5c4d32-928c-4ac2-8d74-946bce2de3f0": {
+                "11b5d9cb-a748-4ea0-b5e7-9ebcd8969c59": {
                     "type": "compliance",
                     "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces",
                     "secondary_name": "3. Definition of Ready en Definition of Done",
                     "sources": {
-                        "ccac02f6-5fb8-4af5-bf23-0b90753ebc43": {
+                        "b34da199-ee6f-4ef4-924b-7b1e05e78ddd": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -868,12 +868,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "1c97697b-958d-4c4f-86f2-981601afddca": {
+                "9589db65-bc6b-4032-bc91-e65eb0e2f338": {
                     "type": "compliance",
                     "name": "M05: Het project hanteert een iteratief en incrementeel ontwikkelproces",
                     "secondary_name": "4. Product backlog en sprint backlog",
                     "sources": {
-                        "a839c473-eff7-480d-963c-ce7d453619e6": {
+                        "34ed898b-96f9-47e0-aa02-2ab86eb9efbb": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -881,12 +881,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "dc544f7c-f319-4653-8f50-5adf566c7ff4": {
+                "f83a008c-6385-48d5-a874-e060c33e0663": {
                     "type": "compliance",
                     "name": "M35: Het project hanteert een agile architectuuraanpak",
                     "secondary_name": "",
                     "sources": {
-                        "3cc44e28-afc0-4d3e-ae55-3d254d44d48a": {
+                        "13c12aea-1de1-4751-b7a9-b3ca3a891cc8": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -894,12 +894,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "0591a555-f48f-45ab-840f-51592e870cfb": {
+                "4c14c57c-cb5c-4878-957d-d7e93f928280": {
                     "type": "compliance",
                     "name": "M10: Het project kent een wekelijks projectoverleg",
                     "secondary_name": "",
                     "sources": {
-                        "b14fbc38-18e5-4b56-8a5f-04f10bb42c8e": {
+                        "91245059-7332-4bd9-b2ce-f0895ff370b0": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -907,12 +907,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "56837fb5-4e96-4194-91a7-02c7fa637e2e": {
+                "5a78388f-7863-497e-92b7-c5daabe82f26": {
                     "type": "compliance",
                     "name": "M28: Het project voert periodiek een self-assessment uit tegen de actuele versie van de Kwaliteitsaanpak",
                     "secondary_name": "",
                     "sources": {
-                        "d8a440df-178c-47b6-916c-eb1a2a142547": {
+                        "2122903b-a9ed-434a-af4a-4791ea0e99fc": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -920,12 +920,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "da89016d-1222-432f-a6ca-9d17f5ac6a53": {
+                "b399d094-a12c-4fa5-9e1a-375083d30b96": {
                     "type": "compliance",
                     "name": "M30: Het project identificeert, mitigeert en bewaakt risico's",
                     "secondary_name": "",
                     "sources": {
-                        "5ccf6501-f731-441b-b530-4ad6b091b584": {
+                        "63f76f95-8e34-4496-9b1f-7e6b9ce18f56": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -933,12 +933,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "b19f1ad6-6195-42b1-ba95-5db3baa22e40": {
+                "bfef933b-286d-420e-bf6e-74ba75b9260f": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "1. De documentatie beschrijft de ontwikkel- en testomgeving die is toegepast",
                     "sources": {
-                        "0a96a77c-6bb4-42e9-98da-bdaed97f8511": {
+                        "3a0de5ef-74e8-4666-85ac-6deaf46c4ca2": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -946,12 +946,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "942a43c7-d91b-4c2f-973f-72bfa397a486": {
+                "22017de0-62ec-4a71-8a70-512c821054f8": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "2. De functionele documentatie beschrijft gegevensmodellen, functionele indeling, koppelingen, berichtdefinities en workflows/processen",
                     "sources": {
-                        "3ee46c73-d0dc-4cfe-a0da-1b06e452c291": {
+                        "7f013aa2-bd3c-489e-8398-cf2f6c421387": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -959,12 +959,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "1bed46dd-756f-4f1f-8aab-e56048b1d064": {
+                "690c1b8d-098e-4a66-874d-7defb22d7a48": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "3. Als operationeel beheer onderdeel was van de dienstverlening: de operationele bedieningsinstructies beschrijven minimaal back-up/recovery, procedures bij calamiteiten, regelmatig terugkerende beheeractiviteiten en opstart- en afsluitprocedures",
                     "sources": {
-                        "c48008bb-c5f7-4c7f-864b-90fa5ced44f3": {
+                        "080a021c-1fcf-48ee-965f-22286df7b81e": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -972,12 +972,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "05a69f55-9c57-4ca1-bf06-b00f282558de": {
+                "817d7c4d-f013-4b41-ae8e-630c92f59acc": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "4. De product backlog bevat de bekende bugs en wensen",
                     "sources": {
-                        "1ce41dca-c506-4d3f-815e-c9e22f1d5215": {
+                        "28fee6f4-6d83-4fe7-85a0-d5a60d137f77": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -985,12 +985,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "3a05619b-38b2-4005-9fc2-e65d8920a963": {
+                "8079bde1-f1ce-4789-9306-afd9916ccd83": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "5. De broncode kent een gezonde balans tussen isolatie, cohesie en koppeling",
                     "sources": {
-                        "58e5ce68-c13f-4b40-855d-b4b5cce2fa7a": {
+                        "6e202fbb-02e1-4fda-93fb-40fe31c4b6fe": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -998,12 +998,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "c8eca3ff-b980-4ac1-9fc8-8e50188bed22": {
+                "089cab95-bab4-4d9d-ae80-77fd5417d5d0": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "6. De broncode heeft een beperkte mate van duplicatie",
                     "sources": {
-                        "1d69100c-c2dd-4494-a97f-e643a626f418": {
+                        "47f0dc16-23d5-46ec-9312-eac0a94dc0ec": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1011,12 +1011,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "98d231ca-9047-411e-b0ca-7bbf2b4987de": {
+                "5c4bc03b-f161-490d-9119-8a037f6802e9": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "7. De broncode heeft een beperkte mate van complexiteit",
                     "sources": {
-                        "58e08544-960d-473e-964e-1d00e40085c3": {
+                        "3bee62ea-db9f-461b-8fe8-8ede55e2d4aa": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1024,12 +1024,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "e0d76808-a606-4e2b-a3fb-ae68fd521ce0": {
+                "af3f4f38-9857-486d-86f2-625407341e29": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "8. De broncode bevat geen of een beperkt aantal niet-afgeronde werkzaamheden (\"todo's\")",
                     "sources": {
-                        "bb63c1e4-ccf1-4848-a257-b146676f0099": {
+                        "3aa5fe76-5005-48e6-b00b-c6dd82b2cdfe": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1037,12 +1037,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "22f278ed-2b13-48a4-aee0-95492e5a5ed3": {
+                "554b8618-d0fd-42c1-9454-ad7e348a72ee": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "9. De tests raken een voldoende groot deel van de broncode",
                     "sources": {
-                        "2f5b12e3-5e1b-4b96-962d-b57e7fd86f84": {
+                        "0d2d215d-aa34-496f-bc6c-76917e30b0e9": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1050,12 +1050,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "de013300-8ba9-4167-adf2-4d9a4649c474": {
+                "68ef56cf-bbaf-4379-ac30-d022d2be5928": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "10. De tests raken een voldoende groot deel van de functionaliteit (functionele dekking)",
                     "sources": {
-                        "fce7c492-d032-4140-a3dc-0abb2765750d": {
+                        "9dac65b2-f665-490d-bb53-996c2a1ff0da": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1063,12 +1063,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "1a709c04-5664-4127-be36-c00f47f4579d": {
+                "ed6eabee-2e84-48e9-a17f-ce3050d117f6": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "11. De onderkende productrisico's zijn gedekt",
                     "sources": {
-                        "6cd4d665-2a02-4162-97bc-ee1fbfcfeeaf": {
+                        "820ea8db-4fb2-4fab-939d-e56cf0dffbb3": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1076,12 +1076,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "c6fb0cca-928e-4ea5-9a6b-15dc83398185": {
+                "a0c323c7-c719-49ff-b2f0-c6a45a7671fb": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "12. Er is een regressietest beschikbaar",
                     "sources": {
-                        "252001a1-5327-4cc2-9848-9b915fdd6ead": {
+                        "2f638526-1885-4f2f-93de-6789dc864631": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1089,12 +1089,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "b112470d-e1aa-4e42-a926-a6f1666328a1": {
+                "1d830199-fda5-47e3-aac5-10254a5ec406": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "13. Er is traceerbaarheid van eisen naar testgevallen",
                     "sources": {
-                        "18cffc8a-b548-44f0-bb39-33d785730b85": {
+                        "4460c228-5d21-4fe5-9974-fa130235df5f": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1102,12 +1102,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "e8201c12-ee3b-4944-bd72-f77b605bffd0": {
+                "86ce0fee-dc98-402b-9b55-c9558501e457": {
                     "type": "compliance",
                     "name": "M34: Het project draagt software beheerst over",
                     "secondary_name": "14. De testset is goed opgebouwd",
                     "sources": {
-                        "f8820bc6-5676-44a6-862f-6866584f3c1e": {
+                        "e183ea93-5c46-43c0-94dc-b5493d9a1472": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1115,12 +1115,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "144dbd2d-eae5-465f-86c7-c1afff1f1cd4": {
+                "d912c667-59d0-4997-80ae-aeb2e154690e": {
                     "type": "compliance",
                     "name": "M27: Het project sluit projectfasen en zichzelf expliciet af",
                     "secondary_name": "",
                     "sources": {
-                        "d48c7440-1d83-48f0-bafb-5b38baff5825": {
+                        "4f1d279d-ca53-482a-a99a-7fe5def2bfbc": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1130,16 +1130,16 @@
                 }
             }
         },
-        "874bc2b3-49b7-411b-9d1d-2bf921f8de84": {
+        "9fa65c3e-d8fc-4e22-8e82-863ecfea1b1a": {
             "type": "software",
             "name": "Organisatie",
             "metrics": {
-                "46815fc9-67fd-4b8d-bf26-1d8725cb3085": {
+                "36f43193-5bec-4d85-ac46-affe34b2973d": {
                     "type": "compliance",
                     "name": "M29: ICTU organiseert voor aanvang van een project de interne dienstverlening",
                     "secondary_name": "",
                     "sources": {
-                        "76c05553-f812-41c6-aa3e-28c3c52cfddf": {
+                        "8f643de0-dce3-4323-a588-20a65b1dcb5e": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1147,12 +1147,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "d91d8c3c-c3fc-4e57-89e1-80cb36f322a8": {
+                "b63ec312-9437-4018-a19b-f695432d4045": {
                     "type": "compliance",
                     "name": "M19: ICTU biedt projecten een afgeschermde digitale omgeving",
                     "secondary_name": "",
                     "sources": {
-                        "3b69cf58-6f0c-414a-90ca-dbc7c0babee9": {
+                        "08706f32-46b4-4e86-8d0e-41af2807a8a4": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1160,12 +1160,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "6ec2f68a-12ac-41f2-b8d1-50b6ccef47ba": {
+                "cacd7e25-06f1-4411-9004-a230e9b846f3": {
                     "type": "compliance",
                     "name": "M18: ICTU biedt ondersteuning voor verplicht gestelde tools",
                     "secondary_name": "",
                     "sources": {
-                        "d4f1c1c9-88fd-4553-bcdb-d006b023af9e": {
+                        "5b9266eb-75a1-4bd6-a9d6-7371aa0a160c": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1173,12 +1173,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "4ebb1ca6-30a0-4ee7-991e-4dd8d6536062": {
+                "8cb2713a-950f-40b4-ace2-a70530786264": {
                     "type": "compliance",
                     "name": "M11: ICTU beheert, onderhoudt en implementeert de Kwaliteitsaanpak en kwaliteitsnormen",
                     "secondary_name": "",
                     "sources": {
-                        "f542f671-2659-49d0-a471-86372e306d18": {
+                        "6b430d29-0ef3-4b30-9490-fa4e11df8713": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1186,12 +1186,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "7c7a20df-d107-4992-af70-76fe810e72ee": {
+                "073b42af-1e5b-45ab-b3fe-cd8809e7fa48": {
                     "type": "compliance",
                     "name": "M12: ICTU publiceert nieuwe versies van de Kwaliteitsaanpak en normen periodiek en op een vaste locatie",
                     "secondary_name": "",
                     "sources": {
-                        "22aa9f92-be49-4027-8b48-86237053b99c": {
+                        "41e77521-59e6-42c4-aafa-d5886238b1ca": {
                             "type": "manual_number",
                             "parameters": {}
                         }
@@ -1199,12 +1199,12 @@
                     "target": "100",
                     "near_target": "80"
                 },
-                "8934ac5f-f893-455a-8c21-a0ae2b1d0834": {
+                "734c3745-758e-456a-a236-f3a9d7ab0639": {
                     "type": "compliance",
                     "name": "M33: ICTU organiseert periodiek een gezamenlijke self-assessment ten aanzien van de Kwaliteitsaanpak",
                     "secondary_name": "",
                     "sources": {
-                        "8ce6f6fa-9b41-4df3-ae84-bc933989b625": {
+                        "cf70d186-7b71-4a10-add2-2f0eed785cde": {
                             "type": "manual_number",
                             "parameters": {}
                         }

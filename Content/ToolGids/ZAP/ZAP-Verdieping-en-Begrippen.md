@@ -58,7 +58,7 @@ env:
   parameters:
     release_name: "v1.2.3"
     base_url: "https://test.example.org"
-
+```
 
 # Zest - ZAP's eigen automation
 ## Wat is ZEST?
@@ -79,7 +79,7 @@ Zest wordt vaak gebruikt voor:
 Zest ondersteunt conditionele logica (zoals if-statements), logging, loops, en integratie met andere ZAP-functies zoals scan rules en contexten.
 
 Meer informatie: [Officiële bronnen](ZAP%20-%20Referentiemateriaal-(Informatie).md#Officiële%20bronnen)
-```
+
 
 Deze variabelen kun je vervolgens gebruiken in andere delen van het plan via `${variabelenaam}`:
 

@@ -154,7 +154,8 @@ class MarkdownConverter:
             self._end_lists()
             self._end_table()
             return  # Empty line, nothing further to do
-        stripped_line = self._process_variables(stripped_line)
+        if xmltags.CODE_BLOCK not in self.context:
+            stripped_line = self._process_variables(stripped_line)
         if match := re.match(markdown_syntax.CODE_BLOCK_START, stripped_line):
             self.context.add(xmltags.CODE_BLOCK)
             self.builder.start(xmltags.CODE_BLOCK, {xmltags.CODE_BLOCK_LANGUAGE: match.group(1)})

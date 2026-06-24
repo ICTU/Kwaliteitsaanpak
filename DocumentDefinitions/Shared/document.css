@@ -514,3 +514,47 @@ span.linenos.special {
 .highlight .il {
     color: #666;
 } /* Literal.Number.Integer.Long */
+
+/* BetterHtmlFormatter styles, copied from https://pypi.org/project/pygments_better_html/ */
+.highlight table,
+.highlight tr,
+.highlight td {
+    border-spacing: 0;
+    border-collapse: separate;
+    padding: 0;
+}
+.highlight pre {
+    white-space: pre-wrap;
+    line-height: normal;
+}
+.highlighttable td.linenos {
+    vertical-align: top;
+    padding-left: 10px;
+    padding-right: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.highlighttable td.linenos code:before {
+    content: attr(data-line-number);
+}
+.highlighttable td.code {
+    overflow-wrap: normal;
+    border-collapse: collapse;
+}
+.highlighttable td.code code {
+    overflow: unset;
+    border: none;
+    padding: 0;
+    margin: 0;
+    white-space: pre-wrap;
+    line-height: unset;
+    background: none;
+}
+.highlight .lineno.nonumber {
+    list-style: none;
+}
+
+/* Our own additions for the highlight style */
+.highlight {
+    font-size: 80%;
+}

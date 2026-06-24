@@ -183,10 +183,10 @@ class DocxBuilder(Builder):
     def _add_code_block(self, code: str, attributes: TreeBuilderAttributes) -> None:
         """Add a syntax-highlighted code block as a paragraph with the Code style."""
         lexer = get_lexer_by_name(str(attributes[xmltags.CODE_BLOCK_LANGUAGE]), ensurenl=False)
-        style = get_style_by_name("default")
+        token_styles = dict(get_style_by_name("default"))  # Map known token types to their style
         paragraph = self.doc.add_paragraph(style="Code")
         for token_type, value in lex(code.rstrip("\n"), lexer):
-            token_style = style.style_for_token(token_type)
+            token_style = self._token_style(token_styles, token_type)
             # A token's value may span multiple lines; emit a line break between the lines.
             for line_index, line in enumerate(value.split("\n")):
                 if line_index > 0:
@@ -196,6 +196,13 @@ class DocxBuilder(Builder):
                     run.font.color.rgb = RGBColor.from_string(token_style["color"])
                 run.font.bold = token_style["bold"]
                 run.font.italic = token_style["italic"]
+
+    @staticmethod
+    def _token_style(token_styles: dict, token_type):
+        """Return the style for a token type, falling back to ancestor types not styled in their own right."""
+        while token_type not in token_styles:
+            token_type = token_type.parent
+        return token_styles[token_type]
 
     def end_document(self) -> None:
         self.doc.save(str(self.filename))

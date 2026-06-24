@@ -11,6 +11,7 @@ dependencies = [
   "coverage==7.14.3",
   "lxml-stubs==0.5.1",
   "pygments==2.20.0",
+  "pygments_better_html==0.1.6",
   "python-docx==1.2.0",
   "python-pptx==1.0.2",
   "types-Pygments==2.20.0.20260518",
@@ -31,6 +32,7 @@ module = [
   "docx",
   "pptx",
   "pptx.util",
+  "pygments_better_html",
   "xlsxwriter",
 ]
 ignore_missing_imports = true
@@ -41,3 +43,12 @@ line-length = 120
 src = [
     "src",
 ]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 48.54
+precision = 2
+skip_covered = true

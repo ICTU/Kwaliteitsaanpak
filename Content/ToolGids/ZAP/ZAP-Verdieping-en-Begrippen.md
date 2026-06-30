@@ -15,10 +15,7 @@ ZAP kan geconfigureerd worden om een stappenplan (in ZAP heet dit een [automatio
 ### Geschiedenis en achtergrond
 ZAP is ontstaan als een fork van Paros Proxy en is sinds 2010 uitgegroeid tot een van de meest gebruikte open source webapplicatie securityscanners. Het is vooral populair onder QA-engineers, ethical hackers en DevOps-teams vanwege de combinatie van open source en uitgebreide functionaliteit.
 
-⚠️⚠️ BUG IN KA-SOFTWARE !!!!!!!!!!!!!!!!
 Meer info: [zie de Wikipedia-pagina van ZAP](https://en.wikipedia.org/wiki/ZAP_(software))
-Meer info: [zie de Wikipedia-pagina van ZAP](https%3A//en.wikipedia.org/wiki/ZAP_%28software%29s)
-haar [eindrapport](https://www.tweedekamer.nl/sites/default/files/field_uploads/33326-5-Eindrapport_tcm181-239826.pdf)
 
 ### Belangrijkste kenmerken
 - Ondersteuning voor zowel handmatige als geautomatiseerde security tests
@@ -48,7 +45,7 @@ ZAP kent meerdere acties (vaak scans genoemd), de belangrijkste zijn: `passive s
 - spider
 - [AJAX](https://nl.wikipedia.org/wiki/Asynchronous_JavaScript_and_XML)-spider
 - sequence. 
-- active scan = uitvoer van het ZEST script ❌ dit moet beter worden verwoord, hoe staat een sequence in relatie met een active scan?
+- active scan = uitvoer van het ZEST-script
 
 ## Omgevingsvariabelen in ZAP
 
@@ -170,7 +167,7 @@ Gebruik als `${variabelenaam}` in jobs.
 - **Form-based**: configureer context (login URL, users, logged-in regex).  
 - **Tokens (header/bearer)**: gebruik **Replacer** of **HTTP Sender** script.  
 - **OIDC/JWT**: vaak herbruikbaar, maar hou rekening met expiratie en refresh.  
-- **SAML**: tokens zijn niet herbruikbaar → elke run opnieuw ophalen (via sequence of regex **Moet nog uitgewerkt worden in tutorial**). ❌  
+- **SAML**: tokens zijn niet herbruikbaar → elke run opnieuw ophalen (via sequence of regex).   
 
 ---
 

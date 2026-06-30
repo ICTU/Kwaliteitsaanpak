@@ -6,8 +6,8 @@
 - **SAML-token faalt in CI**: token elke run vernieuwen via sequence of regex.  
 - **Regex lastig**: gebruik add-on *Regular Expression Tester*.  
 - **Scans lopen eindeloos**: altijd `maxScanDurationInMins` instellen + `exitStatus`.  
-![[Pasted image 20251003102208.png]]
 
+![Foutmelding no browser](ToolGids/Images/Pasted image 20251003102208.png " ")
 # Bekende beperkingen
 ## HTTP Request methods
 
@@ -39,7 +39,7 @@ De HTTP 303-redirect bevat in de response-header een `Location`-veld met de URL 
 1. **Maak een variabele aan via `Edit Assignment`**  
    Voeg in je script een `Edit: Set Variable` stap toe.
 
-![](img/zap-demo-10.png)
+![ ](ToolGids/Images/zap-demo-10.png " ")
 
 3. **Lees de `Location`-header uit de response**  
    Gebruik de optie om een variabele te vullen met de waarde van een specifieke header.
@@ -50,7 +50,7 @@ De HTTP 303-redirect bevat in de response-header een `Location`-veld met de URL 
 5. **Gebruik de variabele in een volgend request**  
    Je kunt de nieuwe URL uit de `Location`-header vervolgens gebruiken in een opvolgend `Request`-object of stap binnen je Zest-script of automation plan.
 
-![](img/zap-demo-11.png)
+![ ](ToolGids/Images/zap-demo-11.png " ")
 
 ## ⚠️ Let op
 - Deze aanpak vereist dat je werkt met Zest of met aangepaste scripting binnen je automation plan.

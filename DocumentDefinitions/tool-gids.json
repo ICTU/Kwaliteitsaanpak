@@ -13,7 +13,7 @@
       "CopyFiles": [
         {
           "from": "DocumentDefinitions/Shared/document.css",
-          "to": "docs/$VERSIE$/ICTU-ToolGids.css"
+          "to": "docs/$VERSIE$/ICTU-Kwaliteitsaanpak.css"
         },
         {
           "from": "Content/ToolGids/Images/*.png",

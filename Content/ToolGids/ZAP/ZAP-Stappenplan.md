@@ -22,16 +22,16 @@ Als doelwit/testobject kun je gebruik maken van onderstaande testwebsites.
 - of kies hier een site: https://automationpanda.com/2021/12/29/want-to-practice-test-automation-try-these-demo-sites/
 
 Wanneer je dit ziet is het goed
-![[Pasted image 20251003105810.png]]
+![Screenshot van Browser](ToolGids/Images/Pasted image 20251003105810.png " ")
 
 Als je dan naar de pagina gaat moeten er in de zijbalk van ZAP Sites te voorschijn komen. Dit is de opname.
-![[Pasted image 20251003105944.png]]
+![Screenshot van ZAP met zijbalk](ToolGids/Images/Pasted image 20251003105944.png " ")
 
 - Gebruik de geïntegreerde browser van de ZAP GUI of;
 - Zet je browser (Firefox/Chromium) op `http://localhost:8090`. 
 - Bezoek de webapplicatie of webpagina → requests verschijnen in **History**.  
 - ZAP functioneert als **MITM-proxy**: alle verkeer wordt zichtbaar en kan later opnieuw worden afgespeeld.  
-![Geïntegreerde ZAP-Browser](img/ZAP_Browser.png "De browser die geïntegreerde is in ZAP en standaard via de proxy loopt")
+![Geïntegreerde ZAP-Browser](ToolGids/Images/ZAP_Browser.png "De browser die geïntegreerde is in ZAP en standaard via de proxy loopt")
 *De browser die geïntegreerde is in ZAP en standaard via de proxy loopt.*
 
 > [!WARNING]
@@ -52,7 +52,7 @@ Deze stap (een context maken) kun je ook voorafgaand aan de opname doen (dan wer
   - **IncludePaths / ExcludePaths** (regex ondersteund)  
   - (Optioneel) **Authentication** + **Users** + **Session Management**  
 - Test je instellingen met de **Authentication Tester**.  
-![Context_Aanmaken](img/Context_aanmaken.png "Hier maak je de context aan, dit is de centrale configuratie die ZAP vertelt wat er bij een applicatie hoort en hoe deze werkt.")
+![Context_Aanmaken](ToolGids/Images/Context_aanmaken.png "Hier maak je de context aan, dit is de centrale configuratie die ZAP vertelt wat er bij een applicatie hoort en hoe deze werkt.")
 *Hier maak je de context aan, dit is de centrale configuratie die ZAP vertelt wat er bij een applicatie hoort en hoe deze werkt.*
 
 
@@ -102,7 +102,7 @@ Voor deze
 ```bash
 zap.sh -cmd -autorun /zap/wd/af-plan.yaml
 ```
-![Automation Panel](img/Automation_Panel.png "Het Automation Panel waar je gemaakte automation plans kan inzien en exporteren")
+![Automation Panel](ToolGids/Images/Automation_Panel.png "Het Automation Panel waar je gemaakte automation plans kan inzien en exporteren")
 *Het Automation Panel waar je gemaakte automation plans kan inzien en exporteren.*
 
 

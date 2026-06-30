@@ -8,10 +8,12 @@ CELL_ALIGNMENT_MARKER = ":"
 CODE_BLOCK_START = r"```([a-z]+)"
 CODE_BLOCK_END = r"```"
 HEADING_PATTERN = r"^(#+) (.*)"
-IMAGE_PATTERN = r'^!\[([^\]]+)\]\(([^ ]+) "([^\)]+)"\)'
+# The title is delimited by the quotes, so it may contain any character except a quote (e.g. parentheses)
+IMAGE_PATTERN = r'^!\[([^\]]+)\]\(([^ ]+) "([^"]+)"\)'
 ITALIC_START = ITALIC_END = "_"
 ITALIC_ALTERNATIVE_START = ITALIC_ALTERNATIVE_END = "*"
-LINK_PATTERN = r"^\[([^\]]+)\]\(([^\)]+)\)"
+# The URL may contain balanced parentheses (e.g. https://en.wikipedia.org/wiki/Foo_(disambiguation)), one level deep
+LINK_PATTERN = r"^\[([^\]]+)\]\(((?:[^()]|\([^()]*\))*)\)"
 NUMBERED_LIST_PATTERN = r"^[0-9A-Za-z]+\. "
 STRIKETROUGH_START = STRIKETROUGH_END = "~~"
 TABLE_MARKER = "|"

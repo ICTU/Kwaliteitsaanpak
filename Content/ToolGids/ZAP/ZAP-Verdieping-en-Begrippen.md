@@ -3,17 +3,22 @@
 
 ZAP is een open source tool die fungeert als een kleine, geautomatiseerde penetratietest in de pipeline. Het is een tool die, net als bij testautomatiseringsscripts, een serie acties uitvoert op de system-onder-test (SUT) om te onderzoeken of deze applicatie beveiligingskwetsbaarheden heeft. Het is niet representatief voor een echte penetratietest, maar dit kan wel een goede voorbereiding zijn. 
 ZAP is bedoeld voor zowel mensen die geen specialist zijn op het gebied van applicatiebeveiliging, die een beveiligingsscan aan de pipeline willen toevoegen, als professionele penetratietesters die ter plekke een eerste analyse willen doen. 
-ZAP staat voor Zed Attack Proxy en werkt dus als een proxy, een tussenlaag. Het opereert, net als een man-in-the-middel-aanval (MITM), tussen de browser en het testobject (SUT). 
+ZAP staat voor Zed Attack Proxy en werkt dus als een proxy, een tussenlaag. Het opereert, net als een man-in-the-middel-aanval (MITM), tussen de browser en het testobject (SUT). Met ZAP kun je het verkeer kunt analyseren en manipuleren om kwetsbaarheden te vinden, zoals XSS en SQL-injecties.
 
-ZAP kan geconfigureerd worden om een stappenplan (in ZAP heet dit een [Automation plan](#Automation-plan)) uit te voeren vanuit de CI/CD-pijplijn. Dit plan kan onderstaande acties uitvoeren.
-- Vooraf gedefinieerde acties uit met behulp van een Zest-script.
+ZAP kan geconfigureerd worden om een stappenplan (in ZAP heet dit een [automation plan](#automation-plan)) uit te voeren vanuit de CI/CD-pijplijn. Dit plan kan onderstaande acties uitvoeren.
+- Vooraf gedefinieerde acties uitvoeren met behulp van een [zest-script](#zest-zap-s-eigen-automation) of [automation plan](#automation-plan).
 - De API van de applicatie scannen met behulp van de OpenAPI-specificaties.
-- Een spiderscan uitvoeren om alle blootgestelde bronnen te ontdekken.
+- Een spiderscan (oriëntatie) uitvoeren om alle blootgestelde bronnen te ontdekken.
 - Actieve en passieve beveiligingsscans uitvoeren op de API en de bronnen die zijn ontdekt tijdens de spiderscan.
-- Rapporten genereren in zowel computer leesbare (XML) als menselijk leesbare (HTML) formaten, zodat deze toegankelijk zijn in Quality-time.
+- Rapporten genereren in zowel computer-leesbare (XML) als menselijk leesbare (HTML) formaten, zodat deze toegankelijk zijn in $LINK_QUALITY_TIME$.
+
 ### Geschiedenis en achtergrond
 ZAP is ontstaan als een fork van Paros Proxy en is sinds 2010 uitgegroeid tot een van de meest gebruikte open source webapplicatie securityscanners. Het is vooral populair onder QA-engineers, ethical hackers en DevOps-teams vanwege de combinatie van open source en uitgebreide functionaliteit.
+
+⚠️⚠️ BUG IN KA-SOFTWARE !!!!!!!!!!!!!!!!
 Meer info: [zie de Wikipedia-pagina van ZAP](https://en.wikipedia.org/wiki/ZAP_(software))
+Meer info: [zie de Wikipedia-pagina van ZAP](https%3A//en.wikipedia.org/wiki/ZAP_%28software%29s)
+haar [eindrapport](https://www.tweedekamer.nl/sites/default/files/field_uploads/33326-5-Eindrapport_tcm181-239826.pdf)
 
 ### Belangrijkste kenmerken
 - Ondersteuning voor zowel handmatige als geautomatiseerde security tests
@@ -22,13 +27,10 @@ Meer info: [zie de Wikipedia-pagina van ZAP](https://en.wikipedia.org/wiki/ZAP_(
 - REST API voor scripting en externe aansturing
 - Plug-in-architectuur met uitbreidingen voor o.a. Selenium, HUD, Docker
 ## ZAP-client
-De ZAP-client wordt gebruikt voor ad hoc onderzoeken en het maken van testautomatisering (automation plan) die later gebruikt kan worden in een pipeline. Deze standalone applicatie heeft een zeer steile leercurve en werkt niet intuïtief. Dit is de aanleiding om deze wiki op te zetten. 
-Meer info $LINK.ZAP.INSTALLATIE$
+De ZAP-client is een desktop-applicatie die wordt gebruikt voor ad hoc onderzoeken en het maken van testautomatisering (automation plan) die later gebruikt kan worden in een pipeline. Deze standalone applicatie heeft een zeer steile leercurve omdat de interface en de terminologie door gebruikers als niet-intuïtief wordt ervaren. Dit is de aanleiding geweest om deze wiki op te zetten. 
+Meer info $LINK_ZAP_GIDS_INSTALLATIE$
 ## Automation plan
-
-❌ hier noemen dat Automation plan een grote ontwikkeling is geweest en dat ICTU projecten moeten wijzigen
-
-Het automatiseren van ZAP kan het best gedaan worden met een zogenaamd automation plan. Dit is een **.yaml-script** dat je kan uitvoeren in je pipeline. Door het gebruiken van een automation plan kun je ook rapportages genereren.
+Het automatiseren van ZAP kan het best gedaan worden met een zogenaamd automation plan. Dit is een **.yaml-script** dat je kan uitvoeren in je pipeline. Met behulp van een automation plan kun je ook rapportages genereren.
 
 Een automation plan bevat omgevingsvariabelen (`env`) en taken (`jobs`). De jobs zijn de afzonderlijke stappen die uitgevoerd worden. Een script job importeert een scriptbestand, bijvoorbeeld om een locatie of configuratiebestand in te laden.
 
@@ -37,20 +39,22 @@ Onderstaande onderdelen zitten doorgaans in een automation plan.
 - Verschillende scan jobs (passive scan, script execution, OpenAPI scanning, spider scanning, etc.)
 - Instellingen voor report generation
 
-Voor meer info, zie:[Gids Automation Plan]
+Voor meer info, zie: $LINK_ZAP_GIDS_AUTOMATION$
 
 ## Acties / jobs
-ZAP kent meerdere acties (vaak scans genoemd), de belangrijkste zijn: passive scan en active scan. Waarbij de eerste een onderzoek is om te kijken welke URL's en links er te vinden zijn en de tweede is meer een aanval op die URL's. Active scan is dus een verwarrende naamgeving.
+ZAP kent meerdere acties (vaak scans genoemd), de belangrijkste zijn: `passive scan` en `active scan`. Waarbij de `passive scan` een onderzoek is om te kijken welke URL's en links er te vinden zijn (een soort crawlen) en de `active scan` is een aanval op die URL's. Active scan is dus een verwarrende naamgeving, het had beter `active attack` kunnen heten.
 
 - OpenAPI - scant OpenAPI-specificaties (net zoals Swagger dit doet)
 - spider
-- [AJAX](https://nl.wikipedia.org/wiki/Asynchronous_JavaScript_and_XML) spider
-- sequence. active scan = uitvoer van het ZEST script ❌ dit moet beter worden verwoord, hoe staat een sequence in relatie met een active scan?
+- [AJAX](https://nl.wikipedia.org/wiki/Asynchronous_JavaScript_and_XML)-spider
+- sequence. 
+- active scan = uitvoer van het ZEST script ❌ dit moet beter worden verwoord, hoe staat een sequence in relatie met een active scan?
+
 ## Omgevingsvariabelen in ZAP
 
 Binnen het **ZAP Automation Framework** kun je gebruikmaken van omgevingsvariabelen om je automation plannen flexibeler en herbruikbaar te maken. Deze variabelen worden gedefinieerd in het `env:`-gedeelte van je YAML-configuratie.
-#### Gebruik
 
+#### Gebruik
 Omgevingsvariabelen worden ingesteld in het `parameters`-veld van de `env`-sectie, bijvoorbeeld:
 
 ```yaml
@@ -78,7 +82,7 @@ Zest wordt vaak gebruikt voor:
 
 Zest ondersteunt conditionele logica (zoals if-statements), logging, loops, en integratie met andere ZAP-functies zoals scan rules en contexten.
 
-Meer informatie: [Officiële bronnen](ZAP%20-%20Referentiemateriaal-(Informatie).md#Officiële%20bronnen)
+Meer informatie: $LINK_ZAP_BRONNEN$
 
 
 Deze variabelen kun je vervolgens gebruiken in andere delen van het plan via `${variabelenaam}`:
@@ -101,7 +105,7 @@ jobs:
     
 - De interpolatie gebeurt **eenmalig** bij het laden van het automation-plan; dynamische aanpassing tijdens runtime is niet mogelijk.
 
-Meer informatie: [Officiële bronnen]
+Meer informatie: $LINK_ZAP_BRONNEN$
 
 ## Zest - ZAP's eigen automation
 ### Wat is ZEST?
@@ -121,7 +125,7 @@ Zest wordt vaak gebruikt voor:
 
 Zest ondersteunt conditionele logica (zoals if-statements), logging, loops, en integratie met andere ZAP-functies zoals scan rules en contexten.
 
-Meer informatie: [Officiële bronnen]
+Meer informatie: $LINK_ZAP_BRONNEN$
 
 
 ### Reference — Syntax, jobs en begrippen

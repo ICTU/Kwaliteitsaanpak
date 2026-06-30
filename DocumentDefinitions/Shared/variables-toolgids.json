@@ -1,3 +1,6 @@
 {
-  "LINK.ZAP.INSTALLATIE": "[Installatie](#Installatie)"
+  "LINK_ZAP_GIDS_INSTALLATIE": "[ZAP Installatiegids](#zap-installatiegids)",
+  "LINK_ZAP_GIDS_AUTOMATION": "[ZAP Gids Automation Plan](#zap-automation-plan-gids)",
+  "LINK_ZAP_BRONNEN": "[ZAP Officiële bronnen](#officiële-bronnen)",
+  "LINK_QUALITY_TIME": "[Quality-time](https://github.com/ICTU/quality-time)"
 }

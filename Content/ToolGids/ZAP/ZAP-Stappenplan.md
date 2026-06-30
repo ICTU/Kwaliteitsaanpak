@@ -7,7 +7,7 @@
 - Als laatste stap kan er een ZEST script worden toegevoegd aan het automation plan om daadwerkelijk stappen te doorlopen die later ook in die volgorde worden uitgevoerd.
 
 In dit stappenplan wordt de Desktop-applicatie gebruikt. 
-Volg deze instructies om ZAP te downloaden en te installeren: [Download ZAP en installeer ZAP](ZAP---Gids-Installatie#download-en-installatie-voor-desktop)
+Volg deze instructies om ZAP te downloaden en te installeren: [Download ZAP en installeer ZAP](#download-en-installatie-voor-desktop)
 
 # Stap 1 — Een opname maken
 Om het verkeer op te nemen wordt geadviseerd om de geïntegreerde browser van ZAP (zie screenshot) te gebruiken omdat die vooringesteld is. 

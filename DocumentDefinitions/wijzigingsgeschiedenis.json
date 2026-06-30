@@ -12,6 +12,9 @@
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
+            "StyleSheets": [
+                "ICTU-Kwaliteitsaanpak.css"
+            ],
             "CopyFiles": [
                 {
                     "from": "DocumentDefinitions/Shared/document.css",

@@ -46,6 +46,7 @@ Voor elke outputformaat moet worden opgegeven:
 - `OutputFile`: het te schrijven bestand in het outputformaat.
 - `OutputPath`: de folders waar de outputbestanden terecht komen.
 - `ReferenceFile`: het (lege) bestand dat als basis gebruikt wordt voor het outputbestand. Dit is alleen nodig bij outputformaten `docx` en `pptx`.
+- `StyleSheets`: de paden van te gebruiken CSS-bestanden. Bijvoorbeeld: `StyleSheets": ["basis.css", "styles/extra.css"]`. Dit is alleen bedoeld voor het outputformaat `html`. De CSS-bestanden worden als link in de HTML opgenomen, bijvoorbeeld: `<link rel="stylesheet" href="basis.css"><link rel="stylesheet" href="styles/extra.css">`. Merk op dat de paden relatief zijn ten opzichte van de locatie van het HTML-bestand. `StyleSheets` zorgt alleen voor het opnemen van de links, het kopiëren van de CSS-bestanden doe je met `CopyFiles`, zie hier onder.
 
 Bij outputformaat `html` is het nodig bestanden te kopiëren naar de outputfolder. Denk aan CSS-bestanden en plaatjes. Dit kan met `CopyFiles` gespecificeerd worden:
 
@@ -64,10 +65,18 @@ Bij outputformaat `html` is het nodig bestanden te kopiëren naar de outputfolde
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
+            "StyleSheets": [
+                "basis.css",
+                "styles/extra.css"
+            ],
             "CopyFiles": [
                 {
                     "from": "DocumentDefinitions/Shared/document.css",
-                    "to": "docs/$VERSIE$/ICTU-Kwaliteitsaanpak-Samenvatting.css"
+                    "to": "docs/$VERSIE$/basis.css"
+                },
+                {
+                    "from": "DocumentDefinitions/Shared/fancy.css",
+                    "to": "docs/$VERSIE$/styles/extra.css"
                 },
                 {
                     "from": "Content/Images/*.png",

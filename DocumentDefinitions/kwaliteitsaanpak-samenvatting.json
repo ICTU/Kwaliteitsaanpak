@@ -12,10 +12,13 @@
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
+            "StyleSheets": [
+                "ICTU-Kwaliteitsaanpak.css"
+            ],
             "CopyFiles": [
                 {
                     "from": "DocumentDefinitions/Shared/document.css",
-                    "to": "docs/$VERSIE$/ICTU-Kwaliteitsaanpak-Samenvatting.css"
+                    "to": "docs/$VERSIE$/ICTU-Kwaliteitsaanpak.css"
                 },
                 {
                     "from": "Content/Images/*.png",

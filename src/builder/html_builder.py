@@ -30,11 +30,10 @@ class HTMLBuilder(Builder):
         xmltags.NUMBERED_LIST: html_tags.ORDERED_LIST,
         xmltags.LIST_ITEM: html_tags.LIST_ITEM,
     }
-    STYLESHEET = "ICTU-Kwaliteitsaanpak.css"
 
-    def __init__(self, filename: pathlib.Path, stylesheet_path: pathlib.Path) -> None:
+    def __init__(self, filename: pathlib.Path, *stylesheet_paths: pathlib.Path) -> None:
         super().__init__(filename)
-        self.stylesheet_path = stylesheet_path
+        self.stylesheet_paths = stylesheet_paths
         self.builder = TreeBuilder()
         self.heading_class: list[str] = []  # Heading class stack
         self.heading_level: list[int] = []  # Heading level stack
@@ -53,13 +52,14 @@ class HTMLBuilder(Builder):
                 self.builder.start(html_tags.TITLE, {})
                 self.builder.data(f"{attributes['title']} versie {attributes['version']}")
                 self.builder.end(html_tags.TITLE)
-                self.builder.start(
-                    html_tags.LINK,
-                    {
-                        html_tags.LINK_REL: "stylesheet",
-                        html_tags.LINK_HREF: self.STYLESHEET,
-                    },
-                )
+                for stylesheet_path in self.stylesheet_paths:
+                    self.builder.start(
+                        html_tags.LINK,
+                        {
+                            html_tags.LINK_REL: "stylesheet",
+                            html_tags.LINK_HREF: str(stylesheet_path),
+                        },
+                    )
                 self.builder.end(html_tags.LINK)
                 self.builder.end(html_tags.HEAD)
                 self.builder.start(html_tags.BODY, {})

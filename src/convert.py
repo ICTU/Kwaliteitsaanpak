@@ -110,6 +110,9 @@ def copy_files(settings: Settings, output_format: OutputFormat) -> None:
         if "*" in file_to_copy["from"] or "?" in file_to_copy["from"]:
             # "from" is a glob pattern so "to" is a directory, make sure it exists:
             destination_path.mkdir(parents=True, exist_ok=True)
+        else:
+            # make sure the parent of the file exists
+            destination_path.parent.mkdir(parents=True, exist_ok=True)
         for source_path in source_paths:
             shutil.copy(source_path, destination_path)
 
@@ -129,7 +132,8 @@ def convert_html(converter, settings: Settings) -> None:
     """Convert the XML to HTML."""
     build_path = get_build_path(settings)
     html_build_filename = build_path / settings["OutputFormats"]["html"]["OutputFile"]
-    html_builder = HTMLBuilder(html_build_filename, pathlib.Path(""))
+    stylesheet_paths = [pathlib.Path(path) for path in settings["OutputFormats"]["html"].get("StyleSheets", [])]
+    html_builder = HTMLBuilder(html_build_filename, *stylesheet_paths)
     converter.convert(html_builder)
     copy_output(html_build_filename, settings, "html")
 

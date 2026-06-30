@@ -29,13 +29,13 @@ class CodeBlockTest(unittest.TestCase):
     def test_highlighting(self):
         """Test that the code is highlighted, e.g. keywords get the keyword token class."""
         html = self.build("python", "def f(x):\n    return 1\n")
-        self.assertIn("highlighttable", html)
+        self.assertIn('<div class="highlight">', html)
         self.assertIn('class="k"', html)
 
     def test_indentation_preserved(self):
-        """Test indentation; the formatter emits &nbsp; for it, which is not a valid XML entity."""
+        """Test that the indentation of the code is preserved."""
         html = self.build("python", "def f():\n    return 1\n")
-        self.assertIn("\u00a0", html)
+        self.assertIn("\n    <span", html)
 
     def test_special_characters_escaped(self):
         """Test that characters that are special in HTML are escaped rather than parsed as markup."""

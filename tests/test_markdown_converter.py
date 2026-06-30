@@ -147,6 +147,13 @@ class MarkdownTest(MarkdownConverterTestCase):
         self.assertEqual("image.png", image.attrib[xmltags.IMAGE_SRC])
         self.assertEqual("description", image.attrib[xmltags.IMAGE_TITLE])
 
+    @patch(read_text, Mock(return_value='![Anchor](image_(1).png "Figure 1 (cropped)")'))
+    def test_image_with_brackets(self):
+        """Test an image whose source and title contain brackets."""
+        image = self.find(f".//{xmltags.IMAGE}")
+        self.assertEqual("image_(1).png", image.attrib[xmltags.IMAGE_SRC])
+        self.assertEqual("Figure 1 (cropped)", image.attrib[xmltags.IMAGE_TITLE])
+
     @patch(read_text, Mock(return_value="* Bullet\n* list\n\n"))
     def test_bullet_list(self):
         """Test bullet list."""
@@ -227,3 +234,17 @@ class MarkdownTest(MarkdownConverterTestCase):
         """Test that a code block can be included in the Markdown."""
         code_block = self.find(xmltags.CODE_BLOCK)
         self.assertEqual("print('Hello world')\n", code_block.text)
+
+    @patch(read_text, Mock(return_value="See: [more info](https://more.info)\n"))
+    def test_url(self):
+        """Test a URL."""
+        paragraph = self.find(xmltags.PARAGRAPH)
+        anchor_link = self.find(xmltags.ANCHOR, paragraph).attrib[xmltags.ANCHOR_LINK]
+        self.assertEqual("https://more.info", anchor_link)
+
+    @patch(read_text, Mock(return_value="See: [more info](https://en.wikipedia.org/wiki/ZAP_(software))\n"))
+    def test_url_with_brackets(self):
+        """Test a URL with brackets."""
+        paragraph = self.find(xmltags.PARAGRAPH)
+        anchor_link = self.find(xmltags.ANCHOR, paragraph).attrib[xmltags.ANCHOR_LINK]
+        self.assertEqual("https://en.wikipedia.org/wiki/ZAP_(software)", anchor_link)

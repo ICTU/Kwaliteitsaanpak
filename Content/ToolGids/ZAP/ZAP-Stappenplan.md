@@ -1,6 +1,6 @@
-# ZAP - Stappenplan ZAP-script maken
+# ZAP Stappenplan ZAP-script maken
 
-# Samengevat
+## Samengevat
 - ZAP kun je gebruiken voor een actieve aanval (ad hoc) of geautomatiseerd middels een automation plan (zie [Gids Automation Plan]). Dit is verder uitgelegd in [[ZAP - Verdieping en begrippen]].
 - In dit stappenplan wordt eerst en context gemaakt. Dit is een verzameling URL's die later wordt kan gebruikt worden voor beide typen gebruikswijzen (ad hoc of geautomatiseerd).
 - We voegen deze context toe aan een automation plan zodat dit later in een CI/CD-pipeline kan worden uitgevoerd.
@@ -9,7 +9,7 @@
 In dit stappenplan wordt de Desktop-applicatie gebruikt. 
 Volg deze instructies om ZAP te downloaden en te installeren: [Download ZAP en installeer ZAP](#download-en-installatie-voor-desktop)
 
-# Stap 1 — Een opname maken
+## Stap 1 — Een opname maken
 Om het verkeer op te nemen wordt geadviseerd om de geïntegreerde browser van ZAP (zie screenshot) te gebruiken omdat die vooringesteld is. 
 
 > ⚠️ **Let op:** Dit is geen opname waarbij de stappen op volgorde kunnen worden afgespeeld. Dit registreert alleen alle calls/endpoints.
@@ -38,7 +38,7 @@ Als je dan naar de pagina gaat moeten er in de zijbalk van ZAP Sites te voorschi
 > Wanneer je de melding krijgt: bla bla
 > ⚠️ Wanneer je de melding krijgt: `PR_CONNECT_RESET_ERROR` of `Kan geen verbinding maken`  
 
-# Stap 2 — Een context maken
+## Stap 2 — Een context maken
 
 Een context wordt gebruikt om de scope te bepalen van een scan/test. Het is het beste om dit te doen per webapplicatie die je wil scannen/testen/aanvallen. Een context zorgt ervoor dat ZAP de *niet* relevante endpoints *niet* meeneemt in een scan/test/aanval. De meeste webpagina's maken namelijk ook allerlei aanroepen naar websites die niet getest/aangevallen moeten worden met ZAP, zoals bv een aanroep naar Google o.i.d.).
 
@@ -57,7 +57,7 @@ Deze stap (een context maken) kun je ook voorafgaand aan de opname doen (dan wer
 
 
 
-# Stap 4 — Verkennen (passive scan)
+## Stap 4 — Verkennen (passive scan)
 ZAP kent verschillende soorten *'scans'* als stappen. De 'passive scans' zijn stappen waarin ZAP fungeert als crawler/spider. De tool gaat op de pagina op zoek naar hyperlinks en calls en verzamelt deze en volgt de links ook. Op de gevonden andere pagina's doet hij hetzelfde, enzovoorts.
 
 Het voordeel van deze passive scan is dat er een lijst wordt opgebouwd van endpoints buiten het opgenomen klikpad die later weer kunnen worden gescand/getest/aangevallen. 
@@ -81,7 +81,7 @@ alle endpoints in kaart brengen
 
 HOE
 
-# Stap 5 — Actieve scan
+## Stap 5 — Actieve scan
 
 Je kunt nu een actieve scan doen ingeval je een ad hoc test zou willen doen.
 Voor deze 
@@ -92,11 +92,11 @@ Voor deze
   - `maxRuleDurationInMins`  
   - `threadsPerHost`  
 
-# Stap 6 — Rapportage
+## Stap 6 — Rapportage
 - *Report → Generate Report* → kies `traditional-html` en/of `traditional-xml`.  
 
 
-# Stap 7 — Automation Plan genereren
+## Stap 7 — Automation Plan genereren
 - Open het tabblad **Automation** → *Generate Plan* → exporteer als `af-plan.yaml`.  
 - Headless uitvoeren:
 ```bash

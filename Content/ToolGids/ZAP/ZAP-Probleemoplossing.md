@@ -1,4 +1,4 @@
-## Probleemoplossing
+# ZAP Probleemoplossing
 
 - **Browser start niet bij opname**: start Firefox handmatig; ZAP snuffelt via proxy.  
 - **Geen output bij sequence headless**: gebruik GUI *Output-tab*.  
@@ -8,8 +8,8 @@
 - **Scans lopen eindeloos**: altijd `maxScanDurationInMins` instellen + `exitStatus`.  
 
 ![Foutmelding no browser](ToolGids/Images/Pasted image 20251003102208.png " ")
-# Bekende beperkingen
-## HTTP Request methods
+## Bekende beperkingen
+### HTTP Request methods
 
 Naast HTTP GET, HTTP POST en HTTP PUT zijn er nog meer [request methods](https://en.wikipedia.org/wiki/HTTP#Request_methods) zoals HTTP PATCH. ZAP ondersteunt dit nog (in 2025) niet.
 
@@ -19,7 +19,7 @@ Wanneer je PATCH in een sequence probeert te gebruiken, stopt de sequence bij de
 java.lang.IllegalArgumentException: Method not supported: PATCH
 ```
 
-# Loggen in Zest-scripts
+### Loggen in Zest-scripts
 
 Zest-scripts bieden geen directe ondersteuning voor logging naar `stdout`, zeker niet in headless modus. Wil je toch logberichten gebruiken binnen een Zest-script, dan zijn er enkele alternatieve werkwijzen:
 
@@ -29,10 +29,10 @@ Zest-scripts bieden geen directe ondersteuning voor logging naar `stdout`, zeker
   - een apart script dat de uitvoer verwerkt
 
 Let op: standaard logging vanuit Zest werkt niet zoals je wellicht gewend bent bij andere scriptalen. Test dit goed bij gebruik in een pipeline.
-# Redirects (HTTP 303) handmatig afhandelen
+### Redirects (HTTP 303) handmatig afhandelen
 
 In tegenstelling tot een normale webbrowser volgt ZAP een **HTTP 303-redirect** niet automatisch. Dit kan ertoe leiden dat een testscript stopt of faalt nadat een POST-verzoek een `303 See Other` statuscode teruggeeft. Om dit gedrag te corrigeren, moet je de redirect handmatig afhandelen binnen je script of automation plan.
-## Oplossing: handmatig de `Location`-header verwerken
+### Oplossing: handmatig de `Location`-header verwerken
 
 De HTTP 303-redirect bevat in de response-header een `Location`-veld met de URL waarheen het verzoek doorgestuurd moet worden. Om deze waarde te extraheren en te gebruiken in een volgend verzoek, volg je onderstaande stappen:
 

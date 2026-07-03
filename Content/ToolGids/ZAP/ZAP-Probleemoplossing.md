@@ -7,7 +7,7 @@
 - **Regex lastig**: gebruik add-on *Regular Expression Tester*.  
 - **Scans lopen eindeloos**: altijd `maxScanDurationInMins` instellen + `exitStatus`.  
 
-![Foutmelding no browser](ToolGids/Images/Pasted image 20251003102208.png " ")
+![Foutmelding: The provided browser was not found](Images/Pasted image 20251003102208.png "Foutmelding: The provided browser was not found")
 ## Bekende beperkingen
 ### HTTP Request methods
 
@@ -18,6 +18,9 @@ Wanneer je PATCH in een sequence probeert te gebruiken, stopt de sequence bij de
 ```java
 java.lang.IllegalArgumentException: Method not supported: PATCH
 ```
+> ℹ️ Info
+> Sinds versie XXX, uitgebracht in 2026, ondersteunt ZAP wel HTTP PATCH.
+
 
 ### Loggen in Zest-scripts
 
@@ -39,7 +42,7 @@ De HTTP 303-redirect bevat in de response-header een `Location`-veld met de URL 
 1. **Maak een variabele aan via `Edit Assignment`**  
    Voeg in je script een `Edit: Set Variable` stap toe.
 
-![ ](ToolGids/Images/zap-demo-10.png " ")
+![Screenshot van het toevoegen van een variabele](Images/zap-demo-10.png "Screenshot van het toevoegen van een variabele")
 
 3. **Lees de `Location`-header uit de response**  
    Gebruik de optie om een variabele te vullen met de waarde van een specifieke header.
@@ -50,7 +53,7 @@ De HTTP 303-redirect bevat in de response-header een `Location`-veld met de URL 
 5. **Gebruik de variabele in een volgend request**  
    Je kunt de nieuwe URL uit de `Location`-header vervolgens gebruiken in een opvolgend `Request`-object of stap binnen je Zest-script of automation plan.
 
-![ ](ToolGids/Images/zap-demo-11.png " ")
+![Screenshot: redirect location toevoegen](Images/zap-demo-11.png "Screenshot: redirect location toevoegen")
 
 ## ⚠️ Let op
 - Deze aanpak vereist dat je werkt met Zest of met aangepaste scripting binnen je automation plan.

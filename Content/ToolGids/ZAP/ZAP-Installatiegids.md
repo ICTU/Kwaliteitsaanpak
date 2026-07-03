@@ -5,7 +5,7 @@ Een OS-specifieke variant van de ZAP Desktop Tool kan worden opgehaald van:
 [https://www.zaproxy.org/download/](https://www.zaproxy.org/download/)
 Voor het opstarten van de tool is Java JRE versie 11 of hoger nodig (geen JDK). Anders verschijnt de volgende melding:
 
-![jre](ToolGids/Images/jre.png "jre")
+![Foutmelding van ontbrekende JRE](Images/jre.png "Foutmelding van ontbrekende JRE")
 
 ## Installatie en gebruik via Docker
 

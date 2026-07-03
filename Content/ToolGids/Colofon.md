@@ -1,3 +1,2 @@
 # Colofon
 Deze Toolguide is samengesteld op basis van onderzoek gedaan door [arrez](https://github.com/arrez) en [Sebastiaan127001](https://github.com/Sebastiaan127001) met input van [martijndevrieze](https://github.com/martijndevrieze) en [just-frank-it](https://github.com/just-frank-it) en [nhoop](https://github.com/nhoop).
-Deze wiki is opgezet omdat het moeilijk is om met deze tools te werken zelfs met gebruik van de bestaande documentatie. Alle drie de tools zijn

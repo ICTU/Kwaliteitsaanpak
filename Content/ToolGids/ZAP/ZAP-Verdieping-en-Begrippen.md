@@ -6,7 +6,7 @@ ZAP staat voor Zed Attack Proxy en werkt dus als een proxy, een tussenlaag. Het 
 
 ZAP kan geconfigureerd worden om een stappenplan (in ZAP heet dit een [automation plan](#automation-plan)) uit te voeren vanuit de CI/CD-pijplijn. Dit plan kan onderstaande acties uitvoeren.
 - Vooraf gedefinieerde acties uitvoeren met behulp van een [zest-script](#zest-zap-s-eigen-automation) of [automation plan](#automation-plan).
-- De API van de applicatie scannen met behulp van de OpenAPI-specificaties.
+- De API van de applicatie scannen met behulp van de [OpenAPI-specificaties](https://en.wikipedia.org/wiki/OpenAPI_Specification).
 - Een spiderscan (oriëntatie) uitvoeren om alle blootgestelde bronnen te ontdekken.
 - Actieve en passieve beveiligingsscans uitvoeren op de API en de bronnen die zijn ontdekt tijdens de spiderscan.
 - Rapporten genereren in zowel computerleesbare (XML) als menselijk leesbare (HTML) formaten, zodat deze toegankelijk zijn in $LINK_QUALITY_TIME$.
@@ -24,13 +24,13 @@ Meer info: [zie de Wikipedia-pagina van ZAP](https://en.wikipedia.org/wiki/ZAP_(
 - Plug-in-architectuur met uitbreidingen voor o.a. Selenium, HUD, Docker
 
 ## ZAP-client
-De ZAP-client is een desktopapplicatie die wordt gebruikt voor ad-hoconderzoeken en het maken van testautomatisering (automation plan) die later gebruikt kan worden in een pipeline. Deze standalone applicatie heeft een zeer steile leercurve, omdat de interface en de terminologie door gebruikers als niet-intuïtief worden ervaren. Dit is de aanleiding geweest om deze wiki op te zetten. 
+De ZAP-client is een desktopapplicatie die wordt gebruikt voor ad-hoconderzoeken en het maken van testautomatisering (automation plan) die later gebruikt kan worden in een pipeline. Deze standalone applicatie heeft een zeer steile leercurve, omdat de interface en de terminologie door gebruikers als niet-intuïtief worden ervaren. Dit is de aanleiding geweest om deze toolgids op te zetten. 
 Meer info $LINK_ZAP_GIDS_INSTALLATIE$
 
 ## Introductie van het Automation plan
 Het automatiseren van ZAP kan het best gedaan worden met een zogenaamd automation plan. Dit is een **.yaml-script** dat je kan uitvoeren in je pipeline. Met behulp van een automation plan kun je ook rapportages genereren.
 
-Een automation plan bevat omgevingsvariabelen (`env`) en taken (`jobs`). De jobs zijn de afzonderlijke stappen die uitgevoerd worden. Een script job importeert een scriptbestand, bijvoorbeeld om een locatie of configuratiebestand in te laden.
+Een automation plan bevat omgevingsvariabelen (`env`) en taken (`jobs`). De jobs zijn de afzonderlijke stappen die uitgevoerd worden. Een scriptjob importeert een scriptbestand, bijvoorbeeld om een locatie- of configuratiebestand in te laden.
 
 Onderstaande onderdelen zitten doorgaans in een automation plan.
 - De application context (URL's, authentication, session management)
@@ -126,7 +126,7 @@ Gebruik als `${variabelenaam}` in jobs.
 ## Authenticatie
 - **Form-based**: configureer context (login URL, users, logged-in regex).  
 - **Tokens (header/bearer)**: gebruik **Replacer** of **HTTP Sender** script.  
-- **OIDC/JWT**: vaak herbruikbaar, maar hou rekening met expiratie en refresh.  
+- **OIDC/JWT**: vaak herbruikbaar, maar houd rekening met expiratie en refresh.  
 - **SAML**: tokens zijn niet herbruikbaar → elke run opnieuw ophalen (via sequence of regex).   
 
 

@@ -25,10 +25,12 @@ De ICTU Kwaliteitsaanpak en ondersteunende documenten zijn beschikbaar via [http
 
 ## Werking van deze software
 ### Indeling
-Deze repository bevat de bronbestanden die door middel van scripts de Markdown-bestanden omzetten in:
+Deze repository bevat scripts die Markdown-bronbestanden (content) omzetten in onderstaande uitvoerformaten.
 - **HTML** (voor het hoofddocument).
 - **DOCX** (voor sjablonen).
 - **XLSX** (voor de checklist).
+- **PPTX** (voor de Kwaliteitsaanpak)
+- **Markdown** (voor de toolgidsen).
 
 ### Mappenstructuur
 De repository is als volgt opgebouwd:
@@ -90,7 +92,7 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
 
 ⚠️ Documenteer wijzigingen (alleen aan de inhoud van de Kwaliteitsaanpak) in `./Content/Wijzigingsgeschiedenis.md`.
 
-### Een nieuwe versie van de documentatie uitbrengen
+### Een nieuwe versie van de Kwaliteitsaanpak uitbrengen
 1. Bepaal het nieuwe versienummer. Zie https://ictu.github.io/Kwaliteitsaanpak/v5.2.0/ICTU-Kwaliteitsaanpak.html#versionering
 
 2. Maak een release branch:
@@ -126,6 +128,9 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
 10. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
    - Bij een **minor release**: stuur ook een e-mail naar de SDM'ers.
    - Bij een **major release**: stuur een e-mail naar iedereen bij ISE.
+
+# Bijdragen aan de Toolgidsen
+Zie [Content/ToolGids/README.md](Content/ToolGids/README.md) voor meer informatie.
 
 ## Contact
 Voor vragen over de Kwaliteitsaanpak of deze repository, neem contact op met:

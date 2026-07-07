@@ -295,7 +295,7 @@ Bronnen:
 
 ## PURL
 
-PURL staat voor Package URL. Een PURL is een gestandaardiseerde manier om softwarepackages te identificeren over package-ecosystemen heen.
+PURL staat voor Package-URL. Een PURL is een gestandaardiseerde manier om softwarepackages te identificeren over package-ecosystemen heen.
 
 Voorbeelden:
 

@@ -11,6 +11,5 @@ https://dependencytrack.github.io/docs/next/
 #include "Content/ToolGids/DT/DT-Referenties-en-Links.md"
 
 ---
-#include "Content/ToolGids/Diataxis-raamwerk.md"
 
 #include "Content/ToolGids/Colofon.md"

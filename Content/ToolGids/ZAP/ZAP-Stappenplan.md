@@ -12,6 +12,7 @@ Volg deze instructies om ZAP te downloaden en te installeren: [Download ZAP en i
 ## Stap 1 — Een opname maken
 Om het verkeer op te nemen, wordt geadviseerd om de geïntegreerde browser van ZAP (zie screenshot) te gebruiken, omdat die vooringesteld is. 
 
+> [!WARNING]
 > ⚠️ **Let op:** Dit is geen opname waarbij de stappen op volgorde kunnen worden afgespeeld. Dit registreert alleen alle calls/endpoints.
 
 Als doelwit/testobject kun je gebruikmaken van onderstaande testwebsites.
@@ -35,7 +36,6 @@ Als je dan naar de pagina gaat, moeten er in de zijbalk van ZAP Sites tevoorschi
 *De browser die geïntegreerd is in ZAP en standaard via de proxy loopt.*
 
 > [!WARNING]
-> Wanneer je de melding krijgt: bla bla
 > ⚠️ Wanneer je de melding krijgt: `PR_CONNECT_RESET_ERROR` of `Kan geen verbinding maken`  
 
 ## Stap 2 — Een context maken
@@ -59,14 +59,14 @@ ZAP kent verschillende soorten *'scans'* als stappen. De 'passive scans' zijn st
 
 Het voordeel van deze passive scan is dat er een lijst wordt opgebouwd van endpoints buiten het opgenomen klikpad die later weer kunnen worden gescand/getest/aangevallen. 
 
-Je kunt 'ad hoc' scannen ter orientatie en om resultaten verwerken in een context.
-Een passive scan kan ook onderdeel zijn van een automation plan, maar dan moet je eerst een automation plan maken en daarna de passive scan toevoegen
+Je kunt 'ad hoc' scannen, ter oriëntatie en om resultaten te verwerken in een context.
+Een passive scan kan ook onderdeel zijn van een automation plan, maar dan moet je eerst een automation plan maken en daarna de passive scan toevoegen.
 
 - **Spider**: ontdekt links op basis van HTML-structuur.  
 - **Ajax Spider**: gebruikt een echte browser en is geschikt voor SPA’s (React/Angular/Vue).  
 - **OpenAPI import**: laad je API-spec om endpoints in scope te krijgen.
 
-Een passive scan doe je zodat je ook andere links (buiten je opname-klikpad) kunt ontdekken, die later kunnen worden aangevallen. Het is een soort netscan / portscan. Je kunt hiermee alle endpoints in kaart brengen en de context uitbreiden zodat deze later kan worden gebruikt in een aanval (active scan).
+Een passive scan doe je zodat je ook andere links (buiten je opname-klikpad) kunt ontdekken, die later kunnen worden aangevallen. Het is een soort netscan / portscan. Je kunt hiermee alle endpoints in kaart brengen en de context uitbreiden, zodat deze later kan worden gebruikt in een aanval (active scan).
 
 ## Stap 4 — Actieve scan
 

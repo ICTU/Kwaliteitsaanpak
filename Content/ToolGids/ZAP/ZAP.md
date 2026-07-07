@@ -26,6 +26,5 @@ Zed Attack Proxy (ZAP) is een open-source tool die gebruikt wordt voor het teste
 
 ---
 
-#include "Content/ToolGids/Diataxis-raamwerk.md"
 
 #include "Content/ToolGids/Colofon.md"

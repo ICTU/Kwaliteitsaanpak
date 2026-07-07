@@ -123,7 +123,7 @@ class MarkdownTest(MarkdownConverterTestCase):
     @patch(
         read_text,
         Mock(
-            return_value="**Bold** _Italic_ ~~Strike~~ {Instruction} [Anchor](link) "
+            return_value="**Bold** _Italic_ ~~Strike~~ {Instruction} [Anchor](link) `Code`"
             "[measure-title]Measure[/measure-title] [submeasure-title]Submeasure[/submeasure-title]"
         ),
     )
@@ -131,6 +131,7 @@ class MarkdownTest(MarkdownConverterTestCase):
         """Test formatting."""
         paragraph = self.find(xmltags.PARAGRAPH)
         self.assertEqual("Bold", self.find(xmltags.BOLD, paragraph).text)
+        self.assertEqual("Code", self.find(xmltags.CODE, paragraph).text)
         self.assertEqual("Italic", self.find(xmltags.ITALIC, paragraph).text)
         self.assertEqual("Strike", self.find(xmltags.STRIKETHROUGH, paragraph).text)
         self.assertEqual("{Instruction}", self.find(xmltags.INSTRUCTION, paragraph).text)

@@ -37,6 +37,7 @@ class DocxBuilder(Builder):
         xmltags.TITLE,
         xmltags.INSTRUCTION,
         xmltags.BOLD,
+        xmltags.CODE,
         xmltags.ITALIC,
         xmltags.STRIKETHROUGH,
     )
@@ -160,6 +161,8 @@ class DocxBuilder(Builder):
                 run.font.italic = True
             if self.in_element(xmltags.STRIKETHROUGH):
                 run.font.strike = True
+            if self.in_element(xmltags.CODE):
+                run.font.name = "Fira code"
         elif tag == xmltags.ANCHOR:
             assert self.paragraph
             try:

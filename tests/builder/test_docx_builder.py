@@ -60,3 +60,39 @@ class CodeBlockTest(unittest.TestCase):
     def test_unknown_language(self):
         """Test that an unknown language raises an exception."""
         self.assertRaises(ClassNotFound, self.build, "nonexistent", "code\n")
+
+
+class TextFormattingTest(unittest.TestCase):
+    """Unit tests for fomatting text."""
+
+    def build(self, xmltag: str) -> Document:
+        """Build an docx with a formatted paragraph."""
+        document = Element(xmltags.DOCUMENT, {"title": "Title", "version": "1"})
+        SubElement(document, xmltags.FRONTPAGE)  # Starts the <main> element that the document end closes
+        paragraph = SubElement(document, xmltags.PARAGRAPH, {})
+        formatted = SubElement(paragraph, xmltag)
+        formatted.text = "formatted"
+        with tempfile.TemporaryDirectory() as directory:
+            filename = pathlib.Path(directory) / "output.docx"
+            Converter(ElementTree(document)).convert(DocxBuilder(filename, REFERENCE_DOCX, pathlib.Path(".")))
+            return docx.Document(str(filename))
+
+    def test_bold(self):
+        """Test bold text."""
+        document = self.build(xmltags.BOLD)
+        self.assertTrue(document.paragraphs[-1].runs[-1].bold)
+
+    def test_italic(self):
+        """Test italic text."""
+        document = self.build(xmltags.ITALIC)
+        self.assertTrue(document.paragraphs[-1].runs[-1].italic)
+
+    def test_strikethrough(self):
+        """Test strikethrough text."""
+        document = self.build(xmltags.STRIKETHROUGH)
+        self.assertTrue(document.paragraphs[-1].runs[-1].font.strike)
+
+    def test_code(self):
+        """Test code text."""
+        document = self.build(xmltags.CODE)
+        self.assertEqual("Fira code", document.paragraphs[-1].runs[-1].font.name)

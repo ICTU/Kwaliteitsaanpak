@@ -22,6 +22,7 @@ class HTMLBuilder(Builder):
 
     FORMAT = {
         xmltags.BOLD: html_tags.BOLD,
+        xmltags.CODE: html_tags.CODE,
         xmltags.ITALIC: html_tags.ITALIC,
         xmltags.STRIKETHROUGH: html_tags.STRIKETROUGH,
     }

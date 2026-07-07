@@ -63,7 +63,7 @@ Zie [DocumentDefinitions/README.md](DocumentDefinitions/README.md) voor meer inf
 
 ## Bijdragen
 ### Vereisten
-- [Docker](https://www.docker.com/) geïnstalleerd op je systeem.
+- [uv](https://docs.astral.sh/uv/) geïnstalleerd op je systeem.
 
 ### Stappen
 Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
@@ -74,9 +74,19 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
    ```
 2. Genereer de documentatie:
    ```bash
-   docker compose up
+   uv run src/convert.py DocumentDefinitions/*.json
    ```
-   Wanneer het proces succesvol is verlopen wordt de container vanzelf afgesloten. De terminal geeft dan iets weer als `ka-1 exited with code 0`. De gegenereerde documenten staan in de map `docs/wip` (work-in-progress).
+   De gegenereerde documenten staan in de map `docs/wip` (work-in-progress).
+
+   Om meer voortgangsinformatie te krijgen, verander het loggingniveau:
+   ```bash
+   uv run src/convert.py --log INFO DocumentDefinitions/*.json
+   ```
+
+   Om een specifiek document te genereren, geef alleen het desbetreffende JSON-bestand. Bijvoorbeeld:
+   ```bash
+   uv run src/convert.py DocumentDefinitions/wijzigingsgeschiedenis.json
+   ```
 
 ⚠️ Documenteer wijzigingen (alleen aan de inhoud van de Kwaliteitsaanpak) in `./Content/Wijzigingsgeschiedenis.md`.
 
@@ -97,7 +107,7 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
 5. Werk het versienummer bij in `docs/index.html` en `pyproject.toml`.
 6. Genereer de documentatie met het nieuwe versienummer:
    ```bash
-   VERSION=x.y.z docker compose up
+   VERSION=x.y.z uv run src/convert.py DocumentDefinitions/*.json
    ```
    De gegenereerde documenten staan in de map `docs/vx.y.z`.
 7. Commit en push de wijzigingen:

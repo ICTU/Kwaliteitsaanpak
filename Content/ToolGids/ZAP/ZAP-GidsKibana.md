@@ -13,12 +13,12 @@ De User-Agent kan op meerdere manieren worden ingesteld, afhankelijk van hoe je 
 1. Open ZAP.
 2. Ga naar **Tools** → **Options**.
 3. Navigeer naar **HTTP Sessions** of **Connection** → **User-Agent**.
-4. Voeg een custom User-Agent toe, bijvoorbeeld:  
+4. Voeg een custom User-Agent toe, zie screenshot hieronder.
+  
+![Screenshot van ZAP dat laat zien waar je een custom user-agent configueert.](Images/custom-useragent.png "Screenshot van ZAP dat laat zien waar je een custom user-agent configueert.")
 
 ### In een Automation Plan (YAML)
-
-Je kunt ook een custom header instellen via een script of een request policy. Bijvoorbeeld via een script dat wordt opgenomen in je automation plan:
-
+Je kunt ook een custom header instellen via een script of een request policy. Bijvoorbeeld door een script op te nemen in je automation plan:
 ```yaml
 jobs:
 - type: requestor
@@ -28,11 +28,7 @@ jobs:
        method: "GET"
        headers:
          User-Agent: "ZAP-Scanner/1.0"
-
-
-
 ```
-
 
 ## Stap 2 – Filter ZAP-verkeer in Kibana
 Zodra de requests zijn gelogd met deze specifieke User-Agent, kun je in Kibana eenvoudig filteren op dit verkeer om bijvoorbeeld foutanalyses of dashboards zuiver te houden.
@@ -43,7 +39,6 @@ Zodra de requests zijn gelogd met deze specifieke User-Agent, kun je in Kibana e
 
 ```kql
 user_agent.keyword: "ZAP-Scanner/1.0"
-
 ```
 
 **Verkeer uitsluiten in visualisaties of zoekopdrachten:**

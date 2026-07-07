@@ -1,5 +1,5 @@
 ---
-name: Test and quality
+name: Test, checks, and build
 
 on: [push]
 
@@ -14,10 +14,16 @@ jobs:
         uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
         with:
           version: "0.11.23"
-      - name: Install dependencies, run unit tests and check quality
+      - name: Install dependencies, run unit tests and check quality, create artifacts
         run: |
           npm install --ignore-scripts
           uv venv
           uv sync
           ci/unittest.sh
           ci/quality.sh
+          uv run src/convert.py DocumentDefinitions/*.json
+      - name: Archive artifacts
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: dist
+          path: docs/wip

@@ -1,4 +1,0 @@
-# Ignore everything except the dependencies, needed for the ka image.
-*
-!pyproject.toml
-!uv.lock

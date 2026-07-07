@@ -105,7 +105,7 @@ Controleer (of laat een systeembeheerder dit doen) bij twijfel daarom niet allee
 ## Probleem: geen duidelijk inzicht in gebruikte licenties
 Het projectteam wil inzichtelijk maken welke licenties worden gebruikt in dependencies, maar het overzicht is onvolledig, onduidelijk of niet geschikt voor besluitvorming.
 
-![Screenshot van licentie-overzicht in Dependency-Track](Images/Pasted image 20260707121904.png "Screenshot van licentie-overzicht in Dependency-Track")
+![Screenshot van licentie-overzicht in Dependency-Track](Images/dt-licenses.png "Screenshot van licentie-overzicht in Dependency-Track")
 
 ### Context
 Dependency-Track kan per component licentie-informatie registreren en toetsen. Die informatie komt meestal uit de SBoM. Als de SBoM geen of onvolledige licentiegegevens bevat, kan Dependency-Track deze informatie ook niet betrouwbaar tonen of beoordelen.
@@ -163,7 +163,7 @@ Maak vervolgens component policies aan via:
 Policy Management > Policies
 ```
 
-![Screenshot van policy-management in Dependency-Track](Images/Pasted image 20260707123911.png "Screenshot van policy-management in Dependency-Track")
+![Screenshot van policy-management in Dependency-Track](Images/dt-policy.png "Screenshot van policy-management in Dependency-Track")
 
 Voorbeelden van bruikbare policies:
 ### Policy: verboden licenties blokkeren (ingebouwde license group )

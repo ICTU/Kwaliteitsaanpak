@@ -1,6 +1,7 @@
 {
   "KWALITEITSAANPAK": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
   "BASE_URL": "https://ictu.github.io/Kwaliteitsaanpak",
+  "REPO_URL": "https://github.com/ICTU/Kwaliteitsaanpak",
   "M01": "M01: Het project ontvangt en levert in elke fase vastgestelde producten en informatie",
   "M02": "M02: Het project bewaakt continu dat het product aan de kwaliteitsnormen voldoet",
   "M03": "M03: Het project zorgt dat het product traceerbaar aan eisen voldoet",

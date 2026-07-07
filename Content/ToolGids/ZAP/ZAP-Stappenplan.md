@@ -1,7 +1,7 @@
 # ZAP Stappenplan ZAP-script maken
 
 ## Samengevat
-- ZAP kun je gebruiken voor een actieve aanval (ad hoc) of geautomatiseerd middels een automation plan (zie [Gids Automation Plan]). Dit is verder uitgelegd in [[ZAP - Verdieping en begrippen]].
+- ZAP kun je gebruiken voor een actieve aanval (ad hoc) of geautomatiseerd middels een automation plan (zie [Gids Automation Plan]). Dit is verder uitgelegd in $LINK_ZAP_VERDIEPING_EN_BEGRIPPEN$.
 - In dit stappenplan wordt eerst een context gemaakt. Dit is een verzameling URL's die later kan worden gebruikt voor beide typen gebruikswijzen (ad hoc of geautomatiseerd).
 - We voegen deze context toe aan een automation plan, zodat dit later in een CI/CD-pipeline kan worden uitgevoerd.
 - Als laatste stap kan er een Zest-script worden toegevoegd aan het automation plan om daadwerkelijk stappen te doorlopen die later ook in die volgorde worden uitgevoerd.

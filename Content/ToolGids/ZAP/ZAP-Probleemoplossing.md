@@ -11,7 +11,7 @@
 ## Bekende beperkingen
 ### HTTP Request methods
 
-Naast HTTP GET, HTTP POST en HTTP PUT zijn er nog meer [request methods](https://en.wikipedia.org/wiki/HTTP#Request_methods) zoals HTTP PATCH. ZAP ondersteunt dit nog (in 2025) niet.
+Naast HTTP GET, HTTP POST en HTTP PUT zijn er nog meer [request methods](https://en.wikipedia.org/wiki/HTTP#Request_methods) zoals HTTP PATCH. ZAP ondersteunt dit nog niet op het moment van schrijven (in 2026).
 
 Wanneer je PATCH in een sequence probeert te gebruiken, stopt de sequence bij de overview. Als je PATCH via een andere route probeert te implementeren, krijg je de volgende foutmelding:
 

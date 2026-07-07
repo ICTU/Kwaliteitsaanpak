@@ -29,8 +29,7 @@ Deze repository bevat scripts die Markdown-bronbestanden (content) omzetten in o
 - **HTML** (voor het hoofddocument).
 - **DOCX** (voor sjablonen).
 - **XLSX** (voor de checklist).
-- **PPTX** (voor de Kwaliteitsaanpak)
-- **Markdown** (voor de toolgidsen).
+- **PPTX** (voor de Kwaliteitsaanpak).
 
 ### Mappenstructuur
 De repository is als volgt opgebouwd:

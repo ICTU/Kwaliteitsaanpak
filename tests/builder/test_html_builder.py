@@ -47,6 +47,42 @@ class CodeBlockTest(unittest.TestCase):
         self.assertRaises(ClassNotFound, self.build, "nonexistent", "code\n")
 
 
+class TextFormattingTest(unittest.TestCase):
+    """Unit tests for fomatting text."""
+
+    def build(self, xmltag: str) -> str:
+        """Build an HTML document with a line."""
+        document = Element(xmltags.DOCUMENT, {"title": "Title", "version": "1"})
+        SubElement(document, xmltags.FRONTPAGE)  # Starts the <main> element that the document end closes
+        paragraph = SubElement(document, xmltags.PARAGRAPH, {})
+        formatted = SubElement(paragraph, xmltag)
+        formatted.text = "formatted"
+        with tempfile.TemporaryDirectory() as directory:
+            filename = pathlib.Path(directory) / "output.html"
+            Converter(ElementTree(document)).convert(HTMLBuilder(filename, pathlib.Path("style.css")))
+            return filename.read_text(encoding="utf-8")
+
+    def test_bold(self):
+        """Test bold text."""
+        html = self.build(xmltags.BOLD)
+        self.assertIn("<strong>formatted</strong>", html)
+
+    def test_italic(self):
+        """Test italic text."""
+        html = self.build(xmltags.ITALIC)
+        self.assertIn("<em>formatted</em>", html)
+
+    def test_strikethrough(self):
+        """Test italic text."""
+        html = self.build(xmltags.STRIKETHROUGH)
+        self.assertIn("<s>formatted</s>", html)
+
+    def test_code(self):
+        """Test code text."""
+        html = self.build(xmltags.CODE)
+        self.assertIn("<code>formatted</code>", html)
+
+
 class HTMLEntitiesToXMLTest(unittest.TestCase):
     """Unit tests for converting named HTML entities to numeric character references."""
 

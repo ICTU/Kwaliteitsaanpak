@@ -298,6 +298,7 @@ class MarkdownConverter:
                 markdown_syntax.BOLD_ALTERNATIVE_END,
                 xmltags.BOLD,
             ),
+            (markdown_syntax.CODE_START, markdown_syntax.CODE_END, xmltags.CODE),
             (
                 markdown_syntax.INSTRUCTION_START,
                 markdown_syntax.INSTRUCTION_END,

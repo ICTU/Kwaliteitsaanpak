@@ -52,3 +52,6 @@ branch = true
 fail_under = 48.54
 precision = 2
 skip_covered = true
+
+[tool.uv]
+exclude-newer = "7 days" # managed by Update-time — remove this comment to prevent Update-time from changing it

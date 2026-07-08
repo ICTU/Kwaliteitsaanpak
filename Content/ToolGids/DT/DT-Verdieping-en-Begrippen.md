@@ -252,7 +252,7 @@ Bron:
 
 OSV staat voor Open Source Vulnerabilities. OSV is een kwetsbaarheidsdatabase die zich richt op open-source ecosystemen en package-identifiers zoals PURL.
 
-Dependency-Track kan OSV gebruiken als vulnerability source. In Dependency-Track v5 kan per ecosysteem worden gekozen welke OSV-data gemirrord wordt.
+Dependency-Track kan OSV gebruiken als vulnerability source. In Dependency-Track v5 kan per ecosysteem worden gekozen welke OSV-data gesynchroniseerd (mirror) wordt.
 
 Bronnen:
 
@@ -265,7 +265,7 @@ Bronnen:
 
 Een vulnerability source is een bron waaruit Dependency-Track kwetsbaarheidsinformatie haalt. Dependency-Track gebruikt die informatie om componenten uit SBOM’s te koppelen aan bekende kwetsbaarheden.
 
-Voor Dependency-Track v5 beschrijft de officiële configuratiedocumentatie drie publieke bronnen die gemirrord kunnen worden:
+Voor Dependency-Track v5 beschrijft de officiële configuratiedocumentatie drie publieke bronnen die gesynchroniseerd (mirror) kunnen worden:
 
 * NVD;
 * GitHub Advisories;

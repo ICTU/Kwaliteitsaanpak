@@ -1,10 +1,11 @@
 #include "Content/ToolGids/ToolGids-introductie.md"
 
 # Dependency-Track 
-Deze toolgids geeft achtergrondinformatie bij het gebruik van Dependency-Track binnen softwareontwikkelprojecten. De pagina is bedoeld als aanvulling op de officiële Dependency-Track-documentatie:
+Deze toolgids geeft achtergrondinformatie bij het gebruik van Dependency-Track binnen softwareontwikkelprojecten. De pagina is bedoeld als aanvulling op [de officiële Dependency-Track-documentatie](https://dependencytrack.github.io/docs/next/).
 
-https://dependencytrack.github.io/docs/next/
 #include "Content/ToolGids/DT/DT-Verdieping-en-Begrippen.md"
+
+#include "Content/ToolGids/DT/DT-Uitleg-SBoM-export.md"
 
 #include "Content/ToolGids/DT/DT-Probleemoplossing.md"
 

@@ -43,7 +43,7 @@ Deze pagina bevat een overzicht van nuttige bronnen voor wie zich verder wil ver
   https://dependencytrack.github.io/docs/next/guides/administration/configuring-vulnerability-sources/
 
 * **Task scheduler**
-  Technische referentie voor geplande taken, zoals het spiegelen van kwetsbaarheidsbronnen, metrics-updates en portfolio vulnerability analysis:
+  Technische referentie voor geplande taken, zoals het synchroniseren (mirror) van kwetsbaarheidsbronnen, metrics-updates en portfolio vulnerability analysis:
   https://dependencytrack.github.io/docs/next/reference/configuration/task-scheduler/
 
 * **Component policies**

@@ -7,9 +7,9 @@ Dependency-Track is een tool die per project bewaakt welke externe softwarepakke
 
 Dependency-Track doet dit via achtergrondtaken. Daarbij zijn drie stappen belangrijk:
 
-1. kwetsbaarheidsbronnen worden gesynchroniseerd (mirror) naar de lokale Dependency-Track-database;
-2. componenten uit projecten worden geanalyseerd tegen die lokale kwetsbaarheidsdata;
-3. metrics en dashboardwaarden worden bijgewerkt.
+1. Kwetsbaarheidsbronnen worden gesynchroniseerd (mirror) naar de lokale Dependency-Track-database;
+2. Componenten uit projecten worden geanalyseerd tegen die lokale kwetsbaarheidsdata;
+3. Metrics en dashboardwaarden worden bijgewerkt.
 ### Waarschijnlijke oorzaken
 Mogelijke oorzaken zijn:
 * De geplande 'portfolio vulnerability analysis' draait niet.
@@ -21,22 +21,58 @@ Mogelijke oorzaken zijn:
 ### Oplossing
 > [!WARNING]
 > ⚠️ **Let op:** 
-> De gesuggereerde oplossingen hieronder zijn alleen uit te voeren door systeembeheerders.
-
+> De gesuggereerde oplossingen hieronder kunnen niet worden aangepast in de webinterface. Ze horen bij de deploymentconfiguratie van de Dependency-Track API-server. In de praktijk moeten deze instellingen worden gecontroleerd of aangepast door een systeembeheerder, platformbeheerder of DevOps-beheerder met toegang tot de runtimeconfiguratie van de API-server.
 #### Controleer of de geplande analyse actief is.
+
+Zoals uitgelegd in de [officiële documentatie van Dependency-Track](https://dependencytrack.github.io/docs/next/reference/configuration/application/) kunnen configuraties op verschillende manieren worden toegepast.
+Ze kunnen onder meer via de JVM-opstartparameters en via de 'environment variables' worden aangepast.
+
+Dependency-Track v5 gebruikt een task scheduler voor terugkerende achtergrondtaken. Deze scheduler start onder meer taken voor het synchroniseren (mirror) van kwetsbaarheidsbronnen, metrics-updates en portfolio vulnerability analysis.
+
+De portfolio vulnerability analysis is de taak die alle componenten in de portfolio opnieuw analyseert tegen de beschikbare kwetsbaarheidsdata.
+
 Voor Dependency-Track v5 zijn met name deze instellingen relevant:
 
 ```text
 dt.task-scheduler.enabled=true
 dt.task.portfolio-analysis.cron=0 6 * * *
 ```
-Bij container- of Kubernetes-deployments worden deze waarden meestal als environment variables gezet:
 
-```text
+Bij een container- of Kubernetes-deployment worden deze waarden meestal als environment variables op de **API-servercontainer** gezet:
+
+```properties
 DT_TASK_SCHEDULER_ENABLED=true
 DT_TASK_PORTFOLIO_ANALYSIS_CRON=0 6 * * *
 ```
-De standaardwaarde `0 6 * * *` betekent dat de portfolio vulnerability analysis dagelijks om 06:00 UTC draait.
+
+De standaardwaarde `0 6 * * *` betekent dat de portfolio vulnerability analysis dagelijks om 06:00 UTC draait. Let op: Dependency-Track gebruikt voor deze cron-expressies UTC, niet de lokale tijdzone.
+
+Deze configuratie kan op verschillende manieren worden toegepast, afhankelijk van de deployment:
+
+|Deploymentvorm|Waar aanpassen?|
+|---|---|
+|Docker Compose|In de `environment`-sectie van de Dependency-Track API-serverservice|
+|Kubernetes|In de `env`-sectie van de API-server `Deployment` of `StatefulSet`|
+|Helm|In de Helm values die environment variables voor de API-server instellen|
+|JVM-startparameter|Als `-Ddt.task-scheduler.enabled=true` en `-Ddt.task.portfolio-analysis.cron="0 6 * * *"`|
+|Configuratiebestand|In `config/application.properties` van de API-server|
+
+Bij gebruik van de officiële container-image is de current working directory `/opt/owasp/dependency-track`. Een configuratiebestand wordt dan verwacht op:
+
+```text
+/opt/owasp/dependency-track/config/application.properties
+```
+
+Voorbeeldinhoud:
+
+```properties
+dt.task-scheduler.enabled=true
+dt.task.portfolio-analysis.cron=0 6 * * *
+```
+
+Let op bij meerdere API-servernodes: de scheduler mag op meerdere nodes actief zijn. Dependency-Track coördineert de uitvoering via de database, zodat een geplande taak maar door één node wordt uitgevoerd. De scheduler moet echter wel op minimaal één API-servernode actief zijn. Als de scheduler op alle nodes is uitgeschakeld, draaien de geplande achtergrondtaken niet.
+
+Controleer na wijziging van deze instellingen de API-serverlogs om vast te stellen of de scheduler actief wordt en of de portfolio vulnerability analysis daadwerkelijk wordt gestart.
 
 #### Controleer de vulnerability sources
 De beheerder moet controleren of de kwetsbaarheidsbronnen correct zijn ingericht. Ga in Dependency-Track naar:
@@ -115,15 +151,15 @@ Licentie-inzicht bestaat uit twee verschillende vragen:
 1. Welke licenties worden gebruikt in dit project?
 2. Welke gebruikte licenties zijn toegestaan, ongewenst of onbekend?
 
-De eerste vraag is inventariserend. De tweede vraag hoort thuis in beleid, bijvoorbeeld via component policies.
+De eerste vraag is inventariserend. De tweede vraag is een beleidsvraag en is afhankelijk van de niet-functionele eisen van het ontwikkelproject. Het toepassen van dit beleid kan middels policies zoals hieronder verder uitgediept.
 
-Softwareontwikkelprojecten kunnen onbedoeld softwarepakketten (dependencies) gebruiken met licenties die niet passen bij het beleid van de organisatie. Vooral [copyleftlicenties](https://nl.wikipedia.org/wiki/Copyleft) vragen aandacht. Copyleftlicenties verplichten onder bepaalde voorwaarden dat gewijzigde of afgeleide software onder dezelfde of vergelijkbare licentie beschikbaar wordt gesteld.
+Softwareontwikkelprojecten kunnen onbedoeld softwarepakketten (dependencies) gebruiken met licenties die niet passen bij het beleid van de organisatie of het project. Vooral [copyleftlicenties](https://nl.wikipedia.org/wiki/Copyleft) vragen aandacht. Copyleftlicenties verplichten, onder bepaalde voorwaarden, dat gewijzigde of afgeleide software onder dezelfde of vergelijkbare licentie beschikbaar wordt gesteld.
 
 De meest risicovolle categorieën zijn:
 - **sterke copyleftlicenties**, zoals GPL-2.0 en GPL-3.0;
-- **netwerk-copyleftlicenties**, zoals AGPL-3.0, vooral relevant voor SaaS- en webapplicaties;
+- ⁣**netwerkcopyleftlicenties**, zoals AGPL-3.0, vooral relevant voor SaaS- en webapplicaties;
 - **zwakke copyleftlicenties**, zoals LGPL, MPL en EPL, die meestal beperkter werken, maar nog steeds voorwaarden kunnen opleggen;
-- **niet-open-source restrictieve licenties**, zoals proprietary, source-available, non-commercial en no-derivatives licenties.
+- **niet-open-source restrictieve licenties**, zoals proprietary, source-available, non-commercial en no-derivatives-licenties.
 
 In Dependency-Track is het mogelijk om deze licenties niet alleen te inventariseren, maar ook via licentiebeleid te classificeren als **toegestaan**, **review vereist** of **niet toegestaan**.
 
@@ -335,7 +371,6 @@ Let op: conversie tussen SBoM-formaten is niet altijd verliesvrij. Controleer na
 * dependency-relaties
 
 ### Praktisch advies
-
 Gebruik voor Dependency-Track-projecten deze voorkeursvolgorde:
 
 1. Genereer direct CycloneDX vanuit de build.
@@ -352,41 +387,6 @@ Gebruik voor Dependency-Track-projecten deze voorkeursvolgorde:
   https://cyclonedx.org/tool-center/
 * CycloneDX CLI:
   https://github.com/CycloneDX/cyclonedx-cli
-
----
-
-## VDR- en VEX-export uit Dependency-Track
-
-### Context
-
-Dependency-Track kan naast SBoM’s ook CycloneDX-documenten genereren met kwetsbaarheidsinformatie.
-
-Belangrijke termen:
-
-| Term | Betekenis                                 |
-| ---- | ----------------------------------------- |
-| BOM  | Bill of Materials, de componentinventaris |
-| VEX  | Vulnerability Exploitability Exchange     |
-| VDR  | Vulnerability Disclosure Report           |
-
-### Toelichting
-
-Een VEX-document beschrijft analysebeslissingen over kwetsbaarheden. Het geeft bijvoorbeeld context over de vraag of een kwetsbaarheid exploiteerbaar is in een specifieke toepassing.
-
-Een VDR-document bevat kwetsbaarheidsinformatie over componenten in een product of project.
-
-Noem een VDR daarom niet simpelweg een “annotated SBoM”. Dat is te onnauwkeurig. Een betere formulering is:
-
-> Een Dependency-Track VDR-export is een CycloneDX Vulnerability Disclosure Report met kwetsbaarheidsinformatie over componenten in het project.
-
-### Bronnen
-
-* Dependency-Track v5, File Formats:
-  https://dependencytrack.github.io/docs/next/reference/file-formats/
-* CycloneDX, Vulnerability Disclosure Report:
-  https://cyclonedx.org/use-cases/vulnerability-disclosure/
-* CycloneDX, Vulnerability Exploitability Exchange:
-  https://cyclonedx.org/capabilities/vex/
 
 ---
 
@@ -409,7 +409,7 @@ Een metrics-refresh werkt projectmetingen of grafieken bij. Een vulnerability an
 Als nieuwe kwetsbaarheden niet zichtbaar worden, controleer dan niet alleen de grafiek of metrics, maar ook:
 
 * of de portfolio vulnerability analysis draait;
-* of de vulnerability sources recent zijn gespiegeld;
+* of de vulnerability sources recent zijn gesychroniseerd (mirror);
 * of de SBoM bruikbare identifiers bevat;
 * of de API-serverlogs analyseactiviteit tonen.
 

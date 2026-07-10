@@ -1,0 +1,14 @@
+{
+  "LINK_ZAP_GIDS_INSTALLATIE": "[ZAP Installatiegids](#zap-installatiegids)",
+  "LINK_ZAP_GIDS_AUTOMATION": "[ZAP-gids Automation Plan](#zap-automation-plan-gids)",
+  "LINK_ZAP_BRONNEN": "[ZAP officiële bronnen](#officiële-bronnen)",
+  "LINK_QUALITY_TIME": "[Quality-time](https://github.com/ICTU/quality-time)",
+  "LINK_ZAP_ZEST": "[ZAP-gids Zest](#zap-gids-zest)",
+
+  "LINK_ZAP_GIDS_KIBANA": "[ZAP-gids Kibana](#zap-in-combinatie-met-kibana)",
+  "LINK_ZAP_PIPELINE_INTEGRATIE": "[ZAP-gids Pipeline integratie](#zap-gids-pipeline-integratie)",
+  "LINK_ZAP_PROBLEEMOPLOSSING": "[ZAP Probleemoplossing](#zap-probleemoplossing)",
+  "LINK_ZAP_REFERENTIES_EN_LINKS": "[ZAP Referenties en Links](#referenties-en-links)",
+  "LINK_ZAP_STAP_VOOR_STAP_SCRIPT_MAKE": "[ZAP Stap-voor-stap script maken](#zap-stappenplan-zap-script-maken)",
+  "LINK_ZAP_VERDIEPING_EN_BEGRIPPEN": "[ZAP Verdieping en begrippen](#zap-verdieping-en-begrippen)"
+}

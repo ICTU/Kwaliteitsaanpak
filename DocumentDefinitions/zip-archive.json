@@ -9,7 +9,11 @@
                 "docs/$VERSIE$/*.json",
                 "docs/$VERSIE$/*.png",
                 "docs/$VERSIE$/*.pptx",
-                "docs/$VERSIE$/*.xlsx"
+                "docs/$VERSIE$/*.xlsx",
+                "docs/$VERSIE$/ToolGids/*.css",
+                "docs/$VERSIE$/ToolGids/*/*.html",
+                "docs/$VERSIE$/ToolGids/*/*.png",
+                "docs/$VERSIE$/ToolGids/*/Images/*.png"
             ],
             "OutputFile": "ICTU-Kwaliteitsaanpak.zip",
             "OutputPaths": [

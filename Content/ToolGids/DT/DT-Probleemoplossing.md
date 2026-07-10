@@ -19,9 +19,8 @@ Mogelijke oorzaken zijn:
 * De gebruiker verwart de metrics-refresh of grafiekupdate met een vulnerability analysis.
 
 ### Oplossing
-> [!WARNING]
-> ⚠️ **Let op:** 
-> De gesuggereerde oplossingen hieronder kunnen niet worden aangepast in de webinterface. Ze horen bij de deploymentconfiguratie van de Dependency-Track API-server. In de praktijk moeten deze instellingen worden gecontroleerd of aangepast door een systeembeheerder, platformbeheerder of DevOps-beheerder met toegang tot de runtimeconfiguratie van de API-server.
+⚠️ **Let op:** 
+De gesuggereerde oplossingen hieronder kunnen niet worden aangepast in de webinterface. Ze horen bij de deploymentconfiguratie van de Dependency-Track API-server. In de praktijk moeten deze instellingen worden gecontroleerd of aangepast door een systeembeheerder, platformbeheerder of DevOps-beheerder met toegang tot de runtimeconfiguratie van de API-server.
 #### Controleer of de geplande analyse actief is.
 
 Zoals uitgelegd in de [officiële documentatie van Dependency-Track](https://dependencytrack.github.io/docs/next/reference/configuration/application/) kunnen configuraties op verschillende manieren worden toegepast.
@@ -111,9 +110,8 @@ pkg:pypi/requests@2.32.3
 
 Als de SBoM geen PURL of CPE bevat, kan Dependency-Track de component mogelijk wel tonen, maar kwetsbaarheden minder goed of helemaal niet relateren aan een kwetsbaarhedendatabase.
 
-> [!WARNING]
-> ⚠️ **Let op:** 
-> Let ook op het verschil tussen analyse en metriek. Een grafiek of dashboardwaarde die wordt bijgewerkt, betekent niet automatisch dat de vulnerabilities opnieuw zijn geanalyseerd. Controleer (of laat een systeembeheerder controleren) daarom bij twijfel de Dependency-Track API-serverlogs en de timestamps van de analyse.
+⚠️ **Let op:** 
+Let ook op het verschil tussen analyse en metriek. Een grafiek of dashboardwaarde die wordt bijgewerkt, betekent niet automatisch dat de vulnerabilities opnieuw zijn geanalyseerd. Controleer (of laat een systeembeheerder controleren) daarom bij twijfel de Dependency-Track API-serverlogs en de timestamps van de analyse.
 
 Dependency-Track gebruikt meerdere achtergrondtaken die los van elkaar kunnen worden uitgevoerd. Kwetsbaarheidsbronnen zoals NVD, GitHub Advisories en OSV worden periodiek gesynchroniseerd (mirror). Daarnaast draait er een 'portfolio vulnerability analysis' die componenten opnieuw vergelijkt met de beschikbare kwetsbaarheidsdata. Daarna worden metrics (grafieken- en dashboardwaardes) periodiek bijgewerkt.
 
@@ -226,11 +224,11 @@ jouw applicatie└── directe dependency A    └── transitieve dependenc
 
 In dit geval is **B** de component met de ongewenste licentie. Maar de dependency die je waarschijnlijk moet vervangen of uitsluiten is **A**, omdat A de transitieve dependency B binnenhaalt.
 
-Dependency-Track v5 heeft wel mogelijkheden om dependency-relaties te evalueren via policy expressions. De documentatie noemt functies zoals `is_dependency_of`, `is_direct_dependency_of` en `is_exclusive_dependency_of`. Daarmee kun je bepalen of een component direct, transitief of exclusief via een andere component wordt binnengehaald.
+Dependency-Track v5 heeft de mogelijkheid om dependency-relaties te evalueren via policy expressions. De documentatie noemt functies zoals `is_dependency_of`, `is_direct_dependency_of` en `is_exclusive_dependency_of`. Daarmee kun je bepalen of een component direct, transitief of exclusief via een andere component wordt binnengehaald.
 
 
-> [!INFO] Licenties van transitieve dependencies
-> Dependency-Track kan alleen informatie verschaffen over WELKE softwarepakketten (dependencies) ongewenste licenties bevatten. Daarna moet het ontwikkelteam in de dependency tree van de gebruikte package manager bepalen welke directe dependency de transitieve component binnenhaalt.
+ℹ️ Licenties van transitieve dependencies
+Dependency-Track kan alleen informatie verschaffen over WELKE softwarepakketten (dependencies) ongewenste licenties bevatten. Daarna moet het ontwikkelteam in de dependency tree van de gebruikte package manager bepalen welke directe dependency de transitieve component binnenhaalt.
 
 ## Probleem: licenties worden niet weergegeven
 ### Waarschijnlijke oorzaken

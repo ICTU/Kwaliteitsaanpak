@@ -10,13 +10,13 @@ Het ZAP Automation Framework interpreteert **géén** omgevingsvariabelen automa
 
 Houd hier dus rekening mee bij het verplaatsen of hergebruiken van automation plans tussen verschillende omgevingen.
 
-> [!WARNING]
-> ⚠️ **Let op:** 
-> ⚠️ Variabelen in sequence worden niet overgenomen uit automation plan.
+
+⚠️ **Let op:** 
+Variabelen in sequence worden niet overgenomen uit automation plan.
 
 Je moet daarom een shell-script maken met `envsubst`
   
-![Screenshot van terminal](Images/Pasted%20image%2020250728160826.png "Screenshot van terminal")
+![Screenshot van terminal](Images/pipeline-variables.png "Screenshot van terminal")
 
 ## ZAP-scan in GitLab CI/CD
 De ZAP-scan kan worden geïntegreerd in de GitLab CI/CD-pipeline als een job in het bestand `.gitlab-ci.yml`. 

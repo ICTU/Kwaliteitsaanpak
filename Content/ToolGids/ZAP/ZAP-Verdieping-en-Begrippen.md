@@ -74,9 +74,8 @@ jobs:
 
 ```
 
-> [!warning]
-> Variabelen worden **alleen vervangen** op plekken waar ZAP dit expliciet ondersteunt, zoals bij `url`, `name`, `includedPaths` en andere parameterwaarden.    
-> In velden waar variabelen niet automatisch worden geïnterpreteerd (zoals binnen bepaalde scripts), moet je dit handmatig oplossen.    
+Variabelen worden **alleen vervangen** op plekken waar ZAP dit expliciet ondersteunt, zoals bij `url`, `name`, `includedPaths` en andere parameterwaarden.    
+In velden waar variabelen niet automatisch worden geïnterpreteerd (zoals binnen bepaalde scripts), moet je dit handmatig oplossen.    
 > De interpolatie gebeurt **eenmalig** bij het laden van het automation-plan; dynamische aanpassing tijdens runtime is niet mogelijk.
 
 Meer informatie: $LINK_ZAP_BRONNEN$

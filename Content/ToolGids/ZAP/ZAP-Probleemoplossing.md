@@ -7,7 +7,7 @@
 - **Regex lastig**: gebruik add-on *Regular Expression Tester*.  
 - **Scans lopen eindeloos**: altijd `maxScanDurationInMins` instellen + `exitStatus`.  
 
-![Foutmelding: The provided browser was not found](Images/Pasted image 20251003102208.png "Foutmelding: The provided browser was not found")
+![Foutmelding: The provided browser was not found](Images/foutmelding-browser.png "Foutmelding: The provided browser was not found")
 ## Bekende beperkingen
 ### HTTP Request methods
 

@@ -12,8 +12,7 @@ Volg deze instructies om ZAP te downloaden en te installeren: [Download ZAP en i
 ## Stap 1 — Een opname maken
 Om het verkeer op te nemen, wordt geadviseerd om de geïntegreerde browser van ZAP (zie screenshot) te gebruiken, omdat die vooringesteld is. 
 
-> [!WARNING]
-> ⚠️ **Let op:** Dit is geen opname waarbij de stappen op volgorde kunnen worden afgespeeld. Dit registreert alleen alle calls/endpoints.
+⚠️ **Let op:** Dit is geen opname waarbij de stappen op volgorde kunnen worden afgespeeld. Dit registreert alleen alle calls/endpoints.
 
 Als doelwit/testobject kun je gebruikmaken van onderstaande testwebsites.
 - https://juice-shop.herokuapp.com/#/
@@ -23,10 +22,10 @@ Als doelwit/testobject kun je gebruikmaken van onderstaande testwebsites.
 - of kies hier een site: https://automationpanda.com/2021/12/29/want-to-practice-test-automation-try-these-demo-sites/
 
 Wanneer je webbrowser eruitziet als hieronder, dan is het goed.
-![Screenshot van Browser](Images/Pasted image 20251003105810.png "Screenshot van Browser")
+![Screenshot van Browser](Images/browser-start.png "Screenshot van Browser")
 
 Als je dan naar de pagina gaat, moeten er in de zijbalk van ZAP Sites tevoorschijn komen. Dit is de opname.
-![Screenshot van ZAP met zijbalk](Images/Pasted image 20251003105944.png "Screenshot van ZAP met zijbalk")
+![Screenshot van ZAP met zijbalk](Images/zijbalk.png "Screenshot van ZAP met zijbalk")
 
 - Gebruik de geïntegreerde browser van de ZAP GUI of;
 - Zet je browser (Firefox/Chromium) op `http://localhost:8090`. 
@@ -35,8 +34,7 @@ Als je dan naar de pagina gaat, moeten er in de zijbalk van ZAP Sites tevoorschi
 ![Geïntegreerde ZAP-Browser](Images/ZAP_Browser.png "De browser die geïntegreerde is in ZAP en standaard via de proxy loopt")
 *De browser die geïntegreerd is in ZAP en standaard via de proxy loopt.*
 
-> [!WARNING]
-> ⚠️ Wanneer je de melding krijgt: `PR_CONNECT_RESET_ERROR` of `Kan geen verbinding maken`  
+⚠️ Wanneer je de melding krijgt: `PR_CONNECT_RESET_ERROR` of `Kan geen verbinding maken`  
 
 ## Stap 2 — Een context maken
 Een context wordt gebruikt om de scope te bepalen van een scan/test. Het is het beste om dit te doen per webapplicatie die je wil scannen/testen/aanvallen. Een context zorgt ervoor dat ZAP de *niet* relevante endpoints *niet* meeneemt in een scan/test/aanval. De meeste webpagina's maken namelijk ook allerlei aanroepen naar websites die niet getest/aangevallen moeten worden met ZAP, zoals bv. een aanroep naar Google o.i.d.).
@@ -91,5 +89,4 @@ zap.sh -cmd -autorun /zap/wd/af-plan.yaml
 *Het Automation Panel, waar je gemaakte automation plans kan inzien en exporteren.*
 
 
-> [!warning]
-> ⚠️ **Belangrijk**: stel **exit-criteria** in (via `exitStatus` job) om te voorkomen dat scans onbeperkt draaien of CI/CD altijd slaagt.
+⚠️ **Belangrijk**: stel **exit-criteria** in (via `exitStatus` job) om te voorkomen dat scans onbeperkt draaien of CI/CD altijd slaagt.

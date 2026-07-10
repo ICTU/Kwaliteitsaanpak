@@ -22,7 +22,7 @@
         },
         {
           "from": "Content/Images/*.png",
-          "to": "docs/$VERSIE$/Images"
+          "to": "docs/$VERSIE$/ToolGids/DT"
         }
       ]
     }

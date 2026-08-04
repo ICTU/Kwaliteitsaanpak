@@ -1,14 +1,25 @@
 # Dependency-Track Verdieping en Begrippen
+
 ## Dependency-Track algemeen
-Dependency-Track is een open-source tool die de softwarecompositie analyseert van softwareontwikkelprojecten. Het inventariseert projecten en scant de componenten periodiek op kwetsbaarheden.
-Dependency-Track is een applicatie die los staat van je pipeline en SBoM ontvangt en de securitydatabase periodiek bevraagd om te bepalen of de softwarecomponenten in uit de SBoM kwetsbaarheden bevat. In een SBoM kunnen zowel container images als softwarebibliotheken worden opgenomen. Ook al lijken de namen sterk op elkaar, deze tool moet niet verward worden met de onderstaande. Ze hebben overlap maar ook verschillen.
+
+Dependency-Track is een open-source tool die de softwarecompositie analyseert van softwareontwikkelprojecten.
+Het inventariseert projecten en scant de componenten periodiek op kwetsbaarheden, losstaand van de pipeline.
+Dependency-Track is een applicatie die een SBoM ontvangt en securitydatabase(s) periodiek bevraagt, om te bepalen of componenten in de SBoM kwetsbaarheden bevatten.
+In een SBoM kunnen zowel container images als softwarebibliotheken worden opgenomen.
+Ook al lijken de namen sterk op elkaar, deze tool moet niet verward worden met de onderstaande vergelijkbare tool Dependency-Check.
+Ze hebben overlap maar ook verschillen.
 
 ## Geschiedenis en achtergrond
-Dependency-Track is een OWASP-project bedacht door Steve Springett. Volgens de OWASP-projectpagina bestaat Dependency-Track sinds 2013 en is het ontwikkeld om Bill of Materials te analyseren voor cybersecurity-risico’s.
 
-Dependency-Track is een OWASP Flagship Project en wordt ontwikkeld door een internationale groep vrijwilligers. De software valt onder de Apache 2.0-licentie.
+Dependency-Track is een OWASP-project bedacht door Steve Springett.
+Volgens de OWASP-projectpagina bestaat Dependency-Track sinds 2013 en is het ontwikkeld om Bill(s) of Materials te analyseren op cybersecurity-risico's.
 
-Dependency-Track is nauw verbonden met CycloneDX. CycloneDX is een standaard voor Bills of Materials en wordt eveneens binnen de OWASP-context gebruikt. Dependency-Track consumeert en produceert CycloneDX SBOM’s en CycloneDX VEX-documenten.
+Dependency-Track is een OWASP Flagship Project en wordt ontwikkeld door een internationale groep vrijwilligers.
+De software valt onder de Apache 2.0-licentie.
+
+Dependency-Track is nauw verbonden met CycloneDX, tevens een OWASP-project.
+CycloneDX is een standaard voor Bill(s) of Materials en wordt eveneens binnen de OWASP-context gebruikt.
+Dependency-Track consumeert en produceert CycloneDX SBOM’s en CycloneDX VEX-documenten.
 
 Bronnen:
 
@@ -91,7 +102,9 @@ https://owasp.org/www-project-dependency-track/
 https://dependencytrack.github.io/docs/next/guides/administration/configuring-vulnerability-sources/
 
 # Begrippen
-## SBoM 
+
+## SBoM
+
 SBoM staat voor Software Bill of Materials en is te vergelijken met aan pakbon uit de logistiek. Een SBoM is een overzicht van componenten, bibliotheken en andere softwareonderdelen die in een applicatie of systeem worden gebruikt.
 
 Een goede SBoM bevat bij voorkeur minimaal:
@@ -130,6 +143,7 @@ https://docs.dependencytrack.org/
 
 
 ## Dependency
+
 Softwareontwikkelprojecten gebruiken extern softwarepakketten (ook wel bibliotheken of libraries) om bepaalde generieke functionaliteit niet zelf te hoeven bouwen, denk bijvoorbeeld aan een log-functionaliteit.
 Omdat de software afhankelijk is van deze software worden het, in de context van een softwareontwikkelproject, dependencies genoemd. In Dependency-Track wordt de term component hiervoor gebruikt.
 
@@ -194,6 +208,7 @@ Bronnen:
 ---
 
 ## CVE
+
 Openbare softwarepakketten worden continue onderzocht op kwetsbaarheden in de beveiliging. Deze kwestbaarheden worden [CVE's](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures) genoemd. Dit staat voor Common Vulnerabilities and Exposures.
 Deze ontdekte kwetsbaarheden worden opgeslagen in databases die kunnen worden geraadpleegd. Zo kunnen softwareontwikkelprojecten weten of de dependencies die gebruikt worden, veilig zijn.
 

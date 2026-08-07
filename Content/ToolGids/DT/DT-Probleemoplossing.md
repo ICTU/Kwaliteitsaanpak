@@ -1,6 +1,6 @@
 # Bekende problemen en oplossingen
 
-## Probleem: de SBoM wordt eenmalig gescand
+## De SBoM wordt eenmalig gescand
 
 Na het uploaden van een [SBoM](#sbom) verschijnen er resultaten, maar een dag later lijken nieuwe kwetsbaarheden niet automatisch zichtbaar te worden.
 Het project lijkt daardoor alleen tijdens de eerste upload te zijn geanalyseerd.
@@ -19,21 +19,21 @@ Dependency-Track doet dit via achtergrondtaken. Daarbij zijn drie stappen belang
 ### Waarschijnlijke oorzaken
 
 Mogelijke oorzaken zijn:
-* De geplande 'portfolio vulnerability analysis' draait niet.
-* De 'task scheduler' is uitgeschakeld of verkeerd geconfigureerd.
+* De geplande 'portfolio vulnerability analysis' draait niet
+* De 'task scheduler' is uitgeschakeld of verkeerd geconfigureerd
 * De kwetsbaarheidsbronnen zijn niet ingeschakeld of nog niet gesynchroniseerd (mirror)
-* de cronconfiguratie voor de portfolio vulnerability analysis is aangepast of foutief ingesteld;
-* De gebruiker verwart de metrics-refresh of grafiekupdate met een vulnerability analysis.
+* De cronconfiguratie voor de portfolio vulnerability analysis is aangepast of foutief ingesteld
+* De gebruiker verwart de metrics-refresh of grafiekupdate met een vulnerability analysis
 
 ### Oplossing
 
-⚠️ **Let op:** 
-De gesuggereerde oplossingen hieronder kunnen niet worden aangepast in de webinterface. Ze horen bij de deploymentconfiguratie van de Dependency-Track API-server.
+⚠️ **Let op**: De gesuggereerde oplossingen hieronder kunnen niet worden aangepast in de webinterface.
+Ze horen bij de deploymentconfiguratie van de Dependency-Track API-server.
 In de praktijk moeten deze instellingen worden gecontroleerd of aangepast door een systeembeheerder, platformbeheerder of DevOps-beheerder met toegang tot de runtimeconfiguratie van de API-server.
 
-#### Controleer of de geplande analyse actief is.
+#### Controleer of de geplande analyse actief is
 
-Zoals uitgelegd in de [officiële documentatie van Dependency-Track](https://dependencytrack.github.io/docs/next/reference/configuration/application/) kunnen configuraties op verschillende manieren worden toegepast.
+Zoals uitgelegd in de [documentatie van Dependency-Track](https://dependencytrack.github.io/docs/next/reference/configuration/application/) kunnen configuraties op verschillende manieren worden toegepast.
 Ze kunnen onder meer via de JVM-opstartparameters en via de 'environment variables' worden aangepast.
 
 Dependency-Track v5 gebruikt een task scheduler voor terugkerende achtergrondtaken.
@@ -56,7 +56,7 @@ DT_TASK_PORTFOLIO_ANALYSIS_CRON=0 6 * * *
 ```
 
 De standaardwaarde `0 6 * * *` betekent dat de portfolio vulnerability analysis dagelijks om 06:00 UTC draait.
-Let op: Dependency-Track gebruikt voor deze cron-expressies UTC, niet de lokale tijdzone.
+⚠️ **Let op**: Dependency-Track gebruikt voor deze cron-expressies UTC, niet de lokale tijdzone.
 
 Deze configuratie kan op verschillende manieren worden toegepast, afhankelijk van de deployment:
 
@@ -127,8 +127,8 @@ pkg:pypi/requests@2.32.3
 
 Als de SBoM geen PURL of CPE bevat, kan Dependency-Track de component mogelijk wel tonen, maar kwetsbaarheden minder goed of helemaal niet relateren aan een kwetsbaarhedendatabase.
 
-⚠️ **Let op:** 
-Let ook op het verschil tussen analyse en metriek. Een grafiek of dashboardwaarde die wordt bijgewerkt, betekent niet automatisch dat de vulnerabilities opnieuw zijn geanalyseerd.
+⚠️ **Let op**: Let ook op het verschil tussen analyse en metriek.
+Een grafiek of dashboardwaarde die wordt bijgewerkt, betekent niet automatisch dat de vulnerabilities opnieuw zijn geanalyseerd.
 Controleer (of laat een systeembeheerder controleren) daarom bij twijfel de Dependency-Track API-serverlogs en de timestamps van de analyse.
 
 Dependency-Track gebruikt meerdere achtergrondtaken die los van elkaar kunnen worden uitgevoerd.
@@ -157,7 +157,7 @@ Controleer (of laat een systeembeheerder dit doen) bij twijfel daarom niet allee
 * Dependency-Track v5, Analyzers:
   https://dependencytrack.github.io/docs/next/reference/analyzers/
 
-## Probleem: geen duidelijk inzicht in gebruikte licenties
+## Geen duidelijk inzicht in gebruikte licenties
 
 Het projectteam wil inzichtelijk maken welke licenties worden gebruikt in dependencies, maar het overzicht is onvolledig, onduidelijk of niet geschikt voor besluitvorming.
 
@@ -202,7 +202,7 @@ De licenses-pagina geeft een overzicht van alle licenties die bekend zijn bij de
 ### Oplossing: Verkrijgen van het gewenste inzicht
 
 Om inzicht te krijgen in de gebruikte ongewenste licenties van een project moet er eerst een licentiebeleid ('policy') worden geconfigureerd.
-Dit wordt [uitgelegd in de officiële documentatie](https://docs.dependencytrack.org/usage/policy-compliance/). Dit kan worden gedaan op de pagina 'Policy Management'.
+Dit wordt [uitgelegd in de Dependency-Track documentatie](https://docs.dependencytrack.org/usage/policy-compliance/). Dit kan worden gedaan op de pagina 'Policy Management'.
 
 De eenvoudige manier is om gebruik te maken van de bestaande classificaties (licence group) van Dependency-Track. 
 Bij een sterk juridisch belang of organisatorisch beleid wordt het aanbevolen om handmatig een license-group aan te maken en daarin op te nemen welke licenties niet acceptabel zijn.
@@ -233,9 +233,7 @@ Policy Management > Policies
 
 ![Screenshot van policy-management in Dependency-Track](Images/dt-policy.png "Screenshot van policy-management in Dependency-Track")
 
-Voorbeelden van bruikbare policies:
-
-### Policy: verboden licenties blokkeren (ingebouwde license group )
+### Policy: verboden licenties blokkeren (ingebouwde license group)
 
 ```text
 Name: Dependency gebruikt ongewenste licentie
@@ -247,6 +245,7 @@ Limit to
 Include children of projects: yes
 Limit to project versions marked as latest: yes
 ```
+
 ### Belangrijke nuance: welke dependency moet vervangen worden?
 
 Dependency-Track toont de **component die de policy overtreedt**.
@@ -267,11 +266,11 @@ Dependency-Track v5 heeft de mogelijkheid om dependency-relaties te evalueren vi
 De documentatie noemt functies zoals `is_dependency_of`, `is_direct_dependency_of` en `is_exclusive_dependency_of`.
 Daarmee kun je bepalen of een component direct, transitief of exclusief via een andere component wordt binnengehaald.
 
-ℹ️ Licenties van transitieve dependencies
+ℹ️ Licenties van transitieve dependencies  
 Dependency-Track kan alleen informatie verschaffen over WELKE softwarepakketten (dependencies) ongewenste licenties bevatten.
 Daarna moet het ontwikkelteam in de dependency tree van de gebruikte package manager bepalen welke directe dependency de transitieve component binnenhaalt.
 
-## Probleem: licenties worden niet weergegeven
+## Licenties worden niet weergegeven
 
 ### Waarschijnlijke oorzaken
 
@@ -377,8 +376,7 @@ cyclonedx validate \
   --fail-on-errors
 ```
 
-Gebruik conversie alleen als tijdelijke oplossing.
-Bijvoorbeeld wanneer een leverancier alleen SPDX JSON aanlevert.
+Gebruik conversie alleen als tijdelijke oplossing, bijvoorbeeld wanneer een leverancier alleen SPDX JSON aanlevert.
 
 Voorbeeld:
 
@@ -400,7 +398,7 @@ cyclonedx validate \
   --fail-on-errors
 ```
 
-Let op: conversie tussen SBoM-formaten is niet altijd verliesvrij. Controleer na conversie minimaal:
+⚠️ **Let op**: conversie tussen SBoM-formaten is niet altijd verliesvrij. Controleer na conversie minimaal:
 
 * componentnaam
 * versie

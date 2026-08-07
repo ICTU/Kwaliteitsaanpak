@@ -1,8 +1,5 @@
-#!/bin/env python
-
 """Main program to convert Markdown files to different possible output formats."""
 
-import datetime
 import glob
 import json
 import logging
@@ -12,26 +9,28 @@ import pprint
 import re
 import shutil
 import zipfile
-from typing import cast, List
+from typing import cast
 from xml.etree.ElementTree import ElementTree
 
-from cli import parse_cli_arguments
-from converter import Converter
 from builder import xlsx_builder as xlsx_builder_module
 from builder.docx_builder import DocxBuilder
 from builder.html_builder import HTMLBuilder
 from builder.json_builder import JSONBuilder
 from builder.pptx_builder import PptxBuilder
+from cli import parse_cli_arguments
+from converter import Converter
+from custom_types import JSON, OutputFormat, Settings, Variables
+from date import today_str
 from markdown_converter import MarkdownConverter
 from markdown_syntax import VARIABLE_USE_PATTERN
-from custom_types import JSON, OutputFormat, Settings, Variables
 
 
 def convert(settings_filename: str, version: str) -> None:
     """Create the specified output formats."""
     variables = read_variables(settings_filename, version)
     settings = read_settings(settings_filename, variables)
-    logging.info("Converting with settings:\n%s", pprint.pformat(settings))
+    logger = logging.getLogger("convert")
+    logger.info("Converting with settings:\n%s", pprint.pformat(settings))
     get_build_path(settings)
     if "docx" in settings["OutputFormats"]:
         xml = MarkdownConverter(variables).convert(settings, "docx")
@@ -71,7 +70,7 @@ def read_variables(settings_filename: str, version: str) -> Variables:
         variables.update(cast(Variables, read_json(variable_file)))
     variables["VERSIE"] = version if version == "wip" else f"v{version}"
     variables["VERSIE_ZONDER_V"] = version
-    variables["DATUM"] = datetime.date.today().strftime("%d-%m-%Y")
+    variables["DATUM"] = today_str()
     return variables
 
 
@@ -204,7 +203,7 @@ def get_path(settings: Settings, pathname: str) -> pathlib.Path:
     return path
 
 
-def main(settings_filenames: List[str], version: str) -> None:
+def main(settings_filenames: list[str], version: str) -> None:
     """Convert the input documents specified in the list of JSON settings files."""
     for settings_filename in settings_filenames:
         convert(settings_filename, version)

@@ -4,8 +4,8 @@ import json
 import pathlib
 from uuid import uuid4
 
-from custom_types import TreeBuilderAttributes
 import xmltags
+from custom_types import TreeBuilderAttributes
 
 from .builder import Builder
 

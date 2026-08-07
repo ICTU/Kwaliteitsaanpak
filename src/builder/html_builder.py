@@ -3,7 +3,7 @@
 import pathlib
 import re
 from html.entities import name2codepoint
-from typing import cast
+from typing import ClassVar, cast
 from xml.etree.ElementTree import Element, ElementTree, TreeBuilder, fromstring
 
 from pygments import highlight
@@ -12,6 +12,7 @@ from pygments_better_html import BetterHtmlFormatter
 
 import xmltags
 from custom_types import TreeBuilderAttributes
+
 from . import html_tags
 from .builder import Builder
 from .utils import slugify
@@ -20,13 +21,13 @@ from .utils import slugify
 class HTMLBuilder(Builder):
     """HTML builder."""
 
-    FORMAT = {
+    FORMAT: ClassVar = {
         xmltags.BOLD: html_tags.BOLD,
         xmltags.CODE: html_tags.CODE,
         xmltags.ITALIC: html_tags.ITALIC,
         xmltags.STRIKETHROUGH: html_tags.STRIKETROUGH,
     }
-    LIST = {
+    LIST: ClassVar = {
         xmltags.BULLET_LIST: html_tags.UNORDERED_LIST,
         xmltags.NUMBERED_LIST: html_tags.ORDERED_LIST,
         xmltags.LIST_ITEM: html_tags.LIST_ITEM,

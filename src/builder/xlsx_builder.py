@@ -1,6 +1,5 @@
 """XLSX-spreadsheet builder."""
 
-import datetime
 import pathlib
 import re
 import string
@@ -10,6 +9,8 @@ import xlsxwriter
 
 import xmltags
 from custom_types import TreeBuilderAttributes
+from date import today_str
+
 from .builder import Builder
 
 
@@ -147,7 +148,7 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
         elif self.measure_text:
             if tag == xmltags.LIST_ITEM:
                 prefix = (
-                    f"{str(attributes[xmltags.LIST_ITEM_NUMBER])}. " if xmltags.LIST_ITEM_NUMBER in attributes else "- "
+                    f"{attributes[xmltags.LIST_ITEM_NUMBER]!s}. " if xmltags.LIST_ITEM_NUMBER in attributes else "- "
                 )
                 self.measure_text.append(prefix)
             elif tag == xmltags.TABLE_CELL:
@@ -264,7 +265,7 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
         self.checklist.merge_range(
             "A1:D1",
             "Onderstaande checklist kan gebruikt worden voor het uitvoeren van een assessment tegen de ICTU "
-            f"Kwaliteitsaanpak Softwareontwikkeling versie {version}, {datetime.date.today().strftime('%d-%m-%Y')}.",
+            f"Kwaliteitsaanpak Softwareontwikkeling versie {version}, {today_str()}.",
             self.formats["header"],
         )
         self.checklist.set_row(0, 30)

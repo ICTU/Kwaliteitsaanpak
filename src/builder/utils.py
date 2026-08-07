@@ -1,7 +1,7 @@
 """Utility functions."""
 
-from typing import cast
 import re
+from typing import cast
 
 
 def slugify(text: str) -> str:

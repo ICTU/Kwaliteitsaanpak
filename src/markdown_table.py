@@ -1,7 +1,6 @@
 """Table class."""
 
 import re
-from typing import List
 
 import markdown_syntax
 
@@ -9,13 +8,13 @@ import markdown_syntax
 class Table:
     """Markdown table class."""
 
-    def __init__(self, header_cells: List[str]):
+    def __init__(self, header_cells: list[str]):
         self.header_cells = header_cells
-        self.column_alignment: List[str] = ["left" for _ in self.header_cells]  # alignment per column
+        self.column_alignment: list[str] = ["left" for _ in self.header_cells]  # alignment per column
         self.column_widths = [self.cell_width(cell) for cell in header_cells]
-        self.rows: List[List[str]] = []
+        self.rows: list[list[str]] = []
 
-    def process_table_cells(self, cells: List[str]) -> None:
+    def process_table_cells(self, cells: list[str]) -> None:
         """Process the table cells."""
         if "---" in cells[0] and len(self.rows) == 0:
             self.__process_table_alignment(cells)
@@ -25,7 +24,7 @@ class Table:
                 max(current_width, self.cell_width(cell)) for current_width, cell in zip(self.column_widths, cells)
             ]
 
-    def __process_table_alignment(self, cells: List[str]) -> None:
+    def __process_table_alignment(self, cells: list[str]) -> None:
         """Process the alignment row of the Markdown table."""
         alignment_marker = markdown_syntax.CELL_ALIGNMENT_MARKER
         self.column_alignment = []
@@ -39,7 +38,7 @@ class Table:
             self.column_alignment.append(alignment)
 
     @staticmethod
-    def get_table_cells(line: str) -> List[str]:
+    def get_table_cells(line: str) -> list[str]:
         """Return the table cells."""
         line = line.strip().strip(markdown_syntax.TABLE_MARKER)
         return [cell.strip() for cell in line.split(markdown_syntax.TABLE_MARKER)]

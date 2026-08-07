@@ -16,6 +16,7 @@ from pygments.styles import get_style_by_name
 
 import xmltags
 from custom_types import TreeBuilderAttributes
+
 from .builder import Builder
 from .hyperlink import add_bookmark, add_hyperlink
 from .table_of_contents import add_table_of_contents

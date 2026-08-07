@@ -2,7 +2,6 @@
 
 from typing import Any, Literal, NewType
 
-
 JSON = NewType("JSON", dict[str, Any])
 Settings = NewType("Settings", dict[str, Any])
 Variables = NewType("Variables", dict[str, Any])

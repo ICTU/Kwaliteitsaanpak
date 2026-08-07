@@ -4,8 +4,8 @@ import unittest
 import xml.etree.ElementTree
 from unittest.mock import Mock
 
-from converter import Converter
 from builder.builder import Builder
+from converter import Converter
 
 
 class ConverterTestCase(unittest.TestCase):

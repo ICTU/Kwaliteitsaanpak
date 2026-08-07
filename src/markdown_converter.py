@@ -91,9 +91,8 @@ class MarkdownConverter:
             with self.element(xmltags.TITLE):
                 self._process_formatted_text(settings["Title"])
             if document_type == "Template":
-                with self.element(xmltags.PARAGRAPH):
-                    with self.element(xmltags.INSTRUCTION):
-                        self._add_element(xmltags.BOLD, settings["Subtitle"])
+                with self.element(xmltags.PARAGRAPH), self.element(xmltags.INSTRUCTION):
+                    self._add_element(xmltags.BOLD, settings["Subtitle"])
                 self._add_element(xmltags.PARAGRAPH)
                 with self.element(xmltags.PARAGRAPH):
                     self._process_formatted_text("Rubriceringsniveau {Rubriceringsniveau}")

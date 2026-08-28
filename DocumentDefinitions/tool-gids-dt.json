@@ -1,5 +1,5 @@
 {
-  "BuildPath": "build/ToolGids/",
+  "BuildPath": "build/Toolgids/",
   "Title": "ICTU Toolgids - Dependency-Track",
   "Subtitle": "Handleidingen en tips bij het gebruik van Dependency-Track.",
   "DocumentType": "Kwaliteitsaanpak",
@@ -7,8 +7,8 @@
   "OutputFormats": {
     "html": {
       "IncludeTableOfContents": true,
-      "InputFile": "Content/ToolGids/DT/DT.md",
-      "OutputFile": "ICTU-ToolGids-DT.html",
+      "InputFile": "Content/Toolgids/DT/DT.md",
+      "OutputFile": "ICTU-Toolgids-DT.html",
       "OutputPaths": ["docs/$VERSIE$/Toolgids/DT"],
       "StyleSheets": ["../../ICTU-Kwaliteitsaanpak.css"],
       "CopyFiles": [
@@ -17,12 +17,12 @@
           "to": "docs/$VERSIE$/ICTU-Kwaliteitsaanpak.css"
         },
         {
-          "from": "Content/ToolGids/DT/Images/*.png",
-          "to": "docs/$VERSIE$/ToolGids/DT/Images"
+          "from": "Content/Toolgids/DT/Images/*.png",
+          "to": "docs/$VERSIE$/Toolgids/DT/Images"
         },
         {
           "from": "Content/Images/*.png",
-          "to": "docs/$VERSIE$/ToolGids/DT"
+          "to": "docs/$VERSIE$/Toolgids/DT"
         }
       ]
     }

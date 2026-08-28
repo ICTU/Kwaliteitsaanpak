@@ -1,5 +1,5 @@
 {
-  "BuildPath": "build/ToolGids/",
+  "BuildPath": "build/Toolgids/",
   "Title": "ICTU Toolgids - ZAP",
   "Subtitle": "Handleidingen en tips bij het gebruik van ZAP.",
   "DocumentType": "Kwaliteitsaanpak",
@@ -7,8 +7,8 @@
   "OutputFormats": {
     "html": {
       "IncludeTableOfContents": true,
-      "InputFile": "Content/ToolGids/ZAP/ZAP.md",
-      "OutputFile": "ICTU-ToolGids-ZAP.html",
+      "InputFile": "Content/Toolgids/ZAP/ZAP.md",
+      "OutputFile": "ICTU-Toolgids-ZAP.html",
       "OutputPaths": ["docs/$VERSIE$/Toolgids/ZAP"],
       "StyleSheets": ["../../ICTU-Kwaliteitsaanpak.css", "../ICTU-Toolgids.css"],
       "CopyFiles": [
@@ -18,15 +18,15 @@
         },
         {
           "from": "DocumentDefinitions/Shared/toolgids.css",
-          "to": "docs/$VERSIE$/ToolGids/ICTU-Toolgids.css"
+          "to": "docs/$VERSIE$/Toolgids/ICTU-Toolgids.css"
         },
         {
-          "from": "Content/ToolGids/ZAP/Images/*.png",
-          "to": "docs/$VERSIE$/ToolGids/ZAP/Images"
+          "from": "Content/Toolgids/ZAP/Images/*.png",
+          "to": "docs/$VERSIE$/Toolgids/ZAP/Images"
         },
         {
           "from": "Content/Images/*.png",
-          "to": "docs/$VERSIE$/ToolGids/ZAP"
+          "to": "docs/$VERSIE$/Toolgids/ZAP"
         }
       ]
     }

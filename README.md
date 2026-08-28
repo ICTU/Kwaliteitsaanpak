@@ -131,7 +131,7 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
    - Bij een **major release**: stuur een e-mail naar iedereen bij ISE.
 
 # Bijdragen aan de Toolgidsen
-Zie [Content/ToolGids/README.md](Content/ToolGids/README.md) voor meer informatie.
+Zie [Content/Toolgids/README.md](Content/Toolgids/README.md) voor meer informatie.
 
 ## Contact
 Voor vragen over de Kwaliteitsaanpak of deze repository, neem contact op met:

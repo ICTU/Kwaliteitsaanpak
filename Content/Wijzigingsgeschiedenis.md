@@ -1,3 +1,14 @@
+# Versie 5.3.0, 28 augustus 2026
+
+## Template Niet-Functionele Eisen
+
+* Axe-core bijgewerkt naar de laatste versie in de tabel met de WCAG 2.2 succescriteria.
+
+## Toolgidsen
+
+* Toolgids Dependency-Track toegevoegd.
+* Toolgids ZAP toegevoegd.
+
 # Versie 5.2.0, 14 april 2026
 
 ## Template Kwaliteitsplan
@@ -12,7 +23,7 @@
 
 ## Alle documenten
 
-* Externe verwijzingen en URLs bijgewerkt. 
+* Externe verwijzingen en URLs bijgewerkt.
 * Spelfout in "SSD" opgelost.
 
 # Versie 5.1.0, 6 januari 2026

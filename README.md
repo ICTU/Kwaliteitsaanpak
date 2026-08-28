@@ -69,56 +69,56 @@ Zie [DocumentDefinitions/README.md](DocumentDefinitions/README.md) voor meer inf
 ### Stappen
 Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
 1. Clone deze repository:
-   ```bash
+   ```console
    git clone https://github.com/ICTU/Kwaliteitsaanpak.git
    cd Kwaliteitsaanpak
    ```
 2. Genereer de documentatie:
-   ```bash
+   ```console
    uv run src/convert.py DocumentDefinitions/*.json
    ```
    De gegenereerde documenten staan in de map `docs/wip` (work-in-progress).
 
    Om meer voortgangsinformatie te krijgen, verander het loggingniveau:
-   ```bash
+   ```console
    uv run src/convert.py --log INFO DocumentDefinitions/*.json
    ```
 
    Om een specifiek document te genereren, geef alleen het desbetreffende JSON-bestand. Bijvoorbeeld:
-   ```bash
+   ```console
    uv run src/convert.py DocumentDefinitions/wijzigingsgeschiedenis.json
    ```
 
 ⚠️ Documenteer wijzigingen (alleen aan de inhoud van de Kwaliteitsaanpak) in `./Content/Wijzigingsgeschiedenis.md`.
 
 ### Een nieuwe versie van de Kwaliteitsaanpak uitbrengen
-1. Bepaal het nieuwe versienummer. Zie https://ictu.github.io/Kwaliteitsaanpak/v5.2.0/ICTU-Kwaliteitsaanpak.html#versionering
+1. Bepaal het nieuwe versienummer. Zie https://ictu.github.io/Kwaliteitsaanpak/v5.3.0/ICTU-Kwaliteitsaanpak.html#versionering
 
 2. Maak een release branch:
-   ```bash
+   ```console
    git checkout -b release-vx.y.z
    ```
 3. Werk het versienummer en de releasedatum bij in `./Content/Wijzigingsgeschiedenis.md`.
 
 4. Maak een nieuwe map voor de release in `./docs` en voeg deze toe aan versiebeheer:
-   ```bash
+   ```console
    mkdir docs/vx.y.z
    git add docs
    ```
 5. Werk het versienummer bij in `docs/index.html` en `pyproject.toml`.
 6. Genereer de documentatie met het nieuwe versienummer:
-   ```bash
+   ```console
    VERSION=x.y.z uv run src/convert.py DocumentDefinitions/*.json
    ```
    De gegenereerde documenten staan in de map `docs/vx.y.z`.
 7. Commit en push de wijzigingen:
-   ```bash
+   ```console
    git commit -a -m "Release vx.y.z"
    git push
    ```
 8. Review en merge de branch op GitHub.
 9. Tag de release en push de tag naar GitHub:
-   ```bash
+   ```console
    git checkout master
    git pull -p
    git tag vx.y.z

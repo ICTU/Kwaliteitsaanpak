@@ -105,26 +105,28 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
    mkdir docs/vx.y.z
    git add docs
    ```
-5. Werk het versienummer bij in `docs/index.html` en `pyproject.toml`.
-6. Genereer de documentatie met het nieuwe versienummer:
+5. Werk het versienummer en de releasedatum bij in `docs/index.html`.
+6. Werk het versienummer bij in `pyproject.toml`.
+7. Genereer de documentatie met het nieuwe versienummer:
    ```console
    VERSION=x.y.z uv run src/convert.py DocumentDefinitions/*.json
    ```
    De gegenereerde documenten staan in de map `docs/vx.y.z`.
-7. Commit en push de wijzigingen:
+8. Commit en push de wijzigingen:
    ```console
    git commit -a -m "Release vx.y.z"
    git push
    ```
-8. Review en merge de branch op GitHub.
-9. Tag de release en push de tag naar GitHub:
+9. Review en merge de branch op GitHub.
+10. Tag de release en push de tag naar GitHub:
    ```console
    git checkout master
    git pull -p
    git tag vx.y.z
    git push --tags
    ```
-10. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
+11. Controleer dat de docs folder is gepubliceerd door de [pages-build-deployment](https://github.com/ICTU/Kwaliteitsaanpak/actions/workflows/pages/pages-build-deployment) GitHub Action op [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
+12. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
    - Bij een **minor release**: stuur ook een e-mail naar de SDM'ers.
    - Bij een **major release**: stuur een e-mail naar iedereen bij ISE.
 

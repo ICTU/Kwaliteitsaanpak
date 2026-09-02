@@ -94,15 +94,15 @@ In aanvulling op de maatregelen met betrekking tot reviews, zie paragraaf [Docum
 
 # Kwaliteitsmaatregelen realisatiefase
 
-De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende de realisatiefase. 
+De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende de realisatiefase.
 
 ## Projectspecifieke kwaliteitsmaatregelen
 
 {Verwijder deze paragraaf indien er geen projectspecifieke kwaliteitsmaatregelen nodig zijn.}
 
-ICTU hanteert tijdens de realisatiefase van projecten een aantal standaard kwaliteitsmaatregelen. Deze standaard kwaliteitsmaatregelen borgen de functionele en niet-functionele eisen die opdrachtgevers vaak stellen. Denk aan eisen op het gebied van koppelingen, onderhoudbaarheid, beveiliging en performance. Deze standaard kwaliteitsmaatregelen staan beschreven paragraaf 2 en verder van dit hoofdstuk. 
+ICTU hanteert tijdens de realisatiefase van projecten een aantal standaard kwaliteitsmaatregelen. Deze standaard kwaliteitsmaatregelen borgen de functionele en niet-functionele eisen die opdrachtgevers vaak stellen. Denk aan eisen op het gebied van koppelingen, onderhoudbaarheid, beveiliging en performance. Deze standaard kwaliteitsmaatregelen staan beschreven paragraaf 2 en verder van dit hoofdstuk.
 
-In dit project stelt de opdrachtgever daarnaast een aantal eisen waarvoor de standaard kwaliteitsmaatregelen niet afdoende zijn en extra, projectspecifieke, kwaliteitsmaatregelen nodig zijn. In onderstaande tabel staan deze eisen genoemd, met per eis de extra maatregelen die het project treft om de eis te borgen. 
+In dit project stelt de opdrachtgever daarnaast een aantal eisen waarvoor de standaard kwaliteitsmaatregelen niet afdoende zijn en extra, projectspecifieke, kwaliteitsmaatregelen nodig zijn. In onderstaande tabel staan deze eisen genoemd, met per eis de extra maatregelen die het project treft om de eis te borgen.
 
 De kolom "Eis" bevat het nummer van de eis en komt overeen met het nummer van de eis in het niet-functionele eisen document. De kolom "Omschrijving" bevat de beschrijving van de eis. De kolom "Extra maatregelen" bevat per eis de projectspecifieke maatregelen. De kolom "Geplande controle" beschrijft wie/wanneer zal controleren of de maatregelen zijn uitgevoerd. De kolom "Resultaat controle" beschrijft (nadat de controle is uitgevoerd) wie/wanneer de controle heeft uitgevoerd en wat het resultaat ervan was.
 
@@ -276,6 +276,16 @@ Om de onderhoudbaarheid van de software te bevorderen, dienen methoden niet te v
 ## Versiebeheer broncode
 
 Broncode, zowel van productiesoftware als van geautomatiseerde tests, wordt in een versiebeheersysteem geplaatst. Alleen projectmedewerkers hebben toegang tot de broncode. Quality-time bewaakt of branches worden gemerged met de default branch (meestal *main* of *develop* genoemd).
+
+## Beheer van dependencies
+
+Het beheren en bijwerken van dependencies is een belangrijk onderdeel van softwareontwikkeling en -onderhoud. Enerzijds bieden nieuwe versies van dependencies nieuwe en/of verbeterde functionaliteit en repareren fouten en beveiligingskwetsbaarheden. Anderzijds brengen nieuwe versies het risico op nieuwe fouten, beveiligingskwetsbaarheden en supply-chain attacks met zich mee. Voor het beheren en bijwerken van dependencies past het project onderstaande werkwijze toe. Deze zijn gebaseerd op de ICTU-spelregels voor het beheren van dependencies, zie bijlage E.
+
+1. {Activiteit 1, bijvoorbeeld: Het project hanteert een cooldown van 14 dagen bij het updaten van dependencies. Dit is langer dan de default in de spelregels omdat de software nog niet in productie is en het risico op supply-chain attacks dus groter is dan het risico op kwetsbaarheden in productie.}
+2. {Activiteit 2, bijvoorbeeld: Elke zondagnacht draait er een CI-pipeline die de dependencies update en een pull request opent.}
+3. {Activiteit 3, etc.}
+
+Deze werkwijze geldt voor alle dependencies in de software en de CI-pipeline: {directe en indirecte dependencies, inclusief images gebruikt in Dockerfiles, Helm charts, pre-commit hooks en CI-pipeline definities}.
 
 ## Testen
 

@@ -1,3 +1,10 @@
+# Versie 5.4.0, nog te releasen
+
+## Template Kwaliteitsplan
+
+* Paragraaf toegevoegd om te beschrijven hoe het project het beheer van dependencies uitvoert.
+* Bijlage toegevoegd met de ICTU-spelregels voor het beheer van dependencies.
+
 # Versie 5.3.0, 28 augustus 2026
 
 ## Template Niet-Functionele Eisen

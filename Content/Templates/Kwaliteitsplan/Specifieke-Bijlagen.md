@@ -38,7 +38,7 @@ Het logische testgeval zelf wordt beschreven volgens het Given/When/Then formaat
 
 * De _Given_ van een logisch testgeval beschrijft welke niet-triviale informatie aanwezig wordt verondersteld of in welke context een gebruiker zich bevindt. Bijvoorbeeld: "Gegeven een afgesloten inspectierapport" of "Gegeven een medewerker die zich net heeft geregistreerd". Context die vanzelfsprekend is, bijvoorbeeld dat een gebruiker is ingelogd, hoeft niet expliciet te worden opgeschreven.
 * De _When_ van een logisch testgeval beschrijft welke actie de gebruiker doet. Bijvoorbeeld: "Als de inspecteur het afgesloten inspectierapport heropent" of "Als de medewerker zijn registratie bekijkt". Passief taalgebruik ("een rapport wordt geopend") is niet toegestaan, omdat dan niet duidelijk is wie de actie doet. Let ook op dat het testgeval logisch is, dat wil zeggen, geen user interface elementen beschrijft. Dus niet "Als de gemeentemedewerker op het dropdown menu klikt", maar "Als de gemeentemedewerker een type kinderopvang kiest".
-* De _Then_ van een logisch testgeval beschrijft hoe het systeem reageert op de actie van de gebruiker, met een focus op datgene wat het testgeval beoogt te testen. Bijvoorbeeld: "Dan toont het systeem het inspectierapport met als startdatum de datum van vandaag" of "Dan toont het systeem de registratie van de gebruiker en dat aantal inlogpogingen 0 is".
+* De _Then_ van een logisch testgeval beschrijft hoe het systeem reageert op de actie van de gebruiker, met een focus op datgene wat het testgeval beoogt te testen. Bijvoorbeeld: "Dan toont het systeem het inspectierapport met als startdatum de datum van vandaag" of "Dan toont het systeem de registratie van de gebruiker en dat het aantal inlogpogingen 0 is".
 Logische testgevallen worden als geautomatiseerd (Automated), handmatig (Manual) of eenmalig te testen (Will not execute) gemarkeerd. Geautomatiseerd betekent dat fysieke testgevallen worden opgenomen in de automatische regressietest (ART) van het project. Handmatig betekent dat het logische testgeval elke sprint handmatig zal worden getest door de testers. Eenmalig betekent dat de tester eenmalig handmatig het logische testgeval zal uitvoeren. In principe dienen alle logische testgevallen te worden geautomatiseerd, tenzij er goede redenen zijn om dat niet te doen, bijvoorbeeld omdat het technisch niet mogelijk is het testgeval te automatiseren. Eenmalige testen doen we bij triviale wijzigingen zoals het aanpassen van een label of de layout van een scherm.
 
 ### Realisatie-activiteiten
@@ -105,3 +105,40 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 | Actualiteit kwaliteitsplan                   |                          | De kwaliteitsrapportage bevat een metriek voor de actualiteit van het kwaliteitsplan                                                 |
 | Nieuwe teamleden                             |                          | Nieuwe teamleden zijn op de hoogte van de Kwaliteitsaanpak, het kwaliteitssysteem (Quality-time) en het kwaliteitsplan               |
 | Vertrokken teamleden                         |                          | Alle rechten in tools (GitLab, GitHub, Trello, SharePoint, VPN, Jira, Signal, Slack, etc.) van vertrokken teamleden zijn ingetrokken |
+
+## ICTU-aanbevelingen voor het beheer van dependencies
+
+Het beheren en bijwerken van dependencies is een belangrijk onderdeel van softwareontwikkeling en -onderhoud. Enerzijds bieden nieuwe versies van dependencies nieuwe en/of verbeterde functionaliteit en repareren ze fouten en beveiligingskwetsbaarheden. Anderzijds brengen nieuwe versies het risico op nieuwe fouten, beveiligingskwetsbaarheden en supply chain attacks met zich mee. Voor het beheren en bijwerken van dependencies gelden dan ook onderstaande aanbevelingen, waarbij afwijken kan, maar met een goede reden.
+
+De aanbevelingen gelden voor alle dependencies in de software en de CI-pipeline: directe en indirecte dependencies, inclusief images gebruikt in Dockerfiles, Helm charts, pre-commit hooks en CI-pipeline definities.
+
+### Dependencies toevoegen
+
+Het beheren en bijwerken van een dependency is alleen nodig als die dependency er überhaupt is. De eerste aanbeveling gaat dan ook over het toevoegen van dependencies.
+
+1. Controleer voor het toevoegen van een nieuwe dependency of deze wordt onderhouden. Kijk naar licentie, supportopties, community chatter, aantal actieve maintainers, recente releases en releasebeleid (zijn er LTS-releases, hebben major releases een geplande EOL), commitactiviteit, open security issues, open pull requests en eventuele projectarchivering. Als een dependency niet onderhouden lijkt, kies dan een andere dependency, bouw de functionaliteit zelf of kopieer de broncode van de dependency naar een eigen repository ("fork") of in de repository van de eigen software ("vendoring") en onderhoud deze zelf.
+
+### Dependencies specificeren
+
+Doel van de aanbevelingen voor het specificeren van dependencies is om te voorkomen dat er onbedoeld en ongemerkt andere versies van dependencies worden geïnstalleerd dan gedacht. Dit vermindert de kwetsbaarheid voor supply chain attacks en is ook beter voor de herhaalbaarheid van builds.
+
+2. Gebruik geen unpinned tags: dus geen `latest` of andere tags die niet naar één versie wijzen, zoals `trixie` of `windows`. Gebruik in plaats daarvan versietags, bijvoorbeeld `13.6.0`, of snapshottags, bijvoorbeeld `trixie-20260713`.
+3. Pin dependencies met de grootste precisie die mogelijk is: dus `3.14.5` in plaats van `3.14` of `3`. Gebruik dus ook geen versierange, zoals `requests>=2.34`, tenzij de software een library is.
+4. Pin dependencies met hashes (digests, commit SHA, integrity hashes) waar mogelijk. Package managers doen dit veelal zelf met een lockfile. Plaats in dat geval de lockfile onder versiebeheer en gebruik deze om dependencies te installeren zonder ook te updaten (bijvoorbeeld `npm ci` of `uv sync --locked` in build pipelines). Gebruik voor dependencies zonder package manager een tool als Renovate, Dependabot of Update-time. Het registeren van zowel een versie als een hash (`actions/checkout@3d3c42...ba90b1 # v7.0.1`) lijkt wellicht dubbele administratie, maar aan de hash pin is niet eenvoudig te zien welke versie gebruikt wordt en tools kunnen veelal beiden tegelijk bijwerken.
+5. Haal dependencies binnen via de interne registry of proxy van het project, bijvoorbeeld Nexus Repository of Harbor, en niet rechtstreeks van publieke registries. Controleer de herkomst van een dependency waar dat mogelijk is, bijvoorbeeld via ondertekende releases, provenance-attestaties of ondertekende images.
+
+### Dependencies bijwerken
+
+Doel van de aanbevelingen voor het bijwerken van dependencies is om de risico's die nieuwe versies met zich meebrengen te beperken.
+
+6. Gebruik een cooldown van minstens 7 dagen voor het toepassen van een nieuwe versie. Weeg bij het kiezen van een langere cooldownperiode bewust het lagere risico op supply chain attacks af tegen het hogere beveiligingsrisico door het later ontvangen van security fixes. Sla bij een kritische security fix de cooldown eventueel (incidenteel) over. Configureer de voor updates gebruikte tools om de cooldown te hanteren, bijvoorbeeld `min-release-age` in `.npmrc` of uv's `exclude-newer` in `pyproject.toml`.
+7. Beoordeel voor het updaten naar een major release van een dependency het risico van de nieuwe release. Kijk of de nieuwe release veranderingen bevat die het risico op regressies vergroten, zoals veel nieuwe functionaliteit, backwards-incompatible changes of een grote refactoring. Wacht in dat geval op de eerste of tweede patchrelease voor het bijwerken van de versie.
+8. Gebruik tooling om dependencies periodiek (bijvoorbeeld eenmaal per sprint) te updaten, bijvoorbeeld met de package manager, Renovate, Dependabot of Update-time.
+9. Behandel een update van een dependency als elke andere wijziging: open een merge request, lees de release notes of changelog van de nieuwe versie op breaking changes, gedragsveranderingen en verdachte wijzigingen, en controleer of de volledige pipeline slaagt. Review de wijzigingen in transitieve dependencies (zichtbaar in lockfiles en/of SBoM) risicogestuurd: nieuwe runtime- en builddependencies, nieuwe herkomsten, dependency-downgrades, licentiewijzigingen en nieuwe bekende kwetsbaarheden vereisen expliciete aandacht. Merge updates niet automatisch. Stel bij een major update expliciet vast welke aanpassingen aan de eigen software nodig zijn.
+
+### Dependencies monitoren
+
+Tenslotte aanbevelingen om dependencies te monitoren op nieuwe risico's die ontstaan of bekend worden na de update.
+
+10. Draai dagelijks de auditfunctie van de package manager, bijvoorbeeld `npm audit` of `pip-audit`, of analyseer dagelijks de SBoM, bijvoorbeeld in Dependency-Track, om dependencies te checken op bekende kwetsbaarheden. Doe dit niet alleen voor de actuele dependencies, maar ook voor de dependencies van releases van de eigen software, bijvoorbeeld door de SBoM van releases te analyseren in Dependency-Track. Nieuwe kwetsbaarheden worden immers dagelijks ontdekt, ook als de eigen software niet verandert. Analyseer de ernst van de uitkomsten en neem mitigerende maatregelen (bijvoorbeeld dependencies eerder upgraden, downgraden, of vervangen, patch release van de eigen software uitbrengen, beheerpartij informeren) of accepteer expliciet het risico.
+11. Analyseer periodiek, bijvoorbeeld eenmaal per kwartaal, of een dependency nog onderhouden wordt. Controleer dezelfde punten als bij aanbeveling 1. Als een dependency niet meer onderhouden lijkt, neem dan een mitigerende maatregel (bijvoorbeeld migreren, vendoren of zelf bouwen) of accepteer expliciet het risico.

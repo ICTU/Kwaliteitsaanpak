@@ -1,3 +1,9 @@
+# Versie 5.4.1, nog te releasen
+
+## Template Kwaliteitsplan
+
+* Verwijzing tussen aanbevelingen in de bijlage "ICTU-aanbevelingen voor het beheer van dependencies" verbeterd.
+
 # Versie 5.4.0, 17 september 2026
 
 ## Template Kwaliteitsplan

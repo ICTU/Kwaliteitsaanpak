@@ -1,4 +1,4 @@
-# Versie 5.4.0, nog te releasen
+# Versie 5.4.0, 17 september 2026
 
 ## Template Kwaliteitsplan
 

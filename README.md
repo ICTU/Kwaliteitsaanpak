@@ -108,27 +108,30 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
 5. Werk het versienummer en de releasedatum bij in `docs/index.html`.
 6. Werk het versienummer bij in `pyproject.toml`.
 7. Werk het versienummer bij in de variable `LATEST` in `DocumentDefinitions/Shared/variables.json`.
-7. Genereer de documentatie met het nieuwe versienummer:
+8. Genereer de documentatie met het nieuwe versienummer:
    ```console
    VERSION=x.y.z uv run src/convert.py DocumentDefinitions/*.json
    ```
    De gegenereerde documenten staan in de map `docs/vx.y.z`.
-8. Commit en push de wijzigingen:
+9. Open `docs/index.html` en controleer de versie, releasedatum en documenten (steeksproefsgewijs).
+10. Commit en push de wijzigingen:
    ```console
-   git commit -a -m "Release vx.y.z"
+   git add .
+   git commit -m "Release vx.y.z"
    git push
    ```
-9. Review en merge de branch op GitHub.
-10. Tag de release en push de tag naar GitHub:
+11. Review en merge de branch op GitHub.
+12. Tag de release, push de tag naar GitHub en verwijder de release branch lokaal:
    ```console
    git checkout master
    git pull -p
    git tag vx.y.z
    git push --tags
+   git branch -D release-vx.y.z
    ```
-11. Controleer dat de docs folder is gepubliceerd door de [pages-build-deployment](https://github.com/ICTU/Kwaliteitsaanpak/actions/workflows/pages/pages-build-deployment) GitHub Action op [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
-12. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
-   - Bij een **minor release**: stuur ook een e-mail naar de SDM'ers.
+13. Controleer dat de docs folder is gepubliceerd door de [pages-build-deployment](https://github.com/ICTU/Kwaliteitsaanpak/actions/workflows/pages/pages-build-deployment) GitHub Action op [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
+14. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
+   - Bij een **minor release**: stuur ook een e-mail naar SDM'ers en Kwaliteitsmanagers en CC: hoofd ISE.
    - Bij een **major release**: stuur een e-mail naar iedereen bij ISE.
 
 # Bijdragen aan de Toolgidsen

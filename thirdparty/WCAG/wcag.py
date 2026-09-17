@@ -1,5 +1,6 @@
 """Script to convert the WCAG success critera to a Markdown table, and include which Axe-core rules check which WCAG
-criteria."""
+criteria.
+"""
 
 import json
 import pathlib
@@ -63,4 +64,4 @@ for principle in wcag["principles"]:
 
 # Write the Markdown table to the Kwaliteitsaanpak Content folder
 with pathlib.Path("../../Content/Templates/NFE/WCAG-Tabel-Gegenereerd.md").open("w") as wcag_table:
-    wcag_table.write("\n".join(lines))
+    wcag_table.write("\n".join(lines) + "\n")

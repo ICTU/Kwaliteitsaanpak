@@ -4,6 +4,10 @@
 
 * Verwijzing tussen aanbevelingen in de bijlage "ICTU-aanbevelingen voor het beheer van dependencies" verbeterd.
 
+## Template Niet-Functionele Eisen
+
+* Het kopje "BIO- en SSD-maatregelen" in de bijlagen stond op niet op de goede plek.
+
 # Versie 5.4.0, 17 september 2026
 
 ## Template Kwaliteitsplan

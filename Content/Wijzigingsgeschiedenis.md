@@ -1,5 +1,9 @@
 # Versie 5.4.1, nog te releasen
 
+## Kwaliteitsaanpak
+
+* Taken en verantwoordelijkheden van de afdeling ISE geactualiseerd.
+
 ## Template Kwaliteitsplan
 
 * Verwijzing tussen aanbevelingen in de bijlage "ICTU-aanbevelingen voor het beheer van dependencies" verbeterd.

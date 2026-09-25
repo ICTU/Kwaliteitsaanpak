@@ -9,6 +9,10 @@
 
 * Het kopje "BIO- en SSD-maatregelen" in de bijlagen stond op niet op de goede plek.
 
+## Template Inwerkplan Kwaliteitsmanager
+
+* Verouderde informatie zoals events, mailinglijst, en URLs bijgewerkt.
+
 ## Self-assessment checklist
 
 * De toelichting bij maatregelen met submaatregelen (M01 en M02) is verdeeld over de submaatregelen, zodat de popups kleiner worden.

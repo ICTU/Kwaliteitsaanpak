@@ -39,7 +39,7 @@ Leerdoelen (week 3):
 ### Over de afdeling
 
 Acties (week 1)
-* Je bent lid van de mailgroep ISR-leden (ja, die naam moet nog worden aangepast)
+* Je bent lid van de mailgroep ISE-leden
 * Je bent lid van de mailgroep kwaliteitsmanagers
 
 Leerdoelen (week 2):
@@ -48,27 +48,25 @@ Leerdoelen (week 2):
 
 Acties (zodra mogelijk):
 * Je hebt deelgenomen aan de ISE-onboarding
-* Je hebt deelgenomen aan een ISE-zeepkist
-* Je hebt deelgenomen aan een ISE-guild
 * Je neemt deel aan het periodieke kwaliteitsmanagersoverleg
 
 ### Over de $KWALITEITSAANPAK$
 
-Leerdoelen kwaliteitsaanpak (week 2):
-* Je weet waar je de [publieke versie van de kwaliteitsaanpak](https://www.ictu.nl/kwaliteitsaanpak) kunt vinden en waar je de [interne versie van de kwaliteitsaanpak inclusief templates](https://ictubeheer.sharepoint.com/:f:/r/teams/Organisatie_SoftwareExpertise/Open/ICTU%20Kwaliteitsaanpak%20Softwareontwikkeling?csf=1&web=1&e=v7lK2Z) kunt vinden.
-* Je weet welke maatregelen de kwaliteitsaanpak bevat en waarom
-* Je weet wat de relatie is tussen de kwaliteitsaanpak en de missie van ICTU
-* Je weet welke ICTU-collega's de kwaliteitsaanpak onderhouden en gebruikers ondersteunen
+Leerdoelen Kwaliteitsaanpak (week 2):
+* Je weet waar je de [Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak/) kunt vinden
+* Je weet welke maatregelen de Kwaliteitsaanpak bevat en waarom
+* Je weet wat de relatie is tussen de Kwaliteitsaanpak en de missie van ICTU
+* Je weet welke ICTU-collega's de Kwaliteitsaanpak onderhouden en gebruikers ondersteunen
 * Je weet hoe je een [fout of een wijzigingsverzoek](https://github.com/ICTU/Kwaliteitsaanpak/issues) kunt opvoeren
 
 Leerdoelen self-assessment (week 3):
-* Je weet waar je de self-assessment template kunt vinden (hint: zie locatie interne versie van de kwaliteitsaanpak hierboven)
+* Je weet waar je de self-assessment template kunt vinden (hint: zie locatie van de Kwaliteitsaanpak hierboven)
 * Je weet hoe je de self-assessment kunt invullen
 * Je weet wat het doel van de self-assessment is en hoe ICTU dit instrument toepast
 * Je kent de [uitkomsten van recente gezamenlijke self-assessments](https://ictubeheer.sharepoint.com/:f:/r/teams/Organisatie_SoftwareExpertise/Open/Gezamenlijke%20self-assessments?csf=1&web=1&e=QBecdn)
 
 Leerdoelen templates (week 4):
-* Je weet de templates te vinden (hint: zie locatie interne versie van de kwaliteitsaanpak hierboven)
+* Je weet de templates te vinden (hint: zie locatie van de Kwaliteitsaanpak hierboven)
 * Je weet welke templates er zijn en waar ze voor gebruikt worden
 * Je weet hoe je de templates kunt gebruiken
 
@@ -180,8 +178,8 @@ Acties (week 3):
 * Je hebt toegang tot de Dependency-Track instantie van je project
 * Je hebt toegang tot de SonarQube instantie van je project
 * Je hebt toegang tot de Quality-time instantie van je project
-* Je hebt toegang tot de performancerapportage van je project 
-* Je hebt toegang tot de actie- en besluitenlijst van je project 
+* Je hebt toegang tot de performancerapportage van je project
+* Je hebt toegang tot de actie- en besluitenlijst van je project
 * Je hebt toegang tot het risicolog van je project
 * Je beschikt over een urencode voor je project in AFAS
 

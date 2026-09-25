@@ -15,6 +15,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **BIA** | $BIA$ |
 | **BIO** | Baseline Informatiebeveiliging Overheid |
 | **broncode** | **software** in een vorm die leesbaar is voor mensen en de intentie van een programmeur uitdrukt |
+| **dependency** | Een externe softwarecomponent, package, bibliotheek of framework die niet als onderdeel van de oorspronkelijke software is ontwikkeld, maar waarvan de software wel afhankelijk is voor het bouwen, uitvoeren of correct functioneren ervan. |
 | **deployment** | installatie van **software** op een systeem waardoor de software beschikbaar wordt gemaakt voor gebruik door **actor**en |
 | **developers** | Developers zijn de mensen in het **Scrumteam** die iedere sprint gecommitteerd zijn aan het maken van elk aspect van een bruikbaar increment [Scrumgids] |
 | **DevOps** | een praktijk die tot doel heeft **softwareontwikkeling** en **operationeel beheer** samen te brengen |
@@ -63,6 +64,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **release notes** | een overzicht van de wijzigingen in een **release** |
 | **release** | een voor gebruik vrijgegeven versie van de **software** |
 | **SAD** | $SAD$ |
+| **SBoM** | SBoM staat voor Software Bill of Materials en is te vergelijken met aan pakbon uit de logistiek. Een SBoM is een overzicht van componenten, bibliotheken en andere softwareonderdelen die in een applicatie of systeem worden gebruikt. |
 | **Scrum** | Scrum is een lichtgewicht raamwerk dat mensen, teams en organisaties helpt om waarde te creёren door middel van adaptieve oplossingen voor complexe problemen [Scrumgids] |
 | **Scrummaster** | De Scrummaster is verantwoordelijk voor het opzetten van **Scrum**, zoals staat beschreven in de Scrumgids [Scrumgids] |
 | **Scrumteam** | Een Scrumteam bestaat uit één **Scrummaster**, één **product owner** en **ontwikkelaars** (*developers* in de Scrumgids) [Scrumgids] |

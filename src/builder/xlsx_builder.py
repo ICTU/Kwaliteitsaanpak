@@ -1,5 +1,6 @@
 """XLSX-spreadsheet builder."""
 
+import math
 import pathlib
 import re
 import string
@@ -102,6 +103,9 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
     MEASURE_ID_COLUMN, MEASURE_COLUMN, STATUS_COLUMN, EXPLANATION_COLUMN = range(4)
     HEADER_ROW = 4
     MEASURE_START_ROW = HEADER_ROW + 1
+    # Comment box dimensions in pixels, used to size the comment boxes to their contents:
+    COMMENT_CHAR_WIDTH, COMMENT_LINE_HEIGHT, COMMENT_PADDING = 7.2, 10, 20
+    COMMENT_MAX_WIDTH = 896
 
     def __init__(self, filename: pathlib.Path) -> None:
         super().__init__(filename)
@@ -110,6 +114,8 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
         self.last_level_1_section_heading = ""
         self.measure_id: str | None = None
         self.measure_text: list[str] = []
+        self.submeasure_texts: dict[int, list[str]] = {}  # Explanation texts per submeasure number
+        self.submeasure_rows: dict[int, int] = {}  # Rows per submeasure number
 
     def create_formats(self, workbook: xlsxwriter.Workbook) -> dict[str, xlsxwriter.format.Format]:
         """Create the formats."""
@@ -150,9 +156,9 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
                 prefix = (
                     f"{attributes[xmltags.LIST_ITEM_NUMBER]!s}. " if xmltags.LIST_ITEM_NUMBER in attributes else "- "
                 )
-                self.measure_text.append(prefix)
+                self.__append_measure_text(prefix)
             elif tag == xmltags.TABLE_CELL:
-                self.measure_text.append("")  # Add empty string in case the cell is empty and text() is never called
+                self.__append_measure_text("")  # Add empty string in case the cell is empty and text() is never called
 
     def __write_measure_table_sub_header(self) -> None:
         """Write a subheader in the measures table. Don't merge the header cells, it causes accessibility issues."""
@@ -175,6 +181,7 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
             self.measure_text.append(text)
         elif tag == xmltags.SUBMEASURE_TITLE:
             self.row += 1
+            self.submeasure_rows[int(attributes[xmltags.SUBMEASURE_TITLE_NUMBER])] = self.row
             self.__write_measure("", f"{attributes[xmltags.SUBMEASURE_TITLE_NUMBER]}. {text.strip()}", submeasure=True)
             if table_cell := self.get_element_attributes(xmltags.TABLE_CELL):
                 width = int(table_cell[xmltags.TABLE_CELL_WIDTH])
@@ -186,7 +193,7 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
                 text = text.replace("✔", "x")
                 text = text.replace("⚙", "o")
                 text += " " * (int(attributes[xmltags.TABLE_CELL_WIDTH]) - len(text))
-            self.measure_text.append(text)
+            self.__append_measure_text(text)
 
     def __write_measure(
         self,
@@ -232,13 +239,14 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
         if tag == xmltags.DOCUMENT:
             self.__finish_checklist()
         elif tag == xmltags.SECTION and self.measure_text and self.nr_elements(xmltags.SECTION) == 1:
-            self.checklist.write_comment(
-                self.measure_row,
-                self.MEASURE_COLUMN,
-                "".join(self.measure_text),
-                {"x_scale": 7, "y_scale": 8, "font_name": "Courier", "font_size": 9},
-            )
+            self.__write_comment(self.measure_row, self.measure_text)
+            for number, texts in self.submeasure_texts.items():
+                if number not in self.submeasure_rows:
+                    raise ValueError(f"{self.measure_id} has no submeasure {number} to add an explanation to")
+                self.__write_comment(self.submeasure_rows[number], texts)
             self.measure_text = []
+            self.submeasure_texts = {}
+            self.submeasure_rows = {}
             self.row += 1
         elif self.measure_text:
             if tag in (
@@ -249,13 +257,50 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
                 xmltags.TABLE_ROW,
                 xmltags.TABLE,
             ):
-                self.measure_text.append("\n")
+                self.__append_measure_text("\n")
             elif tag == xmltags.TABLE_CELL:
-                if not self.measure_text[-1]:
-                    self.measure_text.append(" " * int(attributes[xmltags.TABLE_CELL_WIDTH]))
-                self.measure_text.append(" ")
+                for texts in self.__measure_texts():
+                    if not texts[-1]:
+                        texts.append(" " * int(attributes[xmltags.TABLE_CELL_WIDTH]))
+                    texts.append(" ")
             elif tag in (xmltags.PARAGRAPH, xmltags.HEADING):
-                self.measure_text.append("\n\n")
+                self.__append_measure_text("\n\n")
+
+    def __measure_texts(self) -> list[list[str]]:
+        """Return the texts to add measure text to: the texts of the submeasures that the current section explains,
+        if any, otherwise the text of the measure itself."""
+        for element in reversed(self._stack):
+            if element.matches(xmltags.SECTION) and xmltags.SECTION_SUBMEASURES in element.attributes:
+                numbers = str(element.attributes[xmltags.SECTION_SUBMEASURES]).split(",")
+                return [self.submeasure_texts.setdefault(int(number), []) for number in numbers]
+        return [self.measure_text]
+
+    def __append_measure_text(self, text: str) -> None:
+        """Add the text to the measure or submeasure texts."""
+        for texts in self.__measure_texts():
+            texts.append(text)
+
+    def __write_comment(self, row: int, texts: list[str]) -> None:
+        """Write the texts as comment in the measure column, sized to fit the text."""
+        text = "".join(texts).rstrip()
+        lines = text.split("\n")
+        width = min(
+            max(len(line) for line in lines) * self.COMMENT_CHAR_WIDTH, self.COMMENT_MAX_WIDTH - self.COMMENT_PADDING
+        )
+        chars_per_line = max(1, int(width / self.COMMENT_CHAR_WIDTH))
+        # Add 10% to the number of wrapped lines because lines are wrapped on word boundaries:
+        nr_lines = math.ceil(1.1 * sum(max(1, math.ceil(len(line) / chars_per_line)) for line in lines))
+        self.checklist.write_comment(
+            row,
+            self.MEASURE_COLUMN,
+            text,
+            {
+                "width": round(width + self.COMMENT_PADDING),
+                "height": nr_lines * self.COMMENT_LINE_HEIGHT + self.COMMENT_PADDING,
+                "font_name": "Courier",
+                "font_size": 9,
+            },
+        )
 
     def end_document(self) -> None:
         self.__create_action_list()

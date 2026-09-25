@@ -4,7 +4,7 @@ import contextlib
 import pathlib
 import re
 from typing import cast
-from xml.etree.ElementTree import ElementTree, TreeBuilder
+from xml.etree.ElementTree import Element, ElementTree, TreeBuilder
 
 import markdown_syntax
 import xmltags
@@ -22,6 +22,7 @@ class MarkdownConverter:
         self.builder = TreeBuilder()
         self.context: set[str] = set()  # Current context, e.g. are we in a measure, or in the appendices
         self.current_section_level = 0
+        self.current_section: Element | None = None
         self.current_list_tags: list[str] = []
         self.list_counter: list[int] = []  # List item counters per list level
         self.submeasure_counter: int = 0
@@ -171,6 +172,9 @@ class MarkdownConverter:
             self.builder.start(match.group(1), attributes)
         elif match := re.match(markdown_syntax.END_PATTERN, stripped_line):
             self.builder.end(match.group(1))
+        elif match := re.match(markdown_syntax.SUBMEASURES_PATTERN, stripped_line):
+            if self.current_section is not None:
+                self.current_section.set(xmltags.SECTION_SUBMEASURES, match.group(1).replace(" ", ""))
         elif match := re.match(markdown_syntax.HEADING_PATTERN, stripped_line):
             self._process_heading(heading=match.group(2), level=len(match.group(1)))
         elif re.match(markdown_syntax.BULLET_LIST_PATTERN, stripped_line):
@@ -213,7 +217,7 @@ class MarkdownConverter:
                 }
                 self.builder.start(xmltags.SECTION, attributes)
         self.current_section_level = level
-        self.builder.start(
+        self.current_section = self.builder.start(
             xmltags.SECTION,
             {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)},
         )

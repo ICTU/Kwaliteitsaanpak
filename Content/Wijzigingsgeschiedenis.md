@@ -9,6 +9,10 @@
 
 * Het kopje "BIO- en SSD-maatregelen" in de bijlagen stond op niet op de goede plek.
 
+## Self-assessment checklist
+
+* De toelichting bij maatregelen met submaatregelen (M01 en M02) is verdeeld over de submaatregelen, zodat de popups kleiner worden.
+
 # Versie 5.4.0, 17 september 2026
 
 ## Template Kwaliteitsplan

@@ -28,6 +28,9 @@
       "pattern": "^https://ictubeheer.sharepoint.com"
     },
     {
+      "pattern": "^https://ictu.github.io/Kwaliteitsaanpak/latest/"
+    },
+    {
       "pattern": "^https://www.cip-overheid.nl/media/k5wocp15/grip-op-ssd-het-proces-v20.pdf$"
     },
     {

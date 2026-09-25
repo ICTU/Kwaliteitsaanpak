@@ -92,7 +92,7 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
 ⚠️ Documenteer wijzigingen (alleen aan de inhoud van de Kwaliteitsaanpak) in `./Content/Wijzigingsgeschiedenis.md`.
 
 ### Een nieuwe versie van de Kwaliteitsaanpak uitbrengen
-1. Bepaal het nieuwe versienummer. Zie https://ictu.github.io/Kwaliteitsaanpak/v5.4.0/ICTU-Kwaliteitsaanpak.html#versionering
+1. Bepaal het nieuwe versienummer. Zie https://ictu.github.io/Kwaliteitsaanpak/latest/ICTU-Kwaliteitsaanpak.html#versionering
 
 2. Maak een release branch:
    ```console
@@ -105,7 +105,7 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
    mkdir docs/vx.y.z
    git add docs
    ```
-5. Werk het versienummer en de releasedatum bij in `docs/index.html`.
+5. Werk het versienummer en de releasedatum bij in `docs/index.html` en het versienummer in `docs/404.html` (zodat links met `latest` naar de nieuwe versie verwijzen).
 6. Werk het versienummer bij in `pyproject.toml`.
 7. Werk het versienummer bij in de variable `LATEST` in `DocumentDefinitions/Shared/variables.json`.
 8. Genereer de documentatie met het nieuwe versienummer:

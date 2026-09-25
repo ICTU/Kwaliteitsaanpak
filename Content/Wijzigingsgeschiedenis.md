@@ -3,6 +3,7 @@
 ## Template Kwaliteitsplan
 
 * Verwijzing tussen aanbevelingen in de bijlage "ICTU-aanbevelingen voor het beheer van dependencies" verbeterd.
+* Voeg informatiebeveiligingsplan toe aan de paragraaf "Relatie met andere documenten", conform de relaties tussen documenten zoals beschreven in de paragraaf "Samenhang voorfaseproducten" van maatregel M01 in de Kwaliteitsaanpak.
 
 ## Template Niet-Functionele Eisen
 

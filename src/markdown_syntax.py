@@ -29,4 +29,6 @@ MEASURE_TITLE_START = "[measure-title]"
 MEASURE_TITLE_END = "[/measure-title]"
 SUBMEASURE_TITLE_START = "[submeasure-title]"
 SUBMEASURE_TITLE_END = "[/submeasure-title]"
+# Marks the section it is in as explanation of the submeasures with the given numbers, e.g. <!-- submeasures: 1,2 -->
+SUBMEASURES_PATTERN = r"^<!-- submeasures: ([0-9]+(?:, ?[0-9]+)*) -->"
 VARIABLE_USE_PATTERN = r"\$([^\$]+)\$"

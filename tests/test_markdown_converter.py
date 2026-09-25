@@ -120,6 +120,15 @@ class MarkdownTest(MarkdownConverterTestCase):
         section2 = self.xml().findall(xmltags.SECTION)[1]
         self.assertEqual("Heading 1", self.find(xmltags.HEADING, section2).text)
 
+    @patch(read_text, Mock(return_value="# Heading 1\n## Heading 2\n<!-- submeasures: 1, 3 -->\nText"))
+    def test_submeasures(self):
+        """Test that the section is marked as explanation of the submeasures."""
+        section1 = self.find(xmltags.SECTION)
+        self.assertNotIn(xmltags.SECTION_SUBMEASURES, section1.attrib)
+        section2 = self.find(xmltags.SECTION, section1)
+        self.assertEqual("1,3", section2.attrib[xmltags.SECTION_SUBMEASURES])
+        self.assertEqual("Text", self.find(xmltags.PARAGRAPH, section2).text)
+
     @patch(
         read_text,
         Mock(

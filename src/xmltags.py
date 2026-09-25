@@ -32,6 +32,7 @@ PARAGRAPH = "p"
 SECTION = "section"
 SECTION_IS_APPENDIX = "is-appendix"
 SECTION_LEVEL = "level"
+SECTION_SUBMEASURES = "submeasures"  # Comma separated numbers of the submeasures the section explains
 SLIDE = "slide"
 STRIKETHROUGH = "strike"
 SUBMEASURE_TITLE = "submeasure-title"

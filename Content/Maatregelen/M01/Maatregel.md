@@ -32,15 +32,21 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 
 ### Business impact analyse
 
+<!-- submeasures: 1 -->
+
 In een business impact analyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting: de risico’s die een organisatie bereid is te accepteren. Alleen de opdrachtgevende organisatie zelf kan hierover een uitspraak doen.
 
 ### Data protection impact assessment
+
+<!-- submeasures: 2 -->
 
 In een data protection impact assessment (DPIA) legt de opdrachtgevende organisatie vast wat de privacy-gevoeligheid is van de gegevens die in een proces of informatiesysteem worden verzameld en verwerkt. De rechtmatigheid van de verwerking wordt beoordeeld. En de DPIA stelt grenzen aan de gegevens die mogen worden verzameld en verwerkt. Zicht op privacygevoelige gegevens en het (laten) treffen van adequate en afdoende beschermingsmaatregelen is een wettelijke plicht die een organisatie niet aan een andere partij kan overdragen.
 
 Als een DPIA niet nodig is, dan is een verklaring daaromtrent vereist.
 
 ### Impact assessment mensenrechten en algoritmes
+
+<!-- submeasures: 3 -->
 
 $IAMA$. Met een dergelijke impact assessment kan een interdisciplinaire dialoog gevoerd worden tussen relevante partijen bij de afweging om wel of niet een algoritmische toepassing te gaan ontwikkelen. En het helpt om de gekozen ontwikkeling en implementatie vervolgens op een verantwoorde manier te doen. In het IAMA worden verbanden gelegd met relevante regels, instrumenten en toetskaders op het gebied van algoritmen.
 
@@ -51,6 +57,8 @@ Zie [https://www.rijksoverheid.nl/documenten/rapporten/2026/02/16/impact-assessm
 Voor meer informatie over het gezamenlijk gebruik van IAMA en DPIA, zie [https://www.cip-overheid.nl/producten-en-diensten/handreiking-gebruik-iama-samen-met-model-dpia-rijksdienst/](hhttps://www.cip-overheid.nl/producten-en-diensten/handreiking-gebruik-iama-samen-met-model-dpia-rijksdienst/).
 
 ### Projectstartarchitectuur en solution architectuur
+
+<!-- submeasures: 4 -->
 
 Een projectstartarchitectuur (PSA) is bedoeld om te borgen dat nieuwe ontwikkelingen en veranderingen in samenhang worden gerealiseerd en passen binnen de toekomstig gewenste informatievoorziening. De PSA is een concreet en doelgericht ICT-architectuurkader waarbinnen het project moet worden uitgevoerd. In de PSA zijn de architectuurvisie, enterprise-architectuur en overige architecturen van de opdrachtgevende organisatie vertaald naar aan het product te stellen eisen. BIA, DPIA en IAMA zijn input voor de PSA. Een PSA bevat in ieder geval de volgende onderwerpen:
 
@@ -70,11 +78,15 @@ Zie [typen architecturen in NORA](https://www.noraonline.nl/wiki/Typen_architect
 
 ### Afspraken met de beheerorganisatie
 
+<!-- submeasures: 5 -->
+
 De opdrachtgevende organisatie heeft afspraken gemaakt met een (interne of externe) beheerorganisatie die voornemens is het beheer van de software uit te voeren. De afspraken omvatten in ieder geval de inzet van medewerkers van de beheerorganisatie tijdens de voorfase en het type beheer dat de beheerorganisatie voornemens is te gaan uitvoeren: operationeel beheer, applicatiebeheer en/of functioneel beheer.
 
 De beheerorganisatie stelt relevante informatie ter beschikking aan het project zoals beveiligingsbeleid, beheeracceptatiecriteria, documentatie van de te gebruiken voorzieningen voor bijvoorbeeld authenticatie en autorisatie en verder te hanteren kaders en richtlijnen.
 
 ### Plan van aanpak
+
+<!-- submeasures: 6,15 -->
 
 Het plan van aanpak voor de voorfase en het plan van aanpak voor de realisatiefase beschrijven de in deze fasen te realiseren producten en diensten, en de planning, werkwijze en verantwoordelijkheden voor de totstandkoming van die producten en diensten.
 
@@ -89,11 +101,15 @@ Beschikbare templates:
 
 ### Beschrijving van functionele eisen
 
+<!-- submeasures: 7 -->
+
 De beschrijving van functionele eisen bestaat uit epics en/of user stories, eventueel aangevuld met use cases. De beschrijving bevat tevens eisen voor ondersteuning van beheerfuncties, die door de beoogd beheerder gesteld worden, en voor logging, inclusief de globale inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen.
 
 Bronnen van de opdrachtgevende organisatie zoals de projectstartarchitectuur, een programma van eisen en procesbeschrijvingen vormen het startpunt voor de functionele eisen. Tijdens het project worden use cases in samenwerking met de product owner vertaald naar epics en user stories.
 
 ### Beschrijving van niet-functionele eisen
+
+<!-- submeasures: 8 -->
 
 Niet-functionele eisen specificeren criteria om het functioneren van de software te beoordelen, maar beschrijven niet het specifieke gedrag zelf. Voor de beschrijving en onderverdeling van niet-functionele eisen maakt het project gebruik van:
 
@@ -118,6 +134,8 @@ Beschikbare templates:
 
 ### Product backlog
 
+<!-- submeasures: 9 -->
+
 De product backlog is een geprioriteerd overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. Al het werk dat het Scrumteam doet loopt via de product backlog, niet alleen werk aan de broncode zelf maar bijvoorbeeld ook het schrijven van beheerdocumentatie. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:
 
 * _Wat_ er gemaakt moet worden,
@@ -129,6 +147,8 @@ De product owner is verantwoordelijk voor de inhoud en bepaalt de prioritering v
 Zie [https://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog](https://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog).
 
 ### Ontwerp- en architectuurdocumentatie
+
+<!-- submeasures: 10 -->
 
 De ontwerp- en architectuurdocumentatie beschrijft de opzet van de te bouwen software in de context waarbinnen deze moet opereren en de ontwerpkeuzes en -principes die zijn gevolgd. Die documentatie laat tevens zien hoe de software aan de gestelde functionele en niet-functionele eisen voldoet.
 
@@ -148,6 +168,8 @@ Beschikbare templates:
 
 ### Testplannen en -rapportages
 
+<!-- submeasures: 11,12,17 -->
+
 De testplannen bestaan uit een mastertestplan (MTP), gemaakt op basis van een productrisicoanalyse (PRA), en detailtestplannen. Het doel van een mastertestplan is om betrokkenen bij het testproces te informeren over de strategie, aanpak, activiteiten, inclusief de onderlinge relaties en afhankelijkheden, en de op te leveren producten met betrekking tot het testtraject. Het mastertestplan beschrijft deze strategie, aanpak, activiteiten en eindproducten, die in de detailtestplannen verder worden gedetailleerd.
 
 De opdrachtgevende organisatie is verantwoordelijk voor het mastertestplan. Het project maakt een detailtestplan voor de testsoorten die tijdens de realisatiefase door het project worden uitgevoerd. Voor testen die onder verantwoordelijkheid van het project door een derde partij worden uitgevoerd, denk aan penetratietesten en evaluaties van gebruikskwaliteit, worden aparte detailtestplannen gemaakt. Deze hebben doorgaans de vorm van een offerteaanvraag gemaakt door ICTU en een offerte met plan van aanpak gemaakt door de leverancier.
@@ -161,6 +183,8 @@ Beschikbare templates:
 
 ### Informatiebeveiligingsplan
 
+<!-- submeasures: 13 -->
+
 Het informatiebeveiligingsplan vormt een praktisch toepasbaar document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en met welke maatregelen die bescherming vorm krijgt. Belangrijkste bronnen voor het informatiebeveiligingsplan zijn de projectstartarchitectuur (PSA), business impact analyse (BIA), data protection impact assessment (DPIA) en de threat and vulnerability assessment (TVA).
 
 Het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) bevat een methode om te komen tot een systematische aanpak van informatiebeveiliging. Eén van de vereisten van het VIR 2007 is dat voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een afhankelijkheids- en kwetsbaarheidsanalyse (A&K-analyse) wordt uitgevoerd.
@@ -168,6 +192,8 @@ Het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) bevat 
 Bij ICTU wordt daarvoor een TVA gebruikt. Hierin worden de betrouwbaarheidseisen, die aan de bedrijfsprocessen en dientengevolge aan het informatiesysteem of verantwoordelijkheidsgebied worden gesteld, tijdens een afhankelijkheidsanalyse geïnventariseerd. Vervolgens worden de bedreigingen geïdentificeerd en geanalyseerd. De TVA levert zodoende een deel van een traceerbare onderbouwing voor de te treffen beveiligingsmaatregelen. De TVA wordt tijdens de voorfase opgesteld op basis van de PSA, de BIA, een eventuele DPIA en de inhoud van de ontwerp- en architectuurdocumentatie.
 
 ### Kwaliteitsplan
+
+<!-- submeasures: 14 -->
 
 Het ICTU-kwaliteitsplan beschrijft de standaard kwaliteitsmaatregelen die ICTU-projecten treffen om software te realiseren die voldoet aan de kwaliteitseisen van de opdrachtgevende organisatie en andere belanghebbenden en aan de kwaliteitsnormen van ICTU.
 
@@ -181,9 +207,13 @@ Beschikbare templates:
 
 ### Deploybare versie van de software
 
+<!-- submeasures: 16 -->
+
 Het project levert deploybare versies van de software in een formaat dat is afgestemd met de beheerorganisatie.
 
 ### Documentatie voor deployment en operationeel beheer
+
+<!-- submeasures: 18 -->
 
 De deploymentdocumentatie bevat informatie over de eisen die een applicatie stelt aan een omgeving en de stappen die nodig zijn om de applicatie in die omgeving veilig te installeren en configureren. De documentatie bevat daartoe onder meer aanwijzingen voor de HTTP-header en -request-configuratie van de webserver en voor het verwijderen van overbodige header-informatie zoals de 'Server'-header. Ook zijn er aanwijzingen voor veilige configuratie(s) van (externe) toegang tot de beheerinterface. De documentatie bevat daarnaast in ieder geval een beschrijving van de protocollen en services die de applicatie aanbiedt, de protocollen, services en accounts die het product gebruikt en de protocollen, services en accounts die de applicatie gebruikt voor beheer.
 
@@ -191,13 +221,19 @@ De documentatie voor operationeel beheer bevat tenminste informatie over: back-u
 
 ### Software bill of materials
 
+<!-- submeasures: 19 -->
+
 Voor elke release stelt het project een "software bill of materials" op: een overzicht van de gebruikte libraries, frameworks, componenten en andere software(deel)producten in de release. Software draagt inherent het risico in zich van verborgen fouten. Deze fouten kunnen mogelijk misbruikt worden, waardoor (beveiligings)problemen ontstaan. Met dit overzicht heeft de opdrachtgevende organisatie of diens beheerorganisatie informatie over de gebruikte software(deel)producten, die geraadpleegd kan worden wanneer fouten in software bekend wordt, zodat een risico-inschatting gemaakt kan worden en eventueel actie kan worden ondernomen.
 
 ### Release notes
 
+<!-- submeasures: 20 -->
+
 Voor elke release stelt het project release notes op: een overzicht van de wijzigingen in de release. Software delivery manager en opdrachtgever maken afspraken over de opzet van de release notes.
 
 ### Vrijgaveadvies
+
+<!-- submeasures: 21 -->
 
 De opdrachtgevende organisatie organiseert dat voor elke release de betrokken partijen informatie aanleveren voor een vrijgaveadvies.
 

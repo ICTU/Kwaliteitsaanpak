@@ -20,7 +20,7 @@ De beschrijving van elke maatregel is voorzien van een rationale: waarom behoort
 
 ## Rollen
 
-Bij de omschrijving van de maatregelen is gebruik gemaakt van de volgende rollen om aan te geven wie verantwoordelijkheid draagt voor het uitvoeren van de maatregelen:
+Bij de omschrijving van de maatregelen is gebruikgemaakt van de volgende rollen om aan te geven wie verantwoordelijkheid draagt voor het uitvoeren van de maatregelen:
 
 * Project: de tijdelijke organisatie die de software ontwikkelt, onderhoudt en/of operationeel beheert. Het project bestaat uit medewerkers van ICTU, van de opdrachtgevende organisatie en mogelijk ook van de beheerorganisatie of andere partijen. De softwareontwikkeling binnen het project gebeurt door één of meer Scrumteams, bestaande uit een product owner, ontwikkelaars en een Scrummaster. De product owner is altijd een medewerker van de opdrachtgevende organisatie. Als het project de software ook operationeel beheert past ICTU DevOps toe en maken ook DevOps-engineers deel uit van een Scrumteam. Eén van de ontwikkelaars heeft de rol van softwarearchitect.
 * Projectleider: de ICTU-medewerker verantwoordelijk voor uitvoering van het project,

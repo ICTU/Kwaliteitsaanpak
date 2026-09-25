@@ -7,9 +7,9 @@ De volgende tabel bevat technische eisen die ten grondslag liggen aan het projec
 | TR01       | {eis}             |
 | TR02       | {eis}             |
 
-# Standaard componenten
+# Standaardcomponenten
 
-{Beschrijving van de standaard componenten voor de operationele en beheeromgeving die beschikbaar zijn voor het systeem.}
+{Beschrijving van de standaardcomponenten voor de operationele en beheeromgeving die beschikbaar zijn voor het systeem.}
 
 ## Identity provisioning
 

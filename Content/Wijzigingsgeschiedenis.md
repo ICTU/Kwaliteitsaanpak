@@ -121,7 +121,7 @@
 
 ## Alle templates
 
-* Standaard kaders bijgewerkt naar actuele versies: NEN-ISO/IEC 27001:2023 (was 2017), NEN-ISO/IEC 27002:2022 (was 2017), NEN 7510-2:2024 (was NEN 7510:2017) en Wbni 2024 (was 2018).
+* Standaardkaders bijgewerkt naar actuele versies: NEN-ISO/IEC 27001:2023 (was 2017), NEN-ISO/IEC 27002:2022 (was 2017), NEN 7510-2:2024 (was NEN 7510:2017) en Wbni 2024 (was 2018).
 
 ## GitHub pages
 
@@ -535,7 +535,7 @@
 
 ## Template Kwaliteitsplan
 
-* Paragrafen 1.2, 1.5 en 1.6 uitgebreid met standaard teksten.
+* Paragrafen 1.2, 1.5 en 1.6 uitgebreid met standaardteksten.
 * Stakeholder management vervangen door het bescheidener identificeren van belanghebbenden en belangen.
 
 ## Template Niet-Functionele Eisen
@@ -592,7 +592,7 @@
 * Tekstuele en stilistische verbeteringen.
 * Manifest toegevoegd.
 * ICTU-specifieke invulling van maatregelen aangepast aan nieuwe organisatiestructuur en rollen zoals die in 2018 gelden.
-* In M16: Verplichte tools, de verwijzing naar ICTU-specifieke SonarQube kwaliteitsprofielen verwijderd omdat ICTU de standaard Sonar Way kwaliteitsprofielen gebruikt.
+* In M16: Verplichte tools, de verwijzing naar ICTU-specifieke SonarQube-kwaliteitsprofielen verwijderd omdat ICTU de standaard Sonar Way-kwaliteitsprofielen gebruikt.
 
 # Versie 1.1, 7 november 2017
 

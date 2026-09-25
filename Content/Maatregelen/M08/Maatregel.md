@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M08/Definitie.md"
 
-Technische schuld zijn eigenschappen van de software die de lange termijn inzetbaarheid en onderhoudbaarheid van de software bedreigen. Denk hierbij aan hoge complexiteit, lage testdekking, ontbrekende testsoorten en ontbrekende documentatie.
+Technische schuld zijn eigenschappen van de software die de inzetbaarheid en onderhoudbaarheid van de software op lange termijn bedreigen. Denk hierbij aan hoge complexiteit, lage testdekking, ontbrekende testsoorten en ontbrekende documentatie.
 
 De kwaliteitsmanager maakt de technische schuld inzichtelijk met behulp van Quality-time, het kwaliteitssysteem van ICTU. Technische schuld die niet geautomatiseerd kan worden gemeten legt de kwaliteitsmanager handmatig vast.
 

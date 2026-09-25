@@ -9,6 +9,6 @@ De volgende uitgangspunten zijn van toepassing op dit document:
 | U03 | {3-Tier.} |
 | U04 | {IP-adres onafhankelijkheid. IP-adressen van systemen of systeemonderdelen zijn te wijzigen zonder dat dit een significantie impact heeft op de applicatie, bijvoorbeeld door ontkoppeling middels DNS.} |
 | U05 | Communicatie via {netwerk} of {internet}. Systeem-naar-systeemcommunicatie van en naar {het product} verloopt via {netwerk}. |
-| U06 | {Virtualisatie tenzij. In het kader van schaalbaarheid, flexibiliteit en kosten wordt gebruik gemaakt van virtuele servers tenzij dit technisch niet kan.} |
+| U06 | {Virtualisatie tenzij. In het kader van schaalbaarheid, flexibiliteit en kosten wordt gebruikgemaakt van virtuele servers tenzij dit technisch niet kan.} |
 | U07 | {Uitgangspunten met betrekking tot redundantie.} |
 | {volgnummer} | {uitgangspunt} |

@@ -1,4 +1,4 @@
-ICTU hanteert voor het ontwikkelen van maatwerksoftware de $KWALITEITSAANPAK$. Deze Kwaliteitsaanpak houdt in dat ICTU voor elk softwareproject een aantal standaard maatregelen toepast, min of meer onafhankelijk van de precieze eisen die {opdrachtgevende organisatie} stelt aan de software. Dit kwaliteitsplan geeft een overzicht van deze standaard kwaliteitsmaatregelen. Voor de realisatiefase zijn de belangrijkste maatregelen:
+ICTU hanteert voor het ontwikkelen van maatwerksoftware de $KWALITEITSAANPAK$. Deze Kwaliteitsaanpak houdt in dat ICTU voor elk softwareproject een aantal standaardmaatregelen toepast, min of meer onafhankelijk van de precieze eisen die {opdrachtgevende organisatie} stelt aan de software. Dit kwaliteitsplan geeft een overzicht van deze standaardkwaliteitsmaatregelen. Voor de realisatiefase zijn de belangrijkste maatregelen:
 
 * Het hanteren van expliciete entry-en exitcriteria voor het oppakken en afronden van werk
 * Het toepassen van het ICTU-kwaliteitssysteem (Quality-time)

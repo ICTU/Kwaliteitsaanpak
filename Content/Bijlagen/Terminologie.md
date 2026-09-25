@@ -15,7 +15,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **BIA** | $BIA$ |
 | **BIO** | Baseline Informatiebeveiliging Overheid |
 | **broncode** | **software** in een vorm die leesbaar is voor mensen en de intentie van een programmeur uitdrukt |
-| **deployment** | installatie van **software** op een systeem waardoor de software beschikbaar wordt gemaakt voor gebruik door **actor**en |
+| **deployment** | installatie van **software** op een systeem, waardoor de software beschikbaar wordt gemaakt voor gebruik door **actor**en |
 | **developers** | Developers zijn de mensen in het **Scrumteam** die iedere sprint gecommitteerd zijn aan het maken van elk aspect van een bruikbaar increment [Scrumgids] |
 | **DevOps** | een praktijk die tot doel heeft **softwareontwikkeling** en **operationeel beheer** samen te brengen |
 | **DoD** | definition of done |
@@ -25,7 +25,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **GFO** | $GFO$ |
 | **IAMA** | $IAMA$ |
 | **IB-plan** | $IB$ |
-| **informatiesysteem** | een samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en **programmatuur** alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie [VIR 2007, NORA] |
+| **informatiesysteem** | een samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en **programmatuur**, alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie [VIR 2007, NORA] |
 | **infrastructuurarchitectuur** | $IA$ |
 | **interactie-ontwerp** | $IO$ |
 | **IPO** | intern projectoverleg |
@@ -58,7 +58,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **PSA** | $PSA$ |
 | **PvE** | programma van eisen |
 | **Quality-time** | een door ICTU ontwikkeld, open source, geautomatiseerd kwaliteitssysteem |
-| **realisatiefase** | fase van een **softwareontwikkelproject** waarin de **software** daadwerkelijk wordt gebouwd en onderhouden, en bij een **DevOps** werkwijze ook operationeel wordt beheerd |
+| **realisatiefase** | fase van een **softwareontwikkelproject** waarin de **software** daadwerkelijk wordt gebouwd en onderhouden, en bij een **DevOps**-werkwijze ook operationeel wordt beheerd |
 | **regressietest** | test die na een wijziging controleert of niet-gewijzigde delen van een systeem nog steeds correct functioneren |
 | **release notes** | een overzicht van de wijzigingen in een **release** |
 | **release** | een voor gebruik vrijgegeven versie van de **software** |
@@ -70,9 +70,9 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **software delivery manager** | organiseert het ontwikkelen en opleveren van **software** conform de vastgestelde eisen en de Kwaliteitsaanpak en rapporteert aan de **projectleider** |
 | **software** | software is de verzameling instructies die bepalen wat een computer uitvoert en is uiteindelijk wat de gebruiker ziet, ervaart en waarmee hij interacteert |
 | **softwareontwikkeling** | een activiteit die nieuwe **software** maakt en/of bestaande software aanpast |
-| **softwareontwikkelproject** | een **project** dat de oplevering van **software** als enige of voornaamste projectresultaat heeft |
+| **softwareontwikkelproject** | een **project** dat de oplevering van **software** als enig of voornaamste projectresultaat heeft |
 | **solution architectuur**| beschrijving van de gewenste oplossing van een specifiek probleem, of het eindresultaat van een **project** [NORA] |
-| **technische schuld** | eigenschappen van de **software** die de lange-termijninzetbaarheid en onderhoudbaarheid bedreigen |
+| **technische schuld** | eigenschappen van de **software** die de inzetbaarheid en onderhoudbaarheid op lange termijn bedreigen |
 | **TVA** | $TVA$ |
 | **usability** | gebruiksvriendelijkheid |
 | **use case** | een afgebakende eenheid van interactie tussen een **actor** en het systeem |
@@ -81,4 +81,4 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **VIRBI** | Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie |
 | **VM** | virtual machine, virtuele machine |
 | **voorfase** | fase van een **softwareontwikkelproject**, voorafgaande aan de **realisatiefase**, waarin de uitgangspunten, risico's en randvoorwaarden voor de realisatiefase worden bepaald en waarin wordt gezorgd dat aan de randvoorwaarden wordt voldaan en dat voor zoveel mogelijk risico's maatregelen getroffen zijn |
-| **vrijgaveadvies** | advies om een **release** vrij te geven voor ingebruikname, met een testverslag dat tenminste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen bevat |
+| **vrijgaveadvies** | advies om een **release** vrij te geven voor ingebruikname, met een testverslag dat ten minste alle nog openstaande testbevindingen en geconstateerde beveiligingsbevindingen bevat |

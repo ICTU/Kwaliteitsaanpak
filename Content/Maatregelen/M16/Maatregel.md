@@ -21,7 +21,7 @@ ICTU adviseert en ondersteunt voor de hieronder genoemde taken specifieke tools.
 | [submeasure-title]Testen op toegankelijkheid van de applicatie[/submeasure-title] | Axe |
 | [submeasure-title]Produceren van een "software bill of materials" (SBoM)[/submeasure-title] | Tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren |
 | [submeasure-title]Opslaan van artifacten[/submeasure-title] | Nexus of Harbor |
-| [submeasure-title]Registratie van incidenten bij gebruik en beheer[/submeasure-title] | Jira |
+| [submeasure-title]Bij het uitvoeren van operationeel beheer; registratie van incidenten[/submeasure-title] | Jira |
 | [submeasure-title]Bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving[/submeasure-title] | Ansible |
 
 N.B. Onder het ondersteunen van "agile werken" vallen het opvoeren van eisen, het opvoeren van logische testgevallen, het koppelen van logische testgevallen aan eisen, het bijhouden van een werkvoorraad, het plannen van iteraties en het toewijzen van eisen aan iteraties. De 'eisen' worden, conform Scrumterminologie, geregistreerd als epics en/of user stories, de werkvoorraad als product backlog en de iteraties als sprints. Het toewijzen van eisen aan iteraties gebeurt via de sprint backlog.

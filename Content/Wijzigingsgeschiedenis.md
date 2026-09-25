@@ -3,6 +3,7 @@
 ## Kwaliteitsaanpak
 
 * In M16 "Het project gebruikt tools voor vastgestelde taken", Trivy vervangen door Grype als geadviseerd tool voor het controleren van container images op aanwezigheid van bekende kwetsbaarheden.
+* In M16 "Het project gebruikt tools voor vastgestelde taken", "Registratie van incidenten bij gebruik en beheer" vervangen door "Bij het uitvoeren van operationeel beheer; registratie van incidenten".
 
 ## Template Plan van Aanpak Realisatiefase
 

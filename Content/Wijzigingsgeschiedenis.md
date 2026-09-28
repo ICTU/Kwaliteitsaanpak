@@ -11,7 +11,7 @@
 
 ## Template Niet-Functionele Eisen
 
-* Het kopje "BIO- en SSD-maatregelen" in de bijlagen stond op niet op de goede plek.
+* Het kopje "BIO- en SSD-maatregelen" in de bijlagen stond niet op de goede plek.
 
 ## Template Inwerkplan Kwaliteitsmanager
 

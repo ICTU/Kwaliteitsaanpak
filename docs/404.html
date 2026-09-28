@@ -7,8 +7,8 @@
         <script>
             // GitHub Pages serves this page for all paths that don't exist. Redirect paths that start with /latest
             // to the latest release, e.g. /latest/ICTU-Kwaliteitsaanpak.html#m16 to
-            // /v5.4.0/ICTU-Kwaliteitsaanpak.html#m16. Update the version when releasing a new version.
-            const latestVersion = "v5.4.0";
+            // /v5.4.1/ICTU-Kwaliteitsaanpak.html#m16. Update the version when releasing a new version.
+            const latestVersion = "v5.4.1";
             const match = location.pathname.match(/^\/Kwaliteitsaanpak\/latest(\/.*)?$/);
             if (match) {
                 const path = match[1] && match[1] !== "/" ? `${latestVersion}${match[1]}` : "";

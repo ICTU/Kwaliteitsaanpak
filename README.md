@@ -113,15 +113,14 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
    VERSION=x.y.z uv run src/convert.py DocumentDefinitions/*.json
    ```
    De gegenereerde documenten staan in de map `docs/vx.y.z`.
-9. Open `docs/index.html` en controleer de versie, releasedatum en documenten (steeksproefsgewijs).
-10. Commit en push de wijzigingen:
+9. Commit en push de wijzigingen:
    ```console
    git add .
    git commit -m "Release vx.y.z"
    git push
    ```
-11. Review en merge de branch op GitHub.
-12. Tag de release, push de tag naar GitHub en verwijder de release branch lokaal:
+10. Review en merge de branch op GitHub.
+11. Tag de release, push de tag naar GitHub en verwijder de release branch lokaal:
    ```console
    git checkout master
    git pull -p
@@ -129,8 +128,8 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
    git push --tags
    git branch -D release-vx.y.z
    ```
-13. Controleer dat de docs folder is gepubliceerd door de [pages-build-deployment](https://github.com/ICTU/Kwaliteitsaanpak/actions/workflows/pages/pages-build-deployment) GitHub Action op [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
-14. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
+12. Controleer dat de docs folder is gepubliceerd door de [pages-build-deployment](https://github.com/ICTU/Kwaliteitsaanpak/actions/workflows/pages/pages-build-deployment) GitHub Action op [https://ictu.github.io/Kwaliteitsaanpak](https://ictu.github.io/Kwaliteitsaanpak).
+13. Kondig de release aan in het MS Teams-kanaal **"ICTU Softwareontwikkeling/Algemeen"**.
    - Bij een **minor release**: stuur ook een e-mail naar SDM'ers en Kwaliteitsmanagers en CC: hoofd ISE.
    - Bij een **major release**: stuur een e-mail naar iedereen bij ISE.
 

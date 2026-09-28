@@ -1,4 +1,4 @@
-# Versie 5.4.1, nog te releasen
+# Versie 5.4.1, 28 september 2026
 
 ## Kwaliteitsaanpak
 
@@ -15,7 +15,7 @@
 
 ## Template Inwerkplan Kwaliteitsmanager
 
-* Verouderde informatie zoals events, mailinglijst, en URLs bijgewerkt.
+* Verouderde informatie zoals events, mailinglijst en URLs bijgewerkt.
 
 ## Self-assessment checklist
 

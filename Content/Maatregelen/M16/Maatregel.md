@@ -21,7 +21,7 @@ ICTU adviseert en ondersteunt voor de hieronder genoemde taken specifieke tools.
 | [submeasure-title]Testen op toegankelijkheid van de applicatie[/submeasure-title] | Axe |
 | [submeasure-title]Produceren van een "software bill of materials" (SBoM)[/submeasure-title] | Tools die een SBoM in CycloneDX-formaat (zie https://cyclonedx.org) genereren |
 | [submeasure-title]Opslaan van artefacten[/submeasure-title] | Nexus of Harbor |
-| [submeasure-title]Registratie van incidenten bij gebruik en beheer[/submeasure-title] | Jira |
+| [submeasure-title]Bij het uitvoeren van operationeel beheer; registratie van incidenten[/submeasure-title] | Jira |
 | [submeasure-title]Bij het uitvoeren van operationeel beheer; uitrollen van de software in de productieomgeving[/submeasure-title] | Ansible |
 | [submeasure-title]Beheer van dependencies[/submeasure-title] | Renovate, Dependabot, package managers of Update-time |
 

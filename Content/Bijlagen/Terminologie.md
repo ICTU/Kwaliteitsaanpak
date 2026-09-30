@@ -15,7 +15,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **BIA** | $BIA$ |
 | **BIO** | Baseline Informatiebeveiliging Overheid |
 | **broncode** | **software** in een vorm die leesbaar is voor mensen en de intentie van een programmeur uitdrukt |
-| **dependency** | Een externe softwarecomponent, package, bibliotheek of framework die niet als onderdeel van de oorspronkelijke software is ontwikkeld, maar waarvan de software wel afhankelijk is voor het bouwen, uitvoeren of correct functioneren ervan. |
+| **dependency** | Externe software die niet als onderdeel van de software is ontwikkeld, maar waarvan de software wel afhankelijk is voor het bouwen, uitvoeren of correct functioneren ervan. |
 | **deployment** | installatie van **software** op een systeem waardoor de software beschikbaar wordt gemaakt voor gebruik door **actor**en |
 | **developers** | Developers zijn de mensen in het **Scrumteam** die iedere sprint gecommitteerd zijn aan het maken van elk aspect van een bruikbaar increment [Scrumgids] |
 | **DevOps** | een praktijk die tot doel heeft **softwareontwikkeling** en **operationeel beheer** samen te brengen |

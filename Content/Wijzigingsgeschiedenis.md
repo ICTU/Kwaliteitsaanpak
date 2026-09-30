@@ -1,3 +1,9 @@
+# Versie 5.5.0, nog te releasen
+
+## Template Kwaliteitsplan
+
+- Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
+
 # Versie 5.4.1, 28 september 2026
 
 ## Kwaliteitsaanpak

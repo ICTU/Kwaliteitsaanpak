@@ -254,16 +254,20 @@ Om de onderhoudbaarheid van de software te bevorderen, dienen methoden en klasse
 
 Om de onderhoudbaarheid van de software te bevorderen, dient er zo min mogelijk duplicatie van broncode aanwezig te zijn. Het uitgangspunt is dat SonarQube met de standaardinstellingen 0% duplicatie rapporteert. Quality-time bewaakt de duplicatie in broncode.
 
-### Omvang van het systeem beperken
+### Omvang van deelsystemen beperken
 
-Om de onderhoudbaarheid van de software te bevorderen, dient de totale omvang beperkt te blijven, gemeten in mensjaren herbouwtijd. De SIG/TüVIT-standaard geeft een maximale herbouwtijd en vertaalt deze in een maximale omvang van de software gemeten in regels code. Die maximale omvang verschilt per programmeertaal. Quality-time bewaakt de totale omvang van het systeem.
+Om de onderhoudbaarheid van de software te bevorderen, dient de omvang van deelsystemen beperkt te blijven. Een deelsysteem is een onderdeel van de software dat los deploybaar is, zoals een databaseserver, een API-server, of een UI-bundel. Quality-time bewaakt de omvang van de deelsystemen.
+
+{Tip: bepaal als norm de maximale omvang die het deelsysteem kan hebben zonder de onderhoudbaarheid significant te verlagen en stel een waarschuwingsniveau in Quality-time (waarbij de "Size" metriek geel wordt) in van 80% van de maximale omvang.}
 
 Voor dit project gelden de volgende normen:
 
-| Programmeertaal     | Maximale omvang in regels code |
-|:--------------------|:-------------------------------|
-| {programmeertaal A} | {maximale omvang}              |
-| {programmeertaal B} | {maximale omvang}              |
+| Deelsysteem         | Programmeertaal     | Maximale omvang in regels productiecode |
+|:--------------------|:--------------------|:----------------------------------------|
+| {deelsysteem A}     | {programmeertaal a} | {maximale omvang deelsysteem A}         |
+| {deelsysteem B}     | {programmeertaal b} | {maximale omvang deelsysteem B}         |
+
+Zie het SAD voor een overzicht en verdere beschrijving van de deelsystemen.
 
 ### Omvang van methoden beperken
 

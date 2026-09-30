@@ -287,6 +287,8 @@ Het beheren en bijwerken van dependencies is een belangrijk onderdeel van softwa
 
 Deze werkwijze geldt voor alle dependencies in de software en de CI-pipeline: {directe en indirecte dependencies, inclusief images gebruikt in Dockerfiles, Helm charts, pre-commit hooks en CI-pipeline-definities}.
 
+Zie [$M36$]($BASE_URL$/$LATEST$/ICTU-Kwaliteitsaanpak.html#m36).
+
 ## Testen
 
 Gedurende de realisatiefase worden de use cases in samenwerking met de product owner vertaald naar user stories. Per user story worden één of meer logische testgevallen opgesteld; per logisch testgeval worden één of meer fysieke testgevallen opgesteld. De user stories, logische testgevallen en fysieke testgevallen zijn expliciet aan elkaar gekoppeld. User stories en logische testgevallen worden vastgelegd in Jira; zie de bijlagen voor de te gebruiken typen en relaties. Afwijkingen op deze standaard aanpak zijn alleen toegestaan met goedkeuring van de kwaliteitsmanager.

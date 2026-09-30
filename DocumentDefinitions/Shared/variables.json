@@ -27,6 +27,7 @@
   "M33": "M33: ICTU organiseert periodiek een gezamenlijke self-assessment ten aanzien van de Kwaliteitsaanpak",
   "M34": "M34: Het project draagt software beheerst over",
   "M35": "M35: Het project hanteert een agile architectuuraanpak",
+  "M36": "M36: Het project beheert dependencies op veilige manier",
   "BIA": "Een business impact analyse is een methode om de mogelijke bedrijfsimpact te bepalen die een organisatie zou kunnen ervaren door een incident, dat de functionaliteit van of de informatie in een applicatie in gevaar brengt [NORA]",
   "DTPSR": "Een detailtestplan softwarerealisatie beschrijft welke testen en testsoorten ICTU gebruikt om de kwaliteit van de projectresultaten te testen gedurende de realisatiefase van het project",
   "GFO": "Een globaal functioneel ontwerp beschrijft de functionele werking van een product op hoofdlijnen, voor specifieke use cases",

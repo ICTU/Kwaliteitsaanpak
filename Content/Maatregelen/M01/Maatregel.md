@@ -219,7 +219,7 @@ De deploymentdocumentatie bevat informatie over de eisen die een applicatie stel
 
 De documentatie voor operationeel beheer bevat tenminste informatie over: back-up/recovery, procedures bij calamiteiten, regelmatig terugkerende beheeractiviteiten, opstart- en afsluitprocedures.
 
-### Software bill of materials
+### Software bill of materials (SBoM)
 
 <!-- submeasures: 19 -->
 

@@ -35,6 +35,7 @@ De onderstaande tabellen bevatten afkortingen en termen die voorkomen in de $KWA
 | **PvA** | plan van aanpak | document waarin de aanpak, planning, benodigde middelen, risico’s en randvoorwaarden voor de uitvoering van een project of projectfase worden vastgelegd |
 | **PvE** | programma van eisen | document waarin de opdrachtgevende organisatie de eisen vastlegt waaraan het op te leveren product moet voldoen |
 | **SAD** | softwarearchitectuurdocument | $SAD$ |
+| **SBoM** | software bill of materials | een overzicht van alle **dependencies** die een applicatie of systeem gebruikt |
 | **SDM** | software delivery manager | zie **software delivery manager** in de tabel met termen |
 | **TVA** | threat and vulnerability assessment | $TVA$ |
 | **UX** | user experience | de ervaring van een gebruiker bij het gebruik van een product of dienst; zie ook **gebruikskwaliteit** en **usability** |
@@ -53,6 +54,7 @@ De onderstaande tabellen bevatten afkortingen en termen die voorkomen in de $KWA
 | **autorisatie** | aan een **actor** toegekende rechten |
 | **beheerorganisatie** | een (samenwerkingsverband van) organisatie(s) die in opdracht van een opdrachtgevende organisatie het **operationeel beheer**, applicatief beheer en/of functioneel beheer van **software** uitvoert |
 | **broncode** | **software** in een vorm die leesbaar is voor mensen en de intentie van een programmeur uitdrukt |
+| **dependency** | externe software die niet als onderdeel van de **software** is ontwikkeld, maar waarvan de software wel afhankelijk is voor het bouwen, uitvoeren of correct functioneren ervan |
 | **deployment** | installatie van **software** op een systeem, waardoor de software beschikbaar wordt gemaakt voor gebruik door **actoren** |
 | **developers** | Developers zijn de mensen in het **scrumteam** die iedere sprint gecommitteerd zijn aan het maken van elk aspect van een bruikbaar increment [Scrumgids] |
 | **DevOps** | een praktijk die tot doel heeft **softwareontwikkeling** en **operationeel beheer** samen te brengen |

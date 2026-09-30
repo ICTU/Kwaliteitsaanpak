@@ -64,7 +64,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **release notes** | een overzicht van de wijzigingen in een **release** |
 | **release** | een voor gebruik vrijgegeven versie van de **software** |
 | **SAD** | $SAD$ |
-| **SBoM** | SBoM staat voor Software Bill of Materials en is te vergelijken met aan pakbon uit de logistiek. Een SBoM is een overzicht van componenten, bibliotheken en andere softwareonderdelen die in een applicatie of systeem worden gebruikt. |
+| **SBoM** | Een Software Bill of Materials  is een overzicht van alle dependencies die een applicatie of systeem gebruikt. |
 | **Scrum** | Scrum is een lichtgewicht raamwerk dat mensen, teams en organisaties helpt om waarde te creёren door middel van adaptieve oplossingen voor complexe problemen [Scrumgids] |
 | **Scrummaster** | De Scrummaster is verantwoordelijk voor het opzetten van **Scrum**, zoals staat beschreven in de Scrumgids [Scrumgids] |
 | **Scrumteam** | Een Scrumteam bestaat uit één **Scrummaster**, één **product owner** en **ontwikkelaars** (*developers* in de Scrumgids) [Scrumgids] |

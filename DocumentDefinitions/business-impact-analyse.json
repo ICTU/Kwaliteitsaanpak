@@ -1,0 +1,17 @@
+{
+    "BuildPath": "build/Templates/BIA/",
+    "DocumentFolder": "BIA",
+    "OutputFormats": {
+        "docx": {
+            "InputFile": "DocumentDefinitions/Templates/Neutraal-Template-Business-Impact-Analyse.md",
+            "OutputFile": "Neutraal-Template-Business-Impact-Analyse.docx",
+            "OutputPaths": [
+                "docs/$VERSIE$"
+            ],
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-neutral.docx"
+        }
+    },
+    "VariablesFiles": [
+        "DocumentDefinitions/Shared/variables.json"
+    ]
+}

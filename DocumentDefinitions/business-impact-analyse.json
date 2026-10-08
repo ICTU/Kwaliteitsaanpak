@@ -1,0 +1,22 @@
+{
+    "BuildPath": "build/Templates/BIA/",
+    "Title": "Business Impact Analyse",
+    "Subtitle": "{Productnaam, versie}",
+    "DocumentType": "Template",
+    "DocumentFolder": "BIA",
+    "FrontPage": "Neutral",
+    "OutputFormats": {
+        "docx": {
+            "IncludeTableOfContents": true,
+            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "OutputFile": "Neutraal-Template-Business-Impact-Analyse.docx",
+            "OutputPaths": [
+                "docs/$VERSIE$"
+            ],
+            "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"
+        }
+    },
+    "VariablesFiles": [
+        "DocumentDefinitions/Shared/variables.json"
+    ]
+}

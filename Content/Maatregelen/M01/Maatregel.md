@@ -36,6 +36,10 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 
 In een business impact analyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting: de risico’s die een organisatie bereid is te accepteren. Alleen de opdrachtgevende organisatie zelf kan hierover een uitspraak doen.
 
+Beschikbare templates:
+
+* [Template business impact analyse]($BASE_URL$/$VERSIE$/Neutraal-Template-Business-Impact-Analyse.docx).
+
 ### Data protection impact assessment
 
 <!-- submeasures: 2 -->
@@ -190,6 +194,10 @@ Het informatiebeveiligingsplan vormt een praktisch toepasbaar document dat uitle
 Het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) bevat een methode om te komen tot een systematische aanpak van informatiebeveiliging. Eén van de vereisten van het VIR 2007 is dat voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een afhankelijkheids- en kwetsbaarheidsanalyse (A&K-analyse) wordt uitgevoerd.
 
 Bij ICTU wordt daarvoor een TVA gebruikt. Hierin worden de betrouwbaarheidseisen, die aan de bedrijfsprocessen en dientengevolge aan het informatiesysteem of verantwoordelijkheidsgebied worden gesteld, tijdens een afhankelijkheidsanalyse geïnventariseerd. Vervolgens worden de bedreigingen geïdentificeerd en geanalyseerd. De TVA levert zodoende een deel van een traceerbare onderbouwing voor de te treffen beveiligingsmaatregelen. De TVA wordt tijdens de voorfase opgesteld op basis van de PSA, de BIA, een eventuele DPIA en de inhoud van de ontwerp- en architectuurdocumentatie.
+
+Beschikbare templates:
+
+* [Template threat and vulnerability assessment]($BASE_URL$/$VERSIE$/Neutraal-Template-Threat-and-Vulnerability-Assessment.docx).
 
 ### Kwaliteitsplan
 

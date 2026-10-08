@@ -1,0 +1,5 @@
+## Over dit document
+
+Betrouwbare informatie en betrouwbare werkende voorzieningen zijn een noodzaak om op een verantwoorde wijze processen te kunnen uitvoeren. Informatiebeveiliging dient ervoor deze betrouwbaarheid te bewerkstelligen. Betrouwbare informatievoorziening is overeenkomstig het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) de verantwoordelijkheid van de lijnmanager. Door op een systematische wijze na te gaan welke risico’s er zijn en vervolgens vast te stellen welke daarvan al dan niet acceptabel zijn, kan er een bewuste afweging worden gemaakt.
+
+In het VIR staat een risicoanalyse centraal, de manier waarop is niet meer voorgeschreven. Voor deze situatie is een risicoanalyse uitgevoerd die geïnspireerd is op de IRAM-methode (Information Risk Assessment Methodology) van het ISF (Information Security Forum). In deze risicoanalyse staat het uitvoeren en opmaken van een BIA (Business Impact Assessment) en een TVA (Threats and Vulnerability Analysis) centraal. Over de uitkomsten van de BIA wordt hieronder gerapporteerd. {De TVA wordt op een later moment uitgevoerd/De resultaten van de TVA zijn te vinden in ...}

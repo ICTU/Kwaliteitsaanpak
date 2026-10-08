@@ -1,8 +1,16 @@
 # Versie 5.5.0, nog te releasen
 
+## Kwaliteitsaanpak
+
+* In M01 "Het project ontvangt en levert in elke fase vastgestelde producten en informatie", een link naar het template Business Impact Analyse toegevoegd.
+
 ## Template Kwaliteitsplan
 
-- Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
+* Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
+
+## Template Business Impact Analyse
+
+* Een neutraal template Business Impact Analyse toegevoegd aan de set van templates.
 
 # Versie 5.4.1, 28 september 2026
 

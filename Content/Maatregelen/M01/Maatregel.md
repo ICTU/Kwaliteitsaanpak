@@ -36,6 +36,10 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 
 In een business impact analyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting: de risico’s die een organisatie bereid is te accepteren. Alleen de opdrachtgevende organisatie zelf kan hierover een uitspraak doen.
 
+Beschikbare templates:
+
+* [Template business impact analyse]($BASE_URL$/$VERSIE$/Neutraal-Template-Business-Impact-Analyse.docx).
+
 ### Data protection impact assessment
 
 <!-- submeasures: 2 -->

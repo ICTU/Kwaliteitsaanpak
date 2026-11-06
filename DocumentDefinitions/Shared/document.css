@@ -249,6 +249,75 @@ ul > li::before {
     padding: 1em;
 }
 
+/* Admonitions, see https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts */
+
+.admonition {
+    border-left: 0.25em solid;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+}
+
+.admonition > :last-child {
+    margin-bottom: 0;
+}
+
+.admonition-title {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.admonition-icon {
+    fill: currentColor;
+    margin-right: 0.5em;
+    vertical-align: text-bottom;
+}
+
+.admonition-note {
+    background-color: #e6f6fd;
+    border-color: #2c64ad;
+}
+
+.admonition-note .admonition-title {
+    color: #2c64ad;
+}
+
+.admonition-tip {
+    background-color: #e6f6fd;
+    border-color: #4c76ba;
+}
+
+.admonition-tip .admonition-title {
+    color: #4c76ba;
+}
+
+.admonition-important {
+    background-color: #f8e6f9;
+    border-color: #b500c7;
+}
+
+.admonition-important .admonition-title {
+    color: #b500c7;
+}
+
+.admonition-warning {
+    background-color: #fbe8f1;
+    border-color: #db1778;
+}
+
+.admonition-warning .admonition-title {
+    color: #db1778;
+}
+
+.admonition-caution {
+    background-color: #f8d1e4;
+    border-color: #db1778;
+    border-left-width: 0.5em;
+}
+
+.admonition-caution .admonition-title {
+    color: #db1778;
+}
+
 /* Pygments styles for code block highlighting.
    Generate with uvx --with pygments python -c "from pygments.formatters import HtmlFormatter; print(HtmlFormatter().get_style_defs('.highlight'))"
 */

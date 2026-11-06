@@ -78,3 +78,11 @@ class SelfAssessmentXlsxBuilderTest(unittest.TestCase):
         """Test that an explanation of a submeasure that does not exist is an error."""
         self.add_section(self.measure_section, "3", "Explanation", "Explanation text", submeasures="3")
         self.assertRaises(ValueError, self.comments)
+
+    def test_admonition(self):
+        """Test that the title and contents of an admonition are added to the measure comment."""
+        admonition = SubElement(
+            self.measure_section, xmltags.ADMONITION, {xmltags.ADMONITION_TYPE: "tip", xmltags.ADMONITION_TITLE: "Tip"}
+        )
+        SubElement(admonition, xmltags.PARAGRAPH).text = "Tip text"
+        self.assertTrue(self.comments()["B7"].endswith("Rationale text\n\nTip:\nTip text"))

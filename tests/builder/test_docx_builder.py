@@ -8,6 +8,7 @@ from xml.etree.ElementTree import Element, ElementTree, SubElement
 import docx
 from docx.document import Document
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
+from docx.oxml.ns import qn
 from docx.shared import Cm
 from docx.text.paragraph import Paragraph
 from pygments.util import ClassNotFound
@@ -192,3 +193,47 @@ class DocumentStructureTest(unittest.TestCase):
         inline_shape = self.build().inline_shapes[-1]
         self.assertEqual("ICTU logo", inline_shape._inline.docPr.get("title"))
         self.assertEqual(Cm(5), inline_shape.width)
+
+    def add_admonition(self, admonition_type: str = "note", title: str = "Opmerking") -> Element:
+        """Add an admonition to the document."""
+        attributes = {xmltags.ADMONITION_TYPE: admonition_type, xmltags.ADMONITION_TITLE: title}
+        return SubElement(self.document, xmltags.ADMONITION, attributes)
+
+    def test_admonition(self):
+        """Test that an admonition is a table with one colored cell that has a bold title and the contents."""
+        admonition = self.add_admonition("warning", "Waarschuwing")
+        paragraph = SubElement(admonition, xmltags.PARAGRAPH)
+        paragraph.text = "See "
+        SubElement(paragraph, xmltags.ANCHOR, {xmltags.ANCHOR_LINK: "https://link"}).text = "link"
+        self.add_list(admonition, xmltags.BULLET_LIST, "item")
+        SubElement(self.document, xmltags.PARAGRAPH).text = "After"
+        document = self.build()
+        cell = document.tables[-1].cell(0, 0)
+        title, content, item = cell.paragraphs
+        self.assertEqual("Waarschuwing", title.text)
+        self.assertTrue(title.runs[0].bold)
+        self.assertEqual("DB1778", str(title.runs[0].font.color.rgb))
+        self.assertEqual("See link", content.text)
+        self.assertEqual(["item", "Lijst opsom.teken1"], [item.text, item.style.name])
+        cell_properties = cell._tc.tcPr
+        self.assertEqual("FBE8F1", cell_properties.find(qn("w:shd")).get(qn("w:fill")))
+        left_border = cell_properties.find(f"{qn('w:tcBorders')}/{qn('w:left')}")
+        self.assertEqual(("single", "DB1778"), (left_border.get(qn("w:val")), left_border.get(qn("w:color"))))
+        self.assertEqual("After", document.paragraphs[-1].text)
+
+    def test_admonition_with_table(self):
+        """Test that a table in an admonition is nested in the admonition cell."""
+        admonition = self.add_admonition()
+        table = SubElement(admonition, xmltags.TABLE, {xmltags.TABLE_COLUMNS: "1", xmltags.TABLE_ROWS: "0"})
+        SubElement(SubElement(table, xmltags.TABLE_HEADER_ROW), xmltags.TABLE_CELL).text = "cell"
+        cell = self.build().tables[-1].cell(0, 0)
+        self.assertEqual("cell", cell.tables[0].cell(0, 0).text)
+
+    def test_consecutive_admonitions(self):
+        """Test that consecutive admonitions are separated by a paragraph so Word does not merge the tables."""
+        self.add_admonition()
+        self.add_admonition("tip", "Tip")
+        document = self.build()
+        self.assertEqual(2, len(document.tables))
+        body = [element.tag for element in document.element.body]
+        self.assertEqual([qn("w:tbl"), qn("w:p"), qn("w:tbl")], body[-4:-1])

@@ -1,6 +1,8 @@
 """Markdown syntax."""
 
 # Official Markdown syntax
+# GitHub alerts, e.g. "> [!NOTE]", case-insensitive, optionally followed by a title (not supported by GitHub)
+ADMONITION_PATTERN = r"^>\s?\[!(?i:(NOTE|TIP|IMPORTANT|WARNING|CAUTION))\]\s*(.*)"
 BOLD_START = BOLD_END = "**"
 BOLD_ALTERNATIVE_START = BOLD_ALTERNATIVE_END = "__"
 BULLET_LIST_PATTERN = r"^[\*\+\-] "
@@ -17,6 +19,7 @@ ITALIC_ALTERNATIVE_START = ITALIC_ALTERNATIVE_END = "*"
 # The URL may contain balanced parentheses (e.g. https://en.wikipedia.org/wiki/Foo_(disambiguation)), one level deep
 LINK_PATTERN = r"^\[([^\]]+)\]\(((?:[^()]|\([^()]*\))*)\)"
 NUMBERED_LIST_PATTERN = r"^[0-9A-Za-z]+\. "
+QUOTE_MARKER = ">"
 STRIKETROUGH_START = STRIKETROUGH_END = "~~"
 TABLE_MARKER = "|"
 

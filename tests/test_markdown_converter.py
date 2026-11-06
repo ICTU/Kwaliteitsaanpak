@@ -265,3 +265,119 @@ class MarkdownTest(MarkdownConverterTestCase):
         paragraph = self.find(xmltags.PARAGRAPH)
         anchor_link = self.find(xmltags.ANCHOR, paragraph).attrib[xmltags.ANCHOR_LINK]
         self.assertEqual("https://en.wikipedia.org/wiki/ZAP_(software)", anchor_link)
+
+
+@patch("markdown_converter.pathlib.Path.write_text", Mock())
+class AdmonitionTest(MarkdownConverterTestCase):
+    """Unit tests for admonitions in the Markdown converter."""
+
+    def convert(self, markdown: str) -> Element:
+        """Convert the Markdown and return the document element."""
+        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=markdown)):
+            return cast(Element, self.xml().getroot())
+
+    def admonition(self, markdown: str) -> Element:
+        """Convert the Markdown and return the first admonition."""
+        return cast(Element, self.convert(markdown).find(xmltags.ADMONITION))
+
+    def test_admonition(self):
+        """Test that an admonition has a type, a default title, and contents."""
+        admonition = self.admonition("> [!NOTE]\n> Text\n")
+        self.assertEqual({xmltags.ADMONITION_TYPE: "note", xmltags.ADMONITION_TITLE: "Opmerking"}, admonition.attrib)
+        self.assertEqual("Text", self.find(xmltags.PARAGRAPH, admonition).text)
+
+    def test_default_titles(self):
+        """Test the default titles of the admonition types; the types are case-insensitive."""
+        for marker, title in (
+            ("NOTE", "Opmerking"),
+            ("tip", "Tip"),
+            ("Important", "Belangrijk"),
+            ("WARNING", "Waarschuwing"),
+            ("caution", "Let op"),
+        ):
+            with self.subTest(marker=marker):
+                admonition = self.admonition(f"> [!{marker}]\n> Text\n")
+                self.assertEqual(marker.lower(), admonition.attrib[xmltags.ADMONITION_TYPE])
+                self.assertEqual(title, admonition.attrib[xmltags.ADMONITION_TITLE])
+
+    def test_unknown_type(self):
+        """Test that an unknown admonition type is not an admonition."""
+        self.assertIsNone(self.admonition("> [!UNKNOWN]\n> Text\n"))
+
+    def test_custom_title(self):
+        """Test that a title after the marker replaces the default title and that variables are replaced."""
+        admonition = self.admonition("> [!WARNING] Let op de $var$\n> Text\n")
+        self.assertEqual("Let op de variable", admonition.attrib[xmltags.ADMONITION_TITLE])
+
+    def test_formatted_text(self):
+        """Test that the contents of the admonition are processed as Markdown."""
+        paragraph = self.find(xmltags.PARAGRAPH, self.admonition("> [!TIP]\n> **Bold** [link](https://link) $var$\n"))
+        self.assertEqual("Bold", self.find(xmltags.BOLD, paragraph).text)
+        self.assertEqual("https://link", self.find(xmltags.ANCHOR, paragraph).attrib[xmltags.ANCHOR_LINK])
+        self.assertEqual(" variable", self.find(xmltags.ANCHOR, paragraph).tail)
+
+    def test_paragraphs(self):
+        """Test that a line with only the quote marker separates paragraphs."""
+        admonition = self.admonition("> [!NOTE]\n> Paragraph 1\n>\n> Paragraph 2\n")
+        self.assertEqual(["Paragraph 1", "Paragraph 2"], [p.text for p in admonition.findall(xmltags.PARAGRAPH)])
+
+    def test_nested_list(self):
+        """Test that an admonition can contain a nested list."""
+        admonition = self.admonition("> [!NOTE]\n> * Item\n> + Nested item\n")
+        bullet_list = self.find(xmltags.BULLET_LIST, admonition)
+        self.assertEqual("Item", self.find(xmltags.LIST_ITEM, bullet_list).text)
+        self.assertEqual("Nested item", self.find(f"{xmltags.BULLET_LIST}/{xmltags.LIST_ITEM}", bullet_list).text)
+
+    def test_table(self):
+        """Test that an admonition can contain a table that ends with the admonition."""
+        document = self.convert("> [!NOTE]\n> |col|\n> |---|\n> |cell|\nAfter\n")
+        admonition = self.find(xmltags.ADMONITION, document)
+        self.assertEqual(
+            "cell", self.find(f"{xmltags.TABLE_ROW}/{xmltags.TABLE_CELL}", self.find(xmltags.TABLE, admonition)).text
+        )
+        self.assertEqual("After", self.find(xmltags.PARAGRAPH, document).text)
+
+    def test_code_block(self):
+        """Test that an admonition can contain a code block, even if it is not closed."""
+        admonition = self.admonition("> [!NOTE]\n> ```python\n> print('Hello world')\n")
+        self.assertEqual("print('Hello world')\n", self.find(xmltags.CODE_BLOCK, admonition).text)
+
+    def test_marker_in_code_block(self):
+        """Test that a marker in a code block is not an admonition."""
+        document = self.convert("```markdown\n> [!NOTE]\n```\n")
+        self.assertIsNone(document.find(xmltags.ADMONITION))
+        self.assertEqual("> [!NOTE]\n", self.find(xmltags.CODE_BLOCK, document).text)
+
+    def test_end_at_line_without_quote_marker(self):
+        """Test that the admonition ends at the first line that does not start with the quote marker."""
+        document = self.convert("> [!NOTE]\n> * Item\nAfter\n")
+        self.assertEqual("After", self.find(xmltags.PARAGRAPH, document).text)
+        self.assertIsNone(self.find(xmltags.ADMONITION, document).find(xmltags.PARAGRAPH))
+
+    def test_end_at_empty_line(self):
+        """Test that the admonition ends at an empty line."""
+        document = self.convert("> [!NOTE]\n> Inside\n\nAfter\n")
+        self.assertEqual("After", self.find(xmltags.PARAGRAPH, document).text)
+
+    def test_end_of_document(self):
+        """Test that an admonition with a list at the end of the document is closed."""
+        admonition = self.admonition("> [!NOTE]\n> 1. Item")
+        self.assertEqual("Item", self.find(f"{xmltags.NUMBERED_LIST}/{xmltags.LIST_ITEM}", admonition).text)
+
+    def test_consecutive_admonitions(self):
+        """Test that a marker ends the previous admonition and any list before it."""
+        document = self.convert("* Item\n> [!NOTE]\n> * Note\n> [!TIP]\n> Tip\n")
+        self.assertEqual(
+            ["note", "tip"], [a.attrib[xmltags.ADMONITION_TYPE] for a in document.iter(xmltags.ADMONITION)]
+        )
+        self.assertIsNone(self.find(xmltags.BULLET_LIST, document).find(xmltags.ADMONITION))
+
+    def test_quote_without_marker(self):
+        """Test that a quote without a marker is not an admonition."""
+        document = self.convert("> Quote\n")
+        self.assertIsNone(document.find(xmltags.ADMONITION))
+        self.assertEqual("> Quote", self.find(xmltags.PARAGRAPH, document).text)
+
+    def test_heading(self):
+        """Test that headings are not allowed in admonitions."""
+        self.assertRaises(ValueError, self.convert, "> [!NOTE]\n> # Heading\n")

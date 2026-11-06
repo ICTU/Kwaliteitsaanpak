@@ -2,11 +2,13 @@
 
 import pathlib
 import shutil
-from typing import cast
+from typing import ClassVar, cast
 
 from docx import Document
 from docx.document import Document as DocumentObject
 from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
 from docx.shared import Cm, RGBColor
 from docx.table import Table, _Cell
 from docx.table import _Row as Row
@@ -27,6 +29,14 @@ class DocxBuilder(Builder):
     """Docx builder."""
 
     SCHEMA = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+    # Admonition type: (border and title color, background color, left border width in eighths of a point)
+    ADMONITION_STYLES: ClassVar = {
+        "note": ("2C64AD", "E6F6FD", 24),
+        "tip": ("4C76BA", "E6F6FD", 24),
+        "important": ("B500C7", "F8E6F9", 24),
+        "warning": ("DB1778", "FBE8F1", 24),
+        "caution": ("DB1778", "F8D1E4", 48),
+    }
     TEXT_TAGS = (
         xmltags.PARAGRAPH,
         xmltags.LIST_ITEM,
@@ -87,9 +97,7 @@ class DocxBuilder(Builder):
         elif tag == xmltags.TABLE:
             self.table = self.container.add_table(0, int(attributes[xmltags.TABLE_COLUMNS]))
             self.table.style = "Tabelraster1"
-            # Set table width to 100%
-            self.table._tbl.tblPr.xpath("./w:tblW")[0].attrib[f"{self.SCHEMA}type"] = "pct"
-            self.table._tbl.tblPr.xpath("./w:tblW")[0].attrib[f"{self.SCHEMA}w"] = "100%"
+            self._set_full_width(self.table)
         elif tag in (xmltags.TABLE_HEADER_ROW, xmltags.TABLE_ROW):
             assert self.table
             self.row = self.table.add_row()
@@ -111,6 +119,45 @@ class DocxBuilder(Builder):
                 width=Cm(int(attributes[xmltags.IMAGE_WIDTH])),
             )
             picture._inline.docPr.attrib["title"] = attributes[xmltags.IMAGE_TITLE]
+        elif tag == xmltags.ADMONITION:
+            self._start_admonition(attributes)
+
+    def _set_full_width(self, table: Table) -> None:
+        """Set the table width to 100%."""
+        table_width = table._tbl.tblPr.xpath("./w:tblW")[0]
+        table_width.attrib[f"{self.SCHEMA}type"] = "pct"
+        table_width.attrib[f"{self.SCHEMA}w"] = "100%"
+
+    def _start_admonition(self, attributes: TreeBuilderAttributes) -> None:
+        """Start an admonition: a table with one colored cell that has the title and will get the contents."""
+        color, background_color, border_width = self.ADMONITION_STYLES[str(attributes[xmltags.ADMONITION_TYPE])]
+        blocks = [block for block in self.doc.element.body if block.tag != qn("w:sectPr")]
+        if blocks and blocks[-1].tag == qn("w:tbl"):
+            self.doc.add_paragraph()  # Prevent Word from merging the admonition with the preceding table
+        table = self.doc.add_table(1, 1)
+        self._set_full_width(table)
+        cell = table.cell(0, 0)
+        cell_properties = cell._tc.get_or_add_tcPr()
+        borders = OxmlElement("w:tcBorders")
+        for side in ("top", "left", "bottom", "right"):
+            border = OxmlElement(f"w:{side}")
+            if side == "left":
+                border.set(qn("w:val"), "single")
+                border.set(qn("w:sz"), str(border_width))
+                border.set(qn("w:color"), color)
+            else:
+                border.set(qn("w:val"), "nil")
+            borders.append(border)
+        cell_properties.append(borders)
+        shading = OxmlElement("w:shd")
+        shading.set(qn("w:val"), "clear")
+        shading.set(qn("w:color"), "auto")
+        shading.set(qn("w:fill"), background_color)
+        cell_properties.append(shading)
+        title = cell.paragraphs[0].add_run(str(attributes[xmltags.ADMONITION_TITLE]))
+        title.font.bold = True
+        title.font.color.rgb = RGBColor.from_string(color)
+        self.container = cell
 
     def _add_list_item(self) -> None:
         """Add a list item."""
@@ -186,6 +233,8 @@ class DocxBuilder(Builder):
         elif tag == xmltags.HEADING:
             assert self.paragraph
             add_bookmark(self.paragraph)
+        elif tag == xmltags.ADMONITION:
+            self.container = self.doc
 
     def _add_code_block(self, code: str, attributes: TreeBuilderAttributes) -> None:
         """Add a syntax-highlighted code block as a paragraph with the Code style."""

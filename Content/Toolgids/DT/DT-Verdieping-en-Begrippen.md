@@ -126,11 +126,11 @@ Een goede SBoM bevat bij voorkeur minimaal:
 
 In de [Kwaliteitsaanpak]($BASE_URL$/$LATEST$/ICTU-Kwaliteitsaanpak.html#m16) is het gebruik van tools en het genereren van een SBoM een maatregel.
 
-⚠️ Let op
-Dependency-Track hanteert de naam project voor de verzameling van dezelfde SBoM's die alleen verschillen in versie. 
-Dit kan tot verwarring leiden.
-Je kunt bijvoorbeeld voor iedere release een SBoM genereren van de front-end en de back-end van je project.
-Dependency-Track ziet dit dan als twee losse 'projects'.
+> [!NOTE]
+> Dependency-Track hanteert de naam project voor de verzameling van dezelfde SBoM's die alleen verschillen in versie.
+> Dit kan tot verwarring leiden.
+> Je kunt bijvoorbeeld voor iedere release een SBoM genereren van de front-end en de back-end van je project.
+> Dependency-Track ziet dit dan als twee losse 'projects'.
 
 ## Project
 
@@ -250,7 +250,9 @@ NVD gebruikt CVE's als basis en verrijkt die met aanvullende informatie, zoals:
 * metadata over getroffen producten.
 
 Voor Dependency-Track is de NVD een belangrijke bron, maar niet de enige bron.
-Let op dat de NVD vooral goed werkt wanneer componenten correct gekoppeld kunnen worden aan CPE's.
+
+> [!NOTE]
+> De NVD werkt vooral goed wanneer componenten correct gekoppeld kunnen worden aan CPE's.
 
 Bronnen:
 
@@ -295,8 +297,9 @@ Voor Dependency-Track v5 beschrijft de officiële configuratiedocumentatie drie 
 * GitHub Advisories;
 * OSV.
 
-Let op: algemene of oudere Dependency-Track-documentatie noemt soms ook bronnen zoals Sonatype OSS Index, Snyk, Trivy of VulnDB.
-Controleer altijd de documentatie van de gebruikte Dependency-Track-versie en de actuele configuratie van de eigen omgeving.
+> [!NOTE]
+> Algemene of oudere Dependency-Track-documentatie noemt soms ook bronnen zoals Sonatype OSS Index, Snyk, Trivy of VulnDB.
+> Controleer altijd de documentatie van de gebruikte Dependency-Track-versie en de actuele configuratie van de eigen omgeving.
 
 Bronnen:
 
@@ -309,9 +312,10 @@ CVSS staat voor Common Vulnerability Scoring System.
 CVSS geeft een numerieke score aan de technische ernst van een kwetsbaarheid.
 De score loopt van 0,0 tot 10,0 en wordt vaak vertaald naar categorieën zoals low, medium, high en critical.
 
-Belangrijk: CVSS is een maat voor ernst, niet automatisch voor risico.
-Een kwetsbaarheid met een hoge CVSS-score is technisch ernstig, maar dat betekent niet altijd dat deze in jouw context te misbruiken is.
-Omgekeerd kan een kwetsbaarheid met een lagere score toch belangrijk zijn als deze actief wordt misbruikt.
+> [!IMPORTANT]
+> CVSS is een maat voor ernst, niet automatisch voor risico.
+> Een kwetsbaarheid met een hoge CVSS-score is technisch ernstig, maar dat betekent niet altijd dat deze in jouw context te misbruiken is.
+> Omgekeerd kan een kwetsbaarheid met een lagere score toch belangrijk zijn als deze actief wordt misbruikt.
 
 Bronnen:
 

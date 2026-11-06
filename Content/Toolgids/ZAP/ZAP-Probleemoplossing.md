@@ -18,7 +18,8 @@ Wanneer je PATCH in een sequence probeert te gebruiken, stopt de sequence bij de
 ```java
 java.lang.IllegalArgumentException: Method not supported: PATCH
 ```
-> ℹ️ Info
+
+> [!NOTE]
 > Sinds versie XXX, uitgebracht in 2026, ondersteunt ZAP wel HTTP PATCH.
 
 
@@ -31,7 +32,9 @@ Zest-scripts bieden geen directe ondersteuning voor logging naar `stdout`, zeker
   - een custom scan rule
   - een apart script dat de uitvoer verwerkt
 
-Let op: standaardlogging vanuit Zest werkt niet zoals je wellicht gewend bent bij andere scriptalen. Test dit goed bij gebruik in een pipeline.
+> [!IMPORTANT]
+> Standaardlogging vanuit Zest werkt niet zoals je wellicht gewend bent bij andere scriptalen. Test dit goed bij gebruik in een pipeline.
+
 ### Redirects (HTTP 303) handmatig afhandelen
 
 In tegenstelling tot een normale webbrowser volgt ZAP een **HTTP 303-redirect** niet automatisch. Dit kan ertoe leiden dat een testscript stopt of faalt nadat een POST-verzoek een `303 See Other` statuscode teruggeeft. Om dit gedrag te corrigeren, moet je de redirect handmatig afhandelen binnen je script of automation plan.
@@ -55,7 +58,6 @@ De HTTP 303-redirect bevat in de response-header een `Location`-veld met de URL 
 
 ![Screenshot: redirect location toevoegen](Images/zap-demo-11.png "Screenshot: redirect location toevoegen")
 
-## ⚠️ Let op
-- Deze aanpak vereist dat je werkt met Zest of met aangepaste scripting binnen je automation plan.
-
-- Test dit goed, want een fout in je regex kan ertoe leiden dat je een onvolledige of ongeldige URL gebruikt.
+> [!WARNING]
+> * Deze aanpak vereist dat je werkt met Zest of met aangepaste scripting binnen je automation plan.
+> * Test dit goed, want een fout in je regex kan ertoe leiden dat je een onvolledige of ongeldige URL gebruikt.

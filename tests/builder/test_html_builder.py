@@ -97,3 +97,39 @@ class HTMLEntitiesToXMLTest(unittest.TestCase):
     def test_unknown_entity_kept(self):
         """Test that an unknown entity is left untouched."""
         self.assertEqual("&unknown;", HTMLBuilder.html_entities_to_xml("&unknown;"))
+
+
+class AdmonitionTest(unittest.TestCase):
+    """Unit tests for admonitions in the HTML builder."""
+
+    def build(self, *, after_heading: bool = False) -> str:
+        """Build an HTML document with an admonition that contains a paragraph and return its contents."""
+        document = Element(xmltags.DOCUMENT, {"title": "Title", "version": "1"})
+        SubElement(document, xmltags.FRONTPAGE)  # Starts the <main> element that the document end closes
+        parent = document
+        if after_heading:
+            parent = SubElement(document, xmltags.SECTION, {xmltags.SECTION_LEVEL: "2"})
+            SubElement(parent, xmltags.HEADING).text = "Heading"
+        admonition = SubElement(
+            parent, xmltags.ADMONITION, {xmltags.ADMONITION_TYPE: "warning", xmltags.ADMONITION_TITLE: "Waarschuwing"}
+        )
+        paragraph = SubElement(admonition, xmltags.PARAGRAPH)
+        paragraph.text = "Some "
+        SubElement(paragraph, xmltags.BOLD).text = "bold"
+        with tempfile.TemporaryDirectory() as directory:
+            filename = pathlib.Path(directory) / "output.html"
+            Converter(ElementTree(document)).convert(HTMLBuilder(filename, pathlib.Path("style.css")))
+            return filename.read_text(encoding="utf-8")
+
+    def test_admonition(self):
+        """Test that the admonition is an aside with a class per type, an icon, a title, and the contents."""
+        html = self.build()
+        self.assertIn('<aside class="admonition admonition-warning"><p class="admonition-title"><svg ', html)
+        self.assertIn('class="admonition-icon"', html)
+        self.assertIn("</svg>Waarschuwing</p><p>Some <strong>bold</strong></p></aside>", html)
+
+    def test_admonition_after_heading(self):
+        """Test that the heading is kept together with the whole admonition."""
+        html = self.build(after_heading=True)
+        self.assertIn('<div class="keep-together"><h2 id="heading">Heading</h2><aside ', html)
+        self.assertIn("</aside></div>", html)

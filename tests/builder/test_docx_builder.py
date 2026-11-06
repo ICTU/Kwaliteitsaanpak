@@ -7,7 +7,7 @@ from xml.etree.ElementTree import Element, ElementTree, SubElement
 
 import docx
 from docx.document import Document
-from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
+from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.shared import Cm
 from docx.text.paragraph import Paragraph
@@ -100,6 +100,12 @@ class TextFormattingTest(unittest.TestCase):
         document = self.build(xmltags.CODE)
         self.assertEqual("Fira code", document.paragraphs[-1].runs[-1].font.name)
 
+    def test_instruction(self):
+        """Test that instruction text is black and highlighted in yellow."""
+        run = self.build(xmltags.INSTRUCTION).paragraphs[-1].runs[-1]
+        self.assertEqual(WD_COLOR_INDEX.YELLOW, run.font.highlight_color)
+        self.assertEqual("000000", str(run.font.color.rgb))
+
 
 class DocumentStructureTest(unittest.TestCase):
     """Unit tests for the document structure elements in the docx builder."""
@@ -128,6 +134,25 @@ class DocumentStructureTest(unittest.TestCase):
         paragraph = self.build().paragraphs[-1]
         self.assertEqual("Title", paragraph.text)
         self.assertEqual("Title", paragraph.style.name)
+
+    def test_header(self):
+        """Test that the header text is right aligned in the page header."""
+        SubElement(self.document, xmltags.HEADER).text = "Header"
+        paragraph = self.build().sections[0].header.paragraphs[0]
+        self.assertEqual("Header", paragraph.text)
+        self.assertEqual(WD_PARAGRAPH_ALIGNMENT.RIGHT, paragraph.paragraph_format.alignment)
+
+    def test_page_break(self):
+        """Test that a page break is added."""
+        SubElement(self.document, xmltags.PAGEBREAK)
+        self.assertIsNotNone(self.build().paragraphs[-1]._p.find(f"{qn('w:r')}/{qn('w:br')}"))
+
+    def test_table_of_contents(self):
+        """Test that the table of contents has a heading."""
+        attributes = {xmltags.TABLE_OF_CONTENTS_HEADING: "Inhoud"}
+        SubElement(self.document, xmltags.TABLE_OF_CONTENTS, attributes)
+        heading = self.build().paragraphs[-2]
+        self.assertEqual(("Inhoud", "TOC Heading"), (heading.text, heading.style.name))
 
     def test_heading(self):
         """Test that the heading style depends on the section level."""
@@ -200,7 +225,7 @@ class DocumentStructureTest(unittest.TestCase):
         return SubElement(self.document, xmltags.ADMONITION, attributes)
 
     def test_admonition(self):
-        """Test that an admonition is a table with one colored cell that has a bold title and the contents."""
+        """Test that an admonition is a table with one cell that has a title and the contents, styled per type."""
         admonition = self.add_admonition("warning", "Waarschuwing")
         paragraph = SubElement(admonition, xmltags.PARAGRAPH)
         paragraph.text = "See "
@@ -208,17 +233,13 @@ class DocumentStructureTest(unittest.TestCase):
         self.add_list(admonition, xmltags.BULLET_LIST, "item")
         SubElement(self.document, xmltags.PARAGRAPH).text = "After"
         document = self.build()
-        cell = document.tables[-1].cell(0, 0)
-        title, content, item = cell.paragraphs
+        table = document.tables[-1]
+        self.assertEqual("Admonition Warning", table.style.name)
+        title, content, item = table.cell(0, 0).paragraphs
         self.assertEqual("Waarschuwing", title.text)
-        self.assertTrue(title.runs[0].bold)
-        self.assertEqual("DB1778", str(title.runs[0].font.color.rgb))
+        self.assertEqual("Admonition Warning Title", title.runs[0].style.name)
         self.assertEqual("See link", content.text)
         self.assertEqual(["item", "Lijst opsom.teken1"], [item.text, item.style.name])
-        cell_properties = cell._tc.tcPr
-        self.assertEqual("FBE8F1", cell_properties.find(qn("w:shd")).get(qn("w:fill")))
-        left_border = cell_properties.find(f"{qn('w:tcBorders')}/{qn('w:left')}")
-        self.assertEqual(("single", "DB1778"), (left_border.get(qn("w:val")), left_border.get(qn("w:color"))))
         self.assertEqual("After", document.paragraphs[-1].text)
 
     def test_admonition_with_table(self):
@@ -237,3 +258,16 @@ class DocumentStructureTest(unittest.TestCase):
         self.assertEqual(2, len(document.tables))
         body = [element.tag for element in document.element.body]
         self.assertEqual([qn("w:tbl"), qn("w:p"), qn("w:tbl")], body[-4:-1])
+
+
+class ReferenceDocumentTest(unittest.TestCase):
+    """Unit tests for the styles in the reference documents."""
+
+    def test_admonition_styles(self):
+        """Test that the reference documents have a table style and a title style for each admonition type."""
+        for reference_document in REFERENCE_DOCX.parent.glob("reference-*.docx"):
+            style_names = {style.name for style in docx.Document(str(reference_document)).styles}
+            for admonition_type in ("Note", "Tip", "Important", "Warning", "Caution"):
+                with self.subTest(reference_document=reference_document.name, admonition_type=admonition_type):
+                    self.assertIn(f"Admonition {admonition_type}", style_names)
+                    self.assertIn(f"Admonition {admonition_type} Title", style_names)

@@ -27,9 +27,10 @@ Mogelijke oorzaken zijn:
 
 ### Oplossing
 
-⚠️ **Let op**: De gesuggereerde oplossingen hieronder kunnen niet worden aangepast in de webinterface.
-Ze horen bij de deploymentconfiguratie van de Dependency-Track API-server.
-In de praktijk moeten deze instellingen worden gecontroleerd of aangepast door een systeembeheerder, platformbeheerder of DevOps-beheerder met toegang tot de runtimeconfiguratie van de API-server.
+> [!IMPORTANT]
+> De gesuggereerde oplossingen hieronder kunnen niet worden aangepast in de webinterface.
+> Ze horen bij de deploymentconfiguratie van de Dependency-Track API-server.
+> In de praktijk moeten deze instellingen worden gecontroleerd of aangepast door een systeembeheerder, platformbeheerder of DevOps-beheerder met toegang tot de runtimeconfiguratie van de API-server.
 
 #### Controleer of de geplande analyse actief is
 
@@ -56,7 +57,9 @@ DT_TASK_PORTFOLIO_ANALYSIS_CRON=0 6 * * *
 ```
 
 De standaardwaarde `0 6 * * *` betekent dat de portfolio vulnerability analysis dagelijks om 06:00 UTC draait.
-⚠️ **Let op**: Dependency-Track gebruikt voor deze cron-expressies UTC, niet de lokale tijdzone.
+
+> [!WARNING]
+> Dependency-Track gebruikt voor deze cron-expressies UTC, niet de lokale tijdzone.
 
 Deze configuratie kan op verschillende manieren worden toegepast, afhankelijk van de deployment:
 
@@ -82,10 +85,11 @@ dt.task-scheduler.enabled=true
 dt.task.portfolio-analysis.cron=0 6 * * *
 ```
 
-Let op bij meerdere API-servernodes: de scheduler mag op meerdere nodes actief zijn.
-Dependency-Track coördineert de uitvoering via de database, zodat een geplande taak maar door één node wordt uitgevoerd.
-De scheduler moet echter wel op minimaal één API-servernode actief zijn.
-Als de scheduler op alle nodes is uitgeschakeld, draaien de geplande achtergrondtaken niet.
+> [!WARNING] Meerdere API-servernodes
+> De scheduler mag op meerdere nodes actief zijn.
+> Dependency-Track coördineert de uitvoering via de database, zodat een geplande taak maar door één node wordt uitgevoerd.
+> De scheduler moet echter wel op minimaal één API-servernode actief zijn.
+> Als de scheduler op alle nodes is uitgeschakeld, draaien de geplande achtergrondtaken niet.
 
 Controleer na wijziging van deze instellingen de API-serverlogs om vast te stellen of de scheduler actief wordt en of de portfolio vulnerability analysis daadwerkelijk wordt gestart.
 
@@ -127,9 +131,10 @@ pkg:pypi/requests@2.32.3
 
 Als de SBoM geen PURL of CPE bevat, kan Dependency-Track de component mogelijk wel tonen, maar kwetsbaarheden minder goed of helemaal niet relateren aan een kwetsbaarhedendatabase.
 
-⚠️ **Let op**: Let ook op het verschil tussen analyse en metriek.
-Een grafiek of dashboardwaarde die wordt bijgewerkt, betekent niet automatisch dat de vulnerabilities opnieuw zijn geanalyseerd.
-Controleer (of laat een systeembeheerder controleren) daarom bij twijfel de Dependency-Track API-serverlogs en de timestamps van de analyse.
+> [!IMPORTANT]
+> Let ook op het verschil tussen analyse en metriek.
+> Een grafiek of dashboardwaarde die wordt bijgewerkt, betekent niet automatisch dat de vulnerabilities opnieuw zijn geanalyseerd.
+> Controleer (of laat een systeembeheerder controleren) daarom bij twijfel de Dependency-Track API-serverlogs en de timestamps van de analyse.
 
 Dependency-Track gebruikt meerdere achtergrondtaken die los van elkaar kunnen worden uitgevoerd.
 Kwetsbaarheidsbronnen zoals NVD, GitHub Advisories en OSV worden periodiek gesynchroniseerd (mirror).
@@ -266,9 +271,9 @@ Dependency-Track v5 heeft de mogelijkheid om dependency-relaties te evalueren vi
 De documentatie noemt functies zoals `is_dependency_of`, `is_direct_dependency_of` en `is_exclusive_dependency_of`.
 Daarmee kun je bepalen of een component direct, transitief of exclusief via een andere component wordt binnengehaald.
 
-ℹ️ Licenties van transitieve dependencies  
-Dependency-Track kan alleen informatie verschaffen over WELKE softwarepakketten (dependencies) ongewenste licenties bevatten.
-Daarna moet het ontwikkelteam in de dependency tree van de gebruikte package manager bepalen welke directe dependency de transitieve component binnenhaalt.
+> [!NOTE] Licenties van transitieve dependencies
+> Dependency-Track kan alleen informatie verschaffen over WELKE softwarepakketten (dependencies) ongewenste licenties bevatten.
+> Daarna moet het ontwikkelteam in de dependency tree van de gebruikte package manager bepalen welke directe dependency de transitieve component binnenhaalt.
 
 ## Licenties worden niet weergegeven
 
@@ -398,15 +403,16 @@ cyclonedx validate \
   --fail-on-errors
 ```
 
-⚠️ **Let op**: conversie tussen SBoM-formaten is niet altijd verliesvrij. Controleer na conversie minimaal:
-
-* componentnaam
-* versie
-* package URL
-* licentie
-* supplier
-* hashes
-* dependency-relaties
+> [!CAUTION]
+> Conversie tussen SBoM-formaten is niet altijd verliesvrij. Controleer na conversie minimaal:
+>
+> * componentnaam
+> * versie
+> * package URL
+> * licentie
+> * supplier
+> * hashes
+> * dependency-relaties
 
 ### Praktisch advies
 

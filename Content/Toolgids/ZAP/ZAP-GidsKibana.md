@@ -46,7 +46,8 @@ user_agent.keyword: "ZAP-Scanner/1.0"
 NOT user_agent.keyword: "ZAP-Scanner/1.0"
 ```
 
-Let op: de exacte veldnaam kan variëren, afhankelijk van de ingest pipeline of logstructuur in jouw Elasticsearch-configuratie. Veelvoorkomende velden zijn `user_agent`, `http.user_agent` of `user_agent.keyword`.
+> [!NOTE]
+> De exacte veldnaam kan variëren, afhankelijk van de ingest pipeline of logstructuur in jouw Elasticsearch-configuratie. Veelvoorkomende velden zijn `user_agent`, `http.user_agent` of `user_agent.keyword`.
 
 ## Best practices
 

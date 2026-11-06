@@ -282,12 +282,12 @@ ul > li::before {
 }
 
 .admonition-tip {
-    background-color: #e6f6fd;
-    border-color: #4c76ba;
+    background-color: #e8f2ed;
+    border-color: #1a7f4b;
 }
 
 .admonition-tip .admonition-title {
-    color: #4c76ba;
+    color: #1a7f4b;
 }
 
 .admonition-important {
@@ -300,12 +300,12 @@ ul > li::before {
 }
 
 .admonition-warning {
-    background-color: #fbe8f1;
-    border-color: #db1778;
+    background-color: #f9eee6;
+    border-color: #c75300;
 }
 
 .admonition-warning .admonition-title {
-    color: #db1778;
+    color: #c75300;
 }
 
 .admonition-caution {

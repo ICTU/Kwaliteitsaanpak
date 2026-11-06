@@ -145,7 +145,8 @@ Met een eventuele vakantieperiode is nog geen rekening gehouden, dit zal direct 
 | Realisatie producten sprint 3    |     |     |     |     |     |     |     | X   | X   |     |
 | Afronden en afsluiten voorfase   |     |     |     |     |     |     |     |     |     | X   |
 
-NB: Onderdeel van het afronden en afsluiten van de voorfase is een GO/NO GO voor de realisatiefase op basis van de resultaten uit de voorfase.
+> [!IMPORTANT]
+> Onderdeel van het afronden en afsluiten van de voorfase is een GO/NO GO voor de realisatiefase op basis van de resultaten uit de voorfase.
 
 # Randvoorwaarden
 

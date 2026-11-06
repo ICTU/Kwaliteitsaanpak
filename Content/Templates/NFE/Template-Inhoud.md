@@ -2,7 +2,8 @@
 
 Capability of a product to provide functions that meet stated and implied needs of intended users when it is used under specified conditions.
 
-Opmerking: functional suitability gaat alleen over of, en in welke mate, expliciete en impliciete behoeften worden afgedekt en betreft niet de functionele eisen zelf.
+> [!NOTE]
+> Functional suitability gaat alleen over of, en in welke mate, expliciete en impliciete behoeften worden afgedekt en betreft niet de functionele eisen zelf.
 
 ## Functional completeness
 

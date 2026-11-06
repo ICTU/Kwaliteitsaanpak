@@ -11,10 +11,10 @@ Het ZAP Automation Framework interpreteert **géén** omgevingsvariabelen automa
 Houd hier dus rekening mee bij het verplaatsen of hergebruiken van automation plans tussen verschillende omgevingen.
 
 
-⚠️ **Let op:** 
-Variabelen in sequence worden niet overgenomen uit automation plan.
-
-Je moet daarom een shell-script maken met `envsubst`
+> [!IMPORTANT]
+> Variabelen in sequence worden niet overgenomen uit automation plan.
+>
+> Je moet daarom een shell-script maken met `envsubst`
   
 ![Screenshot van terminal](Images/pipeline-variables.png "Screenshot van terminal")
 

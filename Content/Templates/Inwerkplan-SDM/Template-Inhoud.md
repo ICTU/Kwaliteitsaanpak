@@ -26,16 +26,16 @@ We gaan uit van een inwerkperiode van drie maanden. Het streven is dat je aan he
 
 # 4 De Software Delivery Manager
 
-De Software Delivery Manager (SDM) organiseert het ontwikkelen en opleveren van software conform de vastgestelde eisen en de Kwaliteitsaanpak en rapporteert aan de projectleider
+De Software Delivery Manager (SDM) organiseert de ontwikkeling en oplevering van software volgens de vastgestelde eisen en de ICTU Kwaliteitsaanpak. De SDM rapporteert aan de projectleider.
 
-De SDM'er is de linking pin tussen het scrumteam, de opdrachtgevende organisatie, de beheerorganisatie én de afdelingen Software Expertise en Software Diensten. Hiervoor werkt de SDM'er nauw samen met het scrumteam, de projectleider, de projectsecretaris en de kwaliteitsmanager.
+De SDM vormt de verbindende schakel tussen het scrumteam, de opdrachtgevende organisatie, de beheerorganisatie en de ICTU-afdelingen Software Expertise en Software Diensten. Om die reden werkt de SDM nauw samen met het scrumteam, de projectleider, de projectsecretaris en de kwaliteitsmanager.
 
-![Stroomdiagram van projectorganisatie](Governance_softwareontwikkelprojecten.png "Governance zoals deze in veel softwareontwikkelprojecten voorkomt.")
+![Governanceschema met de stuurgroep, projectleider van de opdrachtgever, ICTU-projectleider en SDM, scrumteam, productowners, stakeholders en systeemeigenaar, inclusief hun onderlinge overleg- en samenwerkingsrelaties.](Governance_softwareontwikkelprojecten.png "Governance en overlegstructuur binnen een softwareontwikkelproject")
 
-Governance zoals deze in veel softwareontwikkelprojecten voorkomt
+_Voorbeeld van de governance en overlegstructuur binnen een softwareontwikkelproject._
 
 > [!NOTE] Activiteit 2 💬
-> Plan een aantal (koffie)gesprekken met andere SDM’ers in om te praten over hoe in hun projecten de samenwerking met projectleider, projectsecretaris en kwaliteitsmanager is vormgegeven en hoe ze invulling aan hun eigen taak geven. Vraag ook naar de samenwerking met de opdrachtgever en alles wat je verder wilt weten. Bijvoorbeeld wat de grootste uitdaging is. De tabel in paragraaf 5.1 en onderdelen van paragraaf 6.1 kunnen als inspiratiebron dienen.
+> Plan een aantal (koffie)gesprekken met andere SDM’s in om te praten over hoe in hun projecten de samenwerking met projectleider, projectsecretaris en kwaliteitsmanager is vormgegeven en hoe ze invulling aan hun eigen taak geven. Vraag ook naar de samenwerking met de opdrachtgever en alles wat je verder wilt weten. Bijvoorbeeld wat de grootste uitdaging is. De tabel in paragraaf 5.1 en onderdelen van paragraaf 6.1 kunnen als inspiratiebron dienen.
 > 
 > **Doel:** Kennismaking met andere SDM’ers en meer inzicht in het vak van SDM (zie Team SDM-SharePointkanaal voor een actuele lijst van SDM’ers)
 

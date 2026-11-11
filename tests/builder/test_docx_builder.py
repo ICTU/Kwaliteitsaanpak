@@ -7,6 +7,9 @@ from xml.etree.ElementTree import Element, ElementTree, SubElement
 
 import docx
 from docx.document import Document
+from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
+from docx.oxml.ns import qn
+from docx.shared import Cm
 from docx.text.paragraph import Paragraph
 from pygments.util import ClassNotFound
 
@@ -96,3 +99,175 @@ class TextFormattingTest(unittest.TestCase):
         """Test code text."""
         document = self.build(xmltags.CODE)
         self.assertEqual("Fira code", document.paragraphs[-1].runs[-1].font.name)
+
+    def test_instruction(self):
+        """Test that instruction text is black and highlighted in yellow."""
+        run = self.build(xmltags.INSTRUCTION).paragraphs[-1].runs[-1]
+        self.assertEqual(WD_COLOR_INDEX.YELLOW, run.font.highlight_color)
+        self.assertEqual("000000", str(run.font.color.rgb))
+
+
+class DocumentStructureTest(unittest.TestCase):
+    """Unit tests for the document structure elements in the docx builder."""
+
+    def setUp(self):
+        self.document = Element(xmltags.DOCUMENT)
+
+    def build(self) -> Document:
+        """Build a docx from the XML document and return the resulting document."""
+        images_folder = pathlib.Path(__file__).parents[2] / "Content" / "Images"
+        with tempfile.TemporaryDirectory() as directory:
+            filename = pathlib.Path(directory) / "output.docx"
+            Converter(ElementTree(self.document)).convert(DocxBuilder(filename, REFERENCE_DOCX, images_folder))
+            return docx.Document(str(filename))
+
+    def add_list(self, parent: Element, tag: str, *items: str) -> Element:
+        """Add a list with the items to the parent."""
+        xml_list = SubElement(parent, tag)
+        for item in items:
+            SubElement(xml_list, xmltags.LIST_ITEM).text = item
+        return xml_list
+
+    def test_title(self):
+        """Test that the title gets the title style."""
+        SubElement(self.document, xmltags.TITLE).text = "Title"
+        paragraph = self.build().paragraphs[-1]
+        self.assertEqual("Title", paragraph.text)
+        self.assertEqual("Title", paragraph.style.name)
+
+    def test_header(self):
+        """Test that the header text is right aligned in the page header."""
+        SubElement(self.document, xmltags.HEADER).text = "Header"
+        paragraph = self.build().sections[0].header.paragraphs[0]
+        self.assertEqual("Header", paragraph.text)
+        self.assertEqual(WD_PARAGRAPH_ALIGNMENT.RIGHT, paragraph.paragraph_format.alignment)
+
+    def test_page_break(self):
+        """Test that a page break is added."""
+        SubElement(self.document, xmltags.PAGEBREAK)
+        self.assertIsNotNone(self.build().paragraphs[-1]._p.find(f"{qn('w:r')}/{qn('w:br')}"))
+
+    def test_table_of_contents(self):
+        """Test that the table of contents has a heading."""
+        attributes = {xmltags.TABLE_OF_CONTENTS_HEADING: "Inhoud"}
+        SubElement(self.document, xmltags.TABLE_OF_CONTENTS, attributes)
+        heading = self.build().paragraphs[-2]
+        self.assertEqual(("Inhoud", "TOC Heading"), (heading.text, heading.style.name))
+
+    def test_heading(self):
+        """Test that the heading style depends on the section level."""
+        section = SubElement(self.document, xmltags.SECTION, {xmltags.SECTION_LEVEL: "1"})
+        subsection = SubElement(section, xmltags.SECTION, {xmltags.SECTION_LEVEL: "2"})
+        SubElement(subsection, xmltags.HEADING).text = "Heading"
+        paragraph = self.build().paragraphs[-1]
+        self.assertEqual("Heading", paragraph.text)
+        self.assertEqual("Heading 2", paragraph.style.name)
+
+    def test_appendix_heading(self):
+        """Test that headings in appendices get the appendix heading style."""
+        section = SubElement(
+            self.document, xmltags.SECTION, {xmltags.SECTION_LEVEL: "1", xmltags.SECTION_IS_APPENDIX: "y"}
+        )
+        SubElement(section, xmltags.HEADING).text = "Appendix"
+        self.assertEqual("Kop 1 Bijlage", self.build().paragraphs[-1].style.name)
+
+    def test_bullet_list(self):
+        """Test that bullet list items get the bullet list style."""
+        self.add_list(self.document, xmltags.BULLET_LIST, "one", "two")
+        paragraphs = self.build().paragraphs[-2:]
+        self.assertEqual(["one", "two"], [paragraph.text for paragraph in paragraphs])
+        self.assertEqual({"Lijst opsom.teken1"}, {paragraph.style.name for paragraph in paragraphs})
+
+    def test_numbered_list(self):
+        """Test that the items of a numbered list share a numbering and that a new list restarts the numbering."""
+        self.add_list(self.document, xmltags.NUMBERED_LIST, "one", "two")
+        self.add_list(self.document, xmltags.NUMBERED_LIST, "three")
+        paragraphs = self.build().paragraphs[-3:]
+        num_ids = [paragraph._p.pPr.numPr.numId.val for paragraph in paragraphs]
+        self.assertEqual({"Lijstnummering1"}, {paragraph.style.name for paragraph in paragraphs})
+        self.assertEqual(num_ids[0], num_ids[1])
+        self.assertNotEqual(num_ids[1], num_ids[2])
+
+    def test_nested_list(self):
+        """Test that nested list items get a higher list level."""
+        bullet_list = self.add_list(self.document, xmltags.BULLET_LIST, "one")
+        self.add_list(bullet_list, xmltags.BULLET_LIST, "nested")
+        paragraphs = self.build().paragraphs[-2:]
+        self.assertEqual([0, 1], [paragraph._p.pPr.numPr.ilvl.val for paragraph in paragraphs])
+
+    def test_table(self):
+        """Test that a table is added with the table style, a full width, and the cell contents."""
+        table = SubElement(self.document, xmltags.TABLE, {xmltags.TABLE_COLUMNS: "2", xmltags.TABLE_ROWS: "1"})
+        for row_tag, texts in ((xmltags.TABLE_HEADER_ROW, ("A", "B")), (xmltags.TABLE_ROW, ("1", "2"))):
+            row = SubElement(table, row_tag)
+            for alignment, text in zip(("left", "right"), texts):
+                SubElement(row, xmltags.TABLE_CELL, {xmltags.TABLE_CELL_ALIGNMENT: alignment}).text = text
+        docx_table = self.build().tables[-1]
+        self.assertEqual("Tabelraster1", docx_table.style.name)
+        self.assertEqual("100%", docx_table._tbl.tblPr.xpath("./w:tblW")[0].get(f"{DocxBuilder.SCHEMA}w"))
+        self.assertEqual([["A", "B"], ["1", "2"]], [[cell.text for cell in row.cells] for row in docx_table.rows])
+        self.assertEqual(WD_PARAGRAPH_ALIGNMENT.RIGHT, docx_table.cell(1, 1).paragraphs[0].alignment)
+
+    def test_image(self):
+        """Test that an image is added with its title."""
+        SubElement(
+            self.document,
+            xmltags.IMAGE,
+            {xmltags.IMAGE_SRC: "ICTU.png", xmltags.IMAGE_TITLE: "ICTU logo", xmltags.IMAGE_WIDTH: "5"},
+        )
+        inline_shape = self.build().inline_shapes[-1]
+        self.assertEqual("ICTU logo", inline_shape._inline.docPr.get("title"))
+        self.assertEqual(Cm(5), inline_shape.width)
+
+    def add_admonition(self, admonition_type: str = "note", title: str = "Opmerking") -> Element:
+        """Add an admonition to the document."""
+        attributes = {xmltags.ADMONITION_TYPE: admonition_type, xmltags.ADMONITION_TITLE: title}
+        return SubElement(self.document, xmltags.ADMONITION, attributes)
+
+    def test_admonition(self):
+        """Test that an admonition is a table with one cell that has a title and the contents, styled per type."""
+        admonition = self.add_admonition("warning", "Waarschuwing")
+        paragraph = SubElement(admonition, xmltags.PARAGRAPH)
+        paragraph.text = "See "
+        SubElement(paragraph, xmltags.ANCHOR, {xmltags.ANCHOR_LINK: "https://link"}).text = "link"
+        self.add_list(admonition, xmltags.BULLET_LIST, "item")
+        SubElement(self.document, xmltags.PARAGRAPH).text = "After"
+        document = self.build()
+        table = document.tables[-1]
+        self.assertEqual("Admonition Warning", table.style.name)
+        title, content, item = table.cell(0, 0).paragraphs
+        self.assertEqual("Waarschuwing", title.text)
+        self.assertEqual("Admonition Warning Title", title.runs[0].style.name)
+        self.assertEqual("See link", content.text)
+        self.assertEqual(["item", "Lijst opsom.teken1"], [item.text, item.style.name])
+        self.assertEqual("After", document.paragraphs[-1].text)
+
+    def test_admonition_with_table(self):
+        """Test that a table in an admonition is nested in the admonition cell."""
+        admonition = self.add_admonition()
+        table = SubElement(admonition, xmltags.TABLE, {xmltags.TABLE_COLUMNS: "1", xmltags.TABLE_ROWS: "0"})
+        SubElement(SubElement(table, xmltags.TABLE_HEADER_ROW), xmltags.TABLE_CELL).text = "cell"
+        cell = self.build().tables[-1].cell(0, 0)
+        self.assertEqual("cell", cell.tables[0].cell(0, 0).text)
+
+    def test_consecutive_admonitions(self):
+        """Test that consecutive admonitions are separated by a paragraph so Word does not merge the tables."""
+        self.add_admonition()
+        self.add_admonition("tip", "Tip")
+        document = self.build()
+        self.assertEqual(2, len(document.tables))
+        body = [element.tag for element in document.element.body]
+        self.assertEqual([qn("w:tbl"), qn("w:p"), qn("w:tbl")], body[-4:-1])
+
+
+class ReferenceDocumentTest(unittest.TestCase):
+    """Unit tests for the styles in the reference documents."""
+
+    def test_admonition_styles(self):
+        """Test that the reference documents have a table style and a title style for each admonition type."""
+        for reference_document in REFERENCE_DOCX.parent.glob("reference-*.docx"):
+            style_names = {style.name for style in docx.Document(str(reference_document)).styles}
+            for admonition_type in ("Note", "Tip", "Important", "Warning", "Caution"):
+                with self.subTest(reference_document=reference_document.name, admonition_type=admonition_type):
+                    self.assertIn(f"Admonition {admonition_type}", style_names)
+                    self.assertIn(f"Admonition {admonition_type} Title", style_names)

@@ -1,5 +1,8 @@
 """The XML tags and attributes we use in the intermediate XML format."""
 
+ADMONITION = "admonition"
+ADMONITION_TITLE = "title"
+ADMONITION_TYPE = "type"  # One of note, tip, important, warning, caution
 ANCHOR = "anchor"
 ANCHOR_LINK = "link"
 BOLD = "b"

@@ -2,7 +2,8 @@
 
 Deze pagina bevat een overzicht van nuttige bronnen voor wie zich verder wil verdiepen in Dependency-Track. De focus ligt op officiële documentatie, aanvullende standaarden, community-bronnen en verdiepende uitleg over SBoM’s, CycloneDX, kwetsbaarheden en licentiebeleid.
 
-⚠️ Let op: Dependency-Track heeft documentatie voor meerdere versies. Gebruik voor nieuwe installaties en actuele informatie bij voorkeur de v5-documentatie. Gebruik de oudere documentatie alleen wanneer de gebruikte omgeving nog op Dependency-Track v4 draait.
+> [!IMPORTANT]
+> Dependency-Track heeft documentatie voor meerdere versies. Gebruik voor nieuwe installaties en actuele informatie bij voorkeur de v5-documentatie. Gebruik de oudere documentatie alleen wanneer de gebruikte omgeving nog op Dependency-Track v4 draait.
 
 ## Officiële bronnen
 
@@ -226,4 +227,5 @@ Deze pagina bevat een overzicht van nuttige bronnen voor wie zich verder wil ver
   Praktijkartikel over het gebruik van Dependency-Track in een CI/CD-context:
   https://devsec-blog.com/2024/03/a-practical-approach-to-sbom-in-ci-cd-part-iii-tracking-sboms-with-dependency-track/
 
-⚠️ Let op: veel informatie over Dependency-Track is verspreid over meerdere bronnen: de nieuwe v5-documentatie, de oudere v4-documentatie, GitHub, community-discussies en CycloneDX-documentatie. Controleer daarom altijd of een bron past bij de gebruikte Dependency-Track-versie en bij de gekozen SBoM-standaard.
+> [!TIP]
+> Veel informatie over Dependency-Track is verspreid over meerdere bronnen: de nieuwe v5-documentatie, de oudere v4-documentatie, GitHub, community-discussies en CycloneDX-documentatie. Controleer daarom altijd of een bron past bij de gebruikte Dependency-Track-versie en bij de gekozen SBoM-standaard.

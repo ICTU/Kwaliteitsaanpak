@@ -35,4 +35,5 @@ De focus ligt op aanvullende kennis, community-bijdragen en verdiepende uitleg.
     Een actieve gebruikersgroep met veelgestelde vragen, tips en oplossingen van andere ZAP-gebruikers:  
     [https://groups.google.com/g/zaproxy-users](https://groups.google.com/g/zaproxy-users)
     
-⚠️ Let op: veel informatie staat verspreid op verschillende onderdelen van de officiële site. Het loont om goed te zoeken of gebruik te maken van de zoekfunctie op [https://www.zaproxy.org](https://www.zaproxy.org).
+> [!TIP]
+> Veel informatie staat verspreid op verschillende onderdelen van de officiële site. Het loont om goed te zoeken of gebruik te maken van de zoekfunctie op [https://www.zaproxy.org](https://www.zaproxy.org).

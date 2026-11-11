@@ -12,7 +12,8 @@ Volg deze instructies om ZAP te downloaden en te installeren: [Download ZAP en i
 ## Stap 1 — Een opname maken
 Om het verkeer op te nemen, wordt geadviseerd om de geïntegreerde browser van ZAP (zie screenshot) te gebruiken, omdat die vooringesteld is. 
 
-⚠️ **Let op:** Dit is geen opname waarbij de stappen op volgorde kunnen worden afgespeeld. Dit registreert alleen alle calls/endpoints.
+> [!NOTE]
+> Dit is geen opname waarbij de stappen op volgorde kunnen worden afgespeeld. Dit registreert alleen alle calls/endpoints.
 
 Als doelwit/testobject kun je gebruikmaken van onderstaande testwebsites.
 - https://juice-shop.herokuapp.com/#/
@@ -41,8 +42,8 @@ Een context wordt gebruikt om de scope te bepalen van een scan/test. Het is het 
 
 Deze stap (een context maken) kun je ook voorafgaand aan de opname doen (dan werkt het als een include/exclude). Toch adviseren wij om dit als tweede stap te doen, omdat je niet altijd weet welke calls je webapplicatie maakt en welke calls je daarvan wil behouden. Er is dan eerst een (grote) lijst met URL's van de endpoints als resultaat van de opname. Hierna kan een selectie worden gemaakt tussen wat *wel* moet worden behouden en wat *niet*.
 
-> Meer info hierover is te lezen op.
-> https://www.zaproxy.org/docs/desktop/start/features/contexts/
+> [!TIP]
+> Meer informatie over contexts staat in de [ZAP-documentatie](https://www.zaproxy.org/docs/desktop/start/features/contexts/).
 
 - Rechtsklik op de site in **Sites** → *Include in Context → New Context*.  
 - Definieer:
@@ -89,4 +90,5 @@ zap.sh -cmd -autorun /zap/wd/af-plan.yaml
 *Het Automation Panel, waar je gemaakte automation plans kan inzien en exporteren.*
 
 
-⚠️ **Belangrijk**: stel **exit-criteria** in (via `exitStatus` job) om te voorkomen dat scans onbeperkt draaien of CI/CD altijd slaagt.
+> [!IMPORTANT]
+> Stel **exit-criteria** in (via `exitStatus` job) om te voorkomen dat scans onbeperkt draaien of CI/CD altijd slaagt.

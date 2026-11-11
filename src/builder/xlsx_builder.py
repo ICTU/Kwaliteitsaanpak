@@ -159,6 +159,8 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
                 self.__append_measure_text(prefix)
             elif tag == xmltags.TABLE_CELL:
                 self.__append_measure_text("")  # Add empty string in case the cell is empty and text() is never called
+            elif tag == xmltags.ADMONITION:
+                self.__append_measure_text(f"{attributes[xmltags.ADMONITION_TITLE]}:\n")
 
     def __write_measure_table_sub_header(self) -> None:
         """Write a subheader in the measures table. Don't merge the header cells, it causes accessibility issues."""

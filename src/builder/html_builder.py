@@ -15,6 +15,7 @@ from custom_types import TreeBuilderAttributes
 
 from . import html_tags
 from .builder import Builder
+from .octicons import ADMONITION_ICONS
 from .utils import slugify
 
 
@@ -42,6 +43,7 @@ class HTMLBuilder(Builder):
         self.table_cell_html_tag: str | None = None
         self.in_keep_together_div = False
         self.in_measure = False
+        self.admonition_in_keep_together_div = False
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().start_element(tag, attributes)
@@ -108,6 +110,8 @@ class HTMLBuilder(Builder):
             case xmltags.MEASURE:
                 self.builder.start(html_tags.DIV, {html_tags.CLASS: "maatregel"})
                 self.in_measure = True
+            case xmltags.ADMONITION:
+                self.start_admonition(attributes)
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
         super().text(tag, text, attributes)
@@ -200,6 +204,8 @@ class HTMLBuilder(Builder):
             case xmltags.MEASURE:
                 self.builder.end(html_tags.DIV)
                 self.in_measure = False
+            case xmltags.ADMONITION:
+                self.end_admonition()
         super().end_element(tag, attributes)
 
     # Entities that the XML parser understands and so must be left untouched; all other named HTML entities
@@ -229,6 +235,35 @@ class HTMLBuilder(Builder):
             if child.tail:
                 self.builder.data(child.tail)
         self.builder.end(node.tag)
+
+    def start_admonition(self, attributes: TreeBuilderAttributes) -> None:
+        """Start the admonition with a title preceded by an icon."""
+        # Keep the heading together with the whole admonition instead of with the first paragraph in the admonition:
+        self.admonition_in_keep_together_div = self.in_keep_together_div
+        self.in_keep_together_div = False
+        admonition_type = str(attributes[xmltags.ADMONITION_TYPE])
+        self.builder.start(html_tags.ASIDE, {html_tags.CLASS: f"admonition admonition-{admonition_type}"})
+        self.builder.start(html_tags.PARAGRAPH, {html_tags.CLASS: "admonition-title"})
+        svg_attributes = {
+            html_tags.CLASS: "admonition-icon",
+            html_tags.SVG_VIEW_BOX: "0 0 16 16",
+            html_tags.SVG_WIDTH: "16",
+            html_tags.SVG_HEIGHT: "16",
+            html_tags.ARIA_HIDDEN: "true",
+        }
+        self.builder.start(html_tags.SVG, svg_attributes)
+        self.builder.start(html_tags.SVG_PATH, {html_tags.SVG_PATH_DATA: ADMONITION_ICONS[admonition_type]})
+        self.builder.end(html_tags.SVG_PATH)
+        self.builder.end(html_tags.SVG)
+        self.builder.data(str(attributes[xmltags.ADMONITION_TITLE]))
+        self.builder.end(html_tags.PARAGRAPH)
+
+    def end_admonition(self) -> None:
+        """End the admonition."""
+        self.builder.end(html_tags.ASIDE)
+        if self.admonition_in_keep_together_div:
+            self.admonition_in_keep_together_div = False
+            self.builder.end(html_tags.DIV)
 
     def end_paragraph(self) -> None:
         """End the paragraph."""

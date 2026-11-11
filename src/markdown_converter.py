@@ -3,7 +3,7 @@
 import contextlib
 import pathlib
 import re
-from typing import cast
+from typing import ClassVar, cast
 from xml.etree.ElementTree import Element, ElementTree, TreeBuilder
 
 import markdown_syntax
@@ -15,12 +15,20 @@ from markdown_table import Table
 class MarkdownConverter:
     """Convert Markdown to XML."""
 
+    ADMONITION_TITLES: ClassVar = {
+        "note": "Opmerking",
+        "tip": "Tip",
+        "important": "Belangrijk",
+        "warning": "Waarschuwing",
+        "caution": "Let op",
+    }
     APPENDIX_HEADING = "Bijlagen"
     APPENDIX_LEVEL = 1
 
     def __init__(self, variables: Variables) -> None:
         self.builder = TreeBuilder()
         self.context: set[str] = set()  # Current context, e.g. are we in a measure, or in the appendices
+        self.in_admonition = False
         self.current_section_level = 0
         self.current_section: Element | None = None
         self.current_list_tags: list[str] = []
@@ -149,6 +157,41 @@ class MarkdownConverter:
         self._add_element(xmltags.PAGEBREAK)
 
     def _process_line(self, line: str) -> None:
+        """Process a line of Markdown, taking admonitions into account."""
+        if xmltags.CODE_BLOCK not in self.context and (match := re.match(markdown_syntax.ADMONITION_PATTERN, line)):
+            self._start_admonition(match.group(1).lower(), match.group(2))
+            return
+        if self.in_admonition:
+            if line.startswith(markdown_syntax.QUOTE_MARKER):
+                line = line.removeprefix(markdown_syntax.QUOTE_MARKER).removeprefix(" ")
+            else:
+                self._end_admonition()
+        self._process_markdown_line(line)
+
+    def _start_admonition(self, admonition_type: str, title: str) -> None:
+        """Start an admonition, ending any previous admonition, list, or table first."""
+        self._end_admonition()
+        self._end_lists()
+        self._end_table()
+        title = self._process_variables(title.strip()) or self.ADMONITION_TITLES[admonition_type]
+        self.builder.start(
+            xmltags.ADMONITION, {xmltags.ADMONITION_TYPE: admonition_type, xmltags.ADMONITION_TITLE: title}
+        )
+        self.in_admonition = True
+
+    def _end_admonition(self) -> None:
+        """End the admonition, if any, after ending the code block, lists, or table within the admonition."""
+        if not self.in_admonition:
+            return
+        if xmltags.CODE_BLOCK in self.context:
+            self.context.remove(xmltags.CODE_BLOCK)
+            self.builder.end(xmltags.CODE_BLOCK)
+        self._end_lists()
+        self._end_table()
+        self.builder.end(xmltags.ADMONITION)
+        self.in_admonition = False
+
+    def _process_markdown_line(self, line: str) -> None:
         """Process a line of Markdown."""
         if not (stripped_line := line.strip()) and xmltags.CODE_BLOCK not in self.context:
             self._end_lists()
@@ -199,6 +242,8 @@ class MarkdownConverter:
 
     def _process_heading(self, heading: str, level: int) -> None:
         """Process a heading."""
+        if self.in_admonition:
+            raise ValueError(f"Headings are not allowed in admonitions: {heading}")
         if level == self.APPENDIX_LEVEL and heading == self.APPENDIX_HEADING:
             self.context.add(self.APPENDIX_HEADING)
         is_appendix: TreeBuilderAttributes = (
@@ -383,6 +428,7 @@ class MarkdownConverter:
 
     def _end_document(self) -> None:
         """End the document."""
+        self._end_admonition()
         self._end_lists()
         self._end_table()
         self._end_sections()

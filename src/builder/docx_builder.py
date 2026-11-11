@@ -5,9 +5,11 @@ import shutil
 from typing import cast
 
 from docx import Document
+from docx.document import Document as DocumentObject
 from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
+from docx.oxml.ns import qn
 from docx.shared import Cm, RGBColor
-from docx.table import Table
+from docx.table import Table, _Cell
 from docx.table import _Row as Row
 from docx.text.paragraph import Paragraph
 from pygments import lex
@@ -53,6 +55,7 @@ class DocxBuilder(Builder):
         filename.unlink(missing_ok=True)
         shutil.copy(docx_reference_filename, filename)
         self.doc = Document(str(filename))
+        self.container: DocumentObject | _Cell = self.doc  # Where new paragraphs and tables are added
         self.images_folder = images_folder
         self.paragraph: Paragraph | None = None  # The current paragraph
         self.current_list_style: list[str] = []  # Stack of list styles
@@ -64,7 +67,9 @@ class DocxBuilder(Builder):
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().start_element(tag, attributes)
         if tag == xmltags.PARAGRAPH:
-            self.paragraph = self.doc.add_paragraph(style="Maatregel" if self.in_element(xmltags.MEASURE) else None)
+            self.paragraph = self.container.add_paragraph(
+                style="Maatregel" if self.in_element(xmltags.MEASURE) else None
+            )
         elif tag == xmltags.PAGEBREAK:
             self.doc.add_page_break()
         elif tag == xmltags.BULLET_LIST:
@@ -79,15 +84,11 @@ class DocxBuilder(Builder):
             level = self.nr_elements(xmltags.SECTION)
             in_appendix = self.in_element(xmltags.SECTION, {xmltags.SECTION_IS_APPENDIX: "y"})
             style = f"Kop {level} Bijlage" if in_appendix else f"heading {level}"
-            self.paragraph = self.doc.add_paragraph(style=style)
+            self.paragraph = self.container.add_paragraph(style=style)
         elif tag == xmltags.TABLE:
-            self.table = cast(
-                Table,
-                self.doc.add_table(0, int(attributes[xmltags.TABLE_COLUMNS]), style="Tabelraster1"),
-            )
-            # Set table width to 100%
-            self.table._tbl.tblPr.xpath("./w:tblW")[0].attrib[f"{self.SCHEMA}type"] = "pct"
-            self.table._tbl.tblPr.xpath("./w:tblW")[0].attrib[f"{self.SCHEMA}w"] = "100%"
+            self.table = self.container.add_table(0, int(attributes[xmltags.TABLE_COLUMNS]))
+            self.table.style = "Tabelraster1"
+            self._set_full_width(self.table)
         elif tag in (xmltags.TABLE_HEADER_ROW, xmltags.TABLE_ROW):
             assert self.table
             self.row = self.table.add_row()
@@ -98,20 +99,44 @@ class DocxBuilder(Builder):
             self.paragraph = cast(Paragraph, self.doc.sections[0].header.paragraphs[0])
             self.paragraph.paragraph_format.alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT
         elif tag == xmltags.TITLE:
-            self.paragraph = self.doc.add_paragraph(style="Title")
+            self.paragraph = self.container.add_paragraph(style="Title")
         elif tag == xmltags.TABLE_OF_CONTENTS:
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
         elif tag == xmltags.IMAGE:
-            picture = self.doc.add_picture(
+            run = self.container.add_paragraph().add_run()
+            picture = run.add_picture(
                 str(self.images_folder / str(attributes[xmltags.IMAGE_SRC])),
                 width=Cm(int(attributes[xmltags.IMAGE_WIDTH])),
             )
             picture._inline.docPr.attrib["title"] = attributes[xmltags.IMAGE_TITLE]
+        elif tag == xmltags.ADMONITION:
+            self._start_admonition(attributes)
+
+    def _set_full_width(self, table: Table) -> None:
+        """Set the table width to 100%."""
+        table_width = table._tbl.tblPr.xpath("./w:tblW")[0]
+        table_width.attrib[f"{self.SCHEMA}type"] = "pct"
+        table_width.attrib[f"{self.SCHEMA}w"] = "100%"
+
+    def _start_admonition(self, attributes: TreeBuilderAttributes) -> None:
+        """Start an admonition: a table with one colored cell that has the title and will get the contents.
+
+        The colors are defined by the table style and title style in the reference document.
+        """
+        style = f"Admonition {str(attributes[xmltags.ADMONITION_TYPE]).capitalize()}"
+        blocks = [block for block in self.doc.element.body if block.tag != qn("w:sectPr")]
+        if blocks and blocks[-1].tag == qn("w:tbl"):
+            self.doc.add_paragraph()  # Prevent Word from merging the admonition with the preceding table
+        table = self.doc.add_table(1, 1, style=style)
+        self._set_full_width(table)
+        cell = table.cell(0, 0)
+        cell.paragraphs[0].add_run(str(attributes[xmltags.ADMONITION_TITLE]), style=f"{style} Title")
+        self.container = cell
 
     def _add_list_item(self) -> None:
         """Add a list item."""
-        self.paragraph = self.doc.add_paragraph(style=self.current_list_style[-1])
+        self.paragraph = self.container.add_paragraph(style=self.current_list_style[-1])
         level = len(self.current_list_style) - 1
         self.paragraph_number(self.paragraph).get_or_add_ilvl().val = level
         if self.current_list_style[-1] == "Lijstnummering1":
@@ -183,12 +208,14 @@ class DocxBuilder(Builder):
         elif tag == xmltags.HEADING:
             assert self.paragraph
             add_bookmark(self.paragraph)
+        elif tag == xmltags.ADMONITION:
+            self.container = self.doc
 
     def _add_code_block(self, code: str, attributes: TreeBuilderAttributes) -> None:
         """Add a syntax-highlighted code block as a paragraph with the Code style."""
         lexer = get_lexer_by_name(str(attributes[xmltags.CODE_BLOCK_LANGUAGE]), ensurenl=False)
         token_styles = dict(get_style_by_name("default"))  # Map known token types to their style
-        paragraph = self.doc.add_paragraph(style="Code")
+        paragraph = self.container.add_paragraph(style="Code")
         for token_type, value in lex(code.rstrip("\n"), lexer):
             token_style = self._token_style(token_styles, token_type)
             # A token's value may span multiple lines; emit a line break between the lines.

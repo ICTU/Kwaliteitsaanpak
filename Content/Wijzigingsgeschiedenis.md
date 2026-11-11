@@ -3,6 +3,7 @@
 ## Template Kwaliteitsplan
 
 - Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
+- De leeswijzer in paragraaf 2.5 verwijst nu ook naar bijlage F "ICTU-aanbevelingen voor het beheer van dependencies".
 
 # Versie 5.4.1, 28 september 2026
 

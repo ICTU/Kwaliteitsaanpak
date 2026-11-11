@@ -1,9 +1,21 @@
 # Versie 5.5.0, nog te releasen
 
+## Kwaliteitsaanpak
+
+* In M01 "Het project ontvangt en levert in elke fase vastgestelde producten en informatie", links naar het template Business Impact Analyse en het template Threat and Vulnerability Assessment toegevoegd.
+
 ## Template Kwaliteitsplan
 
 - Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
 - De leeswijzer in paragraaf 2.5 verwijst nu ook naar bijlage F "ICTU-aanbevelingen voor het beheer van dependencies".
+
+## Template Business Impact Analyse
+
+* Een neutraal template Business Impact Analyse toegevoegd aan de set van templates.
+
+## Template Threat and Vulnerability Assessment
+
+* Een neutraal template Threat and Vulnerability Assessment toegevoegd aan de set van templates.
 
 # Versie 5.4.1, 28 september 2026
 

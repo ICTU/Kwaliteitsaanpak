@@ -21,6 +21,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **DoD** | definition of done |
 | **DoR** | definition of ready |
 | **DPIA** | $DPIA$ |
+|**due diligence**| een zorgvuldig onderzoek vóór de overname van bestaande software, waarbij onder meer de codekwaliteit, architectuur, beveiliging, licenties, documentatie en onderhoudbaarheid worden beoordeeld om de risico's van de overname in te schatten|
 | **gebruikskwaliteit** | mate waarin een systeem, product of dienst kan worden gebruikt door gespecificeerde gebruikers, voor het bereiken van gespecificeerde doelen, met effectiviteit, efficiëntie en tevredenheid in een gespecificeerde gebruikscontext |
 | **GFO** | $GFO$ |
 | **IAMA** | $IAMA$ |

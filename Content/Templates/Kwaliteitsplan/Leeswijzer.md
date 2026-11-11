@@ -4,4 +4,4 @@
 
 #include "Content/Templates/Standaard-Leeswijzer-Bijlagen.md"
 
-[Bijlage D](#gebruik-van-jira) beschrijft hoe ICTU Jira toepast binnen softwareontwikkelprojecten. [Bijlage E](#periodieke-handmatige-controles) bevat een lijst met handmatige controles die de kwaliteitsmanager tijdens het project periodiek uitvoert om de uitvoering van kwaliteitsmaatregelen te waarborgen.
+[Bijlage D](#gebruik-van-jira) beschrijft hoe ICTU Jira toepast binnen softwareontwikkelprojecten. [Bijlage E](#periodieke-handmatige-controles) bevat een lijst met handmatige controles die de kwaliteitsmanager tijdens het project periodiek uitvoert om de uitvoering van kwaliteitsmaatregelen te waarborgen. [Bijlage F](#ictu-aanbevelingen-voor-het-beheer-van-dependencies) bevat ICTU-aanbevelingen voor het toevoegen, specificeren, bijwerken en monitoren van dependencies.

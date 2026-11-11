@@ -6,22 +6,23 @@ Naast dit inwerkplan verzorgt ICTU enkele onderdelen van het introductietraject.
 2. De ICTU-onboarding (één bijeenkomst). Let erop dat je hiervoor een uitnodiging ontvangt.
 3. De ISE-onboarding (één bijeenkomst). Let erop dat je hiervoor een uitnodiging ontvangt.
 
-De praktische zaken voor de uitvoer van het werk (zoals een laptop) worden buiten beschouwing gelaten, omdat deze situatieafhankelijk zijn.
+Praktische zaken, zoals het regelen van een laptop, vallen buiten dit inwerkplan omdat ze per situatie verschillen.
 
-Op basis van prioriteit kun je voor jezelf een roadmap maken van de uit te voeren activiteiten. Het inwerken bestaat enerzijds uit ‘learning on the job’ en anderzijds uit activiteiten uit dit plan.
+Je kunt de activiteiten uit dit plan op basis van hun prioriteit opnemen in een persoonlijke roadmap. Het inwerktraject combineert leren in de praktijk met het uitvoeren van de activiteiten uit dit plan.
 
-Wanneer je bij ICTU begint, krijg je een buddy toegewezen. Dit is een ervaren SDM'er die je begeleidt op de inhoud en je wegwijs maakt in de organisatie.
+Wanneer je bij ICTU begint, krijg je een buddy (vast aanspreekpunt) toegewezen. Deze ervaren SDM’er denkt inhoudelijk met je mee en maakt je wegwijs binnen de organisatie.
 
 
-> [!NOTE] Activiteit 1 📋 
-> Bekijk de onderdelen van dit inwerkplan en maak een roadmap (of andere planningsvorm die je prettig vindt) van de activiteiten die je de komende drie maanden wil doen. Dit is een voorlopige planning. De kans is groot dat deze verandert vanwege beschikbaarheid van mensen of gebeurtenissen in je omgeving. Misschien dat je denkt, als je dit leest, dat Scrum dan misschien een betere methode is dan een roadmap, of dat je een combinatie van beiden ziet, of misschien iets heel anders. Het is jouw traject, dus kies de methode die bij je past.
-> 
-> **Doel:** focus aanbrengen op het leren en begrijpen van de SDM-rol.
+> [!NOTE] Activiteit 1 📋
+> Bekijk de onderdelen van dit inwerkplan en maak een voorlopige planning van de activiteiten die je de komende drie maanden wilt uitvoeren. Je kunt hiervoor een roadmap gebruiken, werken volgens Scrum of verschillende werkwijzen combineren. Houd rekening met veranderingen, bijvoorbeeld door de beschikbaarheid van collega’s of ontwikkelingen binnen je project. Kies de aanpak die bij je past.
+>
+> **Doel:** gericht werken aan een beter begrip van de SDM-rol.
+
 ## 3.1 Inwerkperiode
 
-We gaan uit van een inwerkperiode van drie maanden. Daarna sta je er uiteraard niet alleen voor. Uitgangspunt is dat je na drie maanden de belangrijkste mensen gesproken hebt en alle hulpbronnen en collega’s die kunnen helpen weet te vinden. Mocht je na drie maanden behoefte aan structurele, vakinhoudelijke begeleiding hebben, dan staat er een mentor voor je klaar. Informatie over het mentorraat bij ICTU. Zie ook het Mentorraat-SharePointkanaal.
+We gaan uit van een inwerkperiode van drie maanden. Het streven is dat je aan het einde van die periode de belangrijkste betrokkenen hebt gesproken en weet waar je informatie en ondersteuning kunt vinden. Ook daarna kun je bij collega’s terecht voor hulp. Heb je behoefte aan structurele vakinhoudelijke begeleiding, dan kun je een mentor krijgen. Meer informatie over het mentoraat bij ICTU vind je op het bijbehorende SharePoint-kanaal.
 
-🚶‍➡️ Tijdens je inwerkperiode word je ingewerkt door een ervaren SDM’er en/of projectleider, dus naast dit inwerkplan leer je het vak direct in de praktijk.
+🚶‍➡️ Naast dit inwerkplan leer je de SDM-rol in de praktijk kennen. Daarbij krijg je ondersteuning van een ervaren SDM’er, een projectleider of beiden.
 
 # 4 De Software Delivery Manager
 

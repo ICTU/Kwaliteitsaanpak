@@ -125,6 +125,28 @@ Binnen een maatregel markeren `[measure-title]…[/measure-title]` en `[submeasu
 
 De kop `# Bijlagen` markeert het begin van de bijlagen. Koppen in de bijlagen krijgen in Word een eigen stijl. De presentatie, de self-assessment checklist en de JSON-export slaan de bijlagen over.
 
+## Afkortingen
+
+Een tabel waarvan de eerste kolomkop `Afkorting` is, is de tabel met afkortingen. In de Kwaliteitsaanpak en de templates staat deze tabel in de bijlage "Terminologie en afkortingen" (`Content/Bijlagen/Terminologie.md`). De eerste kolom bevat de afkorting, de tweede kolom de betekenis. Verdere kolommen, zoals een toelichting, zijn vrij:
+
+```markdown
+| Afkorting | Betekenis | Toelichting |
+|:----------|:----------|:------------|
+| **IPO** | intern projectoverleg | |
+| **MTP** | mastertestplan | $MTP$ |
+```
+
+Bij de conversie worden alle afkortingen uit deze tabel automatisch overal in het document gemarkeerd; in de Markdown-bronbestanden is geen extra opmaak nodig. Daarbij geldt:
+
+- Afkortingen zijn hoofdlettergevoelig en worden alleen als heel woord herkend: `API` wel in "de API" en "API-server", maar niet in "APIs" of "api". Een afkorting aan het eind van een samenstelling, zoals `ISO` in "NEN-ISO", wordt niet gemarkeerd.
+- Afkortingen in koppen, code, codeblokken, linkteksten en (sub)maatregeltitels worden niet gemarkeerd.
+- Opmaak in de betekenis, zoals `**vet**`, wordt verwijderd. Variabelen in de betekenis worden vervangen.
+- Een afkorting die niet in de tabel staat, wordt niet gemarkeerd en levert ook geen waarschuwing op.
+
+In HTML wordt een afkorting een `<abbr>`-element met de betekenis als `title`, zodat de betekenis verschijnt als de lezer de muis op de afkorting houdt. De afkorting linkt naar de afkorting in de tabel, bijvoorbeeld `<a class="afkorting" href="#afkorting-ipo"><abbr title="intern projectoverleg">IPO</abbr></a>`. De afkortingen in de eerste kolom van de tabel zelf krijgen het id waar naartoe gelinkt wordt (`<abbr id="afkorting-ipo">IPO</abbr>`), maar geen `title`, omdat de betekenis er direct naast staat. Zie `DocumentDefinitions/Shared/document.css` voor de opmaak. In de andere outputformaten, zoals Word, zijn afkortingen gewone tekst.
+
+Documenten zonder tabel met afkortingen, zoals de samenvatting en de toolgidsen, krijgen geen gemarkeerde afkortingen.
+
 ## Lijsten
 
 Het niveau van een opsomming wordt bepaald door het opsommingsteken: `*` voor het eerste niveau, `+` voor het tweede en `-` voor het derde. Bij genummerde lijsten is `1.` het eerste niveau, `a.` het tweede en een ingesprongen `1.` het derde.

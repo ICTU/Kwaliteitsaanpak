@@ -2,7 +2,9 @@
 
 import pathlib
 from dataclasses import dataclass, field
+from typing import ClassVar
 
+import xmltags
 from custom_types import TreeBuilderAttributes
 
 
@@ -22,6 +24,9 @@ class StackItem:
 
 class Builder:
     """Abstract builder."""
+
+    # Elements that the builder renders as plain text. The converter replaces these elements by their text
+    FLATTEN_TAGS: ClassVar[tuple[str, ...]] = (xmltags.ABBREVIATION,)
 
     def __init__(self, filename: pathlib.Path) -> None:
         self.filename = filename

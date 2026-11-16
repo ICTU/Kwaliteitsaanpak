@@ -10,6 +10,8 @@ CELL_ALIGNMENT_MARKER = ":"
 CODE_START = CODE_END = "`"
 CODE_BLOCK_START = r"```([a-z]+)"
 CODE_BLOCK_END = r"```"
+# Markers for bold, italic, strikethrough, and code
+FORMATTING_MARKERS_PATTERN = r"\*\*|__|~~|[*_`]"
 HEADING_PATTERN = r"^(#+) (.*)"
 # The path for the images does allow whitespace but no quote
 # The title is delimited by the quotes, so it may contain any character except a quote (e.g. parentheses)
@@ -24,6 +26,8 @@ STRIKETROUGH_START = STRIKETROUGH_END = "~~"
 TABLE_MARKER = "|"
 
 # Syntax specific to this repository
+# Abbreviations, e.g. "API" in "API-server", but not "ISO" in "NEN-ISO". Format with the abbreviations separated by "|"
+ABBREVIATION_PATTERN = r"(?<![\w-])(?:{})(?!\w)"
 BEGIN_PATTERN = r"^<!-- begin: ([^ ]+)\s?([^ ]*) -->"
 END_PATTERN = r"^<!-- end: ([^ ]+) -->"
 INSTRUCTION_START = "{"

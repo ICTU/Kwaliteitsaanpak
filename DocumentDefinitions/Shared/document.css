@@ -160,7 +160,24 @@ p.title {
     page-break-inside: avoid;
 }
 
+/* Abbreviations */
+
+a.afkorting {
+    color: inherit;
+    text-decoration: none;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
 /* Tables */
+
+h3 + table,
+h4 + table {
+    margin-top: 30px; /* Compensate for the negative bottom margin of the header */
+}
 
 tr {
     page-break-inside: avoid;

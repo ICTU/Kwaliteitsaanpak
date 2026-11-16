@@ -22,10 +22,16 @@ class MarkdownConverter:
         "warning": "Waarschuwing",
         "caution": "Let op",
     }
+    ABBREVIATIONS_TABLE_HEADER = "Afkorting"  # First header cell of the table with abbreviations and their meanings
     APPENDIX_HEADING = "Bijlagen"
     APPENDIX_LEVEL = 1
+    # Tags whose text is used as a whole by builders, so abbreviations are not marked in their text:
+    NO_ABBREVIATIONS_TAGS: ClassVar = (xmltags.CODE, xmltags.MEASURE_TITLE, xmltags.SUBMEASURE_TITLE)
 
     def __init__(self, variables: Variables) -> None:
+        self.abbreviations: dict[str, str] = {}  # Abbreviation -> meaning
+        self.abbreviations_pattern: re.Pattern[str] | None = None
+        self.in_abbreviation_definition = False  # Are we in the abbreviations table cell that defines an abbreviation?
         self.builder = TreeBuilder()
         self.context: set[str] = set()  # Current context, e.g. are we in a measure, or in the appendices
         self.code_block_tag = xmltags.CODE_BLOCK  # Code blocks with Mermaid source become diagrams
@@ -44,6 +50,7 @@ class MarkdownConverter:
         document_md = pathlib.Path(settings["BuildPath"]) / "document.md"
         md = self._assemble_markdown_file(pathlib.Path(settings["OutputFormats"][output_format]["InputFile"]), settings)
         document_md.write_text(md)
+        self._collect_abbreviations(md)
         self._convert_markdown_file(document_md, settings)
         self._end_document()
         return ElementTree(self.builder.close())
@@ -62,6 +69,31 @@ class MarkdownConverter:
             else:
                 lines.append(line)
         return "".join(lines)
+
+    def _collect_abbreviations(self, markdown: str) -> None:
+        """Collect the abbreviations and their meanings from the abbreviations table, if the markdown has one."""
+        rows: list[list[str]] | None = None  # The rows of the abbreviations table, once its header has been found
+        for line in markdown.splitlines():
+            if not line.startswith(markdown_syntax.TABLE_MARKER):
+                if rows is not None:
+                    break  # The abbreviations table has ended
+                continue
+            cells = [self._strip_formatting(self._process_variables(cell)) for cell in Table.get_table_cells(line)]
+            if rows is not None:
+                rows.append(cells)
+            elif cells[0] == self.ABBREVIATIONS_TABLE_HEADER:
+                rows = []
+        self.abbreviations = {abbreviation: meaning for abbreviation, meaning, *_ in (rows or [])[1:]}  # Skip alignment
+        if self.abbreviations:
+            # Sort the abbreviations by length so longer abbreviations take precedence, e.g. "VIRBI" over "VIR"
+            abbreviations = sorted(self.abbreviations, key=len, reverse=True)
+            alternatives = "|".join(re.escape(abbreviation) for abbreviation in abbreviations)
+            self.abbreviations_pattern = re.compile(markdown_syntax.ABBREVIATION_PATTERN.format(alternatives))
+
+    @staticmethod
+    def _strip_formatting(text: str) -> str:
+        """Remove the Markdown formatting markers from the text."""
+        return re.sub(markdown_syntax.FORMATTING_MARKERS_PATTERN, "", text)
 
     def _convert_markdown_file(self, markdown_filename: pathlib.Path, settings: Settings) -> None:
         """Convert markdown file to XML."""
@@ -276,7 +308,7 @@ class MarkdownConverter:
             {**is_appendix, xmltags.SECTION_LEVEL: str(self.current_section_level)},
         )
         with self.element(xmltags.HEADING):
-            self._process_formatted_text(heading)
+            self._process_formatted_text(heading, mark_abbreviations=False)
 
     def _begin_block(self, name: str, attribute: str) -> None:
         """Begin a block, optionally with one attribute."""
@@ -351,6 +383,9 @@ class MarkdownConverter:
 
         def table_row(tag: str, cells, row_index: int) -> None:
             assert self.table is not None
+            is_abbreviations_table = (
+                self._strip_formatting(self.table.header_cells[0]) == self.ABBREVIATIONS_TABLE_HEADER
+            )
             with self.element(tag):
                 for column_index, (cell, alignment, width) in enumerate(
                     zip(cells, self.table.column_alignment, self.table.column_widths)
@@ -361,8 +396,13 @@ class MarkdownConverter:
                         xmltags.TABLE_CELL_ROW: str(row_index),
                         xmltags.TABLE_CELL_WIDTH: str(width),
                     }
+                    # The first column of the abbreviations table defines the abbreviations:
+                    self.in_abbreviation_definition = (
+                        is_abbreviations_table and tag == xmltags.TABLE_ROW and column_index == 0
+                    )
                     with self.element(xmltags.TABLE_CELL, attributes):
                         self._process_formatted_text(cell)
+                    self.in_abbreviation_definition = False
 
         if self.table is None:
             return
@@ -376,7 +416,7 @@ class MarkdownConverter:
                 table_row(xmltags.TABLE_ROW, row, row_index + 1)
         self.table = None
 
-    def _process_formatted_text(self, line: str) -> None:
+    def _process_formatted_text(self, line: str, mark_abbreviations: bool = True) -> None:
         """Process formatted Markdown text."""
         seen = ""
         formats = [
@@ -419,7 +459,7 @@ class MarkdownConverter:
             for md_start, md_end, xml_tag in formats:
                 if line.startswith(md_start) and md_end in line[len(md_start) :]:
                     format_found = True
-                    self._flush(seen)
+                    self._flush_text(seen, mark_abbreviations)
                     seen = ""
                     if md_start == markdown_syntax.MEASURE_TITLE_START:
                         self.submeasure_counter = 0
@@ -432,22 +472,24 @@ class MarkdownConverter:
                         if xml_tag == xmltags.INSTRUCTION:
                             self.builder.data(md_start)
                         formatted_text, line = line[len(md_start) :].split(md_end, maxsplit=1)
-                        self._process_formatted_text(formatted_text)
+                        self._process_formatted_text(
+                            formatted_text, mark_abbreviations and xml_tag not in self.NO_ABBREVIATIONS_TAGS
+                        )
                         if xml_tag == xmltags.INSTRUCTION:
                             self.builder.data(md_end)
                     break
             else:
                 if match := re.match(markdown_syntax.LINK_PATTERN, line):
                     format_found = True
-                    self._flush(seen)
+                    self._flush_text(seen, mark_abbreviations)
                     seen = ""
                     match = cast(re.Match, match)
                     with self.element(xmltags.ANCHOR, {xmltags.ANCHOR_LINK: match.group(2)}):
-                        self._process_formatted_text(match.group(1))
+                        self._process_formatted_text(match.group(1), mark_abbreviations=False)
                     line = line[len(match.group(0)) :]
                 elif match := re.match(markdown_syntax.IMAGE_PATTERN, line):
                     format_found = True
-                    self._flush(seen)
+                    self._flush_text(seen, mark_abbreviations)
                     seen = ""
                     match = cast(re.Match, match)
                     self._add_element(
@@ -464,7 +506,7 @@ class MarkdownConverter:
             if not format_found:
                 seen += line[0] if line else ""
                 line = line[1:]
-        self._flush(seen)
+        self._flush_text(seen, mark_abbreviations)
 
     def _end_document(self) -> None:
         """End the document."""
@@ -487,6 +529,22 @@ class MarkdownConverter:
             yield element
         finally:
             self.builder.end(tag)
+
+    def _flush_text(self, text: str, mark_abbreviations: bool) -> None:
+        """Flush the text, marking the abbreviations if required."""
+        if not mark_abbreviations or self.abbreviations_pattern is None:
+            self._flush(text)
+            return
+        position = 0
+        for match in self.abbreviations_pattern.finditer(text):
+            self._flush(text[position : match.start()])
+            abbreviation = match.group()
+            attributes: TreeBuilderAttributes = {xmltags.ABBREVIATION_TITLE: self.abbreviations[abbreviation]}
+            if self.in_abbreviation_definition:
+                attributes[xmltags.ABBREVIATION_IS_DEFINITION] = "y"
+            self._add_element(xmltags.ABBREVIATION, abbreviation, attributes)
+            position = match.end()
+        self._flush(text[position:])
 
     def _flush(self, text: str) -> None:
         """Flush the text."""

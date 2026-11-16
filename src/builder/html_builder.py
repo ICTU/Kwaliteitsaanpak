@@ -23,6 +23,9 @@ from .utils import slugify
 class HTMLBuilder(Builder):
     """HTML builder."""
 
+    FLATTEN_TAGS = ()  # Abbreviations are rendered as abbr-elements
+    ABBREVIATION_LINK_CLASS = "afkorting"
+
     FORMAT: ClassVar = {
         xmltags.BOLD: html_tags.BOLD,
         xmltags.CODE: html_tags.CODE,
@@ -116,6 +119,8 @@ class HTMLBuilder(Builder):
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
         super().text(tag, text, attributes)
+        if tag == xmltags.ABBREVIATION:
+            self.start_abbreviation(text, attributes)  # Start here because the id and link depend on the text
         if tag == xmltags.TITLE:
             title = html_tags.PARAGRAPH
             self.builder.start(title, {html_tags.CLASS: "title"})
@@ -207,6 +212,8 @@ class HTMLBuilder(Builder):
                 self.builder.end(html_tags.PARAGRAPH)
             case xmltags.ANCHOR:
                 self.builder.end(html_tags.ANCHOR)
+            case xmltags.ABBREVIATION:
+                self.end_abbreviation(attributes)
             case xmltags.MEASURE:
                 self.builder.end(html_tags.DIV)
                 self.in_measure = False
@@ -247,6 +254,26 @@ class HTMLBuilder(Builder):
     def local_name(name: str) -> str:
         """Remove the namespace, if any, from the tag or attribute name, as HTML does not need SVG namespaces."""
         return name.rsplit("}", maxsplit=1)[-1]
+
+    def start_abbreviation(self, abbreviation: str, attributes: TreeBuilderAttributes) -> None:
+        """Start an abbreviation. The definition of the abbreviation gets an id, but no title because the meaning is
+        right next to it. Other abbreviations get the meaning as title and link to the definition."""
+        abbreviation_id = f"{self.ABBREVIATION_LINK_CLASS}-{slugify(abbreviation)}"
+        if attributes.get(xmltags.ABBREVIATION_IS_DEFINITION):
+            abbr_attributes = {html_tags.ID: abbreviation_id}
+        else:
+            abbr_attributes = {html_tags.ABBREVIATION_TITLE: str(attributes[xmltags.ABBREVIATION_TITLE])}
+            link = f"#{abbreviation_id}"
+            self.builder.start(
+                html_tags.ANCHOR, {html_tags.CLASS: self.ABBREVIATION_LINK_CLASS, html_tags.ANCHOR_LINK: link}
+            )
+        self.builder.start(html_tags.ABBREVIATION, abbr_attributes)
+
+    def end_abbreviation(self, attributes: TreeBuilderAttributes) -> None:
+        """End the abbreviation and the link, if any."""
+        self.builder.end(html_tags.ABBREVIATION)
+        if not attributes.get(xmltags.ABBREVIATION_IS_DEFINITION):
+            self.builder.end(html_tags.ANCHOR)
 
     def start_admonition(self, attributes: TreeBuilderAttributes) -> None:
         """Start the admonition with a title preceded by an icon."""

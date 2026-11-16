@@ -1,5 +1,13 @@
 # Versie 5.5.0, nog te releasen
 
+## Kwaliteitsaanpak en alle templates
+
+- De tabel in de bijlage "Terminologie en afkortingen" is gesplitst in een tabel met afkortingen en een tabel met termen. De tabel met afkortingen geeft per afkorting de betekenis en een toelichting.
+
+## Kwaliteitsaanpak
+
+- In de HTML-versie van de Kwaliteitsaanpak tonen afkortingen hun betekenis als de lezer de muis op de afkorting houdt. Elke afkorting linkt bovendien naar de afkorting in de bijlage "Terminologie en afkortingen".
+
 ## Template Kwaliteitsplan
 
 - Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".

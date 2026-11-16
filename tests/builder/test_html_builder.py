@@ -83,6 +83,90 @@ class TextFormattingTest(unittest.TestCase):
         self.assertIn("<code>formatted</code>", html)
 
 
+class AbbreviationTest(unittest.TestCase):
+    """Unit tests for abbreviations in the HTML builder."""
+
+    def build(self, attributes: dict[str, str]) -> str:
+        """Build an HTML document with an abbreviation."""
+        document = Element(xmltags.DOCUMENT, {"title": "Title", "version": "1"})
+        SubElement(document, xmltags.FRONTPAGE)  # Starts the <main> element that the document end closes
+        paragraph = SubElement(document, xmltags.PARAGRAPH, {})
+        paragraph.text = "De "
+        abbreviation = SubElement(paragraph, xmltags.ABBREVIATION, attributes)
+        abbreviation.text = "API"
+        abbreviation.tail = " is gedocumenteerd."
+        with tempfile.TemporaryDirectory() as directory:
+            filename = pathlib.Path(directory) / "output.html"
+            Converter(ElementTree(document)).convert(HTMLBuilder(filename, pathlib.Path("style.css")))
+            return filename.read_text(encoding="utf-8")
+
+    def test_abbreviation(self):
+        """Test that an abbreviation is an abbr-element within a link to the definition of the abbreviation."""
+        html = self.build({xmltags.ABBREVIATION_TITLE: "application programming interface"})
+        self.assertIn(
+            '<p>De <a class="afkorting" href="#afkorting-api">'
+            '<abbr title="application programming interface">API</abbr></a> is gedocumenteerd.</p>',
+            html,
+        )
+
+    def test_definition(self):
+        """Test that the definition of an abbreviation is an abbr-element with an id, without title and link."""
+        html = self.build(
+            {xmltags.ABBREVIATION_TITLE: "application programming interface", xmltags.ABBREVIATION_IS_DEFINITION: "y"}
+        )
+        self.assertIn(
+            '<p>De <abbr id="afkorting-api">API</abbr> is gedocumenteerd.</p>',
+            html,
+        )
+
+
+class ElementTest(unittest.TestCase):
+    """Unit tests for tables, links, and images in the HTML builder."""
+
+    def setUp(self):
+        self.document = Element(xmltags.DOCUMENT, {"title": "Title", "version": "1"})
+        SubElement(self.document, xmltags.FRONTPAGE)  # Starts the <main> element that the document end closes
+
+    def build(self) -> str:
+        """Build an HTML document."""
+        with tempfile.TemporaryDirectory() as directory:
+            filename = pathlib.Path(directory) / "output.html"
+            Converter(ElementTree(self.document)).convert(HTMLBuilder(filename, pathlib.Path("style.css")))
+            return filename.read_text(encoding="utf-8")
+
+    def test_table(self):
+        """Test that a table has a header with header cells and a body with aligned cells."""
+        table = SubElement(self.document, xmltags.TABLE)
+        for row_tag, cell_text, alignment in (
+            (xmltags.TABLE_HEADER_ROW, "Kop", "left"),
+            (xmltags.TABLE_ROW, "Cel", "right"),
+        ):
+            cell = SubElement(SubElement(table, row_tag), xmltags.TABLE_CELL, {xmltags.TABLE_CELL_ALIGNMENT: alignment})
+            cell.text = cell_text
+        self.assertIn(
+            '<table><thead><tr><th style="text-align:left">Kop</th></tr></thead>'
+            '<tbody><tr><td style="text-align:right">Cel</td></tr></tbody></table>',
+            self.build(),
+        )
+
+    def test_link(self):
+        """Test that a link is an anchor."""
+        anchor = SubElement(
+            SubElement(self.document, xmltags.PARAGRAPH), xmltags.ANCHOR, {xmltags.ANCHOR_LINK: "#bronnen"}
+        )
+        anchor.text = "Bronnen"
+        self.assertIn('<p><a href="#bronnen">Bronnen</a></p>', self.build())
+
+    def test_image(self):
+        """Test that the alternative text of an image consists of the title and the alternative text."""
+        SubElement(
+            SubElement(self.document, xmltags.PARAGRAPH),
+            xmltags.IMAGE,
+            {xmltags.IMAGE_SRC: "plaatje.png", xmltags.IMAGE_TITLE: "Titel", xmltags.IMAGE_ALT: "Beschrijving"},
+        )
+        self.assertIn('<img style="max-width: 100%" src="plaatje.png" alt="Titel: Beschrijving">', self.build())
+
+
 class HTMLEntitiesToXMLTest(unittest.TestCase):
     """Unit tests for converting named HTML entities to numeric character references."""
 

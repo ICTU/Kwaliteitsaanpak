@@ -381,3 +381,160 @@ class AdmonitionTest(MarkdownConverterTestCase):
     def test_heading(self):
         """Test that headings are not allowed in admonitions."""
         self.assertRaises(ValueError, self.convert, "> [!NOTE]\n> # Heading\n")
+
+
+@patch("markdown_converter.pathlib.Path.write_text", Mock())
+class AbbreviationsTest(MarkdownConverterTestCase):
+    """Unit tests for collecting the abbreviations in the Markdown converter."""
+
+    def abbreviations(self, markdown: str) -> dict[str, str]:
+        """Convert the Markdown and return the collected abbreviations."""
+        converter = MarkdownConverter(Variables({"var": "variable"}))
+        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=markdown)):
+            converter.convert(self.settings, "html")
+        return converter.abbreviations
+
+    def test_no_abbreviations_table(self):
+        """Test that there are no abbreviations if the Markdown has no abbreviations table."""
+        markdown = "| Term | Toelichting |\n|:-|:-|\n| **IPO** | intern projectoverleg |\n"
+        self.assertEqual({}, self.abbreviations(markdown))
+
+    def test_abbreviations_table(self):
+        """Test that the abbreviations and their meanings are collected from the abbreviations table."""
+        markdown = (
+            "| Afkorting | Betekenis | Toelichting |\n"
+            "|:----------|:----------|:------------|\n"
+            "| **IPO** | intern projectoverleg | |\n"
+            "| **IB-plan** | informatiebeveiligingsplan | Een plan |\n"
+        )
+        self.assertEqual(
+            {"IPO": "intern projectoverleg", "IB-plan": "informatiebeveiligingsplan"}, self.abbreviations(markdown)
+        )
+
+    def test_formatting_is_removed(self):
+        """Test that formatting is removed from the abbreviations and their meanings."""
+        markdown = "| Afkorting | Betekenis |\n|:-|:-|\n| **ART** | automatische **regressietest** |\n"
+        self.assertEqual({"ART": "automatische regressietest"}, self.abbreviations(markdown))
+
+    def test_variables_are_replaced(self):
+        """Test that variables in the meanings are replaced by their values."""
+        markdown = "| Afkorting | Betekenis |\n|:-|:-|\n| **VAR** | $var$ |\n"
+        self.assertEqual({"VAR": "variable"}, self.abbreviations(markdown))
+
+    def test_other_tables_are_ignored(self):
+        """Test that tables other than the abbreviations table are ignored."""
+        markdown = (
+            "| Afkorting | Betekenis |\n|:-|:-|\n| **IPO** | intern projectoverleg |\n\n"
+            "| Term | Toelichting |\n|:-|:-|\n| **actor** | een persoon |\n"
+        )
+        self.assertEqual({"IPO": "intern projectoverleg"}, self.abbreviations(markdown))
+
+
+@patch("markdown_converter.pathlib.Path.write_text", Mock())
+class AbbreviationMarkingTest(MarkdownConverterTestCase):
+    """Unit tests for marking the abbreviations in the Markdown converter."""
+
+    ABBREVIATIONS_TABLE = (
+        "| Afkorting | Betekenis |\n|:-|:-|\n"
+        "| **API** | application programming interface |\n"
+        "| **IB-plan** | informatiebeveiligingsplan |\n"
+        "| **ISO** | International Organization for Standardization |\n"
+        "| **VIR** | Voorschrift Informatiebeveiliging Rijksdienst |\n"
+        "| **VIRBI** | Voorschrift Informatiebeveiliging Rijksdienst Bijzondere Informatie |\n"
+    )
+
+    def convert(self, markdown: str, abbreviations_table: str = ABBREVIATIONS_TABLE) -> Element:
+        """Convert the Markdown, followed by the abbreviations table, and return the first content element."""
+        with patch(
+            "markdown_converter.pathlib.Path.read_text", Mock(return_value=f"{markdown}\n\n{abbreviations_table}")
+        ):
+            return cast(Element, self.xml().getroot())[2]  # Skip the header and footer
+
+    def abbreviations(self, markdown: str, abbreviations_table: str = ABBREVIATIONS_TABLE) -> list[str]:
+        """Convert the Markdown and return the marked abbreviations in the first element."""
+        return [
+            element.text or "" for element in self.convert(markdown, abbreviations_table).iter(xmltags.ABBREVIATION)
+        ]
+
+    def test_abbreviation(self):
+        """Test that an abbreviation is marked, with its meaning as title."""
+        paragraph = self.convert("De API is gedocumenteerd.")
+        self.assertEqual("De ", paragraph.text)
+        abbreviation = self.find(xmltags.ABBREVIATION, paragraph)
+        self.assertEqual("API", abbreviation.text)
+        self.assertEqual("application programming interface", abbreviation.attrib[xmltags.ABBREVIATION_TITLE])
+        self.assertEqual(" is gedocumenteerd.", abbreviation.tail)
+
+    def test_every_occurrence(self):
+        """Test that every occurrence of an abbreviation is marked."""
+        self.assertEqual(["API", "API"], self.abbreviations("API en nog eens API"))
+
+    def test_whole_words(self):
+        """Test that only whole words are marked."""
+        self.assertEqual([], self.abbreviations("APIs, XAPI, API2, api"))
+
+    def test_compounds(self):
+        """Test that abbreviations are marked at the start of a compound, but not at the end."""
+        self.assertEqual(["API", "IB-plan"], self.abbreviations("API-server, NEN-ISO/IEC, IB-plan"))
+
+    def test_longest_abbreviation(self):
+        """Test that the longest abbreviation is marked if abbreviations overlap."""
+        self.assertEqual(["VIRBI", "VIR"], self.abbreviations("VIRBI en VIR"))
+
+    def test_formatted_text(self):
+        """Test that abbreviations in formatted text and instructions are marked."""
+        self.assertEqual(["API", "ISO"], self.abbreviations("**API** en {ISO}"))
+
+    def test_variables(self):
+        """Test that abbreviations in variable values are marked."""
+        abbreviations_table = self.ABBREVIATIONS_TABLE + "| **variable** | een waarde |\n"
+        self.assertEqual(["variable"], self.abbreviations("Een $var$", abbreviations_table))
+
+    def test_list_items_and_table_cells(self):
+        """Test that abbreviations in list items and table cells are marked."""
+        self.assertEqual(["API"], self.abbreviations("* De API"))
+        self.assertEqual(["API", "ISO"], self.abbreviations("| API |\n|:-|\n| ISO |"))
+
+    def test_not_in_headings(self):
+        """Test that abbreviations in headings are not marked."""
+        heading = self.find(xmltags.HEADING, self.convert("# De API"))
+        self.assertEqual("De API", heading.text)
+        self.assertEqual([], list(heading))
+
+    def test_not_in_code(self):
+        """Test that abbreviations in code and code blocks are not marked."""
+        self.assertEqual([], self.abbreviations("De `API`"))
+        self.assertEqual([], self.abbreviations("```python\napi = 'API'\n```"))
+
+    def test_not_in_links(self):
+        """Test that abbreviations in link texts are not marked."""
+        self.assertEqual([], self.abbreviations("De [API](https://example.org)"))
+
+    def test_not_in_measure_titles(self):
+        """Test that abbreviations in measure and submeasure titles are not marked."""
+        self.assertEqual([], self.abbreviations("**[measure-title]M01: De API[/measure-title]**"))
+        self.assertEqual([], self.abbreviations("[submeasure-title]De API[/submeasure-title]"))
+
+    def test_no_abbreviations_table(self):
+        """Test that nothing is marked if the document has no abbreviations table."""
+        self.assertEqual([], self.abbreviations("De API", abbreviations_table=""))
+
+    def test_definitions(self):
+        """Test that the abbreviations in the first column of the abbreviations table are marked as definitions."""
+        with patch(
+            "markdown_converter.pathlib.Path.read_text", Mock(return_value=f"De API\n\n{self.ABBREVIATIONS_TABLE}")
+        ):
+            root = cast(Element, self.xml().getroot())
+        abbreviations = list(root.iter(xmltags.ABBREVIATION))
+        self.assertNotIn(xmltags.ABBREVIATION_IS_DEFINITION, abbreviations[0].attrib)
+        for abbreviation in abbreviations[1:]:
+            self.assertEqual("y", abbreviation.attrib[xmltags.ABBREVIATION_IS_DEFINITION])
+
+    def test_no_definitions_in_other_columns(self):
+        """Test that abbreviations in the other columns of the abbreviations table are not marked as definitions."""
+        abbreviations_table = self.ABBREVIATIONS_TABLE + "| **IPO** | intern projectoverleg, zie API |\n"
+        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=abbreviations_table)):
+            root = cast(Element, self.xml().getroot())
+        abbreviation = list(root.iter(xmltags.ABBREVIATION))[-1]
+        self.assertEqual("API", abbreviation.text)
+        self.assertNotIn(xmltags.ABBREVIATION_IS_DEFINITION, abbreviation.attrib)

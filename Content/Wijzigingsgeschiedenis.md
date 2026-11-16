@@ -1,5 +1,21 @@
 # Versie 5.5.0, nog te releasen
 
+## Kwaliteitsaanpak
+
+- In de HTML-versie wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+
+## Samenvatting Kwaliteitsaanpak
+
+- In de HTML-versie van de samenvatting wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+
+## Toolgidsen
+
+- In de HTML-versie van de toolgidsen wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+
+## Wijzigingsgeschiedenis
+
+- In de HTML-versie van de wijzigingsgeschiedenis wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+
 ## Template Kwaliteitsplan
 
 - Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".

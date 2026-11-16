@@ -147,6 +147,21 @@ Een plaatje moet een titel hebben:
 ![Alternatieve tekst](plaatje.png "Titel van het plaatje")
 ```
 
+## Diagrammen
+
+Een diagram wordt als tekst vastgelegd in een codeblok met taal `mermaid`, in de syntax van [Mermaid](https://mermaid.js.org). Tijdens het genereren van de documenten wordt het diagram met [Pele](https://pele.run) omgezet naar een plaatje: SVG voor HTML (en daarmee ook PDF) en PNG voor DOCX en PPTX. Geef het diagram met `accTitle` een titel en met `accDescr` een beschrijving voor lezers die het plaatje niet kunnen zien:
+
+````markdown
+```mermaid
+flowchart TD
+    accTitle: Titel van het diagram
+    accDescr: Beschrijving van het diagram als alternatieve tekst.
+    A[Begin] --> B[Einde]
+```
+````
+
+Gerenderde diagrammen worden bewaard in `build/diagrams`, zodat ongewijzigde diagrammen niet opnieuw worden gerenderd. Een ongeldig diagram leidt tot een foutmelding met het diagram en de plek van de fout. GitHub toont Mermaid-diagrammen ook direct in Markdown-bestanden. Met de [playground van Pele](https://pele.run) kun je een diagram uitproberen.
+
 ## Admonitions
 
 Admonitions (ook wel callouts of alerts) zijn gekleurde blokken die de aandacht vestigen op een opmerking, tip of waarschuwing. De syntax is die van [GitHub-alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts). Er zijn vijf typen, elk met een eigen kleur, icoon en standaardtitel:

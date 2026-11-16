@@ -65,6 +65,7 @@ Zie [DocumentDefinitions/README.md](DocumentDefinitions/README.md) voor meer inf
 ### Vereisten
 - [uv](https://docs.astral.sh/uv/) geïnstalleerd op je systeem.
 - [just](https://just.systems) geïnstalleerd op je systeem. De `justfile` bevat recipes voor het installeren van de dependencies, het genereren van de documentatie, het uitvoeren van de unittests en kwaliteitscontroles en het opruimen van gegenereerde bestanden. Voer `just` uit voor een overzicht van de beschikbare recipes.
+- [Node.js](https://nodejs.org/) geïnstalleerd op je systeem, voor het renderen van diagrammen.
 
 ### Stappen
 Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.

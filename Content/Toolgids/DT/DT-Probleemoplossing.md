@@ -258,10 +258,11 @@ Dat is niet automatisch de dependency die je in `pom.xml`, `package.json`, `buil
 
 Voorbeeld:
 
-```text
-jouw applicatie
-└── directe dependency A
-    └── transitieve dependency B met GPL-licentie
+```mermaid
+flowchart TD
+    accTitle: Transitieve dependency met een ongewenste licentie
+    accDescr: Jouw applicatie gebruikt directe dependency A. Dependency A gebruikt transitieve dependency B, die een GPL-licentie heeft.
+    applicatie[Jouw applicatie] --> A[Directe dependency A] --> B[Transitieve dependency B met GPL-licentie]
 ```
 
 In dit geval is **B** de component met de ongewenste licentie.

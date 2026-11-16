@@ -219,6 +219,22 @@ class DocumentStructureTest(unittest.TestCase):
         self.assertEqual("ICTU logo", inline_shape._inline.docPr.get("title"))
         self.assertEqual(Cm(5), inline_shape.width)
 
+    def test_diagram(self):
+        """Test that a diagram is added as image with its title and description, at its natural size."""
+        diagram = SubElement(self.document, xmltags.DIAGRAM)
+        diagram.text = "flowchart TD\n    accTitle: Title\n    accDescr: Description\n    A --> B\n"
+        inline_shape = self.build().inline_shapes[-1]
+        self.assertEqual("Title", inline_shape._inline.docPr.get("title"))
+        self.assertEqual("Description", inline_shape._inline.docPr.get("descr"))
+        self.assertLess(inline_shape.width, Cm(DocxBuilder.MAX_DIAGRAM_WIDTH))
+
+    def test_wide_diagram(self):
+        """Test that a diagram wider than the maximum width is scaled down."""
+        SubElement(self.document, xmltags.DIAGRAM).text = "flowchart LR\n" + " --> ".join(
+            f"Node{index}" for index in range(20)
+        )
+        self.assertEqual(Cm(DocxBuilder.MAX_DIAGRAM_WIDTH), self.build().inline_shapes[-1].width)
+
     def add_admonition(self, admonition_type: str = "note", title: str = "Opmerking") -> Element:
         """Add an admonition to the document."""
         attributes = {xmltags.ADMONITION_TYPE: admonition_type, xmltags.ADMONITION_TITLE: title}

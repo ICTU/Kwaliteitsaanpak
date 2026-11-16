@@ -18,6 +18,7 @@ from pygments.styles import get_style_by_name
 
 import xmltags
 from custom_types import TreeBuilderAttributes
+from diagram import Diagram, render_mermaid
 
 from .builder import Builder
 from .hyperlink import add_bookmark, add_hyperlink
@@ -28,6 +29,7 @@ class DocxBuilder(Builder):
     """Docx builder."""
 
     SCHEMA = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
+    MAX_DIAGRAM_WIDTH = 15  # Centimeters
     TEXT_TAGS = (
         xmltags.PARAGRAPH,
         xmltags.LIST_ITEM,
@@ -201,6 +203,8 @@ class DocxBuilder(Builder):
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         if tag == xmltags.CODE_BLOCK:
             self._add_code_block(self.current_text(), attributes)
+        elif tag == xmltags.DIAGRAM:
+            self._add_diagram(render_mermaid(self.current_text()))
         super().end_element(tag, attributes)
         if tag in (xmltags.BULLET_LIST, xmltags.NUMBERED_LIST):
             self.current_list_style.pop()
@@ -227,6 +231,14 @@ class DocxBuilder(Builder):
                     run.font.color.rgb = RGBColor.from_string(token_style["color"])
                 run.font.bold = token_style["bold"]
                 run.font.italic = token_style["italic"]
+
+    def _add_diagram(self, diagram: Diagram) -> None:
+        """Add the diagram as PNG image, at its natural size unless that is wider than the maximum width."""
+        run = self.container.add_paragraph().add_run()
+        width = Cm(min(diagram.width_cm(), self.MAX_DIAGRAM_WIDTH))
+        picture = run.add_picture(str(diagram.png_path), width=width)
+        picture._inline.docPr.attrib["title"] = diagram.title()
+        picture._inline.docPr.attrib["descr"] = diagram.description()
 
     @staticmethod
     def _token_style(token_styles: dict, token_type):

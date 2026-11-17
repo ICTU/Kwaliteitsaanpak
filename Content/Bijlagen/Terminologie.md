@@ -21,29 +21,35 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **DoD** | definition of done |
 | **DoR** | definition of ready |
 | **DPIA** | $DPIA$ |
-| **due diligence** | een zorgvuldig onderzoek vóór de overname van bestaande software, waarbij onder meer de codekwaliteit, architectuur, beveiliging, licenties, documentatie en onderhoudbaarheid worden beoordeeld om de risico’s van een voorgenomen overname in te schatten |
+| **due diligence** | $DD$ |
+| **FG** | functionaris voor gegevensbescherming; zie **functionaris voor gegevensbescherming** |
+| **functionaris voor gegevensbescherming** | onafhankelijke functionaris die binnen een organisatie adviseert over de bescherming van persoonsgegevens en toezicht houdt op de naleving van de privacywetgeving |
 | **gebruikskwaliteit** | mate waarin een systeem, product of dienst kan worden gebruikt door gespecificeerde gebruikers, voor het bereiken van gespecificeerde doelen, met effectiviteit, efficiëntie en tevredenheid in een gespecificeerde gebruikscontext |
 | **GFO** | $GFO$ |
 | **governance** | het geheel van afspraken over besluitvorming, verantwoordelijkheden, bevoegdheden en toezicht binnen een organisatie of project |
 | **IAMA** | $IAMA$ |
 | **IB-plan** | $IB$ |
 | **informatiesysteem** | een samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en **programmatuur**, alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie [VIR 2007, NORA] |
+| **Information Security Officer** | specialist bij ICTU Software Expertise (ISE) die adviseert over de informatiebeveiliging van softwareontwikkelprojecten, de ontwikkelde software en de bijbehorende ontwikkel- en bedrijfsprocessen. Daarbij werkt de Information Security Officer samen met de kwaliteitsmanager, SDM, projectleider en product owner |
 | **infrastructuurarchitectuur** | $IA$ |
 | **interactie-ontwerp** | $IO$ |
-| **IPO** | intern projectoverleg |
+| **International Organization for Standardization** | onafhankelijke, internationale organisatie die via samenwerking tussen nationale normalisatie-instituten internationale normen ontwikkelt en publiceert |
+| **IPO** | $IPO$ |
 | **ISD** | ICTU Software Diensten, afdeling van ICTU die **softwareontwikkelprojecten** ondersteunt met ontwikkel- en testomgevingen, tools en diensten |
 | **ISE** | ICTU Software Expertise, afdeling van ICTU die **softwareontwikkelprojecten** ondersteunt met expertise op het gebied van **softwareontwikkeling** en die de $KWALITEITSAANPAK$ onderhoudt |
-| **ISO** | International Organization for Standardization |
+| **ISO (organisatie)** | zie **International Organization for Standardization** |
+| **ISO (organisatierol)** | zie **Information Security Officer** |
 | **Jira** | tool om **use cases**, user stories, logische testgevallen en issues vast te leggen |
 | **klantreis** | alle directe en indirecte interactie van een klant of gebruiker met een product of dienst |
 | **KPI** | key performance indicator |
-| **kwaliteitsmanager** | controleert en borgt de kwaliteit van **software** conform de vastgestelde eisen en de Kwaliteitsaanpak en rapporteert aan de **projectleider** |
+| **kwaliteitsmanager** | ondersteunt en coacht het scrumteam bij de kwaliteitszorg en het leveren van software van goede kwaliteit, monitort de softwarekwaliteit, signaleert kwaliteitsrisico’s en technische schuld, adviseert over verbeteringen en rapporteert aan de **projectleider** |
 | **minimum viable product** | $MVP$ |
 | **MTP** | $MTP$ |
 | **MVP** | **minimum viable product** |
 | **NFE** | $NFE$ |
 | **NORA** | Nederlandse Overheidsreferentie-architectuur |
 | **NPR** | Nederlandse Praktijkrichtlijn |
+| **OGON** | OpdrachtGevers-/OpdrachtNemersoverleg |
 | **ontwikkelaars** | Ontwikkelaars (*developers* in de Scrumgids) zijn de mensen in het **Scrumteam** die iedere sprint gecommitteerd zijn aan het maken van elk aspect van een bruikbaar increment [Scrumgids] |
 | **opdrachtgevende organisatie** | overheidsorganisatie die opdracht geeft aan ICTU tot ontwikkeling en/of onderhoud van **software** |
 | **opdrachtgever** | medewerker van de **opdrachtgevende organisatie** die eindverantwoordelijk is voor de opdracht aan ICTU |
@@ -57,7 +63,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **programmatuur** | zie **software** |
 | **project** | een tijdelijke organisatie voor het realiseren van een resultaat - bij ICTU bestaat een **softwareontwikkelproject** uit medewerkers van ICTU, de **opdrachtgevende organisatie**, beheerorganisatie en eventueel andere partijen |
 | **projectleider** | medewerker eindverantwoordelijk voor het projectresultaat - bij ICTU-softwareontwikkelprojecten is de projectleider een medewerker van ICTU |
-| **projectsecretaris** | medewerker die de projectleider ondersteunt bij administratieve, organisatorische en financiële werkzaamheden binnen een project |
+| **projectsecretaris** | medewerker die de projectleider ondersteunt bij administratieve, organisatorische en financiële werkzaamheden binnen een project. Een projectsecretaris is werkzaam voor de afdeling Project- en Managementondersteuning (PMO). |
 | **PSA** | $PSA$ |
 | **PvA** | plan van aanpak; document waarin de aanpak, planning, benodigde middelen, risico’s en randvoorwaarden voor de uitvoering van een project of projectfase worden vastgelegd |
 | **PvE** | programma van eisen |

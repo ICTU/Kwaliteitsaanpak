@@ -42,6 +42,7 @@ De onderstaande tabel bevat afkortingen en termen die voorkomen in de $KWALITEIT
 | **Jira** | tool om **use cases**, user stories, logische testgevallen en issues vast te leggen |
 | **klantreis** | alle directe en indirecte interactie van een klant of gebruiker met een product of dienst |
 | **KPI** | key performance indicator |
+| **Kwaliteitsaanpak** | de $KWALITEITSAANPAK$ is een set maatregelen gebaseerd op de risico’s bij de ontwikkeling van maatwerksoftware |
 | **kwaliteitsmanager** | ondersteunt en coacht het scrumteam bij de kwaliteitszorg en het leveren van software van goede kwaliteit, monitort de softwarekwaliteit, signaleert kwaliteitsrisico’s en technische schuld, adviseert over verbeteringen en rapporteert aan de **projectleider** |
 | **minimum viable product** | $MVP$ |
 | **MTP** | $MTP$ |

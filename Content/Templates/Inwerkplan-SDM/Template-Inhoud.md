@@ -1,4 +1,32 @@
-# 3 Planning
+# Wat je moet weten over ICTU
+
+Dit hoofdstuk bevat leerdoelen over ICTU als organisatie binnen het Nederlandse overheidslandschap en voorzieningen die ICTU biedt aan al haar medewerkers. Dit hoofdstuk is daarmee niet specifiek voor de rol van kwaliteitsmanager, maar voor de volledigheid toch hier opgenomen.
+
+## ICTU-organisatie
+
+Leerdoelen (week 1):
+* Je weet wat [de missie van ICTU](https://www.ictu.nl/over-ons) is
+* Je weet [voor wie ICTU werkt](https://www.ictu.nl/over-ons/voor-wie-we-werken) en [welke diensten ICTU levert](https://www.ictu.nl/dienstenoverzicht)
+* Je weet welke [directies en afdelingen ICTU](https://ictubeheer.sharepoint.com/teams/Organisatie_DirectieICTU/SitePages/Organisatieschets.aspx) heeft en wat in grote lijnen de taken en verantwoordelijkheden van die afdelingen zijn
+* Je weet wie de [besturing van ICTU](https://www.ictu.nl/over-ons/besturing-ictu) bemensen
+
+Acties (zodra mogelijk):
+* Je hebt deelgenomen aan de [ICTU-onboarding](https://ictubeheer.sharepoint.com/teams/Onboarding2)
+* Je hebt deelgenomen aan de [ICTU-live update](https://ictubeheer.sharepoint.com/teams/Organisatie_Communicatie/SitePages/Live%20Update.aspx)
+
+## ICTU-voorzieningen
+
+Leerdoelen (week 1):
+* Je weet hoe je hulp kunt vragen van de [Service Desk](https://ictubeheer.sharepoint.com/teams/Organisatie_ServicedeskenFacilitairezaken) bij het gebruik van de ICTU-voorzieningen
+
+Je hebt toegang tot (week 1):
+* [MS Outlook](https://webmail.ictu.nl) voor e-mail en agenda
+* AFAS voor het registreren van uren
+* [SharePoint](https://ictubeheer.sharepoint.com) voor het delen van documenten
+* [MS Teams](https://teams.microsoft.com) voor online vergaderen, individuele chats, teamkanalen en organisatiebrede conversaties (dat laatste kun je vinden via de app "Viva Engage" binnen MS Teams)
+* [Topdesk](https://topdesk.ictu.nl) voor het reserveren van vergaderzalen, parkeerplaatsen en andere diensten
+
+# Planning
 
 Naast dit inwerkplan verzorgt ICTU enkele onderdelen van het introductietraject. We gaan ervan uit dat deze onderdelen al zijn geregeld of binnenkort worden geregeld. Het gaat om:
 
@@ -18,13 +46,13 @@ Wanneer je bij ICTU begint, krijg je een buddy (vast aanspreekpunt) toegewezen. 
 >
 > **Doel:** gericht werken aan een beter begrip van de SDM-rol.
 
-## 3.1 Inwerkperiode
+## Inwerkperiode
 
 We gaan uit van een inwerkperiode van drie maanden. Het streven is dat je aan het einde van die periode de belangrijkste betrokkenen hebt gesproken en weet waar je informatie en ondersteuning kunt vinden. Ook daarna kun je bij collega’s terecht voor hulp. Heb je behoefte aan structurele vakinhoudelijke begeleiding, dan kun je een mentor krijgen. Meer informatie over het mentoraat bij ICTU vind je op het bijbehorende SharePoint-kanaal.
 
 🚶‍➡️ Naast dit inwerkplan leer je de SDM-rol in de praktijk kennen. Daarbij krijg je ondersteuning van een ervaren SDM, een projectleider of beiden.
 
-# 4 De Software Delivery Manager
+# De Software Delivery Manager
 
 De Software Delivery Manager (SDM) organiseert de ontwikkeling en oplevering van software volgens de vastgestelde eisen en de ICTU Kwaliteitsaanpak. De SDM rapporteert aan de projectleider.
 
@@ -45,7 +73,7 @@ _Voorbeeld van de governance en overlegstructuur binnen een softwareontwikkelpro
 
 
 
-## 4.1 Werkzaamheden
+## Werkzaamheden
 
 De onderstaande tabellen geven een niet-uitputtend overzicht van de werkzaamheden die een SDM kan uitvoeren. Welke taken een SDM daadwerkelijk uitvoert, hangt af van de aard van het project en de taakverdeling met de projectleider en de opdrachtgever.
 
@@ -123,14 +151,14 @@ De onderstaande tabellen geven een niet-uitputtend overzicht van de werkzaamhede
 | Onderbouwd afwijken van processen, standaarden en afspraken | Stem afwijkingen af met de relevante betrokkenen en leg de onderbouwing vast om projectkeuzes te borgen. | |
 | Afsluiten van het softwareontwikkelproject | Zorg voor het archiveren en opruimen van projectdocumentatie en artefacten. Laat waar nodig projectgegevens op gegevensdragers van projectmedewerkers veilig verwijderen. | Vraag de kwaliteitsmanager en de Information Security Officer (ISO) van ISE om advies. |
 
-# 5 Samenwerking
+# Samenwerking
 
 
-## 5.1 Hybride werken
+## Hybride werken
 
 Goede communicatie is essentieel voor het slagen van softwareontwikkelprojecten. Daarom is het binnen ICTU gebruikelijk om minimaal één gezamenlijke kantoordag per week te organiseren waarop de SDM, de kwaliteitsmanager en het scrumteam samenkomen.
 
-## 5.2 Projectleider, projectsecretaris en kwaliteitsmanager
+## Projectleider, projectsecretaris en kwaliteitsmanager
 
 De SDM werkt nauw samen met de projectleider, projectsecretaris en kwaliteitsmanager. De precieze taakverdeling verschilt per project en hangt onder meer af van de kennis, ervaring en verantwoordelijkheden van de betrokkenen.
 
@@ -196,7 +224,7 @@ De belangrijkste werkzaamheden zijn:
 > **Doel:** inzicht krijgen in de wijze waarop de softwarekwaliteit wordt gemonitord en beoordeeld.
 
 
-## 5.3 Scrumteam
+## Scrumteam
 
 Het scrumteam is zelfsturend en bepaalt zelf wie welke werkzaamheden uitvoert, wanneer en op welke manier. Als SDM begeleid en stimuleer je de zelforganisatie van het scrumteam. Wanneer de samenwerking, motivatie, hoeveelheid of kwaliteit van het werk achterblijft, neem je het initiatief om dit samen met het scrumteam en de scrummaster te bespreken en te verbeteren.
 
@@ -235,7 +263,7 @@ Je kunt voor jezelf een overzicht bijhouden van de scrumteamleden, hun rollen en
 
 📖 Lees ter voorbereiding op activiteit 6 het globaal functioneel ontwerp (GFO) van je project, als dit beschikbaar is.
 
-## 5.4 Product Owner
+## Product Owner
 
 De product owner (PO) speelt een essentiële rol in de softwareontwikkeling. Zonder product owner kan de ontwikkeling stagneren. De PO wordt altijd door de opdrachtgever geleverd. Soms stelt ICTU een *product owner by proxy* beschikbaar, bijvoorbeeld een ontwerper die de product owner ondersteunt bij het uitwerken van user stories. Ook kan de SDM, scrummaster of een andere ICTU-medewerker de product owner begeleiden.
 
@@ -266,7 +294,7 @@ Het profiel van een product owner omvat verschillende verantwoordelijkheden, vaa
 3. **Empathie:** De behoeften en standpunten van verschillende belanghebbenden begrijpen en meewegen.
 4. **Doorzettingsvermogen:** Bij obstakels en uitdagingen blijven zoeken naar passende oplossingen.
 
-## 5.5 Opdrachtgever
+## Opdrachtgever
 
 De projectleider is primair verantwoordelijk voor de communicatie met de opdrachtgever. Dat betekent niet dat je als SDM geen rechtstreeks contact met de opdrachtgever hebt.
 
@@ -294,13 +322,13 @@ Gebruik eventueel de onderstaande tabel om je contacten vast te leggen.
 
 
 
-# 6 Overlegvormen
+# Overlegvormen
 
 Binnen softwareontwikkelprojecten vinden verschillende overleggen plaats. Aan welke overleggen de SDM deelneemt, hangt af van de inrichting van het project en de gemaakte afspraken. Sommige overleggen maken deel uit van de Scrum-werkwijze; andere zijn gericht op projectsturing, samenwerking en afstemming met betrokken organisaties.
 
 De onderstaande tabellen geven een overzicht van veelvoorkomende overlegvormen. De genoemde frequenties zijn indicatief en kunnen per project verschillen.
 
-## 6.1 Overleggen met de SDM
+## Overleggen met de SDM
 
 | Overleg | Doel | Frequentie | Deelnemers |
 | --- | --- | --- | --- |
@@ -313,7 +341,7 @@ De onderstaande tabellen geven een overzicht van veelvoorkomende overlegvormen. 
 | Werkvoorraadoverleg¹ | Vooruitkijken naar de komende sprints en beoordelen of er voldoende uitgewerkte werkzaamheden beschikbaar zijn. ¹ Dit overleg wordt vooral ingezet wanneer de werkvoorraad aandacht vraagt. De SDM kan zo nodig aanvullend wekelijks een overzicht verstrekken. | Indien nodig | Projectleider(s) van de opdrachtgever en van ICTU, product owner(s), SDM en scrummaster(s). |
 | Projectleidersoverleg²  | Bijzonderheden en aandachtspunten aan opdrachtgevers- en opdrachtnemerszijde bespreken. ² Dit overleg vindt niet in alle projecten plaats en wordt op initiatief van de projectleiders georganiseerd. | Iedere sprint, indien georganiseerd | Projectleider van de opdrachtgever, product owner, ICTU-projectleider en SDM. |
 
-## 6.2 Overleggen meestal zonder de SDM
+## Overleggen meestal zonder de SDM
 
 | Overleg | Doel | Frequentie | Deelnemers |
 | --- | --- | --- | --- |
@@ -327,7 +355,7 @@ De onderstaande tabellen geven een overzicht van veelvoorkomende overlegvormen. 
 | Overleg tussen architecten en product owners | Functionele en technische prioriteiten en afhankelijkheden op elkaar afstemmen, zodat ook noodzakelijke technische werkzaamheden tijdig worden opgepakt. | Wekelijks of eenmaal per sprint | Enterprise architecten en product owners. |
 | Overleg tussen beheerorganisatie en ontwikkelteam | De overdracht van ontwikkelde software aan de beheerorganisatie voorbereiden en afstemmen. Een technisch applicatiebeheerder kan hiervoor deelnemen aan het scrumteam en ondersteunen bij bijvoorbeeld het installeren van releases op de testomgeving. | Wekelijks of eenmaal per sprint | Ontwikkelaars en vertegenwoordigers van de beheerorganisatie. |
 
-## 6.3 SDM-team
+## SDM-team
 
 Het SDM-team van ICTU bestaat uit interne en externe SDM’s. Via het Microsoft Teams-kanaal kunnen SDM’s kennis en ervaringen uitwisselen en elkaar om advies vragen. Daarnaast is er een teamsite op SharePoint.
 
@@ -336,7 +364,7 @@ Het SDM-team van ICTU bestaat uit interne en externe SDM’s. Via het Microsoft 
 >
 > **Doel:** inzicht krijgen in de beschikbare informatie, hulpmiddelen en kennisbronnen, zodat je deze tijdens je werkzaamheden kunt gebruiken.
 
-## 6.4 ICTU-afdeling ISE
+## ICTU-afdeling ISE
 
 Als SDM maak je deel uit van ICTU Software Expertise (ISE). Binnen deze afdeling werken medewerkers met verschillende rollen en specialismen samen. ISE beschikt over een Microsoft Teams-kanaal en een SharePoint-site.
 
@@ -351,7 +379,7 @@ ISE bestaat uit een vaste kern van interne medewerkers en een grote groep extern
 
 
 
-# 7 Andere betrokkenen en ondersteunende diensten
+# Andere betrokkenen en ondersteunende diensten
 
 Naast de mensen met wie je binnen je project samenwerkt, zijn er binnen ICTU verschillende specialisten en teams die je kunnen ondersteunen bij je werkzaamheden als SDM.
 
@@ -360,7 +388,7 @@ Naast de mensen met wie je binnen je project samenwerkt, zijn er binnen ICTU ver
 >
 > **Doel:** kennismaken met collega’s buiten het projectteam en inzicht krijgen in de mogelijkheden voor samenwerking en ondersteuning.
 
-## 7.1 Privacy en informatiebeveiliging
+## Privacy en informatiebeveiliging
 
 De Information Security Officer (ISO) van ICTU Software Expertise (ISE) adviseert over de informatiebeveiliging van softwareontwikkelprojecten, de ontwikkelde software en de bijbehorende processen. De ISO werkt daarbij samen met onder meer de kwaliteitsmanager, SDM, projectleider en product owner.
 
@@ -369,7 +397,7 @@ Daarnaast heeft ICTU een functionaris voor gegevensbescherming (FG). De FG advis
 > [!TIP] Idee 💬
 > Maak een afspraak met een van de Information Security Officers van ICTU. Bespreek welke beveiligingsvraagstukken binnen jouw project spelen en hoe je de samenwerking met de ISO kunt vormgeven.
 
-## 7.2 Ecosysteem
+## Ecosysteem
 
 Het ICTU-Ecosysteem (ECO) ondersteunt het softwareontwikkelproces met projectomgevingen en tools die nodig zijn voor het ontwikkelen, testen en opleveren van software. Denk hierbij aan GitLab, Jenkins en SonarQube.
 
@@ -382,7 +410,7 @@ Het Ecosysteem wordt onderhouden door de afdeling ICTU Software Diensten (ISD).
 > [!TIP] Idee 💬
 > Maak een afspraak met de product owner van ECO om meer te weten te komen over het platform en de beschikbare voorzieningen. Ook binnen je eigen project kunnen collega’s je hierover informeren.
 
-## 7.3 Infrastructuur en technisch beheer
+## Infrastructuur en technisch beheer
 
 Voor de ontwikkeling van software zijn hardware, software, netwerken en andere technische voorzieningen nodig. Denk aan servers, opslagvoorzieningen en netwerkinfrastructuur voor ontwikkel-, demo- en testomgevingen.
 

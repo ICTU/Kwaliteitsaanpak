@@ -10,11 +10,15 @@
       "InputFile": "Content/Toolgids/ZAP/ZAP.md",
       "OutputFile": "ICTU-Toolgids-ZAP.html",
       "OutputPaths": ["docs/$VERSIE$/Toolgids/ZAP"],
-      "StyleSheets": ["../../ICTU-Kwaliteitsaanpak.css", "../ICTU-Toolgids.css"],
+      "StyleSheets": ["../../ICTU-Kwaliteitsaanpak.css", "../ICTU-Toolgids.css", "../../ICTU-Navigatiemenu.css"],
       "CopyFiles": [
         {
           "from": "DocumentDefinitions/Shared/document.css",
           "to": "docs/$VERSIE$/ICTU-Kwaliteitsaanpak.css"
+        },
+        {
+          "from": "DocumentDefinitions/Shared/navigation.css",
+          "to": "docs/$VERSIE$/ICTU-Navigatiemenu.css"
         },
         {
           "from": "DocumentDefinitions/Shared/toolgids.css",

@@ -12,12 +12,17 @@
                 "docs/$VERSIE$"
             ],
             "StyleSheets": [
-                "ICTU-Kwaliteitsaanpak.css"
+                "ICTU-Kwaliteitsaanpak.css",
+                "ICTU-Navigatiemenu.css"
             ],
             "CopyFiles": [
                 {
                     "from": "DocumentDefinitions/Shared/document.css",
                     "to": "docs/$VERSIE$/ICTU-Kwaliteitsaanpak.css"
+                },
+                {
+                    "from": "DocumentDefinitions/Shared/navigation.css",
+                    "to": "docs/$VERSIE$/ICTU-Navigatiemenu.css"
                 },
                 {
                     "from": "Content/Images/*.png",

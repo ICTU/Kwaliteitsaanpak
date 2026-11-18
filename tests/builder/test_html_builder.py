@@ -47,6 +47,29 @@ class CodeBlockTest(unittest.TestCase):
         self.assertRaises(ClassNotFound, self.build, "nonexistent", "code\n")
 
 
+class DiagramTest(unittest.TestCase):
+    """Unit tests for diagrams in the HTML builder."""
+
+    def build(self, mermaid: str) -> str:
+        """Build an HTML document with a single diagram and return its contents."""
+        document = Element(xmltags.DOCUMENT, {"title": "Title", "version": "1"})
+        SubElement(document, xmltags.FRONTPAGE)  # Starts the <main> element that the document end closes
+        SubElement(document, xmltags.DIAGRAM).text = mermaid
+        with tempfile.TemporaryDirectory() as directory:
+            filename = pathlib.Path(directory) / "output.html"
+            Converter(ElementTree(document)).convert(HTMLBuilder(filename, pathlib.Path("style.css")))
+            return filename.read_text(encoding="utf-8")
+
+    def test_inline_svg(self):
+        """Test that the diagram is embedded as SVG without namespace prefixes."""
+        html = self.build("flowchart TD\n    accTitle: Diagram title\n    A[Begin] --> B[End]\n")
+        self.assertIn("<p><svg ", html)
+        self.assertIn("Diagram title</title>", html)
+        self.assertIn("Begin", html)
+        self.assertNotIn("ns0:", html)
+        self.assertNotIn("accTitle", html)
+
+
 class TextFormattingTest(unittest.TestCase):
     """Unit tests for fomatting text."""
 

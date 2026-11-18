@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "markdown-link-check": "^3.15.0"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "pele": "^1.13.0"
   }
 }

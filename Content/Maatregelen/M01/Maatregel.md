@@ -245,7 +245,44 @@ Waar mogelijk stelt de opdrachtgevende organisatie ook andere relevante informat
 
 ### Samenhang voorfaseproducten
 
-![Business impact analyse (BIA), data protection impact assessment (DPIA), impact assessment mensenrechten en algoritmes (IAMA) en projectstartarchitectuur (PSA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), product backlog (PB), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De business impact analyse, de data protection impact analyse en de impact assessment mensenrechten en algoritmes vormen input voor de PSA. De projectstartarchitectuur vormt input voor functionele eisen, niet-functionele eisen en informatiebeveiligingsplan. De functionele eisen vormen input voor de product backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor product backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De product backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.](relaties-tussen-producten.png "Relaties tussen producten")
+<!-- begin: slide -->
+
+```mermaid
+flowchart TD
+    accTitle: Relaties tussen producten
+    accDescr: Business impact analyse (BIA), data protection impact assessment (DPIA), impact assessment mensenrechten en algoritmes (IAMA) en projectstartarchitectuur (PSA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), product backlog (PB), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De business impact analyse, de data protection impact analyse en de impact assessment mensenrechten en algoritmes vormen input voor de PSA. De projectstartarchitectuur vormt input voor functionele eisen, niet-functionele eisen en informatiebeveiligingsplan. De functionele eisen vormen input voor de product backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor product backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De product backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.
+
+    subgraph input [Input voorfase]
+        BIA["Business impact analyse"]
+        DPIA["Data protection impact assessment"]
+        IAMA["Impact assessment mensenrechten en algoritmes"]
+        PSA["Projectstartarchitectuur"]
+    end
+    subgraph output [Output voorfase]
+        FE["Functionele eisen"]
+        NFE["Niet-functionele eisen"]
+        IB["Informatiebeveiligingsplan"]
+        PB["Product backlog"]
+        OA["Ontwerp en architectuur"]
+        KP["Kwaliteitsplan"]
+        TP["Testplannen"]
+    end
+
+    BIA & DPIA & IAMA --> PSA
+    PSA --> FE & NFE & IB
+    FE --> PB & OA
+    NFE --> PB & OA & KP
+    IB --> OA & KP
+    PB & OA --> TP
+
+    classDef input fill:#C3F0FC,stroke:#00AFFF,stroke-width:1.5px,color:#000
+    classDef output fill:#F6ADF5,stroke:#00AFFF,stroke-width:1.5px,color:#000
+    class BIA,DPIA,IAMA,PSA input
+    class FE,NFE,IB,PB,OA,KP,TP output
+    linkStyle default stroke:#00AEEF,stroke-width:2.5px
+```
+
+<!-- end: slide -->
 
 Bovenstaande figuur laat de belangrijkste relaties zien tussen de verschillende producten die de input en output van de voorfase vormen. Naast de informatiestromen zoals door de pijlen weergegeven zijn er in de praktijk nog meer verbanden tussen de producten. Zo kan de gekozen oplossing in de architectuur van invloed zijn op de maatregelen in het informatiebeveiligingsplan of leiden niet-functionele eisen tot extra functionele eisen.
 

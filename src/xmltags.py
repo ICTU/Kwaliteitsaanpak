@@ -10,6 +10,7 @@ BULLET_LIST = "bullet-list"
 CODE = "code"
 CODE_BLOCK = "code-block"
 CODE_BLOCK_LANGUAGE = "language"
+DIAGRAM = "diagram"  # Contains the Mermaid source of the diagram
 DOCUMENT = "document"
 DOCUMENT_TITLE = "title"
 DOCUMENT_VERSION = "version"

@@ -252,6 +252,13 @@ class MarkdownTest(MarkdownConverterTestCase):
         code_block = self.find(xmltags.CODE_BLOCK)
         self.assertEqual("print('Hello world')\n", code_block.text)
 
+    @patch(read_text, Mock(return_value="```mermaid\nflowchart TD\n    A --> B\n```\nAfter\n"))
+    def test_diagram(self):
+        """Test that a Mermaid code block becomes a diagram with the Mermaid source."""
+        self.assertEqual("flowchart TD\n    A --> B\n", self.find(xmltags.DIAGRAM).text)
+        self.assertIsNone(self.xml().find(xmltags.CODE_BLOCK))
+        self.assertEqual("After", self.find(xmltags.PARAGRAPH).text)
+
     @patch(read_text, Mock(return_value="See: [more info](https://more.info)\n"))
     def test_url(self):
         """Test a URL."""
@@ -341,6 +348,11 @@ class AdmonitionTest(MarkdownConverterTestCase):
         """Test that an admonition can contain a code block, even if it is not closed."""
         admonition = self.admonition("> [!NOTE]\n> ```python\n> print('Hello world')\n")
         self.assertEqual("print('Hello world')\n", self.find(xmltags.CODE_BLOCK, admonition).text)
+
+    def test_diagram(self):
+        """Test that an admonition can contain a diagram, even if it is not closed."""
+        admonition = self.admonition("> [!NOTE]\n> ```mermaid\n> flowchart TD\n")
+        self.assertEqual("flowchart TD\n", self.find(xmltags.DIAGRAM, admonition).text)
 
     def test_marker_in_code_block(self):
         """Test that a marker in a code block is not an admonition."""

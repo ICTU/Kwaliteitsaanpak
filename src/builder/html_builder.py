@@ -12,6 +12,7 @@ from pygments_better_html import BetterHtmlFormatter
 
 import xmltags
 from custom_types import TreeBuilderAttributes
+from diagram import render_mermaid
 
 from . import html_tags
 from .builder import Builder
@@ -130,7 +131,7 @@ class HTMLBuilder(Builder):
             if self.heading_level[-1] <= 2:
                 heading_attributes["id"] = slugify(text)
             self.builder.start(html_tags.HEADING + str(self.heading_level[-1]), heading_attributes)
-        if tag not in (xmltags.IMAGE, xmltags.HEADER, xmltags.TITLE, xmltags.CODE_BLOCK):
+        if tag not in (xmltags.IMAGE, xmltags.HEADER, xmltags.TITLE, xmltags.CODE_BLOCK, xmltags.DIAGRAM):
             self.builder.data(text)
 
     def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
@@ -199,6 +200,11 @@ class HTMLBuilder(Builder):
                 lexer = get_lexer_by_name(language)
                 formatter = BetterHtmlFormatter(linenos=False)
                 self.replay(fromstring(self.html_entities_to_xml(highlight(code, lexer, formatter))))
+            case xmltags.DIAGRAM:
+                # Embed the SVG in the HTML so no image files need to be copied with the HTML file
+                self.builder.start(html_tags.PARAGRAPH, {})
+                self.replay(render_mermaid(self.current_text()).svg())
+                self.builder.end(html_tags.PARAGRAPH)
             case xmltags.ANCHOR:
                 self.builder.end(html_tags.ANCHOR)
             case xmltags.MEASURE:
@@ -226,15 +232,21 @@ class HTMLBuilder(Builder):
         return re.sub(r"&([A-Za-z][A-Za-z0-9]*);", reference, fragment)
 
     def replay(self, node: Element) -> None:
-        """Replay a parsed HTML fragment into the tree builder."""
-        self.builder.start(node.tag, dict(node.attrib))
+        """Replay a parsed HTML or SVG fragment into the tree builder."""
+        tag = self.local_name(node.tag)
+        self.builder.start(tag, {self.local_name(name): value for name, value in node.attrib.items()})
         if node.text:
             self.builder.data(node.text)
         for child in node:
             self.replay(child)
             if child.tail:
                 self.builder.data(child.tail)
-        self.builder.end(node.tag)
+        self.builder.end(tag)
+
+    @staticmethod
+    def local_name(name: str) -> str:
+        """Remove the namespace, if any, from the tag or attribute name, as HTML does not need SVG namespaces."""
+        return name.rsplit("}", maxsplit=1)[-1]
 
     def start_admonition(self, attributes: TreeBuilderAttributes) -> None:
         """Start the admonition with a title preceded by an icon."""

@@ -28,6 +28,7 @@ class MarkdownConverter:
     def __init__(self, variables: Variables) -> None:
         self.builder = TreeBuilder()
         self.context: set[str] = set()  # Current context, e.g. are we in a measure, or in the appendices
+        self.code_block_tag = xmltags.CODE_BLOCK  # Code blocks with Mermaid source become diagrams
         self.in_admonition = False
         self.current_section_level = 0
         self.current_section: Element | None = None
@@ -184,8 +185,7 @@ class MarkdownConverter:
         if not self.in_admonition:
             return
         if xmltags.CODE_BLOCK in self.context:
-            self.context.remove(xmltags.CODE_BLOCK)
-            self.builder.end(xmltags.CODE_BLOCK)
+            self._end_code_block()
         self._end_lists()
         self._end_table()
         self.builder.end(xmltags.ADMONITION)
@@ -200,11 +200,9 @@ class MarkdownConverter:
         if xmltags.CODE_BLOCK not in self.context:
             stripped_line = self._process_variables(stripped_line)
         if match := re.match(markdown_syntax.CODE_BLOCK_START, stripped_line):
-            self.context.add(xmltags.CODE_BLOCK)
-            self.builder.start(xmltags.CODE_BLOCK, {xmltags.CODE_BLOCK_LANGUAGE: match.group(1)})
+            self._start_code_block(match.group(1))
         elif match := re.match(markdown_syntax.CODE_BLOCK_END, stripped_line):
-            self.context.remove(xmltags.CODE_BLOCK)
-            self.builder.end(xmltags.CODE_BLOCK)
+            self._end_code_block()
         elif xmltags.CODE_BLOCK in self.context:
             self.builder.data(line + "\n")
         elif match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
@@ -231,6 +229,21 @@ class MarkdownConverter:
         else:
             with self.element(xmltags.PARAGRAPH):
                 self._process_formatted_text(stripped_line)
+
+    def _start_code_block(self, language: str) -> None:
+        """Start a code block, or a diagram if the code block contains Mermaid source."""
+        self.context.add(xmltags.CODE_BLOCK)
+        if language == markdown_syntax.MERMAID_LANGUAGE:
+            self.code_block_tag = xmltags.DIAGRAM
+            self.builder.start(xmltags.DIAGRAM, {})
+        else:
+            self.code_block_tag = xmltags.CODE_BLOCK
+            self.builder.start(xmltags.CODE_BLOCK, {xmltags.CODE_BLOCK_LANGUAGE: language})
+
+    def _end_code_block(self) -> None:
+        """End the code block or diagram."""
+        self.context.remove(xmltags.CODE_BLOCK)
+        self.builder.end(self.code_block_tag)
 
     def _process_variables(self, line: str) -> str:
         """Replace the variables with their values."""

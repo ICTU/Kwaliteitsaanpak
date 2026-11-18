@@ -18,6 +18,7 @@ ITALIC_START = ITALIC_END = "_"
 ITALIC_ALTERNATIVE_START = ITALIC_ALTERNATIVE_END = "*"
 # The URL may contain balanced parentheses (e.g. https://en.wikipedia.org/wiki/Foo_(disambiguation)), one level deep
 LINK_PATTERN = r"^\[([^\]]+)\]\(((?:[^()]|\([^()]*\))*)\)"
+MERMAID_LANGUAGE = "mermaid"  # Code blocks in this language are rendered as diagrams
 NUMBERED_LIST_PATTERN = r"^[0-9A-Za-z]+\. "
 QUOTE_MARKER = ">"
 STRIKETROUGH_START = STRIKETROUGH_END = "~~"

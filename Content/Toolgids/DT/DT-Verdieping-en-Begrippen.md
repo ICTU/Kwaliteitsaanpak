@@ -164,10 +164,11 @@ Een transitieve dependency is een dependency die indirect wordt binnengehaald do
 
 Voorbeeld:
 
-```text
-Applicatie
-└── Library A
-    └── Library B
+```mermaid
+flowchart TD
+    accTitle: Directe en transitieve dependency
+    accDescr: De applicatie gebruikt Library A direct. Library A gebruikt Library B, waardoor Library B een transitieve dependency van de applicatie is.
+    applicatie[Applicatie] --> A[Library A] --> B[Library B]
 ```
 
 In dit voorbeeld gebruikt de applicatie `Library A` direct. `Library B` is transitief, omdat deze via `Library A` wordt meegenomen.

@@ -86,3 +86,8 @@ class SelfAssessmentXlsxBuilderTest(unittest.TestCase):
         )
         SubElement(admonition, xmltags.PARAGRAPH).text = "Tip text"
         self.assertTrue(self.comments()["B7"].endswith("Rationale text\n\nTip:\nTip text"))
+
+    def test_diagram(self):
+        """Test that the Mermaid source of a diagram is not added to the measure comment."""
+        SubElement(self.measure_section, xmltags.DIAGRAM).text = "flowchart TD\n    A --> B\n"
+        self.assertNotIn("flowchart", self.comments()["B7"])

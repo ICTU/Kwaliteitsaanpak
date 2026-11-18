@@ -5,10 +5,11 @@ import shutil
 
 from lxml import etree
 from pptx import Presentation
-from pptx.util import Inches, Pt
+from pptx.util import Cm, Inches, Pt
 
 import xmltags
 from custom_types import TreeBuilderAttributes
+from diagram import Diagram, render_mermaid
 
 from .builder import Builder
 
@@ -22,6 +23,11 @@ class PptxBuilder(Builder):
     CONTENT_SLIDE = 4
     CHAPTER_SLIDE = 16
 
+    # Area below the slide title available for content such as diagrams
+    CONTENT_TOP = Inches(1.6)
+    CONTENT_WIDTH = Inches(12)
+    CONTENT_HEIGHT = Inches(5.5)
+
     def __init__(self, filename: pathlib.Path, pptx_reference_filename: pathlib.Path) -> None:
         super().__init__(filename)
         filename.unlink(missing_ok=True)
@@ -31,7 +37,8 @@ class PptxBuilder(Builder):
         measure_master_slide = self.presentation.slide_master.slide_layouts[self.CONTENT_SLIDE]
         measure_master_slide.placeholders[0].width = Inches(10)
         self.current_slide = None
-        self.chapter_heading = ""
+        self.chapter_heading = ""  # Level 1 heading, until it has been used for a chapter slide
+        self.section_heading = ""  # Most recent heading of any level
 
     def accept_element(self, tag: str, attributes: TreeBuilderAttributes) -> bool:
         """Return whether the builder accepts the element."""
@@ -40,10 +47,14 @@ class PptxBuilder(Builder):
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().start_element(tag, attributes)
         if tag == xmltags.SLIDE:
-            self.add_slide(self.BULLET_SLIDE, self.chapter_heading)
+            self.add_slide(self.BULLET_SLIDE, self.chapter_heading or self.section_heading)
 
     def text(self, tag: str, text: str, attributes: TreeBuilderAttributes) -> None:
-        if tag == xmltags.TITLE:
+        if tag == xmltags.HEADING:
+            self.section_heading = text
+        if tag == xmltags.DIAGRAM:
+            super().text(tag, text, attributes)  # Buffer the Mermaid source so it can be rendered in end_element
+        elif tag == xmltags.TITLE:
             self.add_slide(self.TITLE_SLIDE, text)
             self.current_slide.shapes.title.text_frame.paragraphs[0].font.size = Pt(60)  # type: ignore
         elif tag == xmltags.PARAGRAPH and (self.in_element(xmltags.FRONTPAGE) or self.in_element(xmltags.SLIDE)):
@@ -81,11 +92,27 @@ class PptxBuilder(Builder):
             paragraph.level = 0
             paragraph.text = text
 
+    def end_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
+        if tag == xmltags.DIAGRAM and (self.in_element(xmltags.SLIDE) or self.in_element(xmltags.MEASURE)):
+            self.add_diagram(render_mermaid(self.current_text()))
+        super().end_element(tag, attributes)
+
     def add_slide(self, slide_layout_index: int, title: str) -> None:
         """Add a new slide with the given title to the presentation."""
         slide_layout = self.presentation.slide_layouts[slide_layout_index]
         self.current_slide = self.presentation.slides.add_slide(slide_layout)
         self.current_slide.shapes.title.text = title  # type: ignore
+
+    def add_diagram(self, diagram: Diagram) -> None:
+        """Add the diagram to the current slide, scaled to fit the content area and centered horizontally."""
+        picture = self.current_slide.shapes.add_picture(  # type: ignore
+            str(diagram.png_path), 0, self.CONTENT_TOP, width=Cm(diagram.width_cm())
+        )
+        scale = min(self.CONTENT_WIDTH / picture.width, self.CONTENT_HEIGHT / picture.height)
+        picture.width, picture.height = int(picture.width * scale), int(picture.height * scale)
+        picture.left = int((self.presentation.slide_width - picture.width) / 2)
+        picture._element._nvXxPr.cNvPr.set("title", diagram.title())
+        picture._element._nvXxPr.cNvPr.set("descr", diagram.description())
 
     def add_text_box(self):
         """Add a text box to the current slide."""

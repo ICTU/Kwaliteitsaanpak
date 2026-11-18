@@ -3,23 +3,25 @@
 ## Kwaliteitsaanpak
 
 - In de HTML-versie wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+- De figuur met de relaties tussen de voorfaseproducten in maatregel M01 is opnieuw getekend; de volledige namen van de producten staan nu in de figuur zelf.
 
 ## Samenvatting Kwaliteitsaanpak
 
 - In de HTML-versie van de samenvatting wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
 
-## Toolgidsen
-
-- In de HTML-versie van de toolgidsen wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
-
-## Wijzigingsgeschiedenis
-
-- In de HTML-versie van de wijzigingsgeschiedenis wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
-
 ## Template Kwaliteitsplan
 
 - Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
 - De leeswijzer in paragraaf 2.5 verwijst nu ook naar bijlage F "ICTU-aanbevelingen voor het beheer van dependencies".
+
+## Toolgidsen
+
+- In de HTML-versie van de toolgidsen wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+- De voorbeelden van directe en transitieve dependencies in de toolgids Dependency-Track zijn als diagram weergegeven.
+
+## Wijzigingsgeschiedenis
+
+- In de HTML-versie van de wijzigingsgeschiedenis wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
 
 # Versie 5.4.1, 28 september 2026
 

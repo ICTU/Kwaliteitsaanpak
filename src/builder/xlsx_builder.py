@@ -24,6 +24,10 @@ class XlsxBuilder(Builder):
         self.workbook = xlsxwriter.Workbook(filename)
         self.formats = self.create_formats(self.workbook)
 
+    def accept_element(self, tag: str, attributes: TreeBuilderAttributes) -> bool:
+        """Return whether the builder accepts the element. Spreadsheets have no room for diagrams."""
+        return tag != xmltags.DIAGRAM
+
     def end_document(self) -> None:
         self.workbook.close()
 
@@ -142,7 +146,7 @@ class SelfAssessmentXlsxBuilder(XlsxBuilder):
 
     def accept_element(self, tag: str, attributes: TreeBuilderAttributes) -> bool:
         """Return whether the builder accepts the element."""
-        return attributes.get(xmltags.SECTION_IS_APPENDIX) != "y"
+        return super().accept_element(tag, attributes) and attributes.get(xmltags.SECTION_IS_APPENDIX) != "y"
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().start_element(tag, attributes)

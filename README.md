@@ -34,7 +34,6 @@ Deze repository bevat scripts die Markdown-bronbestanden (content) omzetten in o
 ### Mappenstructuur
 De repository is als volgt opgebouwd:
 - **`build`**: Tijdelijke map voor tussenresultaten tijdens het genereren van de documentatie.
-- **`ci`**: Bevat shellscripts die de kwaliteitscontroles en unittests aansturen.
 - **`Content`**: Bevat alle bronteksten in Markdown waarmee de eindproducten worden gegenereerd.
 - **`docs`**: Bevat de gegenereerde documentatie, zoals HTML-, DOCX- en XLSX-bestanden. Alle documentatie is hier ingedeeld op release; historische versies van de Kwaliteitsaanpak zijn hier terug te vinden.
 - **`DocumentDefinitions`**: Bevat de definitiebestanden voor documenten, zoals metadata, inhoud en stijlen.
@@ -65,6 +64,7 @@ Zie [DocumentDefinitions/README.md](DocumentDefinitions/README.md) voor meer inf
 ## Bijdragen
 ### Vereisten
 - [uv](https://docs.astral.sh/uv/) geïnstalleerd op je systeem.
+- [just](https://just.systems) geïnstalleerd op je systeem. De `justfile` bevat recipes voor het installeren van de dependencies, het genereren van de documentatie, het uitvoeren van de unittests en kwaliteitscontroles en het opruimen van gegenereerde bestanden. Voer `just` uit voor een overzicht van de beschikbare recipes.
 
 ### Stappen
 Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
@@ -73,20 +73,35 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
    git clone https://github.com/ICTU/Kwaliteitsaanpak.git
    cd Kwaliteitsaanpak
    ```
-2. Genereer de documentatie:
+2. Installeer de dependencies:
    ```console
-   uv run src/convert.py DocumentDefinitions/*.json
+   just install
+   ```
+3. Genereer de documentatie:
+   ```console
+   just make
    ```
    De gegenereerde documenten staan in de map `docs/wip` (work-in-progress).
 
-   Om meer voortgangsinformatie te krijgen, verander het loggingniveau:
+   Om een specifiek document te genereren, geef alleen het desbetreffende JSON-bestand. Bijvoorbeeld:
+   ```console
+   just make DocumentDefinitions/wijzigingsgeschiedenis.json
+   ```
+
+   Om meer voortgangsinformatie te krijgen, roep het conversiescript direct aan en verander het loggingniveau:
    ```console
    uv run src/convert.py --log INFO DocumentDefinitions/*.json
    ```
-
-   Om een specifiek document te genereren, geef alleen het desbetreffende JSON-bestand. Bijvoorbeeld:
+4. Voer de unittests en kwaliteitscontroles uit:
    ```console
-   uv run src/convert.py DocumentDefinitions/wijzigingsgeschiedenis.json
+   just test
+   just check
+   ```
+   De kwaliteitscontroles controleren ook de links in de gegenereerde documenten in de map `build`; genereer de documenten dus eerst.
+
+   Verwijder gegenereerde bestanden en caches met:
+   ```console
+   just clean
    ```
 
 ⚠️ Documenteer wijzigingen (alleen aan de inhoud van de Kwaliteitsaanpak) in `./Content/Wijzigingsgeschiedenis.md`.
@@ -110,7 +125,7 @@ Voer de volgende stappen uit om de resultaatbestanden lokaal te genereren.
 7. Werk het versienummer bij in de variable `LATEST` in `DocumentDefinitions/Shared/variables.json`.
 8. Genereer de documentatie met het nieuwe versienummer:
    ```console
-   VERSION=x.y.z uv run src/convert.py DocumentDefinitions/*.json
+   VERSION=x.y.z just make
    ```
    De gegenereerde documenten staan in de map `docs/vx.y.z`.
 9. Commit en push de wijzigingen:

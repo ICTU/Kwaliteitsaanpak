@@ -1,6 +1,6 @@
 # Wat je moet weten over ICTU
 
-Dit hoofdstuk bevat leerdoelen over ICTU als organisatie binnen het Nederlandse overheidslandschap en voorzieningen die ICTU biedt aan al haar medewerkers. Dit hoofdstuk is daarmee niet specifiek voor de rol van kwaliteitsmanager, maar voor de volledigheid toch hier opgenomen.
+Dit hoofdstuk bevat leerdoelen over ICTU als organisatie binnen het Nederlandse overheidslandschap en voorzieningen die ICTU biedt aan al haar medewerkers. Dit hoofdstuk is daarmee niet specifiek voor de rol van software delivery manager, maar voor de volledigheid toch hier opgenomen.
 
 ## ICTU-organisatie
 

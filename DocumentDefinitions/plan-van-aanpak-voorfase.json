@@ -1,19 +1,14 @@
 {
     "BuildPath": "build/Templates/PvA-Voorfase/",
-    "Title": "Plan van Aanpak Voorfase",
-    "Subtitle": "{het project}",
-    "DocumentType": "Template",
     "DocumentFolder": "PvA-Voorfase",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/ICTU-Template-Plan-van-Aanpak-Voorfase.md",
             "OutputFile": "ICTU-Template-Plan-van-Aanpak-Voorfase.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

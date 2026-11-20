@@ -78,7 +78,6 @@ def read_settings(settings_filename: str, variables: Variables) -> Settings:
     """Read the settings."""
     settings = read_json(settings_filename, variables)
     settings["Version"] = variables["VERSIE"]
-    settings["Date"] = variables["DATUM"]
     return cast(Settings, settings)
 
 

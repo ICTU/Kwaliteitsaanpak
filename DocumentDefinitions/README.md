@@ -7,20 +7,15 @@ De documentdefinitie ziet er ongeveer zo uit:
 ```json
 {
     "BuildPath": "build/Templates/Kwaliteitsplan/",
-    "Title": "Kwaliteitsplan",
-    "Subtitle": "{het project}",
-    "DocumentType": "Template",
     "DocumentFolder": "Kwaliteitsplan",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/ICTU-Template-Kwaliteitsplan.md",
             "OutputFile": "ICTU-Template-Kwaliteitsplan.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-ictu.docx"
         }
     },
     "VariablesFiles": [
@@ -31,17 +26,12 @@ De documentdefinitie ziet er ongeveer zo uit:
 
 Bovenstaande specificatie geeft:
 - `BuildPath`: de folder waar tussenbestanden geschreven kunnen worden.
-- `Title`: de titel van het document.
-- `Subtitle`: de subtitel van het document. De tekst `{het project}` staat tussen accolades, zodat deze in het document geel gearceerd wordt.
-- `DocumentType`: het soort document. Mogelijke waardes zijn `Template` voor templates en `Kwaliteitsaanpak` voor alle andere documenten.
 - `DocumentFolder`: de folder onder `Content/Templates` waar de inhoud van het document staat. Dit hoeft dus alleen voor templates te worden aangegeven.
-- `FrontPage`: welke voorpagina moet het document krijgen? Mogelijke waardes zijn `ICTU` en `Neutral`.
 - `OutputFormats`: een opsomming van de outputformaten die gegenereerd moeten worden. Mogelijke formaten zijn naast `docx`: `xlsx`, `pptx`, `html`, `json` en `zip`.
 - `VariableFiles`: een lijst van bestanden met variabelen die gebruikt zijn in de Markdown bronbestanden.
 
 Voor elk outputformaat moet worden opgegeven:
-- `IncludeTableOfContents`: moet het document een inhoudsopgave krijgen? Mogelijke waardes zijn `true` en `false`.
-- `InputFile`: het te converteren Markdowndocument. Kan weggelaten worden als het outputformaat `zip` is.
+- `InputFile`: het te converteren Markdowndocument. Het document begint met de voorpagina, zie [Voorpagina](#voorpagina). Kan weggelaten worden als het outputformaat `zip` is.
 - `InputPaths`: alleen bij outputformaat `zip`, de te zippen bronbestanden.
 - `OutputFile`: het te schrijven bestand in het outputformaat.
 - `OutputPath`: de folders waar de outputbestanden terecht komen.
@@ -53,13 +43,8 @@ Bij outputformaat `html` is het nodig bestanden te kopiëren naar de outputfolde
 ```json
 {
     "BuildPath": "build/Kwaliteitsaanpak/",
-    "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
-    "Subtitle": "Samenvatting",
-    "DocumentType": "Kwaliteitsaanpak",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "html": {
-            "IncludeTableOfContents": false,
             "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak-samenvatting.md",
             "OutputFile": "ICTU-Kwaliteitsaanpak-Samenvatting.html",
             "OutputPaths": [
@@ -121,6 +106,30 @@ Met `<!-- begin: naam -->` en `<!-- end: naam -->` wordt een blok gemarkeerd, op
 
 Binnen een maatregel markeren `[measure-title]…[/measure-title]` en `[submeasure-title]…[/submeasure-title]` de titel van de maatregel en de submaatregelen. Met `<!-- submeasures: 1,2 -->` wordt de paragraaf waarin dit staat gemarkeerd als toelichting op de submaatregelen met de genoemde nummers. In de self-assessment checklist komt die toelichting dan bij die submaatregelen te staan in plaats van bij de maatregel.
 
+## Voorpagina
+
+Het blok `frontpage` bevat de voorpagina van het document. Binnen het blok is de kop van niveau 1 de titel en de kop van niveau 2 de subtitel. Andere koppen zijn niet toegestaan op de voorpagina. De titel is verplicht. Koppen op de voorpagina tellen niet mee voor de nummering van de hoofdstukken. De titel is ook de titel van het document, bijvoorbeeld in de titelbalk van de browser. De koptekst van de pagina's bestaat uit de titel, gevolgd door de subtitel als die een instructie is, zoals `{het project}` bij templates. Na de voorpagina volgt automatisch een paginascheiding en de inhoudsopgave. Word-documenten en HTML-pagina's krijgen altijd een inhoudsopgave, de andere outputformaten nooit:
+
+```markdown
+<!-- begin: frontpage -->
+#include "DocumentDefinitions/Shared/voorpagina-logo.md"
+
+# ICTU Kwaliteitsaanpak Softwareontwikkeling
+
+## Samenvatting
+
+Versie $VERSIE$, $DATUM$
+
+#include "DocumentDefinitions/Shared/voorpagina-woordwolk.md"
+<!-- end: frontpage -->
+```
+
+Het ICTU-logo en de woordwolk staan in `DocumentDefinitions/Shared/voorpagina-logo.md` en `DocumentDefinitions/Shared/voorpagina-woordwolk.md`, zodat ze op alle voorpagina's hetzelfde zijn. Laat deze includes weg voor een neutrale voorpagina.
+
+In Word krijgt de subtitel de stijl `Front Page Subtitle` en krijgen plaatjes onder de titel, zoals de woordwolk, de stijl `Front Page Image`. Deze stijlen staan in de referentiedocumenten (`DocumentDefinitions/Shared/reference-*.docx`) en zorgen voor de witruimte op de voorpagina.
+
+Elk document moet een `frontpage`-blok hebben. Zonder voorpagina geeft de conversie een foutmelding.
+
 ## Bijlagen
 
 De kop `# Bijlagen` markeert het begin van de bijlagen. Koppen in de bijlagen krijgen in Word een eigen stijl. De presentatie, de self-assessment checklist en de JSON-export slaan de bijlagen over.
@@ -146,6 +155,16 @@ Een plaatje moet een titel hebben:
 ```markdown
 ![Alternatieve tekst](plaatje.png "Titel van het plaatje")
 ```
+
+De alternatieve tekst mag leeg zijn, bijvoorbeeld `![](plaatje.png "Titel van het plaatje")`. In HTML bestaat de alternatieve tekst uit de titel, gevolgd door de alternatieve tekst als die er is.
+
+Een plaatje is standaard 15 cm breed. Een andere breedte in centimeters kan met een HTML-commentaar direct achter het plaatje worden opgegeven:
+
+```markdown
+![Alternatieve tekst](plaatje.png "Titel van het plaatje")<!-- width: 5 -->
+```
+
+De breedte wordt gebruikt in Word-documenten. GitHub toont het commentaar niet en negeert de breedte dus.
 
 ## Diagrammen
 
@@ -200,4 +219,4 @@ Bijvoorbeeld:
 > * het configureren van de tool.
 ```
 
-In HTML wordt een admonition een `<aside>`-element met de classes `admonition` en `admonition-<type>`, zie `DocumentDefinitions/Shared/document.css` voor de opmaak. In Word wordt een admonition een tabel met één gekleurde cel. De opmaak staat in de referentiedocumenten (`DocumentDefinitions/reference-*.docx`): een tabelstijl `Admonition <Type>` voor de linkerrand en achtergrondkleur en een tekenstijl `Admonition <Type> Title` voor de titel, bijvoorbeeld `Admonition Warning` en `Admonition Warning Title`. Pas bij het wijzigen van de kleuren zowel de CSS als beide referentiedocumenten aan. In de self-assessment checklist wordt de tekst van een admonition, voorafgegaan door de titel, opgenomen in de toelichting bij de maatregel. De presentatie neemt alleen de tekst over.
+In HTML wordt een admonition een `<aside>`-element met de classes `admonition` en `admonition-<type>`, zie `DocumentDefinitions/Shared/document.css` voor de opmaak. In Word wordt een admonition een tabel met één gekleurde cel. De opmaak staat in de referentiedocumenten (`DocumentDefinitions/Shared/reference-*.docx`): een tabelstijl `Admonition <Type>` voor de linkerrand en achtergrondkleur en een tekenstijl `Admonition <Type> Title` voor de titel, bijvoorbeeld `Admonition Warning` en `Admonition Warning Title`. Pas bij het wijzigen van de kleuren zowel de CSS als beide referentiedocumenten aan. In de self-assessment checklist wordt de tekst van een admonition, voorafgegaan door de titel, opgenomen in de toelichting bij de maatregel. De presentatie neemt alleen de tekst over.

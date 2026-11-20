@@ -1,3 +1,13 @@
+<!-- begin: frontpage -->
+#include "DocumentDefinitions/Shared/voorpagina-logo.md"
+
+# ICTU Kwaliteitsaanpak Softwareontwikkeling
+
+Versie $VERSIE$, $DATUM$
+
+#include "DocumentDefinitions/Shared/voorpagina-woordwolk.md"
+<!-- end: frontpage -->
+
 #include "Content/Inleiding.md"
 
 #include "Content/Doelstellingen.md"

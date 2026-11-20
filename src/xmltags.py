@@ -33,6 +33,7 @@ MEASURE_TITLE = "measure-title"
 NUMBERED_LIST = "numbered-list"
 PAGEBREAK = "page-break"
 PARAGRAPH = "p"
+PARAGRAPH_IS_SUBTITLE = "is-subtitle"  # The paragraph is the subtitle on the front page
 SECTION = "section"
 SECTION_IS_APPENDIX = "is-appendix"
 SECTION_LEVEL = "level"

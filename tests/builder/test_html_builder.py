@@ -156,3 +156,42 @@ class AdmonitionTest(unittest.TestCase):
         html = self.build(after_heading=True)
         self.assertIn('<div class="keep-together"><h2 id="heading">Heading</h2><aside ', html)
         self.assertIn("</aside></div>", html)
+
+
+class FrontPageTest(unittest.TestCase):
+    """Unit tests for the front page in the HTML builder."""
+
+    def setUp(self):
+        self.document = Element(xmltags.DOCUMENT, {"title": "Title", "version": "1"})
+        self.frontpage = SubElement(self.document, xmltags.FRONTPAGE)
+
+    def build(self) -> str:
+        """Build an HTML document and return its contents."""
+        with tempfile.TemporaryDirectory() as directory:
+            filename = pathlib.Path(directory) / "output.html"
+            Converter(ElementTree(self.document)).convert(HTMLBuilder(filename, pathlib.Path("style.css")))
+            return filename.read_text(encoding="utf-8")
+
+    def test_document_title(self):
+        """Test that the document title, followed by the version, is the title of the HTML page."""
+        self.assertIn("<title>Title versie 1</title>", self.build())
+
+    def test_title(self):
+        """Test that the title on the front page is a paragraph with the title class."""
+        SubElement(self.frontpage, xmltags.TITLE).text = "Title"
+        self.assertIn('<p class="title">Title</p>', self.build())
+
+    def test_subtitle(self):
+        """Test that the subtitle is a paragraph without the attribute of the intermediate XML."""
+        SubElement(self.frontpage, xmltags.PARAGRAPH, {xmltags.PARAGRAPH_IS_SUBTITLE: "y"}).text = "Subtitle"
+        self.assertIn("<p>Subtitle</p>", self.build())
+
+    def test_image_without_alternative_text(self):
+        """Test that the alternative text of an image without alternative text is the title of the image."""
+        SubElement(self.frontpage, xmltags.IMAGE, {"src": "ICTU.png", "title": "ICTU logo", "alt": ""})
+        self.assertIn('alt="ICTU logo"', self.build())
+
+    def test_image_with_alternative_text(self):
+        """Test that the alternative text of an image consists of the title and the alternative text."""
+        SubElement(self.frontpage, xmltags.IMAGE, {"src": "ICTU.png", "title": "ICTU logo", "alt": "Logo"})
+        self.assertIn('alt="ICTU logo: Logo"', self.build())

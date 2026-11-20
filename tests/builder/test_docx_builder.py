@@ -17,7 +17,7 @@ import xmltags
 from builder.docx_builder import DocxBuilder
 from converter import Converter
 
-REFERENCE_DOCX = pathlib.Path(__file__).parents[2] / "DocumentDefinitions" / "reference-neutral.docx"
+REFERENCE_DOCX = pathlib.Path(__file__).parents[2] / "DocumentDefinitions" / "Shared" / "reference-neutral.docx"
 BREAK = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}br"
 
 
@@ -134,6 +134,28 @@ class DocumentStructureTest(unittest.TestCase):
         paragraph = self.build().paragraphs[-1]
         self.assertEqual("Title", paragraph.text)
         self.assertEqual("Title", paragraph.style.name)
+
+    def test_frontpage_subtitle(self):
+        """Test that the subtitle on the front page gets the front page subtitle style."""
+        frontpage = SubElement(self.document, xmltags.FRONTPAGE)
+        SubElement(frontpage, xmltags.PARAGRAPH, {xmltags.PARAGRAPH_IS_SUBTITLE: "y"}).text = "Subtitle"
+        SubElement(frontpage, xmltags.PARAGRAPH).text = "Text"
+        paragraphs = self.build().paragraphs
+        self.assertEqual("Front Page Subtitle", paragraphs[-2].style.name)
+        self.assertEqual("Normal", paragraphs[-1].style.name)
+
+    def test_frontpage_images(self):
+        """Test that images below the title on the front page get the front page image style."""
+        frontpage = SubElement(self.document, xmltags.FRONTPAGE)
+        image_attributes = {xmltags.IMAGE_SRC: "ICTU.png", xmltags.IMAGE_TITLE: "ICTU logo", xmltags.IMAGE_WIDTH: "5"}
+        SubElement(frontpage, xmltags.IMAGE, image_attributes)
+        SubElement(frontpage, xmltags.TITLE).text = "Title"
+        SubElement(frontpage, xmltags.IMAGE, image_attributes)
+        SubElement(self.document, xmltags.IMAGE, image_attributes)
+        image_paragraphs = [paragraph for paragraph in self.build().paragraphs if paragraph._p.xpath(".//w:drawing")]
+        self.assertEqual(
+            ["Normal", "Front Page Image", "Normal"], [paragraph.style.name for paragraph in image_paragraphs]
+        )
 
     def test_header(self):
         """Test that the header text is right aligned in the page header."""

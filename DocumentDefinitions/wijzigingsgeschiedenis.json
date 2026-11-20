@@ -1,13 +1,8 @@
 {
     "BuildPath": "build/Wijzigingsgeschiedenis/",
-    "Title": "ICTU Kwaliteitsaanpak Softwareontwikkeling",
-    "Subtitle": "Wijzigingsgeschiedenis",
-    "DocumentType": "Kwaliteitsaanpak",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "html": {
-            "IncludeTableOfContents": false,
-            "InputFile": "Content/Wijzigingsgeschiedenis.md",
+            "InputFile": "DocumentDefinitions/Kwaliteitsaanpak/ICTU-Kwaliteitsaanpak-Wijzigingsgeschiedenis.md",
             "OutputFile": "ICTU-Kwaliteitsaanpak-Wijzigingsgeschiedenis.html",
             "OutputPaths": [
                 "docs/$VERSIE$"

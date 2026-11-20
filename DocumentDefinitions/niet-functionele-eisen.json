@@ -1,23 +1,17 @@
 {
     "BuildPath": "build/Templates/NFE/",
-    "Title": "Niet-Functionele Eisen",
-    "Subtitle": "{Productnaam, versie}",
-    "DocumentType": "Template",
     "DocumentFolder": "NFE",
-    "FrontPage": "Neutral",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/Neutraal-Template-Niet-Functionele-Eisen-docx.md",
             "OutputFile": "Neutraal-Template-Niet-Functionele-Eisen.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-neutral.docx"
         },
         "xlsx": {
-            "IncludeTableOfContents": false,
-            "InputFile": "DocumentDefinitions/Templates/spreadsheet-template.md",
+            "InputFile": "DocumentDefinitions/Templates/Neutraal-Template-Niet-Functionele-Eisen-xlsx.md",
             "BuilderClass": "TableXlsxBuilder",
             "OutputFile": "Neutraal-Template-Niet-Functionele-Eisen.xlsx",
             "OutputPaths": [

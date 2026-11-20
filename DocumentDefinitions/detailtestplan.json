@@ -1,19 +1,14 @@
 {
     "BuildPath": "build/Templates/Detailtestplan-Softwarerealisatie/",
-    "Title": "Detailtestplan Softwarerealisatie",
-    "Subtitle": "{het project}",
-    "DocumentType": "Template",
     "DocumentFolder": "Detailtestplan-Softwarerealisatie",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/ICTU-Template-Detailtestplan-Softwarerealisatie.md",
             "OutputFile": "ICTU-Template-Detailtestplan-Softwarerealisatie.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

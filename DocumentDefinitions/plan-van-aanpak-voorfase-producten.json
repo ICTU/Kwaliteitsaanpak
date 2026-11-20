@@ -1,14 +1,9 @@
 {
     "BuildPath": "build/Templates/PvA-Voorfase-Producten/",
-    "Title": "Voorfase Producten",
-    "Subtitle": "{het project}",
-    "DocumentType": "Template",
     "DocumentFolder": "PvA-Voorfase-Producten",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "xlsx": {
-            "IncludeTableOfContents": false,
-            "InputFile": "DocumentDefinitions/Templates/spreadsheet-template.md",
+            "InputFile": "DocumentDefinitions/Templates/ICTU-Template-Plan-van-Aanpak-Voorfase-Producten.md",
             "BuilderClass": "TableXlsxBuilder",
             "OutputFile": "ICTU-Template-Plan-van-Aanpak-Voorfase-Producten.xlsx",
             "OutputPaths": [

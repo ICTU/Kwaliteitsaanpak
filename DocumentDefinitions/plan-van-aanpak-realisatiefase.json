@@ -1,19 +1,14 @@
 {
     "BuildPath": "build/Templates/PvA-Realisatiefase/",
-    "Title": "Plan van Aanpak Realisatiefase",
-    "Subtitle": "{het project}",
-    "DocumentType": "Template",
     "DocumentFolder": "PvA-Realisatiefase",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/ICTU-Template-Plan-van-Aanpak-Realisatiefase.md",
             "OutputFile": "ICTU-Template-Plan-van-Aanpak-Realisatiefase.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

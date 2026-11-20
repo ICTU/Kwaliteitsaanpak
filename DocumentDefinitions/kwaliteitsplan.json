@@ -1,19 +1,14 @@
 {
     "BuildPath": "build/Templates/Kwaliteitsplan/",
-    "Title": "Kwaliteitsplan",
-    "Subtitle": "{het project}",
-    "DocumentType": "Template",
     "DocumentFolder": "Kwaliteitsplan",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/ICTU-Template-Kwaliteitsplan.md",
             "OutputFile": "ICTU-Template-Kwaliteitsplan.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

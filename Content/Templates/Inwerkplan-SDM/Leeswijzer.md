@@ -1,4 +1,4 @@
-## Lees- en doewijzer inwerkplan
+## Lees- en doe-wijzer inwerkplan
 
 [Het volgende hoofdstuk](#wat-je-moet-weten-over-ictu) beschrijft wat je moet weten over ICTU als organisatie. 
 [Hoofdstuk Planning](#planning) beschrijft de planning en opzet van de inwerkperiode.

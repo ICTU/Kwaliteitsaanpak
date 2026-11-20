@@ -1,6 +1,6 @@
 # Wat je moet weten over ICTU
 
-Dit hoofdstuk bevat leerdoelen over ICTU als organisatie binnen het Nederlandse overheidslandschap en voorzieningen die ICTU biedt aan al haar medewerkers. Dit hoofdstuk is daarmee niet specifiek voor de rol van software delivery manager, maar voor de volledigheid toch hier opgenomen.
+Dit hoofdstuk bevat leerdoelen over ICTU als organisatie binnen het Nederlandse overheidslandschap en voorzieningen die ICTU biedt aan al haar medewerkers. Dit hoofdstuk is daarmee niet specifiek voor de rol van software delivery manager, maar is voor de volledigheid toch hier opgenomen.
 
 ## ICTU-organisatie
 
@@ -34,7 +34,7 @@ Naast dit inwerkplan verzorgt ICTU enkele onderdelen van het introductietraject.
 2. De ICTU-onboarding (één bijeenkomst). Let erop dat je hiervoor een uitnodiging ontvangt.
 3. De ISE-onboarding (één bijeenkomst). Let erop dat je hiervoor een uitnodiging ontvangt.
 
-Praktische zaken, zoals het regelen van een laptop, vallen buiten dit inwerkplan omdat ze per situatie verschillen.
+Praktische zaken, zoals het regelen van een laptop, vallen buiten dit inwerkplan, omdat ze per situatie verschillen.
 
 Je kunt de activiteiten uit dit plan op basis van hun prioriteit opnemen in een persoonlijke roadmap. Het inwerktraject combineert leren in de praktijk met het uitvoeren van de activiteiten uit dit plan.
 
@@ -48,7 +48,7 @@ Wanneer je bij ICTU begint, krijg je een buddy (vast aanspreekpunt) toegewezen. 
 
 ## Inwerkperiode
 
-We gaan uit van een inwerkperiode van drie maanden. Het streven is dat je aan het einde van die periode de belangrijkste betrokkenen hebt gesproken en weet waar je informatie en ondersteuning kunt vinden. Ook daarna kun je bij collega’s terecht voor hulp. Heb je behoefte aan structurele vakinhoudelijke begeleiding, dan kun je een mentor krijgen. Meer informatie over het mentoraat bij ICTU vind je op het bijbehorende SharePoint-kanaal.
+We gaan uit van een inwerkperiode van drie maanden. Het streven is dat je aan het einde van die periode de belangrijkste betrokkenen hebt gesproken en weet waar je informatie en ondersteuning kunt vinden. Ook daarna kun je bij collega’s terecht voor hulp. Heb je behoefte aan structurele vakinhoudelijke begeleiding, dan kun je een mentor krijgen. Meer informatie over het mentoraat bij ICTU vind je op de bijbehorende SharePoint-site.
 
 🚶‍➡️ Naast dit inwerkplan leer je de SDM-rol in de praktijk kennen. Daarbij krijg je ondersteuning van een ervaren SDM, een projectleider of beiden.
 
@@ -58,15 +58,13 @@ De Software Delivery Manager (SDM) organiseert de ontwikkeling en oplevering van
 
 De SDM vormt de verbindende schakel tussen het scrumteam, de opdrachtgevende organisatie, de beheerorganisatie en de ICTU-afdelingen Software Expertise en Software Diensten. Om die reden werkt de SDM nauw samen met het scrumteam, de projectleider, de projectsecretaris en de kwaliteitsmanager.
 
-![Governanceschema met de stuurgroep, projectleider van de opdrachtgever, ICTU-projectleider en SDM, scrumteam, productowners, stakeholders en systeemeigenaar, inclusief hun onderlinge overleg- en samenwerkingsrelaties.](Governance_softwareontwikkelprojecten.png "Governance en overlegstructuur binnen een softwareontwikkelproject")
-
-_Voorbeeld van de governance en overlegstructuur binnen een softwareontwikkelproject._
-
+![Governanceschema met de stuurgroep, projectleider van de opdrachtgever, ICTU-projectleider en SDM, scrumteam, productowners, stakeholders inclusief hun onderlinge overleg- en samenwerkingsrelaties.](Governance_softwareontwikkelprojecten.png "Governance en overlegstructuur binnen een softwareontwikkelproject")
+_Voorbeeld van de governance- en overlegstructuur binnen een softwareontwikkelproject._
 
 > [!NOTE] Activiteit 2 💬
 > Plan enkele informele gesprekken met andere SDM’s. Bespreek hoe zij hun rol invullen en samenwerken met de projectleider, projectsecretaris, kwaliteitsmanager en opdrachtgever. Vraag welke uitdagingen zij in hun projecten ervaren en wat je verder wilt weten.
 >
-> De tabellen in paragraaf 4.1 en de rolbeschrijvingen in paragraaf 5.2 kunnen als inspiratie dienen. Een actueel overzicht van SDM’s vind je op het SharePoint-kanaal van het SDM-team.
+> De tabellen in paragraaf 4.1 en de rolbeschrijvingen in paragraaf 5.2 kunnen als inspiratie dienen. Een actueel overzicht van SDM’s vind je op de SharePoint-site van het SDM-team.
 >
 > **Doel:** kennismaken met andere SDM’s en inzicht krijgen in de verschillende manieren waarop de SDM-rol wordt ingevuld.
   
@@ -81,8 +79,8 @@ De onderstaande tabellen geven een niet-uitputtend overzicht van de werkzaamhede
 
 | Taak | Opmerkingen | Inwerkactie |
 | --- | --- | --- |
-| Opstellen van het plan van aanpak voor de voorfase | Het $REF_PVA$ beschrijft onder meer de projectbezetting, planning, risico’s, uitgangspunten en randvoorwaarden. | Lees het PvA als je project zich in de voorfase bevindt. |
-| Uitvoeren van een due-diligenceonderzoek | Bij de overname van een bestaand systeem kan $REF_DD$ nodig zijn. Een due-diligenceonderzoek wordt uitgevoerd door specialisten uit verschillende disciplines. De SDM voert dit onderzoek dus niet zelfstandig uit. Ontwikkelaars en de kwaliteitsmanager beoordelen de softwarekwaliteit, terwijl de architect de architectuur onderzoekt. | |
+| Opstellen van het plan van aanpak voor de voorfase | Het PVA beschrijft onder meer de projectbezetting, planning, risico’s, uitgangspunten en randvoorwaarden. | Lees het PvA als je project zich in de voorfase bevindt. |
+| Uitvoeren van een due-diligenceonderzoek | Bij de overname van een bestaand systeem kan due diligence nodig zijn. Een due-diligenceonderzoek wordt uitgevoerd door specialisten uit verschillende disciplines. De SDM voert dit onderzoek dus niet zelfstandig uit. Ontwikkelaars en de kwaliteitsmanager beoordelen de softwarekwaliteit, terwijl de architect de architectuur onderzoekt. | |
 
 ### Realisatiefase
 
@@ -90,7 +88,7 @@ De onderstaande tabellen geven een niet-uitputtend overzicht van de werkzaamhede
 | --- | --- | --- |
 | Opstellen van het plan van aanpak voor de realisatiefase (als onderdeel van het projectplan) | Het PvA beschrijft onder meer de projectbezetting, planning, risico’s, uitgangspunten en randvoorwaarden. | Lees het PvA als je project zich in de realisatiefase bevindt. |
 | Wegnemen van belemmeringen die het scrumteam niet zelf kan oplossen | | |
-| Organiseren en voorzitten van het $IPO$ | Het $REF_IPO$ is bedoeld voor afstemming tussen betrokkenen bij het project, waaronder de projectleider, kwaliteitsmanager en SDM. | Vraag andere SDM’s hoe zij dit overleg hebben ingericht en wat zij adviseren. Stem met de projectleider af hoe jullie het overleg vormgeven. |
+| Organiseren en voorzitten van het $IPO$ | Het IPO is bedoeld voor afstemming tussen betrokkenen bij het project, waaronder de projectleider, kwaliteitsmanager en SDM. | Vraag andere SDM’s hoe zij dit overleg hebben ingericht en wat zij adviseren. Stem met de projectleider af hoe jullie het overleg vormgeven. |
 
 ### Geldzaken en inkoop
 
@@ -105,7 +103,7 @@ De onderstaande tabellen geven een niet-uitputtend overzicht van de werkzaamhede
 
 | Taak | Opmerkingen | Inwerkactie |
 | --- | --- | --- |
-| Bewaken dat het scrumteam binnen de afgesproken scope en verantwoordelijkheden blijft | Voorkom dat het scrumteam werkzaamheden uitvoert die buiten de afgesproken scope of verantwoordelijkheden vallen. Denk bijvoorbeeld aan afspraken over het maken van mocks en instructies, tijdelijk beheer en het behandelen van bevindingen. | |
+| Bewaken dat het scrumteam binnen de afgesproken scope en verantwoordelijkheden blijft | Voorkom dat het scrumteam werkzaamheden uitvoert die buiten de afgesproken scope of verantwoordelijkheden vallen. Denk bijvoorbeeld aan afspraken over het maken van teststubs, het schrijven van gebruikersdocumentatie, tijdelijk beheer en het behandelen van bevindingen. | |
 | Bewaken van het voortbrengingsproces | Volg of de werkzaamheden die voor de sprint zijn afgesproken worden afgerond en of de beoogde resultaten worden opgeleverd. | |
 | Bewaken van de werkvoorraad en sprintplanning | Signaleer of de sprintplanning haalbaar is en of toekomstige werkzaamheden voldoende zijn uitgewerkt. Stem hierover af met de product owner en het scrumteam. | |
 | Afwegen van de belangen van ICTU, het scrumteam en de opdrachtgever | Doe dit samen met de projectleider, met aandacht voor de eigen verantwoordelijkheden van de SDM. De precieze afweging verschilt per project. | |
@@ -128,28 +126,28 @@ De onderstaande tabellen geven een niet-uitputtend overzicht van de werkzaamhede
 | Werven en selecteren van scrumteamleden | Met uitzondering van de product owner, die door de opdrachtgever wordt geleverd. |
 | Informeren van het projectteam over relevante ontwikkelingen | Denk aan ontwikkelingen binnen ICTU, ISD en de opdrachtgevende organisatie. |
 | Begeleiden van een zelforganiserend scrumteam | Werk hierbij samen met de scrummaster. |
-| Motiveren en ondersteunen van het scrumteam | Bijvoorbeeld door teamsessies (zoals ‘Oscarsessies’) en teamactiviteiten te organiseren en belemmeringen weg te nemen. |
+| Motiveren en ondersteunen van het scrumteam | Bijvoorbeeld door teamsessies en teamactiviteiten te organiseren en belemmeringen weg te nemen. |
 
 ### Informeren en communiceren
 
 | Taak | Opmerkingen | Inwerkactie |
 | --- | --- | --- |
 | Onderhouden van de werkrelatie met de projectleider en product owner | | |
-| Informeren van de projectleider en product owner over relevante signalen vanuit het scrumteam | Bespreek relevante signalen in het projectleidersoverleg, als dit overleg in het project plaatsvindt. | |
-| Afstemmen met de beheerorganisatie | Maak afspraken over processen en communicatielijnen. De communicatie verloopt vaak via de opdrachtgever. | |
+| Informeren van de projectleider en product owner over relevante signalen vanuit het scrumteam | Bespreek relevante signalen in het IPO. | |
+| Afstemmen met de beheerorganisatie | Een goede afstemming tussen realisatiepartij (ICTU) en de beheerorganisatie bevordert een succesvolle productiefase. Daarom is het van belang om samen met de opdrachtgever en de beheerorganisatie afspraken te maken over de processen en de communicatielijnen. | |
 
 ### Procesmatig werken
 
 | Taak | Opmerkingen | Inwerkactie |
 | --- | --- | --- |
-| Sturen op het tijdig opleveren van resultaten, zoals releases | | Neem met een ontwikkelaar de releasemap door. Vraag ook of het project een demo-omgeving heeft. |
+| Sturen op het tijdig opleveren van resultaten, zoals releases | | Neem met een ontwikkelaar de releaseplanning door. Vraag ook of het project een demo-omgeving heeft. |
 | Opstellen van een releaseplanning | Stem de planning af met de opdrachtgever. | |
-| Toepassen van ICTU-processen | Denk aan aanvragen voor personeel en inkoop, afspraken over software-uitlevering en documentatie. | Raadpleeg het SharePoint-kanaal Processen voor informatie over de kernprocessen. |
+| Toepassen van ICTU-processen | Denk aan aanvragen voor personeel en inkoop, afspraken over software-uitlevering en documentatie. | Raadpleeg de SharePoint-site Processen voor informatie over de kernprocessen. |
 | Gebruikmaken van ICTU-templates | Denk aan de templates die bij de $KWALITEITSAANPAK$ horen. | |
 | Werken volgens Scrum voor softwarerealisatie en PRINCE2 voor projectsturing | De projectleider is verantwoordelijk voor de projectsturing. De SDM richt zich op de aansturing van de softwarerealisatie. | Raadpleeg de informatie over deze werkwijzen op de SharePoint-site van het SDM-team. |
 | Ondersteunen van het scrumteam en bevorderen van transparantie | Wees een vraagbaak voor het team en spring bij waar nodig. | |
 | Onderbouwd afwijken van processen, standaarden en afspraken | Stem afwijkingen af met de relevante betrokkenen en leg de onderbouwing vast om projectkeuzes te borgen. | |
-| Afsluiten van het softwareontwikkelproject | Zorg voor het archiveren en opruimen van projectdocumentatie en artefacten. Laat waar nodig projectgegevens op gegevensdragers van projectmedewerkers veilig verwijderen. | Vraag de kwaliteitsmanager en de Information Security Officer (ISO) van ISE om advies. |
+| Afsluiten van het softwareontwikkelproject | Zorg voor het archiveren en opruimen van projectdocumentatie en artefacten. Laat waar nodig projectgegevens op gegevensdragers van projectmedewerkers veilig verwijderen. | Vraag de kwaliteitsmanager en de securityadviseur van het project om advies. |
 
 # Samenwerking
 
@@ -168,7 +166,7 @@ Een duidelijke taakverdeling en regelmatige afstemming zijn essentieel voor een 
 
 ### Projectleider
 
-De projectleider is eindverantwoordelijk voor de uitvoering van het project. In de praktijk verzorgt de projectleider de externe communicatie, stemt financiële zaken af met de opdrachtgever en keurt uren goed.
+De projectleider is eindverantwoordelijk voor de uitvoering van het project. In de praktijk verzorgt de projectleider de externe communicatie, stemt hij/zij financiële zaken af met de opdrachtgever en keurt hij/zij uren goed.
 
 De belangrijkste taken en verantwoordelijkheden zijn:
 
@@ -228,7 +226,7 @@ De belangrijkste werkzaamheden zijn:
 
 Het scrumteam is zelfsturend en bepaalt zelf wie welke werkzaamheden uitvoert, wanneer en op welke manier. Als SDM begeleid en stimuleer je de zelforganisatie van het scrumteam. Wanneer de samenwerking, motivatie, hoeveelheid of kwaliteit van het werk achterblijft, neem je het initiatief om dit samen met het scrumteam en de scrummaster te bespreken en te verbeteren.
 
-Het $REF_IPO$ kan worden gebruikt om problemen te bespreken die bredere projectafstemming vereisen en om afspraken te maken over vervolgacties (zie hoofdstuk 6).
+Het IPO kan worden gebruikt om problemen te bespreken die bredere projectafstemming vereisen en om afspraken te maken over vervolgacties (zie hoofdstuk 6).
 
 Daarnaast ondersteun je het scrumteam bij de communicatie met de opdrachtgever en andere betrokkenen. Problemen in deze communicatie kunnen gevolgen hebben voor de voortgang en het sprintresultaat.
 
@@ -269,36 +267,11 @@ De product owner (PO) speelt een essentiële rol in de softwareontwikkeling. Zon
 
 De product owner blijft verantwoordelijk voor de prioritering en het beheer van de productbacklog, ook wanneer werkzaamheden aan anderen worden gedelegeerd. Binnen het project kunnen aanvullende afspraken worden gemaakt over het inhoudelijk goedkeuren van user stories.
 
-Het profiel van een product owner omvat verschillende verantwoordelijkheden, vaardigheden en eigenschappen.
-
-### Verantwoordelijkheden
-
-1. **Productvisie:** Een duidelijke visie op het te ontwikkelen product formuleren en uitdragen naar het scrumteam en andere belanghebbenden.
-2. **Productbacklogbeheer:** Zorgen voor het samenstellen, onderhouden en inzichtelijk maken van de productbacklog.
-3. **Prioriteren:** De items op de productbacklog ordenen op basis van onder meer gebruikerswaarde, organisatiedoelstellingen en behoeften van belanghebbenden.
-4. **Refinement:** Samen met het scrumteam de backlog-items verduidelijken en verder uitwerken, zodat een gedeeld begrip ontstaat.
-5. **Besluitvorming:** Beslissingen nemen over de inhoud en prioritering van de productbacklog. Tijdens de sprintplanning selecteren de ontwikkelaars, in overleg met de product owner, welke items zij in de sprint kunnen oppakken.
-6. **Communicatie met belanghebbenden:** De belangen en behoeften van onder meer gebruikers, beheerders en management vertegenwoordigen, afstemming organiseren en feedback verzamelen.
-
-### Vaardigheden
-
-1. **Gebruikersgerichtheid:** De behoeften en wensen van gebruikers begrijpen en vertegenwoordigen.
-2. **Prioriteren:** Werkzaamheden kunnen ordenen op basis van waarde en urgentie.
-3. **Communicatie:** Effectief kunnen communiceren met verschillende belanghebbenden.
-4. **Besluitvaardigheid:** Tijdig beslissingen kunnen nemen, ook wanneer niet alle informatie beschikbaar is.
-
-### Eigenschappen
-
-1. **Verantwoordelijkheidsgevoel:** Verantwoordelijkheid nemen voor de waarde van het product en de gemaakte keuzes.
-2. **Flexibiliteit:** Kunnen omgaan met veranderende behoeften, eisen en prioriteiten.
-3. **Empathie:** De behoeften en standpunten van verschillende belanghebbenden begrijpen en meewegen.
-4. **Doorzettingsvermogen:** Bij obstakels en uitdagingen blijven zoeken naar passende oplossingen.
-
 ## Opdrachtgever
 
 De projectleider is primair verantwoordelijk voor de communicatie met de opdrachtgever. Dat betekent niet dat je als SDM geen rechtstreeks contact met de opdrachtgever hebt.
 
-Een belangrijke gesprekspartner is vaak de projectleider aan opdrachtgeverszijde die verantwoordelijk is voor de afstemming over het testen en in productie nemen van de software. Afhankelijk van het project heb je daarnaast contact met bijvoorbeeld de product owner, architect of businessanalist van de opdrachtgever.
+Een belangrijke gesprekspartner is vaak de projectleider aan opdrachtgeverszijde, die verantwoordelijk is voor de afstemming over het testen en in productie nemen van de software. Afhankelijk van het project heb je daarnaast contact met bijvoorbeeld de product owner, architect of businessanalist van de opdrachtgever.
 
 Ook met de beheerorganisatie en eventuele ketenpartners kun je contact hebben, bijvoorbeeld wanneer er afhankelijkheden bestaan tussen hun werkzaamheden en de softwareontwikkeling.
 
@@ -332,12 +305,12 @@ De onderstaande tabellen geven een overzicht van veelvoorkomende overlegvormen. 
 
 | Overleg | Doel | Frequentie | Deelnemers |
 | --- | --- | --- | --- |
-| Daily stand-up (DSU) | Elkaar op de hoogte houden van voortgang en belemmeringen. Als er belemmeringen zijn, wordt gezamenlijk gezocht naar adequate oplossingen om het sprintdoel te halen. | Iedere werkdag in de ochtend | Scrumteam en SDM, eventueel aangevuld met betrokkenen zoals de kwaliteitsmanager en architect. |
+| Daily stand-up (DSU / DS) | Elkaar op de hoogte houden van voortgang en belemmeringen. Als er belemmeringen zijn, wordt gezamenlijk gezocht naar adequate oplossingen om het sprintdoel te halen. | Iedere werkdag in de ochtend | Scrumteam en SDM, eventueel aangevuld met betrokkenen zoals de kwaliteitsmanager en architect. |
 | Refinement | Het zodanig uitwerken en verfijnen van user stories uit de productbacklog dat het ontwikkelteam ermee aan de slag kan. | Minimaal wekelijks | Scrumteam; deelname van de SDM is optioneel en afhankelijk van de onderwerpen. |
 | Sprintplanning | Bepalen welke werkzaamheden het scrumteam tijdens de komende sprint gaat uitvoeren en hoe deze worden aangepakt. | Eenmaal per sprint | Scrumteam en SDM. |
 | Sprintretrospective | Evaluatie van de samenwerking en het ontwikkelproces en verbeteringen afspreken voor komende sprints. | Eenmaal per sprint | Scrumteam; deelname van de SDM in overleg met het scrumteam. |
 | Sprintreview en demo | De resultaten van de sprint bespreken en demonstreren, feedback verzamelen en bepalen welke vervolgstappen nodig zijn. | Ieder sprinteinde | Scrumteam, SDM, ICTU-projectleider, betrokkenen van de opdrachtgever, gebruikers en andere belanghebbenden, zoals architecten. |
-| Intern projectoverleg ($REF_IPO$) | Het projectmanagement informeren over de projectvoortgang, risico’s en aandachtspunten. Het overleg ondersteunt de onderlinge afstemming en het maken van afspraken over vervolgacties. | Wekelijks | Meestal: Projectleider (ICTU), SDM en kwaliteitsmanager. Soms: scrummaster, lead developer en/of projectsecretaris. |
+| Interne projectoverleg (IPO) | Het projectmanagement informeren over de projectvoortgang, risico’s en aandachtspunten. Het overleg ondersteunt de onderlinge afstemming en het maken van afspraken over vervolgacties. | Wekelijks | Meestal: Projectleider (ICTU), SDM en kwaliteitsmanager. Soms: scrummaster, lead developer en/of projectsecretaris. |
 | Werkvoorraadoverleg¹ | Vooruitkijken naar de komende sprints en beoordelen of er voldoende uitgewerkte werkzaamheden beschikbaar zijn. ¹ Dit overleg wordt vooral ingezet wanneer de werkvoorraad aandacht vraagt. De SDM kan zo nodig aanvullend wekelijks een overzicht verstrekken. | Indien nodig | Projectleider(s) van de opdrachtgever en van ICTU, product owner(s), SDM en scrummaster(s). |
 | Projectleidersoverleg²  | Bijzonderheden en aandachtspunten aan opdrachtgevers- en opdrachtnemerszijde bespreken. ² Dit overleg vindt niet in alle projecten plaats en wordt op initiatief van de projectleiders georganiseerd. | Iedere sprint, indien georganiseerd | Projectleider van de opdrachtgever, product owner, ICTU-projectleider en SDM. |
 
@@ -346,8 +319,8 @@ De onderstaande tabellen geven een overzicht van veelvoorkomende overlegvormen. 
 | Overleg | Doel | Frequentie | Deelnemers |
 | --- | --- | --- | --- |
 | Pre-refinement | Informatie voorbereiden waarmee functioneel ontwerpers de backlog-items verder kunnen uitwerken en toelichten tijdens de refinement. | Wekelijks | Scrumteam. |
-| Overleg tussen opdrachtgever en opdrachtnemer ($REF_OGON$) | Escalaties en belemmeringen bespreken die niet op operationeel niveau kunnen worden opgelost. Daarnaast wordt beoordeeld of het project op koers ligt om de afgesproken resultaten tijdig op te leveren. De SDM neemt afhankelijk van het project deel. | Eenmaal per sprint of maandelijks | Vertegenwoordigers van de opdrachtgever, ICTU-projectleider en projectleider van de beheerorganisatie. |
-| Architectuuroverleg | Architectuurvraagstukken bespreken en waar nodig werkzaamheden opnemen op de backlog. | Wekelijks of eenmaal per sprint | Enterprise- en solution architecten van de opdrachtgever, beheerorganisatie en ICTU. |
+| Overleg tussen opdrachtgever en opdrachtnemer (OGON) | Escalaties en belemmeringen bespreken die niet op operationeel niveau kunnen worden opgelost. Daarnaast wordt beoordeeld of het project op koers ligt om de afgesproken resultaten tijdig op te leveren. De SDM neemt afhankelijk van het project deel. | Eenmaal per sprint of maandelijks | Vertegenwoordigers van de opdrachtgever, ICTU-projectleider en projectleider van de beheerorganisatie. |
+| Architectuuroverleg | Architectuurvraagstukken bespreken en waar nodig werkzaamheden opnemen op de backlog. | Wekelijks of eenmaal per sprint | Enterprise- en solution-architecten van de opdrachtgever, beheerorganisatie en ICTU. |
 | Technische pre-refinement | Technische vraagstukken, afhankelijkheden en oplossingsrichtingen voorbereiden, zodat deze tijdens de refinement kunnen worden besproken. | Wekelijks | Scrumteam en solution architect. |
 | Ontwerpautoriteit | Besluiten over het systeemontwerp bespreken en vastleggen. | Wekelijks of eenmaal per sprint | Vertegenwoordigers van de opdrachtgever, product owners, enterprise architecten en solution architect. |
 | Ontwikkelaarsoverleg | Lopende werkzaamheden, technische vraagstukken, mogelijke oplossingen en belemmeringen binnen de sprint bespreken. | Wekelijks of eenmaal per sprint | Ontwikkelaars uit het scrumteam. |
@@ -370,12 +343,12 @@ Als SDM maak je deel uit van ICTU Software Expertise (ISE). Binnen deze afdeling
 
 Tijdens je inwerkperiode leer je steeds meer ISE-collega’s kennen. Je kunt daarnaast zelf afspraken maken met collega’s van wie je meer wilt weten over hun werkzaamheden of expertise.
 
-ISE bestaat uit een vaste kern van interne medewerkers en een grote groep externe professionals. Op de SharePoint-site vind je onder meer informatie over de $KWALITEITSAANPAK$, toegankelijkheid en gebruikskwaliteit. Via het ISE-kanaal kun je een actueel overzicht van de betrokken medewerkers vinden.
+ISE bestaat uit een vaste kern van interne medewerkers en een grote groep externe professionals. Op de SharePoint-site vind je onder meer informatie over de $KWALITEITSAANPAK$, toegankelijkheid en gebruikskwaliteit. Via het ISE-Teams-kanaal kun je een actueel overzicht van de betrokken medewerkers vinden.
 
 > [!NOTE] Activiteit 9 📋
 > Bekijk de SharePoint-site van ISE. Houd er rekening mee dat deze alleen toegankelijk is voor interne medewerkers.
 >
-> **Doel:** kennismaken met de informatie en kennisbronnen van ISE, zodat je weet waar je deze kunt vinden wanneer je ze nodig hebt.
+> **Doel:** kennismaken met de informatie- en kennisbronnen van ISE, zodat je weet waar je deze kunt vinden wanneer je ze nodig hebt.
 
 
 
@@ -390,12 +363,12 @@ Naast de mensen met wie je binnen je project samenwerkt, zijn er binnen ICTU ver
 
 ## Privacy en informatiebeveiliging
 
-De Information Security Officer (ISO) van ICTU Software Expertise (ISE) adviseert over de informatiebeveiliging van softwareontwikkelprojecten, de ontwikkelde software en de bijbehorende processen. De ISO werkt daarbij samen met onder meer de kwaliteitsmanager, SDM, projectleider en product owner.
+De securityadviseur adviseert over de informatiebeveiliging van softwareontwikkelprojecten, de ontwikkelde software en de bijbehorende processen. De securityadviseur werkt daarbij samen met de kwaliteitsmanager, SDM, projectleider en product owner.
 
 Daarnaast heeft ICTU een functionaris voor gegevensbescherming (FG). De FG adviseert over de bescherming van persoonsgegevens en houdt toezicht op de naleving van de privacywetgeving. Deze functionaris kan onder meer worden betrokken bij privacyvraagstukken, de beoordeling van gegevensverwerkingen en afspraken over de omgang met datalekken.
 
 > [!TIP] Idee 💬
-> Maak een afspraak met een van de Information Security Officers van ICTU. Bespreek welke beveiligingsvraagstukken binnen jouw project spelen en hoe je de samenwerking met de ISO kunt vormgeven.
+> Maak een afspraak met een van de securityadviseur van jouw project en bespreek welke beveiligingsvraagstukken binnen het project spelen en hoe je de samenwerking met de securityadviseur kunt vormgeven.
 
 ## Ecosysteem
 
@@ -414,13 +387,13 @@ Het Ecosysteem wordt onderhouden door de afdeling ICTU Software Diensten (ISD).
 
 Voor de ontwikkeling van software zijn hardware, software, netwerken en andere technische voorzieningen nodig. Denk aan servers, opslagvoorzieningen en netwerkinfrastructuur voor ontwikkel-, demo- en testomgevingen.
 
-ICTU beschikt hiervoor over een infrastructuur in een overheidsdatacenter. Een team van infrastructuur- en netwerkspecialisten beheert de servers en virtuele machines die de softwareontwikkelprojecten ondersteunen.
+ICTU beschikt hiervoor over eigen infrastructuur in een overheidsdatacenter. Een team van infrastructuur- en netwerkspecialisten beheert de servers en virtuele machines die de softwareontwikkelprojecten ondersteunen.
 
-De afdeling ICTU Software Diensten (ISD) levert technische ondersteuning aan projecten die software ontwikkelen en onderhouden volgens de $KWALITEITSAANPAK$. Daarnaast ondersteunt ISD projecten met tijdelijk beheer.
+De afdeling ICTU Software Diensten (ISD) levert technische ondersteuning aan projecten die software ontwikkelen en onderhouden volgens de $KWALITEITSAANPAK$.
 
-ISD beschikt over een eigen SharePoint-kanaal met informatie over de beschikbare voorzieningen en ondersteunende diensten.
+ISD beschikt over een eigen SharePoint-site met informatie over de beschikbare voorzieningen en ondersteunende diensten.
 
 > [!NOTE] Activiteit 11 📋
-> Bekijk het SharePoint-kanaal van ISD en maak je vertrouwd met de beschikbare voorzieningen, diensten en ondersteuningsmogelijkheden.
+> Bekijk de SharePoint-site van ISD en maak je vertrouwd met de beschikbare voorzieningen, diensten en ondersteuningsmogelijkheden.
 >
 > **Doel:** weten welke technische ondersteuning ISD biedt en waar je terechtkunt wanneer je deze nodig hebt.

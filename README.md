@@ -54,7 +54,7 @@ Een documentdefinitie is een [JSON](https://nl.wikipedia.org/wiki/JSON)-bestand 
 
 Elke documentdefinitie bevindt zich in een submap van `./DocumentDefinitions` en bestaat uit:
 - `[documenttype].json`: Metadata over het document.
-- `[pagina].md`: De pagina waarin de verschillende bronbestanden worden geïmporteerd (door middel van #include).
+- `[pagina].md`: De pagina met de voorpagina van het document, waarin de verschillende bronbestanden worden geïmporteerd (door middel van #include).
 - `Shared/[document].css`: Stijlen voor het betreffende document.
 
 Gedeeld materiaal (zoals headers, footers en stylesheets) staat in `./DocumentDefinitions/Shared`.

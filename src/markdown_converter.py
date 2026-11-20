@@ -27,6 +27,8 @@ class MarkdownConverter:
     APPENDIX_LEVEL = 1
     # Tags whose text is used as a whole by builders, so abbreviations are not marked in their text:
     NO_ABBREVIATIONS_TAGS: ClassVar = (xmltags.CODE, xmltags.MEASURE_TITLE, xmltags.SUBMEASURE_TITLE)
+    DEFAULT_IMAGE_WIDTH = "15"  # Centimeters
+    SUBTITLE: ClassVar[TreeBuilderAttributes] = {xmltags.PARAGRAPH_IS_SUBTITLE: "y"}
 
     def __init__(self, variables: Variables) -> None:
         self.abbreviations: dict[str, str] = {}  # Abbreviation -> meaning
@@ -43,14 +45,19 @@ class MarkdownConverter:
         self.submeasure_counter: int = 0
         self.table: Table | None = None
         self.variables = variables
+        self.document: Element | None = None
+        self.frontpage_title = ""
+        self.frontpage_subtitle = ""
 
     def convert(self, settings: Settings, output_format: OutputFormat) -> ElementTree:
         """Convert the markdown to XML for the specified output format."""
-        self._start_document(settings, output_format)
         document_md = pathlib.Path(settings["BuildPath"]) / "document.md"
         md = self._assemble_markdown_file(pathlib.Path(settings["OutputFormats"][output_format]["InputFile"]), settings)
         document_md.write_text(md)
         self._collect_abbreviations(md)
+        if not any(line.strip() == markdown_syntax.FRONTPAGE_START for line in md.splitlines()):
+            raise ValueError(f"{settings['OutputFormats'][output_format]['InputFile']} has no front page")
+        self._start_document(settings)
         self._convert_markdown_file(document_md, settings)
         self._end_document()
         return ElementTree(self.builder.close())
@@ -100,81 +107,41 @@ class MarkdownConverter:
         for line in markdown_filename.read_text().splitlines():
             self._process_line(line)
 
-    def _start_document(self, settings: Settings, output_format: OutputFormat) -> None:
-        """Start the document."""
-        document_attributes: TreeBuilderAttributes = {}
-        for setting, tag in (
-            ("Title", xmltags.DOCUMENT_TITLE),
-            ("Version", xmltags.DOCUMENT_VERSION),
-        ):
-            document_attributes[tag] = str(settings[setting])
-        self.builder.start(xmltags.DOCUMENT, document_attributes)
-        self._create_frontpage(settings)
-        self._create_header(settings)
+    def _start_document(self, settings: Settings) -> None:
+        """Start the document. The document title is set when the title on the front page is processed."""
+        self.document = self.builder.start(xmltags.DOCUMENT, {xmltags.DOCUMENT_VERSION: str(settings["Version"])})
+
+    def _create_footer_and_table_of_contents(self) -> None:
+        """Create the page footer and the table of contents."""
         self._create_footer()
-        if settings["OutputFormats"][output_format]["IncludeTableOfContents"]:
-            self._create_table_of_contents()
+        self._create_table_of_contents()
 
-    def _create_frontpage(self, settings: Settings) -> None:
-        """Create a front page."""
-        if not settings.get("FrontPage"):
-            return
-        document_type = settings["DocumentType"]
-        with self.element(xmltags.FRONTPAGE):
-            if settings["FrontPage"] == "ICTU":
-                self._add_element(
-                    xmltags.IMAGE,
-                    attributes={
-                        xmltags.IMAGE_SRC: "ICTU.png",
-                        xmltags.IMAGE_TITLE: "ICTU logo",
-                        xmltags.IMAGE_WIDTH: "5",
-                    },
-                )
-            with self.element(xmltags.TITLE):
-                self._process_formatted_text(settings["Title"])
-            if document_type == "Template":
-                with self.element(xmltags.PARAGRAPH), self.element(xmltags.INSTRUCTION):
-                    self._add_element(xmltags.BOLD, settings["Subtitle"])
-                self._add_element(xmltags.PARAGRAPH)
-                with self.element(xmltags.PARAGRAPH):
-                    self._process_formatted_text("Rubriceringsniveau {Rubriceringsniveau}")
-                with self.element(xmltags.PARAGRAPH):
-                    self.builder.data("Versie ")
-                    self._add_element(xmltags.INSTRUCTION, "{Versienummer}")
-                    self.builder.data(", ")
-                    self._add_element(xmltags.INSTRUCTION, "{Datum}")
-                self._add_element(xmltags.PARAGRAPH)
-            elif document_type == "Kwaliteitsaanpak":
-                if settings.get("Subtitle"):
-                    with self.element(xmltags.PARAGRAPH):
-                        self._add_element(xmltags.BOLD, settings["Subtitle"])
-                with self.element(xmltags.PARAGRAPH):
-                    self.builder.data(f"Versie {settings['Version']}, {settings['Date']}")
-            else:
-                raise ValueError(f"Unknown document type '{document_type}' in the settings")
-            if settings["FrontPage"] == "ICTU":
-                self._add_element(
-                    xmltags.IMAGE,
-                    attributes={
-                        xmltags.IMAGE_SRC: "word-cloud.png",
-                        xmltags.IMAGE_TITLE: (
-                            "Word cloud met woorden die veel voorkomen in het document zoals "
-                            "Kwaliteitsaanpak, Realisatie, ICTU, Software en Overheid"
-                        ),
-                        xmltags.IMAGE_WIDTH: "15",
-                    },
-                )
-            self._add_element(xmltags.PAGEBREAK)
+    def _start_frontpage(self) -> None:
+        """Start the front page block."""
+        self.builder.start(xmltags.FRONTPAGE, {})
+        self.context.add(xmltags.FRONTPAGE)
 
-    def _create_header(self, settings: Settings) -> None:
-        """Create the page header."""
-        title = settings["Title"]
+    def _end_frontpage(self) -> None:
+        """End the front page block, followed by the page header, footer, and table of contents."""
+        if not self.frontpage_title:
+            raise ValueError("The front page has no title")
+        self._end_lists()
+        self._end_table()
+        self._add_element(xmltags.PAGEBREAK)
+        self.builder.end(xmltags.FRONTPAGE)
+        self.context.remove(xmltags.FRONTPAGE)
+        self._create_header()
+        self._create_footer_and_table_of_contents()
+
+    def _create_header(self) -> None:
+        """Create the page header from the title on the front page, followed by the subtitle if it is an
+        instruction (as in templates)."""
+        title, subtitle = self.frontpage_title, self.frontpage_subtitle
+        is_instruction = subtitle.startswith(markdown_syntax.INSTRUCTION_START) and subtitle.endswith(
+            markdown_syntax.INSTRUCTION_END
+        )
         with self.element(xmltags.HEADER):
-            if settings["DocumentType"] == "Template":
-                self._process_formatted_text(f"{title} ")
-                self._add_element(xmltags.INSTRUCTION, settings["Subtitle"])
-            else:
-                self.builder.data(title)
+            self._process_formatted_text(f"{title} {subtitle}" if is_instruction else title)
 
     def _create_footer(self) -> None:
         """Create the page footer."""
@@ -237,6 +204,10 @@ class MarkdownConverter:
             self._end_code_block()
         elif xmltags.CODE_BLOCK in self.context:
             self.builder.data(line + "\n")
+        elif stripped_line == markdown_syntax.FRONTPAGE_START:
+            self._start_frontpage()
+        elif stripped_line == markdown_syntax.FRONTPAGE_END:
+            self._end_frontpage()
         elif match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
             self._begin_block(match.group(1), match.group(2))
         elif match := re.match(markdown_syntax.END_PATTERN, stripped_line):
@@ -254,6 +225,8 @@ class MarkdownConverter:
             self._process_list(stripped_line, xmltags.NUMBERED_LIST, list_level)
         elif stripped_line[0] == markdown_syntax.TABLE_MARKER:
             self._process_table_row(stripped_line)
+        elif xmltags.FRONTPAGE in self.context and re.fullmatch(markdown_syntax.IMAGE_PATTERN, stripped_line):
+            self._process_formatted_text(stripped_line)  # Images on the front page are not part of a paragraph
         else:
             with self.element(xmltags.PARAGRAPH):
                 self._process_formatted_text(stripped_line)
@@ -285,6 +258,9 @@ class MarkdownConverter:
         """Process a heading."""
         if self.in_admonition:
             raise ValueError(f"Headings are not allowed in admonitions: {heading}")
+        if xmltags.FRONTPAGE in self.context:
+            self._process_frontpage_heading(heading, level)
+            return
         if level == self.APPENDIX_LEVEL and heading == self.APPENDIX_HEADING:
             self.context.add(self.APPENDIX_HEADING)
         is_appendix: TreeBuilderAttributes = (
@@ -340,6 +316,20 @@ class MarkdownConverter:
         self._end_lists()
         self._end_table()
         self._add_element(xmltags.PAGE_ORIENTATION, attributes={xmltags.PAGE_ORIENTATION_VALUE: orientation})
+
+    def _process_frontpage_heading(self, heading: str, level: int) -> None:
+        """Process a heading on the front page: the title or the subtitle."""
+        if level == 1:
+            self.frontpage_title = heading
+            cast(Element, self.document).set(xmltags.DOCUMENT_TITLE, heading)
+            with self.element(xmltags.TITLE):
+                self._process_formatted_text(heading)
+        elif level == 2:
+            self.frontpage_subtitle = heading
+            with self.element(xmltags.PARAGRAPH, self.SUBTITLE), self.element(xmltags.BOLD):
+                self._process_formatted_text(heading)
+        else:
+            raise ValueError(f"Only headings of level 1 and 2 are allowed on the front page: {heading}")
 
     def _end_sections(self):
         """Close all sections."""
@@ -498,7 +488,7 @@ class MarkdownConverter:
                             xmltags.IMAGE_ALT: match.group(1),
                             xmltags.IMAGE_SRC: match.group(2),
                             xmltags.IMAGE_TITLE: match.group(3),
-                            xmltags.IMAGE_WIDTH: "15",
+                            xmltags.IMAGE_WIDTH: match.group(4) or self.DEFAULT_IMAGE_WIDTH,
                         },
                     )
                     line = line[len(match.group(0)) :]

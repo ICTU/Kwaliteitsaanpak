@@ -12,7 +12,7 @@ import xmltags
 from builder.pptx_builder import PptxBuilder
 from converter import Converter
 
-REFERENCE_PPTX = pathlib.Path(__file__).parents[2] / "DocumentDefinitions" / "reference-ictu.pptx"
+REFERENCE_PPTX = pathlib.Path(__file__).parents[2] / "DocumentDefinitions" / "Shared" / "reference-ictu.pptx"
 DIAGRAM = "flowchart TD\n    accTitle: Title\n    accDescr: Description\n    A --> B\n"
 
 

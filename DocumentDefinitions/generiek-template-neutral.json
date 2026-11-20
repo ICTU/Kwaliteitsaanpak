@@ -1,19 +1,14 @@
 {
     "BuildPath": "build/Templates/Template/",
-    "Title": "{Documentnaam}",
-    "Subtitle": "{het project}",
-    "DocumentType": "Template",
     "DocumentFolder": "Template",
-    "FrontPage": "Neutral",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/Neutraal-Template-Generiek.md",
             "OutputFile": "Neutraal-Template-Generiek.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-neutral.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-neutral.docx"
         }
     },
     "VariablesFiles": [

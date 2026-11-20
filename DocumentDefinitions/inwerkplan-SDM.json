@@ -1,19 +1,14 @@
 {
     "BuildPath": "build/Templates/Inwerkplan-SDM/",
-    "Title": "Inwerkplan SDM",
-    "Subtitle": "{Projectnaam/-namen}",
-    "DocumentType": "Template",
     "DocumentFolder": "Inwerkplan-SDM",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/ICTU-Template-Inwerkplan-SDM.md",
             "OutputFile": "ICTU-Template-Inwerkplan-SDM.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

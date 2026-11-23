@@ -7,6 +7,7 @@ from xml.etree.ElementTree import Element, ElementTree, SubElement
 
 import docx
 from docx.document import Document
+from docx.enum.section import WD_ORIENT
 from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.shared import Cm
@@ -234,6 +235,32 @@ class DocumentStructureTest(unittest.TestCase):
             f"Node{index}" for index in range(20)
         )
         self.assertEqual(Cm(DocxBuilder.MAX_DIAGRAM_WIDTH), self.build().inline_shapes[-1].width)
+
+    def add_page_orientation(self, orientation: str) -> None:
+        """Add a page orientation switch to the document."""
+        SubElement(self.document, xmltags.PAGE_ORIENTATION, {xmltags.PAGE_ORIENTATION_VALUE: orientation})
+
+    def test_landscape(self):
+        """Test that switching the page orientation adds sections with landscape and portrait pages."""
+        SubElement(self.document, xmltags.PARAGRAPH).text = "Portrait"
+        self.add_page_orientation(xmltags.PAGE_ORIENTATION_LANDSCAPE)
+        SubElement(self.document, xmltags.PARAGRAPH).text = "Landscape"
+        self.add_page_orientation(xmltags.PAGE_ORIENTATION_PORTRAIT)
+        SubElement(self.document, xmltags.PARAGRAPH).text = "Portrait again"
+        first, landscape, portrait = self.build().sections
+        self.assertEqual(WD_ORIENT.LANDSCAPE, landscape.orientation)
+        self.assertGreater(landscape.page_width, landscape.page_height)
+        self.assertEqual(WD_ORIENT.PORTRAIT, portrait.orientation)
+        self.assertEqual((first.page_width, first.page_height), (portrait.page_width, portrait.page_height))
+
+    def test_first_page_header_and_footer(self):
+        """Test that only the front page has a different first page header and footer."""
+        self.add_page_orientation(xmltags.PAGE_ORIENTATION_LANDSCAPE)
+        self.add_page_orientation(xmltags.PAGE_ORIENTATION_PORTRAIT)
+        first, landscape, portrait = self.build().sections
+        self.assertTrue(first.different_first_page_header_footer)
+        self.assertFalse(landscape.different_first_page_header_footer)
+        self.assertFalse(portrait.different_first_page_header_footer)
 
     def add_admonition(self, admonition_type: str = "note", title: str = "Opmerking") -> Element:
         """Add an admonition to the document."""

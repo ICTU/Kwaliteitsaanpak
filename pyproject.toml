@@ -50,7 +50,7 @@ source = ["src"]
 branch = true
 
 [tool.coverage.report]
-fail_under = 77.58
+fail_under = 78.05
 precision = 2
 skip_covered = true
 

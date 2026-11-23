@@ -393,3 +393,43 @@ class AdmonitionTest(MarkdownConverterTestCase):
     def test_heading(self):
         """Test that headings are not allowed in admonitions."""
         self.assertRaises(ValueError, self.convert, "> [!NOTE]\n> # Heading\n")
+
+
+@patch("markdown_converter.pathlib.Path.write_text", Mock())
+class LandscapeTest(MarkdownConverterTestCase):
+    """Unit tests for landscape blocks in the Markdown converter."""
+
+    def convert(self, markdown: str) -> Element:
+        """Convert the Markdown and return the document element."""
+        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=markdown)):
+            return cast(Element, self.xml().getroot())
+
+    def orientations(self, document: Element) -> list[str]:
+        """Return the page orientations in the document."""
+        return [element.attrib[xmltags.PAGE_ORIENTATION_VALUE] for element in document.iter(xmltags.PAGE_ORIENTATION)]
+
+    def test_landscape(self):
+        """Test that a landscape block switches to landscape at the start and back to portrait at the end."""
+        document = self.convert("<!-- begin: landscape -->\n# Heading 1\nText\n# Heading 2\n<!-- end: landscape -->\n")
+        self.assertEqual(
+            [xmltags.PAGE_ORIENTATION_LANDSCAPE, xmltags.PAGE_ORIENTATION_PORTRAIT], self.orientations(document)
+        )
+        self.assertEqual(2, len(list(document.iter(xmltags.SECTION))))
+
+    def test_table(self):
+        """Test that the end of a landscape block ends a table."""
+        document = self.convert("<!-- begin: landscape -->\n| A |\n|:--|\n| a |\n<!-- end: landscape -->\n")
+        self.assertIsNone(self.find(xmltags.TABLE, document).find(f".//{xmltags.PAGE_ORIENTATION}"))
+        self.assertEqual(2, len(self.orientations(document)))
+
+    def test_nested(self):
+        """Test that landscape blocks can't be nested."""
+        self.assertRaises(ValueError, self.convert, "<!-- begin: landscape -->\n<!-- begin: landscape -->\n")
+
+    def test_end_without_begin(self):
+        """Test that a landscape block can't end without beginning."""
+        self.assertRaises(ValueError, self.convert, "<!-- end: landscape -->\n")
+
+    def test_admonition(self):
+        """Test that landscape blocks are not allowed in admonitions."""
+        self.assertRaises(ValueError, self.convert, "> [!NOTE]\n> <!-- begin: landscape -->\n")

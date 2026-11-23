@@ -6,6 +6,7 @@ from typing import cast
 
 from docx import Document
 from docx.document import Document as DocumentObject
+from docx.enum.section import WD_ORIENT, WD_SECTION
 from docx.enum.text import WD_COLOR_INDEX, WD_PARAGRAPH_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.shared import Cm, RGBColor
@@ -74,6 +75,8 @@ class DocxBuilder(Builder):
             )
         elif tag == xmltags.PAGEBREAK:
             self.doc.add_page_break()
+        elif tag == xmltags.PAGE_ORIENTATION:
+            self._add_section(attributes[xmltags.PAGE_ORIENTATION_VALUE] == xmltags.PAGE_ORIENTATION_LANDSCAPE)
         elif tag == xmltags.BULLET_LIST:
             self.current_list_style.append("Lijst opsom.teken1")
             self.previous_list_item.append(None)
@@ -114,6 +117,16 @@ class DocxBuilder(Builder):
             picture._inline.docPr.attrib["title"] = attributes[xmltags.IMAGE_TITLE]
         elif tag == xmltags.ADMONITION:
             self._start_admonition(attributes)
+
+    def _add_section(self, landscape: bool) -> None:
+        """Add a section, starting on a new page, with the given orientation."""
+        section = self.doc.add_section(WD_SECTION.NEW_PAGE)
+        section.orientation = WD_ORIENT.LANDSCAPE if landscape else WD_ORIENT.PORTRAIT
+        # The new section copies the page size of the previous section, which has the other orientation
+        section.page_width, section.page_height = section.page_height, section.page_width
+        # The new section copies the settings of the previous section, including a different first page header and
+        # footer meant for the front page, so turn that off to get the default header and footer on all pages
+        section.different_first_page_header_footer = False
 
     def _set_full_width(self, table: Table) -> None:
         """Set the table width to 100%."""

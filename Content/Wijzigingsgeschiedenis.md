@@ -14,6 +14,10 @@
 - Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
 - De leeswijzer in paragraaf 2.5 verwijst nu ook naar bijlage F "ICTU-aanbevelingen voor het beheer van dependencies".
 
+## Template Niet-Functionele Eisen
+
+- De pagina's in de hoofdstukken met de eisen zijn landscape zodat de tabellen beter leesbaar zijn.
+
 ## Toolgidsen
 
 - In de HTML-versie van de toolgidsen wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.

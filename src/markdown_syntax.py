@@ -28,6 +28,7 @@ TABLE_MARKER = "|"
 BEGIN_PATTERN = r"^<!-- begin: ([^ ]+)\s?([^ ]*) -->"
 END_PATTERN = r"^<!-- end: ([^ ]+) -->"
 INSTRUCTION_START = "{"
+LANDSCAPE_BLOCK = "landscape"  # Unlike other blocks, landscape blocks may contain headings
 INSTRUCTION_END = "}"
 MEASURE_TITLE_START = "[measure-title]"
 MEASURE_TITLE_END = "[/measure-title]"

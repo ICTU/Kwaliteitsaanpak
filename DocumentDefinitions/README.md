@@ -117,7 +117,7 @@ Tekst tussen accolades, zoals `{het project}`, is een instructie voor de gebruik
 
 ## Blokken
 
-Met `<!-- begin: naam -->` en `<!-- end: naam -->` wordt een blok gemarkeerd, optioneel met één attribuut. In gebruik zijn `measure` voor maatregelen (`<!-- begin: measure composite=true -->` voor maatregelen met submaatregelen) en `slide` voor de inhoud van dia's in de presentatie.
+Met `<!-- begin: naam -->` en `<!-- end: naam -->` wordt een blok gemarkeerd, optioneel met één attribuut. In gebruik zijn `measure` voor maatregelen (`<!-- begin: measure composite=true -->` voor maatregelen met submaatregelen), `slide` voor de inhoud van dia's in de presentatie en `landscape` voor pagina's die in Word-documenten liggend moeten worden opgemaakt, bijvoorbeeld vanwege brede tabellen. Een `landscape`-blok begint en eindigt altijd op een nieuwe pagina en mag, in tegenstelling tot andere blokken, koppen bevatten.
 
 Binnen een maatregel markeren `[measure-title]…[/measure-title]` en `[submeasure-title]…[/submeasure-title]` de titel van de maatregel en de submaatregelen. Met `<!-- submeasures: 1,2 -->` wordt de paragraaf waarin dit staat gemarkeerd als toelichting op de submaatregelen met de genoemde nummers. In de self-assessment checklist komt die toelichting dan bij die submaatregelen te staan in plaats van bij de maatregel.
 

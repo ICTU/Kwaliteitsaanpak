@@ -26,6 +26,12 @@ check:
     uvx vulture --min-confidence 0 src tests .vulture_white_list.py
     node_modules/markdown-link-check/markdown-link-check --quiet build --config markdown-link-check.json
 
+# Update direct and indirect dependencies. Set GITHUB_TOKEN to prevent hitting rate limits.
+update-dependencies: install
+    uv run update-time
+
+alias update-deps := update-dependencies
+
 # Remove generated files and caches
 clean:
     rm -rf build docs/wip/* .coverage .mypy_cache .ruff_cache

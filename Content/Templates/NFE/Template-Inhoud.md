@@ -1,3 +1,5 @@
+<!-- begin: landscape -->
+
 # Functional suitability
 
 Capability of a product to provide functions that meet stated and implied needs of intended users when it is used under specified conditions.
@@ -285,3 +287,5 @@ Capability of a product to provide warnings of unacceptable risks to operations 
 Capability of a product to maintain safety during and after integration with one or more components.
 
 #include "Content/Templates/NFE/Eisentabel.md"
+
+<!-- end: landscape -->

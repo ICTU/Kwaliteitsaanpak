@@ -206,13 +206,9 @@ class MarkdownConverter:
         elif xmltags.CODE_BLOCK in self.context:
             self.builder.data(line + "\n")
         elif match := re.match(markdown_syntax.BEGIN_PATTERN, stripped_line):
-            attributes: dict[bytes | str, bytes | str] = {}
-            if attribute := match.group(2):
-                key, value = attribute.split("=")
-                attributes[key] = value
-            self.builder.start(match.group(1), attributes)
+            self._begin_block(match.group(1), match.group(2))
         elif match := re.match(markdown_syntax.END_PATTERN, stripped_line):
-            self.builder.end(match.group(1))
+            self._end_block(match.group(1))
         elif match := re.match(markdown_syntax.SUBMEASURES_PATTERN, stripped_line):
             if self.current_section is not None:
                 self.current_section.set(xmltags.SECTION_SUBMEASURES, match.group(1).replace(" ", ""))
@@ -281,6 +277,37 @@ class MarkdownConverter:
         )
         with self.element(xmltags.HEADING):
             self._process_formatted_text(heading)
+
+    def _begin_block(self, name: str, attribute: str) -> None:
+        """Begin a block, optionally with one attribute."""
+        if name == markdown_syntax.LANDSCAPE_BLOCK:
+            self._switch_page_orientation(xmltags.PAGE_ORIENTATION_LANDSCAPE)
+            return
+        attributes: TreeBuilderAttributes = {}
+        if attribute:
+            key, value = attribute.split("=")
+            attributes[key] = value
+        self.builder.start(name, attributes)
+
+    def _end_block(self, name: str) -> None:
+        """End a block."""
+        if name == markdown_syntax.LANDSCAPE_BLOCK:
+            self._switch_page_orientation(xmltags.PAGE_ORIENTATION_PORTRAIT)
+        else:
+            self.builder.end(name)
+
+    def _switch_page_orientation(self, orientation: str) -> None:
+        """Switch the page orientation. Landscape blocks may contain headings, so they can't be elements that contain
+        the content like other blocks. Instead, add an empty element at the start and end of the landscape block."""
+        if self.in_admonition:
+            raise ValueError("Landscape blocks are not allowed in admonitions")
+        in_landscape = markdown_syntax.LANDSCAPE_BLOCK in self.context
+        if in_landscape == (orientation == xmltags.PAGE_ORIENTATION_LANDSCAPE):
+            raise ValueError(f"Unexpected {'begin' if in_landscape else 'end'} of landscape block")
+        self.context.symmetric_difference_update({markdown_syntax.LANDSCAPE_BLOCK})
+        self._end_lists()
+        self._end_table()
+        self._add_element(xmltags.PAGE_ORIENTATION, attributes={xmltags.PAGE_ORIENTATION_VALUE: orientation})
 
     def _end_sections(self):
         """Close all sections."""

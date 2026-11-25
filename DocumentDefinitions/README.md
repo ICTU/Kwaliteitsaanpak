@@ -129,6 +129,21 @@ De kop `# Bijlagen` markeert het begin van de bijlagen. Koppen in de bijlagen kr
 
 Het niveau van een opsomming wordt bepaald door het opsommingsteken: `*` voor het eerste niveau, `+` voor het tweede en `-` voor het derde. Bij genummerde lijsten is `1.` het eerste niveau, `a.` het tweede en een ingesprongen `1.` het derde.
 
+```markdown
+1. eerste item
+2. tweede item
+a. subniveau aangegeven door een letter
+ 1. subsubniveau aangegeven door een ingesprongen cijfer
+3. derde item
+
+
+1. cijfers
+1. worden
+99. genegeerd
+zz. het subniveau vereist een letter
+ 99. het subsubniveau vereist een cijfer voorafgegaan door een spatie
+```
+
 ## Codeblokken
 
 Een codeblok moet een taal hebben, zodat de code van syntax highlighting kan worden voorzien:

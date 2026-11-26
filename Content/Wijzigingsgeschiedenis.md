@@ -2,23 +2,24 @@
 
 ## Kwaliteitsaanpak
 
-- In de HTML-versie wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
-- De figuur met de relaties tussen de voorfaseproducten in maatregel M01 is opnieuw getekend; de volledige namen van de producten staan nu in de figuur zelf.
-- In de HTML-versie van de Kwaliteitsaanpak tonen afkortingen hun betekenis als de lezer de muis op de afkorting houdt. Elke afkorting linkt bovendien naar de afkorting in de bijlage "Terminologie en afkortingen".
+* In M01 "Het project ontvangt en levert in elke fase vastgestelde producten en informatie", links naar het template Business Impact Analyse en het template Threat and Vulnerability Assessment toegevoegd.
+* De figuur met de relaties tussen de voorfaseproducten in maatregel M01 is opnieuw getekend; de volledige namen van de producten staan nu in de figuur zelf.
+* In de HTML-versie wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+* In de HTML-versie van de Kwaliteitsaanpak tonen afkortingen hun betekenis als de lezer de muis op de afkorting houdt. Elke afkorting linkt bovendien naar de afkorting in de bijlage "Terminologie en afkortingen".
 
 ## Samenvatting Kwaliteitsaanpak
 
-- In de HTML-versie van de samenvatting wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+* In de HTML-versie van de samenvatting wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
 
 ## Kwaliteitsaanpak en alle templates
 
-- De tabel in de bijlage "Terminologie en afkortingen" is gesplitst in een tabel met afkortingen en een tabel met termen. De tabel met afkortingen geeft per afkorting de betekenis en een toelichting.
-- De spelling van termen en afkortingen is in alle teksten in overeenstemming gebracht met de bijlage "Terminologie en afkortingen", bijvoorbeeld "scrumteam", "scrummaster", "productowner", "productbacklog", "softwarearchitectuurdocument", "interactieontwerp" en "businessimpactanalyse".
+* De tabel in de bijlage "Terminologie en afkortingen" is gesplitst in een tabel met afkortingen en een tabel met termen. De tabel met afkortingen geeft per afkorting de betekenis en een toelichting.
+* De spelling van termen en afkortingen is in alle teksten in overeenstemming gebracht met de bijlage "Terminologie en afkortingen", bijvoorbeeld "scrumteam", "scrummaster", "productowner", "productbacklog", "softwarearchitectuurdocument", "interactieontwerp" en "businessimpactanalyse".
 
 ## Template Kwaliteitsplan
 
-- Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
-- De leeswijzer in paragraaf 2.5 verwijst nu ook naar bijlage F "ICTU-aanbevelingen voor het beheer van dependencies".
+* Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
+* De leeswijzer in paragraaf 2.5 verwijst nu ook naar bijlage F "ICTU-aanbevelingen voor het beheer van dependencies".
 
 ## Template Inwerkplan Software Delivery Manager
 
@@ -26,16 +27,24 @@
 
 ## Template Niet-Functionele Eisen
 
-- De pagina's in de hoofdstukken met de eisen zijn landscape zodat de tabellen beter leesbaar zijn.
+* De pagina's in de hoofdstukken met de eisen zijn landscape zodat de tabellen beter leesbaar zijn.
+
+## Template Business Impact Analyse
+
+* Een neutraal template Business Impact Analyse toegevoegd aan de set van templates.
+
+## Template Threat and Vulnerability Assessment
+
+* Een neutraal template Threat and Vulnerability Assessment toegevoegd aan de set van templates.
 
 ## Toolgidsen
 
-- In de HTML-versie van de toolgidsen wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
-- De voorbeelden van directe en transitieve dependencies in de toolgids Dependency-Track zijn als diagram weergegeven.
+* In de HTML-versie van de toolgidsen wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+* De voorbeelden van directe en transitieve dependencies in de toolgids Dependency-Track zijn als diagram weergegeven.
 
 ## Wijzigingsgeschiedenis
 
-- In de HTML-versie van de wijzigingsgeschiedenis wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+* In de HTML-versie van de wijzigingsgeschiedenis wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
 
 ## GitHub pages
 

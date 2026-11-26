@@ -1,19 +1,14 @@
 {
     "BuildPath": "build/Templates/Inwerkplan-Kwaliteitsmanager/",
-    "Title": "Inwerkplan Kwaliteitsmanager",
-    "Subtitle": "{Projectnaam/-namen}",
-    "DocumentType": "Template",
     "DocumentFolder": "Inwerkplan-Kwaliteitsmanager",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/ICTU-Template-Inwerkplan-Kwaliteitsmanager.md",
             "OutputFile": "ICTU-Template-Inwerkplan-Kwaliteitsmanager.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

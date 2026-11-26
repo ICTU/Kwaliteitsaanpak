@@ -9,6 +9,8 @@ import xmltags
 from custom_types import Settings, Variables
 from markdown_converter import MarkdownConverter
 
+FRONTPAGE = "<!-- begin: frontpage -->\n# Title\n<!-- end: frontpage -->\n"  # Minimal front page
+
 
 class MarkdownConverterTestCase(unittest.TestCase):
     """Base class for Markdown converter tests."""
@@ -17,15 +19,9 @@ class MarkdownConverterTestCase(unittest.TestCase):
         self.settings = Settings(
             {
                 "BuildPath": ".",
-                "FrontPage": "",
-                "DocumentType": "Kwaliteitsaanpak",
-                "Title": "Title",
-                "Subtitle": "Subtitle",
                 "Version": "x.y",
-                "Date": "2020-20-20",
                 "OutputFormats": {
                     "html": {
-                        "IncludeTableOfContents": False,
                         "InputFile": "document.md",
                     }
                 },
@@ -41,42 +37,19 @@ class MarkdownConverterTestCase(unittest.TestCase):
         return cast(Element, self.xml().find(path) if parent is None else parent.find(path))
 
 
-@patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=""))
 @patch("markdown_converter.pathlib.Path.write_text", Mock())
-class EmptyMarkdownTest(MarkdownConverterTestCase):
-    """Unit test for the Markdown converter with empty Markdown."""
+class NoFrontPageTest(MarkdownConverterTestCase):
+    """Unit tests for Markdown without front page."""
 
-    def test_title(self):
-        """Test the document title."""
-        self.assertEqual(self.settings["Title"], cast(Element, self.xml().getroot()).attrib[xmltags.DOCUMENT_TITLE])
+    @patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=""))
+    def test_empty_markdown(self):
+        """Test that empty Markdown raises an exception, because it has no front page."""
+        self.assertRaisesRegex(ValueError, "document.md has no front page", self.xml)
 
-    def test_frontpage_kwaliteitsaanpak(self):
-        """Test the front page of the Kwaliteitsaanpak."""
-        self.settings["FrontPage"] = "ICTU"
-        self.assertIsNotNone(self.xml().find(xmltags.FRONTPAGE))
-
-    def test_frontpage_template(self):
-        """Test the front page of templates."""
-        self.settings["DocumentType"] = "Template"
-        self.settings["FrontPage"] = "ICTU"
-        self.assertIsNotNone(self.xml().find(xmltags.FRONTPAGE))
-
-    def test_frontpage_unknown_document_type(self):
-        """Test that an unknown document type raises an exception."""
-        self.settings["DocumentType"] = "Wrong type"
-        self.settings["FrontPage"] = "ICTU"
-        self.assertRaises(ValueError, MarkdownConverter(Variables({})).convert, self.settings, "html")
-
-    def test_frontpage_title(self):
-        """Test the front page title."""
-        self.settings["FrontPage"] = "ICTU"
-        frontpage = self.find(xmltags.FRONTPAGE)
-        self.assertEqual(self.settings["Title"], self.find(xmltags.TITLE, frontpage).text)
-
-    def test_toc(self):
-        """Test the table of contents."""
-        self.settings["OutputFormats"]["html"]["IncludeTableOfContents"] = True
-        self.assertIsNotNone(self.xml().find(xmltags.TABLE_OF_CONTENTS))
+    @patch("markdown_converter.pathlib.Path.read_text", Mock(return_value="# Heading\n\nText\n"))
+    def test_markdown_without_front_page(self):
+        """Test that Markdown without front page raises an exception."""
+        self.assertRaisesRegex(ValueError, "document.md has no front page", self.xml)
 
 
 @patch("markdown_converter.pathlib.Path.write_text", Mock())
@@ -85,7 +58,7 @@ class MarkdownTest(MarkdownConverterTestCase):
 
     read_text = "markdown_converter.pathlib.Path.read_text"
 
-    @patch(read_text, Mock(return_value="# Heading 1\n## Heading 2"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "# Heading 1\n## Heading 2"))
     def test_headings(self):
         """Test nested headings."""
         section1 = self.find(xmltags.SECTION)
@@ -95,7 +68,7 @@ class MarkdownTest(MarkdownConverterTestCase):
         self.assertEqual("2", section2.attrib[xmltags.SECTION_LEVEL])
         self.assertEqual("Heading 2", self.find(xmltags.HEADING, section2).text)
 
-    @patch(read_text, Mock(return_value="# Bijlagen\n## Appendix"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "# Bijlagen\n## Appendix"))
     def test_appendix_headings(self):
         """Test appendix headings."""
         appendices = self.find(xmltags.SECTION)
@@ -105,7 +78,7 @@ class MarkdownTest(MarkdownConverterTestCase):
         appendix = self.find(xmltags.SECTION, appendices)
         self.assertEqual("Appendix", self.find(xmltags.HEADING, appendix).text)
 
-    @patch(read_text, Mock(return_value="## Heading 2"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "## Heading 2"))
     def test_open_implicit_sections(self):
         """Test start with a nested heading."""
         section1 = self.find(xmltags.SECTION)
@@ -114,13 +87,13 @@ class MarkdownTest(MarkdownConverterTestCase):
         self.assertEqual("2", section2.attrib[xmltags.SECTION_LEVEL])
         self.assertEqual("Heading 2", self.find(xmltags.HEADING, section2).text)
 
-    @patch(read_text, Mock(return_value="## Heading 2\n# Heading 1"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "## Heading 2\n# Heading 1"))
     def test_close_implicit_sections(self):
         """Test that a nested heading is closed properly."""
         section2 = self.xml().findall(xmltags.SECTION)[1]
         self.assertEqual("Heading 1", self.find(xmltags.HEADING, section2).text)
 
-    @patch(read_text, Mock(return_value="# Heading 1\n## Heading 2\n<!-- submeasures: 1, 3 -->\nText"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "# Heading 1\n## Heading 2\n<!-- submeasures: 1, 3 -->\nText"))
     def test_submeasures(self):
         """Test that the section is marked as explanation of the submeasures."""
         section1 = self.find(xmltags.SECTION)
@@ -132,7 +105,7 @@ class MarkdownTest(MarkdownConverterTestCase):
     @patch(
         read_text,
         Mock(
-            return_value="**Bold** _Italic_ ~~Strike~~ {Instruction} [Anchor](link) `Code`"
+            return_value=FRONTPAGE + "**Bold** _Italic_ ~~Strike~~ {Instruction} [Anchor](link) `Code`"
             "[measure-title]Measure[/measure-title] [submeasure-title]Submeasure[/submeasure-title]"
         ),
     )
@@ -150,41 +123,76 @@ class MarkdownTest(MarkdownConverterTestCase):
         self.assertEqual("Submeasure", self.find(xmltags.SUBMEASURE_TITLE, paragraph).text)
         self.assertEqual("1", self.find(xmltags.SUBMEASURE_TITLE, paragraph).attrib[xmltags.SUBMEASURE_TITLE_NUMBER])
 
-    @patch(read_text, Mock(return_value='![Anchor](image.png "description")'))
+    @patch(read_text, Mock(return_value=FRONTPAGE + '![Anchor](image.png "description")'))
     def test_image(self):
         """Test image."""
         image = self.find(f".//{xmltags.IMAGE}")
         self.assertEqual("image.png", image.attrib[xmltags.IMAGE_SRC])
         self.assertEqual("description", image.attrib[xmltags.IMAGE_TITLE])
+        self.assertEqual("15", image.attrib[xmltags.IMAGE_WIDTH])
 
-    @patch(read_text, Mock(return_value='![Anchor](image_(1).png "Figure 1 (cropped)")'))
+    @patch(read_text, Mock(return_value=FRONTPAGE + '![](image.png "description")'))
+    def test_image_without_alternative_text(self):
+        """Test an image without alternative text."""
+        image = self.find(f".//{xmltags.IMAGE}")
+        self.assertEqual("", image.attrib[xmltags.IMAGE_ALT])
+        self.assertEqual("description", image.attrib[xmltags.IMAGE_TITLE])
+
+    @patch(read_text, Mock(return_value=FRONTPAGE + '![Anchor](image.png "description")<!-- width: 5 -->'))
+    def test_image_with_width(self):
+        """Test an image with a width."""
+        self.assertEqual("5", self.find(f".//{xmltags.IMAGE}").attrib[xmltags.IMAGE_WIDTH])
+
+    @patch(read_text, Mock(return_value=FRONTPAGE + '![Anchor](image_(1).png "Figure 1 (cropped)")<!-- width: 10 -->'))
+    def test_image_with_brackets_and_width(self):
+        """Test an image whose source and title contain brackets, with a width."""
+        image = self.find(f".//{xmltags.IMAGE}")
+        self.assertEqual("image_(1).png", image.attrib[xmltags.IMAGE_SRC])
+        self.assertEqual("Figure 1 (cropped)", image.attrib[xmltags.IMAGE_TITLE])
+        self.assertEqual("10", image.attrib[xmltags.IMAGE_WIDTH])
+
+    @patch(read_text, Mock(return_value=FRONTPAGE + '![Anchor](image (1).png "Figure 1")<!-- width: 5 -->'))
+    def test_image_with_whitespace_in_filename_and_width(self):
+        """Test an image whose source path contains whitespace, with a width."""
+        image = self.find(f".//{xmltags.IMAGE}")
+        self.assertEqual("image (1).png", image.attrib[xmltags.IMAGE_SRC])
+        self.assertEqual("5", image.attrib[xmltags.IMAGE_WIDTH])
+
+    @patch(read_text, Mock(return_value=FRONTPAGE + '![Anchor](image.png "description")<!-- width: wide -->'))
+    def test_image_with_invalid_width(self):
+        """Test that an invalid width is not part of the image."""
+        paragraph = self.find(xmltags.PARAGRAPH)
+        self.assertEqual("15", self.find(xmltags.IMAGE, paragraph).attrib[xmltags.IMAGE_WIDTH])
+        self.assertEqual("<!-- width: wide -->", self.find(xmltags.IMAGE, paragraph).tail)
+
+    @patch(read_text, Mock(return_value=FRONTPAGE + '![Anchor](image_(1).png "Figure 1 (cropped)")'))
     def test_image_with_brackets(self):
         """Test an image whose source and title contain brackets."""
         image = self.find(f".//{xmltags.IMAGE}")
         self.assertEqual("image_(1).png", image.attrib[xmltags.IMAGE_SRC])
         self.assertEqual("Figure 1 (cropped)", image.attrib[xmltags.IMAGE_TITLE])
 
-    @patch(read_text, Mock(return_value='![Anchor](image (1).png "Figure 1")'))
+    @patch(read_text, Mock(return_value=FRONTPAGE + '![Anchor](image (1).png "Figure 1")'))
     def test_image_with_whitespace_in_filename(self):
         """Test an image whose source path contains whitespace."""
         image = self.find(f".//{xmltags.IMAGE}")
         self.assertEqual("image (1).png", image.attrib[xmltags.IMAGE_SRC])
         self.assertEqual("Figure 1", image.attrib[xmltags.IMAGE_TITLE])
 
-    @patch(read_text, Mock(return_value="* Bullet\n* list\n\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "* Bullet\n* list\n\n"))
     def test_bullet_list(self):
         """Test bullet list."""
         bullet_list = self.find(xmltags.BULLET_LIST)
         self.assertEqual("Bullet", self.find(xmltags.LIST_ITEM, bullet_list).text)
 
-    @patch(read_text, Mock(return_value="1. Numbered\n2. list\n\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "1. Numbered\n2. list\n\n"))
     def test_numbered_list(self):
         """Test bullet list."""
         numbered_list = self.find(xmltags.NUMBERED_LIST)
         self.assertEqual("Numbered", self.find(xmltags.LIST_ITEM, numbered_list).text)
         self.assertEqual("1", self.find(xmltags.LIST_ITEM, numbered_list).attrib[xmltags.LIST_ITEM_NUMBER])
 
-    @patch(read_text, Mock(return_value="|col1|col2|col3|\n|:---:||:---|---:|\n|cell1|cell2|cell3|\n\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "|col1|col2|col3|\n|:---:||:---|---:|\n|cell1|cell2|cell3|\n\n"))
     def test_table(self):
         """Test table."""
         table = self.find(xmltags.TABLE)
@@ -207,7 +215,7 @@ class MarkdownTest(MarkdownConverterTestCase):
         self.assertEqual("center", cell.attrib[xmltags.TABLE_CELL_ALIGNMENT])
         self.assertEqual(str(len("cell1")), cell.attrib[xmltags.TABLE_CELL_WIDTH])
 
-    @patch(read_text, Mock(return_value="|text\n\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "|text\n\n"))
     def test_table_marker_without_columns(self):
         """Test an incomplete table."""
         table = self.find(xmltags.TABLE)
@@ -218,55 +226,58 @@ class MarkdownTest(MarkdownConverterTestCase):
         header_row = self.find(xmltags.TABLE_HEADER_ROW, table)
         self.assertEqual("text", self.find(xmltags.TABLE_CELL, header_row).text)
 
-    @patch(read_text, Mock(return_value="Replace $var$."))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "Replace $var$."))
     def test_variable(self):
         """Test that a variable is replaced with its value."""
         self.assertEqual("Replace variable.", self.find(xmltags.PARAGRAPH).text)
 
-    @patch(read_text, Mock(return_value="Replace [anchor](https://$var$/).\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "Replace [anchor](https://$var$/).\n"))
     def test_variable_in_url(self):
         """Test that a variable in a URL is replaced with its value."""
         paragraph = self.find(xmltags.PARAGRAPH)
         anchor_link = self.find(xmltags.ANCHOR, paragraph).attrib[xmltags.ANCHOR_LINK]
         self.assertEqual("https://variable/", anchor_link)
 
-    @patch(read_text, Mock(return_value="<!-- begin: measure -->\nMeasure\n<!-- end: measure -->\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "<!-- begin: measure -->\nMeasure\n<!-- end: measure -->\n"))
     def test_measure(self):
         """Test measure."""
         measure = self.find(xmltags.MEASURE)
         self.assertEqual("Measure", self.find(xmltags.PARAGRAPH, measure).text)
 
-    @patch(read_text, Mock(return_value="<!-- begin: measure composite=true -->\nMeasure\n<!-- end: measure -->\n"))
+    @patch(
+        read_text,
+        Mock(return_value=FRONTPAGE + "<!-- begin: measure composite=true -->\nMeasure\n<!-- end: measure -->\n"),
+    )
     def test_measure_with_attribute(self):
         """Test measure with an attribute."""
         self.assertEqual("true", self.find(xmltags.MEASURE).attrib["composite"])
 
-    @patch(read_text, Mock(side_effect=["#include 'file'", "included\n", "included\n"]))
+    @patch(read_text, Mock(side_effect=[FRONTPAGE + "#include 'file'", "included\n", FRONTPAGE + "included\n"]))
     def test_include(self):
         """Test that Markdown files can be included."""
         self.assertEqual("included", self.find(xmltags.PARAGRAPH).text)
 
-    @patch(read_text, Mock(return_value="```python\nprint('Hello world')\n```\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "```python\nprint('Hello world')\n```\n"))
     def test_code_blok(self):
         """Test that a code block can be included in the Markdown."""
         code_block = self.find(xmltags.CODE_BLOCK)
         self.assertEqual("print('Hello world')\n", code_block.text)
 
-    @patch(read_text, Mock(return_value="```mermaid\nflowchart TD\n    A --> B\n```\nAfter\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "```mermaid\nflowchart TD\n    A --> B\n```\nAfter\n"))
     def test_diagram(self):
         """Test that a Mermaid code block becomes a diagram with the Mermaid source."""
         self.assertEqual("flowchart TD\n    A --> B\n", self.find(xmltags.DIAGRAM).text)
         self.assertIsNone(self.xml().find(xmltags.CODE_BLOCK))
         self.assertEqual("After", self.find(xmltags.PARAGRAPH).text)
 
-    @patch(read_text, Mock(return_value="See: [more info](https://more.info)\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "See: [more info](https://more.info)\n"))
     def test_url(self):
         """Test a URL."""
         paragraph = self.find(xmltags.PARAGRAPH)
         anchor_link = self.find(xmltags.ANCHOR, paragraph).attrib[xmltags.ANCHOR_LINK]
         self.assertEqual("https://more.info", anchor_link)
 
-    @patch(read_text, Mock(return_value="See: [more info](https://en.wikipedia.org/wiki/ZAP_(software))\n"))
+    @patch(read_text, Mock(return_value=FRONTPAGE + "See: [more info](https://en.wikipedia.org/wiki/ZAP_(software))\n"))
     def test_url_with_brackets(self):
         """Test a URL with brackets."""
         paragraph = self.find(xmltags.PARAGRAPH)
@@ -279,8 +290,8 @@ class AdmonitionTest(MarkdownConverterTestCase):
     """Unit tests for admonitions in the Markdown converter."""
 
     def convert(self, markdown: str) -> Element:
-        """Convert the Markdown and return the document element."""
-        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=markdown)):
+        """Convert the Markdown, preceded by a front page, and return the document element."""
+        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=FRONTPAGE + markdown)):
             return cast(Element, self.xml().getroot())
 
     def admonition(self, markdown: str) -> Element:
@@ -401,7 +412,7 @@ class LandscapeTest(MarkdownConverterTestCase):
 
     def convert(self, markdown: str) -> Element:
         """Convert the Markdown and return the document element."""
-        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=markdown)):
+        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=FRONTPAGE + markdown)):
             return cast(Element, self.xml().getroot())
 
     def orientations(self, document: Element) -> list[str]:
@@ -442,7 +453,7 @@ class AbbreviationsTest(MarkdownConverterTestCase):
     def abbreviations(self, markdown: str) -> dict[str, str]:
         """Convert the Markdown and return the collected abbreviations."""
         converter = MarkdownConverter(Variables({"var": "variable"}))
-        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=markdown)):
+        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=FRONTPAGE + markdown)):
             converter.convert(self.settings, "html")
         return converter.abbreviations
 
@@ -498,9 +509,10 @@ class AbbreviationMarkingTest(MarkdownConverterTestCase):
     def convert(self, markdown: str, abbreviations_table: str = ABBREVIATIONS_TABLE) -> Element:
         """Convert the Markdown, followed by the abbreviations table, and return the first content element."""
         with patch(
-            "markdown_converter.pathlib.Path.read_text", Mock(return_value=f"{markdown}\n\n{abbreviations_table}")
+            "markdown_converter.pathlib.Path.read_text",
+            Mock(return_value=f"{FRONTPAGE}{markdown}\n\n{abbreviations_table}"),
         ):
-            return cast(Element, self.xml().getroot())[2]  # Skip the header and footer
+            return cast(Element, self.xml().getroot())[5]  # Skip front page, header, footer, toc, pagebreak
 
     def abbreviations(self, markdown: str, abbreviations_table: str = ABBREVIATIONS_TABLE) -> list[str]:
         """Convert the Markdown and return the marked abbreviations in the first element."""
@@ -574,7 +586,8 @@ class AbbreviationMarkingTest(MarkdownConverterTestCase):
     def test_definitions(self):
         """Test that the abbreviations in the first column of the abbreviations table are marked as definitions."""
         with patch(
-            "markdown_converter.pathlib.Path.read_text", Mock(return_value=f"De API\n\n{self.ABBREVIATIONS_TABLE}")
+            "markdown_converter.pathlib.Path.read_text",
+            Mock(return_value=f"{FRONTPAGE}De API\n\n{self.ABBREVIATIONS_TABLE}"),
         ):
             root = cast(Element, self.xml().getroot())
         abbreviations = list(root.iter(xmltags.ABBREVIATION))
@@ -585,8 +598,118 @@ class AbbreviationMarkingTest(MarkdownConverterTestCase):
     def test_no_definitions_in_other_columns(self):
         """Test that abbreviations in the other columns of the abbreviations table are not marked as definitions."""
         abbreviations_table = self.ABBREVIATIONS_TABLE + "| **IPO** | intern projectoverleg, zie API |\n"
-        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=abbreviations_table)):
+        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=FRONTPAGE + abbreviations_table)):
             root = cast(Element, self.xml().getroot())
         abbreviation = list(root.iter(xmltags.ABBREVIATION))[-1]
         self.assertEqual("API", abbreviation.text)
         self.assertNotIn(xmltags.ABBREVIATION_IS_DEFINITION, abbreviation.attrib)
+
+
+@patch("markdown_converter.pathlib.Path.write_text", Mock())
+class FrontPageTest(MarkdownConverterTestCase):
+    """Unit tests for the front page block in the Markdown converter."""
+
+    FRONTPAGE = (
+        "<!-- begin: frontpage -->\n"
+        '![Logo](logo.png "Logo")<!-- width: 5 -->\n\n'
+        "# Title\n\n"
+        "## {Subtitle}\n\n"
+        "Versie $var$\n"
+        "<!-- end: frontpage -->\n"
+    )
+
+    def convert(self, markdown: str) -> Element:
+        """Convert the Markdown and return the document element."""
+        with patch("markdown_converter.pathlib.Path.read_text", Mock(return_value=markdown)):
+            return cast(Element, self.xml().getroot())
+
+    def frontpage(self, markdown: str = FRONTPAGE) -> Element:
+        """Convert the Markdown and return the front page."""
+        return self.find(xmltags.FRONTPAGE, self.convert(markdown))
+
+    def test_title(self):
+        """Test that the level 1 heading is the title."""
+        self.assertEqual("Title", self.find(xmltags.TITLE, self.frontpage()).text)
+
+    def test_subtitle(self):
+        """Test that the level 2 heading is the subtitle, in bold."""
+        subtitle = self.find(xmltags.PARAGRAPH, self.frontpage())
+        self.assertEqual("y", subtitle.attrib[xmltags.PARAGRAPH_IS_SUBTITLE])
+        self.assertEqual("{Subtitle}", self.find(f"{xmltags.BOLD}/{xmltags.INSTRUCTION}", subtitle).text)
+
+    def test_paragraph(self):
+        """Test that other text becomes paragraphs, with variables replaced."""
+        paragraphs = self.frontpage().findall(xmltags.PARAGRAPH)
+        self.assertEqual("Versie variable", paragraphs[-1].text)
+
+    def test_image(self):
+        """Test that images on the front page are not part of a paragraph."""
+        image = self.find(xmltags.IMAGE, self.frontpage())
+        self.assertEqual("logo.png", image.attrib[xmltags.IMAGE_SRC])
+        self.assertEqual("5", image.attrib[xmltags.IMAGE_WIDTH])
+
+    def test_image_in_text(self):
+        """Test that images in text on the front page are part of a paragraph."""
+        frontpage = self.frontpage(
+            '<!-- begin: frontpage -->\n# Title\nText ![Logo](logo.png "Logo")\n<!-- end: frontpage -->\n'
+        )
+        self.assertIsNone(frontpage.find(xmltags.IMAGE))
+        self.assertIsNotNone(frontpage.find(f"{xmltags.PARAGRAPH}/{xmltags.IMAGE}"))
+
+    def test_pagebreak(self):
+        """Test that the front page ends with a page break."""
+        self.assertEqual(xmltags.PAGEBREAK, list(self.frontpage())[-1].tag)
+
+    def test_no_sections(self):
+        """Test that headings on the front page don't create sections and don't affect the numbering."""
+        document = self.convert(self.FRONTPAGE + "## Heading 2\n")
+        self.assertIsNone(self.find(xmltags.FRONTPAGE, document).find(f".//{xmltags.SECTION}"))
+        section1 = self.find(xmltags.SECTION, document)
+        self.assertIsNone(section1.find(xmltags.HEADING))
+        self.assertEqual("Heading 2", self.find(f"{xmltags.SECTION}/{xmltags.HEADING}", section1).text)
+
+    def test_heading_level_3(self):
+        """Test that headings of level 3 and higher are not allowed on the front page."""
+        markdown = "<!-- begin: frontpage -->\n### Heading 3\n<!-- end: frontpage -->\n"
+        self.assertRaises(ValueError, self.convert, markdown)
+
+    def test_order(self):
+        """Test that the page header, footer, and table of contents follow the front page."""
+        document = self.convert(self.FRONTPAGE + "Text\n")
+        self.assertEqual(
+            [
+                xmltags.FRONTPAGE,
+                xmltags.HEADER,
+                xmltags.FOOTER,
+                xmltags.TABLE_OF_CONTENTS,
+                xmltags.PAGEBREAK,
+                xmltags.PARAGRAPH,
+            ],
+            [element.tag for element in document],
+        )
+
+    def test_no_title(self):
+        """Test that the front page must have a title."""
+        self.assertRaises(ValueError, self.convert, "<!-- begin: frontpage -->\nText\n<!-- end: frontpage -->\n")
+
+    def test_document_title(self):
+        """Test that the document title is the title on the front page."""
+        self.assertEqual("Title", self.convert(self.FRONTPAGE).attrib[xmltags.DOCUMENT_TITLE])
+
+    def test_header_with_instruction_subtitle(self):
+        """Test that the page header consists of the title and the subtitle, if the subtitle is an instruction."""
+        header = self.find(xmltags.HEADER, self.convert(self.FRONTPAGE))
+        self.assertEqual("Title ", header.text)
+        self.assertEqual("{Subtitle}", self.find(xmltags.INSTRUCTION, header).text)
+
+    def test_header_with_subtitle(self):
+        """Test that the page header consists of the title only, if the subtitle is not an instruction."""
+        header = self.find(xmltags.HEADER, self.convert(self.FRONTPAGE.replace("{Subtitle}", "Subtitle")))
+        self.assertEqual("Title", header.text)
+        self.assertEqual([], list(header))
+
+    def test_header_without_subtitle(self):
+        """Test that the page header consists of the title only, if there is no subtitle."""
+        header = self.find(xmltags.HEADER, self.convert(self.FRONTPAGE.replace("## {Subtitle}\n", "")))
+        self.assertEqual("Title", header.text)
+        self.assertEqual([], list(header))

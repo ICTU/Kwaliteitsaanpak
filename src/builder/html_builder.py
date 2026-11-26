@@ -73,7 +73,7 @@ class HTMLBuilder(Builder):
                 self.builder.start(html_tags.BODY, {})
             case xmltags.PARAGRAPH:
                 if not self.in_measure:
-                    self.builder.start(html_tags.PARAGRAPH, attributes)
+                    self.builder.start(html_tags.PARAGRAPH, {})
             case tag if tag in self.LIST:
                 self.builder.start(self.LIST[tag], {})
             case tag if tag in self.FORMAT:

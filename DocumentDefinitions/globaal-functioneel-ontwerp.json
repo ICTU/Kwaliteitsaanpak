@@ -1,19 +1,14 @@
 {
     "BuildPath": "build/Templates/GFO/",
-    "Title": "Globaal Functioneel Ontwerp",
-    "Subtitle": "{Productnaam, versie}",
-    "DocumentType": "Template",
     "DocumentFolder": "GFO",
-    "FrontPage": "ICTU",
     "OutputFormats": {
         "docx": {
-            "IncludeTableOfContents": true,
-            "InputFile": "DocumentDefinitions/Templates/document-template.md",
+            "InputFile": "DocumentDefinitions/Templates/ICTU-Template-Globaal-Functioneel-Ontwerp.md",
             "OutputFile": "ICTU-Template-Globaal-Functioneel-Ontwerp.docx",
             "OutputPaths": [
                 "docs/$VERSIE$"
             ],
-            "ReferenceFile": "DocumentDefinitions/reference-ictu.docx"
+            "ReferenceFile": "DocumentDefinitions/Shared/reference-ictu.docx"
         }
     },
     "VariablesFiles": [

@@ -31,6 +31,8 @@ class DocxBuilder(Builder):
 
     SCHEMA = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
     MAX_DIAGRAM_WIDTH = 15  # Centimeters
+    SUBTITLE_STYLE = "Front Page Subtitle"
+    FRONTPAGE_IMAGE_STYLE = "Front Page Image"
     TEXT_TAGS = (
         xmltags.PARAGRAPH,
         xmltags.LIST_ITEM,
@@ -66,13 +68,12 @@ class DocxBuilder(Builder):
         self.table: Table | None = None
         self.row: Row | None = None
         self.column_index = 0
+        self.title_added = False
 
     def start_element(self, tag: str, attributes: TreeBuilderAttributes) -> None:
         super().start_element(tag, attributes)
         if tag == xmltags.PARAGRAPH:
-            self.paragraph = self.container.add_paragraph(
-                style="Maatregel" if self.in_element(xmltags.MEASURE) else None
-            )
+            self.paragraph = self.container.add_paragraph(style=self._paragraph_style(attributes))
         elif tag == xmltags.PAGEBREAK:
             self.doc.add_page_break()
         elif tag == xmltags.PAGE_ORIENTATION:
@@ -105,11 +106,14 @@ class DocxBuilder(Builder):
             self.paragraph.paragraph_format.alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT
         elif tag == xmltags.TITLE:
             self.paragraph = self.container.add_paragraph(style="Title")
+            self.title_added = True
         elif tag == xmltags.TABLE_OF_CONTENTS:
             self.doc.add_paragraph(attributes[xmltags.TABLE_OF_CONTENTS_HEADING], style="TOC Heading")
             add_table_of_contents(self.doc.add_paragraph())
         elif tag == xmltags.IMAGE:
-            run = self.container.add_paragraph().add_run()
+            # Images below the title on the front page get extra space above them, e.g. the word cloud
+            below_title = self.in_element(xmltags.FRONTPAGE) and self.title_added
+            run = self.container.add_paragraph(style=self.FRONTPAGE_IMAGE_STYLE if below_title else None).add_run()
             picture = run.add_picture(
                 str(self.images_folder / str(attributes[xmltags.IMAGE_SRC])),
                 width=Cm(int(attributes[xmltags.IMAGE_WIDTH])),
@@ -127,6 +131,14 @@ class DocxBuilder(Builder):
         # The new section copies the settings of the previous section, including a different first page header and
         # footer meant for the front page, so turn that off to get the default header and footer on all pages
         section.different_first_page_header_footer = False
+
+    def _paragraph_style(self, attributes: TreeBuilderAttributes) -> str | None:
+        """Return the style of the paragraph."""
+        if self.in_element(xmltags.MEASURE):
+            return "Maatregel"
+        if attributes.get(xmltags.PARAGRAPH_IS_SUBTITLE) == "y":
+            return self.SUBTITLE_STYLE
+        return None
 
     def _set_full_width(self, table: Table) -> None:
         """Set the table width to 100%."""

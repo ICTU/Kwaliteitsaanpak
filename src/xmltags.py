@@ -40,6 +40,7 @@ PAGE_ORIENTATION_LANDSCAPE = "landscape"
 PAGE_ORIENTATION_PORTRAIT = "portrait"
 PAGE_ORIENTATION_VALUE = "orientation"  # One of landscape, portrait
 PARAGRAPH = "p"
+PARAGRAPH_IS_SUBTITLE = "is-subtitle"  # The paragraph is the subtitle on the front page
 SECTION = "section"
 SECTION_IS_APPENDIX = "is-appendix"
 SECTION_LEVEL = "level"

@@ -13,9 +13,10 @@ CODE_BLOCK_END = r"```"
 # Markers for bold, italic, strikethrough, and code
 FORMATTING_MARKERS_PATTERN = r"\*\*|__|~~|[*_`]"
 HEADING_PATTERN = r"^(#+) (.*)"
-# The path for the images does allow whitespace but no quote
+# The alternative text may be empty. The path for the images does allow whitespace but no quote
 # The title is delimited by the quotes, so it may contain any character except a quote (e.g. parentheses)
-IMAGE_PATTERN = r'^!\[([^\]]+)\]\((.+) "([^"]+)"\)'
+# The image may be followed by a width in centimeters in an HTML comment, e.g. <!-- width: 5 -->, hidden by GitHub
+IMAGE_PATTERN = r'^!\[([^\]]*)\]\((.+) "([^"]+)"\)(?:<!-- width: ([0-9]+) -->)?'
 ITALIC_START = ITALIC_END = "_"
 ITALIC_ALTERNATIVE_START = ITALIC_ALTERNATIVE_END = "*"
 # The URL may contain balanced parentheses (e.g. https://en.wikipedia.org/wiki/Foo_(disambiguation)), one level deep
@@ -31,6 +32,8 @@ TABLE_MARKER = "|"
 ABBREVIATION_PATTERN = r"(?<![\w-])(?:{})(?!\w)"
 BEGIN_PATTERN = r"^<!-- begin: ([^ ]+)\s?([^ ]*) -->"
 END_PATTERN = r"^<!-- end: ([^ ]+) -->"
+FRONTPAGE_START = "<!-- begin: frontpage -->"
+FRONTPAGE_END = "<!-- end: frontpage -->"
 INSTRUCTION_START = "{"
 LANDSCAPE_BLOCK = "landscape"  # Unlike other blocks, landscape blocks may contain headings
 INSTRUCTION_END = "}"

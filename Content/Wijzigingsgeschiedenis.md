@@ -20,6 +20,10 @@
 - Omdat de SIG/TÜViT-richtlijnen voor onderhoudbaarheid van de software volume niet meer hanteren als criterium is de paragraaf "Omvang van het systeem beperken" veranderd in "Omvang van deelsystemen beperken".
 - De leeswijzer in paragraaf 2.5 verwijst nu ook naar bijlage F "ICTU-aanbevelingen voor het beheer van dependencies".
 
+## Template Inwerkplan Software Delivery Manager
+
+- Een template Inwerkplan Software Delivery Manager toegevoegd aan de set van templates.
+
 ## Template Niet-Functionele Eisen
 
 - De pagina's in de hoofdstukken met de eisen zijn landscape zodat de tabellen beter leesbaar zijn.

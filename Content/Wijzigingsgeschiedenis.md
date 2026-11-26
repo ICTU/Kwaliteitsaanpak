@@ -37,6 +37,10 @@
 
 - In de HTML-versie van de wijzigingsgeschiedenis wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
 
+## GitHub pages
+
+- De lijst met templates is gesplitst in ICTU-templates en neutrale templates.
+
 # Versie 5.4.1, 28 september 2026
 
 ## Kwaliteitsaanpak

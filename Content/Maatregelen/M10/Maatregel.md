@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M10/Definitie.md"
 
-Het periodiek projectoverleg heet bij ICTU het "Intern Projectoverleg" of "IPO".
+Het periodiek projectoverleg heet bij ICTU het "intern projectoverleg" of "IPO".
 
 Nadere toelichting op de agenda:
 

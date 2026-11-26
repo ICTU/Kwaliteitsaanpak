@@ -7,5 +7,5 @@ Relevant voor dit inwerkplan zijn de volgende documenten:
 | Globaal functioneel ontwerp {het product}                   | {versie} | {datum} |
 | Plan van Aanpak (voorfase) {het product}         | {versie} | {datum} |
 | Plan van Realisatiefase (voorfase) {het product}         | {versie} | {datum} |
-| Product backlog {het product}                               | {versie} | {datum} |
+| Productbacklog {het product}                               | {versie} | {datum} |
 | {titel}                                      | {versie} | {datum} |

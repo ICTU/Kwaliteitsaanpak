@@ -24,15 +24,15 @@ Elk Jira-type maakt gebruik van een standaardworkflow. Omdat de kwaliteitsrappor
 
 ### Systeembeschrijving
 
-Het op te leveren systeem is beschreven in documenten zoals globaal functioneel ontwerp (GFO) en software-architectuurdocument (SAD). De actuele toestand van het systeem kan anders zijn in situaties waarin het gewenste systeem gefaseerd wordt opgeleverd of waarin het systeem door de agile manier van werken reeds vooruitloopt op het GFO. Om de actuele toestand te beschrijven wordt gebruikgemaakt van use cases. Logische testgevallen beschrijven hoe de use cases worden getest.
+Het op te leveren systeem is beschreven in documenten zoals globaal functioneel ontwerp (GFO) en softwarearchitectuurdocument (SAD). De actuele toestand van het systeem kan anders zijn in situaties waarin het gewenste systeem gefaseerd wordt opgeleverd of waarin het systeem door de agile manier van werken reeds vooruitloopt op het GFO. Om de actuele toestand te beschrijven wordt gebruikgemaakt van use cases. Logische testgevallen beschrijven hoe de use cases worden getest.
 
 #### Use cases
 
-De te realiseren functionaliteit wordt met behulp van de user stories geïmplementeerd. De delen van de systeemfuncties die gerealiseerd zijn, worden met use cases door het Scrumteam vastgelegd (meestal een functioneel ontwerper) door issues aan te maken van het type _Use Case_. De verzameling use cases beschrijft de functionele as-is-situatie van het systeem.
+De te realiseren functionaliteit wordt met behulp van de user stories geïmplementeerd. De delen van de systeemfuncties die gerealiseerd zijn, worden met use cases door het scrumteam vastgelegd (meestal een functioneel ontwerper) door issues aan te maken van het type _Use Case_. De verzameling use cases beschrijft de functionele as-is-situatie van het systeem.
 
 #### Logische testgevallen
 
-Logische testgevallen worden door de Scrumteams (normaal gesproken de tester) vastgelegd in Jira door een issue te maken van het type _Logical Test Case_ (LTC). Het logisch testgeval wordt middels een Jira-link van het type _Tests_ gekoppeld aan zowel de use case als de user story die hiermee getest wordt.
+Logische testgevallen worden door de scrumteams (normaal gesproken de tester) vastgelegd in Jira door een issue te maken van het type _Logical Test Case_ (LTC). Het logisch testgeval wordt middels een Jira-link van het type _Tests_ gekoppeld aan zowel de use case als de user story die hiermee getest wordt.
 
 Het logische testgeval zelf wordt beschreven volgens het Given/When/Then formaat. De Jira-issue heeft hiervoor drie velden:
 
@@ -43,14 +43,14 @@ Logische testgevallen worden als geautomatiseerd (Automated), handmatig (Manual)
 
 ### Realisatie-activiteiten
 
-Gedurende de realisatiesprints worden user stories uitgevoerd. Omdat stories slechts een klein deel van gewenste functionaliteiten bevatten (om storypunten niet te hoog te laten zijn), worden epics als containers gedefinieerd. Indien een story wordt opgepakt door het Scrumteam worden sub-taken gedefinieerd door middel van het Jira-type Technical Task. Wanneer gedurende de ontwikkeling issues vastgelegd moeten worden, kan dit met behulp van het type _Custom Issue_.
+Gedurende de realisatiesprints worden user stories uitgevoerd. Omdat stories slechts een klein deel van gewenste functionaliteiten bevatten (om storypunten niet te hoog te laten zijn), worden epics als containers gedefinieerd. Indien een story wordt opgepakt door het scrumteam worden sub-taken gedefinieerd door middel van het Jira-type Technical Task. Wanneer gedurende de ontwikkeling issues vastgelegd moeten worden, kan dit met behulp van het type _Custom Issue_.
 
 #### Epic
 
-Epics zijn ‘brokken’ functionaliteit die door de user stories worden geïmplementeerd. Ze worden door de Scrumteams (meestal de functioneel ontwerper) vastgelegd in Jira door een issue te maken van het type _Epic_. Een epic wordt middels een Jira-link van het type _Realizes_ aan de use case gekoppeld waarvoor functionaliteiten worden geïmplementeerd.
+Epics zijn ‘brokken’ functionaliteit die door de user stories worden geïmplementeerd. Ze worden door de scrumteams (meestal de functioneel ontwerper) vastgelegd in Jira door een issue te maken van het type _Epic_. Een epic wordt middels een Jira-link van het type _Realizes_ aan de use case gekoppeld waarvoor functionaliteiten worden geïmplementeerd.
 
 #### User story
-User stories worden door de Scrumteams (meestal de product owner of een functioneel ontwerper) vastgelegd in Jira door een issue te maken van het type _Story_. Een story wordt middels een Jira-link van het type Changes aan de use case gekoppeld waarvoor functionaliteiten worden geïmplementeerd, en middels het veld Epic link aan de epic die gerealiseerd wordt.
+User stories worden door de scrumteams (meestal de productowner of een functioneel ontwerper) vastgelegd in Jira door een issue te maken van het type _Story_. Een story wordt middels een Jira-link van het type Changes aan de use case gekoppeld waarvoor functionaliteiten worden geïmplementeerd, en middels het veld Epic link aan de epic die gerealiseerd wordt.
 
 De user story zelf wordt beschreven in het formaat: "Als <rol> wil ik <actie> zodat <rationale die duidelijk maakt wat de businesswaarde is>". Voorbeelden zijn: "Als medewerker van ICTU, wil ik een parkeerplaats voor een bezoeker kunnen reserveren, zodat deze niet op zoek hoeft naar een parkeerplaats" of "Als aankomend medewerker in de kinderopvang, wil ik mijn VOG registreren in het register voor medewerkers in de kinderopvang, omdat ik anders niet mag werken in de kinderopvang". De tekst van de user story dienst in het descriptionveld van het issue te worden vastgelegd zodat de user-story-tekst goed in de rapportages komt.
 
@@ -58,7 +58,7 @@ Bij elke user story kan worden vastgelegd wat het risico van de verandering is o
 
 #### Technical tasks
 
-Gedurende de realisatie van een user story worden door het Scrumteam diverse activiteiten uitgevoerd. Om de sprintvoortgang eenvoudiger te kunnen monitoren, wordt gebruikgemaakt van sub-taken binnen een user story. Deze kunnen automatisch aangemaakt worden (aanvragen via Jira), of handmatig door het Scrumteam vastgelegd worden door _Create Sub-task_ type _Technical Task_. Een technical task heeft het formaat <werkwoord> <onderwerp>. Voorbeelden zijn: Opstellen logische testgevallen, Review testgevallen, Ontwikkelen <module>, Uitvoeren handmatige testen, Ontwikkelen ART, Controleren kwaliteitsrapportages, Bijwerken use cases, Check codekwaliteit en testcoverage, etc.
+Gedurende de realisatie van een user story worden door het scrumteam diverse activiteiten uitgevoerd. Om de sprintvoortgang eenvoudiger te kunnen monitoren, wordt gebruikgemaakt van sub-taken binnen een user story. Deze kunnen automatisch aangemaakt worden (aanvragen via Jira), of handmatig door het scrumteam vastgelegd worden door _Create Sub-task_ type _Technical Task_. Een technical task heeft het formaat <werkwoord> <onderwerp>. Voorbeelden zijn: Opstellen logische testgevallen, Review testgevallen, Ontwikkelen <module>, Uitvoeren handmatige testen, Ontwikkelen ART, Controleren kwaliteitsrapportages, Bijwerken use cases, Check codekwaliteit en testcoverage, etc.
 
 #### Bugs
 
@@ -93,8 +93,8 @@ Ondanks dat het de voorkeur heeft zoveel mogelijk kwaliteitsaspecten van de soft
 | Versiebeheer van documenten                  | Kwaliteitsplan §3.2.1    | Documenten zijn met de juiste meta-informatie op de afgesproken plaats en wijze opgeslagen                                           |
 | Review van documenten                        | Kwaliteitsplan §3.2.2    | Documenten zijn op de afgesproken wijze gereviewd                                                                                    |
 | Projectspecifieke kwaliteitsmaatregelen      | Kwaliteitsplan §5.1      | Projectspecifieke maatregelen zijn uitgevoerd zoals afgesproken                                                                      |
-| Definition of Ready                          | Kwaliteitsplan §5.2.1    | Scrumteams hebben en gebruiken een DoR                                                                                               |
-| Definition of Done                           | Kwaliteitsplan §5.2.2    | Scrumteams hebben en gebruiken een DoD, waarin het voldoen aan de kwaliteitsnormen is opgenomen                                      |
+| Definition of ready                          | Kwaliteitsplan §5.2.1    | Scrumteams hebben en gebruiken een DoR                                                                                               |
+| Definition of done                           | Kwaliteitsplan §5.2.2    | Scrumteams hebben en gebruiken een DoD, waarin het voldoen aan de kwaliteitsnormen is opgenomen                                      |
 | Vrijgaveadvies                               | Kwaliteitsplan §5.2.3    | Het project levert de afgesproken informatie ten behoeve van het vrijgaveadvies                                                      |
 | Kwaliteit broncode                           | Kwaliteitsplan §5.4      | Onderdrukte SonarQube-waarschuwingen zijn afgestemd en (nog steeds) terecht                                                          |
 | Kwaliteit broncode                           | Kwaliteitsplan §5.4      | De kwaliteit van de broncode voldoet bij een steekproefsgewijze, handmatige inspectie aan de eisen                                   |

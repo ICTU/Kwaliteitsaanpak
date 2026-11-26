@@ -1,6 +1,6 @@
 {
     "BuildPath": "build/Templates/SAD/",
-    "Title": "Software-architectuurdocument",
+    "Title": "Softwarearchitectuurdocument",
     "Subtitle": "{Productnaam, versie}",
     "DocumentType": "Template",
     "DocumentFolder": "SAD",

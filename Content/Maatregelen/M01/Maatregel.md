@@ -8,7 +8,7 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 
 | Product | Voor start | Voorfase | Realisatiefase | Verantwoordelijke organisatie |
 |---------|------------|----------|----------------|-------------------------------|
-| [submeasure-title]Business impact analyse[/submeasure-title]                             | ✔          | ⚙        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Businessimpactanalyse[/submeasure-title]                             | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | [submeasure-title]Data protection impact assessment[/submeasure-title]                   | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | [submeasure-title]Impact assessment mensenrechten en algoritmes[/submeasure-title]       | ✔          | ⚙        | ⚙              | opdrachtgever                 |
 | [submeasure-title]Projectstartarchitectuur en solution architectuur [/submeasure-title]  | ✔          | ⚙        | ⚙              | opdrachtgever                 |
@@ -16,7 +16,7 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 | [submeasure-title]Plan van aanpak: voorfase [/submeasure-title]                          | ✔          |          |                | ICTU                          |
 | [submeasure-title]Beschrijving van functionele eisen [/submeasure-title]                 |            | ✔        | ⚙              | opdrachtgever                 |
 | [submeasure-title]Beschrijving van niet-functionele eisen [/submeasure-title]            |            | ✔        | ⚙              | opdrachtgever                 |
-| [submeasure-title]Product backlog[/submeasure-title]                                    |            | ✔        | ⚙              | opdrachtgever                 |
+| [submeasure-title]Productbacklog[/submeasure-title]                                    |            | ✔        | ⚙              | opdrachtgever                 |
 | [submeasure-title]Ontwerp- en architectuurdocumentatie[/submeasure-title]                |            | ✔        | ⚙              | ICTU, beheerorganisatie       |
 | [submeasure-title]Mastertestplan[/submeasure-title]                                      |            | ✔        | ⚙              | opdrachtgever                 |
 | [submeasure-title]Detailtestplannen[/submeasure-title]                                   |            | ✔        | ⚙              | ICTU, beheerorganisatie       |
@@ -30,11 +30,11 @@ De onderstaande tabel bevat de in deze paragraaf beschreven producten. Het vinkj
 | [submeasure-title]Release notes[/submeasure-title]                                       |            |          | ✔              | ICTU                          |
 | [submeasure-title]Vrijgaveadvies[/submeasure-title]                                      |            |          | ✔              | opdrachtgever                 |
 
-### Business impact analyse
+### Businessimpactanalyse
 
 <!-- submeasures: 1 -->
 
-In een business impact analyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting: de risico’s die een organisatie bereid is te accepteren. Alleen de opdrachtgevende organisatie zelf kan hierover een uitspraak doen.
+In een businessimpactanalyse (BIA) legt de opdrachtgevende organisatie vast hoe belangrijk informatiebeveiliging is voor de eigen bedrijfsvoering/processen. Naast de gevoeligheid voor incidenten komt hierin ook de 'risk appetite' van de organisatie tot uiting: de risico’s die een organisatie bereid is te accepteren. Alleen de opdrachtgevende organisatie zelf kan hierover een uitspraak doen.
 
 ### Data protection impact assessment
 
@@ -105,7 +105,7 @@ Beschikbare templates:
 
 De beschrijving van functionele eisen bestaat uit epics en/of user stories, eventueel aangevuld met use cases. De beschrijving bevat tevens eisen voor ondersteuning van beheerfuncties, die door de beoogd beheerder gesteld worden, en voor logging, inclusief de globale inhoud van te loggen business events (gebeurtenissen op procesniveau) en de daarvoor geldende bewaartermijnen.
 
-Bronnen van de opdrachtgevende organisatie zoals de projectstartarchitectuur, een programma van eisen en procesbeschrijvingen vormen het startpunt voor de functionele eisen. Tijdens het project worden use cases in samenwerking met de product owner vertaald naar epics en user stories.
+Bronnen van de opdrachtgevende organisatie zoals de projectstartarchitectuur, een programma van eisen en procesbeschrijvingen vormen het startpunt voor de functionele eisen. Tijdens het project worden use cases in samenwerking met de productowner vertaald naar epics en user stories.
 
 ### Beschrijving van niet-functionele eisen
 
@@ -132,17 +132,17 @@ Beschikbare templates:
 
 * [Template niet-functionele eisen]($BASE_URL$/$VERSIE$/Neutraal-Template-Niet-Functionele-Eisen.docx).
 
-### Product backlog
+### Productbacklog
 
 <!-- submeasures: 9 -->
 
-De product backlog is een geprioriteerd overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. Al het werk dat het Scrumteam doet loopt via de product backlog, niet alleen werk aan de broncode zelf maar bijvoorbeeld ook het schrijven van beheerdocumentatie. De product owner is de eigenaar van de product backlog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:
+De productbacklog is een geprioriteerd overzicht van alle nog te realiseren functionele en niet-functionele eigenschappen van de software. Al het werk dat het scrumteam doet loopt via de productbacklog, niet alleen werk aan de broncode zelf maar bijvoorbeeld ook het schrijven van beheerdocumentatie. De productowner is de eigenaar van de productbacklog. De zaken op de lijst zijn normaal gesproken in de vorm van een epic of user story. Hierin staat:
 
 * _Wat_ er gemaakt moet worden,
 * _Waarom_,
 * en voor _wie_.
 
-De product owner is verantwoordelijk voor de inhoud en bepaalt de prioritering van de eisen. Er staan ook ruwe schattingen bij van de waarde voor de organisatie en van de ontwikkelkosten.
+De productowner is verantwoordelijk voor de inhoud en bepaalt de prioritering van de eisen. Er staan ook ruwe schattingen bij van de waarde voor de organisatie en van de ontwikkelkosten.
 
 Zie [https://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog](https://www.scrumguides.org/scrum-guide.html#artifacts-productbacklog).
 
@@ -163,7 +163,7 @@ Een prototype is een eerste, ruwe versie van de applicatie. Het prototype illust
 Beschikbare templates:
 
 * [Template globaal functioneel ontwerp]($BASE_URL$/$VERSIE$/ICTU-Template-Globaal-Functioneel-Ontwerp.docx).
-* [Template softwarearchitectuurdocument]($BASE_URL$/$VERSIE$/ICTU-Template-Software-architectuurdocument.docx).
+* [Template softwarearchitectuurdocument]($BASE_URL$/$VERSIE$/ICTU-Template-Softwarearchitectuurdocument.docx).
 * [Template infrastructuurarchitectuur]($BASE_URL$/$VERSIE$/Neutraal-Template-Infrastructuurarchitectuur.docx).
 
 ### Testplannen en -rapportages
@@ -185,7 +185,7 @@ Beschikbare templates:
 
 <!-- submeasures: 13 -->
 
-Het informatiebeveiligingsplan vormt een praktisch toepasbaar document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en met welke maatregelen die bescherming vorm krijgt. Belangrijkste bronnen voor het informatiebeveiligingsplan zijn de projectstartarchitectuur (PSA), business impact analyse (BIA), data protection impact assessment (DPIA) en de threat and vulnerability assessment (TVA).
+Het informatiebeveiligingsplan vormt een praktisch toepasbaar document dat uitlegt binnen welke kaders bescherming geleverd wordt tegen welke dreigingen en met welke maatregelen die bescherming vorm krijgt. Belangrijkste bronnen voor het informatiebeveiligingsplan zijn de projectstartarchitectuur (PSA), businessimpactanalyse (BIA), data protection impact assessment (DPIA) en de threat and vulnerability assessment (TVA).
 
 Het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) bevat een methode om te komen tot een systematische aanpak van informatiebeveiliging. Eén van de vereisten van het VIR 2007 is dat voor elk informatiesysteem en voor elk verantwoordelijkheidsgebied een afhankelijkheids- en kwetsbaarheidsanalyse (A&K-analyse) wordt uitgevoerd.
 
@@ -250,10 +250,10 @@ Waar mogelijk stelt de opdrachtgevende organisatie ook andere relevante informat
 ```mermaid
 flowchart TD
     accTitle: Relaties tussen producten
-    accDescr: Business impact analyse (BIA), data protection impact assessment (DPIA), impact assessment mensenrechten en algoritmes (IAMA) en projectstartarchitectuur (PSA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), product backlog (PB), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De business impact analyse, de data protection impact analyse en de impact assessment mensenrechten en algoritmes vormen input voor de PSA. De projectstartarchitectuur vormt input voor functionele eisen, niet-functionele eisen en informatiebeveiligingsplan. De functionele eisen vormen input voor de product backlog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor product backlog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De product backlog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.
+    accDescr: Businessimpactanalyse (BIA), data protection impact assessment (DPIA), impact assessment mensenrechten en algoritmes (IAMA) en projectstartarchitectuur (PSA) zijn input voor de voorfase. Functionele eisen (FE), niet-functionele eisen (NFE), informatiebeveiligingsplan (IB), productbacklog (PB), ontwerp en architectuur (O&A), kwaliteitsplan (KP) en testplannen (TP) zijn de output van de voorfase. De relaties tussen de verschillende producten zijn als volgt. De businessimpactanalyse, de data protection impact analyse en de impact assessment mensenrechten en algoritmes vormen input voor de PSA. De projectstartarchitectuur vormt input voor functionele eisen, niet-functionele eisen en informatiebeveiligingsplan. De functionele eisen vormen input voor de productbacklog en voor ontwerp en architectuur. De niet-functionele eisen vormen input voor productbacklog, ontwerp en architectuur en kwaliteitsplan. Het informatiebeveiligingsplan vormt input voor ontwerp en architectuur en kwaliteitsplan. De productbacklog en ontwerp en architectuur, tenslotte, zijn input voor de testplannen.
 
     subgraph input [Input voorfase]
-        BIA["Business impact analyse"]
+        BIA["Businessimpactanalyse"]
         DPIA["Data protection impact assessment"]
         IAMA["Impact assessment mensenrechten en algoritmes"]
         PSA["Projectstartarchitectuur"]
@@ -262,7 +262,7 @@ flowchart TD
         FE["Functionele eisen"]
         NFE["Niet-functionele eisen"]
         IB["Informatiebeveiligingsplan"]
-        PB["Product backlog"]
+        PB["Productbacklog"]
         OA["Ontwerp en architectuur"]
         KP["Kwaliteitsplan"]
         TP["Testplannen"]
@@ -286,7 +286,7 @@ flowchart TD
 
 Bovenstaande figuur laat de belangrijkste relaties zien tussen de verschillende producten die de input en output van de voorfase vormen. Naast de informatiestromen zoals door de pijlen weergegeven zijn er in de praktijk nog meer verbanden tussen de producten. Zo kan de gekozen oplossing in de architectuur van invloed zijn op de maatregelen in het informatiebeveiligingsplan of leiden niet-functionele eisen tot extra functionele eisen.
 
-Omdat in de praktijk niet alle informatie uit business impact analyse, data protection impact assessment en impact assessment mensenrechten en algoritmes in detail in de projectstartarchitectuur kan worden opgenomen stelt opdrachtgever deze documenten ook ter beschikking aan het project. Projectmedewerkers kunnen zo deze documenten raadplegen bij het opstellen van de functionele en niet-functionele eisen en het informatiebeveiligingsplan.
+Omdat in de praktijk niet alle informatie uit businessimpactanalyse, data protection impact assessment en impact assessment mensenrechten en algoritmes in detail in de projectstartarchitectuur kan worden opgenomen stelt opdrachtgever deze documenten ook ter beschikking aan het project. Projectmedewerkers kunnen zo deze documenten raadplegen bij het opstellen van de functionele en niet-functionele eisen en het informatiebeveiligingsplan.
 
 ### Rationale
 

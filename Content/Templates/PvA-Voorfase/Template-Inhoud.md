@@ -11,21 +11,21 @@ In de voorfase worden de volgende producten gerealiseerd op basis van {bronnen, 
 | Onderdeel voorfase                       | Inhoudelijk verantwoordelijk | Penvoerder   | Review en meewerken aan |
 | :--------------------------------------- | :--------------------------- | :----------- | :---------------------- |
 | Projectstartarchitectuur (PSA)           | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Business impact analyse (BIA)            | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Businessimpactanalyse (BIA)            | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Data protection impact assessment (DPIA) | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Impact assessment mensenrechten en algoritmes (IAMA) | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Globaal functioneel ontwerp (GFO)        | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Interactie-ontwerp (UX)                  | {verantwoordelijke}          | ICTU         | {reviewers}             |
+| Interactieontwerp (UX)                  | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Softwarearchitectuurdocument (SAD)       | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Infrastructuurarchitectuur (IA)          | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
-| Product risico analyse (PRA)             | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Productrisicoanalyse (PRA)             | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Mastertestplan (op basis van PRA)        | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Detailtestplan softwarerealisatie        | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Threat & vulnerability assessment (TVA)  | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Informatiebeveiligingsplan (IB-plan)     | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Niet-functionele eisen (NFE)             | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Kwaliteitsplan                           | {verantwoordelijke}          | ICTU         | {reviewers}             |
-| Product backlog                          | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
+| Productbacklog                          | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Vastgesteld minimal viable product       | {verantwoordelijke}          | {penvoerder} | ICTU, {reviewers}       |
 | Wireframe, mockup, prototype, animatie   | {verantwoordelijke}          | ICTU         | {reviewers}             |
 | Voorstel realisatiefase                  | ICTU                         | ICTU         | {reviewers}             |
@@ -48,8 +48,8 @@ Het succes van deze voorfase, en van het eventueel later uit te voeren realisati
 
 Tijdens dit project wordt zoveel mogelijk agile gewerkt volgens de Scrum-aanpak. Dit vertaalt zich concreet in:
 
-* Eén Scrumteam met medewerkers van {opdrachtgevende organisatie} en {partijen} en ICTU werkt minimaal {aantal} dagdelen per week aan de gedefinieerde documenten.
-* Er is een product owner door {opdrachtgevende organisatie} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
+* Eén scrumteam met medewerkers van {opdrachtgevende organisatie} en {partijen} en ICTU werkt minimaal {aantal} dagdelen per week aan de gedefinieerde documenten.
+* Er is een productowner door {opdrachtgevende organisatie} aangesteld die de uiteindelijke inhoudelijke keuzes maakt.
 * Voor elk product is een inhoudelijk verantwoordelijke, een penvoerder/schrijver en één of meer reviewers. Alle partijen werken constructief samen. Reviews zijn gericht op kwaliteitsverbeteringen. Waar nodig schrijven reviewers mee aan de documenten.
 * Nieuwe tussentijdse versies van documenten worden kortcyclisch opgeleverd, elke {termijn}.
 * Alle tussentijdse versies worden gereviewd door {reviewers} binnen de afgesproken termijn (maximaal {aantal} werkdagen).
@@ -66,7 +66,7 @@ Voor een goede start wordt er, bij aanvang van de voorfase, een kick-off georgan
 
 ## Samenwerking
 
-{opdrachtgevende organisatie} en {partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een Scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
+{opdrachtgevende organisatie} en {partijen} en ICTU werken gezamenlijk aan de op te leveren documenten in een scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
 
 Vertegenwoordigers van het project nemen deel aan de volgende overleggen met vertegenwoordigers van {opdrachtgevende organisatie} en de beheerorganisatie:
 
@@ -114,7 +114,7 @@ Onderstaand is de verwachte inzet per rol van {opdrachtgevende organisatie} en {
 | Architect                                     | {aantal} dagen           | Richting geven aan architectuur, opstellen PSA, reviewen SAD, NFE en infrastructuurarchitectuur                                                |
 | Testmanager                                   | {aantal} dagen           | Uitvoeren PRA, opstellen mastertestplan, reviewen kwaliteitsplan, detailtestplan softwarerealisatie                                            |
 | Diverse inhoudelijk deskundigen               | {aantal} dagen           | Eventuele betrokkenheid van (eind)gebruikers en belanghebbenden                                                                                |
-| Product owner                                 | {aantal} dagen           | Inhoudelijk sturing / prioritering, opstellen product backlog, NFE, minimal viable product, reviewen GFO en prototype                         |
+| Productowner                                 | {aantal} dagen           | Inhoudelijk sturing / prioritering, opstellen productbacklog, NFE, minimal viable product, reviewen GFO en prototype                         |
 | Projectleider ({opdrachtgevende organisatie}) | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleiders van opdrachtnemer, deelname aan kick-off en eventuele workshops              |
 | Projectleider ({beheerorganisatie})           | {aantal} dagen           | Opstellen plan van aanpak realisatiefase voor het inrichten van technisch en operationeel beheer, deelname aan kick-off en eventuele workshops |
 | Diverse technisch en inhoudelijk specialisten | ad hoc                   | Inzet op ad-hocbasis ter ondersteuning van de andere rollen                                                                                    |
@@ -155,7 +155,7 @@ Voor de uitvoering van de voorfase gelden de volgende randvoorwaarden:
 | Nr           | Randvoorwaarde                                                                                                                                              |
 | :----------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | R01          | De vereiste inzet van betrokkenen van {opdrachtgevende organisatie} en {partijen} is georganiseerd en gegarandeerd.                                         |
-| R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.                                                         |
+| R02          | De productowner is gemandateerd om zelfstandig besluiten te nemen over de inhoud van de producten.                                                         |
 | R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgevende organisatie}, {beheerorganisatie} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
 | R04          | De producten {producten} zijn beschikbaar voor aanvang van de voorfase.                                                                                     |
 | R05          | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar.                                                                                          |
@@ -192,7 +192,7 @@ Onderstaand is de verwachte inzet per rol van ICTU voor de uitvoering van dit pl
 | Privacy-expert                         | {x} uur         | Penvoerder {documenten}, reviewen {documenten}                                                                                                                                                               |
 | Testmanager                            | {x} uur         | Penvoerder detailtestplan softwarerealisatie, reviewen {documenten}                                                                                                                                          |
 | Kwaliteitsmanager                      | {x} uur         | Penvoerder kwaliteitsplan, reviewen {documenten}                                                                                                                                                             |
-| Software delivery manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het Scrumteam, inhoudelijke rapportage                                           |
+| Software delivery manager              | {x} uur         | Opstellen plan van aanpak voorfase en plan van aanpak realisatiefase, reviewen {documenten}, faciliteren en coördineren van het scrumteam, inhoudelijke rapportage                                           |
 | Projectleider                          | {x} uur         | Voorbereiden en plannen kick-off, opstellen plan van aanpak en voorstel inclusief projectovereenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever |
 | Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                                                                                                     |
 | Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is                                                                                   |

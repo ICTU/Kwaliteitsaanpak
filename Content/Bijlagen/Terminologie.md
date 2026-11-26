@@ -8,7 +8,7 @@ De onderstaande tabellen bevatten afkortingen en termen die voorkomen in de $KWA
 |:----------|:----------|:------------|
 | **API** | application programming interface | een vastgelegde interface waarmee **software** functionaliteit of gegevens beschikbaar stelt aan andere software |
 | **ART** | automatische **regressietest** | **regressietest** die geautomatiseerd wordt uitgevoerd, bijvoorbeeld bij elke wijziging in de continuous delivery pipeline |
-| **BIA** | business impact analyse | $BIA$ |
+| **BIA** | businessimpactanalyse | $BIA$ |
 | **BIO** | Baseline Informatiebeveiliging Overheid | het gemeenschappelijke normenkader voor informatiebeveiliging van alle overheidslagen, gebaseerd op NEN-ISO/IEC 27001 en 27002 |
 | **DoD** | definition of done | de door het **scrumteam** vastgestelde criteria waaraan een user story moet voldoen om als gereed te gelden, waaronder het voldoen aan de kwaliteitsnormen |
 | **DoR** | definition of ready | de door het **scrumteam** vastgestelde criteria waaraan een user story moet voldoen voordat deze in een sprint kan worden opgepakt |
@@ -34,7 +34,7 @@ De onderstaande tabellen bevatten afkortingen en termen die voorkomen in de $KWA
 | **PSA** | projectstartarchitectuur | $PSA$ |
 | **PvA** | plan van aanpak | document waarin de aanpak, planning, benodigde middelen, risico’s en randvoorwaarden voor de uitvoering van een project of projectfase worden vastgelegd |
 | **PvE** | programma van eisen | document waarin de opdrachtgevende organisatie de eisen vastlegt waaraan het op te leveren product moet voldoen |
-| **SAD** | software-architectuurdocument | $SAD$ |
+| **SAD** | softwarearchitectuurdocument | $SAD$ |
 | **SDM** | software delivery manager | zie **software delivery manager** in de tabel met termen |
 | **TVA** | threat and vulnerability assessment | $TVA$ |
 | **UX** | user experience | de ervaring van een gebruiker bij het gebruik van een product of dienst; zie ook **gebruikskwaliteit** en **usability** |
@@ -63,19 +63,19 @@ De onderstaande tabellen bevatten afkortingen en termen die voorkomen in de $KWA
 | **informatiesysteem** | een samenhangend geheel van gegevensverzamelingen en de daarbij behorende personen, procedures, processen en **programmatuur**, alsmede de voor het informatiesysteem getroffen voorzieningen voor opslag, verwerking en communicatie [VIR 2007, NORA] |
 | **Information Security Officer** | functionaris die op organisatieniveau adviseert over informatiebeveiliging, bijdraagt aan de ontwikkeling en toepassing van informatiebeveiligingsbeleid en de beheersing van informatiebeveiligingsrisico’s, en toeziet op de naleving van beveiligingskaders en -maatregelen |
 | **infrastructuurarchitectuur** | $IA$ |
-| **interactie-ontwerp** | $IO$ |
+| **interactieontwerp** | $IO$ |
 | **International Organization for Standardization** | onafhankelijke, internationale organisatie die via samenwerking tussen nationale normalisatie-instituten internationale normen ontwikkelt en publiceert |
 | **Jira** | tool om **use cases**, user stories, logische testgevallen en issues vast te leggen |
 | **klantreis** | alle directe en indirecte interactie van een klant of gebruiker met een product of dienst |
 | **Kwaliteitsaanpak** | de $KWALITEITSAANPAK$ is een set maatregelen gebaseerd op de risico’s bij de ontwikkeling van maatwerksoftware |
 | **kwaliteitsmanager** | ondersteunt en coacht het scrumteam bij de kwaliteitszorg en het leveren van software van goede kwaliteit, monitort de softwarekwaliteit, signaleert kwaliteitsrisico’s en technische schuld, adviseert over verbeteringen en rapporteert aan de **projectleider** |
 | **minimum viable product** | $MVP$ |
-| **ontwikkelaars** | Ontwikkelaars (*developers* in de Scrumgids) zijn de mensen in het **scrumteam** die iedere sprint gecommitteerd zijn aan het maken van elk aspect van een bruikbaar increment [scrumgids] |
+| **ontwikkelaars** | Ontwikkelaars (*developers* in de Scrumgids) zijn de mensen in het **scrumteam** die iedere sprint gecommitteerd zijn aan het maken van elk aspect van een bruikbaar increment [Scrumgids] |
 | **opdrachtgever** | medewerker van de opdrachtgevende organisatie die eindverantwoordelijk is voor de opdracht aan ICTU |
 | **operationeel beheer** | activiteiten die zorgen dat software operationeel is en blijft, zoals het oplossen van incidenten, het uitvoeren van onderhoud, het implementeren van upgrades en patches, het beheren van configuraties, en het monitoren van prestaties en beschikbaarheid |
 | **persona** | een min of meer realistische beschrijving van een fictief persoon, veelal met naam, persoonskenmerken, drijfveren en behoeften, die een groep gebruikers representeert en gebruikt wordt om te redeneren over de gewenste functionele en niet-functionele eigenschappen van de **software** |
-| **productbacklog** | De productbacklog is een levende, geordende lijst van wat nodig is om het product te verbeteren. Het is de enige bron van het werk dat door het **scrumteam** gedaan wordt [scrumgids] |
-| **product owner** | De product owner is verantwoordelijk voor het maximaliseren van de waarde van het product, dat het resultaat is van het werk van het **scrumteam** [scrumgids] |
+| **productbacklog** | De productbacklog is een levende, geordende lijst van wat nodig is om het product te verbeteren. Het is de enige bron van het werk dat door het **scrumteam** gedaan wordt [Scrumgids] |
+| **productowner** | De productowner is verantwoordelijk voor het maximaliseren van de waarde van het product, dat het resultaat is van het werk van het **scrumteam** [Scrumgids] |
 | **programmatuur** | zie **software** |
 | **project** | een tijdelijke organisatie voor het realiseren van een resultaat - bij ICTU bestaat een **softwareontwikkelproject** uit medewerkers van ICTU, de opdrachtgevende organisatie, beheerorganisatie en eventueel andere partijen |
 | **projectleider** | medewerker eindverantwoordelijk voor het projectresultaat - bij ICTU-softwareontwikkelprojecten is de projectleider een medewerker van ICTU |
@@ -87,8 +87,8 @@ De onderstaande tabellen bevatten afkortingen en termen die voorkomen in de $KWA
 | **release notes** | een overzicht van de wijzigingen in een **release** |
 | **Scrum** | Scrum is een lichtgewicht raamwerk dat mensen, teams en organisaties helpt om waarde te creёren door middel van adaptieve oplossingen voor complexe problemen [Scrumgids] |
 | **Scrummaster** | De Scrummaster is verantwoordelijk voor het opzetten van **Scrum**, zoals staat beschreven in de Scrumgids [Scrumgids] |
-| **scrumteam** | Een Scrumteam bestaat uit één **Scrummaster**, één **product owner** en **ontwikkelaars** (*developers* in de Scrumgids) [Scrumgids] |
-| **securityadviseur** | adviseert over de informatiebeveiliging van softwareontwikkelprojecten, de ontwikkelde software en de bijbehorende ontwikkel- en bedrijfsprocessen en werkt hierbij samen met de kwaliteitsmanager, SDM, projectleider en product owner |
+| **scrumteam** | Een scrumteam bestaat uit één **Scrummaster**, één **productowner** en **ontwikkelaars** (*developers* in de Scrumgids) [Scrumgids] |
+| **securityadviseur** | adviseert over de informatiebeveiliging van softwareontwikkelprojecten, de ontwikkelde software en de bijbehorende ontwikkel- en bedrijfsprocessen en werkt hierbij samen met de kwaliteitsmanager, SDM, projectleider en productowner |
 | **software** | software is de verzameling instructies die bepalen wat een computer uitvoert en is uiteindelijk wat de gebruiker ziet, ervaart en waarmee hij interacteert |
 | **softwarearchitectuur** | een **architectuur** die vooral de softwareonderdelen en -relaties (processen, modules, interfaces, datamodel) van een systeem beschrijft |
 | **software delivery manager** | organiseert het ontwikkelen en opleveren van **software** conform de vastgestelde eisen en de Kwaliteitsaanpak en rapporteert aan de **projectleider** |

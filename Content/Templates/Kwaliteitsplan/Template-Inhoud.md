@@ -6,9 +6,9 @@ De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende het gehele p
 
 ### Wekelijks projectoverleg
 
-Het project houdt een wekelijks intern projectoverleg (IPO) waarin planning, voortgang, kwaliteitsrapportage, acties, risico's en overige relevante zaken worden besproken ($M10$). Het doel is om informatie uit te wisselen binnen het project, belemmeringen voor de voortgang die het Scrumteam niet zelf kan oplossen te melden en eventueel te besluiten over escalaties buiten het project.
+Het project houdt een wekelijks intern projectoverleg (IPO) waarin planning, voortgang, kwaliteitsrapportage, acties, risico's en overige relevante zaken worden besproken ($M10$). Het doel is om informatie uit te wisselen binnen het project, belemmeringen voor de voortgang die het scrumteam niet zelf kan oplossen te melden en eventueel te besluiten over escalaties buiten het project.
 
-De IPO-agenda bevat minimaal: mededelingen, kwaliteit, voortgang, risico's, acties en rondvraag. Aanwezig zijn in ieder geval de projectleider, de software delivery manager, de kwaliteitsmanager, de Scrummaster en een vertegenwoordiger uit elk Scrumteam.
+De IPO-agenda bevat minimaal: mededelingen, kwaliteit, voortgang, risico's, acties en rondvraag. Aanwezig zijn in ieder geval de projectleider, de software delivery manager, de kwaliteitsmanager, de Scrummaster en een vertegenwoordiger uit elk scrumteam.
 
 De kwaliteitsmanager controleert of deze overleggen plaatsvinden.
 
@@ -56,15 +56,15 @@ De opstellers verwerken het commentaar. Vervolgens sturen de opstellers een toel
 
 Het doel van de voorfase is tweeledig: het voorbereiden van de realisatiefase, zodat ICTU verantwoord een projectovereenkomst kan opstellen voor de realisatiefase, en het identificeren van risico’s die van toepassing zijn op de realisatiefase en het verdere verloop van het project.
 
-{opdrachtgevende organisatie} zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, business impact analyse en data protection impact assessment. Waar nodig werkt {opdrachtgevende organisatie} de informatie bij tijdens de voorfase en realisatiefase.
+{opdrachtgevende organisatie} zorgt dat het project bij de start van de voorfase inzicht heeft in de informatie die typisch wordt vastgelegd in een projectstartarchitectuur, businessimpactanalyse en data protection impact assessment. Waar nodig werkt {opdrachtgevende organisatie} de informatie bij tijdens de voorfase en realisatiefase.
 
 Dit kwaliteitsplan wordt opgesteld tijdens de voorfase, maar is tevens al deels van toepassing, in ieder geval aan het eind van de voorfase. Voor de voorfase gelden de onderstaande kwaliteitsmaatregelen.
 
 ## Belanghebbenden
 
-De kwaliteit van de deliverables wordt mede bepaald door de verwachtingen van de belanghebbenden. Het is van belang dat alle belanghebbenden zijn geïdentificeerd en hun verwachtingen zijn vastgelegd, geanalyseerd en vertaald naar de eisen voor het te implementeren systeem. De belanghebbenden worden geïdentificeerd in het projectvoorstel voor de voorfase. De eisen aan het te ontwikkelen systeem worden vastgelegd in de product backlog en het NFE-document.
+De kwaliteit van de deliverables wordt mede bepaald door de verwachtingen van de belanghebbenden. Het is van belang dat alle belanghebbenden zijn geïdentificeerd en hun verwachtingen zijn vastgelegd, geanalyseerd en vertaald naar de eisen voor het te implementeren systeem. De belanghebbenden worden geïdentificeerd in het projectvoorstel voor de voorfase. De eisen aan het te ontwikkelen systeem worden vastgelegd in de productbacklog en het NFE-document.
 
-De tijdens de voorfase geïdentificeerde eisen vormen het startpunt van {opdrachtgevende organisatie} en kunnen gedurende de vervolgfases in overeenstemming met de opdrachtnemer aangepast worden. De product owner vertegenwoordigt gedurende de vervolgfasen de geïdentificeerde belanghebbenden.
+De tijdens de voorfase geïdentificeerde eisen vormen het startpunt van {opdrachtgevende organisatie} en kunnen gedurende de vervolgfases in overeenstemming met de opdrachtnemer aangepast worden. De productowner vertegenwoordigt gedurende de vervolgfasen de geïdentificeerde belanghebbenden.
 
 ## Verwerking eisen
 
@@ -90,7 +90,7 @@ In aanvulling op de maatregelen met betrekking tot reviews, zie paragraaf [Docum
 
 ### Tracering eisen
 
-{Als de eisen traceerbaar moeten zijn vanuit product backlog/NFE-document/Informatiebeveiligingsplan via GFO en SAD naar broncode, beschrijf dan hier de wijze waarop de eisen uniek identificeerbaar zijn gemaakt, hoe de relaties tussen eisen en ontwerp(beslissingen) worden bijgehouden en hoe de relaties tussen ontwerp(beslissingen) en code worden bijgehouden. Beschrijf hier ook wie deze relaties op welke momenten verifieert en hoe de verificatie wordt gedocumenteerd.}
+{Als de eisen traceerbaar moeten zijn vanuit productbacklog/NFE-document/Informatiebeveiligingsplan via GFO en SAD naar broncode, beschrijf dan hier de wijze waarop de eisen uniek identificeerbaar zijn gemaakt, hoe de relaties tussen eisen en ontwerp(beslissingen) worden bijgehouden en hoe de relaties tussen ontwerp(beslissingen) en code worden bijgehouden. Beschrijf hier ook wie deze relaties op welke momenten verifieert en hoe de verificatie wordt gedocumenteerd.}
 
 # Kwaliteitsmaatregelen realisatiefase
 
@@ -113,29 +113,29 @@ De kolom "Eis" bevat het nummer van de eis en komt overeen met het nummer van de
 
 ## Entry- en exitcriteria
 
-ICTU volgt een agile aanpak bij het realiseren van software, waarbij gewerkt wordt in korte iteraties (sprints) waarin user stories worden omgezet in werkende software. De resultaten van één of meer sprints worden gebundeld in (major) releases. Hierbij worden entry- en exitcriteria gebruikt om te bepalen of werk kan worden opgepakt of gereed is: Definition of Ready (entry criteria) en Definition of Done (exit criteria) voor user stories en het vrijgaveadvies voor releases (exit criteria).
+ICTU volgt een agile aanpak bij het realiseren van software, waarbij gewerkt wordt in korte iteraties (sprints) waarin user stories worden omgezet in werkende software. De resultaten van één of meer sprints worden gebundeld in (major) releases. Hierbij worden entry- en exitcriteria gebruikt om te bepalen of werk kan worden opgepakt of gereed is: Definition of ready (entry criteria) en definition of done (exit criteria) voor user stories en het vrijgaveadvies voor releases (exit criteria).
 
-### Definition of Ready
+### Definition of ready
 
-Het project definieert en hanteert een Definition of Ready (DoR) voor user stories. Een user story kan pas in een sprint worden opgepakt als deze aan de DoR voldoet. De kwaliteitsmanager controleert of er een DoR is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
+Het project definieert en hanteert een definition of ready (DoR) voor user stories. Een user story kan pas in een sprint worden opgepakt als deze aan de DoR voldoet. De kwaliteitsmanager controleert of er een DoR is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
 
-De Definition Of Ready van het project bevat de volgende criteria ({vul aan en pas aan}):
+De definition of ready van het project bevat de volgende criteria ({vul aan en pas aan}):
 
 1. De beschrijving voldoet aan het user story-formaat “als <rol> wil ik <actie> zodat <reden>”;
 2. De annotaties en screenshots/prototype zijn gereed;
 3. Afhankelijkheden met derden zijn in kaart (bijvoorbeeld: een koppelvlakbeschrijving is beschikbaar);
-4. De story is ingeschat door het Scrumteam;
-5. De story is goedgekeurd door de product owner;
-6. De story is goedgekeurd door de reviewer binnen het Scrumteam;
+4. De story is ingeschat door het scrumteam;
+5. De story is goedgekeurd door de productowner;
+6. De story is goedgekeurd door de reviewer binnen het scrumteam;
 7. Het verwachte aantal logische testgevallen is ingevuld;
 8. Er is ingeschat of de user story mogelijk impact heeft op performance, beveiliging, infrastructuur of andere niet-functionele aspecten. {Zie de bijlage [Gebruik van Jira](#gebruik-van-jira) voor meer informatie.}
 9. De story voldoet aan de [INVEST-criteria](https://xp123.com/invest-in-good-stories-and-smart-tasks/).
 
-### Definition of Done
+### Definition of done
 
-Het project definieert en hanteert een Definition of Done (DoD) voor user stories. De kwaliteitsmanager controleert of er een DoD is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
+Het project definieert en hanteert een definition of done (DoD) voor user stories. De kwaliteitsmanager controleert of er een DoD is gedefinieerd en controleert periodiek of deze wordt gehanteerd.
 
-De Definition of Done van het project bevat de volgende criteria ({vul aan en pas aan}):
+De definition of done van het project bevat de volgende criteria ({vul aan en pas aan}):
 
 1. De broncode voldoet aan de codeerstandaard en is gereviewed,
 1. Nieuwe testgevallen zijn gereviewd en geaccordeerd door reviewer,
@@ -293,9 +293,9 @@ Deze werkwijze geldt voor alle dependencies in de software en de CI-pipeline: {d
 
 ## Testen
 
-Gedurende de realisatiefase worden de use cases in samenwerking met de product owner vertaald naar user stories. Per user story wordt één of meer logische testgevallen opgesteld; per logisch testgeval worden één of meer fysieke testgevallen opgesteld. De user stories, logische testgevallen en fysieke testgevallen zijn expliciet aan elkaar gekoppeld. User stories en logische testgevallen worden vastgelegd in Jira; zie de bijlagen voor de te gebruiken typen en relaties. Afwijkingen van deze standaardaanpak zijn alleen toegestaan met goedkeuring van de kwaliteitsmanager.
+Gedurende de realisatiefase worden de use cases in samenwerking met de productowner vertaald naar user stories. Per user story wordt één of meer logische testgevallen opgesteld; per logisch testgeval worden één of meer fysieke testgevallen opgesteld. De user stories, logische testgevallen en fysieke testgevallen zijn expliciet aan elkaar gekoppeld. User stories en logische testgevallen worden vastgelegd in Jira; zie de bijlagen voor de te gebruiken typen en relaties. Afwijkingen van deze standaardaanpak zijn alleen toegestaan met goedkeuring van de kwaliteitsmanager.
 
-Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor de realisatie- en beheerfase worden uitgevoerd. Het MTP wordt gebaseerd op in ieder geval PSA, NFE, SAD en GFO. Daarnaast is een product risicoanalyse (PRA) uitgevoerd als basis voor de vaststelling van de diepgang waarmee de gedefinieerde testsoorten uitgevoerd moeten worden.
+Het mastertestplan (MTP) beschrijft welke testsoorten met welke intensiteit voor de realisatie- en beheerfase worden uitgevoerd. Het MTP wordt gebaseerd op in ieder geval PSA, NFE, SAD en GFO. Daarnaast is een productrisicoanalyse (PRA) uitgevoerd als basis voor de vaststelling van de diepgang waarmee de gedefinieerde testsoorten uitgevoerd moeten worden.
 
 ## Unit tests
 
@@ -330,7 +330,7 @@ Deze performancetesten worden uitgevoerd in de {performancetestomgeving}. De loa
 
 {Als de performancetestgeving niet representatief is voor de productieomgeving:} Omdat de performancetestomgeving niet representatief is voor de productieomgeving, zijn de absolute meetwaardes uit de performancetesten, zoals responsetijden en maximale belastbaarheid, zeer waarschijnlijk niet hetzelfde als die in de productieomgeving zouden worden gemeten. ICTU gebruikt de performancetesten daarom als regressietest: door de meetwaardes van een test te vergelijken met de vorige testrun of een baselinetestrun kunnen veranderingen in de performance vroegtijdig worden opgemerkt.
 
-Quality-time rapporteert over de geautomatiseerde performancetesten. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het Scrumteam. Issues die voortkomen uit performancetesten worden opgenomen in Jira met het label "performance_bevinding".
+Quality-time rapporteert over de geautomatiseerde performancetesten. Als de verantwoordelijke tester performancerisico's ontdekt die ook aanwezig zijn in een versie van de software die reeds is opgeleverd, rapporteert de tester deze risico's aan het scrumteam. Issues die voortkomen uit performancetesten worden opgenomen in Jira met het label "performance_bevinding".
 
 {Als operationeel beheer geen onderdeel is van de dienstverlening:} De testen van ICTU kunnen geen uitsluitsel geven over de uiteindelijke performance in de productie-omgeving: ze geven niet meer dan een relatief resultaat ten opzichte van eerdere testen in dezelfde testomgeving. Toch hanteert ICTU ze als een standaardkwaliteitsmaatregel, vóór de oplevering van een nieuwe versie van de software. Want ze geven het inzicht of de performance voor wat betreft de software geen achteruitgang betekent ten opzichte van de bestaande situatie. De uiteindelijke performance in de productieomgeving dient {opdrachtgevende organisatie} zelf te (laten) testen.
 
@@ -348,7 +348,7 @@ Elke beveiligingstest resulteert in een beveiligingstestrapportage met daarin de
 |:--------------------------------------------------|:----------------------------------------------------|:---------------------------------------------------|
 | Hoog (hoog risico en/of hoge impact)              | Zo snel mogelijk, resulteert in een bug fix release | Voor de eerste productierelease                    |
 | Midden (gemiddeld risico en/of gemiddelde impact) | Voor de eerstvolgende major productierelease        | Voor de eerste productierelease                    |
-| Laag (laag risico en lage impact)                 | In overleg met de product owner                     | In overleg met de product owner                    |
+| Laag (laag risico en lage impact)                 | In overleg met de productowner                     | In overleg met de productowner                    |
 
 Quality-time rapporteert of gevonden beveiligingsissues niet te lang open staan.
 
@@ -356,13 +356,13 @@ Quality-time rapporteert of gevonden beveiligingsissues niet te lang open staan.
 
 ## Toegankelijkheidstesten
 
-Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Quality-time rapporteert over de toegankelijkheidsrapportage van Axe. Daarnaast worden handmatige toegankelijkheidstesten uitgevoerd, door deskundige leden van het Scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.2-richtlijnen die niet geautomatiseerd kunnen worden getest.
+Om de toegankelijkheid van webapplicaties te testen gebruikt ICTU Axe; Axe is ingericht in de pijplijn. Quality-time rapporteert over de toegankelijkheidsrapportage van Axe. Daarnaast worden handmatige toegankelijkheidstesten uitgevoerd, door deskundige leden van het scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak voor het testen van WCAG-2.2-richtlijnen die niet geautomatiseerd kunnen worden getest.
 
 ## Usability-testen
 
 {Verwijder deze paragraaf indien usability-testen niet van toepassing zijn}
 
-Om de usability van de software te testen worden usability-testen uitgevoerd, door deskundige leden van het Scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak.
+Om de usability van de software te testen worden usability-testen uitgevoerd, door deskundige leden van het scrumteam {of door externe deskundigen}. Het MTP beschrijft de gekozen aanpak.
 
 Issues die voortkomen uit usability-testen worden opgenomen in Jira met het label "usability_bevinding".
 
@@ -370,7 +370,7 @@ Issues die voortkomen uit usability-testen worden opgenomen in Jira met het labe
 
 Technische schuld zijn eigenschappen van de software die de inzetbaarheid en onderhoudbaarheid van de software op lange termijn bedreigen. Denk hierbij aan hoge complexiteit, lage testdekking, ontbrekende testsoorten en ontbrekende documentatie.
 
-Als het Scrumteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in Quality-time als zodanig om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het Scrumteam, in overleg met de software delivery manager, om de omvang van de technische schuld in te schatten in user-storypunten. Vervolgens wordt een plan gemaakt om de technische schuld in een beheerst tempo weg te werken - de ontwikkeling/onderhoud van de software moet wel doorgang vinden. Uitgangspunt is ongeveer 10% van de user-storypunten die het Scrumteam normaal in een sprint realiseert; dit kan in principe zonder overleg met de opdrachtgevende organisatie, omdat het leveren van kwaliteit onderdeel van het werk is.
+Als het scrumteam of de kwaliteitsmanager constateert dat er technische schuld is, markeert de kwaliteitsmanager deze technische schuld in Quality-time als zodanig om te voorkomen dat de technische schuld ongemerkt verder toeneemt. Vervolgens vraagt de kwaliteitsmanager het scrumteam, in overleg met de software delivery manager, om de omvang van de technische schuld in te schatten in user-storypunten. Vervolgens wordt een plan gemaakt om de technische schuld in een beheerst tempo weg te werken - de ontwikkeling/onderhoud van de software moet wel doorgang vinden. Uitgangspunt is ongeveer 10% van de user-storypunten die het scrumteam normaal in een sprint realiseert; dit kan in principe zonder overleg met de opdrachtgevende organisatie, omdat het leveren van kwaliteit onderdeel van het werk is.
 
 ## Beheer
 

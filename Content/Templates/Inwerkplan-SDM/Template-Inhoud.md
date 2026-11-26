@@ -125,7 +125,7 @@ De onderstaande tabellen geven een niet-uitputtend overzicht van de werkzaamhede
 | Bewaken van de balans tussen teamcapaciteit en werkzaamheden | Gebruik signalen uit de dagelijkse afstemming, het scrumteam en het $IPO$. |
 | Werven en selecteren van scrumteamleden | Met uitzondering van de productowner, die door de opdrachtgever wordt geleverd. |
 | Informeren van het projectteam over relevante ontwikkelingen | Denk aan ontwikkelingen binnen ICTU, ISD en de opdrachtgevende organisatie. |
-| Begeleiden van een zelforganiserend scrumteam | Werk hierbij samen met de Scrummaster. |
+| Begeleiden van een zelforganiserend scrumteam | Werk hierbij samen met de scrummaster. |
 | Motiveren en ondersteunen van het scrumteam | Bijvoorbeeld door teamsessies en teamactiviteiten te organiseren en belemmeringen weg te nemen. |
 
 ### Informeren en communiceren
@@ -224,7 +224,7 @@ De belangrijkste werkzaamheden zijn:
 
 ## Scrumteam
 
-Het scrumteam is zelfsturend en bepaalt zelf wie welke werkzaamheden uitvoert, wanneer en op welke manier. Als SDM begeleid en stimuleer je de zelforganisatie van het scrumteam. Wanneer de samenwerking, motivatie, hoeveelheid of kwaliteit van het werk achterblijft, neem je het initiatief om dit samen met het scrumteam en de Scrummaster te bespreken en te verbeteren.
+Het scrumteam is zelfsturend en bepaalt zelf wie welke werkzaamheden uitvoert, wanneer en op welke manier. Als SDM begeleid en stimuleer je de zelforganisatie van het scrumteam. Wanneer de samenwerking, motivatie, hoeveelheid of kwaliteit van het werk achterblijft, neem je het initiatief om dit samen met het scrumteam en de scrummaster te bespreken en te verbeteren.
 
 Het IPO kan worden gebruikt om problemen te bespreken die bredere projectafstemming vereisen en om afspraken te maken over vervolgacties (zie hoofdstuk 6).
 
@@ -263,7 +263,7 @@ Je kunt voor jezelf een overzicht bijhouden van de scrumteamleden, hun rollen en
 
 ## Productowner
 
-De productowner (PO) speelt een essentiële rol in de softwareontwikkeling. Zonder productowner kan de ontwikkeling stagneren. De PO wordt altijd door de opdrachtgever geleverd. Soms stelt ICTU een *productowner by proxy* beschikbaar, bijvoorbeeld een ontwerper die de productowner ondersteunt bij het uitwerken van user stories. Ook kan de SDM, Scrummaster of een andere ICTU-medewerker de productowner begeleiden.
+De productowner (PO) speelt een essentiële rol in de softwareontwikkeling. Zonder productowner kan de ontwikkeling stagneren. De PO wordt altijd door de opdrachtgever geleverd. Soms stelt ICTU een *productowner by proxy* beschikbaar, bijvoorbeeld een ontwerper die de productowner ondersteunt bij het uitwerken van user stories. Ook kan de SDM, scrummaster of een andere ICTU-medewerker de productowner begeleiden.
 
 De productowner blijft verantwoordelijk voor de prioritering en het beheer van de productbacklog, ook wanneer werkzaamheden aan anderen worden gedelegeerd. Binnen het project kunnen aanvullende afspraken worden gemaakt over het inhoudelijk goedkeuren van user stories.
 
@@ -276,7 +276,7 @@ Een belangrijke gesprekspartner is vaak de projectleider aan opdrachtgeverszijde
 Ook met de beheerorganisatie en eventuele ketenpartners kun je contact hebben, bijvoorbeeld wanneer er afhankelijkheden bestaan tussen hun werkzaamheden en de softwareontwikkeling.
 
 > [!NOTE] Activiteit 7 💬
-> Bespreek met de projectleider en Scrummaster welke personen en organisaties voor jou belangrijk zijn om tijdens de inwerkperiode te leren kennen. Plan vervolgens kennismakingsgesprekken met deze betrokkenen.
+> Bespreek met de projectleider en scrummaster welke personen en organisaties voor jou belangrijk zijn om tijdens de inwerkperiode te leren kennen. Plan vervolgens kennismakingsgesprekken met deze betrokkenen.
 >
 > **Doel:**
 >
@@ -310,8 +310,8 @@ De onderstaande tabellen geven een overzicht van veelvoorkomende overlegvormen. 
 | Sprintplanning | Bepalen welke werkzaamheden het scrumteam tijdens de komende sprint gaat uitvoeren en hoe deze worden aangepakt. | Eenmaal per sprint | Scrumteam en SDM. |
 | Sprintretrospective | Evaluatie van de samenwerking en het ontwikkelproces en verbeteringen afspreken voor komende sprints. | Eenmaal per sprint | Scrumteam; deelname van de SDM in overleg met het scrumteam. |
 | Sprintreview en demo | De resultaten van de sprint bespreken en demonstreren, feedback verzamelen en bepalen welke vervolgstappen nodig zijn. | Ieder sprinteinde | Scrumteam, SDM, ICTU-projectleider, betrokkenen van de opdrachtgever, gebruikers en andere belanghebbenden, zoals architecten. |
-| Interne projectoverleg (IPO) | Het projectmanagement informeren over de projectvoortgang, risico’s en aandachtspunten. Het overleg ondersteunt de onderlinge afstemming en het maken van afspraken over vervolgacties. | Wekelijks | Meestal: Projectleider (ICTU), SDM en kwaliteitsmanager. Soms: Scrummaster, lead developer en/of projectsecretaris. |
-| Werkvoorraadoverleg¹ | Vooruitkijken naar de komende sprints en beoordelen of er voldoende uitgewerkte werkzaamheden beschikbaar zijn. ¹ Dit overleg wordt vooral ingezet wanneer de werkvoorraad aandacht vraagt. De SDM kan zo nodig aanvullend wekelijks een overzicht verstrekken. | Indien nodig | Projectleider(s) van de opdrachtgever en van ICTU, productowner(s), SDM en Scrummaster(s). |
+| Interne projectoverleg (IPO) | Het projectmanagement informeren over de projectvoortgang, risico’s en aandachtspunten. Het overleg ondersteunt de onderlinge afstemming en het maken van afspraken over vervolgacties. | Wekelijks | Meestal: Projectleider (ICTU), SDM en kwaliteitsmanager. Soms: scrummaster, lead developer en/of projectsecretaris. |
+| Werkvoorraadoverleg¹ | Vooruitkijken naar de komende sprints en beoordelen of er voldoende uitgewerkte werkzaamheden beschikbaar zijn. ¹ Dit overleg wordt vooral ingezet wanneer de werkvoorraad aandacht vraagt. De SDM kan zo nodig aanvullend wekelijks een overzicht verstrekken. | Indien nodig | Projectleider(s) van de opdrachtgever en van ICTU, productowner(s), SDM en scrummaster(s). |
 | Projectleidersoverleg²  | Bijzonderheden en aandachtspunten aan opdrachtgevers- en opdrachtnemerszijde bespreken. ² Dit overleg vindt niet in alle projecten plaats en wordt op initiatief van de projectleiders georganiseerd. | Iedere sprint, indien georganiseerd | Projectleider van de opdrachtgever, productowner, ICTU-projectleider en SDM. |
 
 ## Overleggen meestal zonder de SDM

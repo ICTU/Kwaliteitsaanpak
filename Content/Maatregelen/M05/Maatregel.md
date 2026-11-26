@@ -4,7 +4,7 @@
 
 ICTU gebruikt hiervoor Scrum, een raamwerk voor agile productontwikkeling. ICTU propageert de kernwaarden van Scrum en vereist de volgende onderdelen van Scrum:
 
-1. [submeasure-title]Scrumteam bestaand uit productowner, ontwikkelaars (zoals programmeurs, testers en ontwerpers) en Scrummaster[/submeasure-title],
+1. [submeasure-title]Scrumteam bestaand uit productowner, ontwikkelaars (zoals programmeurs, testers en ontwerpers) en scrummaster[/submeasure-title],
 2. [submeasure-title]Proces met daily scrum, sprints, sprint planning, sprint review, sprint retrospective en sprint refinement[/submeasure-title],
 3. [submeasure-title]Definition of ready en definition of done[/submeasure-title],
 4. [submeasure-title]Productbacklog en sprint backlog[/submeasure-title].

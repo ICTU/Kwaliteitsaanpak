@@ -13,7 +13,7 @@
 ## Kwaliteitsaanpak en alle templates
 
 - De tabel in de bijlage "Terminologie en afkortingen" is gesplitst in een tabel met afkortingen en een tabel met termen. De tabel met afkortingen geeft per afkorting de betekenis en een toelichting.
-- De spelling van termen en afkortingen is in alle teksten in overeenstemming gebracht met de bijlage "Terminologie en afkortingen", bijvoorbeeld "scrumteam", "productowner", "productbacklog", "softwarearchitectuurdocument", "interactieontwerp" en "businessimpactanalyse".
+- De spelling van termen en afkortingen is in alle teksten in overeenstemming gebracht met de bijlage "Terminologie en afkortingen", bijvoorbeeld "scrumteam", "scrummaster", "productowner", "productbacklog", "softwarearchitectuurdocument", "interactieontwerp" en "businessimpactanalyse".
 
 ## Template Kwaliteitsplan
 

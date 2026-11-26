@@ -86,8 +86,8 @@ De onderstaande tabellen bevatten afkortingen en termen die voorkomen in de $KWA
 | **release** | een voor gebruik vrijgegeven versie van de **software** |
 | **release notes** | een overzicht van de wijzigingen in een **release** |
 | **Scrum** | Scrum is een lichtgewicht raamwerk dat mensen, teams en organisaties helpt om waarde te creёren door middel van adaptieve oplossingen voor complexe problemen [Scrumgids] |
-| **Scrummaster** | De Scrummaster is verantwoordelijk voor het opzetten van **Scrum**, zoals staat beschreven in de Scrumgids [Scrumgids] |
-| **scrumteam** | Een scrumteam bestaat uit één **Scrummaster**, één **productowner** en **ontwikkelaars** (*developers* in de Scrumgids) [Scrumgids] |
+| **scrummaster** | De scrummaster is verantwoordelijk voor het opzetten van **Scrum**, zoals staat beschreven in de Scrumgids [Scrumgids] |
+| **scrumteam** | Een scrumteam bestaat uit één **scrummaster**, één **productowner** en **ontwikkelaars** (*developers* in de Scrumgids) [Scrumgids] |
 | **securityadviseur** | adviseert over de informatiebeveiliging van softwareontwikkelprojecten, de ontwikkelde software en de bijbehorende ontwikkel- en bedrijfsprocessen en werkt hierbij samen met de kwaliteitsmanager, SDM, projectleider en productowner |
 | **software** | software is de verzameling instructies die bepalen wat een computer uitvoert en is uiteindelijk wat de gebruiker ziet, ervaart en waarmee hij interacteert |
 | **softwarearchitectuur** | een **architectuur** die vooral de softwareonderdelen en -relaties (processen, modules, interfaces, datamodel) van een systeem beschrijft |

@@ -8,7 +8,7 @@ De onderstaande kwaliteitsmaatregelen zijn van toepassing gedurende het gehele p
 
 Het project houdt een wekelijks intern projectoverleg (IPO) waarin planning, voortgang, kwaliteitsrapportage, acties, risico's en overige relevante zaken worden besproken ($M10$). Het doel is om informatie uit te wisselen binnen het project, belemmeringen voor de voortgang die het scrumteam niet zelf kan oplossen te melden en eventueel te besluiten over escalaties buiten het project.
 
-De IPO-agenda bevat minimaal: mededelingen, kwaliteit, voortgang, risico's, acties en rondvraag. Aanwezig zijn in ieder geval de projectleider, de software delivery manager, de kwaliteitsmanager, de Scrummaster en een vertegenwoordiger uit elk scrumteam.
+De IPO-agenda bevat minimaal: mededelingen, kwaliteit, voortgang, risico's, acties en rondvraag. Aanwezig zijn in ieder geval de projectleider, de software delivery manager, de kwaliteitsmanager, de scrummaster en een vertegenwoordiger uit elk scrumteam.
 
 De kwaliteitsmanager controleert of deze overleggen plaatsvinden.
 

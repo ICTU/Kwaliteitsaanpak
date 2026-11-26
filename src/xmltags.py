@@ -1,5 +1,8 @@
 """The XML tags and attributes we use in the intermediate XML format."""
 
+ABBREVIATION = "abbreviation"
+ABBREVIATION_TITLE = "title"  # The meaning of the abbreviation
+ABBREVIATION_IS_DEFINITION = "is-definition"  # "y" for the abbreviation in the abbreviations table, absent otherwise
 ADMONITION = "admonition"
 ADMONITION_TITLE = "title"
 ADMONITION_TYPE = "type"  # One of note, tip, important, warning, caution

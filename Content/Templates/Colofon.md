@@ -30,7 +30,7 @@ Rubricering conform [VIRBI 2025, art. 4](https://wetten.overheid.nl/BWBR0051482/
 |:------------------------------|:--------------------------|:-------|
 | {opdrachtgevende organisatie} | Opdrachtgever             | {naam} |
 | {opdrachtgevende organisatie} | Projectleider             | {naam} |
-| {opdrachtgevende organisatie} | Product owner             | {naam} |
+| {opdrachtgevende organisatie} | Productowner             | {naam} |
 | {opdrachtgevende organisatie} | Kwaliteitsmanager         | {naam} |
 | {beheerorganisatie}           | Projectleider             | {naam} |
 | {beheerorganisatie}           | Kwaliteitsmanager         | {naam} |

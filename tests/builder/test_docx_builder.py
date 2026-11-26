@@ -101,6 +101,12 @@ class TextFormattingTest(unittest.TestCase):
         document = self.build(xmltags.CODE)
         self.assertEqual("Fira code", document.paragraphs[-1].runs[-1].font.name)
 
+    def test_abbreviation(self):
+        """Test that abbreviations are plain text."""
+        run = self.build(xmltags.ABBREVIATION).paragraphs[-1].runs[-1]
+        self.assertEqual("formatted", run.text)
+        self.assertFalse(run.bold)
+
     def test_instruction(self):
         """Test that instruction text is black and highlighted in yellow."""
         run = self.build(xmltags.INSTRUCTION).paragraphs[-1].runs[-1]

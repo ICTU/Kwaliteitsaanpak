@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M27/Definitie.md"
 
-De software delivery manager is verantwoordelijk voor het archiveren. De software delivery manager geeft het Scrumteam opdracht de archivering voor te bereiden en geeft de afdeling ICTU Software Diensten (ISD) de opdracht de archivering uit te voeren.
+De software delivery manager is verantwoordelijk voor het archiveren. De software delivery manager geeft het scrumteam opdracht de archivering voor te bereiden en geeft de afdeling ICTU Software Diensten (ISD) de opdracht de archivering uit te voeren.
 
 Alle documentatie, broncode, referentiedata en credentials die tijdens de werkzaamheden nodig waren of zijn opgeleverd, worden gearchiveerd en van laptops van medewerkers verwijderd.
 

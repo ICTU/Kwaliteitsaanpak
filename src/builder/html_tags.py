@@ -1,8 +1,11 @@
 """HTML syntax."""
 
+ABBREVIATION = "abbr"
+ABBREVIATION_TITLE = "title"
 ANCHOR = "a"
 ANCHOR_LINK = "href"
 ARIA_HIDDEN = "aria-hidden"
+ID = "id"
 ASIDE = "aside"
 BODY = "body"
 BOLD = "strong"

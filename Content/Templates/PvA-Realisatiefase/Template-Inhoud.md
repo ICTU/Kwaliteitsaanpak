@@ -12,7 +12,7 @@ ICTU levert de volgende producten en diensten op:
     a. informatie ten behoeve van het vrijgaveadvies,
     a. de release notes,
     a. een bijgewerkte installatiehandleiding,
-    a. een bijgewerkt software-architectuurdocument (SAD),
+    a. een bijgewerkt softwarearchitectuurdocument (SAD),
     a. een bijgewerkt globaal functioneel ontwerp (GFO),
     a. de broncode, inclusief unit testen,
     a. een set van automatische regressietesten (ART),
@@ -50,10 +50,10 @@ Het succes van het uit te voeren realisatietraject is sterk afhankelijk van de b
 
 Tijdens dit project wordt agile gewerkt volgens de Scrum-aanpak. ICTU propageert de kernwaarden van Scrum. Dit vertaalt zich concreet in:
 
-* Een Scrumteam, bestaande uit een product owner, door {opdrachtgevende organisatie} aangesteld, die de uiteindelijke inhoudelijke keuzes maakt, en ontwikkelaars (zoals programmeurs, testers en ontwerpers) en een Scrummaster, door ICTU aangesteld.
+* Een scrumteam, bestaande uit een productowner, door {opdrachtgevende organisatie} aangesteld, die de uiteindelijke inhoudelijke keuzes maakt, en ontwikkelaars (zoals programmeurs, testers en ontwerpers) en een scrummaster, door ICTU aangesteld.
 * Een proces met sprints van {twee of drie} weken waarin de Scrumactiviteiten sprint planning, sprint refinement, daily scrum, sprint demonstratie/review en retrospective plaatsvinden.
 * Een definition of ready en een definition of done voor respectievelijk het beginnen en afronden van werk.
-* Een product backlog en een sprint backlog.
+* Een productbacklog en een sprint backlog.
 
 ## DevOps-werkwijze
 
@@ -79,7 +79,7 @@ Voor een goede start wordt er, bij aanvang van de realisatiefase, een kick-off g
 
 ## Samenwerking
 
-{opdrachtgevende organisatie}, {partijen} en ICTU werken gezamenlijk aan de op te leveren software in een Scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
+{opdrachtgevende organisatie}, {partijen} en ICTU werken gezamenlijk aan de op te leveren software in een scrumteam. Voor een goed resultaat is het van belang dat er minimaal {aantal} {dagen/dagdelen} per week door alle partijen wordt samengewerkt. {partij} stelt hiervoor {fysieke en/of online} ruimte en samenwerkhulpmiddelen beschikbaar; projectmedewerkers zorgen zelf voor een laptop. {Als met hulpmiddelen van ICTU wordt gewerkt: Om deze bij ICTU te gebruiken moeten de laptops voldoen aan de bij ICTU geldende beveiligingsnormen, welke zijn opgenomen in het ICTU-voorschrift Zakelijk gebruik ICT-diensten en voorzieningen.}
 
 Vertegenwoordigers van het project nemen deel aan de volgende overleggen met {opdrachtgevende organisatie} en de beheerorganisatie:
 * het architectuuroverleg,
@@ -93,9 +93,9 @@ Vertegenwoordigers van het project nemen deel aan de volgende overleggen met {op
 
 ## Oplevering software
 
-De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het Scrumteam door de product owner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de product owner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Als er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgevende organisatie} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
+De realisatiefase bestaat uit {aantal} sprints. Tijdens elke sprint verwerkt het scrumteam door de productowner geselecteerde functionaliteit in de software. Geselecteerde functionaliteit die niet afkomt tijdens de sprint kan door de productowner opnieuw geselecteerd worden voor de volgende sprint, of voor een latere sprint. Als er na afronding van de realisatiefase nieuwe wensen of fouten aan het licht komen, dan kan {opdrachtgevende organisatie} deze later alsnog verwerken of ICTU vragen dit in een eventuele vervolgopdracht uit te voeren.
 
-Het Scrumteam controleert de software voor oplevering op beveiligingskwetsbaarheden en lost deze waar mogelijk op. Na oplevering van de software kunnen er nieuwe kwetsbaarheden worden ontdekt in de software of kunnen er oplossingen beschikbaar komen voor bekende kwetsbaarheden. Het is tot {kies: een datum, x weken na oplevering, moment van acceptie, moment van uitrol in de productieomgeving} de verantwoordelijkheid van ICTU om de opgeleverde software te controleren op beveiligingskwetsbaarheden en deze te repareren. Na dit moment is het de verantwoordelijkheid van {kies: opdrachtgevende organisatie, beheerorganisatie} om de opgeleverde software te controleren op beveiligingskwetsbaarheden en deze te repareren.
+Het scrumteam controleert de software voor oplevering op beveiligingskwetsbaarheden en lost deze waar mogelijk op. Na oplevering van de software kunnen er nieuwe kwetsbaarheden worden ontdekt in de software of kunnen er oplossingen beschikbaar komen voor bekende kwetsbaarheden. Het is tot {kies: een datum, x weken na oplevering, moment van acceptie, moment van uitrol in de productieomgeving} de verantwoordelijkheid van ICTU om de opgeleverde software te controleren op beveiligingskwetsbaarheden en deze te repareren. Na dit moment is het de verantwoordelijkheid van {kies: opdrachtgevende organisatie, beheerorganisatie} om de opgeleverde software te controleren op beveiligingskwetsbaarheden en deze te repareren.
 
 {Beschrijf hier de afspraken tussen ICTU en de opdrachtgevende organisatie over de opzet van vrijgaveadvies, release notes en goedkeuringsproces.}
 
@@ -118,8 +118,8 @@ Onderstaand is de verwachte inzet van per rol van {opdrachtgevende organisatie} 
 | Rollen                                        | Verwachte inzet per week | Verantwoordelijkheden                                                                                                        |
 |:----------------------------------------------|:-------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
 | Projectleider ({opdrachtgevende organisatie}) | {aantal} dagen           | Bespreken voortgang en eventuele exceptions met de projectleider (opdrachtnemer), deelname aan demo's en eventuele workshops |
-| Product owner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden product backlog                                                |
-| Business analist                              | {aantal} dagen           | Epics opstellen voor de product backlog, eventueel uitgewerkt in user stories                                                |
+| Productowner                                 | {aantal} dagen           | Prioritering user stories, sprintplanning, demo, onderhouden productbacklog                                                |
+| Business analist                              | {aantal} dagen           | Epics opstellen voor de productbacklog, eventueel uitgewerkt in user stories                                                |
 | Architect                                     | {aantal} dagen           | Bewaken en onderhouden van de softwarearchitectuur                                                                           |
 | Infrastructuurarchitect                       | {aantal} dagen           | Bewaken en onderhouden infrastructuurarchitectuur, opstellen infrastructuurarchitectuur (IA)                                 |
 | Testmanager                                   | {aantal} dagen           | Testen van nieuwe softwarereleases voordat deze voor gebruik worden vrijgegeven                                              |
@@ -167,7 +167,7 @@ Voor de uitvoering van de realisatiefase gelden de volgende randvoorwaarden:
 | Nr           | Randvoorwaarde                                                                                                                                              |
 |:-------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | R01          | De vereiste inzet van betrokkenen van {opdrachtgevende organisatie} en {partijen} is georganiseerd en gegarandeerd.                                         |
-| R02          | De product owner is gemandateerd om zelfstandig besluiten te nemen over de functionaliteit van de software.                                                 |
+| R02          | De productowner is gemandateerd om zelfstandig besluiten te nemen over de functionaliteit van de software.                                                 |
 | R03          | Er is een afgestemde en afgesproken werkwijze tussen {opdrachtgevende organisatie}, {beheerorganisatie} en ICTU. Deze is in lijn met de $KWALITEITSAANPAK$. |
 | R04          | De voorfaseproducten {producten} zijn beschikbaar voor aanvang van de realisatiefase.                                                                       |
 | R05          | Koppelvlakbeschrijvingen van aanpalende systemen zijn beschikbaar.                                                                                          |
@@ -184,12 +184,12 @@ De onderstaande projectrisico’s, die het succes van de realisatiefase kunnen b
 | Projectrisico | Maatregel |
 |:---:---|
 | Een deel van de voorfase producten is niet voor de start van de realisatiefase gereed. Er wordt toch gestart met realiseren. Tijdens de realisatiefase worden de producten aangevuld, maar deze aanvullingen hebben impact op de scope. De planning van de realisatiefase wordt hierdoor niet gehaald. |	Afronden voorfase producten voor start realisatie, afronden voorfase producten in de eerste sprint van de realisatiefase, tijd inplannen voor mogelijke grotere wijzigingen, besluitvorming door stuurgroep over scopewijzigingen. |
-| De product owner is niet in staat de backlog snel genoeg aan te vullen en te refinen waardoor het ontwikkelteam te
-weinig werk heeft en ontwikkelaars gedemotiveerd raken en daardoor vertrekken. | Opdrachtgever geeft product owner
-voldoende mandaat om besluiten te nemen, inhoudelijke specialisten hebben voldoende tijd om de product owner te
-ondersteunen, functioneel ontwerper ondersteunt product owner bij het refinen van user stories. |
+| De productowner is niet in staat de backlog snel genoeg aan te vullen en te refinen waardoor het ontwikkelteam te
+weinig werk heeft en ontwikkelaars gedemotiveerd raken en daardoor vertrekken. | Opdrachtgever geeft productowner
+voldoende mandaat om besluiten te nemen, inhoudelijke specialisten hebben voldoende tijd om de productowner te
+ondersteunen, functioneel ontwerper ondersteunt productowner bij het refinen van user stories. |
 | De beheerpartij kan de onderliggende infrastructuur niet tijdig leveren waardoor de oplossing niet getest en in gebruik kan worden genomen. | Vroegtijdig installatietests uitvoeren op de infrastructuur, mogelijke alternatieve oplossingen uitwerken. |
-| Door uitloop van {ander project} kan de software niet volgens planning in productie. Hierdoor zijn er onvoldoende user stories voor het ontwikkelteam. Op een later moment ontstaat meerwerk en blijft minder tijd over voor nieuwe functionaliteiten. Ontwikkelaars raken gedemotiveerd en vertrekken. | Tijdig afschalen van het ontwikkelteam, onderzoeken of het mogelijk is het team te behouden ten behoeve van applicatiebeheer,	product owner voegt relevant ontwikkelwerk toe aan de backlog en borgt besluitvorming hierover. |
+| Door uitloop van {ander project} kan de software niet volgens planning in productie. Hierdoor zijn er onvoldoende user stories voor het ontwikkelteam. Op een later moment ontstaat meerwerk en blijft minder tijd over voor nieuwe functionaliteiten. Ontwikkelaars raken gedemotiveerd en vertrekken. | Tijdig afschalen van het ontwikkelteam, onderzoeken of het mogelijk is het team te behouden ten behoeve van applicatiebeheer,	productowner voegt relevant ontwikkelwerk toe aan de backlog en borgt besluitvorming hierover. |
 | {Bij DevOps werkwijze} De voorzieningen die de beheerorganisatie biedt voor backup en restore voldoen niet aan de eisen van het DevOps-team waardoor extra voorbereidingstijd nodig is voordat de applicatie in productie kan. | Ruim voor de geplande MVP-datum in productie met een dummy-versie zodat het DevOps-team backup en restore kan testen. |
 | {risico} | {maatregel} |
 
@@ -206,12 +206,12 @@ Onderstaand is de verwachte inzet per rol van ICTU voor de uitvoering van dit pl
 | Ontwikkelaar                           | {x} uur         | Ontwerpen, ontwikkelen en testen van de software                                                                                                  |
 | DevOps-engineer                        | {x} uur         | Ontwerpen, ontwikkelen en testen van de software, daarnaast uitvoeren beheeractiviteiten, waaronder het oplossen van incidenten                   |
 | Tester                                 | {x} uur         | Opstellen logische testgevallen, ontwikkelen en uitvoeren fysieke testgevallen, opstellen testrapportages                                         |
-| Functioneel ontwerper                  | {x} uur         | Onderhouden GFO, ondersteunen product owner bij opstellen en uitwerken van de user stories                                                        |
+| Functioneel ontwerper                  | {x} uur         | Onderhouden GFO, ondersteunen productowner bij opstellen en uitwerken van de user stories                                                        |
 | Database administrator                 | {x} uur         | Onderhouden logisch datamodel en fysiek database ontwerp, ontwikkelen migratiescripts, database tuning                                            |
 | UX-designer                            | {x} uur         | Gebruikersonderzoek, onderhouden UX-richtlijnen, maken en onderhouden prototype {of wireframe/mockup/animatie}, toetsen prototypes met gebruikers |
 | Informatiebeveiligingsexpert           | {x} uur         | Onderhouden IB-plan, toetsen IB-maatregelen                                                                                                       |
 | Kwaliteitsmanager                      | {x} uur         | Inrichten, onderhouden en bewaken kwaliteitsrapportage                                                                                            |
-| Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het Scrumteam, inhoudelijke rapportage                                     |
+| Software delivery manager              | {x} uur         | Bewaken plan van aanpak realisatiefase, faciliteren en coördineren van het scrumteam, inhoudelijke rapportage                                     |
 | Projectleider                          | {x} uur         | Bewaken overeenkomst realisatiefase, opleveren tussentijdse rapportage, bespreken voortgang en exceptions met opdrachtgever                       |
 | Projectsecretaris                      | {x} uur         | Ondersteuning, rapportage, administratie                                                                                                          |
 | Diverse technisch specialisten         | {x} uur         | Ondersteunen, adviseren en meeschrijven daar waar nodig op onderdelen waar kennis of tijd van teamleden niet toereikend is                        |

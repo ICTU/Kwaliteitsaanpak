@@ -96,7 +96,7 @@ Leerdoelen (week 2):
 
 Leerdoelen (week 3):
 * Je kent de [functies](https://ictubeheer.sharepoint.com/teams/Organisatie_SoftwareDiensten/SitePages/ECO2.aspx) van het Ecosysteem
-* Je weet wie de product owner van het Ecosysteem is
+* Je weet wie de productowner van het Ecosysteem is
 * Je weet hoe je problemen met het ecosysteem kunt melden aan ISD
 * Je weet hoe je je Ecosysteem VPN-key kan verlengen
 
@@ -113,18 +113,18 @@ Leerdoelen (week 1):
 
 Leerdoelen (week 2):
 * Je weet welke governancestructuur er is afgesproken (stuurgroep, projectleidersoverleg, rapportages, e.d.)
-* Je weet wie welke rol speelt bij de opdrachtgevende organisatie, ICTU en andere betrokken organisaties (opdrachtgever, projectleider, product owner, software delivery manager, e.d.)
-* Je weet wie welke rol speelt binnen het/de Scrumteam(s) in je project (ontwikkelaar, tester, devops-engineer, ontwerper, etc.)
+* Je weet wie welke rol speelt bij de opdrachtgevende organisatie, ICTU en andere betrokken organisaties (opdrachtgever, projectleider, productowner, software delivery manager, e.d.)
+* Je weet wie welke rol speelt binnen het/de scrumteam(s) in je project (ontwikkelaar, tester, devops-engineer, ontwerper, etc.)
 * Je hebt kennisgemaakt met de kwaliteitsmanager aan de kant van de opdrachtgevende organisatie
 
 ## Proces
 
 Acties (week 1):
-* Je bent uitgenodigd voor en neemt deel aan het periodieke IPO (Intern Project Overleg)
-* Je bent uitgenodigd voor en neemt deel aan de daily scrum van het Scrumteam
+* Je bent uitgenodigd voor en neemt deel aan het periodieke IPO (intern projectoverleg)
+* Je bent uitgenodigd voor en neemt deel aan de daily scrum van het scrumteam
 
 Acties (zodra mogelijk):
-* Je bent uitgenodigd voor en neemt deel aan de demo's van het Scrumteam
+* Je bent uitgenodigd voor en neemt deel aan de demo's van het scrumteam
 * Je hebt deelgenomen aan een refinement, sprintplanning en retrospective
 
 Leerdoelen Quality-time kwaliteitsrapportage (week 1):

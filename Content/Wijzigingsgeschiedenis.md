@@ -4,10 +4,16 @@
 
 - In de HTML-versie wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
 - De figuur met de relaties tussen de voorfaseproducten in maatregel M01 is opnieuw getekend; de volledige namen van de producten staan nu in de figuur zelf.
+- In de HTML-versie van de Kwaliteitsaanpak tonen afkortingen hun betekenis als de lezer de muis op de afkorting houdt. Elke afkorting linkt bovendien naar de afkorting in de bijlage "Terminologie en afkortingen".
 
 ## Samenvatting Kwaliteitsaanpak
 
 - In de HTML-versie van de samenvatting wordt de inhoudsopgave op brede schermen getoond als navigatiemenu aan de linkerkant van het scherm dat zichtbaar blijft tijdens het scrollen.
+
+## Kwaliteitsaanpak en alle templates
+
+- De tabel in de bijlage "Terminologie en afkortingen" is gesplitst in een tabel met afkortingen en een tabel met termen. De tabel met afkortingen geeft per afkorting de betekenis en een toelichting.
+- De spelling van termen en afkortingen is in alle teksten in overeenstemming gebracht met de bijlage "Terminologie en afkortingen", bijvoorbeeld "scrumteam", "scrummaster", "productowner", "productbacklog", "softwarearchitectuurdocument", "interactieontwerp" en "businessimpactanalyse".
 
 ## Template Kwaliteitsplan
 

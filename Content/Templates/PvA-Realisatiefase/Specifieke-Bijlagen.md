@@ -10,7 +10,7 @@ De onderstaande tabel geeft aan welke archiveringsactiviteiten aan het einde van
 | Performancetestscripts                | Git performanceteam                  | Scrumteam            | 5 jaar        |
 | Kwaliteitsrapportage                  | Quality-time database                | ISD                  | 2 jaar        |
 | Bugs, user stories en andere issues   | Jira                                 | ISD                  | 2 jaar        |
-| VM’s Scrumteam                        | {waar}                               | ISD                  | 2 jaar        |
+| VM’s scrumteam                        | {waar}                               | ISD                  | 2 jaar        |
 | {Projectspecifieke producten}         | {waar}                               | {wie}                | {termijn}     |
 
 Bij projectafsluiting zorgt de software delivery manager verder dat volgende acties worden uitgevoerd:

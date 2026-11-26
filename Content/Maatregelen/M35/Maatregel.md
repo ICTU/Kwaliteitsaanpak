@@ -2,7 +2,7 @@
 
 #include "Content/Maatregelen/M35/Definitie.md"
 
-Ten behoeve van de agile architectuuraanpak werkt het Scrumteam nauw samen met de architecten van de opdrachtgevende organisatie en de beheerorganisatie, zowel in de voorfase als tijdens de realisatiefase.
+Ten behoeve van de agile architectuuraanpak werkt het scrumteam nauw samen met de architecten van de opdrachtgevende organisatie en de beheerorganisatie, zowel in de voorfase als tijdens de realisatiefase.
 
 Tijdens de voorfase schrijft de softwarearchitect (het teamlid met de rol van architect) het SAD, inclusief genomen ontwerpbeslissingen.
 

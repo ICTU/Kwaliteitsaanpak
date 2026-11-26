@@ -13,6 +13,7 @@ class ConverterTestCase(unittest.TestCase):
 
     def setUp(self):
         self.builder = Mock(spec=Builder)
+        self.builder.FLATTEN_TAGS = ()
 
     def test_empty_document(self):
         """Test an empty document."""
@@ -52,3 +53,16 @@ class ConverterTestCase(unittest.TestCase):
         tree = xml.etree.ElementTree.ElementTree(xml.etree.ElementTree.XML("<document><skip>Text</skip></document>"))
         Converter(tree).convert(self.builder)
         self.builder.start_element.assert_called_once_with("document", {})
+
+    def test_flatten(self):
+        """Test that elements the builder renders as plain text are replaced by their text."""
+        self.builder.FLATTEN_TAGS = ("abbreviation",)
+        tree = xml.etree.ElementTree.ElementTree(
+            xml.etree.ElementTree.XML(
+                "<document><p><abbreviation>API</abbreviation> en <b>de</b> <abbreviation>ISO</abbreviation>.</p></document>"
+            )
+        )
+        Converter(tree).convert(self.builder)
+        self.builder.text.assert_any_call("p", "API en ", {})
+        self.builder.tail.assert_called_once_with("b", " ISO.", "p", {})
+        self.assertIsNotNone(tree.find(".//abbreviation"))  # The original tree is not changed

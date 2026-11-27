@@ -28,21 +28,25 @@ Per proces is nagegaan wat de gevolgen zijn van het falen van de desbetreffende 
 
 Bij het bepalen van de finale waarden zijn de volgende risico’s met impact meegenomen.
 
-| Risico                 | Impact                                                                |
-|:-----------------------|:----------------------------------------------------------------------|
-| Financieel             | Financiële impact op budget                                           |
-|                        | Verlies van waardevolle middelen                                      |
-|                        | Boetes, wettelijke aansprakelijkheid                                  |
-| Operationeel           | Verlies van management control/stuurkracht                            |
-|                        | Mate van inflexibiliteit om veranderingen door te voeren              |
-|                        | Mate waarin nieuwe producten en diensten kunnen worden geïntroduceerd |
-|                        | Mate waarin niet voldaan wordt aan wet- en regelgeving                |
-| Klant gerelateerd	     | Getroffen klanten                                                     |
-|                        | Verlies van klanten                                                   |
-|                        | Verlies van vertrouwen                                                |
-|                        | Imagoschade (negatieve publiciteit in de media)                       |
-| Gebruikers gerelateerd | Afname motivatie bij personeel                                        |
-|                        | Afname personele capaciteit                                           |
+| Impactcategorie        | Impact                                           |
+|:-----------------------|:-------------------------------------------------|
+| Financieel             | Financiële impact op budget                      |
+|                        | Verlies van waardevolle middelen                 |
+|                        | Boetes, wettelijke aansprakelijkheid             |
+|                        | {verdere financiële impact}                      |
+| Bestuurlijk/politiek   | Organisatie/proces onder druk                    |
+|                        | Beschadiging van de reputatie                    |
+|                        | {verdere bestuurlijke/politieke impact}          |
+| Operationeel           | Verlies van managementcontrole/-stuurkracht      |
+|                        | Vertraging van nieuwe ontwikkelingen             |
+|                        | Overtreding van normen                           |
+|                        | {verdere operationele impact}                    |
+| Burger gerelateerd	 | Getroffen burgers                                |
+|                        | Verlies van vertrouwen of goodwill               |
+|                        | {verdere burger gerelateerde impact}             |
+| Medewerker gerelateerd | Verminderde motivatie/productiviteit medewerkers |
+|                        | {verdere medewerker gerelateerde impact}         |
+| {impactcategorie}      | {impact}                                         |
 
 ## Impactscore
 

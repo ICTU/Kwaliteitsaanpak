@@ -37,7 +37,7 @@ De TVA is samen met de volgende personen uitgevoerd:
 
 ## Aanpak TVA
 
-In een workshop zijn de grootste dreigingen en kwetsbaarheden voor de bestaande {proces/voorziening} in beeld gebracht, uitgaande van de reeds bestaande securitymaatregelen die al aanwezig zijn. Dit heeft geleid tot een score op specifieke risico’s. De score is berekend volgens de volgende methodiek:
+In een workshop zijn de grootste dreigingen en kwetsbaarheden voor {proces/voorziening} in beeld gebracht, uitgaande van de reeds bestaande securitymaatregelen die al aanwezig zijn. Dit heeft geleid tot een score op specifieke risico’s. De score is berekend volgens de volgende methodiek:
 
 Kans = Dreiging x Kwetsbaarheid
 Risico = Kans x Business Impact

@@ -1,6 +1,8 @@
 Voor {product} is in het kader van informatiebeveiliging een business impact analyse uitgevoerd.
 
-De business impact analyse heeft tot doel het bepalen van het gewenste betrouwbaarheidsniveau in het kader van het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007) en het vaststellen van risico’s en aanvullende maatregelen.
+De businessimpactanalyse is de eerste stap in het bepalen van het gewenste beveiligingsbetrouwbaarheidsniveau en het vaststellen van risico’s en benodigde maatregelen.
+
+Binnen de Nederlandse overheid is een dergelijke analyse een vereiste vanuit het Besluit Voorschrift Informatiebeveiliging Rijksdienst 2007 (VIR 2007).
 
 *Resultaten*
 
